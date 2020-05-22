@@ -46,15 +46,6 @@
 		<script type="text/javascript" src="tutorial.js"></script>
 		
 		<script type='text/javascript'>
-		
-			/**************************
-			Code samples used from:
-				http://sylvester.jcoglan.com/
-				http://learningwebgl.com/blog/ 
-				http://diveintohtml5.org/
-				
-			(c) Alex Beutel - 2010
-			**************************/
 			
 		
 			document.onkeypress = keyClick;
@@ -65,9 +56,9 @@
 			var queryPoint = false;
 			
 			var continueRandom = false;
-			// var randomSpeed = false;
+			
 			var pixelMult = 50;
-			// var moveSinusoidal = false;
+			
 			var userDefined = false;
 			var dataStack = new Array();
 		
@@ -679,89 +670,9 @@
 		<script type='text/javascript' src='http://alexbeutel.com/header.js'></script>
 		<div id='mainBody'>
 		<div style='float: right; width: 300px;'>
-			<div style='padding-top: 0px; '>
-				<h4><img src='pm.png' class='pm' onclick='compress("instructions");'/>Instructions</h4>
-				<div id='instructions' style='padding-bottom: 15px;'>
-					<ol>
-						<li>Make sure you are running a browser <a href='http://learningwebgl.com/blog/?p=11' target='_blank'>with WebGL enabled</a>.</li>
-						<li>Click in black box to add another point to the set of input points.</li>
-						<li>Click and keep mouse down to temporarily add a point.  Drag your mouse around to watch how the new input point influences the Voronoi diagram.  On release, the new point will be added.</li>
-						<li>To make a query point, such that the Voronoi diagram will display the stolen area from the nearest neighbors, check the NNI query point box before adding the point.</li>
-						<li>If you would like to save a diagram for reuse later, copy the data from the data field and simply reload it in later.</li>
-					</ol>
-					<div style='padding-top: 8px;'>For more info read <a href='http://blog.alexbeutel.com/?p=332' target='_blank'>my blog post</a> on the app.</div>
-				</div>
-			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("settings");'/>Settings</h4>
-			<div style='padding-bottom: 15px;' id='settings'>
-				<div class='someInput'>
-					<span class='inputLabel'>Width:</span>
-					<input type='text' class='inputField' id='width' value='900' onchange='reset();'/><br />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>Height:</span>
-					<input type='text' class='inputField' id='height' value='700' onchange='reset();' />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>Cone Radius:</span>
-					<input type='text' class='inputField' id='cone-radius' value='1000' onchange='reset();' />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>Triangles/cone:</span>
-					<input type='text' class='inputField' id='frags' value='50' onchange='reset();' />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>NNI Query point?</span>
-					<input type='checkbox' class='inputField' id='query' onchange='reset();' />
-				</div>
-				<!--<div sytle='height: 50px;'><input type='button' onclick='reset()' value='Update' /></div>-->
-			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("inputData");'/>Input data</h4>
-			<div style='padding-bottom: 15px;' id='inputData' >
-				<div sytle='height: 50px;'><input type='button' onclick='loadRandomPoints()' value='Load random points' /></div>
-				<div style='height: 30px; padding-top:10px;'>
-					<input type='text' id='data' style='width: 90%;' />
-				</div>
-				<div sytle='height: 50px;'><input type='button' onclick='takeNewData()' value='Reload data' /></div>
-				<div sytle='height: 50px;'><input type='button' onclick='undo()' value='Undo Previous Change' id='btnUndo' disabled /></div>
-			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("motion");'/>Motion</h4>
-			<div style='padding-bottom: 15px;' id='motion'>
-				<div class='someInput'>
-					<span class='inputLabel'>Speed (Pixels/sec):</span>
-					<input type='text' class='inputField' id='pixel-mult' value='50' onchange='reset();' />
-				</div>
-				<div style='height: 230px;'>
-					<div class='someInput'>
-						<span class='inputLabel'>User defined:</span>
-						<input type='checkbox' class='inputField' id='user-defined' onchange='reset();' />
-					</div>
-					<div class='someInput'>
-						<div>Define your own speed function below with Javascript in terms of time <i>t</i> (optional array, length 4, of random variables <i>rand</i>):</div>
-						<div><input type='text' style='width: 90%; margin: auto;' id='user-math' value='5 * Math.sin(t)' onfocus='typing()' onblur='doneTyping()' /></div>
-						<div style='font-size: 0.825em; padding-top: 5px;'>
-							Examples:
-							<ul>
-								<li>Sinusoidal: <i>5 * Math.sin(t)</i></li>
-								<li>Random linear speed: <i>rand[0]* 15</i></li>
-								<li>Random quadratic speed: <i>2 * rand[1] * t + rand[0] * 10</i></li>
-								<li>Possibly cubic: <i>Math.round(rand[1]) * Math.pow(t,2) + rand[0] * 10</i></li>
-							<ul>
-						</div>
-					</div>				
-				</div>
-				<!--
-				<div class='someInput'>
-					<span class='inputLabel'>Random speed</span>
-					<input type='checkbox' class='inputField' id='random-speed' onchange='reset();' />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>Sinusoidal oscillation</span>
-					<input type='checkbox' class='inputField' id='sinusoidal' onchange='reset();' />
-				</div>
-				-->
-				<div sytle='height: 50px;'><input type='button' onclick='moveRandomly()' value='Start random motion' style='margin-right: 15px;' /><input type='button' onclick='stopMotion()' value='Stop motion' /></div>
-			</div>
+
+			
+		</div>
 		</div>
 		<h2>Interactive Voronoi Diagram Generator with WebGL</h2>
 		<div>
