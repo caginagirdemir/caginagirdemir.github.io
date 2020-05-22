@@ -393,7 +393,7 @@
 				$('2d-canvas').width = $('width').value;
 				$('2d-canvas').height = $('height').value;
 				fragments = $('frags').value;
-				coneRadius = $('cone-radius').value;
+				//coneRadius = $('cone-radius').value;
 				queryPoint = $('query').checked;
 				// randomSpeed = $('random-speed').checked;
 				pixelMult = $('pixel-mult').value;
@@ -538,7 +538,7 @@
 			function pageStart() {
 				$('width').value = $('main-canvas').width;
 				$('height').value = $('main-canvas').height;
-				$('cone-radius').value = coneRadius;
+				//$('cone-radius').value = coneRadius;
 				$('frags').value = fragments;
 				$('query').checked = false;
 				// $('random-speed').checked = false;
@@ -693,7 +693,7 @@
 				</div>
 				<div class='someInput'>
 					<span class='inputLabel'>Cone Radius:</span>
-					<input type='text' class='inputField' id='cone-radius' value='1000' onchange='reset();' />
+					
 				</div>
 				<div class='someInput'>
 					<span class='inputLabel'>Triangles/cone:</span>
