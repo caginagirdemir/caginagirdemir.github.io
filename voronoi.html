@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-		<title>Interactive Voronoi Diagram Generator with WebGL - Alex Beutel</title>
 		<style type='text/css'>
 			.inputField { width: 100px; float: left; }
 			.inputLabel { width: 175px; float: left;}
@@ -22,8 +21,36 @@
 		  
 		  varying vec4 vColor;
 
+		  precision mediump float;
+
+		  uniform float vpw; // Width, in pixels
+		  uniform float vph; // Height, in pixels
+		  
+		  uniform vec2 offset; // e.g. [-0.023500000000000434 0.9794000000000017], currently the same as the x/y offset in the mvMatrix
+		  uniform vec2 pitch;  // e.g. [50 50]
+
+
+
 		  void main(void) {
-		    gl_FragColor = vColor;
+
+			float lX = gl_FragCoord.x / vpw;
+			float lY = gl_FragCoord.y / vph;
+		  
+			float scaleFactor = 10000.0;
+		  
+			float offX = (scaleFactor * offset[0]) + gl_FragCoord.x;
+			float offY = (scaleFactor * offset[1]) + (1.0 - gl_FragCoord.y);
+		  
+			if (int(mod(offX, pitch[0])) == 0 ||
+				int(mod(offY, pitch[1])) == 0) {
+			  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+			} else {
+			  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+			}
+
+			gl_FragColor = vColor;
+
+
 		  }
 		</script>
 
@@ -37,44 +64,44 @@
 		  varying vec4 vColor;
 
 		  void main(void) {
+
 		    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-		    vColor = aVertexColor;
+			vColor = aVertexColor;
+
 		  }
 		</script>
 
 		<script type="text/javascript" src="tutorial.js"></script>
 		
 		<script type='text/javascript'>
-				
 		
 			document.onkeypress = keyClick;
 		
 			var coneRadius = 1000;
-			var fragments = 50;
-			var cone_angle = 45;
-			var queryPoint = false;
+			var fragments = 100;
 			
-			var continueRandom = false;
-			// var randomSpeed = false;
-			var pixelMult = 50;
-			// var moveSinusoidal = false;
-			var userDefined = false;
+
 			var dataStack = new Array();
 		
 			var gl;
 			var gl2d;
+
+
+
 			function initGL(canvas) {
 				try {
 					gl = canvas.getContext("experimental-webgl");
 					gl.viewportWidth = canvas.width;
 					gl.viewportHeight = canvas.height;
 				} catch(e) { }
-				if (!gl) { alert("Could not initialize WebGL, sorry :-("); }
+				if (!gl) { alert("Could not"); }
 			}
 			
 			
 			var shaderProgram;
 			function initShaders() {
+
+
 				var fragmentShader = getShader(gl, "shader-fs");
 				var vertexShader = getShader(gl, "shader-vs");
 
@@ -105,6 +132,7 @@
 			
 		  	var coneVertexPositionBuffer;
 			var pointVertexPositionBuffer;
+			
 			function genCone() {
 				coneVertexPositionBuffer = gl.createBuffer();
 				gl.bindBuffer(gl.ARRAY_BUFFER, coneVertexPositionBuffer);
@@ -132,7 +160,7 @@
 				coneVertexPositionBuffer.itemSize = 3;
 				coneVertexPositionBuffer.numItems = fragments * 3;
 			}
-			
+			var pixelMult;
 			function genPointCone() {
 				pointVertexPositionBuffer = gl.createBuffer();
 				gl.bindBuffer(gl.ARRAY_BUFFER, pointVertexPositionBuffer);
@@ -161,19 +189,7 @@
 			}
 			
 			var pointVertexColorBuffer;
-			function pointColor() {
-				var size = 20*3;
-				pointVertexColorBuffer = gl.createBuffer();
-				gl.bindBuffer(gl.ARRAY_BUFFER, pointVertexColorBuffer);
-				
-				var color = [];
-				for(var i = 0; i < size; i++)
-					color = color.concat([0.0, 0.0, 0.0, 1.0]);
-					
-				gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(color), gl.STATIC_DRAW);
-				pointVertexColorBuffer.itemSize = 4;
-				pointVertexColorBuffer.numItems = size;
-			}
+
 			
 			function colorString(i1,i2,i3) {
 				return Math.floor((i1*256))+"-"+Math.floor(i2*256)+"-"+Math.floor(i3*256);
@@ -183,14 +199,7 @@
 				var i1 = Math.random();
 				var i2 = Math.random();
 				var i3 = Math.random();
-				
-				// while(colorTable[colorString(i1,i2,i3)]){
-				// 					i1 = Math.random();
-				// 					i2 = Math.random();
-				// 					i3 = Math.random();
-				// 				}
-				
-				
+							
 				var color = [];
 				for(var i = 0; i < size; i++){
 					if(isQP)
@@ -241,14 +250,13 @@
 				var vfunc;
 			}
 			
-			function addCone(cx,cy, isQuery, cb) {
+			function addCone(cx,cy, cb) {
 				var c = new Point();
-				if(!cb) cb = randColor(fragments*3,isQuery);
+				if(!cb) cb = randColor(fragments*3);
 				c.x = cx;
 				c.y = cy;
 				c.colorArray = cb;
 				c.colorSize = fragments*3;
-				c.qp = isQuery;
 				c.strColor = colorString(cb[0], cb[1], cb[2]); //Math.floor(cb[0]*256) + "-" + Math.floor(cb[1]*256) + "-" + Math.floor(256*cb[2]);
 				colorTable[c.strColor] = c;
 				points = points.concat(c);
@@ -261,12 +269,6 @@
 				if(p.x > ($('main-canvas').width + coneRadius) || p.x < (-1 * coneRadius) || p.y > ($('main-canvas').height + coneRadius) || p.y < (-1 * coneRadius)) {
 					//cone will not influence anything and is just slow, dont plot it
 					return;
-				}
-				
-				
-				if(p.qp) {
-					gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
-					gl.enable(gl.BLEND);
 				}
 				
 				loadIdentity();
@@ -284,16 +286,6 @@
 				drawCircle2D(gl2d, p.x,p.y, 2.5);
 				
 				gl.disable(gl.BLEND);
-				// mvTranslate([0, 0, 4.0]);
-				// 
-				// gl.bindBuffer(gl.ARRAY_BUFFER, pointVertexPositionBuffer);
-				// gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, pointVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-				// 
-				// gl.bindBuffer(gl.ARRAY_BUFFER, pointVertexColorBuffer);
-				// gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, pointVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
-				// 
-				// setMatrixUniforms();
-				// gl.drawArrays(gl.TRIANGLES, 0, pointVertexPositionBuffer.numItems);
 				
 			}
 			
@@ -311,7 +303,7 @@
 				pushStack();
 				mouseIsDown = false;
 				var p = getCursorPosition(e);
-				addCone(p[0],p[1],queryPoint,curColor);
+				addCone(p[0],p[1],curColor);
 				curColor = null;
 				redraw();
 			}
@@ -333,7 +325,7 @@
 			
 			function startDown(e) {
 				mouseIsDown = true;
-				curColor = randColor(fragments*3,queryPoint);
+				curColor = randColor(fragments*3);
 				canvasMouseMove(e);
 			}
 			function canvasMouseMove(e) {
@@ -346,7 +338,7 @@
 				c.y = p[1];
 				c.colorArray = curColor;
 				c.colorSize = fragments*3;
-				c.qp = queryPoint;
+				c.qp = false;
 				
 				redraw(c);
 			}
@@ -363,19 +355,31 @@
 				canvas.addEventListener("mousemove", canvasMouseMove, false);
 				canvas.addEventListener("mouseup", canvasClick, false);
 				
-				plain();
+				var b_canvas = document.getElementById("2d-canvas");
+				b_canvas.style.zIndex="100";
+				gl2d = b_canvas.getContext("2d");
 				
 				initShaders();
 
-				initiate();
+				genCone();
+				genPointCone();
+
+
+				var size = 20*3;
+				pointVertexColorBuffer = gl.createBuffer();
+				gl.bindBuffer(gl.ARRAY_BUFFER, pointVertexColorBuffer);
+				
+				var color = [];
+				for(var i = 0; i < size; i++)
+					color = color.concat([0.0, 0.0, 0.0, 1.0]);
+					
+				gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(color), gl.STATIC_DRAW);
+				pointVertexColorBuffer.itemSize = 4;
+				pointVertexColorBuffer.numItems = size;
 
 				redraw();
 			  }
-			function initiate() {
-				genCone();
-				genPointCone();
-				pointColor();
-			}
+
 			function $(id) { return document.getElementById(id); }
 			
 			function reset() { 
@@ -385,11 +389,11 @@
 				$('2d-canvas').height = $('height').value;
 				//fragments = $('frags').value;
 				//coneRadius = $('cone-radius').value;
-				queryPoint = $('query').checked;
+				//queryPoint = 0;
 				// randomSpeed = $('random-speed').checked;
-				pixelMult = $('pixel-mult').value;
+				pixelMult = 50;
 				// moveSinusoidal = $('sinusoidal').checked;
-				userDefined = $('user-defined').checked;
+				//userDefined = $('user-defined').checked;
 				webGLStart();
 			}
 			
@@ -422,10 +426,10 @@
 				var queries = data['queries'];
 				points = [];
 				for(var i = 0; i < sites.length; i += 2) {
-					addCone(sites[i], sites[i+1],false);
+					addCone(sites[i], sites[i+1]);
 				}
 				for(var i = 0; i < queries.length; i += 2) {
-					addCone(queries[i], queries[i+1],true);
+					addCone(queries[i], queries[i+1]);
 				}
 				redraw();
 			}
@@ -529,33 +533,14 @@
 			function pageStart() {
 				$('width').value = $('main-canvas').width;
 				$('height').value = $('main-canvas').height;
-				//$('cone-radius').value = coneRadius;
-				//$('frags').value = fragments;
-				$('query').checked = false;
-				// $('random-speed').checked = false;
-				// $('sinusoidal').checked = false;
-				$('pixel-mult').value = pixelMult;
-				$('user-defined').checked = false;
 				$('data').value = '';
 				webGLStart();
 				
 			}
 			function plain() {
-				var b_canvas = document.getElementById("2d-canvas");
-				b_canvas.style.zIndex="100";
-				gl2d = b_canvas.getContext("2d");
+
 			}
-			function loadRandomPoints() {
-				pushStack();
-				var num = prompt("How many points would you like to add randomly?", "25");
-				for(var i = 0; i < num; i++) {
-					var x = Math.random() * $('main-canvas').width;
-					var y = Math.random() * $('main-canvas').height;
-					addCone(x,y,queryPoint,curColor);
-					curColor = null;
-				}
-				redraw();
-			}
+
 			
 			function getVFunc(coef) {
 				return function(t) {
@@ -567,15 +552,11 @@
 				}
 			}
 			
-			function getSinusoidalV(coef, offset) {
-				return function(t) {
-					return coef * Math.sin(t) + offset;
-				}
-			}
+
 			
 			function getUserVFunc(rand) {
 				return function(t) {
-					return eval($('user-math').value);
+					return 0 //eval($('user-math').value);
 				}
 			}
 			
@@ -598,25 +579,9 @@
 			}
 			
 			var moveTime = 0;
-			function moveRandomly() {
-				pushStack();
-				moveTime = 0;
-				for(var i = 0; i < points.length; i++) {
-					var rad = (Math.random() * 360.0) * (Math.PI/180.0);
-					points[i].angle = rad;
-					var mx = pixelMult/10;
-					// if(randomSpeed) mx = getRand(0,15);
-					points[i].vfunc = getVFunc([mx]);
-					if(userDefined)
-						points[i].vfunc = getUserVFunc([Math.random(), Math.random(), Math.random(), Math.random()]); //getSinusoidalV(mx, 0);
-				}
-				continueRandom = true;
-				move();
-			}
-			function stopMotion() {
-				continueRandom = false;
-			}
-			
+
+
+
 			function move() {
 				for(var i = 0; i < points.length; i++) {
 					var vr = points[i].vfunc(moveTime);
@@ -632,47 +597,28 @@
 				if($(id).style.display && $(id).style.display == 'none') $(id).style.display='';
 				else $(id).style.display='none';
 			}
-			var isTyping = false;
+
 			
 			function keyClick(e) {
-				if(isTyping) return;
 				var code;
 				if (!e) var e = window.event;
 				if (e.keyCode) code = e.keyCode;
 				else if (e.which) code = e.which;
-				if(code == 108) loadRandomPoints();
-				else if (code == 109) moveRandomly();
-				else if (code == 115) stopMotion();
-				else if (code == 114) takeNewData();
+				if (code == 114) takeNewData();
 			}
-			function typing() {
-				isTyping = true;
-			}
-			function doneTyping() {
-				isTyping = false;
-			}
+
 			
 		</script>
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-3316326-10']);
-		  _gaq.push(['_trackPageview']);
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
 		</script>
 	</head>
 	<body onload="pageStart();">
-		<script type='text/javascript' src='http://alexbeutel.com/header.js'></script>
+
 		<div id='mainBody'>
 		<div style='float: right; width: 300px;'>
 			<div style='padding-top: 0px; '>
 
 			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("settings");'/>Settings</h4>
 			<div style='padding-bottom: 15px;' id='settings'>
 				<div class='someInput'>
 					<span class='inputLabel'>Width:</span>
@@ -683,65 +629,25 @@
 					<input type='text' class='inputField' id='height' value='700' onchange='reset();' />
 				</div>
 				<div class='someInput'>
-					
+
 				</div>
 				<div class='someInput'>
-					<span class='inputLabel'>Triangles/cone:</span>
+
 				</div>
 				<div class='someInput'>
-					<span class='inputLabel'>NNI Query point?</span>
-					<input type='checkbox' class='inputField' id='query' onchange='reset();' />
+
 				</div>
 				<!--<div sytle='height: 50px;'><input type='button' onclick='reset()' value='Update' /></div>-->
 			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("inputData");'/>Input data</h4>
 			<div style='padding-bottom: 15px;' id='inputData' >
-				<div sytle='height: 50px;'><input type='button' onclick='loadRandomPoints()' value='Load random points' /></div>
 				<div style='height: 30px; padding-top:10px;'>
 					<input type='text' id='data' style='width: 90%;' />
 				</div>
 				<div sytle='height: 50px;'><input type='button' onclick='takeNewData()' value='Reload data' /></div>
 				<div sytle='height: 50px;'><input type='button' onclick='undo()' value='Undo Previous Change' id='btnUndo' disabled /></div>
 			</div>
-			<h4><img src='pm.png' class='pm' onclick='compress("motion");'/>Motion</h4>
-			<div style='padding-bottom: 15px;' id='motion'>
-				<div class='someInput'>
-					<span class='inputLabel'>Speed (Pixels/sec):</span>
-					<input type='text' class='inputField' id='pixel-mult' value='50' onchange='reset();' />
-				</div>
-				<div style='height: 230px;'>
-					<div class='someInput'>
-						<span class='inputLabel'>User defined:</span>
-						<input type='checkbox' class='inputField' id='user-defined' onchange='reset();' />
-					</div>
-					<div class='someInput'>
-						<div>Define your own speed function below with Javascript in terms of time <i>t</i> (optional array, length 4, of random variables <i>rand</i>):</div>
-						<div><input type='text' style='width: 90%; margin: auto;' id='user-math' value='5 * Math.sin(t)' onfocus='typing()' onblur='doneTyping()' /></div>
-						<div style='font-size: 0.825em; padding-top: 5px;'>
-							Examples:
-							<ul>
-								<li>Sinusoidal: <i>5 * Math.sin(t)</i></li>
-								<li>Random linear speed: <i>rand[0]* 15</i></li>
-								<li>Random quadratic speed: <i>2 * rand[1] * t + rand[0] * 10</i></li>
-								<li>Possibly cubic: <i>Math.round(rand[1]) * Math.pow(t,2) + rand[0] * 10</i></li>
-							<ul>
-						</div>
-					</div>				
-				</div>
-				<!--
-				<div class='someInput'>
-					<span class='inputLabel'>Random speed</span>
-					<input type='checkbox' class='inputField' id='random-speed' onchange='reset();' />
-				</div>
-				<div class='someInput'>
-					<span class='inputLabel'>Sinusoidal oscillation</span>
-					<input type='checkbox' class='inputField' id='sinusoidal' onchange='reset();' />
-				</div>
-				-->
-				<div sytle='height: 50px;'><input type='button' onclick='moveRandomly()' value='Start random motion' style='margin-right: 15px;' /><input type='button' onclick='stopMotion()' value='Stop motion' /></div>
-			</div>
+
 		</div>
-		<h2>Interactive Voronoi Diagram Generator with WebGL</h2>
 		<div>
 			<canvas id="2d-canvas" style="border: none; position: absolute;" width="900" height="675" ></canvas>
 			<canvas id="main-canvas" style="border: none; position: absolute;" width="900" height="675" ></canvas>
