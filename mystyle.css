@@ -13,6 +13,8 @@ p.a {
     text-align: justify;
   }
   h1{font-size:2.25rem;letter-spacing:-.03rem}
+
+  h2{font-size:1.62671rem}h3{padding:0;margin:0 0 1.45rem;color:inherit;text-rendering:optimizeLegibility;font-size:1.38316rem;line-height:1.1;letter-spacing:-.03rem}
   h3{padding:0;margin:0 0 1.45rem;color:inherit;text-rendering:optimizeLegibility;font-size:1.38316rem;line-height:1.1;letter-spacing:-.03rem}
 
   img{max-width:100%;padding:0;margin:0 0 1.45rem}
@@ -73,4 +75,18 @@ p.a {
    
         line-height:1.8;
 
+      }
+
+      .itemImage-0-2-5 {
+        width: 100px;
+        height: 62px;
+        max-width: 100px;
+        min-width: 100px;
+        margin-top: 5px;
+        object-fit: cover;
+        margin-left: 15px;
+        border-radius: 4px;
+      }
+      .itemImage-0-2-5:hover {
+        opacity: 0.9;
       }

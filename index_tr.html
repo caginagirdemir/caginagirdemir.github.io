@@ -27,23 +27,24 @@
 
 <script type="text/javascript">
 
-  function PreloadImage(callback){
-    var objImagePreloader = new Image();
-  
-    objImagePreloader.src = spinnerImg;
-    if(objImagePreloader.complete){
+function PreloadImage(callback){
+  var objImagePreloader = new Image();
+
+  objImagePreloader.src = spinnerImg;
+  if(objImagePreloader.complete){
+    callback();
+    objImagePreloader.onload=function(){};
+  }
+  else{
+    objImagePreloader.onload = function() {
       callback();
+      //    clear onLoad, IE behaves irratically with animated gifs otherwise
       objImagePreloader.onload=function(){};
     }
-    else{
-      objImagePreloader.onload = function() {
-        callback();
-        //    clear onLoad, IE behaves irratically with animated gifs otherwise
-        objImagePreloader.onload=function(){};
-      }
-    }
   }
-  </script>
+}
+</script>
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
@@ -61,12 +62,12 @@
     <div class="container">
       <p class="a">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary">EN</button>
+                <button type="button" class="btn btn-primary">TR</button>
                 <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
                   <span class="caret"></span>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="index_tr.html">TR</a>
+                  <a class="dropdown-item" href="index.html">EN</a>
                   <a class="dropdown-item" href="index_ru.html">RU</a>
                 </div>
               </div> 
@@ -78,9 +79,9 @@
 
         <div class="row">
           <div class="col">
-            <h1>I'm Cagin</h1>
-            <h3 class="snippet-cardstyles__Snippet-sc-1nty3cc-2 euJqYh">MSc Student at Hacettepe University, drummer 🎵 and soccer refree ⚽</h3>
-            <p class="a">I've always been keen on the computer. My first program was phonebook as a console application in Pascal 15 years have passed since that day. And now, i use the libraries.
+            <h1>Ben Çağın</h1>
+            <h3 class="snippet-cardstyles__Snippet-sc-1nty3cc-2 euJqYh">Hacettepe'de yüksek lisans öğrencisi, davulcu 🎵 ve futbol hakemi ⚽</h3>
+            <p class="a">Bilgisayara her zaman meraklıydım. İlk programım 15 yıl önce Pascal dilinde bir consol uygulaması olan telefon rehberiydi. Ve şimdi kütüphaneleri kullanıyorum.
             </p>
             <div class="snippet-cardstyles__SocialIcons-sc-1nty3cc-4 iMYkAs">
               <a href="http://github.com/caginagirdemir" target="_blank" rel="noopener noreferrer">
@@ -94,180 +95,180 @@
         </div>
 
 
-          <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm"><span role="img" aria-label="working">👩🏻‍💻</span> Recent Projects</div>
+          <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm"><span role="img" aria-label="working">👩🏻‍💻</span> Son Projeler</div>
 
-            <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Present</span>
+            <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Şimdi</span>
 
             <div class="flexContainer-0-2-1"><div class="flexFirstItem-0-2-2"><div><span class="presentEmoji-0-2-6">
-              <span role="img" aria-label="question">📌</span></span><br/> Convex Hull Problem Animation</div><img class="itemImage-0-2-5"  src="convex_hull_animation.JPG"/></div><div class="flexSecondItem-0-2-3" ><div><span class="presentEmoji-0-2-6"> 
-              <span role="img" aria-label="explore">🤿</span></span> <strong><a href="" target="_blank" rel="noopener noreferrer">Movie Capture </a></strong>, To define error matrix in imu sensors.<em class="section-cardstyles__Date-q641xs-6 byOmdp">(2020)</em>
+              <span role="img" aria-label="question">📌</span></span> Son yapılan.<br/> Convex Hull Problem Animasyonu</div><img class="itemImage-0-2-5"  src="convex_hull_animation.JPG"/></div><div class="flexSecondItem-0-2-3" ><div><span class="presentEmoji-0-2-6"> 
+              <span role="img" aria-label="explore">🤿</span></span> <strong><a href="" target="_blank" rel="noopener noreferrer">Hareket yakalama</a></strong>, imu sensorlerde hata matrisi tanımlamak. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2020)</em>
               <br/> <a style="text-decoration:underline" href="" target="_blank" rel="noopener noreferrer"></a></div>
               <strong><a href="" target="_blank" rel="noopener noreferrer"><img class="itemImage-0-2-5" src="https://miro.medium.com/max/710/1*dX1Cks2kvy_2ZotZyi3tOg.png"/></a></strong></div>
             </div>   
             
-              <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Past</span>
+              <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Geçmiş</span>
       <ul class="section-cardstyles__ItemList-q641xs-2 fBIwfm">
 
         <li class="big">
-      <span role="img" aria-label="headphone">✔️</span> OpenGL and C++ <strong>
-        <a href="https://github.com/caginagirdemir/opengl" target="_blank" rel="noopener noreferrer">to make examples</a>
-      </strong>, create libraries and solve sort of problems and algorithm
+      <span role="img" aria-label="headphone">✔️</span> OpenGL ve C++ <strong>
+        <a href="https://github.com/caginagirdemir/opengl" target="_blank" rel="noopener noreferrer">örnek çalışmaları</a>
+      </strong>, kütüphaneleri ve çeşitli problem ve algoritmaların çözümü
       <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2019)</em>
     </li>
 
     <li class="big">
-      <span role="img" aria-label="check">✔️</span> Interface program  <strong>
-        <a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=14" target="_blank" rel="noopener noreferrer">for microcontrollers with C#</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2017)</em>
+      <span role="img" aria-label="check">✔️</span> Mikrodenetleyiciler için <strong>
+        <a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=14" target="_blank" rel="noopener noreferrer">C# seri port arayüz programı</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2017)</em>
       </li>
         
-        <li class="big"><span role="img" aria-label="knitting">✔️</span> Php <strong><a href="https://github.com/caginagirdemir/website" target="_blank" rel="noopener noreferrer">web design</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2018)</em></li>
+        <li class="big"><span role="img" aria-label="knitting">✔️</span> Php <strong><a href="https://github.com/caginagirdemir/website" target="_blank" rel="noopener noreferrer">web tasarımı</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2018)</em></li>
         
-        <li class="big"><span role="img" aria-label="rocket">🚀</span> <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=9" target="_blank" rel="noopener noreferrer">Linux PLC circuit board drawing </a> </strong>for multi-purpose use <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
+        <li class="big"><span role="img" aria-label="rocket">🚀</span> Çok amaçlı kullanım için <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=9" target="_blank" rel="noopener noreferrer"> Linux PLC devre kartı çizimi</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
         </li>
 
-        <li class="big"><span role="img" aria-label="rocket">✔️</span> Embedded system project <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=8" target="_blank" rel="noopener noreferrer"> Make Smart Own Object</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
+        <li class="big"><span role="img" aria-label="rocket">✔️</span> Gömülü sistem projem <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=8" target="_blank" rel="noopener noreferrer"> Nesneni akkılı yap</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
         </li>
       </ul>
 
       <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-        <span role="img" aria-label="computer">💻</span> The Journey</div>
+        <span role="img" aria-label="computer">💻</span> Mesleki Hikaye</div>
 
         <ul class="section-cardstyles__ItemList-q641xs-2 fBIwfm">
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">⚙️</span></span>
-             at Ankara Science Center </strong> Embedded Software Engineer and <a href="http://caginagirdemir.science/work_together.jpg" target="_blank" rel="noopener noreferrer"> Tutor. </a>
+             <a href="" target="_blank" rel="noopener noreferrer">Ankara Bilim Merkezinde </a></strong> gömülü sistemler yazılım uzmanı ve <a href="http://caginagirdemir.science/work_together.jpg" target="_blank" rel="noopener noreferrer"> özel eğitmen. </a>
             </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">⚙️</span></span>
-                R&D Engineer <a href="https://en.wikipedia.org/wiki/Vestel" target="_blank" rel="noopener noreferrer">at Vestel City</a>
+                 <a href="" target="_blank" rel="noopener noreferrer">Vestel City de</a></strong> Ar-Ge mühendisi.
                 </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">⚙️</span></span>
-                  Software Engineer <a href="" target="_blank" rel="noopener noreferrer"> at Oemia Defence Industry </a>
+                  <a href="" target="_blank" rel="noopener noreferrer">Oemia Savunma Sanayinde </a></strong> Yazılım mühendisi
                 </li>
 
                 <li class="big">
                   <span class="presentEmoji-0-2-8">
                     <span role="img" aria-label="motobike">❤️</span></span>
-                    <a href="http://caginagirdemir.science/tog_ref.pdf" target="_blank" rel="noopener noreferrer">Volunteer</a> <a href="https://www.tog.org.tr/en/" target="_blank" rel="noopener noreferrer"> at Community Volunteers Foundation </a>
+                      <a href="" target="_blank" rel="noopener noreferrer">Toplum gönüllüleri vakfında </a></strong> <a href="http://caginagirdemir.science/tog_ref.pdf" target="_blank" rel="noopener noreferrer"> Gönüllü</a>
                     </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">🐴</span></span>
-                  Graduate student <a href="https://www.hacettepe.edu.tr/english/" target="_blank" rel="noopener noreferrer"> at Hacettepe University Computer Science </a>
+                  <a href="" target="_blank" rel="noopener noreferrer">Hacettepe Üniversitesinde </a></strong> Bilgisayar bilimlerinde yüksek lisans öğrencisi
                 </li>
 
                 <li class="big">
                   <span class="presentEmoji-0-2-8">
                     <span role="img" aria-label="motobike">🛵</span></span>
-                    I was a graduate student <a href="https://kpi.ua/en" target="_blank" rel="noopener noreferrer"> at Igor Sikorsky Kyiv Polytechnic Institute </a> with <a href="http://caginagirdemir.science/ukrayna_burs.jpg" target="_blank" rel="noopener noreferrer"> state fellowship</a>
+                  <a href="" target="_blank" rel="noopener noreferrer">Isgor Skyrosky Kiev Polyteknik Enstitüsünde </a></strong> <a href="http://caginagirdemir.science/ukrayna_burs.jpg" target="_blank" rel="noopener noreferrer">burslu </a> yüksek lisans öğrencisi.
                 </li>
 
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">🎓</span></span>
-                I graduate<a href="https://international.sdu.edu.tr/" target="_blank" rel="noopener noreferrer"> at Suleyman Demirel University  </a></strong> as BSc Electrical and Electronic Engineering.
+                <a href="" target="_blank" rel="noopener noreferrer">Süleyman Demirel Üniversitesinde </a></strong> Elektrik Elektronik Mühendisliğinden mezun.
               </li>
 
         <li class="big">
           <span class="presentEmoji-0-2-8">
             <span role="img" aria-label="motobike">🎓</span></span>
-            I graduate <a href="https://uludag.edu.tr/english/default" target="_blank" rel="noopener noreferrer">Uludag University </a></strong> as Associate Degree Computer Programming
+            <a href="" target="_blank" rel="noopener noreferrer">Uludağ Üniversitesinde </a></strong> Bilgisayar Programcılığından mezun.
           </li>
 
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">🎓</span></span>
-            I studied high school <a href="" target="_blank" rel="noopener noreferrer"> at Ankara Turk Telekom Techincal Highschool </a></strong> as Computer Software.
+            <a href="" target="_blank" rel="noopener noreferrer">Ankara Türk Telekom Anadolu Teknik Lisesinden </a></strong> Bilgisayar Yazılım bölümünden mezun.
           </li>
           </ul>
           <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-      <span role="img" aria-label="tool">🛠</span> Technology Stack</div>
+      <span role="img" aria-label="tool">🛠</span> Teknolojiler</div>
       <ul class="section-cardstyles__StackList-q641xs-3 cHkJCN">
-        <li class="big" style="line-height:2.5">I &#x27; work on
+        <li class="big" style="line-height:2.5">Ben &#x27; şunlar üzerinde çalıştım
           <span style="border-bottom:3px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">HTML/CSS</span> ,
           <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">PHP</span> ve 
           <span class="section-cardstyles__Tech-q641xs-9 hbrIcV">MySQL</span>
-          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Bootstrap 4.0</span> with VS Code platform.
+          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Bootstrap 4.0</span> VS Code ile birlikte.
         </li>
         
-        <li class="big" style="line-height:2.5" >I &#x27; currently working on
-          <span style="border-bottom:2px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Matlab</span> regarding dissertation.
+        <li class="big" style="line-height:2.5" >Ben &#x27;şuan şunlar üzerine çalışıyorum
+          <span style="border-bottom:2px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Matlab</span> Tezden dolayı.
         </li>
 
-        <li class="big" style="line-height:2.5">My &#x27; specialties
+        <li class="big" style="line-height:2.5">Benim &#x27; uzmanlık alanlarım
           <span style="border-bottom:3px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">C#</span>,
-          <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Circuit Design</span> and
-          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Embedded C</span>
+          <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Devre Tasarımı</span> ve
+          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Gömülü C</span>
         </li>
       </ul>
 
       <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-      <span role="img" aria-label="nature">🌄</span> Personal</div>
-              <p class="section-cardstyles__Quote-q641xs-11 kLYPWA">&quot;It doesn’t interest me what you do for a living. I want to know what you ache for – and if you dare to dream of meeting your heart’s longing. It doesn’t interest me how old you are. I want to know if you will risk looking like a fool – for love – for your dreams – for the adventure of being alive.&quot;
+      <span role="img" aria-label="nature">🌄</span> Kişisel</div>
+              <p class="section-cardstyles__Quote-q641xs-11 kLYPWA">&quot;Yaşamak için yaptığın şey beni ilgilendirmiyor. Ne için ağladığınızı bilmek istiyorum - ve kalbinizin özlemiyle tanışmayı hayal ediyorsanız. Yaşınız beni ilgilendirmiyor. Hayatta kalma serüveni için - aşk için - hayalleriniz için - aptal gibi görünüp görünmeyeceğinizi bilmek istiyorum.&quot;
                 <span style="font-size:18px;color:#888" class="section-cardstyles__ItalicText-q641xs-8 KechN">
                   – Oriah Mountain Dreamer</span></p>
                   <ul class="section-cardstyles__PersonalList-q641xs-4 fMYyIk">
                     <li class="big">
-                      <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Personality:</span>
+                      <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Kişilik:</span>
                       <strong><a href="https://www.16personalities.com/enfp-personality" target="_blank" rel="noopener noreferrer">ENFP-T</a></strong>
                     </li>
                       <li class="big">
-                        <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Collections:</span>
-                        magnets from visited countries
+                        <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Koleksiyon:</span>
+                        ders kitaplarım ve ziyaret edilen ülkelerden magnetler
                       </li>
                         <li class="big">
-                          <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Music:</span> Movie musics, drum cover songs // me on<a href="https://open.spotify.com/user/coyxqmgbbiu47l1c59r18er23" target="_blank" rel="noopener noreferrer">
+                          <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Müzik:</span> film müzikleri, davul cover şarkılar // me on<a href="https://open.spotify.com/user/coyxqmgbbiu47l1c59r18er23" target="_blank" rel="noopener noreferrer">
                             <img style="width:27px;vertical-align:middle;margin-left:5px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE20lEQVRoQ92aV8glRRCFvzWtmTVgVjBHUMwZxYjKiq4BFQXxQUEFMYAvooIgmBBBVESfTGBClhUDigoq5pweVFCMmHNWPqhZhqF7pmf+e+/v3n68M13dp7vq1KmaO4cpGXOmBAfjALI8sCWwCbAWsFIc1s/Al8AHwHvAb6M8xFEB2Q5YABwC7AjM7djk78DLwMPAvcCbMwU1EyDLAMcC5wC7znAjzwPXAncDfw2xNRTIYcBVwNZDFm2Z8zZwAfBgX7t9gawGXA+c0Hehnu/fCZwJfFs6rw+QHYD7gI1Ljc/wvQ+Bo4FXS+yUAjkYuAdYpcToCN/5ETgGeKTLZgkQQTwASKuzMaTpI7vAdAHRnZ6ahZtoHpg3s2+bm7UBMbBfmmBMdN22MbNTjgDagNwxAXbq2nzzuWx2YmpSDoh5YlHfVSb0/uGpPJMCYsZ+vSPZmX3fB94J7fQJ8BXwA/BrZOelQqqsDKwOrA1sGBpsq9BhXTGaOhuT5vZNBZAyZLLTrZpDsefvjwMvAgbg0OG66wA7A3sDBwISi+BLhu6lmy0eKSDPJbSTJ6+e+qlklYHvrB8J8GRglw4barPd2oCoYt9IGLkMuGjgBodMU0GfBxwH6Oqp4V7fqh40b+Ri4JLErFuB0zIGVw3ft/aQslcElgb+jZrDuDF+Po16pI+63SZU8UGJtd3npTkgzwB7JCb9GSLODL8ZcACwewSdvu7GS8YvQQ7WHy8AT0ddov3c0Lbubg6pD/e6VwqIEuS7gqKoZMN93lHhPhS1iJT/R2Ly1cC5jd8tzuZVlWbdtaS0IqXZskvd5p94rm1Ps5SJnPYFcANwXS2Da0em3C+xrkz3mr/XgRwVMr3kND8HvFoljAGnfPA3KdkTFYxBukLkkA0if2wbpbAMaGzlxjfAFbFJ08EpmReV+fc3gZwO3NiBwhr7wkiY1cmXAG++s2zQ+RFRLm86xAhwBnBTE4g+qC/mhiwk1382cNHcNL1inyATGxilxKE9KfqavkC8gXWDQuubcuH1AN1nzaBf40IXk3p1uY+B74OS285h86DU4wtjKwmkxLVsCsjd6qb9gT0BE1PVu2q7TW9SMnkWeAwwO/+dmWAxtxBYruP2k67VJ9hH4V3elOXzLRm2fDQ0WNtayWAfBf0OAWjsPRk3/UQY0DWlVW+7bSTpt29CNGY+At4N+lWCfB0UbKY2dpTwawAbRRvVw1LS54aua6fm0Gg6tIHIJkQn5SRK3aDy+WbglVACfW7Bk7ap50ZlKGXOkJqk2mtSovgwJxqrzaqVFIYpGdEHUPWuovAs4NQBXZpW0ZiT8dXCsoyddqtDXWcLwM0oJKVfFbC9LxOecsVMr+ww8ysUZSr1XHNYOV4OnNTjNFplvHZShVXdvvJBWWKg9W3YeRCqXjvwt0WOqdu+CzCHdI3OwkoDuVK3y3jf57rn7YBFm2W0Q7F4doGholJXsSf16TKTGHYSzSUy3vmhDNrWLW4+aGQq2kHVaUxFg04wU9MyFcxUNLErF/s/fFaYDygis6NUHszmhx6lTCsI0ZUCqdxsif/0Vl3pVHwMrfuneebKMSTNiX2eroOZij8MNNnDfpVfXyUFW5slf+GwJ+bXWsvdxc3ooZqoT7CXrrFE/6mmFOTY3hvHjYxts22G/wMbmgVCJ8iT2wAAAABJRU5ErkJggg==" alt="spotify"/></a>
                           </li>
                           <li class="big">
                             <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">
-                              Movies:
+                              Filmler:
                             </span>
                             <a class="big" href="movies.html">
-                              Some of the movies I watched</a></li>
+                              İzlediğim bazı filmler</a></li>
                             </ul>
 
 
                             <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-                              <span role="img" aria-label="blog">🎞</span> The Journal</div>
+                              <span role="img" aria-label="blog">🎞</span> Günlük</div>
                               
                               <ul class="section-cardstyles__PersonalList-q641xs-4 fMYyIk">
                                 <div>
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">end of course term</h2>
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">ders dönemi sonu</h2>
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-04-26</p>
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">The end of a tiring courses period. After that, I will deal with the thesis.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Yorucu bir dönemin daha sonu. Bundan sonra tez ile uğraşacağım.
 
                                   </p>
                                 </div>
                                 <div>
 
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">to development of new science toys</h2>
-                                  <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-03-29</p><p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">I prepared an investor presentation for the new science toys series.
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">yeni bilim oyuncakları</h2>
+                                  <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-03-29</p><p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Yeni bilim oyuncakları serisi için yatırımcı sunumu hazırladım.
 
                                   </p>
                                 </div>
 
-                                <div><h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">end of one year 2019</h2>
+                                <div><h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">bir yılın daha sonu</h2>
                                   </a>
                                   
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2019-12-02</p>
                                   
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">2019 will almost be over. It has been a year for me to get used to and prepare for entrance exams of master's degree.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">2019 neredeyse bitecek. Benim için alışma ve yüksek lisans için sınavlara hazırlanma yılı oldu.
 
                                   </p>
                                 </div>
                                 
                                 <div>
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">опыт другой страны</h2>
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">farklı bir ülke tecrübesi</h2>
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2019-12-01</p>
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">It's been a while. It is difficult to get used to another country immediately. It might be good to watch some movies for this.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Döneli bir süre oldu. Hemen başka bir yere alışmak zor geliyor. Bunun için biraz film izlemek iyi gelebilir.
 
                                   </p>
                                 </div>

@@ -27,23 +27,23 @@
 
 <script type="text/javascript">
 
-  function PreloadImage(callback){
-    var objImagePreloader = new Image();
-  
-    objImagePreloader.src = spinnerImg;
-    if(objImagePreloader.complete){
-      callback();
-      objImagePreloader.onload=function(){};
-    }
-    else{
-      objImagePreloader.onload = function() {
+    function PreloadImage(callback){
+      var objImagePreloader = new Image();
+    
+      objImagePreloader.src = spinnerImg;
+      if(objImagePreloader.complete){
         callback();
-        //    clear onLoad, IE behaves irratically with animated gifs otherwise
         objImagePreloader.onload=function(){};
       }
+      else{
+        objImagePreloader.onload = function() {
+          callback();
+          //    clear onLoad, IE behaves irratically with animated gifs otherwise
+          objImagePreloader.onload=function(){};
+        }
+      }
     }
-  }
-  </script>
+    </script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
@@ -61,13 +61,13 @@
     <div class="container">
       <p class="a">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary">EN</button>
+                <button type="button" class="btn btn-primary">RU</button>
                 <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
                   <span class="caret"></span>
                 </button>
                 <div class="dropdown-menu">
+                  <a class="dropdown-item" href="index.html">EN</a>
                   <a class="dropdown-item" href="index_tr.html">TR</a>
-                  <a class="dropdown-item" href="index_ru.html">RU</a>
                 </div>
               </div> 
           </p>
@@ -78,9 +78,9 @@
 
         <div class="row">
           <div class="col">
-            <h1>I'm Cagin</h1>
-            <h3 class="snippet-cardstyles__Snippet-sc-1nty3cc-2 euJqYh">MSc Student at Hacettepe University, drummer 🎵 and soccer refree ⚽</h3>
-            <p class="a">I've always been keen on the computer. My first program was phonebook as a console application in Pascal 15 years have passed since that day. And now, i use the libraries.
+            <h1>Я Cagin</h1>
+            <h3 class="snippet-cardstyles__Snippet-sc-1nty3cc-2 euJqYh">Магистр в университете Хасеттепе, барабанщик 🎵 и футбольный арбитр ⚽</h3>
+            <p class="a">Я всегда увлекался компьютером. Моей первой программой была телефонная книга в виде консольного приложения на Паскале. С того дня прошло 15 лет. И теперь я использую библиотеки.
             </p>
             <div class="snippet-cardstyles__SocialIcons-sc-1nty3cc-4 iMYkAs">
               <a href="http://github.com/caginagirdemir" target="_blank" rel="noopener noreferrer">
@@ -94,180 +94,180 @@
         </div>
 
 
-          <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm"><span role="img" aria-label="working">👩🏻‍💻</span> Recent Projects</div>
+          <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm"><span role="img" aria-label="working">👩🏻‍💻</span> Последние проекты</div>
 
-            <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Present</span>
+            <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">настоящее время</span>
 
             <div class="flexContainer-0-2-1"><div class="flexFirstItem-0-2-2"><div><span class="presentEmoji-0-2-6">
-              <span role="img" aria-label="question">📌</span></span><br/> Convex Hull Problem Animation</div><img class="itemImage-0-2-5"  src="convex_hull_animation.JPG"/></div><div class="flexSecondItem-0-2-3" ><div><span class="presentEmoji-0-2-6"> 
-              <span role="img" aria-label="explore">🤿</span></span> <strong><a href="" target="_blank" rel="noopener noreferrer">Movie Capture </a></strong>, To define error matrix in imu sensors.<em class="section-cardstyles__Date-q641xs-6 byOmdp">(2020)</em>
+              <span role="img" aria-label="question">📌</span></span><br/>Анимация проблемы выпуклой оболочки</div><img class="itemImage-0-2-5"  src="convex_hull_animation.JPG"/></div><div class="flexSecondItem-0-2-3" ><div><span class="presentEmoji-0-2-6"> 
+              <span role="img" aria-label="explore">🤿</span></span> <strong><a href="" target="_blank" rel="noopener noreferrer">Захват фильма</a></strong>, Определить матрицу ошибок в датчиках IMU. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2020)</em>
               <br/> <a style="text-decoration:underline" href="" target="_blank" rel="noopener noreferrer"></a></div>
               <strong><a href="" target="_blank" rel="noopener noreferrer"><img class="itemImage-0-2-5" src="https://miro.medium.com/max/710/1*dX1Cks2kvy_2ZotZyi3tOg.png"/></a></strong></div>
             </div>   
             
-              <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Past</span>
+              <span class="section-cardstyles__SubTitle-q641xs-1 tTzlN">Прошлое</span>
       <ul class="section-cardstyles__ItemList-q641xs-2 fBIwfm">
 
         <li class="big">
-      <span role="img" aria-label="headphone">✔️</span> OpenGL and C++ <strong>
-        <a href="https://github.com/caginagirdemir/opengl" target="_blank" rel="noopener noreferrer">to make examples</a>
-      </strong>, create libraries and solve sort of problems and algorithm
+      <span role="img" aria-label="headphone">✔️</span> OpenGL и C++ <strong>
+        <a href="https://github.com/caginagirdemir/opengl" target="_blank" rel="noopener noreferrer">Примеры</a>
+      </strong>, создавать библиотеки и решать задачи и алгоритмы
       <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2019)</em>
     </li>
 
     <li class="big">
-      <span role="img" aria-label="check">✔️</span> Interface program  <strong>
-        <a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=14" target="_blank" rel="noopener noreferrer">for microcontrollers with C#</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2017)</em>
+      <span role="img" aria-label="check">✔️</span> Интерфейсная программа <strong>
+        <a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=14" target="_blank" rel="noopener noreferrer">для микроконтроллеров с C # </a></strong>. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2017)</em>
       </li>
         
-        <li class="big"><span role="img" aria-label="knitting">✔️</span> Php <strong><a href="https://github.com/caginagirdemir/website" target="_blank" rel="noopener noreferrer">web design</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2018)</em></li>
+        <li class="big"><span role="img" aria-label="knitting">✔️</span> Php <strong><a href="https://github.com/caginagirdemir/website" target="_blank" rel="noopener noreferrer">веб-дизайн</a></strong>. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2018)</em></li>
         
-        <li class="big"><span role="img" aria-label="rocket">🚀</span> <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=9" target="_blank" rel="noopener noreferrer">Linux PLC circuit board drawing </a> </strong>for multi-purpose use <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
+        <li class="big"><span role="img" aria-label="rocket">🚀</span><strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=9" target="_blank" rel="noopener noreferrer">Схема платы ПЛК Linux </a> </strong>для многоцелевого использования. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
         </li>
 
-        <li class="big"><span role="img" aria-label="rocket">✔️</span> Embedded system project <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=8" target="_blank" rel="noopener noreferrer"> Make Smart Own Object</a></strong>, <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
+        <li class="big"><span role="img" aria-label="rocket">✔️</span> проект встроенной системы <strong><a href="http://caginagirdemir.science/index.php?controller=post&action=view&id_post=8" target="_blank" rel="noopener noreferrer"> Сделай умный собственный объект</a></strong>. <em class="section-cardstyles__Date-q641xs-6 byOmdp">(2013)</em>
         </li>
       </ul>
 
       <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-        <span role="img" aria-label="computer">💻</span> The Journey</div>
+        <span role="img" aria-label="computer">💻</span> Профессиональный опыт</div>
 
         <ul class="section-cardstyles__ItemList-q641xs-2 fBIwfm">
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">⚙️</span></span>
-             at Ankara Science Center </strong> Embedded Software Engineer and <a href="http://caginagirdemir.science/work_together.jpg" target="_blank" rel="noopener noreferrer"> Tutor. </a>
+             Инженер по встраиваемому программному обеспечению и <a href="http://caginagirdemir.science/work_together.jpg" target="_blank" rel="noopener noreferrer"> преподаватель </a> в научном центре Анкары.
             </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">⚙️</span></span>
-                R&D Engineer <a href="https://en.wikipedia.org/wiki/Vestel" target="_blank" rel="noopener noreferrer">at Vestel City</a>
+                Инженер-исследователь <a href="https://en.wikipedia.org/wiki/Vestel" target="_blank" rel="noopener noreferrer"> в Вестел Сити </a></strong>
                 </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">⚙️</span></span>
-                  Software Engineer <a href="" target="_blank" rel="noopener noreferrer"> at Oemia Defence Industry </a>
+                Инженер-программист <a href="" target="_blank" rel="noopener noreferrer">в Oemia Defense Industry </a>
                 </li>
 
                 <li class="big">
                   <span class="presentEmoji-0-2-8">
                     <span role="img" aria-label="motobike">❤️</span></span>
-                    <a href="http://caginagirdemir.science/tog_ref.pdf" target="_blank" rel="noopener noreferrer">Volunteer</a> <a href="https://www.tog.org.tr/en/" target="_blank" rel="noopener noreferrer"> at Community Volunteers Foundation </a>
+                    <a href="http://caginagirdemir.science/tog_ref.pdf" target="_blank" rel="noopener noreferrer">Волонтер </a> <a href="https://www.tog.org.tr/en/" target="_blank" rel="noopener noreferrer"> в Общественном фонде волонтеров </a>
                     </li>
 
             <li class="big">
               <span class="presentEmoji-0-2-8">
                 <span role="img" aria-label="motobike">🐴</span></span>
-                  Graduate student <a href="https://www.hacettepe.edu.tr/english/" target="_blank" rel="noopener noreferrer"> at Hacettepe University Computer Science </a>
+                Аспирант <a href="https://www.hacettepe.edu.tr/english/" target="_blank" rel="noopener noreferrer">в университете Hacettepe компьютерных наук </a>
                 </li>
 
                 <li class="big">
                   <span class="presentEmoji-0-2-8">
                     <span role="img" aria-label="motobike">🛵</span></span>
-                    I was a graduate student <a href="https://kpi.ua/en" target="_blank" rel="noopener noreferrer"> at Igor Sikorsky Kyiv Polytechnic Institute </a> with <a href="http://caginagirdemir.science/ukrayna_burs.jpg" target="_blank" rel="noopener noreferrer"> state fellowship</a>
+                    Я был аспирантом  <a href="https://kpi.ua/en" target="_blank" rel="noopener noreferrer"> в Киевского политехнического института имени Игоря Сикорского</a></strong> <a href="http://caginagirdemir.science/ukrayna_burs.jpg" target="_blank" rel="noopener noreferrer"> с государственной стипендией </a>.
                 </li>
 
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">🎓</span></span>
-                I graduate<a href="https://international.sdu.edu.tr/" target="_blank" rel="noopener noreferrer"> at Suleyman Demirel University  </a></strong> as BSc Electrical and Electronic Engineering.
+              Я закончила <a href="https://international.sdu.edu.tr/" target="_blank" rel="noopener noreferrer">в  Университет Сулеймана Демиреля, </a></strong> получив степень бакалавра электротехники и электроники.
               </li>
 
         <li class="big">
           <span class="presentEmoji-0-2-8">
             <span role="img" aria-label="motobike">🎓</span></span>
-            I graduate <a href="https://uludag.edu.tr/english/default" target="_blank" rel="noopener noreferrer">Uludag University </a></strong> as Associate Degree Computer Programming
+            Я закончила <a href="https://uludag.edu.tr/english/default" target="_blank" rel="noopener noreferrer">в Улудаг Университет  </a></strong> в качестве младшего специалиста по компьютерному программированию
           </li>
 
           <li class="big">
             <span class="presentEmoji-0-2-8">
               <span role="img" aria-label="motobike">🎓</span></span>
-            I studied high school <a href="" target="_blank" rel="noopener noreferrer"> at Ankara Turk Telekom Techincal Highschool </a></strong> as Computer Software.
+              Я изучал среднюю школу в Ankara Türk Telekom Anatolian Technical High School как компьютерное программное обеспечение.
           </li>
           </ul>
           <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-      <span role="img" aria-label="tool">🛠</span> Technology Stack</div>
+      <span role="img" aria-label="tool">🛠</span> Технологический стек</div>
       <ul class="section-cardstyles__StackList-q641xs-3 cHkJCN">
-        <li class="big" style="line-height:2.5">I &#x27; work on
+        <li class="big" style="line-height:2.5">Я &#x27; работаю на
           <span style="border-bottom:3px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">HTML/CSS</span> ,
           <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">PHP</span> ve 
           <span class="section-cardstyles__Tech-q641xs-9 hbrIcV">MySQL</span>
-          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Bootstrap 4.0</span> with VS Code platform.
+          <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Bootstrap 4.0</span> с платформой VS Code.
         </li>
         
-        <li class="big" style="line-height:2.5" >I &#x27; currently working on
-          <span style="border-bottom:2px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Matlab</span> regarding dissertation.
+        <li class="big" style="line-height:2.5" >В &#x27; настоящее время я работаю
+          <span style="border-bottom:2px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Matlab</span> в отношении диссертации.
         </li>
 
-        <li class="big" style="line-height:2.5">My &#x27; specialties
-          <span style="border-bottom:3px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">C#</span>,
-          <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Circuit Design</span> and
+        <li class="big" style="line-height:2.5">Mои &#x27; специальности
+          <span style="border-bottom:3px solid #f0db4f" class="section-cardstyles__Tech-q641xs-9 hbrIcV">C#</span>
+          <span style="border-bottom:3px solid #83ba63" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Схемотехника</span> и 
           <span style="border-bottom:3px solid #e535ab" class="section-cardstyles__Tech-q641xs-9 hbrIcV">Embedded C</span>
         </li>
       </ul>
 
       <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-      <span role="img" aria-label="nature">🌄</span> Personal</div>
+      <span role="img" aria-label="nature">🌄</span> Личный</div>
               <p class="section-cardstyles__Quote-q641xs-11 kLYPWA">&quot;It doesn’t interest me what you do for a living. I want to know what you ache for – and if you dare to dream of meeting your heart’s longing. It doesn’t interest me how old you are. I want to know if you will risk looking like a fool – for love – for your dreams – for the adventure of being alive.&quot;
                 <span style="font-size:18px;color:#888" class="section-cardstyles__ItalicText-q641xs-8 KechN">
                   – Oriah Mountain Dreamer</span></p>
                   <ul class="section-cardstyles__PersonalList-q641xs-4 fMYyIk">
                     <li class="big">
-                      <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Personality:</span>
+                      <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Личность:</span>
                       <strong><a href="https://www.16personalities.com/enfp-personality" target="_blank" rel="noopener noreferrer">ENFP-T</a></strong>
                     </li>
                       <li class="big">
-                        <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Collections:</span>
-                        magnets from visited countries
+                        <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Коллекции:</span>
+                        магниты из посещенных стран
                       </li>
                         <li class="big">
-                          <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Music:</span> Movie musics, drum cover songs // me on<a href="https://open.spotify.com/user/coyxqmgbbiu47l1c59r18er23" target="_blank" rel="noopener noreferrer">
+                          <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">Музыка:</span>музыка из фильмов , барабанные кавер-версии // me on<a href="https://open.spotify.com/user/coyxqmgbbiu47l1c59r18er23" target="_blank" rel="noopener noreferrer">
                             <img style="width:27px;vertical-align:middle;margin-left:5px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE20lEQVRoQ92aV8glRRCFvzWtmTVgVjBHUMwZxYjKiq4BFQXxQUEFMYAvooIgmBBBVESfTGBClhUDigoq5pweVFCMmHNWPqhZhqF7pmf+e+/v3n68M13dp7vq1KmaO4cpGXOmBAfjALI8sCWwCbAWsFIc1s/Al8AHwHvAb6M8xFEB2Q5YABwC7AjM7djk78DLwMPAvcCbMwU1EyDLAMcC5wC7znAjzwPXAncDfw2xNRTIYcBVwNZDFm2Z8zZwAfBgX7t9gawGXA+c0Hehnu/fCZwJfFs6rw+QHYD7gI1Ljc/wvQ+Bo4FXS+yUAjkYuAdYpcToCN/5ETgGeKTLZgkQQTwASKuzMaTpI7vAdAHRnZ6ahZtoHpg3s2+bm7UBMbBfmmBMdN22MbNTjgDagNwxAXbq2nzzuWx2YmpSDoh5YlHfVSb0/uGpPJMCYsZ+vSPZmX3fB94J7fQJ8BXwA/BrZOelQqqsDKwOrA1sGBpsq9BhXTGaOhuT5vZNBZAyZLLTrZpDsefvjwMvAgbg0OG66wA7A3sDBwISi+BLhu6lmy0eKSDPJbSTJ6+e+qlklYHvrB8J8GRglw4barPd2oCoYt9IGLkMuGjgBodMU0GfBxwH6Oqp4V7fqh40b+Ri4JLErFuB0zIGVw3ft/aQslcElgb+jZrDuDF+Po16pI+63SZU8UGJtd3npTkgzwB7JCb9GSLODL8ZcACwewSdvu7GS8YvQQ7WHy8AT0ddov3c0Lbubg6pD/e6VwqIEuS7gqKoZMN93lHhPhS1iJT/R2Ly1cC5jd8tzuZVlWbdtaS0IqXZskvd5p94rm1Ps5SJnPYFcANwXS2Da0em3C+xrkz3mr/XgRwVMr3kND8HvFoljAGnfPA3KdkTFYxBukLkkA0if2wbpbAMaGzlxjfAFbFJ08EpmReV+fc3gZwO3NiBwhr7wkiY1cmXAG++s2zQ+RFRLm86xAhwBnBTE4g+qC/mhiwk1382cNHcNL1inyATGxilxKE9KfqavkC8gXWDQuubcuH1AN1nzaBf40IXk3p1uY+B74OS285h86DU4wtjKwmkxLVsCsjd6qb9gT0BE1PVu2q7TW9SMnkWeAwwO/+dmWAxtxBYruP2k67VJ9hH4V3elOXzLRm2fDQ0WNtayWAfBf0OAWjsPRk3/UQY0DWlVW+7bSTpt29CNGY+At4N+lWCfB0UbKY2dpTwawAbRRvVw1LS54aua6fm0Gg6tIHIJkQn5SRK3aDy+WbglVACfW7Bk7ap50ZlKGXOkJqk2mtSovgwJxqrzaqVFIYpGdEHUPWuovAs4NQBXZpW0ZiT8dXCsoyddqtDXWcLwM0oJKVfFbC9LxOecsVMr+ww8ysUZSr1XHNYOV4OnNTjNFplvHZShVXdvvJBWWKg9W3YeRCqXjvwt0WOqdu+CzCHdI3OwkoDuVK3y3jf57rn7YBFm2W0Q7F4doGholJXsSf16TKTGHYSzSUy3vmhDNrWLW4+aGQq2kHVaUxFg04wU9MyFcxUNLErF/s/fFaYDygis6NUHszmhx6lTCsI0ZUCqdxsif/0Vl3pVHwMrfuneebKMSTNiX2eroOZij8MNNnDfpVfXyUFW5slf+GwJ+bXWsvdxc3ooZqoT7CXrrFE/6mmFOTY3hvHjYxts22G/wMbmgVCJ8iT2wAAAABJRU5ErkJggg==" alt="spotify"/></a>
                           </li>
                           <li class="big">
                             <span class="section-cardstyles__BoldText-q641xs-7 hHjurR">
-                              Movies:
+                                Фильмы:
                             </span>
                             <a class="big" href="movies.html">
-                              Some of the movies I watched</a></li>
+                                Некоторые фильмы, которые я смотрел</a></li>
                             </ul>
 
 
                             <div class="section-cardstyles__SectionTitle-q641xs-0 fxpHsm">
-                              <span role="img" aria-label="blog">🎞</span> The Journal</div>
+                              <span role="img" aria-label="blog">🎞</span> Журнал</div>
                               
                               <ul class="section-cardstyles__PersonalList-q641xs-4 fMYyIk">
                                 <div>
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">end of course term</h2>
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">конец  срока</h2>
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-04-26</p>
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">The end of a tiring courses period. After that, I will deal with the thesis.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Конец утомительного периода курсов. После этого я буду заниматься диссертацией.
 
                                   </p>
                                 </div>
                                 <div>
 
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">to development of new science toys</h2>
-                                  <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-03-29</p><p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">I prepared an investor presentation for the new science toys series.
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">развитию новых научных игрушек</h2>
+                                  <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2020-03-29</p><p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Я подготовил презентацию для инвесторов для новой серии научных игрушек.
 
                                   </p>
                                 </div>
 
-                                <div><h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">end of one year 2019</h2>
+                                <div><h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">конец года 2019</h2>
                                   </a>
                                   
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2019-12-02</p>
                                   
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">2019 will almost be over. It has been a year for me to get used to and prepare for entrance exams of master's degree.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">2019 год почти закончится. Это был год для меня, чтобы привыкнуть и подготовиться к вступительным экзаменам в магистратуру.
 
                                   </p>
                                 </div>
                                 
                                 <div>
-                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">опыт другой страны</h2>
+                                  <h2 class="blog-cardcomponent__PostTitle-sc-1k8uoq3-1 jApxEg">farklı bir ülke tecrübesi</h2>
                                   <p class="blog-cardcomponent__PostDate-sc-1k8uoq3-2 dGmuJO">2019-12-01</p>
-                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">It's been a while. It is difficult to get used to another country immediately. It might be good to watch some movies for this.
+                                  <p class="blog-cardcomponent__PostSnippet-sc-1k8uoq3-3 fURDsn">Прошло много времени. Трудно сразу привыкнуть к другой стране. Для этого может быть неплохо посмотреть несколько фильмов.
 
                                   </p>
                                 </div>
