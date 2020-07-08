@@ -1,11 +1,17 @@
+
+
+
 .dropdown-menu {
     width: 50px !important;
     height: 70px !important;
 }
 
 .container {
+  @media (max-width: 680px) {
+    #main {
     padding-right: 10%;
     padding-left: 10%;
+    }}
 }
 
 
