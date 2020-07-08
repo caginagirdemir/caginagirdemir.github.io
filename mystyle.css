@@ -7,12 +7,10 @@
 }
 
 .container {
-  @media (max-width: 680px) {
-    #main {
     padding-right: 10%;
     padding-left: 10%;
-    }}
 }
+
 
 
 p.a {
