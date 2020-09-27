@@ -2,22 +2,23 @@
 
 ---
 
-### Category Name 1 
+### About Computer Graphics
 
-[Project 1 Title](/sample_page)
-<img src="convex_hull.gif?raw=true"/>
-
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+OpenGL Convex Hull Problem Simulation
+<img src="images/convex_hull.gif?raw=true"/>
 
 ---
 
-### Category Name 2
+Voronoi Diagram Simulation
+<img src="images/voronoi_diagram.gif?raw=true"/>
+
+---
+2d Light Scatter Siumation
+<img src="images/light_scatter.gif?raw=true"/>
+
+---
+
+### Embedded Projects
 
 - [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
