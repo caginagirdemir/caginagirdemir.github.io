@@ -9,12 +9,12 @@ Light Limunance Effect Simulation
 
 ---
 
-OpenGL Convex Hull Problem Simulation
+OpenGL Convex Hull Problem Simulation with Graham Scan Method
 <img src="images/convex_hull.gif?raw=true"/>
 
 ---
 
-Voronoi Diagram Simulation
+Voronoi Diagram Simulation with Brute Force Method
 <img src="images/voronoi_diagram.gif?raw=true"/>
 
 ---
