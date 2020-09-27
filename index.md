@@ -28,6 +28,21 @@ Voronoi Diagram Simulation
 
 ---
 
+### About Imagine Recognize with Matlab
+
+Two ball collision detection
+<img src="images/collision_detection.gif?raw=true"/>
+
+---
+
+Movie Capture
+<img src="images/movie_capture.gif?raw=true"/>
+
+---
+
+Cloth Dynamics
+<img src="images/cloth_dynamics.gif?raw=true"/>
+
 
 
 
