@@ -4,6 +4,12 @@
 
 ### About Computer Graphics
 
+Light Limunance Effect Simulation
+<img src="images/last_program.gif?raw=true"/>
+[paper](https://github.com/caginagirdemir/illumination-2d-plot-paper/blob/master/CMP715%20Paper.pdf)
+
+---
+
 OpenGL Convex Hull Problem Simulation
 <img src="images/convex_hull.gif?raw=true"/>
 
