@@ -12,7 +12,6 @@ Light Limunance Effect Simulation
 OpenGL Convex Hull Problem Simulation with Graham Scan Method 
 
 [paper (pdf)](report_convexhull.pdf)
-
 <img src="images/convex_hull.gif?raw=true"/>
 
 ---
