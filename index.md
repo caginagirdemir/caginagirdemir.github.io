@@ -18,6 +18,8 @@ OpenGL Convex Hull Problem Simulation with Graham Scan Method
 ---
 
 Voronoi Diagram Simulation with Brute Force Method
+
+[paper (pdf)](voronoi_diagram.pdf)
 <img src="images/voronoi_diagram.gif?raw=true"/>
 
 ---
