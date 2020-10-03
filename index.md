@@ -29,8 +29,18 @@ Voronoi Diagram Simulation with Brute Force Method
 
 ### Embedded Projects
 
-- [Project 1 Title](http://example.com/)
+--
+Make Smart Own Object project
+<img src="images/project.jpg?raw=true"/>
+<img src="images/program.png?raw=true"/>
+---
 
+### Joystick Kit
+
+--
+Joystick Kit
+[video (youtube)](https://www.youtube.com/watch?v=yPofXKxQU7Q)
+<img src="images/joystick.jpg?raw=true"/>
 ---
 
 ### About Imagine Recognize with Matlab
