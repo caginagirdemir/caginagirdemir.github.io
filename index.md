@@ -42,7 +42,7 @@ Make Smart Own Object project
 Joystick Kit
 
 [video (youtube)](https://www.youtube.com/watch?v=yPofXKxQU7Q)
-<img src="images/joystick.jpg?raw=true"/>
+<img src="images/joystick.jpeg?raw=true"/>
 ---
 
 ### About Imagine Recognize with Matlab
