@@ -84,8 +84,8 @@ p.a {
       .itemImage-0-2-5 {
         width: 100px;
         height: 62px;
-        max-width: 100px;
-        min-width: 100px;
+        max-width: 75px;
+        min-width: 75px;
         margin-top: 5px;
         object-fit: cover;
         margin-left: 15px;
