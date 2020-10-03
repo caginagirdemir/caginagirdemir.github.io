@@ -31,6 +31,7 @@ Voronoi Diagram Simulation with Brute Force Method
 
 --
 Make Smart Own Object project
+
 <img src="images/project.jpg?raw=true"/>
 <img src="images/program.png?raw=true"/>
 ---
@@ -39,6 +40,7 @@ Make Smart Own Object project
 
 --
 Joystick Kit
+
 [video (youtube)](https://www.youtube.com/watch?v=yPofXKxQU7Q)
 <img src="images/joystick.jpg?raw=true"/>
 ---
