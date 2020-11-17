@@ -5,6 +5,7 @@
 ### About Computer Graphics
 
 Improvement Position Calculation in IMU Sensors
+
 [proposal text (pdf)](https://github.com/caginagirdemir/illumination-2d-plot-paper/blob/master/CMP715%20Paper.pdf)
 <img src="images/data_collection_station.jpg?raw=true"/>
 
