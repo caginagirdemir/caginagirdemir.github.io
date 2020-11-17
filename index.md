@@ -22,7 +22,7 @@ Voronoi Diagram Simulation with Brute Force Method
 <img src="images/voronoi_diagram.gif?raw=true"/>
 
 ---
-2d Light Scatter Siumation
+2d Light Scatter Simulation
 <img src="images/light_scatter.gif?raw=true"/>
 
 ---
