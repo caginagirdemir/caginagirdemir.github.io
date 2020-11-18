@@ -6,7 +6,7 @@
 
 Improvement Position Calculation in IMU Sensors
 
-[proposal text (pdf)](https://github.com/caginagirdemir/thesisproposaltext.pdf)
+[proposal text (pdf)](https://github.com/caginagirdemir/caginagirdemir.github.io/thesisproposaltext.pdf)
 <img src="images/data_collection_station.jpg?raw=true"/>
 
 ---
