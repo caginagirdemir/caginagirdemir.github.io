@@ -13,6 +13,20 @@ Light Limunance Effect Simulation
 
 ---
 
+Movie Capture
+
+[report1 (pdf)](report1.pdf) | [report1_code (.m)](report1_code.pdf)
+[report2 (pdf)](report1.pdf) | [report2_code (.m)](report1_code.pdf)
+[report3 (pdf)](report1.pdf)
+[report4 (pdf)](report1.pdf)
+[report5 (pdf)](report1.pdf) | [report5_code (.m)](report1_code.pdf)
+[report6 (pdf)](report1.pdf) | [report6_code (.m)](report1_code.pdf)
+
+<img src="images/movie_capture.gif?raw=true"/>
+<img src="images/calibration_stick.gif?raw=true"/>
+
+---
+
 OpenGL Convex Hull Problem Simulation with Graham Scan Method 
 
 [paper (pdf)](report_convexhull.pdf)
@@ -54,10 +68,6 @@ Joystick Kit
 Two ball collision detection
 <img src="images/collision_detection.gif?raw=true"/>
 
----
-
-Movie Capture
-<img src="images/movie_capture.gif?raw=true"/>
 
 ---
 
