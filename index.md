@@ -15,8 +15,7 @@ Light Limunance Effect Simulation
 
 Movie Capture
 
-[report1 (pdf)](report1.pdf) | [report1_code (.m)](report1_code.pdf)
-
+[report1 (pdf)](report1.pdf) | [report1_code (.m)](report1_code.pdf)</p>
 [report2 (pdf)](report1.pdf) | [report2_code (.m)](report1_code.pdf)
 
 [report3 (pdf)](report1.pdf)
