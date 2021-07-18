@@ -5,6 +5,9 @@
 ### About Computer Graphics
 
 [Dissertion]Improvement Position Calculation in IMU Sensors (in Progress)
+Report 1 About Physics Analysis [(pdf)]
+Experimental Setup 
+<img src="images/setup.jpg?raw=true"/>
 
 ---
 
