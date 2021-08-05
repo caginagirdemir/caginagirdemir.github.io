@@ -6,6 +6,7 @@
 
 [Dissertion]Improvement Position Calculation in IMU Sensors (in Progress)
 [Report 1 - IMU and VICON Comparison Analysis with Python (pdf)](report_imu.pdf)
+
 [Experiment 1 Design Info (pdf)](SYSTEM_DESIGN.pdf)
 Experimental Setup 
 <img src="setup.jpg"/>
