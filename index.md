@@ -11,7 +11,7 @@
 
 Experimental Setup 
 <img src="setup.jpg"/>
-
+<img src="foot_setup.jpg"/>
 ---
 
 Light Limunance Effect Simulation
