@@ -25,7 +25,7 @@
 
     <script>
         function close_all() {
-            $("#java_p").hide();
+            // $("#java_p").hide();
             $("#opengl_p").hide();
             $("#embedded_p").hide();
             $("#c_p").hide();
@@ -46,7 +46,7 @@
             console.log("test");
             $("button").click(function () {
                 switch (this.id) {
-                    case "java_b": close_all(); $("#java_p").show(); break;
+                    //case "java_b": close_all(); $("#java_p").show(); break;
                     case "opengl_b": close_all(); $("#opengl_p").show(); break;
                     case "embedded_b": close_all(); $("#embedded_p").show(); break;
                     case "c_b": close_all(); $("#c_p").show(); break;
@@ -84,9 +84,9 @@
                 <div class="card border-success" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Project Badges</h5>
-                        <button type="button" id="java_b" class="btn btn-outline-warning">
+                        <!-- <button type="button" id="java_b" class="btn btn-outline-warning">
                             Java Script <span class="badge bg-primary">1</span>
-                        </button>
+                        </button> -->
                         <!--<button type="button" id="react_b" class="btn btn-outline-primary">
                             React JS <span class="badge bg-primary">0</span>
                         </button>-->
@@ -606,7 +606,8 @@
                                 <br><a
                                     href="https://github.com/caginagirdemir/rp_project"
                                     target="_blank">Code</a>
-                            UBlox GPS Module, Face Recognition, RFID Card Reader, Smoke and Alcohol Sensor Reading
+                            Written in Python and used memory map (mmap) to communication between sensor reading and recorder to database programs.
+                            <br>UBlox GPS Module, Face Recognition, RFID Card Reader, Smoke and Alcohol Sensor Reading
                             </p>
                         </div>
                     </div>
