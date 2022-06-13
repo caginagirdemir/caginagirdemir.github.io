@@ -77,3 +77,15 @@
       height: auto;
     }
   }
+
+  .btn-spcial1:defined {
+    background-color: white;
+    border-color: purple;
+    color: purple;
+    border-width: 2px;
+    }
+    .btn-spcial1:hover {
+    background-color: purple;
+    border-color: purple;
+    box-shadow: none;
+    }
