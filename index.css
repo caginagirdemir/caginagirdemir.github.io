@@ -79,13 +79,13 @@
   }
 
   .btn-spcial1:defined {
-    background-color: #ffffff ; 
-    border-color: #800080 ;
-    color: #800080 ;
-    border-width: 2px ;
+    background-color: #ffffff !important; 
+    border-color: #800080 !important;
+    color: #800080 !important;
+    border-width: 2px !important;
     }
     .btn-spcial1:hover {
-    background-color: #800080 ;
-    border-color: #800080 ;
-    box-shadow: none ;
+    background-color: #800080 !important;
+    border-color: #800080 !important;
+    box-shadow: none !important;
     }
