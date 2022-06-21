@@ -36,7 +36,6 @@
             $("#cpp_hacker_rank_p").hide();
             $("#teaching_p").hide();
             $("#cpp_modules_p").hide();
-            $("#git_tutorial_p").hide();
         };
 
         $(document).ready(function () {
@@ -57,7 +56,6 @@
                     case "cpp_hacker_b": close_all(); $("#cpp_hacker_rank_p").show(); break;
                     case "teaching_b": close_all(); $("#teaching_p").show(); break;
                     case "cpp_modules_b": close_all(); $("#cpp_modules_p").show(); break;
-                    case "git_tutorial_b": close_all(); $("#git_tutorial_p").show(); break;
                 }
             });
 
@@ -163,12 +161,7 @@
                 <div class="card border-danger" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Tutorial Badges</h5>
-                        <button type="button" id="git_tutorial_b" class="btn btn-outline-success">
-                            git <span class="badge bg-primary">2</span>
-                        </button>
-                        <!-- <button type="button" id="_hacker_b" class="btn btn-outline-danger">
-                            C++ <span class="badge bg-primary">1</span>
-                        </button> -->
+                        <a href="https://github.com/caginagirdemir/git_tutorial"style="border-width: 2px;"  target="_blank" class="btn btn-outline-success" role="button">git</a>
                     </div>
                 </div>
 
@@ -605,52 +598,6 @@
                 
 
             </div>
-        </div>
-
-
-        <div id="git_tutorial_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Git Tutorial</h3>
-
-            <div class="row">
-                <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
-                        <div class="card-header">
-                            Introduction Sequence 
-                        </div>
-                        <img src="images_gifs/git.png" class="card-img-top rounded">
-                        <div class="card-body">
-                            <p class="card-text">
-                                <br><a href="https://github.com/caginagirdemir/git_tutorial/tree/master/Git%20Tutorial/Introduction%20Sequence" target="_blank"> Page </a>
-                            </p>
-                            Task 1: Introduction to Git Commits <br/>
-                            Task 2: Branching in Git <br/>
-                            Task 3: Merging in Git <br/>
-                            Task 4: Rebase Introduction <br/>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-
-                <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
-                        <div class="card-header">
-                            Push & Pull -- Git Remotes!
-                        </div>
-                        <img src="images_gifs/git.png" class="card-img-top rounded">
-                        <div class="card-body">
-                            <p class="card-text">
-                                <br><a href="https://github.com/caginagirdemir/git_tutorial/tree/master/Git%20Tutorial/Push%20&%20Pull%20--%20Git%20Remotes!" target="_blank"> Page </a>
-                            </p>
-                            Task 1: Clone Intro <br/>
-                            Task 2: Remote Branches <br/>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-
-            </div>
-
-            
         </div>
 
         <div id="shell_p">
