@@ -27,9 +27,7 @@
     <script>
         
         
-        window.addEventListener('resize', () => {
-            refresh();
-        })
+        
 
         function close_all() {
             // $("#java_p").hide();
@@ -46,6 +44,10 @@
         };
 
         $(document).ready(function () {
+            
+            window.addEventListener('resize', () => {
+                refresh();
+            })
             
             //$("#box").fadeIn("slow");
             close_all();
