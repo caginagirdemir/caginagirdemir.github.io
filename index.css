@@ -1,12 +1,30 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+
   
-  html, body, #fullheight {
+html, body, #fullheight {
     min-height: 100% !important;
     height: auto;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#root {
+
+  min-height: 100vh;
+  padding-bottom: 300px;
+  position: relative;
+
+}
+
+
+element {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
 }
 
   .left {
@@ -70,16 +88,16 @@
     background-color: rgb(253, 253, 253);*/
 }
   
-  @media screen and (max-width: 600px) {
-    .left, .main {
-      position: relative;
-      width: 100%;
-      height: auto;
-    }
+@media screen and (max-width: 600px) {
+  .left, .main {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
+}
 
 .btn-spcial1:defined {
-background-color: #ffffff !important; 
+background-color: #1111 !important; 
 border-color: #800080 !important;
 color: #800080 !important;
 border-width: 2px !important;
@@ -92,32 +110,32 @@ color: #f0f8ff !important;
 
 
 .btn-spcial2:defined {
-    background-color: #ffffff !important; 
-    border-color: #003865 !important;
-    color: #003865 !important;
+    background-color: #1111 !important; 
+    border-color: #0078AA !important;
+    color: #0078AA !important;
     /* border-width: 2px !important; */
 }
 .btn-spcial2:hover {
-background-color: #003865 !important;
-border-color: #003865 !important;
+background-color: #0078AA !important;
+border-color: #0078AA !important;
 color: #f0f8ff !important;
 }
 
 .btn-spcial3:defined {
-    background-color: #ffffff !important; 
+    background-color: #1111 !important; 
     border-color: #D4F6CC !important;
     color: #D4F6CC !important;
     /* border-width: 2px !important; */
 }
 .btn-spcial3:hover {
-background-color: #D4F6CC !important;
+background-color: #1111 !important;
 border-color: #D4F6CC !important;
 color: #f0f8ff !important;
 }
 
 
 .btn-spcial4:defined {
-    background-color: #ffffff !important; 
+    background-color: #1111 !important; 
     border-color: #EF5B0C !important;
     color: #EF5B0C !important;
     /* border-width: 2px !important; */
@@ -130,7 +148,7 @@ color: #f0f8ff !important;
 
 
 .btn-spcial5:defined {
-    background-color: #ffffff !important; 
+    background-color: #1111 !important; 
     border-color: #3CCF4E !important;
     color: #3CCF4E !important;
     /* border-width: 2px !important; */
@@ -139,5 +157,9 @@ color: #f0f8ff !important;
 background-color: #3CCF4E !important;
 border-color: #3CCF4E !important;
 color: #f0f8ff !important;
+}
+
+.bg-special1:defined {
+  background-color: #00386550 !important;
 }
 

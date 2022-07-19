@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -23,9 +24,13 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
 
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
     <script>
+        
+        
+        window.addEventListener('resize', () => {
+            refresh();
+        })
+
         function close_all() {
             // $("#java_p").hide();
             $("#opengl_p").hide();
@@ -37,10 +42,11 @@
             $("#cpp_modules_p").hide();
             $("#array_and_hashing_p").hide();
             $("#backtracking_p").hide();
-            $("welcome_p").hide();
+            $("#welcome_p").hide();
         };
 
         $(document).ready(function () {
+            
             //$("#box").fadeIn("slow");
             close_all();
             $("#welcome_p").show();
@@ -61,12 +67,16 @@
             });
 
         });
+
     </script>
+
+
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
 
 <body>
+    <div id="root" style="z-index:1">
     <div class="left">
         <div class="inner-left d-flex flex-column">
             <div class="header">
@@ -76,13 +86,13 @@
                 <img class="rounded" src="images_gifs/profile2.png" style="width: 10rem; height: 12rem;">
             </div>
             <div class="description" style="float:right">
-
-                <h4>PhD. Candidate</h4>
-                Hacettepe University CS <br>
-                <a href="https://github.com/caginagirdemir" target="_blank">Github Profile </a><br>
-
+                <span style="color:#FFFFFF">
+                    <h4>PhD. Candidate</h4>
+                    Hacettepe University CS <br>
+                    <a href="https://github.com/caginagirdemir" target="_blank">Github Profile </a><br>
+                </span>
                 <br>
-                <div class="card border-success" style="width: 18rem;">
+                <div class="card border-success text-white bg-dark" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Project Badges</h5>
                         <!-- <button type="button" id="java_b" class="btn btn-outline-warning">
@@ -104,7 +114,7 @@
 
                 <br>
 
-                <div class="card border-primary" style="width: 18rem;">
+                <div class="card border-primary text-white bg-dark" style="width: 18rem;color: #1111">
                     <div class="card-body lh-1">
                         <h5 class="card-title">42 Istanbul Badges</h5>
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
@@ -129,7 +139,7 @@
 
                 <br>
 
-                <div class="card border-danger" style="width: 18rem;">
+                <div class="card border-danger text-white bg-dark" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Algorithm Training Badges</h5>
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
@@ -156,7 +166,7 @@
 
                 <br>
 
-                <div class="card border-info" style="width: 18rem;">
+                <div class="card border-info text-white bg-dark" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Teaching Activities</h5>
                         <button type="button" id="teaching_b"style="border-width: 2px;"  target="_blank" class="btn btn-outline-warning">
@@ -167,7 +177,7 @@
                 
                  <br>
 
-                <div class="card border-dark" style="width: 18rem;">
+                <div class="card border-success text-white bg-dark" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Programming Contests</h5>
                         <a href="https://github.com/caginagirdemir/Programming_Contests"style="border-width: 2px;"  target="_blank" class="btn btn-outline-info" role="button">METU 25th National Prog. C.</a>
@@ -176,7 +186,7 @@
 
                 <br>
 
-                <div class="card border-danger" style="width: 18rem;">
+                <div class="card border-danger text-white bg-dark" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Tutorial Badges</h5>
                         <a href="https://github.com/caginagirdemir/docker_tutorial"style="border-width: 2px;"  target="_blank" class="btn btn-outline-primary" role="button"><i class='fab fa-docker'></i> docker</a>
@@ -206,17 +216,19 @@
         <div class="container">
 
             <div id="welcome_p">
-                <p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a></p>
+                <p style="margin-top: 5.5em; margin-bottom: 0em;">
+                    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a>
+                </p>
             </div>
 
             <div id="opengl_p">
-                <h3 style="padding-top: 2rem; padding-bottom: 2rem;">OpenGL Projects</h3>
+                <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">OpenGL Projects</h3>
 
                
                 <div class="row">
 
                     <div class="col">
-                        <div id="box" class="card" style="width: 25rem;">
+                        <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 Voronoi Diagram Solver
                             </div>
@@ -241,7 +253,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card" style="width: 25rem;">
+                        <div class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 2D Ray Tracing
                             </div>
@@ -268,7 +280,7 @@
                     <div class="row">
 
                     <div class="col">
-                        <div class="card" style="width: 25rem;">
+                        <div class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 Convex Hull Problem
                             </div>
@@ -287,7 +299,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="card" style="width: 25rem;">
+                        <div class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 2d Illumination Calculator
                             </div>
@@ -351,13 +363,13 @@
             </div>
 
         <div id="array_and_hashing_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Array & Hashing</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Array & Hashing</h3>
             
             <div class="row">
 
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             1D Arrays Sum
                         </div>
@@ -374,7 +386,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Printing Pattern Using Loops
                         </div>
@@ -399,7 +411,7 @@
 
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Array Reversal
                         </div>
@@ -422,12 +434,12 @@
 
 
         <div id="backtracking_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Backtracking</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Backtracking</h3>
             
             <div class="row">
 
                     <div class="col">
-                        <div id="box" class="card" style="width: 25rem;">
+                        <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 Printing Tokens
                             </div>
@@ -444,7 +456,7 @@
                     </div>
 
                     <div class="col">
-                        <div id="box" class="card" style="width: 25rem;">
+                        <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                             <div class="card-header">
                                 Digit Frequency
                             </div>
@@ -468,11 +480,11 @@
 
 
         <div id="teaching_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Teaching Activities</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Teaching Activities</h3>
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Arduino
                         </div>
@@ -501,10 +513,10 @@
         </div>
 
         <div id="embedded_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Embedded Projects</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Embedded Projects</h3>
             <div class="row">
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             IMU Test
                         </div>
@@ -523,7 +535,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Make Smart Own Object
                         </div>
@@ -583,7 +595,7 @@
 
             <div class="row">
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Truck Tracking and Driver Recognition System
                         </div>
@@ -602,7 +614,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             BMX160 IMU Sensor Program (High Freq)
                         </div>
@@ -623,10 +635,10 @@
         </div>
 
         <div id="shell_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Shell Projects</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Shell Projects</h3>
             <div class="row">
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Shell 00
                         </div>
@@ -641,7 +653,7 @@
                     <br>
                 </div>
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Shell 01
                         </div>
@@ -658,11 +670,11 @@
         </div>
 
         <div id="cpp_modules_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">C++ Modules</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">C++ Modules</h3>
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 00
                         </div>
@@ -678,7 +690,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 01
                         </div>
@@ -698,7 +710,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 02
                         </div>
@@ -713,7 +725,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 03
                         </div>
@@ -732,7 +744,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 04
                         </div>
@@ -747,7 +759,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 05
                         </div>
@@ -765,7 +777,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 06
                         </div>
@@ -780,7 +792,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 07
                         </div>
@@ -798,7 +810,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Module 08
                         </div>
@@ -818,11 +830,11 @@
         </div>
 
         <div id="common_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Common Core Projects</h3>
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Common Core Projects</h3>
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             libft
                         </div>
@@ -837,7 +849,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             get_next_line
                         </div>
@@ -856,7 +868,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             ft_printf
                         </div>
@@ -871,7 +883,7 @@
                 </div>
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             minitalk
                         </div>
@@ -891,7 +903,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             FdF
                         </div>
@@ -906,7 +918,7 @@
                 </div>
                 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Push_Swap
                         </div>
@@ -927,7 +939,7 @@
             <div class="row">
 
                 <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
+                    <div id="box" class="card text-white bg-special1" style="width: 25rem;">
                         <div class="card-header">
                             Philosophers
                         </div>
@@ -951,6 +963,10 @@
 
     </div>
     </div>
+</div>
+<canvas id="canv" style="position:fixed;top:0;left:0;z-index:0" width="1440" height="960">
+</canvas>    
 </body>
 
 </html>
+<script src="test.js"></script>
