@@ -32,12 +32,10 @@
             $("#embedded_p").hide();
             $("#shell_p").hide();
             $("#common_p").hide();
-            $("#php_p").hide();
             $("#react_p").hide();
-            $("#c_hacker_rank_p").hide();
-            $("#cpp_hacker_rank_p").hide();
             $("#teaching_p").hide();
             $("#cpp_modules_p").hide();
+            $("#array_and_hashing_p").hide();
         };
 
         $(document).ready(function () {
@@ -52,12 +50,10 @@
                     case "embedded_b": close_all(); $("#embedded_p").show(); break;
                     case "shell_b": close_all(); $("#shell_p").show(); break;
                     case "common_b": close_all(); $("#common_p").show(); break;
-                    case "php_b": close_all(); $("#php_p").show(); break;
                     case "react_b": close_all(); $("#react_p").show(); break;
-                    case "c_hacker_b": close_all(); $("#c_hacker_rank_p").show(); break;
-                    case "cpp_hacker_b": close_all(); $("#cpp_hacker_rank_p").show(); break;
                     case "teaching_b": close_all(); $("#teaching_p").show(); break;
                     case "cpp_modules_b": close_all(); $("#cpp_modules_p").show(); break;
+                    case "array_and_hashing_b": close_all(); $("#array_and_hashing_p").shot(); break;
                 }
             });
 
@@ -133,9 +129,18 @@
                 <div class="card border-danger" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Algorithm Training Badges</h5>
-                        <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
-                            C <span class="badge bg-primary">6</span>
+                        <button type="button" id="array_and_hashing_b" class="btn btn-outline-warning">
+                            Arrays & Hashing <span class="badge bg-primary">3</span>
                         </button>
+                        <!-- <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
+                            Backtracking <span class="badge bg-primary">3</span>
+                        </button>
+                        <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
+                            Two Pointers <span class="badge bg-primary">2</span>
+                        </button>
+                        <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
+                            Binary Search <span class="badge bg-primary">0</span>
+                        </button> -->
                         <!-- <button type="button" id="_hacker_b" class="btn btn-outline-danger">
                             C++ <span class="badge bg-primary">1</span>
                         </button> -->
