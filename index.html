@@ -37,12 +37,13 @@
             $("#cpp_modules_p").hide();
             $("#array_and_hashing_p").hide();
             $("#backtracking_p").hide();
+            $("welcome_p").hide();
         };
 
         $(document).ready(function () {
             //$("#box").fadeIn("slow");
             close_all();
-            $("#opengl_p").show();
+            $("#welcome_p").show();
             console.log("test");
             $("button").click(function () {
                 switch (this.id) {
@@ -203,10 +204,15 @@
     </div>
     <div class="main">
         <div class="container">
+
+            <div id="welcome_p">
+                <p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a></p>
+            </div>
+
             <div id="opengl_p">
                 <h3 style="padding-top: 2rem; padding-bottom: 2rem;">OpenGL Projects</h3>
 
-                <p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=The+five+boxing+wizards+jump+quickly" alt="Typing SVG"></a></p>
+               
                 <div class="row">
 
                     <div class="col">
