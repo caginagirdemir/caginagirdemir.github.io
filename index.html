@@ -36,6 +36,7 @@
             $("#teaching_p").hide();
             $("#cpp_modules_p").hide();
             $("#array_and_hashing_p").hide();
+            $("#backtracking_p").hide();
         };
 
         $(document).ready(function () {
@@ -54,6 +55,7 @@
                     case "teaching_b": close_all(); $("#teaching_p").show(); break;
                     case "cpp_modules_b": close_all(); $("#cpp_modules_p").show(); break;
                     case "array_and_hashing_b": close_all(); $("#array_and_hashing_p").show(); break;
+                    case "backtracking_b": close_all(); $("#backtracking_p").show(); break;
                 }
             });
 
@@ -132,10 +134,10 @@
                             <button type="button" id="array_and_hashing_b" class="btn btn-outline-warning">
                                 Arrays & Hashing <span class="badge bg-primary">3</span>
                             </button>
-                        <!-- <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
+                        <button type="button" id="backtracking_b" class="btn btn-outline-warning">
                             Backtracking <span class="badge bg-primary">3</span>
                         </button>
-                        <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
+                        <!-- <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
                             Two Pointers <span class="badge bg-primary">2</span>
                         </button>
                         <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
@@ -343,18 +345,17 @@
             
             <div class="row">
 
+
                 <div class="col">
                     <div id="box" class="card" style="width: 25rem;">
                         <div class="card-header">
-                            C Easy Level
+                            1D Arrays Sum
                         </div>
-                        <img src="images_gifs/hacker_rank_logo.png" class="card-img-top rounded">
+                        <img src="images_gifs/c_array_1.png" class="card-img-top rounded">
                         <div class="card-body">
                             <p class="card-text">
-                                Functions, Pointers, Conditions, Loops, Bitwise<br>
-                                Difficulty: <span class="badge bg-success">Easy</span>
-                                <br><a
-                                    href="https://github.com/caginagirdemir/Hacker_Rank/tree/master/C%20Easy%20Level%20Questions"
+                                Difficulty: <span class="badge bg-warning">Medium</span><br>
+                                <a href="https://github.com/caginagirdemir/Hacker_Rank/blob/master/C%20Medium%20Level%20Questions/1D_array.c"
                                     target="_blank">Code</a>
                             </p>
                         </div>
@@ -379,24 +380,12 @@
                     <br>
                 </div>
                 </div>
+
+
+
                 <div class="row">
 
-                <div class="col">
-                    <div id="box" class="card" style="width: 25rem;">
-                        <div class="card-header">
-                            1D Arrays Sum
-                        </div>
-                        <img src="images_gifs/c_array_1.png" class="card-img-top rounded">
-                        <div class="card-body">
-                            <p class="card-text">
-                                Difficulty: <span class="badge bg-warning">Medium</span><br>
-                                <a href="https://github.com/caginagirdemir/Hacker_Rank/blob/master/C%20Medium%20Level%20Questions/1D_array.c"
-                                    target="_blank">Code</a>
-                            </p>
-                        </div>
-                    </div>
-                    <br>
-                </div>
+                
 
 
                 <div class="col">
@@ -416,7 +405,16 @@
                     <br>
                 </div>
                 </div>
-                <div class="row">
+
+
+                
+        </div>
+
+
+        <div id="backtraking_p">
+            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">Backtracking</h3>
+            
+            <div class="row">
 
                     <div class="col">
                         <div id="box" class="card" style="width: 25rem;">
@@ -453,8 +451,10 @@
                     </div>
 
 
-            </div>
+                </div>
         </div>
+
+
 
 
         <div id="teaching_p">
