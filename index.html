@@ -74,16 +74,17 @@
 
 
     <script>
-        var endpoint = 'extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O';
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-                console.log(response);
-        };
-        xhr.open('GET', endpoint, true);
-        xhr.send();
-
-    </script>
+    $(function() {
+    $.getJSON("https:://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O",
+     function(json) {
+      if (json.country && json.city) {
+        console.log(json);
+    //    $('#ipLookup').html('Location of '+json.query+': '+json.city+', '+json.country+'');
+      }
+     }
+    );
+    });
+   </script>
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
