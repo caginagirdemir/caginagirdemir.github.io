@@ -52,7 +52,6 @@
             //$("#box").fadeIn("slow");
             close_all();
             $("#welcome_p").show();
-            console.log("test");
             $("button").click(function () {
                 switch (this.id) {
                     //case "java_b": close_all(); $("#java_p").show(); break;
@@ -75,21 +74,11 @@
 
 
     <script>
-        
-        var endpoint = 'http://ip-api.com/json/?fields=status,message,country,city';
+        var endpoint = 'extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O';
 
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var response = JSON.parse(this.responseText);
-                if(response.status !== 'success') {
-                    console.log('query failed: ' + response.message);
-                    return
-                }
-
                 console.log(response);
-                
-            }
         };
         xhr.open('GET', endpoint, true);
         xhr.send();
@@ -1104,4 +1093,4 @@
 </body>
 
 </html>
-<script src="test.js"></script>
+<!-- <script src="test.js"></script> -->
