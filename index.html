@@ -12,8 +12,8 @@
       crossorigin="anonymous"
     >
 
-    $(function() {
-    $.getJSON("https:://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O",
+    function get() {
+    $.getJSON("https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O",
      function(json) {
       if (json.country && json.city) {
         console.log(json);
@@ -21,7 +21,7 @@
       }
      }
     );
-    });
+    };
 
 </script>
 
@@ -86,6 +86,8 @@
             });
 
         });
+
+        get();
 
     </script>
 
