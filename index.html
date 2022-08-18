@@ -33,15 +33,14 @@
         crossorigin="anonymous">
         
         function get() {
-        $.getJSON("https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O",
-        function(json) {
-        if (json.country && json.city) {
-            console.log(json);
-        //    $('#ipLookup').html('Location of '+json.query+': '+json.city+', '+json.country+'');
-        }
-        }
-        );
-        };
+        fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
+        .then( res => res.json())
+        .then(response => {
+            console.log("Country: ", response.country);
+        })
+        .catch((data, status) => {
+            console.log('Request failed');
+        })};
         
        
         function close_all() {
@@ -84,9 +83,9 @@
                 }
             });
 
+            get();
         });
 
-        get();
 
     </script>
 
