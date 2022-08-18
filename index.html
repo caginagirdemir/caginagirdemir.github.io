@@ -74,6 +74,28 @@
     </script>
 
 
+    <script>
+        
+        var endpoint = 'http://ip-api.com/json/?fields=status,message,country,city';
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                if(response.status !== 'success') {
+                    console.log('query failed: ' + response.message);
+                    return
+                }
+
+                console.log(response);
+                
+            }
+        };
+        xhr.open('GET', endpoint, true);
+        xhr.send();
+
+    </script>
+
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
