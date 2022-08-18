@@ -37,6 +37,8 @@
         .then( res => res.json())
         .then(response => {
             console.log("Country: ", response.country);
+            console.log("City: ", response.city);
+            console.log("Query: ", response.query);
         })
         .catch((data, status) => {
             console.log('Request failed');
