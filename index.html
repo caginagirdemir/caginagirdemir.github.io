@@ -173,10 +173,10 @@
             var nameArr = datas[j].data.split(',');
 
             visitscontainer.innerHTML += `
-            <div class="card text-white bg-special1" style="width: 15rem;height: 3rem;">
+            <div class="card text-white bg-special1" style="width: 20rem;height: 3rem;">
                 <div class="card-body ">
                     <div class="row">
-                        <div class="col"><h6> <p class="text-left"> <span class="fi fi-tr"></span>  ${nameArr[1]}  </p></h6></div>
+                        <div class="col"><h6> <p class="text-left"> <span class="fi fi-${nameArr[0].toLowerCase()}"></span>  ${nameArr[1]}  </p></h6></div>
                         <div class="col"> <h6><p class="text-end"> <i class="bi bi-person"></i> ${datas[j].count}</p></h6></div>
                     </div>
                     
