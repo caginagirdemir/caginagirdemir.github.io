@@ -29,20 +29,101 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
-
-    <script>
         
+    
+        <script type = "module">
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+            import { getFirestore, collection, addDoc, getDocs, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
+            
+            const firebaseConfig = {
+                apiKey: "AIzaSyBWMzEjM1baI32IkZOjzzPeUr-g1-yBnF8",
+                authDomain: "caginagirdemir-github-io.firebaseapp.com",
+                projectId: "caginagirdemir-github-io",
+                storageBucket: "caginagirdemir-github-io.appspot.com",
+                messagingSenderId: "643143823288",
+                appId: "1:643143823288:web:56a3e1887256b0c5d6a94d"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            
+
+            // function getData() {
+            //     const db = getFirestore();
+            //     getDocs(collection(db));  
+            // }
+
+            // window.addEventListener('DOMContentLoaded', async() =>  {
+            //     const data = await getData();
+            //     console.log(data);
+            // });
+
+            const db = getFirestore();
+
+            const onGetTasks = (callback) =>
+                onSnapshot(collection(db, "visits"), callback);
+
+            async function save (query, country, city, country_code) {
+                    
+                    
+                    try {
+                        await setDoc(doc(db, "visits", query), {
+                            city: city,
+                            country: country,
+                            country_code: country_code
+                        });
+                    }
+                    catch (e) {
+                        console.error("Error adding document: ", e);
+                    }
+                    console.log("ok");
+
+                    
+                    // const get_data = await getDocs(collection(db,"visits"));  
+                    // console.log(get_data);
+            }
+
+    
+        // window.addEventListener("DOMContentLoaded", async (e) => {
+        //     visitscontainer.innerHTML = "";
+
+        //     onGetTasks((querySnapshot) => {
+        //         querySnapshot.forEach((doc) => {
+        //             const get_data = doc.data();
+                    
+        //             visitscontainer.innerHTML += `
+        //             <div class="card card-body border-primary">
+        //                 ${get_data.country}
+        //                 <br/>
+        //                 ${get_data.city}
+        //                 <br/>
+        //                 ${get_data.country_code}
+        //             </div>`;
+
+
+
+        //         });
+        //     });
+            
+
+        // });
+        
+
         function get() {
         fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
         .then( res => res.json())
         .then(response => {
+            save(response.query, response.country, response.city, response.countryCode);
             console.log("Country: ", response.country);
             console.log("City: ", response.city);
             console.log("Query: ", response.query);
         })
         .catch((data, status) => {
             console.log('Request failed');
-        })};
+        })
+
+
+    };
         
        
         function close_all() {
@@ -87,7 +168,6 @@
 
         });
         get();
-
 
     </script>
 
@@ -259,6 +339,7 @@
                 <p style="margin-top: 5.5em; margin-bottom: 0em;">
                     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a>
                 </p>
+                <div class="col-md-6" id="visitscontainer"></div>
             </div>
 
             <div id="opengl_p">
@@ -1102,3 +1183,4 @@
 
 </html>
 <script src="test.js"></script>
+
