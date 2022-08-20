@@ -52,6 +52,8 @@
 
             const datas = [];
 
+            var d1 = new Date();
+
             const onGetTasks = (callback) =>
                 onSnapshot(collection(db, "visits"), callback);
 
@@ -60,8 +62,10 @@
                         await setDoc(doc(db, "visits", query), {
                             city: city,
                             country: country,
-                            country_code: country_code
+                            country_code: country_code,
+                            date: d1.toUTCString()
                         });
+                        
                     }
                     catch (e) {
                         console.error("Error adding document: ", e);
@@ -1202,8 +1206,8 @@
 </div>
 <canvas id="canv" class="canv" style="position:fixed;top:0;left:0;z-index:0" width="1440" height="960">
 </canvas>    
+<script src="test.js"></script>
 </body>
 
 </html>
-<script src="test.js"></script>
 
