@@ -105,8 +105,8 @@
             $("#binary_search_p").hide();
         };
 
-        // $(document).ready(function () {
-        window.addEventListener("DOMContentLoaded", async (e) => {
+        $(document).ready(function () {
+        // window.addEventListener("DOMContentLoaded", async (e) => {
             window.addEventListener('resize', () => {
             refresh();
             })
@@ -131,14 +131,14 @@
             });
 
         
-        await get();
+        get();
         visitscontainer.innerHTML = `<br/>
             <br/>
             <br/>
             <h5> <span style="color:white;font:Fira Code"> Visitors from (based on ip) </span> </h5>
             `;
         
-        const querySnapshot = await getDocs(collection(db, "visits"));
+        const querySnapshot = getDocs(collection(db, "visits"));
 
         let obj = {};
 
