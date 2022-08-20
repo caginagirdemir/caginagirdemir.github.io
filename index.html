@@ -102,7 +102,6 @@
             $("#embedded_p").hide();
             $("#shell_p").hide();
             $("#common_p").hide();
-            $("#react_p").hide();
             $("#teaching_p").hide();
             $("#cpp_modules_p").hide();
             $("#array_and_hashing_p").hide();
@@ -127,7 +126,7 @@
                     case "embedded_b": close_all(); $("#embedded_p").show(); break;
                     case "shell_b": close_all(); $("#shell_p").show(); break;
                     case "common_b": close_all(); $("#common_p").show(); break;
-                    case "react_b": close_all(); $("#react_p").show(); break;
+             
                     case "teaching_b": close_all(); $("#teaching_p").show(); break;
                     case "cpp_modules_b": close_all(); $("#cpp_modules_p").show(); break;
                     case "array_and_hashing_b": close_all(); $("#array_and_hashing_p").show(); break;
@@ -369,7 +368,7 @@
                 <div class="col-md-6" id="visitscontainer"></div>
             </div>
 
-            <div id="opengl_p">
+            <div id="opengl_p" style="display: none;">
                 <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">OpenGL Projects</h3>
 
                
@@ -510,7 +509,7 @@
 
             </div>
 
-        <div id="array_and_hashing_p">
+        <div id="array_and_hashing_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Array & Hashing</h3>
             
             <div class="row">
@@ -631,7 +630,7 @@
         </div>
 
 
-        <div id="backtracking_p">
+        <div id="backtracking_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Backtracking</h3>
             
             <div class="row">
@@ -674,7 +673,7 @@
                 </div>
         </div>
 
-        <div id="binary_search_p">
+        <div id="binary_search_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Binary Search</h3>
             
             <div class="row">
@@ -719,7 +718,7 @@
 
 
 
-        <div id="teaching_p">
+        <div id="teaching_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Teaching Activities</h3>
             <div class="row">
 
@@ -748,11 +747,7 @@
             </div>
         </div>
 
-        <div id="react_p">
-            <h3 style="padding-top: 2rem; padding-bottom: 2rem;">React JS Project</h3>
-        </div>
-
-        <div id="embedded_p">
+        <div id="embedded_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Embedded Projects</h3>
             <div class="row">
                 <div class="col">
@@ -874,7 +869,7 @@
             </div>
         </div>
 
-        <div id="shell_p">
+        <div id="shell_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Shell Projects</h3>
             <div class="row">
                 <div class="col">
@@ -909,7 +904,7 @@
             </div>
         </div>
 
-        <div id="cpp_modules_p">
+        <div id="cpp_modules_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">C++ Modules</h3>
             <div class="row">
 
@@ -1069,7 +1064,7 @@
 
         </div>
 
-        <div id="common_p">
+        <div id="common_p" style="display: none;">
             <h3 style="padding-top: 2rem; padding-bottom: 2rem; color:#FFFFFF;">Common Core Projects</h3>
             <div class="row">
 
