@@ -74,6 +74,8 @@
         
 
         function get() {
+
+      
         fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
         .then( res => res.json())
         .then(response => {
@@ -138,12 +140,12 @@
             <h5> <span style="color:white;font:Fira Code"> Visitors from (based on ip) </span> </h5>
             `;
         
-        const querySnapshot = getDocs(collection(db, "visits"));
-
-        let obj = {};
-
-        let flag = 1;
-
+            let obj = {};
+    
+            let flag = 1;
+        
+        const querySnapshot = getDocs(collection(db, "visits"))
+        .then(querySnapshot => {
         querySnapshot.forEach((doc) => {
             const get_data = doc.data();
 
@@ -165,8 +167,8 @@
             }
             flag=1;
 
-        });
-
+            }); //foreach
+         
 
         for (var j = 0; j < datas.length; j++){
 
@@ -187,7 +189,7 @@
             </div>`
         }
 
-
+    }); //then
 
     }); //end of ready function
     </script>
