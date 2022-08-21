@@ -85,7 +85,7 @@
         .then(response => {
             save(response.query, response.country, response.city, response.countryCode);
             console.log("Country: ", response.country);
-            console.log("City: ", response.city);
+            console.log("City: ", response.region);
             console.log("Query: ", response.query);
         })
         .catch((data, status) => {
