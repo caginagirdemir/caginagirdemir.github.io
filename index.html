@@ -116,6 +116,66 @@
             refresh();
             })
 
+            $(document).scroll(function()  {
+                $("#content").css("visibility", "hidden");
+            });
+
+           var elem = document.getElementById('project_badge_id');
+           elem.onmouseover = function() {
+
+                    document.getElementById("project_badge_id").classList.add('bg-special-empty');
+                    document.getElementById("project_badge_id").classList.remove('bg-special-blue');
+                    $("#content").css("visibility","visible");
+                    $('#content').css('margin-top', ($("#project_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
+                    $('#content').css('margin-left', ($("#project_badge_id").offset().left + 300).toString() + "px");
+
+                    deneme.innerHTML = ``;
+                    deneme.innerHTML += `This badge shows my non-commerical (due to ethic reasons) projects. There are much more my previous assignments and personel projects.`;
+            }
+            
+
+            elem.onmouseout = function() {
+                $("#content").css("visibility", "hidden");
+                document.getElementById("project_badge_id").classList.add('bg-special-blue');
+                document.getElementById("project_badge_id").classList.remove('bg-special-empty');
+            }
+
+            elem = document.getElementById('42_istanbul_badge_id');
+            elem.onmouseover = function() {
+                    document.getElementById("42_istanbul_badge_id").classList.add('bg-special-empty');
+                    document.getElementById("42_istanbul_badge_id").classList.remove('bg-special-blue');
+                    $("#content").css("visibility","visible");
+                    $('#content').css('margin-top', ($("#42_istanbul_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
+                    $('#content').css('margin-left', ($("#42_istanbul_badge_id").offset().left + 300).toString() + "px");
+                    deneme.innerHTML = ``;
+                    deneme.innerHTML += `<p>inception(Docker) <br/> ft_containers(map, stack, vector re-implement) <br/> cub3d & FdF(ray casting) <br/> fd_irc (C++ Socket) <br/> minishell (re-implement a part of bash <br/> shell(bash fundamentals <br/> C++ Modules(C++ Fundamentals)) </p>`;
+           
+            }
+            elem.onmouseout = function() {
+                    $("#content").css("visibility", "hidden");
+                    document.getElementById("42_istanbul_badge_id").classList.add('bg-special-blue');
+                    document.getElementById("42_istanbul_badge_id").classList.remove('bg-special-empty');
+            }
+
+
+            elem = document.getElementById('tutorial_badge_id');
+            elem.onmouseover = function() {
+                    document.getElementById("tutorial_badge_id").classList.add('bg-special-empty');
+                    document.getElementById("tutorial_badge_id").classList.remove('bg-special-blue');
+                    $("#content").css("visibility","visible");
+                    $('#content').css('margin-top', ($("#tutorial_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
+                    $('#content').css('margin-left', ($("#tutorial_badge_id").offset().left + 300).toString() + "px");
+                    deneme.innerHTML = ``;
+                    deneme.innerHTML += `Notes about these technologies writte in markdown. Some important commands and explanations.`;
+           
+            }
+            elem.onmouseout = function() {
+                    $("#content").css("visibility", "hidden");
+                    document.getElementById("tutorial_badge_id").classList.add('bg-special-blue');
+                    document.getElementById("tutorial_badge_id").classList.remove('bg-special-empty');
+            }
+
+
             //$("#box").fadeIn("slow");
             close_all();
             $("#welcome_p").show();
@@ -220,7 +280,7 @@
                     <a href="https://github.com/caginagirdemir" target="_blank">Github Profile </a><br>
                 </span>
                 <br>
-                <div class="card border-success text-white bg-dark" style="width: 18rem;">
+                <div id="project_badge_id" class="card border-success text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Project Badges</h5>
                         <!-- <button type="button" id="java_b" class="btn btn-outline-warning">
@@ -242,7 +302,7 @@
 
                 <br>
 
-                <div class="card border-primary text-white bg-dark" style="width: 18rem;color: #1111">
+                <div id="42_istanbul_badge_id" class="card border-primary text-white bg-special-blue" style="width: 18rem;color: #1111">
                     <div class="card-body lh-1">
                         <h5 class="card-title">42 Istanbul Badges</h5>
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
@@ -273,7 +333,7 @@
 
                 <br>
 
-                <div class="card border-danger text-white bg-dark" style="width: 18rem;">
+                <div id="tutorial_badge_id" class="card border-danger text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Tutorial Badges</h5>
 
@@ -299,7 +359,7 @@
 
                 <br>
 
-                <div class="card border-danger text-white bg-dark" style="width: 18rem;">
+                <div class="card border-danger text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Algorithm Training Badges</h5>
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
@@ -328,7 +388,7 @@
 
                 <br>
 
-                <div class="card border-info text-white bg-dark" style="width: 18rem;">
+                <div class="card border-info text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Teaching Activities</h5>
                         <button type="button" id="teaching_b"style="border-width: 2px;"  target="_blank" class="btn btn-outline-warning">
@@ -339,7 +399,7 @@
                 
                  <br>
 
-                <div class="card border-success text-white bg-dark" style="width: 18rem;">
+                <div class="card border-success text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
                         <h5 class="card-title">Programming Contests</h5>
                         <a href="https://github.com/caginagirdemir/Programming_Contests"style="border-width: 2px;"  target="_blank" class="btn btn-outline-info" role="button">METU 25th National Prog. C.</a>
@@ -1202,6 +1262,16 @@
 <canvas id="canv" class="canv" style="position:fixed;top:0;left:0;z-index:0" width="1440" height="960">
 </canvas>    
 <script src="test.js"></script>
+<div id="content" class="card bg-special-blue text-white" style="position:fixed;top:0;left:0;z-index:2; visibility: hidden; width: 23rem;">
+    <div class="card-header" >
+        <h5 style="margin-bottom: 0em;" class="card-title">Details</h5>
+    </div>
+    <div class="card-body">
+        <div id="deneme" class="card-text">
+        
+        </div>
+    </div>
+</div> 
 </body>
 
 </html>
