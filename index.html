@@ -58,22 +58,21 @@
         
 
         function get() {
-
-      
         fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
         .then( res => res.json())
         .then(response => {
-            save(response.query, response.country, response.city, response.countryCode);
+            save(response.query, response.country, response.region, response.countryCode);
             console.log("Country: ", response.country);
-            console.log("City: ", response.city);
+            console.log("City: ", response.region);
             console.log("Query: ", response.query);
         })
         .catch((data, status) => {
             console.log('Request failed');
+            console.log("Country: ", response.country);
+            console.log("City: ", response.region);
+            console.log("Query: ", response.query);
         })
-
-
-    };
+        };
         
        
         function close_all() {
@@ -93,10 +92,11 @@
 
         $(document).ready(function () {
 
+            
 
-        $(document).scroll(function()  {
-            $("#content").css("visibility", "hidden");
-        });
+            $(document).scroll(function()  {
+                $("#content").css("visibility", "hidden");
+            });
 
            var elem = document.getElementById('project_badge_id');
            elem.onmouseover = function() {
@@ -155,9 +155,10 @@
 
         // window.addEventListener("DOMContentLoaded", async (e) => {
             window.addEventListener('resize', () => {
-            refresh();
+                refresh();
             })
 
+            get();
             //$("#box").fadeIn("slow");
             close_all();
             $("#welcome_p").show();
@@ -178,7 +179,7 @@
             });
 
         
-        get();
+        
         visitscontainer.innerHTML = `<br/>
             <br/>
             <br/>
