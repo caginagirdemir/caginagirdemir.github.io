@@ -33,18 +33,11 @@
         
     
         <script type = "module">
-
+        
+            
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
             import { getFirestore, collection, addDoc, getDocs, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
-            
-            const firebaseConfig = {
-                apiKey: "AIzaSyBWMzEjM1baI32IkZOjzzPeUr-g1-yBnF8",
-                authDomain: "caginagirdemir-github-io.firebaseapp.com",
-                projectId: "caginagirdemir-github-io",
-                storageBucket: "caginagirdemir-github-io.appspot.com",
-                messagingSenderId: "643143823288",
-                appId: "1:643143823288:web:56a3e1887256b0c5d6a94d"
-            };
+            import { firebaseConfig } from './enviroment.js';
 
             const app = initializeApp(firebaseConfig);
             
@@ -56,8 +49,24 @@
 
             const onGetTasks = (callback) =>
                 onSnapshot(collection(db, "visits"), callback);
+            
 
-            async function save (query, country, city, country_code) {
+            
+                function get() {
+                    fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
+                    .then( res => res.json())
+                    .then(response => {
+                        save(response.query, response.country, response.region, response.countryCode);
+                        console.log("Country: ", response.country);
+                        console.log("City: ", response.region);
+                        console.log("Query: ", response.query);
+                    })
+                    .catch((data, status) => {
+                        console.log('Request failed');
+                    })
+                };
+
+                async function save (query, country, city, country_code) {
                     try {
                         await setDoc(doc(db, "visits", query), {
                             city: city,
@@ -71,44 +80,21 @@
                         console.error("Error adding document: ", e);
                     }
                     console.log("ok");
-            }
+                }
 
-        
-    
-        
-
-        function get() {
-
-      
-        fetch('https://extreme-ip-lookup.com/json/?key=7Hai19Afb9748Vgqgd9O')
-        .then( res => res.json())
-        .then(response => {
-            save(response.query, response.country, response.region, response.countryCode);
-            console.log("Country: ", response.country);
-            console.log("City: ", response.region);
-            console.log("Query: ", response.query);
-        })
-        .catch((data, status) => {
-            console.log('Request failed');
-        })
-
-
-    };
-        
-       
-        function close_all() {
-            // $("#java_p").hide();
-            $("#opengl_p").hide();
-            $("#embedded_p").hide();
-            $("#shell_p").hide();
-            $("#common_p").hide();
-            $("#teaching_p").hide();
-            $("#cpp_modules_p").hide();
-            $("#array_and_hashing_p").hide();
-            $("#backtracking_p").hide();
-            $("#welcome_p").hide();
-            $("#binary_search_p").hide();
-        };
+                function close_all() {
+                    // $("#java_p").hide();
+                    $("#opengl_p").hide();
+                    $("#embedded_p").hide();
+                    $("#shell_p").hide();
+                    $("#common_p").hide();
+                    $("#teaching_p").hide();
+                    $("#cpp_modules_p").hide();
+                    $("#array_and_hashing_p").hide();
+                    $("#backtracking_p").hide();
+                    $("#welcome_p").hide();
+                    $("#binary_search_p").hide();
+                };
 
         $(document).ready(function () {
         // window.addEventListener("DOMContentLoaded", async (e) => {
@@ -426,6 +412,21 @@
                     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a>
                 </p>
                 <div class="col-md-6" id="visitscontainer"></div>
+                
+                <!-- <br />
+                <br />
+                <h5> <span style="color:white;font:Fira Code"> Profesional Experience </span> </h5>
+
+                <div class="card text-white bg-special-blue" style="width: 25rem;">
+                    <div class="card-body">
+                        <p class="card-text">
+                            
+                            asdasdasd
+                        </p>
+
+                    </div>
+                </div> -->
+
             </div>
 
             <div id="opengl_p" style="display: none;">
