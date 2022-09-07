@@ -8,43 +8,16 @@ const datas = [];
 var d1 = new Date();
 var Ip = [];
 
-const onGetTasks = (callback) =>
-    onSnapshot(collection(db, "visits"), callback);
-
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var response_loc = JSON.parse(this.responseText);
-        console.log("request : " + response_loc);
-        if(response_loc.status == "success") {
-            save(response.ip, response_loc.country, response_loc.regionName);
-        }
-    }
-};
    
 function get() {
 
-$.getJSON("https://api.ipify.org/?format=json", function(e) {
-    Ip.push(e.ip);
-
-var endpoint = 'https://ip-api.com/batch?fields=status,country,countryCode,regionName';
-
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var response = JSON.parse(this.responseText);
-        if(response[0].status == "success"){
-
-        }
-        save(e.ip, response[0].country, response[0].regionName, response[0].countryCode);
-    }
-};
-var data = JSON.stringify(Ip);
-console.log("sending:", data);
-
-xhr.open('POST', endpoint, true);
-xhr.send(data);
+fetch('https://api.ipgeolocation.io/ipgeo?apiKey=f3410639eeec4c45bb56d8a6f96653bc&fields=country_code2,country_name,city')
+.then((response) => response.json())
+.then((data) => {
+    console.log(data)
+    save (data.ip, data.country_name, data.city, data.country_code2) 
 });
+
 };
 
 
