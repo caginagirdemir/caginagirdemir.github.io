@@ -9,7 +9,7 @@ var d1 = new Date();
 var Ip = [];
 
 function handleResponse(response) {
-    //console.log(response);
+    console.log(response);
     save (response.ip, response.country_name, response.city, response.country_code2) 
 }
 _ipgeolocation.enableSessionStorage(true);
