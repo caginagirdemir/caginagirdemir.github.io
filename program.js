@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
 import { firebaseConfig } from './environment.js';
@@ -28,17 +27,21 @@ function get() {
 $.getJSON("https://api.ipify.org/?format=json", function(e) {
     Ip.push(e.ip);
 
-var endpoint = 'http://ip-api.com/batch?fields=status,country,countryCode,regionName';
+var endpoint = 'https://ip-api.com/batch?fields=status,country,countryCode,regionName';
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var response = JSON.parse(this.responseText);
-        console.log(response[0].status == "success");
+        if(response[0].status == "success"){
+
+        }
         save(e.ip, response[0].country, response[0].regionName, response[0].countryCode);
     }
 };
 var data = JSON.stringify(Ip);
+console.log("sending:", data);
+
 xhr.open('POST', endpoint, true);
 xhr.send(data);
 });
