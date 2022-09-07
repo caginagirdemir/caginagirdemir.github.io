@@ -39,8 +39,6 @@ xhr.onreadystatechange = function() {
     }
 };
 var data = JSON.stringify(Ip);
-console.log("sending:", data);
-
 xhr.open('POST', endpoint, true);
 xhr.send(data);
 });
