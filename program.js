@@ -12,23 +12,19 @@ function handleResponse(response) {
     console.log(response);
     save (response.ip, response.country_name, response.city, response.country_code2) 
 }
-_ipgeolocation.enableSessionStorage(true);
-
-
-var ip = sessionStorage.getItem("ip");
-var country_name = sessionStorage.getItem("country_name");
-var country_code2 = sessionStorage.getItem("country_code2");
-var city = sessionStorage.getItem("city");
-        
-
+// _ipgeolocation.enableSessionStorage(true);
+// var ip = sessionStorage.getItem("ip");
+// var country_name = sessionStorage.getItem("country_name");
+// var country_code2 = sessionStorage.getItem("country_code2");
+// var city = sessionStorage.getItem("city");
 
 
 function get() {
-    if (!ip || !country_name || !country_code2) {
-        _ipgeolocation.makeAsyncCallsToAPI(false);
+    //if (!ip || !country_name || !country_code2) {
+    //    _ipgeolocation.makeAsyncCallsToAPI(false);
         _ipgeolocation.setFields("country_code2,country_name,city");
         _ipgeolocation.getGeolocation(handleResponse, "f3410639eeec4c45bb56d8a6f96653bc");
-    }
+    //}
 };
 
 
