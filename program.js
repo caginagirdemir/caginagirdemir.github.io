@@ -1,40 +1,40 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
-import { firebaseConfig } from './environment.js';
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+// import { getFirestore, collection, addDoc, getDocs, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
+// import { firebaseConfig } from './environment.js';
 
-const app = initializeApp(firebaseConfig);    
-const db = getFirestore();
-const datas = [];
-var d1 = new Date();
-var Ip = [];
+// const app = initializeApp(firebaseConfig);    
+// const db = getFirestore();
+// const datas = [];
+// var d1 = new Date();
+// var Ip = [];
 
-function handleResponse(response) {
-    //console.log(response);
-    save (response.ip, response.country_name, response.city, response.country_code2) 
-}
-
-
-function get() {
-        _ipgeolocation.setFields("country_code2,country_name,city");
-        _ipgeolocation.getGeolocation(handleResponse, "f3410639eeec4c45bb56d8a6f96653bc");
-};
+// function handleResponse(response) {
+//     //console.log(response);
+//     save (response.ip, response.country_name, response.city, response.country_code2) 
+// }
 
 
-async function save (query, country, city, country_code) {
-    try {
-        await setDoc(doc(db, "visits", query), {
-            city: city,
-            country: country,
-            country_code: country_code,
-            date: d1.toUTCString()
-        });
+// function get() {
+//         _ipgeolocation.setFields("country_code2,country_name,city");
+//         _ipgeolocation.getGeolocation(handleResponse, "f3410639eeec4c45bb56d8a6f96653bc");
+// };
+
+
+// async function save (query, country, city, country_code) {
+//     try {
+//         await setDoc(doc(db, "visits", query), {
+//             city: city,
+//             country: country,
+//             country_code: country_code,
+//             date: d1.toUTCString()
+//         });
         
-    }
-    catch (e) {
-        console.error("Error adding document: ", e);
-    }
-    console.log("ok");
-}
+//     }
+//     catch (e) {
+//         console.error("Error adding document: ", e);
+//     }
+//     console.log("ok");
+// }
 
 function close_all() {
     // $("#java_p").hide();
@@ -134,7 +134,7 @@ $(document).ready(function () {
     });
 
 
-    get();
+    // get();
     visitscontainer.innerHTML = `<br/>
     <br/>
     <br/>
