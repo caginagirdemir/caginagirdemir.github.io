@@ -9,22 +9,14 @@ var d1 = new Date();
 var Ip = [];
 
 function handleResponse(response) {
-    console.log(response);
+    //console.log(response);
     save (response.ip, response.country_name, response.city, response.country_code2) 
 }
-// _ipgeolocation.enableSessionStorage(true);
-// var ip = sessionStorage.getItem("ip");
-// var country_name = sessionStorage.getItem("country_name");
-// var country_code2 = sessionStorage.getItem("country_code2");
-// var city = sessionStorage.getItem("city");
 
 
 function get() {
-    //if (!ip || !country_name || !country_code2) {
-    //    _ipgeolocation.makeAsyncCallsToAPI(false);
         _ipgeolocation.setFields("country_code2,country_name,city");
         _ipgeolocation.getGeolocation(handleResponse, "f3410639eeec4c45bb56d8a6f96653bc");
-    //}
 };
 
 
@@ -95,7 +87,7 @@ $(document).ready(function () {
         $('#content').css('margin-top', ($("#42_istanbul_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
         $('#content').css('margin-left', ($("#42_istanbul_badge_id").offset().left + 300).toString() + "px");
         deneme.innerHTML = ``;
-        deneme.innerHTML += `<p> 42 Istanbul is part of 42 Network <br/> inception(Docker) <br/> ft_containers(map, stack, vector re-implement) <br/> cub3d & FdF(ray casting) <br/> fd_irc (C++ Socket) <br/> minishell (re-implement a part of bash) <br/> shell(bash fundamentals) <br/> C++ Modules(C++ Fundamentals)) </p>`;
+        deneme.innerHTML += `<p> 42 Istanbul is part of 42 Network <br/> inception(Docker) <br/> ft_containers(map, stack, vector re-implement) <br/> cub3d & FdF(ray casting) <br/> fd_irc (C++ Socket) <br/> minishell (re-implement a part of bash) <br/> shell(bash fundamentals) <br/> C++ Modules(C++ Fundamentals) <br/> ft_transcendence(NestJS + Docker + PostgreSQL + Prisma + ReactJS + SocketIO) </p>`;
     }
 
     elem.onmouseout = function() {
@@ -146,49 +138,56 @@ $(document).ready(function () {
     visitscontainer.innerHTML = `<br/>
     <br/>
     <br/>
-    <h5> <span style="color:white;font:Fira Code"> Visitors from (based on ip) </span> </h5>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!--<h5> <span style="color:white;font:Fira Code"> Visitors from (based on ip) </span> </h5>-->
     `;
 
-    let obj = {};
+    // let obj = {};
 
-    let flag = 1;
+    // let flag = 1;
 
-    const querySnapshot = getDocs(collection(db, "visits"))
-    .then(querySnapshot => {
-    querySnapshot.forEach((doc) => {
-    const get_data = doc.data();
+    // const querySnapshot = getDocs(collection(db, "visits"))
+    // .then(querySnapshot => {
+    // querySnapshot.forEach((doc) => {
+    // const get_data = doc.data();
 
-    for (var j = 0; j < datas.length; j++){
-        const from_db = get_data.country_code + "," + get_data.city;
-        if(datas[j].data == from_db) {
-            datas[j].count++;
-            flag = 0;
-            break ;
-        }
-    }
+    // for (var j = 0; j < datas.length; j++){
+    //     const from_db = get_data.country_code + "," + get_data.city;
+    //     if(datas[j].data == from_db) {
+    //         datas[j].count++;
+    //         flag = 0;
+    //         break ;
+    //     }
+    // }
 
-    if(flag) {
-    obj["data"] = get_data.country_code + "," + get_data.city;
-    obj["count"] = 1
-    datas.push(obj); 
-    obj = {};
-    }
-    flag=1;
+    // if(flag) {
+    // obj["data"] = get_data.country_code + "," + get_data.city;
+    // obj["count"] = 1
+    // datas.push(obj); 
+    // obj = {};
+    // }
+    // flag=1;
 
-    }); //foreach
+    // }); //foreach
 
 
-    for (var j = 0; j < datas.length; j++){
-        var nameArr = datas[j].data.split(',');
-        visitscontainer.innerHTML += `
-        <div class="card text-white bg-special1" style="width: 20rem;height: 3rem;">
-        <div class="card-body ">
-        <div class="row">
-        <div class="col"><h6> <p class="text-left"> <span class="fi fi-${nameArr[0].toLowerCase()}"></span>  ${nameArr[1]}  </p></h6></div>
-        <div class="col"> <h6><p class="text-end"> <i class="bi bi-person"></i> ${datas[j].count}</p></h6></div>
-        </div>
-        </div>
-        </div>`
-    }
-    }); //then
+    // for (var j = 0; j < datas.length; j++){
+    //     var nameArr = datas[j].data.split(',');
+    //     visitscontainer.innerHTML += `
+    //     <div class="card text-white bg-special1" style="width: 20rem;height: 3rem;">
+    //     <div class="card-body ">
+    //     <div class="row">
+    //     <div class="col"><h6> <p class="text-left"> <span class="fi fi-${nameArr[0].toLowerCase()}"></span>  ${nameArr[1]}  </p></h6></div>
+    //     <div class="col"> <h6><p class="text-end"> <i class="bi bi-person"></i> ${datas[j].count}</p></h6></div>
+    //     </div>
+    //     </div>
+    //     </div>`
+    // }
+    // }); //then
 }); //end of ready function

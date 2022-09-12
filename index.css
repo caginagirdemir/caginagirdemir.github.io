@@ -164,6 +164,18 @@ border-color: #3CCF4E !important;
 color: #f0f8ff !important;
 }
 
+.btn-spcial6:defined {
+    background-color: #1111 !important; 
+    border-color: #3D8361 !important;
+    color: #3D8361 !important;
+    /* border-width: 2px !important; */
+}
+.btn-spcial5:hover {
+background-color: #3D8361 !important;
+border-color: #3D8361 !important;
+color: #f0f8ff !important;
+}
+
 .bg-special1:defined {
   background-color: #00386550 !important;
 }
