@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
@@ -30,10 +29,116 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
-        
-        <script type="module" src="program.js"></script>
-
 </head>
+
+<script>
+     function close_all() {
+    // $("#java_p").hide();
+    $("#opengl_p").hide();
+    $("#embedded_p").hide();
+    $("#shell_p").hide();
+    $("#common_p").hide();
+    $("#teaching_p").hide();
+    $("#cpp_modules_p").hide();
+    $("#array_and_hashing_p").hide();
+    $("#backtracking_p").hide();
+    $("#welcome_p").hide();
+    $("#binary_search_p").hide();
+    };
+
+    function close_badge(badge_id_name) {
+        $("#content").css("visibility", "hidden");
+        document.getElementById(badge_id_name).classList.add('bg-special-blue');
+        document.getElementById(badge_id_name).classList.remove('bg-special-empty');
+    };
+
+    $(document).ready(function () {
+        window.addEventListener('resize', () => {
+         refresh();
+        })
+
+        $(document).scroll(function()  {
+            $("#content").css("visibility", "hidden");
+        });
+
+        close_all();
+        $("#welcome_p").show();
+        $("button").click(function () {
+            switch (this.id) {
+                //case "java_b": close_all(); $("#java_p").show(); break;
+                case "opengl_b": close_all(); $("#opengl_p").show(); break;
+                case "embedded_b": close_all(); $("#embedded_p").show(); break;
+                case "shell_b": close_all(); $("#shell_p").show(); break;
+                case "common_b": close_all(); $("#common_p").show(); break;
+
+                case "teaching_b": close_all(); $("#teaching_p").show(); break;
+                case "cpp_modules_b": close_all(); $("#cpp_modules_p").show(); break;
+                case "array_and_hashing_b": close_all(); $("#array_and_hashing_p").show(); break;
+                case "backtracking_b": close_all(); $("#backtracking_p").show(); break;
+                case "binary_search_b": close_all(); $("#binary_search_p").show(); break;
+            }
+        });
+    
+
+    var elem = document.getElementById('project_badge_id');
+    elem.onmouseover = function() {
+        document.getElementById("project_badge_id").classList.add('bg-special-empty');
+        document.getElementById("project_badge_id").classList.remove('bg-special-blue');
+        $("#content").css("visibility","visible");
+        $('#content').css('margin-top', ($("#project_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
+        $('#content').css('margin-left', ($("#project_badge_id").offset().left + 300).toString() + "px");
+        deneme.innerHTML = ``;
+        deneme.innerHTML += `There are much more my previous assignments and personel projects in this badge. <br/>
+                            inception (Docker) <br/>
+                            NetPractice (Network System) <br/>
+                            OpenGL (Convex Hull P., Voronoi D. etc.) <br/>
+                            Embedded (STM32, ESP8266 etc.)`;
+    }
+    elem.onmouseout = function() {
+        close_badge("project_badge_id")
+    }
+
+    elem = document.getElementById('42_istanbul_badge_id'); 
+    elem.onmouseover = function() {
+        document.getElementById("42_istanbul_badge_id").classList.add('bg-special-empty');
+        document.getElementById("42_istanbul_badge_id").classList.remove('bg-special-blue');
+        $("#content").css("visibility","visible");
+        $('#content').css('margin-top', ($("#42_istanbul_badge_id").offset().top - $(window).scrollTop()).toString() + "px");
+        $('#content').css('margin-left', ($("#42_istanbul_badge_id").offset().left + 300).toString() + "px");
+        deneme.innerHTML = ``;
+        deneme.innerHTML += `<p> C Piscine (C Basics) <br/>
+                                libft (54 Func. re-implement from C99) <br/>
+                                FdF & cub3D (Ray-casting) <br/>
+                                minishell (re-implement part of bash) <br/>
+                                get_next_line (File operations) <br/>
+                                ft_printf (re-implement part of printf) <br/>
+                                minitalk (system calls & PIDs) <br/>
+                                push_swap (Quick Sorting Algorithm) <br/>
+                                Philosopher (threads & semaphores)`;
+    }
+    elem.onmouseout = function() {
+        close_badge("42_istanbul_badge_id")
+    }
+
+    elem = document.getElementById('42_istanbul_badge_cpp');
+    elem.onmouseover = function() {
+        document.getElementById("42_istanbul_badge_cpp").classList.add('bg-special-empty');
+        document.getElementById("42_istanbul_badge_cpp").classList.remove('bg-special-blue');
+        $("#content").css("visibility","visible");
+        $('#content').css('margin-top', ($("#42_istanbul_badge_cpp").offset().top - $(window).scrollTop()).toString() + "px");
+        $('#content').css('margin-left', ($("#42_istanbul_badge_cpp").offset().left + 300).toString() + "px");
+        deneme.innerHTML = ``;
+        deneme.innerHTML += `ft_containers(map, stack, vector re-implement) <br/>
+                            ft_irc (Socket Programming) <br/>
+                            C++ Modules (OPP tasks & examples) <br/>`;
+    }
+
+    elem.onmouseout = function() {
+        close_badge("42_istanbul_badge_cpp")
+    }
+
+});
+</script>
 
 <body>
     <div id="root" style="z-index:1">
@@ -60,12 +165,6 @@
                 <div id="project_badge_id" class="card border-success text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">Miscellaneous</h5>
-                        <!-- <button type="button" id="java_b" class="btn btn-outline-warning">
-                            Java Script <span class="badge bg-primary">1</span>
-                        </button> -->
-                        <!-- <p style="margin-top: 0.4em; margin-bottom: 0em;">
-                            <a href="https://github.com/caginagirdemir/rehber"style="border-width: 2px;"  target="_blank" class="btn btn-outline-success" role="button">C Rehber (C Manual in Turkish)</a>
-                        </p> -->
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
                             <button type="button" id="opengl_b" class="btn btn-outline-danger"> 
                                 OpenGL<span class="badge bg-danger">4</span>
@@ -78,9 +177,6 @@
                                 <a href="https://github.com/caginagirdemir/inception" style="border-width: 2px;" target="_blank" class="btn btn-outline-danger" role="button">inception</a>
                             </p> 
                         </p>
-                        <!--<p style="margin-top: 0.4em; margin-bottom: 0em;">
-                            <a href="https://github.com/caginagirdemir/pong_game_web_socket"style="border-width: 2px;"  target="_blank" class="btn  btn-spcial5" role="button"><span style="color: gold"><i class="fa-solid fa-star"></i></span>Web Socket</a>
-                        </p>-->
                     </div>
                 </div>
 
@@ -115,7 +211,7 @@
 
                 <br>
 
-                <div id="42_istanbul_badge_id" class="card border-primary text-white bg-special-blue" style="width: 18rem;color: #1111">
+                <div id="42_istanbul_badge_cpp" class="card border-primary text-white bg-special-blue" style="width: 18rem;color: #1111">
                     <div class="card-body lh-1">
                         <h5 class="card-title">in C++</h5>
                         <p style="margin-top: 0.4em; margin-bottom: 0em;">
@@ -129,9 +225,17 @@
                         </p><p style="margin-top: 0.4em; margin-bottom: 0em;">
                         <a href="https://github.com/caginagirdemir/ft_containers" style="border-width: 2px;" target="_blank" class="btn btn-spcial4" role="button">ft_containers</a>
                         </p> 
-                        
-                        
-                        
+                    </div>
+                </div>
+
+                <br>
+
+                <div id="42_istanbul_badge_id" class="card border-primary text-white bg-special-blue" style="width: 18rem;color: #1111">
+                    <div class="card-body lh-1">
+                        <h5 class="card-title">in Java</h5>
+                        <p style="margin-top: 0.4em; margin-bottom: 0em;">
+                            <a href="https://github.com/caginagirdemir/JavaProjects/tree/master/ajax-launcher" style="border-width: 2px;" target="_blank" class="btn btn-spcial3" role="button">avaj-launcher</a>
+                        </p>
                     </div>
                 </div>
 
@@ -147,7 +251,7 @@
                     </div>
                 </div>
 
-                <br>
+                <!-- <br>
 
                 <div id="tutorial_badge_id" class="card border-danger text-white bg-special-blue" style="width: 18rem;">
                     <div class="card-body lh-1">
@@ -163,9 +267,8 @@
                         </p><p style="margin-top: 0.4em; margin-bottom: 0em;">
                         <a href="https://github.com/caginagirdemir/JavaScript_piscine"style="border-width: 2px;"  target="_blank" class="btn btn-outline-warning" role="button"><i class="fab fa-js-square"></i> java script</a>
                     </p>
-                    
                     </div>
-                </div>
+                </div> -->
 
                 <br>
 
@@ -187,12 +290,6 @@
                                 Binary Search <span class="badge bg-primary">2</span>
                             </button>
                         </p>
-                        <!-- <button type="button" id="c_hacker_b" class="btn btn-outline-warning">
-                            Binary Search <span class="badge bg-primary">0</span>
-                        </button> -->
-                        <!-- <button type="button" id="_hacker_b" class="btn btn-outline-danger">
-                            C++ <span class="badge bg-primary">1</span>
-                        </button> -->
                     </div>
                 </div>
 
@@ -206,12 +303,6 @@
                         </button>
                     </div>
                 </div>
-
-                
-
-
-                
-
             </div>
         </div>
     </div>
@@ -220,7 +311,6 @@
 
             <div id="welcome_p">
                 <p style="margin-top: 5.5em; margin-bottom: 0em;">
-                    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?multiline=true&height=55&lines=Wake+up+Neo;The+Matrix+has+you...;Follow+the+caginagirdemir.github.io" alt="Typing SVG"></a>
                 </p>
             </div>
 
