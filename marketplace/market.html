@@ -15,7 +15,7 @@
 
     if (code) {
       // Step 3: Exchange authorization code for access token using a new CORS proxy
-      const tokenUrl = 'https://robwu.nl/cors-anywhere.html/https://api.intra.42.fr/oauth/token';
+      const tokenUrl = 'https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/oauth/token';
       const data = {
         grant_type: 'authorization_code',
         client_id: clientId,
@@ -28,6 +28,8 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
+          // CORS Proxy'nin gerekli başlıkları eklemesini sağlar
+          'Origin': 'https://caginagirdemir.github.io', 
         },
         body: new URLSearchParams(data),
       })
