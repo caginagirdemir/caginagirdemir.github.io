@@ -14,8 +14,8 @@
     const code = urlParams.get('code');
 
     if (code) {
-      // Step 3: Exchange authorization code for access token using CORS proxy
-      const tokenUrl = 'https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/oauth/token';
+      // Step 3: Exchange authorization code for access token using a new CORS proxy
+      const tokenUrl = 'https://your-own-cors-proxy.herokuapp.com/https://api.intra.42.fr/oauth/token';
       const data = {
         grant_type: 'authorization_code',
         client_id: clientId,
