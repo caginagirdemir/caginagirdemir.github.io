@@ -7,15 +7,15 @@
   <script>
     const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
     const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
-    const redirectUri = 'http://caginagirdemir.github.io/marketplace/market.html';
+    const redirectUri = 'https://caginagirdemir.github.io/marketplace/market.html';
 
     // Step 2: Handle the redirect back with the authorization code
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
 
     if (code) {
-      // Step 3: Exchange authorization code for access token using CORS proxy
-      const tokenUrl = 'https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/oauth/token';
+      // Step 3: Exchange authorization code for access token using a new CORS proxy
+      const tokenUrl = 'https://your-own-cors-proxy.herokuapp.com/https://api.intra.42.fr/oauth/token';
       const data = {
         grant_type: 'authorization_code',
         client_id: clientId,
