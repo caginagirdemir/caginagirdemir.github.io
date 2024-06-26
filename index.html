@@ -4,22 +4,18 @@
   <title>OAuth2 Example</title>
 </head>
 <body>
-  <a id="auth-link" href="#">Authorize with 42 API</a>
   <script>
     const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
     const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
-    const redirectUri = 'http://caginagirdemir.github.io/marketplace/market.html';
-
-    // Step 1: Redirect to authorization URL
-    document.getElementById('auth-link').href = `https://api.intra.42.fr/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=public`;
+    const redirectUri = 'https://caginagirdemir.github.io/marketplace/market.html';
 
     // Step 2: Handle the redirect back with the authorization code
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
 
     if (code) {
-      // Step 3: Exchange authorization code for access token
-      const tokenUrl = 'https://api.intra.42.fr/oauth/token';
+      // Step 3: Exchange authorization code for access token using CORS proxy
+      const tokenUrl = 'https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/oauth/token';
       const data = {
         grant_type: 'authorization_code',
         client_id: clientId,
@@ -48,10 +44,15 @@
         .then(response => response.json())
         .then(userData => {
           console.log('Data received:', userData);
+          document.body.innerHTML = `<pre>${JSON.stringify(userData, null, 2)}</pre>`;
         })
         .catch(error => console.error('Error fetching data:', error));
       })
       .catch(error => console.error('Error getting access token:', error));
+    } else {
+      // If no code is present in the URL, redirect to the authorization URL
+      const authorizationUrl = `https://api.intra.42.fr/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=public`;
+      window.location.href = authorizationUrl;
     }
   </script>
 </body>
