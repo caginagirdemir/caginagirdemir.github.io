@@ -1,59 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>OAuth2 Example</title>
-</head>
-<body>
-  <script>
-    const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
-    const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
-    const redirectUri = 'https://caginagirdemir.github.io/marketplace/market.html';
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+const app = express();
 
-    // Step 2: Handle the redirect back with the authorization code
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get('code');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-    if (code) {
-      // Step 3: Exchange authorization code for access token using a new CORS proxy
-      const tokenUrl = 'https://your-own-cors-proxy.herokuapp.com/https://api.intra.42.fr/oauth/token';
-      const data = {
-        grant_type: 'authorization_code',
-        client_id: clientId,
-        client_secret: clientSecret,
-        code: code,
-        redirect_uri: redirectUri,
-      };
+const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
+const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
+const redirectUri = 'https://caginagirdemir.github.io/marketplace/market.html';
 
-      fetch(tokenUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(data),
-      })
-      .then(response => response.json())
-      .then(tokenData => {
-        const accessToken = tokenData.access_token;
+app.post('/exchange-token', async (req, res) => {
+  const { code } = req.body;
 
-        // Step 4: Use the access token to make an authenticated request
-        fetch('https://api.intra.42.fr/v2/me', {
-          headers: {
-            'Authorization': `Bearer ${accessToken}`,
-          },
-        })
-        .then(response => response.json())
-        .then(userData => {
-          console.log('Data received:', userData);
-          document.body.innerHTML = `<pre>${JSON.stringify(userData, null, 2)}</pre>`;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-      })
-      .catch(error => console.error('Error getting access token:', error));
-    } else {
-      // If no code is present in the URL, redirect to the authorization URL
-      const authorizationUrl = `https://api.intra.42.fr/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=public`;
-      window.location.href = authorizationUrl;
-    }
-  </script>
-</body>
-</html>
+  const tokenUrl = 'https://api.intra.42.fr/oauth/token';
+  const data = {
+    grant_type: 'authorization_code',
+    client_id: clientId,
+    client_secret: clientSecret,
+    code: code,
+    redirect_uri: redirectUri,
+  };
+
+  try {
+    const response = await axios.post(tokenUrl, new URLSearchParams(data), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: error.response.data });
+  }
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
