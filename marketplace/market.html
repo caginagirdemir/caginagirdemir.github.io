@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OAuth2 Example</title>
+</head>
+<body>
+  <a id="auth-link" href="#">Authorize with 42 API</a>
+  <script>
+    const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
+    const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
+    const redirectUri = 'http://caginagirdemir.github.io/marketplace/market.html';
 
+    // Step 1: Redirect to authorization URL
+    document.getElementById('auth-link').href = `https://api.intra.42.fr/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=public`;
+
+    // Step 2: Handle the redirect back with the authorization code
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+
+    if (code) {
+      // Step 3: Exchange authorization code for access token
+      const tokenUrl = 'https://api.intra.42.fr/oauth/token';
+      const data = {
+        grant_type: 'authorization_code',
+        client_id: clientId,
+        client_secret: clientSecret,
+        code: code,
+        redirect_uri: redirectUri,
+      };
+
+      fetch(tokenUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(data),
+      })
+      .then(response => response.json())
+      .then(tokenData => {
+        const accessToken = tokenData.access_token;
+
+        // Step 4: Use the access token to make an authenticated request
+        fetch('https://api.intra.42.fr/v2/me', {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+          },
+        })
+        .then(response => response.json())
+        .then(userData => {
+          console.log('Data received:', userData);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+      })
+      .catch(error => console.error('Error getting access token:', error));
+    }
+  </script>
+</body>
+</html>
