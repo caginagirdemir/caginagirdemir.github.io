@@ -24,13 +24,10 @@
         redirect_uri: redirectUri,
       };
 
-      // CORS Proxy kullanarak (CORS Anywhere):
-      fetch('https://cors-anywhere.herokuapp.com/' + tokenUrl, { // CORS Proxy URL'si
+      fetch(tokenUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Origin': 'https://caginagirdemir.github.io', // Your origin
-          'X-Requested-With': 'XMLHttpRequest', // Optional
         },
         body: new URLSearchParams(data),
       })
