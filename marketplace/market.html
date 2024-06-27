@@ -5,34 +5,29 @@
 </head>
 <body>
   <script>
-    const clientId = 'u-s4t2ud-1d70e41285052db1ddf9fa76bde5d5074dd32c1296c0fa17b98a3731165de428';
-    const clientSecret = 's-s4t2ud-7dafc92153ba89f4b9c0403588cab9932e95aeb89eda14c34dfce23b504244d51';
-    const redirectUri = 'http://caginagirdemir.github.io/marketplace/market.html';
+    const clientId = 'u-s4t2ud-3f31416f20f07157110f9500bfc937900a23e943867ebe93b4687c05b249bd05'; // Replace with your actual client ID
+    const clientSecret = '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'; // Replace with your actual client secret
+    const redirectUri = 'http://www.caginagirdemir.github.io/marketplace/market.html'; // Replace with your actual redirect URI
 
     // Step 2: Handle the redirect back with the authorization code
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
 
     if (code) {
-      // Step 3: Exchange authorization code for access token using a new CORS proxy
-      const tokenUrl = 'https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/oauth/token';
+      // Step 3: Exchange authorization code for access token
+      const tokenUrl = 'https://api.intra.42.fr/oauth/token'; 
       const data = {
         grant_type: 'authorization_code',
         client_id: clientId,
+        client_secret: clientSecret, // Include client secret for token exchange
         code: code,
         redirect_uri: redirectUri,
       };
-
-      // Basic Authentication için başlık oluşturma
-      const auth = btoa(`${clientId}:${clientSecret}`); 
 
       fetch(tokenUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Basic ${auth}`,
-          'Origin': 'https://caginagirdemir.github.io',
-          'X-Requested-With': 'XMLHttpRequest',
         },
         body: new URLSearchParams(data),
       })
@@ -46,11 +41,9 @@
         const accessToken = tokenData.access_token;
 
         // Step 4: Use the access token to make an authenticated request
-        fetch('https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/v2/me', {
+        fetch('https://api.intra.42.fr/v2/me', {
           headers: {
             'Authorization': `Bearer ${accessToken}`,
-            'Origin': 'https://caginagirdemir.github.io', 
-            'X-Requested-With': 'XMLHttpRequest',
           },
         })
         .then(response => response.json())
