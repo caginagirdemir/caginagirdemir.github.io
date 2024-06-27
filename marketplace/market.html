@@ -47,13 +47,13 @@
         const accessToken = tokenData.access_token;
 
         // Step 4: Use the access token to make an authenticated request
-        fetch('https://cors-anywhere.herokuapp.com/https://api.intra.42.fr/v2/me', {
-          headers: {
-            'Authorization': `Bearer ${accessToken}`,
-            'Origin': 'https://caginagirdemir.github.io', // Replace with your actual origin
-            'X-Requested-With': 'XMLHttpRequest',
-          },
-        })
+      fetch('https://my-42-proxy-app.herokuapp.com/', { 
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Origin': 'https://caginagirdemir.github.io', // Replace with your actual origin
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+      })
         .then(response => response.json())
         .then(userData => {
           console.log('Data received:', userData);
