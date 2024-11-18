@@ -97,7 +97,7 @@ start_flag = 1;
 end
 
 
-%markerlar?n pozisyonlar?na göre degiskenlere ayrilmasi
+%markerlar?n pozisyonlar?na gÃ¶re degiskenlere ayrilmasi
 for i=1:105
 centroids_data(:,2,i) = 1024 - centroids_data(:,2,i);
 hip(i,:) = centroids_data(1,:,i);
