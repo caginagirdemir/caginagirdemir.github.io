@@ -73,7 +73,7 @@ end
 end
 
 
-%<--------üçüncü marker takip algoritmas?-------->
+%<--------Ã¼Ã§Ã¼ncÃ¼ marker takip algoritmas?-------->
 for j=1:5
  for p=1:5
  a = [centroids_data(j,1,i) centroids_data(j,2,i)];
@@ -130,7 +130,7 @@ plot(centroids_data(d,1,i),centroids_data(d,2,i),'o',...
  'Color', renk(d), 'FontSize',12);
 end
 
-%<------markerlar aras? çizgilerin çizilmesi-------->
+%<------markerlar aras? Ã§izgilerin Ã§izilmesi-------->
 x = [centroids_data(1,1,i) centroids_data(2,1,i) centroids_data(4,1,i) ...
     centroids_data(3,1,i) centroids_data(5,1,i) centroids_data(4,1,i)];
 y = [centroids_data(1,2,i) centroids_data(2,2,i) centroids_data(4,2,i) ...
