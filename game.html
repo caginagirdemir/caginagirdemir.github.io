@@ -2,38 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Multiplayer Tetris</title>
-    <meta name="viewport" content="width=600">
+    <title>Multiplayer Angry Birds</title>
+    <meta name="viewport" content="width=800">
     <style>
         body { 
-            background: #222; 
-            color: #fff; 
+            background: linear-gradient(to bottom, #87CEEB, #98FB98); 
+            color: #333; 
             text-align: center; 
-            font-family: 'Courier New', monospace;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
         #gameCanvas { 
-            background: #000; 
-            margin-top: 2em; 
+            background: linear-gradient(to bottom, #87CEEB, #98FB98); 
+            margin-top: 1em; 
             border-radius: 10px;
-            border: 2px solid #333;
+            border: 3px solid #654321;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         .info { 
             margin-top: 16px; 
             font-family: sans-serif; 
-            color: #eee; 
+            color: #333;
+            font-weight: bold;
         }
         .game-info {
             display: flex;
             justify-content: space-around;
-            margin: 20px auto;
-            max-width: 800px;
+            margin-bottom: 10px;
+            font-size: 14px;
         }
-        .player-board {
-            text-align: center;
-        }
-        .score {
-            font-size: 18px;
-            margin: 10px 0;
+        .player-score {
+            background: rgba(255,255,255,0.8);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 2px solid #654321;
         }
     </style>
     <script>
@@ -42,212 +45,320 @@
             script.src = 'https://cdn.jsdelivr.net/npm/@multisynq/client@latest/bundled/multisynq-client.min.js';
             script.onload = function() {
                 if (document.readyState === "loading") {
-                    document.addEventListener('DOMContentLoaded', startTetrisGame);
+                    document.addEventListener('DOMContentLoaded', startAngryBirdsGame);
                 } else {
-                    startTetrisGame();
+                    startAngryBirdsGame();
                 }
             };
             document.head.appendChild(script);
         })();
     
-        function startTetrisGame() {
-            const API_KEY = "2Q9sF1bZD6R9ebVn8C0z7Ij2m9mdrHU9IS968Tsz7Z";
-            const APP_ID = "com.multiplayer.tetris";
-            const ROOM_ID = "tetris-room";
+        function startAngryBirdsGame() {
+            const API_KEY = "2PQ0Ect1pnEU6z0SzI3hzkrLeAJCiSVnv6CAxZoRJ7";
+            const APP_ID = "com.multiplayer.demo";
+            const ROOM_ID = "demo-room";
             const PASSWORD = "multisynqdeneme";
             
-            const BOARD_WIDTH = 10;
-            const BOARD_HEIGHT = 20;
-            const BLOCK_SIZE = 25;
-            const CANVAS_WIDTH = BOARD_WIDTH * BLOCK_SIZE;
-            const CANVAS_HEIGHT = BOARD_HEIGHT * BLOCK_SIZE;
+            // Game constants
+            const GRAVITY = 0.5;
+            const GROUND_Y = 380;
+            const SLINGSHOT_X = 100;
+            const SLINGSHOT_Y = 300;
+            const BIRD_RADIUS = 15;
+            const PIG_RADIUS = 20;
+            const BLOCK_SIZE = 30;
             
+            let myColor = getRandomColor();
             let myId = null;
-            let state = { players: {} };
+            let state = { 
+                players: {},
+                birds: [],
+                pigs: [],
+                blocks: [],
+                scores: {},
+                currentTurn: null,
+                gameStarted: false
+            };
             window.state = state;
+            
             const canvas = document.getElementById('gameCanvas');
             const ctx = canvas.getContext('2d');
             
-            // Set canvas size
-            canvas.width = CANVAS_WIDTH;
-            canvas.height = CANVAS_HEIGHT;
-            
-            // Tetromino shapes
-            const TETROMINOS = {
-                I: {
-                    shape: [
-                        [1, 1, 1, 1]
-                    ],
-                    color: '#00f5ff'
-                },
-                O: {
-                    shape: [
-                        [1, 1],
-                        [1, 1]
-                    ],
-                    color: '#ffff00'
-                },
-                T: {
-                    shape: [
-                        [0, 1, 0],
-                        [1, 1, 1]
-                    ],
-                    color: '#a000f0'
-                },
-                S: {
-                    shape: [
-                        [0, 1, 1],
-                        [1, 1, 0]
-                    ],
-                    color: '#00f000'
-                },
-                Z: {
-                    shape: [
-                        [1, 1, 0],
-                        [0, 1, 1]
-                    ],
-                    color: '#f00000'
-                },
-                J: {
-                    shape: [
-                        [1, 0, 0],
-                        [1, 1, 1]
-                    ],
-                    color: '#0000f0'
-                },
-                L: {
-                    shape: [
-                        [0, 0, 1],
-                        [1, 1, 1]
-                    ],
-                    color: '#f0a000'
-                }
-            };
-            
-            const TETROMINO_NAMES = Object.keys(TETROMINOS);
-            
-            function getRandomTetromino() {
-                const name = TETROMINO_NAMES[Math.floor(Math.random() * TETROMINO_NAMES.length)];
-                return {
-                    name: name,
-                    shape: TETROMINO_NAMES[name].shape,
-                    color: TETROMINOS[name].color,
-                    x: Math.floor(BOARD_WIDTH / 2) - 1,
-                    y: 0
-                };
+            // Game state
+            let isDragging = false;
+            let dragStart = { x: 0, y: 0 };
+            let currentBird = null;
+            let myTurn = false;
+
+            function getRandomColor() {
+                const colors = ['#e74c3c', '#3498db', '#27ae60', '#f1c40f', '#9b59b6', '#e67e22'];
+                return colors[Math.floor(Math.random() * colors.length)];
             }
-            
-            function rotateMatrix(matrix) {
-                const N = matrix.length;
-                const rotated = Array.from({ length: N }, () => Array(N).fill(0));
-                for (let i = 0; i < N; i++) {
-                    for (let j = 0; j < N; j++) {
-                        rotated[j][N - 1 - i] = matrix[i][j];
-                    }
+
+            // Bird class
+            class Bird {
+                constructor(x, y, playerId) {
+                    this.x = x;
+                    this.y = y;
+                    this.vx = 0;
+                    this.vy = 0;
+                    this.playerId = playerId;
+                    this.active = true;
+                    this.launched = false;
                 }
-                return rotated;
-            }
-            
-            function isValidMove(board, piece, dx = 0, dy = 0, rotation = null) {
-                const shape = rotation || piece.shape;
-                const newX = piece.x + dx;
-                const newY = piece.y + dy;
                 
-                for (let y = 0; y < shape.length; y++) {
-                    for (let x = 0; x < shape[y].length; x++) {
-                        if (shape[y][x]) {
-                            const boardX = newX + x;
-                            const boardY = newY + y;
-                            
-                            if (boardX < 0 || boardX >= BOARD_WIDTH || 
-                                boardY >= BOARD_HEIGHT || 
-                                (boardY >= 0 && board[boardY][boardX])) {
-                                return false;
-                            }
+                update() {
+                    if (!this.launched) return;
+                    
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.vy += GRAVITY;
+                    
+                    // Ground collision
+                    if (this.y + BIRD_RADIUS > GROUND_Y) {
+                        this.y = GROUND_Y - BIRD_RADIUS;
+                        this.vy = -this.vy * 0.6;
+                        this.vx *= 0.8;
+                        
+                        if (Math.abs(this.vy) < 2) {
+                            this.active = false;
                         }
                     }
-                }
-                return true;
-            }
-            
-            function placePiece(board, piece) {
-                const newBoard = board.map(row => [...row]);
-                for (let y = 0; y < piece.shape.length; y++) {
-                    for (let x = 0; x < piece.shape[y].length; x++) {
-                        if (piece.shape[y][x]) {
-                            const boardY = piece.y + y;
-                            const boardX = piece.x + x;
-                            if (boardY >= 0) {
-                                newBoard[boardY][boardX] = piece.color;
-                            }
-                        }
+                    
+                    // Wall collision
+                    if (this.x - BIRD_RADIUS < 0 || this.x + BIRD_RADIUS > canvas.width) {
+                        this.vx = -this.vx * 0.8;
                     }
                 }
-                return newBoard;
-            }
-            
-            function clearLines(board) {
-                let linesCleared = 0;
-                const newBoard = board.filter(row => {
-                    const isFull = row.every(cell => cell !== null);
-                    if (isFull) linesCleared++;
-                    return !isFull;
-                });
                 
-                while (newBoard.length < BOARD_HEIGHT) {
-                    newBoard.unshift(Array(BOARD_WIDTH).fill(null));
+                draw() {
+                    if (!this.active) return;
+                    
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, BIRD_RADIUS, 0, Math.PI * 2);
+                    ctx.fillStyle = state.players[this.playerId]?.color || '#e74c3c';
+                    ctx.fill();
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#333';
+                    ctx.stroke();
+                    
+                    // Bird eye
+                    ctx.beginPath();
+                    ctx.arc(this.x + 5, this.y - 3, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = '#fff';
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(this.x + 6, this.y - 3, 1.5, 0, Math.PI * 2);
+                    ctx.fillStyle = '#000';
+                    ctx.fill();
+                }
+            }
+
+            // Pig class
+            class Pig {
+                constructor(x, y) {
+                    this.x = x;
+                    this.y = y;
+                    this.active = true;
                 }
                 
-                return { board: newBoard, linesCleared };
+                draw() {
+                    if (!this.active) return;
+                    
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, PIG_RADIUS, 0, Math.PI * 2);
+                    ctx.fillStyle = '#27ae60';
+                    ctx.fill();
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#1e8449';
+                    ctx.stroke();
+                    
+                    // Pig features
+                    ctx.beginPath();
+                    ctx.arc(this.x - 5, this.y - 5, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = '#27ae60';
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(this.x + 5, this.y - 5, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = '#27ae60';
+                    ctx.fill();
+                }
             }
-            
-            class TetrisModel extends Multisynq.Model {
+
+            // Block class
+            class Block {
+                constructor(x, y, width, height, type = 'wood') {
+                    this.x = x;
+                    this.y = y;
+                    this.width = width;
+                    this.height = height;
+                    this.type = type;
+                    this.active = true;
+                    this.health = type === 'stone' ? 3 : 1;
+                }
+                
+                draw() {
+                    if (!this.active) return;
+                    
+                    ctx.fillStyle = this.type === 'stone' ? '#7f8c8d' : '#8B4513';
+                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = this.type === 'stone' ? '#5d6d7e' : '#654321';
+                    ctx.strokeRect(this.x, this.y, this.width, this.height);
+                }
+            }
+
+            class AngryBirdsModel extends Multisynq.Model {
                 init() {
                     this.players = {};
-                    this.subscribe(this.sessionId, "playerUpdate", this.handlePlayerUpdate);
+                    this.birds = [];
+                    this.pigs = [];
+                    this.blocks = [];
+                    this.scores = {};
+                    this.currentTurn = null;
+                    this.gameStarted = false;
+                    
+                    this.subscribe(this.sessionId, "playerJoin", this.handlePlayerJoin);
+                    this.subscribe(this.sessionId, "birdLaunch", this.handleBirdLaunch);
+                    this.subscribe(this.sessionId, "gameState", this.handleGameState);
+                    this.subscribe(this.sessionId, "turnChange", this.handleTurnChange);
                 }
                 
-                handlePlayerUpdate(data) {
+                handlePlayerJoin(data) {
                     this.players[data.id] = data;
-                    this.publish(this.sessionId, "playersUpdated", this.players);
+                    this.scores[data.id] = 0;
+                    
+                    if (Object.keys(this.players).length >= 2 && !this.gameStarted) {
+                        this.startGame();
+                    }
+                    
+                    this.publish(this.sessionId, "gameState", {
+                        players: this.players,
+                        birds: this.birds,
+                        pigs: this.pigs,
+                        blocks: this.blocks,
+                        scores: this.scores,
+                        currentTurn: this.currentTurn,
+                        gameStarted: this.gameStarted
+                    });
+                }
+                
+                handleBirdLaunch(data) {
+                    this.birds.push(new Bird(data.x, data.y, data.playerId));
+                    this.birds[this.birds.length - 1].vx = data.vx;
+                    this.birds[this.birds.length - 1].vy = data.vy;
+                    this.birds[this.birds.length - 1].launched = true;
+                    
+                    this.publish(this.sessionId, "gameState", {
+                        players: this.players,
+                        birds: this.birds,
+                        pigs: this.pigs,
+                        blocks: this.blocks,
+                        scores: this.scores,
+                        currentTurn: this.currentTurn,
+                        gameStarted: this.gameStarted
+                    });
+                }
+                
+                handleGameState(data) {
+                    this.players = data.players;
+                    this.birds = data.birds;
+                    this.pigs = data.pigs;
+                    this.blocks = data.blocks;
+                    this.scores = data.scores;
+                    this.currentTurn = data.currentTurn;
+                    this.gameStarted = data.gameStarted;
+                    
+                    window.state = {
+                        players: this.players,
+                        birds: this.birds,
+                        pigs: this.pigs,
+                        blocks: this.blocks,
+                        scores: this.scores,
+                        currentTurn: this.currentTurn,
+                        gameStarted: this.gameStarted
+                    };
+                }
+                
+                handleTurnChange(data) {
+                    this.currentTurn = data.playerId;
+                    this.publish(this.sessionId, "gameState", {
+                        players: this.players,
+                        birds: this.birds,
+                        pigs: this.pigs,
+                        blocks: this.blocks,
+                        scores: this.scores,
+                        currentTurn: this.currentTurn,
+                        gameStarted: this.gameStarted
+                    });
+                }
+                
+                startGame() {
+                    this.gameStarted = true;
+                    this.currentTurn = Object.keys(this.players)[0];
+                    
+                    // Create pigs
+                    this.pigs = [
+                        new Pig(700, GROUND_Y - PIG_RADIUS),
+                        new Pig(750, GROUND_Y - PIG_RADIUS),
+                        new Pig(800, GROUND_Y - PIG_RADIUS)
+                    ];
+                    
+                    // Create blocks
+                    this.blocks = [
+                        new Block(680, GROUND_Y - 60, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(680, GROUND_Y - 90, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(680, GROUND_Y - 120, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(730, GROUND_Y - 60, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(730, GROUND_Y - 90, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(780, GROUND_Y - 60, BLOCK_SIZE, BLOCK_SIZE),
+                        new Block(780, GROUND_Y - 90, BLOCK_SIZE, BLOCK_SIZE)
+                    ];
+                    
+                    this.publish(this.sessionId, "gameState", {
+                        players: this.players,
+                        birds: this.birds,
+                        pigs: this.pigs,
+                        blocks: this.blocks,
+                        scores: this.scores,
+                        currentTurn: this.currentTurn,
+                        gameStarted: this.gameStarted
+                    });
                 }
             }
             
-            TetrisModel.register("TetrisModel");
+            AngryBirdsModel.register("AngryBirdsModel");
             
-            class TetrisView extends Multisynq.View {
+            class AngryBirdsView extends Multisynq.View {
                 constructor(model) {
                     super(model);
                     this.model = model;
-                    this.subscribe(this.sessionId, "playersUpdated", this.updatePlayers);
+                    this.subscribe(this.sessionId, "gameState", this.updateGameState);
                 }
                 
-                updatePlayers(players) {
-                    window.state.players = players;
-                    updateView();
+                updateGameState(data) {
+                    window.state = data;
+                    myTurn = data.currentTurn === this.viewId;
                 }
                 
-                sendUpdate(data) {
-                    this.publish(this.sessionId, "playerUpdate", data);
+                sendBirdLaunch(data) {
+                    this.publish(this.sessionId, "birdLaunch", data);
+                }
+                
+                sendPlayerJoin(data) {
+                    this.publish(this.sessionId, "playerJoin", data);
                 }
             }
 
             let viewInstance = null;
-            let gameBoard = Array.from({ length: BOARD_HEIGHT }, () => Array(BOARD_WIDTH).fill(null));
-            let currentPiece = null;
-            let score = 0;
-            let level = 1;
-            let gameRunning = false;
-            let dropTime = 0;
-            let dropInterval = 1000;
 
             Multisynq.Session.join({
                 apiKey: API_KEY,
                 appId: APP_ID,
                 name: ROOM_ID,
                 password: PASSWORD,
-                model: TetrisModel,
-                view: TetrisView,
+                model: AngryBirdsModel,
+                view: AngryBirdsView,
                 debug: []
             }).then(session => {
                 viewInstance = session.view;
@@ -255,288 +366,158 @@
                 
                 console.log("Session joined, myId:", myId);
                 
-                // Initialize player
-                const playerData = { 
-                    id: myId, 
-                    board: gameBoard,
-                    score: score,
-                    level: level,
-                    currentPiece: null,
-                    gameRunning: false
-                };
-                
-                // Send initial state
-                viewInstance.sendUpdate(playerData);
-                
-                // Start game
-                startGame();
+                // Send player join data
+                viewInstance.sendPlayerJoin({
+                    id: myId,
+                    color: myColor,
+                    name: `Player ${myId.slice(-4)}`
+                });
                 
             }).catch(e => {
                 console.error("Multisynq Session Join Error:", e);
             });
 
-            function startGame() {
-                gameRunning = true;
-                currentPiece = getRandomTetromino();
-                gameBoard = Array.from({ length: BOARD_HEIGHT }, () => Array(BOARD_WIDTH).fill(null));
-                score = 0;
-                level = 1;
-                dropInterval = 1000;
-                dropTime = 0;
+            // Mouse events for slingshot
+            canvas.addEventListener('mousedown', (e) => {
+                if (!myTurn || !state.gameStarted) return;
                 
-                gameLoop();
-            }
-            
-            function gameLoop() {
-                if (!gameRunning) return;
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
                 
-                const now = Date.now();
-                if (now - dropTime > dropInterval) {
-                    dropPiece();
-                    dropTime = now;
+                if (Math.abs(x - SLINGSHOT_X) < 30 && Math.abs(y - SLINGSHOT_Y) < 30) {
+                    isDragging = true;
+                    dragStart = { x, y };
+                    currentBird = new Bird(SLINGSHOT_X, SLINGSHOT_Y, myId);
+                }
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (!isDragging || !currentBird) return;
+                
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                currentBird.x = x;
+                currentBird.y = y;
+            });
+
+            canvas.addEventListener('mouseup', (e) => {
+                if (!isDragging || !currentBird) return;
+                
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const dx = SLINGSHOT_X - x;
+                const dy = SLINGSHOT_Y - y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance > 10) {
+                    const power = Math.min(distance / 3, 15);
+                    const vx = (dx / distance) * power;
+                    const vy = (dy / distance) * power;
+                    
+                    viewInstance.sendBirdLaunch({
+                        x: SLINGSHOT_X,
+                        y: SLINGSHOT_Y,
+                        vx: vx,
+                        vy: vy,
+                        playerId: myId
+                    });
                 }
                 
+                isDragging = false;
+                currentBird = null;
+            });
+
+            function updateView() {
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw ground
+                ctx.fillStyle = '#8B4513';
+                ctx.fillRect(0, GROUND_Y, canvas.width, canvas.height - GROUND_Y);
+                
+                // Draw slingshot
+                ctx.strokeStyle = '#654321';
+                ctx.lineWidth = 8;
+                ctx.beginPath();
+                ctx.moveTo(SLINGSHOT_X - 10, GROUND_Y);
+                ctx.lineTo(SLINGSHOT_X - 10, SLINGSHOT_Y - 20);
+                ctx.moveTo(SLINGSHOT_X + 10, GROUND_Y);
+                ctx.lineTo(SLINGSHOT_X + 10, SLINGSHOT_Y - 20);
+                ctx.stroke();
+                
+                // Draw slingshot pouch
+                if (isDragging && currentBird) {
+                    ctx.strokeStyle = '#8B4513';
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.moveTo(SLINGSHOT_X - 10, SLINGSHOT_Y - 20);
+                    ctx.lineTo(currentBird.x - 5, currentBird.y);
+                    ctx.moveTo(SLINGSHOT_X + 10, SLINGSHOT_Y - 20);
+                    ctx.lineTo(currentBird.x + 5, currentBird.y);
+                    ctx.stroke();
+                }
+                
+                // Draw blocks
+                state.blocks.forEach(block => block.draw());
+                
+                // Draw pigs
+                state.pigs.forEach(pig => pig.draw());
+                
+                // Update and draw birds
+                state.birds.forEach(bird => {
+                    bird.update();
+                    bird.draw();
+                });
+                
+                // Draw current bird being dragged
+                if (isDragging && currentBird) {
+                    currentBird.draw();
+                }
+                
+                // Draw turn indicator
+                if (state.gameStarted) {
+                    ctx.fillStyle = myTurn ? '#27ae60' : '#e74c3c';
+                    ctx.font = '20px Arial';
+                    ctx.fillText(myTurn ? 'Your Turn!' : 'Opponent\'s Turn', 10, 30);
+                }
+                
+                // Draw player info
+                let yOffset = 60;
+                Object.keys(state.players).forEach(playerId => {
+                    const player = state.players[playerId];
+                    ctx.fillStyle = player.color;
+                    ctx.font = '16px Arial';
+                    ctx.fillText(`${player.name}: ${state.scores[playerId] || 0}`, 10, yOffset);
+                    yOffset += 25;
+                });
+            }
+
+            // Game loop
+            function gameLoop() {
                 updateView();
                 requestAnimationFrame(gameLoop);
             }
             
-            function dropPiece() {
-                if (!currentPiece) return;
-                
-                if (isValidMove(gameBoard, currentPiece, 0, 1)) {
-                    currentPiece.y++;
-                } else {
-                    // Place piece
-                    gameBoard = placePiece(gameBoard, currentPiece);
-                    
-                    // Clear lines
-                    const result = clearLines(gameBoard);
-                    gameBoard = result.board;
-                    score += result.linesCleared * 100 * level;
-                    
-                    // Level up
-                    if (score >= level * 1000) {
-                        level++;
-                        dropInterval = Math.max(100, 1000 - (level - 1) * 100);
-                    }
-                    
-                    // Get new piece
-                    currentPiece = getRandomTetromino();
-                    
-                    // Check game over
-                    if (!isValidMove(gameBoard, currentPiece)) {
-                        gameRunning = false;
-                    }
-                }
-                
-                // Send update
-                if (viewInstance) {
-                    viewInstance.sendUpdate({
-                        id: myId,
-                        board: gameBoard,
-                        score: score,
-                        level: level,
-                        currentPiece: currentPiece,
-                        gameRunning: gameRunning
-                    });
-                }
-            }
-            
-            function movePiece(dx, dy) {
-                if (!currentPiece || !gameRunning) return;
-                
-                if (isValidMove(gameBoard, currentPiece, dx, dy)) {
-                    currentPiece.x += dx;
-                    currentPiece.y += dy;
-                    
-                    if (viewInstance) {
-                        viewInstance.sendUpdate({
-                            id: myId,
-                            board: gameBoard,
-                            score: score,
-                            level: level,
-                            currentPiece: currentPiece,
-                            gameRunning: gameRunning
-                        });
-                    }
-                }
-            }
-            
-            function rotatePiece() {
-                if (!currentPiece || !gameRunning) return;
-                
-                const rotated = rotateMatrix(currentPiece.shape);
-                if (isValidMove(gameBoard, currentPiece, 0, 0, rotated)) {
-                    currentPiece.shape = rotated;
-                    
-                    if (viewInstance) {
-                        viewInstance.sendUpdate({
-                            id: myId,
-                            board: gameBoard,
-                            score: score,
-                            level: level,
-                            currentPiece: currentPiece,
-                            gameRunning: gameRunning
-                        });
-                    }
-                }
-            }
-            
-            function hardDrop() {
-                if (!currentPiece || !gameRunning) return;
-                
-                while (isValidMove(gameBoard, currentPiece, 0, 1)) {
-                    currentPiece.y++;
-                }
-                dropPiece();
-            }
-
-            window.addEventListener('keydown', e => {
-                if (!myId || !viewInstance) return;
-                
-                switch(e.key) {
-                    case "ArrowLeft":
-                        movePiece(-1, 0);
-                        break;
-                    case "ArrowRight":
-                        movePiece(1, 0);
-                        break;
-                    case "ArrowDown":
-                        movePiece(0, 1);
-                        break;
-                    case "ArrowUp":
-                    case " ":
-                        rotatePiece();
-                        break;
-                    case "Enter":
-                        hardDrop();
-                        break;
-                }
-                
-                e.preventDefault();
-            });
-
-            function drawBoard(board, offsetX = 0, offsetY = 0) {
-                // Draw grid
-                ctx.strokeStyle = '#333';
-                ctx.lineWidth = 1;
-                
-                for (let y = 0; y < BOARD_HEIGHT; y++) {
-                    for (let x = 0; x < BOARD_WIDTH; x++) {
-                        const cellX = offsetX + x * BLOCK_SIZE;
-                        const cellY = offsetY + y * BLOCK_SIZE;
-                        
-                        // Draw cell
-                        if (board[y][x]) {
-                            ctx.fillStyle = board[y][x];
-                            ctx.fillRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
-                        }
-                        
-                        // Draw border
-                        ctx.strokeRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
-                    }
-                }
-            }
-            
-            function drawPiece(piece, offsetX = 0, offsetY = 0) {
-                if (!piece) return;
-                
-                ctx.fillStyle = piece.color;
-                for (let y = 0; y < piece.shape.length; y++) {
-                    for (let x = 0; x < piece.shape[y].length; x++) {
-                        if (piece.shape[y][x]) {
-                            const cellX = offsetX + (piece.x + x) * BLOCK_SIZE;
-                            const cellY = offsetY + (piece.y + y) * BLOCK_SIZE;
-                            ctx.fillRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
-                            ctx.strokeStyle = '#111';
-                            ctx.lineWidth = 1;
-                            ctx.strokeRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
-                        }
-                    }
-                }
-            }
-
-            function updateView() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Draw current player's board
-                drawBoard(gameBoard);
-                drawPiece(currentPiece);
-                
-                // Draw other players' boards
-                let playerIndex = 0;
-                for (let id in state.players) {
-                    if (id !== myId && state.players[id].board) {
-                        const offsetX = (playerIndex + 1) * (CANVAS_WIDTH + 20);
-                        const offsetY = 0;
-                        
-                        // Draw mini board
-                        const miniBlockSize = 15;
-                        const miniBoard = state.players[id].board;
-                        
-                        for (let y = 0; y < BOARD_HEIGHT; y++) {
-                            for (let x = 0; x < BOARD_WIDTH; x++) {
-                                const cellX = offsetX + x * miniBlockSize;
-                                const cellY = offsetY + y * miniBlockSize;
-                                
-                                if (miniBoard[y][x]) {
-                                    ctx.fillStyle = miniBoard[y][x];
-                                    ctx.fillRect(cellX, cellY, miniBlockSize, miniBlockSize);
-                                }
-                                
-                                ctx.strokeStyle = '#333';
-                                ctx.lineWidth = 0.5;
-                                ctx.strokeRect(cellX, cellY, miniBlockSize, miniBlockSize);
-                            }
-                        }
-                        
-                        // Draw score
-                        ctx.fillStyle = '#fff';
-                        ctx.font = '12px Arial';
-                        ctx.fillText(`Player ${playerIndex + 1}: ${state.players[id].score || 0}`, offsetX, offsetY + BOARD_HEIGHT * miniBlockSize + 20);
-                        
-                        playerIndex++;
-                    }
-                }
-                
-                // Draw current player's score
-                ctx.fillStyle = '#fff';
-                ctx.font = '16px Arial';
-                ctx.fillText(`Score: ${score}`, 10, 20);
-                ctx.fillText(`Level: ${level}`, 10, 40);
-                
-                if (!gameRunning) {
-                    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-                    ctx.fillRect(0, 0, canvas.width, canvas.height);
-                    ctx.fillStyle = '#fff';
-                    ctx.font = '24px Arial';
-                    ctx.fillText('GAME OVER', canvas.width / 2 - 60, canvas.height / 2);
-                    ctx.font = '16px Arial';
-                    ctx.fillText('Press R to restart', canvas.width / 2 - 60, canvas.height / 2 + 30);
-                }
-            }
-            
-            // Restart game
-            window.addEventListener('keydown', e => {
-                if (e.key === 'r' || e.key === 'R') {
-                    if (!gameRunning) {
-                        startGame();
-                    }
-                }
-            });
+            gameLoop();
         }
     </script>
     
 </head>
 <body>
-    <h2>Multiplayer Tetris</h2>
-    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <h2>Multiplayer Angry Birds</h2>
+    <div class="game-info">
+        <div class="player-score">Player 1: <span id="score1">0</span></div>
+        <div class="player-score">Player 2: <span id="score2">0</span></div>
+    </div>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
     <div class="info">
-        <strong>Controls:</strong><br>
-        Arrow Keys: Move piece<br>
-        Up Arrow / Space: Rotate piece<br>
-        Enter: Hard drop<br>
-        R: Restart game<br>
+        Drag from slingshot to launch birds!<br>
+        Destroy all pigs to win!
     </div>
 </body>
 </html>
