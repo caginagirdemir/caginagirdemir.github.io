@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Tetris</title>
+    <meta name="viewport" content="width=600">
+    <style>
+        body { 
+            background: #222; 
+            color: #fff; 
+            text-align: center; 
+            font-family: 'Courier New', monospace;
+        }
+        #gameCanvas { 
+            background: #000; 
+            margin-top: 2em; 
+            border-radius: 10px;
+            border: 2px solid #333;
+        }
+        .info { 
+            margin-top: 16px; 
+            font-family: sans-serif; 
+            color: #eee; 
+        }
+        .game-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .player-board {
+            text-align: center;
+        }
+        .score {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        (function() {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@multisynq/client@latest/bundled/multisynq-client.min.js';
+            script.onload = function() {
+                if (document.readyState === "loading") {
+                    document.addEventListener('DOMContentLoaded', startTetrisGame);
+                } else {
+                    startTetrisGame();
+                }
+            };
+            document.head.appendChild(script);
+        })();
+    
+        function startTetrisGame() {
+            const API_KEY = "2Q9sF1bZD6R9ebVn8C0z7Ij2m9mdrHU9IS968Tsz7Z";
+            const APP_ID = "com.multiplayer.tetris";
+            const ROOM_ID = "tetris-room";
+            const PASSWORD = "multisynqdeneme";
+            
+            const BOARD_WIDTH = 10;
+            const BOARD_HEIGHT = 20;
+            const BLOCK_SIZE = 25;
+            const CANVAS_WIDTH = BOARD_WIDTH * BLOCK_SIZE;
+            const CANVAS_HEIGHT = BOARD_HEIGHT * BLOCK_SIZE;
+            
+            let myId = null;
+            let state = { players: {} };
+            window.state = state;
+            const canvas = document.getElementById('gameCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            canvas.width = CANVAS_WIDTH;
+            canvas.height = CANVAS_HEIGHT;
+            
+            // Tetromino shapes
+            const TETROMINOS = {
+                I: {
+                    shape: [
+                        [1, 1, 1, 1]
+                    ],
+                    color: '#00f5ff'
+                },
+                O: {
+                    shape: [
+                        [1, 1],
+                        [1, 1]
+                    ],
+                    color: '#ffff00'
+                },
+                T: {
+                    shape: [
+                        [0, 1, 0],
+                        [1, 1, 1]
+                    ],
+                    color: '#a000f0'
+                },
+                S: {
+                    shape: [
+                        [0, 1, 1],
+                        [1, 1, 0]
+                    ],
+                    color: '#00f000'
+                },
+                Z: {
+                    shape: [
+                        [1, 1, 0],
+                        [0, 1, 1]
+                    ],
+                    color: '#f00000'
+                },
+                J: {
+                    shape: [
+                        [1, 0, 0],
+                        [1, 1, 1]
+                    ],
+                    color: '#0000f0'
+                },
+                L: {
+                    shape: [
+                        [0, 0, 1],
+                        [1, 1, 1]
+                    ],
+                    color: '#f0a000'
+                }
+            };
+            
+            const TETROMINO_NAMES = Object.keys(TETROMINOS);
+            
+            function getRandomTetromino() {
+                const name = TETROMINO_NAMES[Math.floor(Math.random() * TETROMINO_NAMES.length)];
+                return {
+                    name: name,
+                    shape: TETROMINO_NAMES[name].shape,
+                    color: TETROMINOS[name].color,
+                    x: Math.floor(BOARD_WIDTH / 2) - 1,
+                    y: 0
+                };
+            }
+            
+            function rotateMatrix(matrix) {
+                const N = matrix.length;
+                const rotated = Array.from({ length: N }, () => Array(N).fill(0));
+                for (let i = 0; i < N; i++) {
+                    for (let j = 0; j < N; j++) {
+                        rotated[j][N - 1 - i] = matrix[i][j];
+                    }
+                }
+                return rotated;
+            }
+            
+            function isValidMove(board, piece, dx = 0, dy = 0, rotation = null) {
+                const shape = rotation || piece.shape;
+                const newX = piece.x + dx;
+                const newY = piece.y + dy;
+                
+                for (let y = 0; y < shape.length; y++) {
+                    for (let x = 0; x < shape[y].length; x++) {
+                        if (shape[y][x]) {
+                            const boardX = newX + x;
+                            const boardY = newY + y;
+                            
+                            if (boardX < 0 || boardX >= BOARD_WIDTH || 
+                                boardY >= BOARD_HEIGHT || 
+                                (boardY >= 0 && board[boardY][boardX])) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+                return true;
+            }
+            
+            function placePiece(board, piece) {
+                const newBoard = board.map(row => [...row]);
+                for (let y = 0; y < piece.shape.length; y++) {
+                    for (let x = 0; x < piece.shape[y].length; x++) {
+                        if (piece.shape[y][x]) {
+                            const boardY = piece.y + y;
+                            const boardX = piece.x + x;
+                            if (boardY >= 0) {
+                                newBoard[boardY][boardX] = piece.color;
+                            }
+                        }
+                    }
+                }
+                return newBoard;
+            }
+            
+            function clearLines(board) {
+                let linesCleared = 0;
+                const newBoard = board.filter(row => {
+                    const isFull = row.every(cell => cell !== null);
+                    if (isFull) linesCleared++;
+                    return !isFull;
+                });
+                
+                while (newBoard.length < BOARD_HEIGHT) {
+                    newBoard.unshift(Array(BOARD_WIDTH).fill(null));
+                }
+                
+                return { board: newBoard, linesCleared };
+            }
+            
+            class TetrisModel extends Multisynq.Model {
+                init() {
+                    this.players = {};
+                    this.subscribe(this.sessionId, "playerUpdate", this.handlePlayerUpdate);
+                }
+                
+                handlePlayerUpdate(data) {
+                    this.players[data.id] = data;
+                    this.publish(this.sessionId, "playersUpdated", this.players);
+                }
+            }
+            
+            TetrisModel.register("TetrisModel");
+            
+            class TetrisView extends Multisynq.View {
+                constructor(model) {
+                    super(model);
+                    this.model = model;
+                    this.subscribe(this.sessionId, "playersUpdated", this.updatePlayers);
+                }
+                
+                updatePlayers(players) {
+                    window.state.players = players;
+                    updateView();
+                }
+                
+                sendUpdate(data) {
+                    this.publish(this.sessionId, "playerUpdate", data);
+                }
+            }
+
+            let viewInstance = null;
+            let gameBoard = Array.from({ length: BOARD_HEIGHT }, () => Array(BOARD_WIDTH).fill(null));
+            let currentPiece = null;
+            let score = 0;
+            let level = 1;
+            let gameRunning = false;
+            let dropTime = 0;
+            let dropInterval = 1000;
+
+            Multisynq.Session.join({
+                apiKey: API_KEY,
+                appId: APP_ID,
+                name: ROOM_ID,
+                password: PASSWORD,
+                model: TetrisModel,
+                view: TetrisView,
+                debug: []
+            }).then(session => {
+                viewInstance = session.view;
+                myId = session.view.viewId;
+                
+                console.log("Session joined, myId:", myId);
+                
+                // Initialize player
+                const playerData = { 
+                    id: myId, 
+                    board: gameBoard,
+                    score: score,
+                    level: level,
+                    currentPiece: null,
+                    gameRunning: false
+                };
+                
+                // Send initial state
+                viewInstance.sendUpdate(playerData);
+                
+                // Start game
+                startGame();
+                
+            }).catch(e => {
+                console.error("Multisynq Session Join Error:", e);
+            });
+
+            function startGame() {
+                gameRunning = true;
+                currentPiece = getRandomTetromino();
+                gameBoard = Array.from({ length: BOARD_HEIGHT }, () => Array(BOARD_WIDTH).fill(null));
+                score = 0;
+                level = 1;
+                dropInterval = 1000;
+                dropTime = 0;
+                
+                gameLoop();
+            }
+            
+            function gameLoop() {
+                if (!gameRunning) return;
+                
+                const now = Date.now();
+                if (now - dropTime > dropInterval) {
+                    dropPiece();
+                    dropTime = now;
+                }
+                
+                updateView();
+                requestAnimationFrame(gameLoop);
+            }
+            
+            function dropPiece() {
+                if (!currentPiece) return;
+                
+                if (isValidMove(gameBoard, currentPiece, 0, 1)) {
+                    currentPiece.y++;
+                } else {
+                    // Place piece
+                    gameBoard = placePiece(gameBoard, currentPiece);
+                    
+                    // Clear lines
+                    const result = clearLines(gameBoard);
+                    gameBoard = result.board;
+                    score += result.linesCleared * 100 * level;
+                    
+                    // Level up
+                    if (score >= level * 1000) {
+                        level++;
+                        dropInterval = Math.max(100, 1000 - (level - 1) * 100);
+                    }
+                    
+                    // Get new piece
+                    currentPiece = getRandomTetromino();
+                    
+                    // Check game over
+                    if (!isValidMove(gameBoard, currentPiece)) {
+                        gameRunning = false;
+                    }
+                }
+                
+                // Send update
+                if (viewInstance) {
+                    viewInstance.sendUpdate({
+                        id: myId,
+                        board: gameBoard,
+                        score: score,
+                        level: level,
+                        currentPiece: currentPiece,
+                        gameRunning: gameRunning
+                    });
+                }
+            }
+            
+            function movePiece(dx, dy) {
+                if (!currentPiece || !gameRunning) return;
+                
+                if (isValidMove(gameBoard, currentPiece, dx, dy)) {
+                    currentPiece.x += dx;
+                    currentPiece.y += dy;
+                    
+                    if (viewInstance) {
+                        viewInstance.sendUpdate({
+                            id: myId,
+                            board: gameBoard,
+                            score: score,
+                            level: level,
+                            currentPiece: currentPiece,
+                            gameRunning: gameRunning
+                        });
+                    }
+                }
+            }
+            
+            function rotatePiece() {
+                if (!currentPiece || !gameRunning) return;
+                
+                const rotated = rotateMatrix(currentPiece.shape);
+                if (isValidMove(gameBoard, currentPiece, 0, 0, rotated)) {
+                    currentPiece.shape = rotated;
+                    
+                    if (viewInstance) {
+                        viewInstance.sendUpdate({
+                            id: myId,
+                            board: gameBoard,
+                            score: score,
+                            level: level,
+                            currentPiece: currentPiece,
+                            gameRunning: gameRunning
+                        });
+                    }
+                }
+            }
+            
+            function hardDrop() {
+                if (!currentPiece || !gameRunning) return;
+                
+                while (isValidMove(gameBoard, currentPiece, 0, 1)) {
+                    currentPiece.y++;
+                }
+                dropPiece();
+            }
+
+            window.addEventListener('keydown', e => {
+                if (!myId || !viewInstance) return;
+                
+                switch(e.key) {
+                    case "ArrowLeft":
+                        movePiece(-1, 0);
+                        break;
+                    case "ArrowRight":
+                        movePiece(1, 0);
+                        break;
+                    case "ArrowDown":
+                        movePiece(0, 1);
+                        break;
+                    case "ArrowUp":
+                    case " ":
+                        rotatePiece();
+                        break;
+                    case "Enter":
+                        hardDrop();
+                        break;
+                }
+                
+                e.preventDefault();
+            });
+
+            function drawBoard(board, offsetX = 0, offsetY = 0) {
+                // Draw grid
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 1;
+                
+                for (let y = 0; y < BOARD_HEIGHT; y++) {
+                    for (let x = 0; x < BOARD_WIDTH; x++) {
+                        const cellX = offsetX + x * BLOCK_SIZE;
+                        const cellY = offsetY + y * BLOCK_SIZE;
+                        
+                        // Draw cell
+                        if (board[y][x]) {
+                            ctx.fillStyle = board[y][x];
+                            ctx.fillRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
+                        }
+                        
+                        // Draw border
+                        ctx.strokeRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
+                    }
+                }
+            }
+            
+            function drawPiece(piece, offsetX = 0, offsetY = 0) {
+                if (!piece) return;
+                
+                ctx.fillStyle = piece.color;
+                for (let y = 0; y < piece.shape.length; y++) {
+                    for (let x = 0; x < piece.shape[y].length; x++) {
+                        if (piece.shape[y][x]) {
+                            const cellX = offsetX + (piece.x + x) * BLOCK_SIZE;
+                            const cellY = offsetY + (piece.y + y) * BLOCK_SIZE;
+                            ctx.fillRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
+                            ctx.strokeStyle = '#111';
+                            ctx.lineWidth = 1;
+                            ctx.strokeRect(cellX, cellY, BLOCK_SIZE, BLOCK_SIZE);
+                        }
+                    }
+                }
+            }
+
+            function updateView() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw current player's board
+                drawBoard(gameBoard);
+                drawPiece(currentPiece);
+                
+                // Draw other players' boards
+                let playerIndex = 0;
+                for (let id in state.players) {
+                    if (id !== myId && state.players[id].board) {
+                        const offsetX = (playerIndex + 1) * (CANVAS_WIDTH + 20);
+                        const offsetY = 0;
+                        
+                        // Draw mini board
+                        const miniBlockSize = 15;
+                        const miniBoard = state.players[id].board;
+                        
+                        for (let y = 0; y < BOARD_HEIGHT; y++) {
+                            for (let x = 0; x < BOARD_WIDTH; x++) {
+                                const cellX = offsetX + x * miniBlockSize;
+                                const cellY = offsetY + y * miniBlockSize;
+                                
+                                if (miniBoard[y][x]) {
+                                    ctx.fillStyle = miniBoard[y][x];
+                                    ctx.fillRect(cellX, cellY, miniBlockSize, miniBlockSize);
+                                }
+                                
+                                ctx.strokeStyle = '#333';
+                                ctx.lineWidth = 0.5;
+                                ctx.strokeRect(cellX, cellY, miniBlockSize, miniBlockSize);
+                            }
+                        }
+                        
+                        // Draw score
+                        ctx.fillStyle = '#fff';
+                        ctx.font = '12px Arial';
+                        ctx.fillText(`Player ${playerIndex + 1}: ${state.players[id].score || 0}`, offsetX, offsetY + BOARD_HEIGHT * miniBlockSize + 20);
+                        
+                        playerIndex++;
+                    }
+                }
+                
+                // Draw current player's score
+                ctx.fillStyle = '#fff';
+                ctx.font = '16px Arial';
+                ctx.fillText(`Score: ${score}`, 10, 20);
+                ctx.fillText(`Level: ${level}`, 10, 40);
+                
+                if (!gameRunning) {
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = '#fff';
+                    ctx.font = '24px Arial';
+                    ctx.fillText('GAME OVER', canvas.width / 2 - 60, canvas.height / 2);
+                    ctx.font = '16px Arial';
+                    ctx.fillText('Press R to restart', canvas.width / 2 - 60, canvas.height / 2 + 30);
+                }
+            }
+            
+            // Restart game
+            window.addEventListener('keydown', e => {
+                if (e.key === 'r' || e.key === 'R') {
+                    if (!gameRunning) {
+                        startGame();
+                    }
+                }
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <h2>Multiplayer Tetris</h2>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <div class="info">
+        <strong>Controls:</strong><br>
+        Arrow Keys: Move piece<br>
+        Up Arrow / Space: Rotate piece<br>
+        Enter: Hard drop<br>
+        R: Restart game<br>
+    </div>
+</body>
+</html>
