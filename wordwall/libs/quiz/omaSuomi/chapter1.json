@@ -96,7 +96,7 @@
       "id": 12,
       "type": "multiple-choice",
       "question": "How",
-      "options": ["kuonka / miten", "miksi", "minkä vuoksi", "missä"],
+      "options": ["kuinka / miten", "miksi", "minkä vuoksi", "missä"],
       "answer": 0,
       "explanation": "Both 'kuinka' and 'miten' are used to ask 'how' in Finnish."
     },
