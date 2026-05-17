@@ -1,0 +1,46 @@
+{
+  "quizzes": [
+    {
+      "id": "bookwords12",
+      "file": "others/bookwords12.json",
+      "title": "bookwords12",
+      "category": "others",
+      "questionCount": 51
+    },
+    {
+      "id": "chapter1",
+      "file": "omaSuomi/chapter1.json",
+      "title": "chapter1",
+      "category": "omaSuomi",
+      "questionCount": 19
+    },
+    {
+      "id": "chapter2",
+      "file": "omaSuomi/chapter2.json",
+      "title": "chapter2",
+      "category": "omaSuomi",
+      "questionCount": 53
+    },
+    {
+      "id": "chapter3",
+      "file": "omaSuomi/chapter3.json",
+      "title": "chapter3",
+      "category": "omaSuomi",
+      "questionCount": 72
+    },
+    {
+      "id": "chapter4",
+      "file": "omaSuomi/chapter4.json",
+      "title": "chapter4",
+      "category": "omaSuomi",
+      "questionCount": 42
+    },
+    {
+      "id": "chapter5",
+      "file": "omaSuomi/chapter5.json",
+      "title": "chapter5",
+      "category": "omaSuomi",
+      "questionCount": 82
+    }
+  ]
+}

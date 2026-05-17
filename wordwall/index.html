@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Study</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">W</div>
+      <div class="brand-name">wordwall <em>· study</em></div>
+    </a>
+    <div class="topbar-right">
+      <button id="themeBtn" class="theme-btn" type="button"></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="home-hero">
+        <div class="eyebrow">Word study · v1</div>
+        <h1 class="h1">open source<em> word wall.</em></h1>
+        <p class="sub">
+        
+        </p>
+        <div id="deckMeta" class="deck-meta"></div>
+      </section>
+
+      <section class="mode-grid">
+        <button id="goType" class="mode-card" disabled>
+          <div class="num">01 / type</div>
+          <h3>Type the answer</h3>
+          <p>You'll see the word, type its translation. Spelling-tolerant — case and accents ignored.</p>
+          <div class="mode-thumb">
+            <div class="thumb-type">hol<span class="caret"></span></div>
+          </div>
+          <div class="go">
+            Start
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+
+        <button id="goQuiz" class="mode-card" disabled>
+          <div class="num">02 / quiz</div>
+          <h3>Pick from four</h3>
+          <p>You'll see the word and four candidate translations. Tap or press 1–4 to answer.</p>
+          <div class="mode-thumb">
+            <div class="thumb-quiz">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="go">
+            Start
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+      </section>
+
+      <section class="source">
+        <div class="source-head">
+          <h4>Data source</h4>
+          <span id="sourceStatus" class="source-status"></span>
+        </div>
+        <div class="source-row">
+          <input
+            id="urlInput"
+            class="input"
+            type="url"
+            placeholder="https://raw.githubusercontent.com/you/repo/main/vocab.json"
+            spellcheck="false"
+            autocomplete="off"
+          />
+          <button id="loadBtn" class="btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>
+            Load
+          </button>
+          <button id="resetBtn" class="btn ghost" type="button" style="display:none">Reset</button>
+        </div>
+        <div class="source-hint">
+          Expected format: a JSON array, or an object with
+          <code>{ "title": "...", "items": [...] }</code>.
+          Each item needs <code>word</code> and <code>answer</code> fields.
+          Aliases optional via <code>aliases: ["..."]</code>.
+          Use the <strong>raw.githubusercontent.com</strong> URL (not the page URL).
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
