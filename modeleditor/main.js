@@ -510,6 +510,10 @@ const RULER_W = 40;
       return;
     }
 
+    const isBg = l.id === '__bg__';
+    const mpp  = isBg ? (l.mapMetersPerPixel ?? 1.0) : 1.0;
+    const ppm  = mpp > 0 ? 1.0 / mpp : 0;
+
     panel.innerHTML = `
       <div class="me-selection">
         <svg class="me-selection__icon"><use href="#icon-layer"/></svg>
@@ -529,6 +533,19 @@ const RULER_W = 40;
         <button class="pp-toggle me-pill${l.visible ? ' me-pill--accent' : ''}"
                 data-action="visible">${l.visible ? 'Visible' : 'Hidden'}</button>
       </div>
+      ${isBg ? `
+      <div class="me-prop-group-label">Image Scale</div>
+      <div class="me-prop">
+        <span class="me-prop__label">m / px</span>
+        <input id="pp-mpp" class="pp-num-input" type="number" min="0.000001" step="0.0001"
+               value="${mpp.toFixed(6)}" style="width:100px;border:1px solid var(--border);background:#f3f1ec;padding:1px 8px;">
+      </div>
+      <div class="me-prop">
+        <span class="me-prop__label">px / m</span>
+        <input id="pp-ppm" class="pp-num-input" type="number" min="0.000001" step="0.0001"
+               value="${ppm.toFixed(6)}" style="width:100px;border:1px solid var(--border);background:#f3f1ec;padding:1px 8px;">
+      </div>
+      ` : ''}
       <div class="pp-delete-zone">
         <button class="pp-delete" data-action="delete">Delete layer</button>
       </div>
@@ -576,6 +593,36 @@ const RULER_W = 40;
       l.konvaLayer.batchDraw();
       renderLayersUI();
     });
+
+    if (isBg) {
+      const mppInput = panel.querySelector('#pp-mpp');
+      const ppmInput = panel.querySelector('#pp-ppm');
+
+      function applyScale(mppVal) {
+        if (!isFinite(mppVal) || mppVal <= 0) return;
+        l.mapMetersPerPixel = mppVal;
+        mppInput.value = mppVal.toFixed(6);
+        ppmInput.value = (1.0 / mppVal).toFixed(6);
+        const kImg = l.worldGroup?.findOne('Image');
+        if (kImg) { kImg.scaleX(mppVal); kImg.scaleY(mppVal); l.konvaLayer.batchDraw(); }
+      }
+      function applyMpp(val) {
+        const v = parseFloat(val);
+        if (!isFinite(v) || v <= 0) return;
+        applyScale(v);
+      }
+      function applyPpm(val) {
+        const v = parseFloat(val);
+        if (!isFinite(v) || v <= 0) return;
+        applyScale(1.0 / v);
+      }
+
+      mppInput.addEventListener('input', () => applyMpp(mppInput.value));
+      mppInput.addEventListener('blur',  () => applyMpp(mppInput.value));
+      ppmInput.addEventListener('input', () => applyPpm(ppmInput.value));
+      ppmInput.addEventListener('blur',  () => applyPpm(ppmInput.value));
+    }
+
     panel.querySelector('[data-action="delete"]').addEventListener('click', () => {
       deleteLayer(l.id);
     });
@@ -807,13 +854,13 @@ const RULER_W = 40;
 
     q('.pp-pt-x').addEventListener('change', e => {
       p.x = parseFloat(e.target.value) || p.x;
-      p.konvaGroup?.position({ x: p.x, y: p.y });
+      p.konvaGroup?.position({ x: p.x, y: -p.y });
       getLayer(p.layerId)?.konvaLayer.batchDraw();
     });
 
     q('.pp-pt-y').addEventListener('change', e => {
       p.y = parseFloat(e.target.value) || p.y;
-      p.konvaGroup?.position({ x: p.x, y: p.y });
+      p.konvaGroup?.position({ x: p.x, y: -p.y });
       getLayer(p.layerId)?.konvaLayer.batchDraw();
     });
 
@@ -1514,7 +1561,7 @@ const RULER_W = 40;
     if (!layer?.worldGroup) return;
     if (loc.konvaGroup) loc.konvaGroup.destroy();
 
-    const g = new Konva.Group({ x: loc.x, y: loc.y, id: loc.id });
+    const g = new Konva.Group({ x: loc.x, y: -loc.y, id: loc.id });
 
     g.add(new Konva.Rect({
       name: 'loc-rect',
@@ -1587,7 +1634,7 @@ const RULER_W = 40;
         g.x(Math.round(g.x() / step) * step);
         g.y(Math.round(g.y() / step) * step);
       }
-      loc.x = g.x(); loc.y = g.y();
+      loc.x = g.x(); loc.y = -g.y();
       const panel = document.getElementById('properties-panel');
       const xi = panel.querySelector('.pp-loc-x');
       const yi = panel.querySelector('.pp-loc-y');
@@ -1597,7 +1644,7 @@ const RULER_W = 40;
     });
 
     g.on('dragend', () => {
-      loc.x = g.x(); loc.y = g.y();
+      loc.x = g.x(); loc.y = -g.y();
       stage.container().style.cursor = 'pointer';
       renderLocationProperties(loc);
     });
@@ -1776,13 +1823,13 @@ const RULER_W = 40;
 
     q('.pp-loc-x').addEventListener('change', e => {
       loc.x = parseFloat(e.target.value) || loc.x;
-      loc.konvaGroup?.position({ x: loc.x, y: loc.y });
+      loc.konvaGroup?.position({ x: loc.x, y: -loc.y });
       getLayer(loc.layerId)?.konvaLayer.batchDraw();
     });
 
     q('.pp-loc-y').addEventListener('change', e => {
       loc.y = parseFloat(e.target.value) || loc.y;
-      loc.konvaGroup?.position({ x: loc.x, y: loc.y });
+      loc.konvaGroup?.position({ x: loc.x, y: -loc.y });
       getLayer(loc.layerId)?.konvaLayer.batchDraw();
     });
 
@@ -1839,19 +1886,19 @@ const RULER_W = 40;
     const pt  = getPoint(lk.pointId);
     const loc = getLocation(lk.locationId);
     if (!pt || !loc) return [0, 0, 0, 0];
-    return [pt.x, pt.y, loc.x, loc.y];
+    return [pt.x, -pt.y, loc.x, -loc.y];
   }
 
   function linkArrPts(lk) {
     const pt  = getPoint(lk.pointId);
     const loc = getLocation(lk.locationId);
     if (!pt || !loc) return [0, 0, 0, 0, 0, 0];
-    const dx = loc.x - pt.x, dy = loc.y - pt.y;
+    const dx = loc.x - pt.x, dy = pt.y - loc.y; // screen-space dy (Y-down)
     const len = Math.sqrt(dx*dx + dy*dy) || 1;
     const ux = dx/len, uy = dy/len;
     const px = -uy, py = ux;
     const ex = loc.x - ux * LOC_HALF;
-    const ey = loc.y - uy * LOC_HALF;
+    const ey = -loc.y - uy * LOC_HALF;
     return [
       ex, ey,
       ex - ux*ARROW_LEN + px*(ARROW_W/2), ey - uy*ARROW_LEN + py*(ARROW_W/2),
@@ -2954,7 +3001,7 @@ const RULER_W = 40;
     const layer = getLayer(p.layerId);
     if (!layer?.worldGroup) return;
 
-    const g = new Konva.Group({ x: p.x, y: p.y, id: p.id });
+    const g = new Konva.Group({ x: p.x, y: -p.y, id: p.id });
 
     g.add(new Konva.Circle({
       name: 'ring',
@@ -2999,7 +3046,7 @@ const RULER_W = 40;
         g.y(Math.round(g.y() / step) * step);
       }
       p.x = g.x();
-      p.y = g.y();
+      p.y = -g.y();
       // Live-update coordinate fields in the properties panel
       const panel = document.getElementById('properties-panel');
       const xInput = panel.querySelector('.pp-pt-x');
@@ -3021,7 +3068,7 @@ const RULER_W = 40;
 
     g.on('dragend', () => {
       p.x = g.x();
-      p.y = g.y();
+      p.y = -g.y();
       stage.container().style.cursor = 'pointer';
       renderPointProperties(p); // refresh panel with final position
     });
@@ -3107,13 +3154,13 @@ const RULER_W = 40;
     if (!sp || !ep) return '';
     if (pa.connectionType === 'BEZIER' && pa.controlPoints.length === 2) {
       const [c1, c2] = pa.controlPoints;
-      return `M ${sp.x} ${sp.y} C ${c1.x} ${c1.y} ${c2.x} ${c2.y} ${ep.x} ${ep.y}`;
+      return `M ${sp.x} ${-sp.y} C ${c1.x} ${-c1.y} ${c2.x} ${-c2.y} ${ep.x} ${-ep.y}`;
     }
     if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
-      const mid = pa.controlPoints.map(cp => `L ${cp.x} ${cp.y}`).join(' ');
-      return `M ${sp.x} ${sp.y} ${mid} L ${ep.x} ${ep.y}`;
+      const mid = pa.controlPoints.map(cp => `L ${cp.x} ${-cp.y}`).join(' ');
+      return `M ${sp.x} ${-sp.y} ${mid} L ${ep.x} ${-ep.y}`;
     }
-    return `M ${sp.x} ${sp.y} L ${ep.x} ${ep.y}`;
+    return `M ${sp.x} ${-sp.y} L ${ep.x} ${-ep.y}`;
   }
 
   function arrowheadPoints(pa) {
@@ -3123,19 +3170,19 @@ const RULER_W = 40;
     let tx2, ty2;
     if (pa.connectionType === 'BEZIER' && pa.controlPoints.length === 2) {
       const c2 = pa.controlPoints[1];
-      tx2 = ep.x - c2.x; ty2 = ep.y - c2.y;
+      tx2 = ep.x - c2.x; ty2 = c2.y - ep.y; // screen-space (Y-down)
     } else if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
       const prev = pa.controlPoints[pa.controlPoints.length - 1];
-      tx2 = ep.x - prev.x; ty2 = ep.y - prev.y;
+      tx2 = ep.x - prev.x; ty2 = prev.y - ep.y; // screen-space (Y-down)
     } else {
-      tx2 = ep.x - sp.x; ty2 = ep.y - sp.y;
+      tx2 = ep.x - sp.x; ty2 = sp.y - ep.y; // screen-space (Y-down)
     }
     const len = Math.sqrt(tx2*tx2 + ty2*ty2) || 1;
     const ux = tx2/len, uy = ty2/len;
     const px = -uy, py = ux;
-    const tip = { x: ep.x, y: ep.y };
-    const b1  = { x: ep.x - ux*ARROW_LEN + px*(ARROW_W/2), y: ep.y - uy*ARROW_LEN + py*(ARROW_W/2) };
-    const b2  = { x: ep.x - ux*ARROW_LEN - px*(ARROW_W/2), y: ep.y - uy*ARROW_LEN - py*(ARROW_W/2) };
+    const tip = { x: ep.x, y: -ep.y };
+    const b1  = { x: ep.x - ux*ARROW_LEN + px*(ARROW_W/2), y: -ep.y - uy*ARROW_LEN + py*(ARROW_W/2) };
+    const b2  = { x: ep.x - ux*ARROW_LEN - px*(ARROW_W/2), y: -ep.y - uy*ARROW_LEN - py*(ARROW_W/2) };
     return [tip.x, tip.y, b1.x, b1.y, b2.x, b2.y];
   }
 
@@ -3237,20 +3284,20 @@ const RULER_W = 40;
           const epPt = getPoint(pa.endPointId);
           const anchor = i === 0 ? spPt : epPt;
           g.add(new Konva.Line({
-            points: [anchor.x, anchor.y, cp.x, cp.y],
+            points: [anchor.x, -anchor.y, cp.x, -cp.y],
             stroke: '#aaa', strokeWidth: 1, dash: [4, 3],
             strokeScaleEnabled: false, listening: false,
           }));
         }
         const handle = new Konva.Circle({
-          x: cp.x, y: cp.y, radius: isBezier ? 5 : 6,
+          x: cp.x, y: -cp.y, radius: isBezier ? 5 : 6,
           fill: '#fff',
           stroke: isBezier ? PATH_STROKE_SEL : '#7c3aed',
           strokeWidth: 1.5,
           strokeScaleEnabled: false, draggable: true,
         });
         handle.on('dragmove', () => {
-          pa.controlPoints[i] = { x: handle.x(), y: handle.y() };
+          pa.controlPoints[i] = { x: Math.round(handle.x()), y: -Math.round(handle.y()) };
           updatePathGeometry(pa);
         });
         handle.on('click', e => e.cancelBubble = true);
@@ -3570,7 +3617,7 @@ const RULER_W = 40;
 
     items.forEach(({ el, kind }) => {
       if (axis === 'x') el.x = target; else el.y = target;
-      el.konvaGroup?.position({ x: el.x, y: el.y });
+      el.konvaGroup?.position({ x: el.x, y: -el.y });
       if (kind === 'point') {
         pathList.filter(pa => pa.startPointId === el.id || pa.endPointId === el.id)
                 .forEach(pa => updatePathGeometry(pa));
@@ -3680,13 +3727,17 @@ const RULER_W = 40;
     const sp = getPoint(pathStartId);
     if (!sp) return;
 
-    const dx = wx - sp.x, dy = wy - sp.y;
+    // Convert Y-up world coords to screen Y-down for Konva drawing
+    const swy  = -wy;
+    const sspy = -sp.y;
+
+    const dx = wx - sp.x, dy = swy - sspy;
     const len = Math.sqrt(dx*dx + dy*dy) || 1;
     const ux = dx/len, uy = dy/len;
     const px = -uy, py = ux;
 
     previewGroup.add(new Konva.Line({
-      points: [sp.x, sp.y, wx, wy],
+      points: [sp.x, sspy, wx, swy],
       stroke: '#888',
       strokeWidth: 1.5,
       dash: [6, 5],
@@ -3696,9 +3747,9 @@ const RULER_W = 40;
 
     previewGroup.add(new Konva.Line({
       points: [
-        wx, wy,
-        wx - ux*ARROW_LEN + px*(ARROW_W/2), wy - uy*ARROW_LEN + py*(ARROW_W/2),
-        wx - ux*ARROW_LEN - px*(ARROW_W/2), wy - uy*ARROW_LEN - py*(ARROW_W/2),
+        wx, swy,
+        wx - ux*ARROW_LEN + px*(ARROW_W/2), swy - uy*ARROW_LEN + py*(ARROW_W/2),
+        wx - ux*ARROW_LEN - px*(ARROW_W/2), swy - uy*ARROW_LEN - py*(ARROW_W/2),
       ],
       closed: true,
       fill: '#888',
@@ -3804,11 +3855,11 @@ const RULER_W = 40;
                   <tr style="border-bottom:1px solid #eee;">
                     <td style="padding:2px 6px;">${i + 1}</td>
                     <td style="padding:2px 6px;">
-                      <input class="pp-wp-x" data-idx="${i}" type="number" step="any" value="${cp.x.toFixed(1)}"
+                      <input class="pp-wp-x" data-idx="${i}" type="number" step="1" value="${Math.round(cp.x)}"
                         style="width:70px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
                     </td>
                     <td style="padding:2px 6px;">
-                      <input class="pp-wp-y" data-idx="${i}" type="number" step="any" value="${cp.y.toFixed(1)}"
+                      <input class="pp-wp-y" data-idx="${i}" type="number" step="1" value="${Math.round(cp.y)}"
                         style="width:70px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
                     </td>
                     <td style="padding:2px 4px;">
@@ -3946,8 +3997,8 @@ const RULER_W = 40;
         // splitAt corresponds to segment nodes[splitAt]→nodes[splitAt+1]
         // In controlPoints, index = splitAt - 1 (since nodes[0] = sp2)
         const newWp = {
-          x: (nodes[splitAt].x + nodes[splitAt + 1].x) / 2,
-          y: (nodes[splitAt].y + nodes[splitAt + 1].y) / 2,
+          x: Math.round((nodes[splitAt].x + nodes[splitAt + 1].x) / 2),
+          y: Math.round((nodes[splitAt].y + nodes[splitAt + 1].y) / 2),
         };
         pa.controlPoints.splice(splitAt, 0, newWp);
         drawPath(pa); setPathStyle(pa, true);
@@ -3967,14 +4018,16 @@ const RULER_W = 40;
     panel.querySelectorAll('.pp-wp-x').forEach(inp => {
       inp.addEventListener('change', () => {
         const i = parseInt(inp.dataset.idx);
-        pa.controlPoints[i].x = parseFloat(inp.value) || 0;
+        pa.controlPoints[i].x = Math.round(parseFloat(inp.value)) || 0;
+        inp.value = pa.controlPoints[i].x;
         drawPath(pa); setPathStyle(pa, true);
       });
     });
     panel.querySelectorAll('.pp-wp-y').forEach(inp => {
       inp.addEventListener('change', () => {
         const i = parseInt(inp.dataset.idx);
-        pa.controlPoints[i].y = parseFloat(inp.value) || 0;
+        pa.controlPoints[i].y = Math.round(parseFloat(inp.value)) || 0;
+        inp.value = pa.controlPoints[i].y;
         drawPath(pa); setPathStyle(pa, true);
       });
     });
@@ -4168,7 +4221,7 @@ const RULER_W = 40;
       const sy = oy + wy * s;
       if (sy < RULER_H) continue;
       rulerLayer.add(new Konva.Line({ points: [RULER_W - 5, sy, RULER_W, sy], stroke: '#9a958c', strokeWidth: 1 }));
-      rulerLayer.add(new Konva.Text({ x: 2, y: sy + 1, text: String(Math.round(wy)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: '#888' }));
+      rulerLayer.add(new Konva.Text({ x: 2, y: sy + 1, text: String(Math.round(-wy)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: '#888' }));
     }
 
     rulerLayer.batchDraw();
@@ -4236,9 +4289,9 @@ const RULER_W = 40;
   stage.on('mousemove', () => {
     const pos = stage.getPointerPosition();
 
-    // Live coordinates in status bar
+    // Live coordinates in status bar (Y-up: negate canvas Y)
     const wx = (pos.x - tx) / ts;
-    const wy = (pos.y - ty) / ts;
+    const wy = -(pos.y - ty) / ts;
     const u = UNITS[unitIdx].label;
     sb.coords.textContent = `x: ${toUnit(wx)} ${u}  y: ${toUnit(wy)} ${u}`;
 
@@ -4274,7 +4327,7 @@ const RULER_W = 40;
       pushUndoState();
       const pos = stage.getPointerPosition();
       const wx  = snapCoord((pos.x - tx) / ts);
-      const wy  = snapCoord((pos.y - ty) / ts);
+      const wy  = snapCoord(-(pos.y - ty) / ts);
       const p   = createPoint(wx, wy, activeLayerId);
       drawPoint(p);
       updateCounts(points.length, pathList.length, locations.length);
@@ -4283,7 +4336,7 @@ const RULER_W = 40;
       pushUndoState();
       const pos = stage.getPointerPosition();
       const wx  = snapCoord((pos.x - tx) / ts);
-      const wy  = snapCoord((pos.y - ty) / ts);
+      const wy  = snapCoord(-(pos.y - ty) / ts);
       const loc = createLocation(wx, wy, activeLayerId);
       drawLocation(loc);
       updateCounts(points.length, pathList.length, locations.length);
@@ -4364,7 +4417,7 @@ const RULER_W = 40;
         // Reuse existing bg layer or create a new one at index 0
         let bgDef = getLayer('__bg__');
         if (!bgDef) {
-          bgDef = { id: '__bg__', name: 'Floor plan', visible: true, locked: true, opacity: 1.0, konvaLayer: null, worldGroup: null };
+          bgDef = { id: '__bg__', name: 'Floor plan', visible: true, locked: true, opacity: 1.0, mapMetersPerPixel: 1.0, konvaLayer: null, worldGroup: null };
           const kl = new Konva.Layer({ visible: true, opacity: 1.0 });
           kl.clip({ x: RULER_W, y: RULER_H, width: W - RULER_W, height: H - RULER_H });
           const wg = new Konva.Group({ x: tx, y: ty, scaleX: ts, scaleY: ts });
@@ -4377,8 +4430,9 @@ const RULER_W = 40;
           reorderKonvaLayers();
         }
 
+        const s = bgDef.mapMetersPerPixel ?? 1.0;
         bgDef.worldGroup.destroyChildren();
-        bgDef.worldGroup.add(new Konva.Image({ image: img, x: 0, y: 0, listening: false }));
+        bgDef.worldGroup.add(new Konva.Image({ image: img, x: 0, y: 0, scaleX: s, scaleY: s, listening: false }));
         bgDef.konvaLayer.batchDraw();
         floorPlanBtn.classList.add('is-active');
         renderLayersUI();
@@ -4388,7 +4442,506 @@ const RULER_W = 40;
     reader.readAsDataURL(file);
   });
 
-  // ── File menu dropdown (toggle only — items not yet implemented) ──
+  // ── Save Model ───────────────────────────────────────────────
+  function buildModelXml(modelName, coordScale = 1) {
+    const esc = s => String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const scX  = v => Math.round(v * coordScale);
+    const scY  = v => Math.round(v * coordScale); // Y-up stored internally, matches openTCS convention
+
+    // Map JS layer IDs → integer ordinals (skip __bg__)
+    const nonBgLayers  = layers.filter(l => l.id !== '__bg__');
+    const layerOrdinal = {};
+    nonBgLayers.forEach((l, i) => { layerOrdinal[l.id] = i; });
+    const layOrd = id => layerOrdinal[id] ?? 0;
+
+    const lines = [];
+    lines.push('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
+    lines.push(`<model version="7.0.0" name="${esc(modelName)}">`);
+
+    // ── Points ──────────────────────────────────────────────────
+    for (const p of points) {
+      const angle = isNaN(p.angle) ? 'NaN' : p.angle;
+      lines.push(`    <point name="${esc(p.name)}" positionX="${scX(p.x)}" positionY="${scY(p.y)}" positionZ="0" vehicleOrientationAngle="${angle}" type="${p.type}">`);
+      const bb = p.vehicleBoundingBox;
+      lines.push(`        <maxVehicleBoundingBox length="${bb.length}" width="${bb.width}" height="${bb.height}" referenceOffsetX="${bb.refOffsetX}" referenceOffsetY="${bb.refOffsetY}"/>`);
+      for (const env of (p.envelopes ?? [])) {
+        lines.push(`        <vehicleEnvelope key="${esc(env.key)}">`);
+        for (const v of env.coords) lines.push(`            <vertex x="${scX(v.x)}" y="${scY(v.y)}"/>`);
+        lines.push(`        </vehicleEnvelope>`);
+      }
+      for (const pa of pathList.filter(pa => pa.startPointId === p.id))
+        lines.push(`        <outgoingPath name="${esc(pa.name)}"/>`);
+      for (const prop of (p.miscProperties ?? []))
+        lines.push(`        <property name="${esc(prop.key)}" value="${esc(prop.value)}"/>`);
+      lines.push(`        <pointLayout labelOffsetX="${p.labelXOffset}" labelOffsetY="${p.labelYOffset}" layerId="${layOrd(p.layerId)}"/>`);
+      lines.push(`    </point>`);
+    }
+
+    // ── Paths ───────────────────────────────────────────────────
+    for (const pa of pathList) {
+      const sp  = getPoint(pa.startPointId);
+      const ep  = getPoint(pa.endPointId);
+      const rawLen = pa.length !== null ? pa.length : pathLength(pa);
+      const len   = Math.round(rawLen * coordScale);
+      const maxV  = Math.round(pa.maxVelocity * 1000);
+      const maxRV = Math.round(pa.maxReverseVelocity * 1000);
+      lines.push(`    <path name="${esc(pa.name)}" sourcePoint="${esc(sp?.name ?? '')}" destinationPoint="${esc(ep?.name ?? '')}" length="${len}" maxVelocity="${maxV}" maxReverseVelocity="${maxRV}" locked="${pa.locked}">`);
+      for (const env of (pa.envelopes ?? [])) {
+        lines.push(`        <vehicleEnvelope key="${esc(env.key)}">`);
+        for (const v of env.coords) lines.push(`            <vertex x="${scX(v.x)}" y="${scY(v.y)}"/>`);
+        lines.push(`        </vehicleEnvelope>`);
+      }
+      for (const op of (pa.peripheralOperations ?? []))
+        lines.push(`        <peripheralOperation completionRequired="${op.completionRequired}" executionTrigger="${op.trigger}" locationName="${esc(op.location)}" name="${esc(op.operation)}"/>`);
+      if (pa.connectionType === 'BEZIER' && pa.controlPoints.length === 2 && sp && ep) {
+        lines.push(`        <pathLayout connectionType="BEZIER" layerId="${layOrd(pa.layerId)}">`);
+        // Absolute canvas pixel coords: canvas_x = model_x/50, canvas_y = -model_y/50 (Y-down)
+        // Our canvas unit = COORD_SCALE mm; openTCS pixel = 50mm → factor = COORD_SCALE/50
+        const cpF = coordScale / 50.0;
+        lines.push(`            <controlPoint x="${Math.round(pa.controlPoints[0].x * cpF)}" y="${-Math.round(pa.controlPoints[0].y * cpF)}"/>`);
+        lines.push(`            <controlPoint x="${Math.round(pa.controlPoints[1].x * cpF)}" y="${-Math.round(pa.controlPoints[1].y * cpF)}"/>`);
+        lines.push(`        </pathLayout>`);
+      } else if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
+        lines.push(`        <pathLayout connectionType="POLYPATH" layerId="${layOrd(pa.layerId)}">`);
+        // Absolute canvas pixel coords: x = model_x/50, y = -model_y/50 (Y-down)
+        const cpF = coordScale / 50.0;
+        for (const cp of pa.controlPoints)
+          lines.push(`            <controlPoint x="${Math.round(cp.x * cpF)}" y="${-Math.round(cp.y * cpF)}"/>`);
+        lines.push(`        </pathLayout>`);
+      } else {
+        // DIRECT, or POLYLINE/BEZIER with no control points → treat as DIRECT
+        const ct = (pa.connectionType === 'POLYLINE' || pa.connectionType === 'BEZIER') ? 'DIRECT' : pa.connectionType;
+        lines.push(`        <pathLayout connectionType="${ct}" layerId="${layOrd(pa.layerId)}"/>`);
+      }
+      lines.push(`    </path>`);
+    }
+
+    // ── Vehicles ─────────────────────────────────────────────────
+    for (const veh of vehicles) {
+      const envAttr = veh.envelopeKey ? ` envelopeKey="${esc(veh.envelopeKey)}"` : '';
+      lines.push(`    <vehicle name="${esc(veh.name)}" energyLevelCritical="${veh.energyCritical}" energyLevelGood="${veh.energyDegraded}" energyLevelFullyRecharged="${veh.energyFullyRecharged}" energyLevelSufficientlyRecharged="${veh.energySufficientlyRecharged}" maxVelocity="${veh.maxVelocity}" maxReverseVelocity="${veh.maxReverseVelocity}"${envAttr}>`);
+      lines.push(`        <boundingBox length="${veh.boundingBoxLength}" width="${veh.boundingBoxWidth}" height="${veh.boundingBoxHeight}" referenceOffsetX="${veh.boundingBoxOffsetX}" referenceOffsetY="${veh.boundingBoxOffsetY}"/>`);
+      for (const prop of (veh.miscProperties ?? []))
+        lines.push(`        <property name="${esc(prop.key)}" value="${esc(prop.value)}"/>`);
+      lines.push(`        <vehicleLayout color="${esc(veh.routeColor)}"/>`);
+      lines.push(`    </vehicle>`);
+    }
+
+    // ── Location types ────────────────────────────────────────────
+    for (const lt of locationTypes) {
+      lines.push(`    <locationType name="${esc(lt.name)}">`);
+      for (const op of (lt.supportedPeripheralOperations ?? []))
+        lines.push(`        <allowedPeripheralOperation name="${esc(op)}"/>`);
+      for (const op of (lt.supportedVehicleOperations ?? []))
+        lines.push(`        <allowedOperation name="${esc(op)}"/>`);
+      for (const prop of (lt.miscProperties ?? []))
+        lines.push(`        <property name="${esc(prop.key)}" value="${esc(prop.value)}"/>`);
+      lines.push(`        <locationTypeLayout locationRepresentation="${esc(lt.symbol)}"/>`);
+      lines.push(`    </locationType>`);
+    }
+
+    // ── Locations ─────────────────────────────────────────────────
+    for (const loc of locations) {
+      const ltName = getLocationType(loc.type)?.name ?? '';
+      lines.push(`    <location name="${esc(loc.name)}" positionX="${scX(loc.x)}" positionY="${scY(loc.y)}" positionZ="0" locked="${loc.locked}" type="${esc(ltName)}">`);
+      for (const lk of links.filter(lk => lk.locationId === loc.id)) {
+        const pt = getPoint(lk.pointId);
+        if (pt) lines.push(`        <link point="${esc(pt.name)}"/>`);
+      }
+      for (const prop of (loc.miscProperties ?? []))
+        lines.push(`        <property name="${esc(prop.key)}" value="${esc(prop.value)}"/>`);
+      lines.push(`        <locationLayout labelOffsetX="${loc.labelXOffset}" labelOffsetY="${loc.labelYOffset}" locationRepresentation="${esc(loc.symbol)}" layerId="${layOrd(loc.layerId)}"/>`);
+      lines.push(`    </location>`);
+    }
+
+    // ── Blocks ───────────────────────────────────────────────────
+    for (const blk of blocks) {
+      lines.push(`    <block name="${esc(blk.name)}" type="${blk.type}">`);
+      for (const memberId of blk.members) {
+        const name = getPoint(memberId)?.name ?? getPath(memberId)?.name ?? getLocation(memberId)?.name ?? memberId;
+        lines.push(`        <member name="${esc(name)}"/>`);
+      }
+      lines.push(`        <blockLayout color="${esc(blk.color)}"/>`);
+      lines.push(`    </block>`);
+    }
+
+    // ── Visual layout ─────────────────────────────────────────────
+    lines.push(`    <visualLayout name="VLayout-01" scaleX="50.0" scaleY="50.0">`);
+    nonBgLayers.forEach((l, i) => {
+      lines.push(`        <layer id="${i}" ordinal="${i}" visible="${l.visible}" name="${esc(l.name)}" groupId="0"/>`);
+    });
+    lines.push(`        <layerGroup id="0" name="Default layer group" visible="true"/>`);
+    lines.push(`    </visualLayout>`);
+
+    const ts = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
+    lines.push(`    <property name="tcs:modelFileLastModified" value="${ts}"/>`);
+    lines.push(`</model>`);
+
+    return lines.join('\n');
+  }
+
+  function downloadXml(xml, filename) {
+    const blob = new Blob([xml], { type: 'application/xml' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  const COORD_SCALE = 100; // 1 canvas unit = 100 mm
+
+  function promptSaveModel(defaultName) {
+    const { body, foot, close } = createModal('Save Model', 340);
+    body.innerHTML = `
+      <table class="me-modal-table" style="width:100%">
+        <tbody>
+          <tr class="me-modal-row">
+            <td class="me-modal-label">Model name</td>
+            <td><input id="save-model-name" type="text" value="${defaultName}"
+              style="width:100%;font-family:var(--font-mono);font-size:12px;border:1px solid var(--border);padding:2px 6px;"></td>
+          </tr>
+        </tbody>
+      </table>`;
+    foot.innerHTML = `
+      <button class="me-modal-btn me-modal-btn--primary" id="save-ok">Save</button>
+      <button class="me-modal-btn" id="save-cancel">Cancel</button>`;
+    const nameInput = document.getElementById('save-model-name');
+    nameInput.select();
+    foot.querySelector('#save-ok').addEventListener('click', () => {
+      const name = nameInput.value.trim() || defaultName;
+      close();
+      downloadXml(buildModelXml(name, COORD_SCALE), name + '.xml');
+    });
+    foot.querySelector('#save-cancel').addEventListener('click', close);
+    nameInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') foot.querySelector('#save-ok').click();
+      if (e.key === 'Escape') close();
+    });
+  }
+
+  // ── Load Model ───────────────────────────────────────────────
+  function loadModelXml(xmlText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xmlText, 'text/xml');
+    if (doc.querySelector('parsererror')) throw new Error('Invalid XML file.');
+    const model = doc.querySelector('model');
+    if (!model) throw new Error('No <model> element found.');
+
+    const ga  = (el, name, def = '') => el?.getAttribute(name) ?? def;
+    const gi  = (el, name, def = 0)  => { const v = parseInt(ga(el, name), 10); return isNaN(v) ? def : v; };
+    const gf  = (el, name, def = 0)  => { const v = parseFloat(ga(el, name)); return isNaN(v) ? def : v; };
+    const unX = v => v / COORD_SCALE;
+    const unY = v => v / COORD_SCALE; // Y-up stored internally, matches openTCS convention
+
+    // Read scale from visualLayout (default 50: 1 pixel = 50mm)
+    const vlEl = doc.querySelector('visualLayout');
+    const xmlScaleX = gf(vlEl, 'scaleX', 50.0);
+    const xmlScaleY = gf(vlEl, 'scaleY', 50.0);
+    // Control point conversion: openTCS pixel → our canvas unit
+    // pixel = model_mm / xmlScale; our_unit = model_mm / COORD_SCALE → our_unit = pixel * xmlScale / COORD_SCALE
+    const cpX = v =>  v * xmlScaleX / COORD_SCALE; // absolute x pixel → canvas unit
+    const cpY = v => -v * xmlScaleY / COORD_SCALE; // absolute y pixel (Y-down) → canvas unit (Y-up: negate)
+
+    // ── Clear state ────────────────────────────────────────────────
+    pathStartId = null;
+    clearPathPreview();
+    selectedPointId = null; selectedPathId = null; selectedLocationId = null;
+    selectedLinkId  = null; selectedLtId   = null; selectedBlockId    = null;
+    selectedVehicleId = null; multiSelection = [];
+
+    const userLayers = layers.filter(l => l.id !== '__bg__');
+    userLayers.forEach(l => l.konvaLayer.destroy());
+    const bgEntry = layers.find(l => l.id === '__bg__');
+    layers.length = 0;
+    if (bgEntry) layers.push(bgEntry);
+
+    points.length = 0; pathList.length = 0; locations.length = 0;
+    links.length = 0; blocks.length = 0; vehicles.length = 0; locationTypes.length = 0;
+    pointCounter = 1; ltCounter = 1; locCounter = 1; blockCounter = 1; vehicleCounter = 1;
+    undoStack.length = 0; redoStack.length = 0; updateUndoRedoButtons();
+
+    // ── Layers ─────────────────────────────────────────────────────
+    const layerIdMap = {}; // xmlLayerId (int) → jsLayerId (string)
+    const xmlLayerEls = [...doc.querySelectorAll('visualLayout > layer')]
+      .sort((a, b) => gi(a, 'ordinal') - gi(b, 'ordinal'));
+
+    const addKonvaLayer = (def) => {
+      const kl = new Konva.Layer({ visible: def.visible, opacity: def.opacity });
+      kl.clip({ x: RULER_W, y: RULER_H, width: W - RULER_W, height: H - RULER_H });
+      const wg = new Konva.Group({ x: tx, y: ty, scaleX: ts, scaleY: ts });
+      kl.add(wg);
+      def.konvaLayer = kl; def.worldGroup = wg;
+      stage.add(kl);
+      kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
+    };
+
+    if (xmlLayerEls.length === 0) {
+      const def = { id: 'layer-' + Date.now(), name: 'Layer 1', visible: true, locked: false, opacity: 1.0, konvaLayer: null, worldGroup: null };
+      layers.push(def); addKonvaLayer(def); layerIdMap[0] = def.id;
+    } else {
+      xmlLayerEls.forEach((el, i) => {
+        const xmlId = gi(el, 'id');
+        const def = {
+          id: 'layer-' + Date.now() + '-' + i,
+          name: ga(el, 'name') || ('Layer ' + (xmlId + 1)),
+          visible: ga(el, 'visible') !== 'false',
+          locked: false, opacity: 1.0, konvaLayer: null, worldGroup: null,
+        };
+        layers.push(def); addKonvaLayer(def); layerIdMap[xmlId] = def.id;
+      });
+    }
+    activeLayerId = layers.find(l => l.id !== '__bg__')?.id ?? layers[0].id;
+    newLayerIndex = layers.filter(l => l.id !== '__bg__').length + 1;
+
+    const defaultLayerId = () => layerIdMap[0] ?? activeLayerId;
+
+    // ── Location types ─────────────────────────────────────────────
+    const ltNameToId = {};
+    let _ltSeq = 0;
+    doc.querySelectorAll('model > locationType').forEach(el => {
+      const lt = {
+        id: 'lt-' + Date.now() + '-' + (_ltSeq++),
+        name: ga(el, 'name') || ('LType-' + String(ltCounter).padStart(4, '0')),
+        supportedVehicleOperations: [...el.querySelectorAll('allowedOperation')].map(o => ga(o, 'name')),
+        supportedPeripheralOperations: [...el.querySelectorAll('allowedPeripheralOperation')].map(o => ga(o, 'name')),
+        symbol: ga(el.querySelector('locationTypeLayout'), 'locationRepresentation') || 'NONE',
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+      };
+      locationTypes.push(lt); ltNameToId[lt.name] = lt.id; ltCounter++;
+    });
+
+    // ── Points ─────────────────────────────────────────────────────
+    const pointNameToId = {};
+    let _ptSeq = 0;
+    doc.querySelectorAll('model > point').forEach(el => {
+      const layoutEl = el.querySelector('pointLayout');
+      const xmlLid = gi(layoutEl, 'layerId', 0);
+      const bb = el.querySelector('maxVehicleBoundingBox');
+      const angleStr = ga(el, 'vehicleOrientationAngle');
+      const p = {
+        id: 'pt-' + Date.now() + '-' + (_ptSeq++),
+        name: ga(el, 'name') || ('Point-' + String(pointCounter).padStart(4, '0')),
+        x: unX(gf(el, 'positionX')),
+        y: unY(gf(el, 'positionY')),
+        layerId: layerIdMap[xmlLid] ?? defaultLayerId(),
+        konvaGroup: null,
+        angle: (angleStr === 'NaN' || angleStr === '') ? NaN : parseFloat(angleStr),
+        type: ga(el, 'type') || 'HALT_POSITION',
+        envelopes: [...el.querySelectorAll('vehicleEnvelope')].map(env => ({
+          key: ga(env, 'key'),
+          coords: [...env.querySelectorAll('vertex')].map(v => ({ x: unX(gf(v, 'x')), y: unY(gf(v, 'y')) })),
+        })),
+        vehicleBoundingBox: {
+          length: gi(bb, 'length', 1000), width: gi(bb, 'width', 1000), height: gi(bb, 'height', 1000),
+          refOffsetX: gi(bb, 'referenceOffsetX', 0), refOffsetY: gi(bb, 'referenceOffsetY', 0),
+        },
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+        labelXOffset: gi(layoutEl, 'labelOffsetX', -10),
+        labelYOffset: gi(layoutEl, 'labelOffsetY', -20),
+        labelOrientationAngle: NaN,
+      };
+      points.push(p); pointNameToId[p.name] = p.id; pointCounter++;
+    });
+
+    // ── Paths ──────────────────────────────────────────────────────
+    const pathNameToId = {};
+    let _paSeq = 0;
+    doc.querySelectorAll('model > path').forEach(el => {
+      const layoutEl = el.querySelector('pathLayout');
+      const xmlLid = gi(layoutEl, 'layerId', 0);
+      const srcId = pointNameToId[ga(el, 'sourcePoint')];
+      const dstId = pointNameToId[ga(el, 'destinationPoint')];
+      if (!srcId || !dstId) return;
+      const sp = points.find(p => p.id === srcId);
+      const ep = points.find(p => p.id === dstId);
+      const xmlType = ga(layoutEl, 'connectionType') || 'DIRECT';
+      const ctrlEls = layoutEl ? [...layoutEl.querySelectorAll('controlPoint')] : [];
+
+      let connectionType = 'DIRECT', controlPoints = [];
+      if (xmlType === 'BEZIER' && ctrlEls.length === 2 && sp && ep) {
+        connectionType = 'BEZIER';
+        controlPoints = [
+          { x: cpX(gf(ctrlEls[0], 'x')), y: cpY(gf(ctrlEls[0], 'y')) },
+          { x: cpX(gf(ctrlEls[1], 'x')), y: cpY(gf(ctrlEls[1], 'y')) },
+        ];
+      } else if (xmlType === 'POLYPATH' && ctrlEls.length > 0 && sp) {
+        connectionType = 'POLYLINE';
+        controlPoints = ctrlEls.map(c => ({
+          x: cpX(gf(c, 'x')),
+          y: cpY(gf(c, 'y')),
+        }));
+      }
+
+      const pa = {
+        id: 'path-' + Date.now() + '-' + (_paSeq++),
+        name: ga(el, 'name') || (sp?.name + ' --- ' + ep?.name),
+        startPointId: srcId, endPointId: dstId,
+        layerId: layerIdMap[xmlLid] ?? defaultLayerId(),
+        length: gf(el, 'length') / COORD_SCALE,
+        maxVelocity: gf(el, 'maxVelocity') / 1000,
+        maxReverseVelocity: gf(el, 'maxReverseVelocity') / 1000,
+        connectionType, controlPoints,
+        locked: ga(el, 'locked') === 'true',
+        peripheralOperations: [...el.querySelectorAll('peripheralOperation')].map(o => ({
+          location: ga(o, 'locationName'), operation: ga(o, 'name'),
+          trigger: ga(o, 'executionTrigger'), completionRequired: ga(o, 'completionRequired') === 'true',
+        })),
+        envelopes: [...el.querySelectorAll('vehicleEnvelope')].map(env => ({
+          key: ga(env, 'key'),
+          coords: [...env.querySelectorAll('vertex')].map(v => ({ x: unX(gf(v, 'x')), y: unY(gf(v, 'y')) })),
+        })),
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+        konvaGroup: null,
+      };
+      pathList.push(pa); pathNameToId[pa.name] = pa.id;
+    });
+
+    // ── Vehicles ───────────────────────────────────────────────────
+    let _vSeq = 0;
+    doc.querySelectorAll('model > vehicle').forEach(el => {
+      const bb = el.querySelector('boundingBox');
+      const layout = el.querySelector('vehicleLayout');
+      vehicles.push({
+        id: 'veh-' + Date.now() + '-' + (_vSeq++),
+        name: ga(el, 'name') || ('Vehicle-' + String(vehicleCounter).padStart(4, '0')),
+        boundingBoxLength: gi(bb, 'length', 1000), boundingBoxWidth: gi(bb, 'width', 1000), boundingBoxHeight: gi(bb, 'height', 1000),
+        boundingBoxOffsetX: gi(bb, 'referenceOffsetX', 0), boundingBoxOffsetY: gi(bb, 'referenceOffsetY', 0),
+        routeColor: ga(layout, 'color') || '#ff0000',
+        maxVelocity: gf(el, 'maxVelocity', 1000), maxReverseVelocity: gf(el, 'maxReverseVelocity', 1000),
+        energyCritical: gi(el, 'energyLevelCritical', 30), energyFullyRecharged: gi(el, 'energyLevelFullyRecharged', 90),
+        energyDegraded: gi(el, 'energyLevelGood', 40), energySufficientlyRecharged: gi(el, 'energyLevelSufficientlyRecharged', 95),
+        currentEnergyLevel: NaN, loaded: false, state: 'UNKNOWN', processingState: 'IDLE',
+        integrationLevel: ga(el, 'integrationLevel') || 'TO_BE_RESPECTED', paused: false,
+        currentPoint: '', exactPosition: 'null', vehicleOrientation: NaN,
+        envelopeKey: ga(el, 'envelopeKey') || '',
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+        currentTransportOrder: '', currentOrderSequence: '', acceptableOrderTypes: '', allocatedResources: '', claimedResources: '',
+      });
+      vehicleCounter++;
+    });
+
+    // ── Locations + Links ──────────────────────────────────────────
+    const locNameToId = {};
+    let _locSeq = 0, _lkSeq = 0;
+    doc.querySelectorAll('model > location').forEach(el => {
+      const layoutEl = el.querySelector('locationLayout');
+      const xmlLid = gi(layoutEl, 'layerId', 0);
+      const jsLayerId = layerIdMap[xmlLid] ?? defaultLayerId();
+      const loc = {
+        id: 'loc-' + Date.now() + '-' + (_locSeq++),
+        name: ga(el, 'name') || ('Location-' + String(locCounter).padStart(4, '0')),
+        x: unX(gf(el, 'positionX')), y: unY(gf(el, 'positionY')),
+        layerId: jsLayerId, konvaGroup: null,
+        type: ltNameToId[ga(el, 'type')] ?? null,
+        locked: ga(el, 'locked') === 'true',
+        symbol: ga(layoutEl, 'locationRepresentation') || 'DEFAULT',
+        labelXOffset: gi(layoutEl, 'labelOffsetX', -10), labelYOffset: gi(layoutEl, 'labelOffsetY', -20),
+        labelOrientationAngle: NaN, reservationToken: '', peripheralState: '', processingState: '', peripheralJob: '',
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+      };
+      locations.push(loc); locNameToId[loc.name] = loc.id; locCounter++;
+
+      el.querySelectorAll('link').forEach(linkEl => {
+        const ptId = pointNameToId[ga(linkEl, 'point')];
+        if (!ptId) return;
+        links.push({
+          id: 'link-' + Date.now() + '-' + (_lkSeq++),
+          name: ga(linkEl, 'point') + ' --- ' + loc.name,
+          pointId: ptId, locationId: loc.id, layerId: jsLayerId,
+          actions: [], konvaGroup: null,
+        });
+      });
+    });
+
+    // ── Blocks ─────────────────────────────────────────────────────
+    let _blkSeq = 0;
+    doc.querySelectorAll('model > block').forEach(el => {
+      const blkLayout = el.querySelector('blockLayout');
+      const memberNames = [...el.querySelectorAll('member')].map(m => ga(m, 'name'));
+      blocks.push({
+        id: 'blk-' + Date.now() + '-' + (_blkSeq++),
+        name: ga(el, 'name') || ('Block-' + String(blockCounter).padStart(4, '0')),
+        color: ga(blkLayout, 'color') || '#ff0000',
+        type: ga(el, 'type') || 'SINGLE_VEHICLE_ONLY',
+        members: memberNames.map(n => pointNameToId[n] ?? pathNameToId[n] ?? locNameToId[n]).filter(Boolean),
+        miscProperties: [...el.querySelectorAll(':scope > property')].map(p => ({ key: ga(p, 'name'), value: ga(p, 'value') })),
+      });
+      blockCounter++;
+    });
+
+    // ── Draw ───────────────────────────────────────────────────────
+    points.forEach(p => drawPoint(p));
+    pathList.forEach(pa => drawPath(pa));
+    locations.forEach(loc => drawLocation(loc));
+    links.forEach(lk => drawLink(lk));
+
+    renderLayersUI();
+    renderComponentsTree();
+    updateCounts(points.length, pathList.length, locations.length);
+    redraw();
+  }
+
+  function promptLoadModel() {
+    const input = document.createElement('input');
+    input.type = 'file'; input.accept = '.xml,application/xml,text/xml';
+    input.addEventListener('change', () => {
+      const file = input.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          loadModelXml(ev.target.result);
+        } catch (err) {
+          alert('Failed to load model: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+    input.click();
+  }
+
+  function promptNewModel() {
+    if (!confirm('Create a new model? Unsaved changes will be lost.')) return;
+    pathStartId = null;
+    clearPathPreview();
+    selectedPointId = null; selectedPathId = null; selectedLocationId = null;
+    selectedLinkId  = null; selectedLtId   = null; selectedBlockId    = null;
+    selectedVehicleId = null; multiSelection = [];
+
+    const userLayers = layers.filter(l => l.id !== '__bg__');
+    userLayers.forEach(l => l.konvaLayer.destroy());
+    const bgEntry = layers.find(l => l.id === '__bg__');
+    layers.length = 0;
+    if (bgEntry) layers.push(bgEntry);
+
+    points.length = 0; pathList.length = 0; locations.length = 0;
+    links.length = 0; blocks.length = 0; vehicles.length = 0; locationTypes.length = 0;
+    pointCounter = 1; ltCounter = 1; locCounter = 1; blockCounter = 1; vehicleCounter = 1;
+    undoStack.length = 0; redoStack.length = 0; updateUndoRedoButtons();
+
+    const id = 'layer-' + Date.now();
+    const def = { id, name: 'Layer 1', visible: true, locked: false, opacity: 1.0, konvaLayer: null, worldGroup: null };
+    layers.push(def);
+    const kl = new Konva.Layer({ visible: true, opacity: 1.0 });
+    kl.clip({ x: RULER_W, y: RULER_H, width: W - RULER_W, height: H - RULER_H });
+    const wg = new Konva.Group({ x: tx, y: ty, scaleX: ts, scaleY: ts });
+    kl.add(wg); def.konvaLayer = kl; def.worldGroup = wg;
+    stage.add(kl);
+    kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
+    activeLayerId = id;
+    newLayerIndex = 2;
+
+    renderLayersUI();
+    renderComponentsTree();
+    updateCounts(0, 0, 0);
+    redraw();
+  }
+
+  // ── File menu dropdown ────────────────────────────────────────
   const fileMenuEl     = document.getElementById('menu-file');
   const fileDropdownEl = fileMenuEl?.querySelector('.me-menu__dropdown');
   fileMenuEl?.querySelector('.me-menu__trigger').addEventListener('click', e => {
@@ -4396,6 +4949,33 @@ const RULER_W = 40;
     fileDropdownEl.classList.toggle('is-open');
   });
   document.addEventListener('click', () => fileDropdownEl?.classList.remove('is-open'));
+
+  function closeFileMenu() { fileDropdownEl?.classList.remove('is-open'); }
+
+  document.getElementById('file-new')?.addEventListener('click', () => {
+    closeFileMenu(); promptNewModel();
+  });
+  document.getElementById('file-load')?.addEventListener('click', () => {
+    closeFileMenu(); promptLoadModel();
+  });
+  document.getElementById('file-save')?.addEventListener('click', () => {
+    closeFileMenu(); promptSaveModel('Plant-Model');
+  });
+  document.getElementById('file-save-as')?.addEventListener('click', () => {
+    closeFileMenu(); promptSaveModel('Plant-Model');
+  });
+
+  window.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
+      e.preventDefault(); promptNewModel();
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'o') {
+      e.preventDefault(); promptLoadModel();
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault(); promptSaveModel('Plant-Model');
+    }
+  }, true);
 
   // ── About modal ──────────────────────────────────────────────
   const aboutModal = document.getElementById('about-modal');
