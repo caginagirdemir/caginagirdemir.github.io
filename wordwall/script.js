@@ -217,17 +217,16 @@
   // ============================================================
   // Page: TYPE THE ANSWER
   // ============================================================
-  var typeState = null;
+  var typeState     = null;
+  var activeTypeDeck = null;
 
   function initType() {
-    loadDeck().then(function (result) {
-      startType();
-    });
+    $("backToTypeCategories").addEventListener("click", function () { showTypeScreen("categories"); });
+    $("backToTypeDecks").addEventListener("click",      function () { showTypeScreen("decks"); });
 
     $("typeInput").addEventListener("input", function () {
       $("typeCheckBtn").disabled = !$("typeInput").value.trim();
     });
-
     $("typeInput").addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -235,15 +234,81 @@
         else typeNext();
       }
     });
-
     $("typeCheckBtn").addEventListener("click", typeCheck);
-    $("typeNextBtn").addEventListener("click", typeNext);
-    $("typeHintBtn").addEventListener("click", typeToggleHint);
+    $("typeNextBtn").addEventListener("click",  typeNext);
+    $("typeHintBtn").addEventListener("click",  typeToggleHint);
+
+    fetch("libs/type/index.json")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var groups = {};
+        data.decks.forEach(function (d) {
+          if (!groups[d.category]) groups[d.category] = [];
+          groups[d.category].push(d);
+        });
+        renderTypeCategories(groups);
+        showTypeScreen("categories");
+      })
+      .catch(function (err) { console.error("Failed to load type index:", err); });
   }
 
-  function startType() {
+  function showTypeScreen(name) {
+    $("screen-type-categories").style.display = name === "categories" ? "" : "none";
+    $("screen-type-decks").style.display      = name === "decks"      ? "" : "none";
+    $("screen-type-session").style.display    = name === "session"    ? "" : "none";
+    window.scrollTo(0, 0);
+  }
+
+  function renderTypeCategories(groups) {
+    var grid = $("typeCategoryGrid");
+    grid.innerHTML = "";
+    Object.keys(groups).forEach(function (cat, i) {
+      var list = groups[cat];
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "mode-card";
+      btn.innerHTML =
+        '<div class="num">0' + (i + 1) + ' / ' + escapeHtml(cat.toLowerCase()) + '</div>' +
+        '<h3>' + escapeHtml(cat) + '</h3>' +
+        '<p>' + list.length + ' deck' + (list.length !== 1 ? 's' : '') + ' available</p>' +
+        '<div class="go">Browse ' + SVG_ARROW + '</div>';
+      btn.addEventListener("click", function () {
+        $("typeCategoryEyebrow").textContent = "Category \xb7 " + cat;
+        renderTypeDeckList(list);
+        showTypeScreen("decks");
+      });
+      grid.appendChild(btn);
+    });
+  }
+
+  function renderTypeDeckList(decks) {
+    var grid = $("typeDeckGrid");
+    grid.innerHTML = "";
+    decks.forEach(function (meta) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "mode-card";
+      btn.innerHTML =
+        '<div class="num">' + (meta.itemCount || 0) + ' words</div>' +
+        '<h3>' + escapeHtml(meta.title) + '</h3>' +
+        '<div class="go">Start ' + SVG_ARROW + '</div>';
+      btn.addEventListener("click", function () {
+        fetch("libs/type/" + meta.file)
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            activeTypeDeck = normalizeDeck(data);
+            showTypeScreen("session");
+            startTypeSession();
+          })
+          .catch(function (err) { console.error("Failed to load deck:", err); });
+      });
+      grid.appendChild(btn);
+    });
+  }
+
+  function startTypeSession() {
     typeState = {
-      order:    shuffle(deck.items.map(function (_, i) { return i; })),
+      order:    shuffle(activeTypeDeck.items.map(function (_, i) { return i; })),
       i:        0,
       score:    0,
       status:   "idle",
@@ -258,7 +323,7 @@
     var s = typeState;
     var card = $("typeCard");
     var input = $("typeInput");
-    var current = deck.items[s.order[s.i]];
+    var current = activeTypeDeck.items[s.order[s.i]];
 
     $("typeI").textContent     = pad2(s.i + 1);
     $("typeN").textContent     = pad2(s.order.length);
@@ -287,7 +352,7 @@
     var guess = normalize(input.value);
     if (!guess) return;
 
-    var current = deck.items[s.order[s.i]];
+    var current = activeTypeDeck.items[s.order[s.i]];
     var candidates = [current.answer].concat(current.aliases || []).map(normalize);
     var ok = candidates.indexOf(guess) !== -1;
 
@@ -321,7 +386,7 @@
     if (s.i + 1 >= s.order.length) {
       s.done = true;
       $("typeProgress").style.width = "100%";
-      showToast(s.score, s.order.length, startType);
+      showToast(s.score, s.order.length, startTypeSession);
       return;
     }
     s.i += 1;
@@ -334,7 +399,7 @@
     s.showHint = !s.showHint;
     $("typeHintBtn").textContent = s.showHint ? "hide hint" : "show hint";
     if (s.showHint) {
-      var current = deck.items[s.order[s.i]];
+      var current = activeTypeDeck.items[s.order[s.i]];
       var mask = current.answer.replace(/[^ ]/g, "•");
       $("typeReveal").innerHTML = '<span class="hint-text">' + escapeHtml(mask) + '</span>';
     } else {
@@ -608,9 +673,9 @@
   // ============================================================
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
-    if ($("goType"))                  initHome();
-    else if ($("typeCard"))           initType();
-    else if ($("screen-categories"))  initQuiz();
+    if ($("goType"))                       initHome();
+    else if ($("screen-type-categories")) initType();
+    else if ($("screen-categories"))       initQuiz();
   });
 
 })();

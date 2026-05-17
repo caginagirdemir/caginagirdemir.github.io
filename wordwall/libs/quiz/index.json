@@ -41,6 +41,13 @@
       "title": "chapter5",
       "category": "omaSuomi",
       "questionCount": 82
+    },
+    {
+      "id": "chapter6",
+      "file": "omaSuomi/chapter6.json",
+      "title": "chapter6",
+      "category": "omaSuomi",
+      "questionCount": 70
     }
   ]
 }

@@ -19,19 +19,58 @@
       <div class="brand-name">wordwall <em>· study</em></div>
     </a>
     <div class="topbar-right">
-      <div id="deckPill"></div>
       <button id="themeBtn" class="theme-btn" type="button"></button>
     </div>
   </header>
 
-  <main>
+  <!-- ── Screen 1: Categories ───────────────────────────────── -->
+  <div id="screen-type-categories">
     <div class="container">
-
-      <div class="session-top">
+      <div style="margin-bottom:28px">
         <a class="back" href="index.html">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
           Home
         </a>
+      </div>
+
+      <section class="home-hero">
+        <div class="eyebrow">Type · step 1 of 2</div>
+        <h1 class="h1">Choose a <em>category.</em></h1>
+        <p class="sub">Select a topic to see available decks.</p>
+      </section>
+
+      <div id="typeCategoryGrid" class="mode-grid"></div>
+    </div>
+  </div>
+
+  <!-- ── Screen 2: Deck list ────────────────────────────────── -->
+  <div id="screen-type-decks" style="display:none">
+    <div class="container">
+      <div style="margin-bottom:28px">
+        <button id="backToTypeCategories" class="back" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Categories
+        </button>
+      </div>
+
+      <section class="home-hero">
+        <div id="typeCategoryEyebrow" class="eyebrow"></div>
+        <h1 class="h1">Choose a <em>deck.</em></h1>
+      </section>
+
+      <div id="typeDeckGrid" class="mode-grid"></div>
+    </div>
+  </div>
+
+  <!-- ── Screen 3: Active session ──────────────────────────── -->
+  <div id="screen-type-session" style="display:none">
+    <div class="container">
+
+      <div class="session-top">
+        <button id="backToTypeDecks" class="back" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back
+        </button>
         <div class="progress"><div id="typeProgress" class="progress-bar"></div></div>
         <div class="score-pill"><b id="typeScore">0</b> / <span id="typeTotal">0</span></div>
       </div>
@@ -70,8 +109,9 @@
       </div>
 
     </div>
-  </main>
+  </div>
 
+  <!-- ── Toast ──────────────────────────────────────────────── -->
   <div id="toastWrap" class="toast-wrap" style="display:none">
     <div class="toast">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>

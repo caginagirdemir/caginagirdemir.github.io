@@ -1,0 +1,84 @@
+{
+  "id": "chapter1",
+  "title": "Chapter 1",
+  "category": "omaSuomi",
+  "items": [
+    {
+      "word": "Signature",
+      "answer": "allekirjoitus"
+    },
+    {
+      "word": "Excuse me / Sorry",
+      "answer": "anteeksi"
+    },
+    {
+      "word": "To live / reside",
+      "answer": "asua"
+    },
+    {
+      "word": "What about...?",
+      "answer": "entä"
+    },
+    {
+      "word": "Fun / Nice",
+      "answer": "hauska"
+    },
+    {
+      "word": "Personal information",
+      "answer": "henkilötiedot"
+    },
+    {
+      "word": "To disturb / bother",
+      "answer": "häiritä"
+    },
+    {
+      "word": "Age",
+      "answer": "ikä"
+    },
+    {
+      "word": "Someone / Somebody",
+      "answer": "joku"
+    },
+    {
+      "word": "Nationality",
+      "answer": "kansalaisuus"
+    },
+    {
+      "word": "To write",
+      "answer": "kirjoittaa"
+    },
+    {
+      "word": "How",
+      "answer": "kuinka",
+      "aliases": ["miten"]
+    },
+    {
+      "word": "Unmarried / Single",
+      "answer": "naimaton"
+    },
+    {
+      "word": "To see",
+      "answer": "nähdä"
+    },
+    {
+      "word": "To say",
+      "answer": "sanoa"
+    },
+    {
+      "word": "To supplement / complete / fill in",
+      "answer": "täydentää"
+    },
+    {
+      "word": "Only",
+      "answer": "vain"
+    },
+    {
+      "word": "Old",
+      "answer": "vanha"
+    },
+    {
+      "word": "To understand",
+      "answer": "ymmärtää"
+    }
+  ]
+}
