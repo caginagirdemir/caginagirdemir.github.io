@@ -264,7 +264,7 @@ let activeTool = 'Select';
 
 // ─── Sidebar UI ─────────────────────────────────────────────────
 
-const DRAW_TOOLS = ['Select', 'Pan', 'Point', 'Path', 'Link', 'Location', 'Zone'];
+const DRAW_TOOLS = ['AreaSelect', 'Select', 'Pan', 'Point', 'Path', 'Link', 'Location', 'Zone'];
 
 document.querySelectorAll('.me-toolbar .me-tool').forEach(btn => {
   if (!DRAW_TOOLS.includes(btn.title)) return;
@@ -277,7 +277,7 @@ document.querySelectorAll('.me-toolbar .me-tool').forEach(btn => {
     // Cancel any pending path first-click when switching tools
     if (typeof cancelPathTool === 'function') cancelPathTool();
     const canvas = document.getElementById('konva-container');
-    if (canvas) canvas.style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'Location') ? 'crosshair' : 'grab';
+    if (canvas) canvas.style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'Location' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
   });
 });
 
@@ -1690,7 +1690,7 @@ const RULER_W = 40;
       stage.container().style.cursor = (activeTool === 'Path' || activeTool === 'Link') ? 'crosshair' : 'pointer';
     });
     g.on('mouseleave', () => {
-      stage.container().style.cursor = (activeTool === 'Location' || activeTool === 'Path' || activeTool === 'Link') ? 'crosshair' : 'grab';
+      stage.container().style.cursor = (activeTool === 'Location' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
     });
 
     loc.konvaGroup = g;
@@ -1954,7 +1954,7 @@ const RULER_W = 40;
     g.on('click', e => { e.cancelBubble = true; selectLink(lk.id); });
     g.on('mouseenter', () => { stage.container().style.cursor = 'pointer'; });
     g.on('mouseleave', () => {
-      stage.container().style.cursor = (activeTool === 'Path' || activeTool === 'Link') ? 'crosshair' : 'grab';
+      stage.container().style.cursor = (activeTool === 'Path' || activeTool === 'Link' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
     });
 
     lk.konvaGroup = g;
@@ -3133,7 +3133,7 @@ const RULER_W = 40;
       stage.container().style.cursor = (activeTool === 'Path' || activeTool === 'Link') ? 'crosshair' : 'pointer';
     });
     g.on('mouseleave', () => {
-      stage.container().style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link') ? 'crosshair' : 'grab';
+      stage.container().style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
     });
 
     p.konvaGroup = g;
@@ -3308,7 +3308,7 @@ const RULER_W = 40;
     g.on('click', e => { e.cancelBubble = true; selectPath(pa.id); });
     g.on('mouseenter', () => { stage.container().style.cursor = 'pointer'; });
     g.on('mouseleave', () => {
-      stage.container().style.cursor = activeTool === 'Point' ? 'crosshair' : 'grab';
+      stage.container().style.cursor = (activeTool === 'Point' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
     });
 
     pa.konvaGroup = g;
@@ -4122,6 +4122,15 @@ const RULER_W = 40;
     lbl00: new Konva.Text({ text: '0,0', fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: '#888' }),
   };
   Object.values(originShapes).forEach(s => overlayLayer.add(s));
+
+  // ── Area-select rubber-band rect (lives in screen space on overlayLayer) ──
+  const areaSelRect = new Konva.Rect({
+    stroke: '#2563eb', strokeWidth: 1.5,
+    fill: 'rgba(37,99,235,0.07)',
+    dash: [5, 3], visible: false, listening: false,
+  });
+  overlayLayer.add(areaSelRect);
+
   overlayLayer.clip({ x: RULER_W, y: RULER_H, width: W - RULER_W, height: H - RULER_H });
 
   function updateOriginMarker() {
@@ -4273,6 +4282,64 @@ const RULER_W = 40;
 
   redraw();
 
+  // ── Area-select state ─────────────────────────────────────────
+  let areaSelStart  = null; // screen-space {x,y} of drag start
+  let areaSelActive = false;
+
+  function finishAreaSelect() {
+    areaSelRect.visible(false);
+    overlayLayer.batchDraw();
+    const endPos = stage.getPointerPosition() || areaSelStart;
+    const start  = areaSelStart;
+    areaSelStart  = null;
+    areaSelActive = false;
+    if (!start) return;
+
+    const dx = endPos.x - start.x, dy = endPos.y - start.y;
+    // Small drag → treat as click → clear selection
+    if (Math.sqrt(dx*dx + dy*dy) < 5) {
+      clearMultiSelection();
+      deselectPoint(); deselectPath(); deselectLocationType();
+      deselectLocation(); deselectLink(); deselectBlock(); deselectVehicle();
+      renderPropertiesPanel(null);
+      return;
+    }
+
+    // World bounds (Y-up)
+    const sx1 = Math.min(start.x, endPos.x), sx2 = Math.max(start.x, endPos.x);
+    const sy1 = Math.min(start.y, endPos.y), sy2 = Math.max(start.y, endPos.y);
+    const wx1 = (sx1 - tx) / ts,  wx2 = (sx2 - tx) / ts;
+    const wy1 = -(sy2 - ty) / ts, wy2 = -(sy1 - ty) / ts; // Y-up: flip
+
+    clearMultiSelection();
+    deselectPoint(); deselectPath(); deselectLocationType();
+    deselectLocation(); deselectLink(); deselectBlock(); deselectVehicle();
+
+    const inside = (ex, ey) => ex >= wx1 && ex <= wx2 && ey >= wy1 && ey <= wy2;
+    points.forEach(p => {
+      if (!getLayer(p.layerId)?.locked && inside(p.x, p.y)) {
+        multiSelection.push({ id: p.id, kind: 'point' });
+        setPointMultiStyle(p);
+      }
+    });
+    locations.forEach(loc => {
+      if (!getLayer(loc.layerId)?.locked && !loc.locked && inside(loc.x, loc.y)) {
+        multiSelection.push({ id: loc.id, kind: 'location' });
+        setLocationMultiStyle(loc);
+      }
+    });
+
+    // If only 1 item, promote to single selection
+    if (multiSelection.length === 1) {
+      const { id, kind } = multiSelection[0];
+      clearMultiSelection();
+      if (kind === 'point') selectPoint(id);
+      else selectLocation(id);
+    } else {
+      renderPropertiesPanel(null);
+    }
+  }
+
   // ── Pan (manual tracking — rulers stay fixed) ─────────────────
   let panning    = false;
   let panMoved   = 0;   // accumulated pixel distance — distinguishes click from pan
@@ -4280,6 +4347,11 @@ const RULER_W = 40;
 
   stage.on('mousedown', e => {
     if (e.target !== stage) return; // shape drag — don't pan
+    if (activeTool === 'AreaSelect') {
+      areaSelStart  = stage.getPointerPosition();
+      areaSelActive = true;
+      return;
+    }
     panning  = true;
     panMoved = 0;
     lastPos  = stage.getPointerPosition();
@@ -4298,6 +4370,13 @@ const RULER_W = 40;
     // Path rubber-band preview
     if ((activeTool === 'Path' || activeTool === 'Link') && pathStartId) updatePathPreview(wx, wy);
 
+    // Area-select rubber-band
+    if (areaSelActive && areaSelStart) {
+      const rx = Math.min(areaSelStart.x, pos.x), ry = Math.min(areaSelStart.y, pos.y);
+      areaSelRect.setAttrs({ x: rx, y: ry, width: Math.abs(pos.x - areaSelStart.x), height: Math.abs(pos.y - areaSelStart.y), visible: true });
+      overlayLayer.batchDraw();
+    }
+
     if (!panning) return;
     const dx = pos.x - lastPos.x;
     const dy = pos.y - lastPos.y;
@@ -4311,15 +4390,18 @@ const RULER_W = 40;
   stage.on('mouseleave', () => {
     const u = UNITS[unitIdx].label;
     sb.coords.textContent = `x: —  y: — ${u}`;
+    if (areaSelActive) { finishAreaSelect(); }
   });
 
   window.addEventListener('mouseup', () => {
+    if (areaSelActive) { finishAreaSelect(); return; }
     panning = false;
-    container.style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'Location') ? 'crosshair' : 'grab';
+    container.style.cursor = (activeTool === 'Point' || activeTool === 'Path' || activeTool === 'Link' || activeTool === 'Location' || activeTool === 'AreaSelect') ? 'crosshair' : 'grab';
   });
 
   // ── Canvas click — place point or clear selection ─────────────
   stage.on('click', e => {
+    if (activeTool === 'AreaSelect') return; // handled by mouseup
     if (panMoved > 4) return; // was a pan drag, not a click
     if (e.target !== stage) return;
 
