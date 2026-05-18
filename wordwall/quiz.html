@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz · Word Study</title>
+  <title>Study · Word Study</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +34,7 @@
       </div>
 
       <section class="home-hero">
-        <div class="eyebrow">Quiz · step 1 of 2</div>
+        <div class="eyebrow">Study · step 1 of 3</div>
         <h1 class="h1">Choose a <em>category.</em></h1>
         <p class="sub">Select a topic to see available quizzes.</p>
       </section>
@@ -62,12 +62,69 @@
     </div>
   </div>
 
-  <!-- ── Screen 3: Active quiz ──────────────────────────────── -->
+  <!-- ── Screen 3: Mode selection ──────────────────────────── -->
+  <div id="screen-mode" style="display:none">
+    <div class="container">
+      <div style="margin-bottom:28px">
+        <button id="backModeToQuizzes" class="back" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Quizzes
+        </button>
+      </div>
+
+      <section class="home-hero">
+        <div id="modeEyebrow" class="eyebrow"></div>
+        <h1 class="h1">Choose a <em>mode.</em></h1>
+      </section>
+
+      <div class="mode-grid">
+        <button id="startMultipleChoice" class="mode-card" type="button">
+          <div class="num">01 / quiz</div>
+          <h3>Multiple choice</h3>
+          <p>Pick the correct answer from four options. Press 1–4 to answer quickly.</p>
+          <div class="mode-thumb">
+            <div class="thumb-quiz"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="go">Start
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+
+        <button id="startTypeAnswer" class="mode-card" type="button">
+          <div class="num">02 / type</div>
+          <h3>Type the answer</h3>
+          <p>You'll see the word, type its translation. Case and accents ignored.</p>
+          <div class="mode-thumb">
+            <div class="thumb-type">hol<span class="caret"></span></div>
+          </div>
+          <div class="go">Start
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+
+        <button id="startAnagram" class="mode-card" type="button">
+          <div class="num">03 / anagram</div>
+          <h3>Anagram</h3>
+          <p>Tap the scrambled letters in the right order to spell the translation.</p>
+          <div class="mode-thumb">
+            <div class="thumb-anagram">
+              <span>w</span><span>o</span><span>r</span><span>d</span>
+            </div>
+          </div>
+          <div class="go">Start
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Screen 4: Multiple-choice session ─────────────────── -->
   <div id="screen-quiz" style="display:none">
     <div class="container">
 
       <div class="session-top">
-        <button id="backToQuizzes" class="back" type="button">
+        <button id="backQuizToMode" class="back" type="button">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
           Back
         </button>
@@ -93,6 +150,100 @@
             Prev
           </button>
           <button id="quizNextBtn" class="btn" type="button" style="display:none; margin-left:auto">
+            Next
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Screen 5: Type-answer session ─────────────────────── -->
+  <div id="screen-type" style="display:none">
+    <div class="container">
+
+      <div class="session-top">
+        <button id="backTypeToMode" class="back" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back
+        </button>
+        <div class="progress"><div id="typeProgress" class="progress-bar"></div></div>
+        <div class="score-pill"><b id="typeScore">0</b> / <span id="typeTotal">0</span></div>
+      </div>
+
+      <div id="typeCard" class="card">
+        <div class="qhead">
+          <div class="qprompt">Translate</div>
+          <div class="qcount"><span id="typeI">01</span> / <span id="typeN">00</span></div>
+        </div>
+
+        <div id="typeWord" class="qtext"></div>
+
+        <input
+          id="typeInput"
+          class="answer-input"
+          type="text"
+          placeholder="type your answer…"
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+        />
+
+        <div id="typeReveal" class="reveal"></div>
+
+        <div class="row-actions">
+          <button id="typeHintBtn" class="hint-toggle" type="button">show hint</button>
+          <button id="typeCheckBtn" class="btn" type="button" disabled>
+            Check
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <button id="typeNextBtn" class="btn" type="button" style="display:none">
+            Next
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Screen 6: Anagram session ────────────────────────── -->
+  <div id="screen-anagram" style="display:none">
+    <div class="container">
+
+      <div class="session-top">
+        <button id="backAnagramToMode" class="back" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back
+        </button>
+        <div class="progress"><div id="anagramProgress" class="progress-bar"></div></div>
+        <div class="score-pill"><b id="anagramScore">0</b> / <span id="anagramTotal">0</span></div>
+      </div>
+
+      <div id="anagramCard" class="card">
+        <div class="qhead">
+          <div class="qprompt">Anagram</div>
+          <div class="qcount"><span id="anagramI">01</span> / <span id="anagramN">00</span></div>
+        </div>
+
+        <div id="anagramWord" class="qtext"></div>
+
+        <div class="anagram-zone-label">Your answer</div>
+        <div id="anagramAnswer" class="anagram-answer"></div>
+
+        <div class="anagram-zone-label">Letters</div>
+        <div id="anagramTiles" class="anagram-tiles"></div>
+
+        <div id="anagramReveal" class="reveal"></div>
+
+        <div class="row-actions">
+          <button id="anagramClearBtn" class="btn ghost" type="button">Clear</button>
+          <button id="anagramCheckBtn" class="btn" type="button" disabled style="margin-left:auto">
+            Check
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </button>
+          <button id="anagramNextBtn" class="btn" type="button" style="display:none">
             Next
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </button>

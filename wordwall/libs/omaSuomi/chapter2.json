@@ -1,0 +1,431 @@
+{
+  "id": "chapter2",
+  "title": "chapter2",
+  "category": "omaSuomi",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "To think",
+      "options": ["ajatella", "muistaa", "tietää", "katsoa"],
+      "answer": 0,
+      "explanation": "'Ajatella' means to think or consider."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "To start / begin",
+      "options": ["alkaa", "mennä", "tehdä", "vastata"],
+      "answer": 0,
+      "explanation": "'Alkaa' means to start or begin (e.g., Koulu alkaa)."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Customer / Client",
+      "options": ["asiakas", "kumppani", "yrittäjä", "ystävä"],
+      "answer": 0,
+      "explanation": "'Asiakas' means customer or client."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Nothing / No problem",
+      "options": ["ei mitään", "ole hyvä", "kiitos", "entä"],
+      "answer": 0,
+      "explanation": "'Ei mitään' literally means 'nothing', but it is commonly used as 'no problem' or 'you're welcome'."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Divorced",
+      "options": ["eronnut", "sinkku", "naimaton", "yhdessä"],
+      "answer": 0,
+      "explanation": "'Eronnut' means divorced."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "To want",
+      "options": ["haluta", "ajatella", "odottaa", "keksiä"],
+      "answer": 0,
+      "explanation": "'Haluta' means to want or desire."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Price list",
+      "options": ["hinnasto", "hinta", "paikka", "vuoro"],
+      "answer": 0,
+      "explanation": "'Hinnasto' is a price list."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Price",
+      "options": ["hinta", "hinnasto", "pala", "arvo"],
+      "answer": 0,
+      "explanation": "'Hinta' means price."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Cheerful / Happy",
+      "options": ["iloinen", "mukava", "kiva", "mielenkiintoinen"],
+      "answer": 0,
+      "explanation": "'Iloinen' means cheerful, glad, or happy."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Self / Onesmelf",
+      "options": ["itse", "muu", "joku", "yksin"],
+      "answer": 0,
+      "explanation": "'Itse' means self (e.g., minä itse = I myself)."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Cake",
+      "options": ["kakku", "suklaa", "keksiä", "pala"],
+      "answer": 0,
+      "explanation": "'Kakku' means cake."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Hairdresser",
+      "options": ["kampaaja", "yrittäjä", "asiakas", "äiti"],
+      "answer": 0,
+      "explanation": "'Kampaaja' means hairdresser."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To look / watch",
+      "options": ["katsoa", "nähdä", "ajatella", "muistaa"],
+      "answer": 0,
+      "explanation": "'Katsoa' means to look or watch (e.g., katsoa televisiota)."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "To invent / figure out",
+      "options": ["keksiä", "tehdä", "tietää", "vastata"],
+      "answer": 0,
+      "explanation": "'Keksiä' means to invent, discover, or figure out something."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Nice / Fun",
+      "options": ["kiva", "mukava", "iloinen", "mielenkiintoinen"],
+      "answer": 0,
+      "explanation": "'Kiva' is an informal word for nice, fun, or pleasant."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Place / Spot",
+      "options": ["paikka", "vuoro", "kerros", "hinta"],
+      "answer": 0,
+      "explanation": "'Paikka' means place, location, or spot."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "How many",
+      "options": ["kuinka monta", "kuinka", "miten", "noin"],
+      "answer": 0,
+      "explanation": "'Kuinka monta' is used to ask 'how many' for countable items."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Partner",
+      "options": ["kumppani", "sukulainen", "ystävä", "asiakas"],
+      "answer": 0,
+      "explanation": "'Kumppani' means partner (romantic or business)."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Month",
+      "options": ["kuukausi", "vuoro", "kerran", "paikka"],
+      "answer": 0,
+      "explanation": "'Kuukausi' means month."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Pet",
+      "options": ["lemmikki", "vauva", "poika", "sukulainen"],
+      "answer": 0,
+      "explanation": "'Lemmikki' means pet."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "To go",
+      "options": ["mennä", "alkaa", "tulla", "tehdä"],
+      "answer": 0,
+      "explanation": "'Mennä' means to go."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Interesting",
+      "options": ["mielenkiintoinen", "mukava", "kiva", "iloinen"],
+      "answer": 0,
+      "explanation": "'Mielenkiintoinen' translates to interesting."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "To remember",
+      "options": ["muistaa", "ajatella", "tietää", "katsoa"],
+      "answer": 0,
+      "explanation": "'Muistaa' means to remember."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Comfortable / Nice",
+      "options": ["mukava", "kiva", "iloinen", "mielenkiintoinen"],
+      "answer": 0,
+      "explanation": "'Mukava' means comfortable, cozy, or a pleasant/nice person."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Other / Another",
+      "options": ["muu", "itse", "joku", "taas"],
+      "answer": 0,
+      "explanation": "'Muu' means other, else, or another."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "About / Approximately",
+      "options": ["noin", "taas", "kerran", "yksin"],
+      "answer": 0,
+      "explanation": "'Noin' means about, around, or approximately."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "To wait",
+      "options": ["odottaa", "haluta", "keksiä", "vastata"],
+      "answer": 0,
+      "explanation": "'Odottaa' means to wait or expect."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Beer",
+      "options": ["olut", "vesi", "kakku", "suklaa"],
+      "answer": 0,
+      "explanation": "'Olut' means beer."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "To buy",
+      "options": ["ostaa", "tehdä", "mennä", "vastata"],
+      "answer": 0,
+      "explanation": "'Ostaa' means to buy."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Piece / Bit",
+      "options": ["pala", "kakku", "paikka", "hinta"],
+      "answer": 0,
+      "explanation": "'Pala' means a piece (e.g., pala kakkua = a piece of cake)."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Best",
+      "options": ["paras", "kiva", "mukava", "iloinen"],
+      "answer": 0,
+      "explanation": "'Paras' is the superlative form meaning best."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Boy / Son",
+      "options": ["poika", "vauva", "vanhemmat", "sukulainen"],
+      "answer": 0,
+      "explanation": "'Poika' means boy or son."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Single",
+      "options": ["sinkku", "eronnut", "yhdessä", "yksin"],
+      "answer": 0,
+      "explanation": "'Sinkku' is a common word for a single person."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Floor / Story (of a building)",
+      "options": ["kerros", "paikka", "vuoro", "hinnasto"],
+      "answer": 0,
+      "explanation": "Corrected from 'okerta' to 'kerros', which means floor or level."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Chocolate",
+      "options": ["suklaa", "kakku", "olut", "vesi"],
+      "answer": 0,
+      "explanation": "'Suklaa' means chocolate."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Relative",
+      "options": ["sukulainen", "vanhemmat", "kumppani", "ystävä"],
+      "answer": 0,
+      "explanation": "'Sukulainen' means relative or family member."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Again",
+      "options": ["taas", "kerran", "noin", "yhdessä"],
+      "answer": 0,
+      "explanation": "'Taas' means again."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Once",
+      "options": ["kerran", "taas", "noin", "yksin"],
+      "answer": 0,
+      "explanation": "'Kerran' means once or one time."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "To make / do",
+      "options": ["tehdä", "ostaa", "alkaa", "keksiä"],
+      "answer": 0,
+      "explanation": "'Tehdä' means to make or do."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "To know",
+      "options": ["tietää", "muistaa", "ajatella", "katsoa"],
+      "answer": 0,
+      "explanation": "'Tietää' means to know facts or information."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "At work",
+      "options": ["töissä", "paikalla", "yhdessä", "yksin"],
+      "answer": 0,
+      "explanation": "'Töissä' means at work (inessive form of työ)."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Photograph / Photo",
+      "options": ["valokuva", "kakku", "hinnasto", "paikka"],
+      "answer": 0,
+      "explanation": "'Valokuva' means photograph."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Parents",
+      "options": ["vanhemmat", "sukulainen", "kumppani", "äiti"],
+      "answer": 0,
+      "explanation": "'Vanhemmat' is the plural word for parents."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Left (direction)",
+      "options": ["vasen", "oikea", "suora", "noin"],
+      "answer": 0,
+      "explanation": "'Vasen' means left."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To answer",
+      "options": ["vastata", "keksiä", "odottaa", "tehdä"],
+      "answer": 0,
+      "explanation": "'Vastata' means to answer or reply."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Baby",
+      "options": ["vauva", "poika", "lemmikki", "äiti"],
+      "answer": 0,
+      "explanation": "'Vauva' means baby."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "Water",
+      "options": ["vesi", "olut", "suklaa", "kakku"],
+      "answer": 0,
+      "explanation": "'Vesi' means water."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Turn (e.g., my turn)",
+      "options": ["vuoro", "paikka", "kerros", "kuukausi"],
+      "answer": 0,
+      "explanation": "'Vuoro' means turn or shift (e.g., minun vuoroni = my turn)."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Together",
+      "options": ["yhdessä", "yksin", "taas", "muu"],
+      "answer": 0,
+      "explanation": "'Yhdessä' means together."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Alone",
+      "options": ["yksin", "yhdessä", "itse", "noin"],
+      "answer": 0,
+      "explanation": "'Yksin' means alone."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Entrepreneur",
+      "options": ["yrittäjä", "kampaaja", "asiakas", "kumppani"],
+      "answer": 0,
+      "explanation": "'Yrittäjä' means entrepreneur or business owner."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Friend",
+      "options": ["ystävä", "kumppani", "sukulainen", "äiti"],
+      "answer": 0,
+      "explanation": "'Ystävä' means friend."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Mother",
+      "options": ["äiti", "vanhemmat", "vauva", "poika"],
+      "answer": 0,
+      "explanation": "'Äiti' means mother."
+    }
+  ]
+}

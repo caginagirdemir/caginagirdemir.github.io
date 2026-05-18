@@ -1,0 +1,277 @@
+{
+  "id": "chapter2",
+  "title": "Chapter2",
+  "description": "Finnish core verbs part 2 with practical A2.2 level examples.",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "To play (children or pets)",
+      "options": ["leikkiä", "pelata", "soittaa", "nauraa"],
+      "answer": 0,
+      "explanation": "'Leikkiä' means to play with toys or engage in children's games.",
+      "example": "Lapset leikkivät mielellään ulkona puistossa naapureiden kanssa."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "To bake",
+      "options": ["leipoa", "keittää", "paistaa", "tehdä"],
+      "answer": 0,
+      "explanation": "'Leipoa' specifically means to bake bread, cakes, or pastries.",
+      "example": "Aion leipoa perinteisen suomalaisen pullan viikonloppuna ystäville."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "To read",
+      "options": ["lukea", "opiskella", "kirjoittaa", "katsoa"],
+      "answer": 0,
+      "explanation": "'Lukea' means to read books, articles, or to study for an exam.",
+      "example": "Minun täytyy lukea tämä vaikea artikkeli ennen huomista luentoa."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "To leave / depart",
+      "options": ["lähteä", "mennä", "tulla", "saapua"],
+      "answer": 0,
+      "explanation": "'Lähteä' means to leave or head out from a place.",
+      "example": "Bussi lähtee pysäkiltä tasan kymmenen minuutin kuluttua."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "To put on makeup",
+      "options": ["meikata", "pestä", "pukea", "kampaa"],
+      "answer": 0,
+      "explanation": "'Meikata' means to apply makeup to oneself.",
+      "example": "Hän meikkaa yleensä vain silloin, kun hän menee juhliin."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "To laugh",
+      "options": ["nauraa", "hymyillä", "itkeä", "jutella"],
+      "answer": 0,
+      "explanation": "'Nauraa' means to laugh.",
+      "example": "Me nauroimme paljon, koska suomalainen kaveri kertoi hyvän vitsin."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "To get up / rise",
+      "options": ["nousta", "herätä", "seisoa", "istua"],
+      "answer": 0,
+      "explanation": "'Nousta' means to get up from bed, stand up, or ascend.",
+      "example": "Minun täytyy nousta huomenna jo kello kuusi, koska juna lähtee aikaisin."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice-question",
+      "question": "To sleep",
+      "options": ["nukkua", "levätä", "maata", "herätä"],
+      "answer": 0,
+      "explanation": "'Nukkua' means to be asleep.",
+      "example": "Yritän nukkua vähintään kahdeksan tuntia joka yö, että jaksan opiskella."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "To take",
+      "options": ["ottaa", "viedä", "tuoda", "hakea"],
+      "answer": 0,
+      "explanation": "'Ottaa' means to take or accept something.",
+      "example": "Voitko ottaa tämän kirjan mukaan, kun menet yliopistolle?"
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "To serve / attend to a customer",
+      "options": ["palvella", "auttaa", "työskennellä", "myydä"],
+      "answer": 0,
+      "explanation": "'Palvella' means to serve or assist clients in a business context.",
+      "example": "Tämän kaupan myyjät palvelevat asiakkaita aina todella ystävällisesti."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "To play (games or sports)",
+      "options": ["pelata", "leikkiä", "soittaa", "juosta"],
+      "answer": 0,
+      "explanation": "'Pelata' is used for sports, board games, or video games.",
+      "example": "Me pelaamme usein jalkapalloa muiden opiskelijoiden kanssa lauantaisin."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "To burn / smoke / regular heat",
+      "options": ["polttaa", "paistaa", "keittää", "lämmittää"],
+      "answer": 0,
+      "explanation": "'Polttaa' can mean to burn, or contextually to smoke or sting.",
+      "example": "Ole varovainen, koska tuo kuuma kahvikuppi voi polttaa sormia."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To park",
+      "options": ["pysäköidä", "ajaa", "pysähtyä", "kääntyä"],
+      "answer": 0,
+      "explanation": "'Pysäköidä' means to park a vehicle.",
+      "example": "Mihin voin pysäköidä auton yliopiston kampuksella?"
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "To love",
+      "options": ["rakastaa", "tykätä", "sopia", "haluta"],
+      "answer": 0,
+      "explanation": "'Rakastaa' means to love someone or something deeply (takes partitive)."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "To fit / agree / suit",
+      "options": ["sopia", "sovittaa", "valita", "pukea"],
+      "answer": 0,
+      "explanation": "'Sopia' means to be suitable, fit, or to make an agreement/appointment.",
+      "example": "Sopiiko sinulle, jos tapaamme kahvilassa kello viideltä?"
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "To take a shower",
+      "options": ["käydä suihkussa", "pestä vaatteet", "uida", "saunoa"],
+      "answer": 0,
+      "explanation": "'Käydä suihkussa' is the standard phrase for taking a shower.",
+      "example": "Käyn aina suihkussa heti sen jälkeen, kun tulen kuntosalilta."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "To happen / take place",
+      "options": ["tapahtua", "toimia", "alkaa", "loppua"],
+      "answer": 0,
+      "explanation": "'Tapahtua' means to happen, occur, or take place.",
+      "example": "Mitä täällä tapahtuu? Miksi kadulla on niin paljon ihmisiä?"
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "To need",
+      "options": ["tarvita", "haluta", "ottaa", "käyttää"],
+      "answer": 0,
+      "explanation": "'Tarvita' means to need or require something.",
+      "example": "Tarvitsetko apua tämän vaikean matematiikan tehtävän kanssa?"
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "To come / become",
+      "options": ["tulla", "mennä", "lähteä", "saapua"],
+      "answer": 0,
+      "explanation": "'Tulla' means to come towards the speaker or become something.",
+      "example": "Voitko tulla käymään minun toimistossani luennon jälkeen?"
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "To smoke tobacco",
+      "options": ["tupakoida", "polttaa", "juoda", "syödä"],
+      "answer": 0,
+      "explanation": "'Tupakoida' specifically means the action of smoking cigarettes.",
+      "example": "Suomessa ei saa tupakoida sisällä julkisissa tiloissa."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "To book / reserve",
+      "options": ["varata", "ostaa", "tilata", "hakea"],
+      "answer": 0,
+      "explanation": "'Varata' means to reserve a table, book a room, or make an appointment.",
+      "example": "Minun täytyy varata aika lääkärille huomiseksi."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "To be able to / can",
+      "options": ["voida", "osata", "saada", "täytyä"],
+      "answer": 0,
+      "explanation": "'Voida' is a modal verb expressing possibility or permission (can / be able to).",
+      "example": "Me voimme opiskella yhdessä kirjastossa, jos sinulla on aikaa."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "To open / become open",
+      "options": ["aueta/avata", "sulkeutua", "sulkeutua", "alkaa"],
+      "answer": 0,
+      "explanation": "'Aueta' is the intransitive verb meaning something opens by itself (e.g., ovi aukeaa).",
+      "example": "Pankin ovet aukeavat aamulla kello yhdeksältä."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "To walk",
+      "options": ["kävellä", "juosta", "ajaa", "mennä"],
+      "answer": 0,
+      "explanation": "'Kävellä' means to walk on foot.",
+      "example": "Kävelen usein yliopistolle, koska matka ei ole kovin pitkä."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "To use",
+      "options": ["käyttää", "tarvita", "tehdä", "ottaa"],
+      "answer": 0,
+      "explanation": "'Käyttää' means to use a tool, method, or system.",
+      "example": "Osaatko käyttää tätä uutta tietokoneohjelmaa?"
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "To put / place / prepare food",
+      "options": ["laittaa", "ottaa", "viedä", "asettaa"],
+      "answer": 0,
+      "explanation": "'Laittaa' means to put something somewhere, or colloquially to make food (laittaa ruokaa).",
+      "example": "Voitko laittaa nämä puhtaat kupit kaappiin, kiitos?"
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "To change / transform (by itself)",
+      "options": ["muuttua", "muuttaa", "vaihtaa", "kasvaa"],
+      "answer": 0,
+      "explanation": "'Muuttua' is intransitive; it means something changes in characteristics.",
+      "example": "Sää muuttuu Suomessa nopeasti kevään aikana."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "To press / weigh",
+      "options": ["painaa", "pudottaa", "nostaa", "koskea"],
+      "answer": 0,
+      "explanation": "'Painaa' means to press a button, or to weigh a certain amount.",
+      "example": "Sinun täytyy painaa tätä vihreää painiketta, jos haluat käynnistää koneen."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "To pack",
+      "options": ["pakata", "avata", "sulkea", "kantaa"],
+      "answer": 0,
+      "explanation": "'Pakata' means to pack bags, suitcases, or boxes.",
+      "example": "Meidän täytyy pakata matkalaukut jo tänä iltana."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "To get / receive / be allowed to",
+      "options": ["saada", "antaa", "voida", "ottaa"],
+      "answer": 0,
+      "explanation": "'Saada' means to receive, get, or have permission to do something.",
+      "example": "Sain tänään hyvän arvosanan vaikeasta tentistä."
+    }
+  ]
+}

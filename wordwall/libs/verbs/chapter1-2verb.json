@@ -1,0 +1,323 @@
+{
+  "id": "chapter1",
+  "title": "Chapter1",
+  "description": "Finnish core verbs with practical A2.2 level examples.",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "To live / reside",
+      "options": ["asua", "elää", "maata", "istua"],
+      "answer": 0,
+      "explanation": "'Asua' means to live or dwell in a specific place.",
+      "example": "Minä asun nykyään kauniissa kerrostaloasunnossa Vantaalla."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "To disturb / bother",
+      "options": ["häiritä", "auttaa", "toimia", "soittaa"],
+      "answer": 0,
+      "explanation": "'Häiritä' means to disturb, interrupt, or bother someone.",
+      "example": "Anteeksi, että häiritsen, mutta minulla on pieni kysymys."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "To write",
+      "options": ["kirjoittaa", "tekstata", "sanoa", "kuulla"],
+      "answer": 0,
+      "explanation": "'Kirjoittaa' means to write documents, text, or letters.",
+      "example": "Opettaja pyysi meitä kirjoittamaan lyhyen tekstin kesälomasta."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "To see",
+      "options": ["nähdä", "katsoa", "näyttää", "tutkia"],
+      "answer": 0,
+      "explanation": "'Nähdä' means to see or perceive with eyes.",
+      "example": "Voimmeko nähdä huomenna kurssin jälkeen ja jutella?"
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "To be",
+      "options": ["olla", "asua", "tulla", "mennä"],
+      "answer": 0,
+      "explanation": "'Olla' is the highly versatile verb 'to be' in Finnish.",
+      "example": "Tämä suomen kielen kurssi on todella hyödyllinen minulle."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "To study",
+      "options": ["opiskella", "oppia", "lukea", "tehdä"],
+      "answer": 0,
+      "explanation": "'Opiskella' means to study a subject or in a school/university.",
+      "example": "Haluan opiskella tekniikkaa suomalaisessa yliopistossa."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "To speak / talk",
+      "options": ["puhua", "sanoa", "kertoa", "huutaa"],
+      "answer": 0,
+      "explanation": "'Puhua' means to speak a language or talk with someone.",
+      "example": "Yritän puhua suomea joka päivä työkavereiden kanssa."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "To say / state",
+      "options": ["sanoa", "puhua", "kertoa", "keskustella"],
+      "answer": 0,
+      "explanation": "'Sanoa' means to say or utter specific words.",
+      "example": "Hän sanoi minulle, että toimisto on tänään jo kiinni."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "To meet",
+      "options": ["tavata", "tutustua", "löytää", "hakea"],
+      "answer": 0,
+      "explanation": "'Tavata' means to meet up with someone.",
+      "example": "Oli mukava tavata sinut pitkästä aikaa kahvilassa!"
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "To get to know / introduce oneself",
+      "options": ["tutustua", "tavata", "tykätä", "oppia"],
+      "answer": 0,
+      "explanation": "'Tutustua' means to get to know someone or something (takes -lla/-llu or -an/-en).",
+      "example": "Kurssilla oli helppo tutustua uusiin ihmisiin eri maista."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "To supplement / complete",
+      "options": ["täydentää", "korjata", "muuttaa", "aloittaa"],
+      "answer": 0,
+      "explanation": "'Täydentää' means to complete or fill out a form or text.",
+      "example": "Muista täydentää hakemus huolellisesti ennen kuin lähetät sen."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "To understand",
+      "options": ["ymmärtää", "tietää", "luulla", "muistaa"],
+      "answer": 0,
+      "explanation": "'Ymmärtää' means to understand or comprehend meaning.",
+      "example": "Ymmärrän suomen kielen kielioppia jo aika hyvin."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To think / consider",
+      "options": ["ajatella", "muistaa", "tietää", "luulla"],
+      "answer": 0,
+      "explanation": "'Ajatella' means to think, ponder, or have an opinion.",
+      "example": "Aiotko ajatella tätä työtarjousta vielä viikonlopun yli?"
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "To start / begin",
+      "options": ["alkaa", "loppua", "mennä", "tehdä"],
+      "answer": 0,
+      "explanation": "'Alkaa' means to begin or start an action.",
+      "example": "Uusi lukukausi alkaa heti syyskuun alussa."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "To want / desire",
+      "options": ["haluta", "tarvita", "tykätä", "keksiä"],
+      "answer": 0,
+      "explanation": "'Haluta' means to want or wish for something.",
+      "example": "Haluan ostaa uuden tietokoneen opintoja varten."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "To look / watch",
+      "options": ["katsoa", "nähdä", "näyttää", "etsiä"],
+      "answer": 0,
+      "explanation": "'Katsoa' means to look at or watch something intentionally.",
+      "example": "Me tykkäämme katsoa suomalaisia sarjoja iltaisin televisiosta."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "To pay / cost",
+      "options": ["maksaa", "ostaa", "myydä", "säästää"],
+      "answer": 0,
+      "explanation": "'Maksaa' means to pay money for something, or to cost a certain amount.",
+      "example": "Paljonko tämä uusi takki maksaa tässä kaupassa?"
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "To go",
+      "options": ["mennä", "tulla", "ajaa", "kävellä"],
+      "answer": 0,
+      "explanation": "'Mennä' means to move towards a destination.",
+      "example": "Me voimme mennä yhdessä kirjastoon opiskelemaan iltapäivällä."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "To remember",
+      "options": ["muistaa", "unohtaa", "ajatella", "tietää"],
+      "answer": 0,
+      "explanation": "'Muistaa' means to keep in mind or recall information.",
+      "example": "Muistatko vielä sen ravintolan nimen, jossa kävimme?"
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "To buy",
+      "options": ["ostaa", "myydä", "maksaa", "vaihtaa"],
+      "answer": 0,
+      "explanation": "'Ostaa' means to purchase items or services.",
+      "example": "Minun täytyy ostaa ruokakaupasta maitoa vegaanista kakkua varten."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "To make / do",
+      "options": ["tehdä", "aloittaa", "työskennellä", "keksiä"],
+      "answer": 0,
+      "explanation": "'Tehdä' means to perform an action, build, or make something.",
+      "example": "Mitä sinä haluat tehdä viikonloppuna ystävien kanssa?"
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "To know",
+      "options": ["tietää", "ymmärtää", "luulla", "muistaa"],
+      "answer": 0,
+      "explanation": "'Tietää' means to have factual knowledge about something.",
+      "example": "Tiedätkö, mihin aikaan bussi numero viisi lähtee pysäkiltä?"
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "To answer / reply",
+      "options": ["vastata", "kysyä", "keksiä", "sanoa"],
+      "answer": 0,
+      "explanation": "'Vastata' means to answer a question, email, or telephone call.",
+      "example": "Yritän vastata tähän sähköpostiin mahdollisimman pian."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "To stand",
+      "options": ["seisoa", "istua", "maata", "kävellä"],
+      "answer": 0,
+      "explanation": "'Seisoa' means to stand vertically on one's feet.",
+      "example": "Minun täytyi seisoa bussissa koko matka, koska paikkoja ei ollut vapaana."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "To call / play an instrument",
+      "options": ["soittaa", "tekstata", "kuunnella", "laulaa"],
+      "answer": 0,
+      "explanation": "'Soittaa' can mean to call someone on the phone or to play a musical instrument.",
+      "example": "Voitko soittaa minulle takaisin, kun pääset kotiin töistä?"
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "To sing",
+      "options": ["laulaa", "soittaa", "kuunnella", "puhua"],
+      "answer": 0,
+      "explanation": "'Laulaa' means to sing songs or melodies.",
+      "example": "Lapset tykkäävät laulaa yhdessä iloisia lauluja koulussa."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "To ask",
+      "options": ["kysyä", "vastata", "sanoa", "kertoa"],
+      "answer": 0,
+      "explanation": "'Kysyä' means to ask a question or request information.",
+      "example": "Haluaisin kysyä opettajalta neuvoa tästä vaikeasta tehtävästä."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "To eat",
+      "options": ["syödä", "juoda", "ostaa", "tehdä"],
+      "answer": 0,
+      "explanation": "'Syödä' means to consume food.",
+      "example": "Me voimme syödä lounasta yhdessä yliopiston ravintolassa."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "To drink",
+      "options": ["juoda", "syödä", "keittää", "ottaa"],
+      "answer": 0,
+      "explanation": "'Juoda' means to consume liquids.",
+      "example": "Juon aamuisin aina ison kupillisen kuumaa kahvia kauramaidolla."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "To visit / go regularly",
+      "options": ["käydä", "mennä", "tulla", "matkustaa"],
+      "answer": 0,
+      "explanation": "'Käydä' means to visit a place or go somewhere and return (takes -ssa/-ssä).",
+      "example": "Käyn yleensä kuntosalilla kolme kertaa viikossa kurssin jälkeen."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "To take away / take to a destination",
+      "options": ["viedä", "tuoda", "ottaa", "hakea"],
+      "answer": 0,
+      "explanation": "'Viedä' means to take something or someone away to another place.",
+      "example": "Voisitko viedä nämä roskat ulos, kun lähdet kauppaan?"
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "To chat / talk informally",
+      "options": ["jutella", "puhua", "sanoa", "huutaa"],
+      "answer": 0,
+      "explanation": "'Jutella' means to chat, converse, or talk informally with someone.",
+      "example": "Oli todella mukavaa jutella ystävän kanssa pitkään puhelimessa."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "To wash",
+      "options": ["pestä", "siivota", "kuivata", "avata"],
+      "answer": 0,
+      "explanation": "'Pestä' means to wash clothes, dishes, hands, or oneself.",
+      "example": "Minun täytyy pestä pyykkiä tänään, koska puhtaat vaatteet ovat loppu."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "To clean up",
+      "options": ["siivota", "pestä", "korjata", "järjestää"],
+      "answer": 0,
+      "explanation": "'Siivota' means to clean up a room, apartment, or space.",
+      "example": "Me siivoamme koko asunnon aina perusteellisesti viikonloppuna."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "To open",
+      "options": ["avata", "sulkea", "aloittaa", "laittaa"],
+      "answer": 0,
+      "explanation": "'Avata' means to open doors, windows, packages, or files.",
+      "example": "Voitko avata ikkunan, koska täällä huoneessa on liian kuuma?"
+    }
+  ]
+}

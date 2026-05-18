@@ -2,42 +2,6 @@
   "use strict";
 
   // ============================================================
-  // Sample data (fallback when no URL is set or URL fails)
-  // ============================================================
-  var SAMPLE = {
-    title: "Spanish Basics",
-    source: "English → Spanish",
-    items: [
-      { word: "hello",     answer: "hola" },
-      { word: "goodbye",   answer: "adios" },
-      { word: "thank you", answer: "gracias" },
-      { word: "please",    answer: "por favor" },
-      { word: "yes",       answer: "si" },
-      { word: "no",        answer: "no" },
-      { word: "water",     answer: "agua" },
-      { word: "bread",     answer: "pan" },
-      { word: "house",     answer: "casa" },
-      { word: "book",      answer: "libro" },
-      { word: "friend",    answer: "amigo" },
-      { word: "love",      answer: "amor" },
-      { word: "morning",   answer: "manana" },
-      { word: "night",     answer: "noche" },
-      { word: "sun",       answer: "sol" },
-      { word: "moon",      answer: "luna" },
-      { word: "dog",       answer: "perro" },
-      { word: "cat",       answer: "gato" },
-      { word: "school",    answer: "escuela" },
-      { word: "teacher",   answer: "maestro" }
-    ]
-  };
-
-  // ============================================================
-  // State
-  // ============================================================
-  var deck = null;
-  var dataUrl = localStorage.getItem("wordstudy.url") || "";
-
-  // ============================================================
   // Utilities
   // ============================================================
   function $(id) { return document.getElementById(id); }
@@ -68,57 +32,13 @@
     });
   }
 
-  // ============================================================
-  // Data loading
-  // ============================================================
-  function normalizeDeck(raw) {
-    if (!raw) return null;
-    var items = null, title = null, source = null;
-    if (Array.isArray(raw)) {
-      items = raw;
-    } else if (typeof raw === "object") {
-      items = raw.items || raw.cards || raw.words || raw.data;
-      title  = raw.title  || raw.name;
-      source = raw.source || raw.subtitle;
-    }
-    if (!Array.isArray(items)) return null;
-
-    var out = [];
-    for (var i = 0; i < items.length; i++) {
-      var it = items[i];
-      if (!it || typeof it !== "object") continue;
-      var word   = it.word   != null ? it.word   : it.q != null ? it.q : it.question != null ? it.question : it.term  != null ? it.term  : it.front;
-      var answer = it.answer != null ? it.answer : it.a != null ? it.a : it.translation != null ? it.translation : it.definition != null ? it.definition : it.back;
-      if (word == null || answer == null) continue;
-      var aliases = Array.isArray(it.aliases) ? it.aliases : (it.alt ? [].concat(it.alt) : []);
-      out.push({ word: String(word), answer: String(answer), aliases: aliases.map(String) });
-    }
-    if (!out.length) return null;
-
-    return { title: title || "Word study", source: source || null, items: out };
+  function buildReveal(ok, correctText, q) {
+    var html = '<span class="' + (ok ? "ok" : "x") + '">' + (ok ? "Correct." : "Incorrect.") + '</span>';
+    if (!ok) html += " &nbsp;Answer: <b>" + escapeHtml(correctText) + "</b>";
+    if (q.explanation) html += '<p class="reveal-note">'    + escapeHtml(q.explanation) + "</p>";
+    if (q.example)     html += '<p class="reveal-example">' + escapeHtml(q.example)     + "</p>";
+    return html;
   }
-
-  async function loadDeck() {
-    if (dataUrl) {
-      try {
-        var res = await fetch(dataUrl, { cache: "no-store" });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        var json = await res.json();
-        var d = normalizeDeck(json);
-        if (!d) throw new Error("no items found");
-        deck = d;
-        return { usingSample: false };
-      } catch (err) {
-        console.warn("Custom URL failed, using sample:", err);
-        deck = normalizeDeck(SAMPLE);
-        return { usingSample: true, error: err.message };
-      }
-    }
-    deck = normalizeDeck(SAMPLE);
-    return { usingSample: true };
-  }
-
-
 
   // ============================================================
   // Toast
@@ -127,7 +47,7 @@
     var pct = Math.round((score / total) * 100);
     var verdict =
       pct >= 90 ? "Excellent." :
-      pct >= 70 ? "Nice work." :
+      pct >= 70 ? "Nice work."  :
       pct >= 50 ? "Keep going." :
                   "Try again.";
 
@@ -144,275 +64,8 @@
   }
 
   // ============================================================
-  // Page: HOME
+  // Theme
   // ============================================================
-  function reloadDeck() {
-    $("goType").disabled = true;
-    $("goQuiz").disabled = true;
-    setStatus("loading…");
-
-    loadDeck().then(function (result) {
-
-      var meta = $("deckMeta");
-     
-
-      if (result.error) {
-        setStatus("URL failed: " + result.error + " — using sample", "err");
-      } else if (result.usingSample) {
-        setStatus("fallback \xb7 embedded sample");
-      } else {
-        setStatus("loaded ✓", "ok");
-      }
-
-      $("goType").disabled = false;
-      $("goQuiz").disabled = false;
-    });
-  }
-
-  function initHome() {
-    $("urlInput").value = dataUrl;
-    showResetBtn(!!dataUrl);
-
-    // Navigation — wired once, never duplicated
-    $("goType").addEventListener("click", function () {
-      window.location.href = "type.html";
-    });
-    $("goQuiz").addEventListener("click", function () {
-      window.location.href = "quiz.html";
-    });
-
-    $("loadBtn").addEventListener("click", function () {
-      dataUrl = $("urlInput").value.trim();
-      localStorage.setItem("wordstudy.url", dataUrl);
-      showResetBtn(!!dataUrl);
-      reloadDeck();
-    });
-
-    $("resetBtn").addEventListener("click", function () {
-      dataUrl = "";
-      $("urlInput").value = "";
-      localStorage.removeItem("wordstudy.url");
-      showResetBtn(false);
-      reloadDeck();
-    });
-
-    $("urlInput").addEventListener("keydown", function (e) {
-      if (e.key === "Enter") { e.preventDefault(); $("loadBtn").click(); }
-    });
-
-    reloadDeck();
-  }
-
-  function setStatus(text, kind) {
-    var el = $("sourceStatus");
-    if (!el) return;
-    el.className = "source-status" + (kind ? " " + kind : "");
-    el.textContent = text || "";
-  }
-
-  function showResetBtn(show) {
-    $("resetBtn").style.display = show ? "" : "none";
-  }
-
-  // ============================================================
-  // Page: TYPE THE ANSWER
-  // ============================================================
-  var typeState     = null;
-  var activeTypeDeck = null;
-
-  function initType() {
-    $("backToTypeCategories").addEventListener("click", function () { showTypeScreen("categories"); });
-    $("backToTypeDecks").addEventListener("click",      function () { showTypeScreen("decks"); });
-
-    $("typeInput").addEventListener("input", function () {
-      $("typeCheckBtn").disabled = !$("typeInput").value.trim();
-    });
-    $("typeInput").addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        if (typeState && typeState.status === "idle") typeCheck();
-        else typeNext();
-      }
-    });
-    $("typeCheckBtn").addEventListener("click", typeCheck);
-    $("typeNextBtn").addEventListener("click",  typeNext);
-    $("typeHintBtn").addEventListener("click",  typeToggleHint);
-
-    fetch("libs/type/index.json")
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var groups = {};
-        data.decks.forEach(function (d) {
-          if (!groups[d.category]) groups[d.category] = [];
-          groups[d.category].push(d);
-        });
-        renderTypeCategories(groups);
-        showTypeScreen("categories");
-      })
-      .catch(function (err) { console.error("Failed to load type index:", err); });
-  }
-
-  function showTypeScreen(name) {
-    $("screen-type-categories").style.display = name === "categories" ? "" : "none";
-    $("screen-type-decks").style.display      = name === "decks"      ? "" : "none";
-    $("screen-type-session").style.display    = name === "session"    ? "" : "none";
-    window.scrollTo(0, 0);
-  }
-
-  function renderTypeCategories(groups) {
-    var grid = $("typeCategoryGrid");
-    grid.innerHTML = "";
-    Object.keys(groups).forEach(function (cat, i) {
-      var list = groups[cat];
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "mode-card";
-      btn.innerHTML =
-        '<div class="num">0' + (i + 1) + ' / ' + escapeHtml(cat.toLowerCase()) + '</div>' +
-        '<h3>' + escapeHtml(cat) + '</h3>' +
-        '<p>' + list.length + ' deck' + (list.length !== 1 ? 's' : '') + ' available</p>' +
-        '<div class="go">Browse ' + SVG_ARROW + '</div>';
-      btn.addEventListener("click", function () {
-        $("typeCategoryEyebrow").textContent = "Category \xb7 " + cat;
-        renderTypeDeckList(list);
-        showTypeScreen("decks");
-      });
-      grid.appendChild(btn);
-    });
-  }
-
-  function renderTypeDeckList(decks) {
-    var grid = $("typeDeckGrid");
-    grid.innerHTML = "";
-    decks.forEach(function (meta) {
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "mode-card";
-      btn.innerHTML =
-        '<div class="num">' + (meta.itemCount || 0) + ' words</div>' +
-        '<h3>' + escapeHtml(meta.title) + '</h3>' +
-        '<div class="go">Start ' + SVG_ARROW + '</div>';
-      btn.addEventListener("click", function () {
-        fetch("libs/type/" + meta.file)
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            activeTypeDeck = normalizeDeck(data);
-            showTypeScreen("session");
-            startTypeSession();
-          })
-          .catch(function (err) { console.error("Failed to load deck:", err); });
-      });
-      grid.appendChild(btn);
-    });
-  }
-
-  function startTypeSession() {
-    typeState = {
-      order:    shuffle(activeTypeDeck.items.map(function (_, i) { return i; })),
-      i:        0,
-      score:    0,
-      status:   "idle",
-      showHint: false,
-      done:     false
-    };
-    $("typeTotal").textContent = typeState.order.length;
-    renderType();
-  }
-
-  function renderType() {
-    var s = typeState;
-    var card = $("typeCard");
-    var input = $("typeInput");
-    var current = activeTypeDeck.items[s.order[s.i]];
-
-    $("typeI").textContent     = pad2(s.i + 1);
-    $("typeN").textContent     = pad2(s.order.length);
-    $("typeScore").textContent = s.score;
-    $("typeWord").textContent  = current.word;
-    $("typeProgress").style.width = ((s.done ? s.order.length : s.i) / s.order.length * 100) + "%";
-
-    input.value = "";
-    input.disabled = false;
-    input.className = "answer-input";
-    $("typeReveal").innerHTML = "";
-    $("typeCheckBtn").disabled = true;
-    $("typeCheckBtn").style.display = "";
-    $("typeNextBtn").style.display  = "none";
-    $("typeHintBtn").style.display  = "";
-    $("typeHintBtn").textContent    = "show hint";
-
-    card.classList.remove("flash-good", "flash-bad");
-    setTimeout(function () { input.focus(); }, 0);
-  }
-
-  function typeCheck() {
-    var s = typeState;
-    if (s.status !== "idle" || s.done) return;
-    var input = $("typeInput");
-    var guess = normalize(input.value);
-    if (!guess) return;
-
-    var current = activeTypeDeck.items[s.order[s.i]];
-    var candidates = [current.answer].concat(current.aliases || []).map(normalize);
-    var ok = candidates.indexOf(guess) !== -1;
-
-    var card = $("typeCard");
-    if (ok) {
-      s.status = "correct";
-      s.score += 1;
-      $("typeScore").textContent = s.score;
-      input.classList.add("is-correct");
-      $("typeReveal").innerHTML = '<span class="ok">Correct.</span> &nbsp;<b>' + escapeHtml(current.answer) + '</b>';
-      card.classList.remove("flash-bad");
-      card.classList.add("flash-good");
-    } else {
-      s.status = "wrong";
-      input.classList.add("is-wrong");
-      $("typeReveal").innerHTML = '<span class="x">Not quite.</span> &nbsp;Answer: <b>' + escapeHtml(current.answer) + '</b>';
-      card.classList.remove("flash-good");
-      card.classList.add("flash-bad");
-    }
-    input.disabled = true;
-    $("typeCheckBtn").style.display = "none";
-    $("typeHintBtn").style.display  = "none";
-    $("typeNextBtn").style.display  = "";
-    $("typeNextBtn").innerHTML = (s.i + 1 >= s.order.length ? "Finish" : "Next") +
-      ' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
-    $("typeNextBtn").focus();
-  }
-
-  function typeNext() {
-    var s = typeState;
-    if (s.i + 1 >= s.order.length) {
-      s.done = true;
-      $("typeProgress").style.width = "100%";
-      showToast(s.score, s.order.length, startTypeSession);
-      return;
-    }
-    s.i += 1;
-    s.status = "idle";
-    renderType();
-  }
-
-  function typeToggleHint() {
-    var s = typeState;
-    s.showHint = !s.showHint;
-    $("typeHintBtn").textContent = s.showHint ? "hide hint" : "show hint";
-    if (s.showHint) {
-      var current = activeTypeDeck.items[s.order[s.i]];
-      var mask = current.answer.replace(/[^ ]/g, "•");
-      $("typeReveal").innerHTML = '<span class="hint-text">' + escapeHtml(mask) + '</span>';
-    } else {
-      $("typeReveal").innerHTML = "";
-    }
-  }
-
-  // ============================================================
-  // Page: QUIZ (category → quiz → questions)
-  // ============================================================
-  var libQuizState = null;
-  var activeQuizData = null;
-
   var SVG_ARROW = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
   var SVG_MOON  = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
   var SVG_SUN   = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
@@ -421,7 +74,7 @@
     document.documentElement.dataset.theme = theme;
     document.querySelectorAll(".theme-btn").forEach(function (btn) {
       btn.innerHTML = theme === "dark" ? SVG_SUN : SVG_MOON;
-      btn.title = theme === "dark" ? "Switch to light" : "Switch to dark";
+      btn.title     = theme === "dark" ? "Switch to light" : "Switch to dark";
     });
   }
 
@@ -436,37 +89,89 @@
     });
   }
 
-  function showQuizScreen(name) {
-    $("screen-categories").style.display = name === "categories" ? "" : "none";
-    $("screen-quizzes").style.display    = name === "quizzes"    ? "" : "none";
-    $("screen-quiz").style.display       = name === "quiz"       ? "" : "none";
+  // ============================================================
+  // Page: STUDY  (category → quiz → mode → session)
+  // ============================================================
+  var libQuizState   = null;
+  var activeQuizData = null;
+  var typeState      = null;
+  var anagramState   = null;
+
+  var ALL_SCREENS = ["categories", "quizzes", "mode", "quiz", "type", "anagram"];
+
+  function showScreen(name) {
+    ALL_SCREENS.forEach(function (s) {
+      var el = $("screen-" + s);
+      if (el) el.style.display = s === name ? "" : "none";
+    });
     window.scrollTo(0, 0);
   }
 
   function initQuiz() {
-    $("backToCategories").addEventListener("click", function () { showQuizScreen("categories"); });
-    $("backToQuizzes").addEventListener("click", function () { showQuizScreen("quizzes"); });
+    // Navigation
+    $("backToCategories").addEventListener("click",  function () { showScreen("categories"); });
+    $("backModeToQuizzes").addEventListener("click", function () { showScreen("quizzes"); });
+    $("backQuizToMode").addEventListener("click",    function () { showScreen("mode"); });
+    $("backTypeToMode").addEventListener("click",     function () { showScreen("mode"); });
+    $("backAnagramToMode").addEventListener("click",  function () { showScreen("mode"); });
+
+    // Mode selection
+    $("startMultipleChoice").addEventListener("click", function () {
+      showScreen("quiz");
+      startLibQuiz(activeQuizData);
+    });
+    $("startTypeAnswer").addEventListener("click", function () {
+      showScreen("type");
+      startTypeSession();
+    });
+    $("startAnagram").addEventListener("click", function () {
+      showScreen("anagram");
+      startAnagramSession();
+    });
+
+    // Multiple-choice session buttons
     $("quizNextBtn").addEventListener("click", libQuizNext);
     $("quizPrevBtn").addEventListener("click", libQuizPrev);
 
+    // Type session buttons
+    $("typeInput").addEventListener("input", function () {
+      $("typeCheckBtn").disabled = !$("typeInput").value.trim();
+    });
+    $("typeInput").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (typeState && typeState.status === "idle") typeCheck();
+        else typeNext();
+      }
+    });
+    $("typeCheckBtn").addEventListener("click", typeCheck);
+    $("typeNextBtn").addEventListener("click",  typeNext);
+    $("typeHintBtn").addEventListener("click",  typeToggleHint);
+
+    // Anagram session buttons
+    $("anagramClearBtn").addEventListener("click",  anagramClear);
+    $("anagramCheckBtn").addEventListener("click",  anagramCheck);
+    $("anagramNextBtn").addEventListener("click",   anagramNext);
+
+    // Keyboard shortcuts (1–4) for multiple-choice session
     window.addEventListener("keydown", function (e) {
-      if ($("screen-quiz").style.display === "none") return;
+      var scr = $("screen-quiz");
+      if (!scr || scr.style.display === "none") return;
       if (!libQuizState || libQuizState.done) return;
       var s = libQuizState;
-
       if (s.viewing < s.i || s.answers[s.i] !== undefined) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); libQuizNext(); }
         return;
       }
-
       var n = parseInt(e.key, 10);
-      if (n >= 1 && n <= s.shuffledOptions.length) {
+      if (n >= 1 && n <= 4) {
         var btns = $("quizChoices").querySelectorAll(".choice");
         if (btns[n - 1] && !btns[n - 1].disabled) pickLibAnswer(n - 1, btns[n - 1]);
       }
     });
 
-    fetch("libs/quiz/index.json")
+    // Load quiz library
+    fetch("libs/index.json")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var groups = {};
@@ -475,11 +180,9 @@
           groups[q.category].push(q);
         });
         renderCategories(groups);
-        showQuizScreen("categories");
+        showScreen("categories");
       })
-      .catch(function (err) {
-        console.error("Failed to load quiz index:", err);
-      });
+      .catch(function (err) { console.error("Failed to load quiz index:", err); });
   }
 
   function renderCategories(groups) {
@@ -498,7 +201,7 @@
       btn.addEventListener("click", function () {
         $("categoryEyebrow").textContent = "Category \xb7 " + cat;
         renderQuizList(list);
-        showQuizScreen("quizzes");
+        showScreen("quizzes");
       });
       grid.appendChild(btn);
     });
@@ -506,28 +209,37 @@
 
   function renderQuizList(quizzes) {
     var grid = $("quizGrid");
-    grid.innerHTML = "";
-    quizzes.forEach(function (meta) {
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "mode-card";
-      btn.innerHTML =
-        '<div class="num">' + (meta.questionCount || 0) + ' questions</div>' +
-        '<h3>' + escapeHtml(meta.title) + '</h3>' +
-        '<div class="go">Start ' + SVG_ARROW + '</div>';
-      btn.addEventListener("click", function () {
-        fetch("libs/quiz/" + meta.file)
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            activeQuizData = data;
-            showQuizScreen("quiz");
-            startLibQuiz(data);
-          })
-          .catch(function (err) { console.error("Failed to load quiz:", err); });
+    grid.innerHTML = '<p style="color:var(--ink-3);font-size:14px;padding:8px 0">Loading…</p>';
+
+    Promise.all(quizzes.map(function (meta) {
+      return fetch("libs/" + meta.file)
+        .then(function (r) { return r.json(); })
+        .then(function (data) { return { meta: meta, data: data }; });
+    })).then(function (results) {
+      grid.innerHTML = "";
+      results.forEach(function (result) {
+        var count = result.data.questions ? result.data.questions.length : 0;
+        var btn   = document.createElement("button");
+        btn.type  = "button";
+        btn.className = "mode-card";
+        btn.innerHTML =
+          '<div class="num">' + count + " question" + (count !== 1 ? "s" : "") + "</div>" +
+          "<h3>" + escapeHtml(result.meta.title) + "</h3>" +
+          '<div class="go">Select ' + SVG_ARROW + "</div>";
+        btn.addEventListener("click", function () {
+          activeQuizData = result.data;
+          $("modeEyebrow").textContent = "Quiz \xb7 " + result.meta.title;
+          showScreen("mode");
+        });
+        grid.appendChild(btn);
       });
-      grid.appendChild(btn);
+    }).catch(function (err) {
+      console.error("Failed to load quizzes:", err);
+      grid.innerHTML = '<p style="color:var(--bad)">Failed to load quizzes.</p>';
     });
   }
+
+  // ── Multiple-choice session ───────────────────────────────
 
   function startLibQuiz(data) {
     libQuizState = {
@@ -557,10 +269,10 @@
   }
 
   function renderLibQuiz() {
-    var s   = libQuizState;
-    var pos = s.viewing;
-    var a   = s.answers[pos];
-    var q   = activeQuizData.questions[s.order[pos]];
+    var s    = libQuizState;
+    var pos  = s.viewing;
+    var a    = s.answers[pos];
+    var q    = activeQuizData.questions[s.order[pos]];
     var card = $("quizCard");
 
     $("quizI").textContent     = pad2(pos + 1);
@@ -592,18 +304,10 @@
       if (ok) card.classList.add("flash-good");
       else    card.classList.add("flash-bad");
 
-      if (q.explanation) {
-        $("quizReveal").innerHTML =
-          '<span class="' + (ok ? "ok" : "x") + '">' + (ok ? "Correct." : "Incorrect.") + '</span>' +
-          '  ' + escapeHtml(q.explanation);
-      } else {
-        $("quizReveal").innerHTML = ok
-          ? '<span class="ok">Correct.</span>'
-          : '<span class="x">Incorrect.</span> &nbsp;Answer: <b>' + escapeHtml(a.shuffledOptions[a.shuffledAnswer]) + '</b>';
-      }
+      $("quizReveal").innerHTML = buildReveal(ok, a.shuffledOptions[a.shuffledAnswer], q);
 
       var atEnd = pos === s.order.length - 1;
-      $("quizNextBtn").innerHTML = (atEnd ? "Finish" : "Next") + " " + SVG_ARROW;
+      $("quizNextBtn").innerHTML     = (atEnd ? "Finish" : "Next") + " " + SVG_ARROW;
       $("quizNextBtn").style.display = "";
       $("quizPrevBtn").style.display = pos > 0 ? "" : "none";
       $("quizNextBtn").focus();
@@ -628,9 +332,7 @@
     if (a.picked !== null || s.done) return;
 
     a.picked = idx;
-    if (idx === a.shuffledAnswer) {
-      s.score += 1;
-    }
+    if (idx === a.shuffledAnswer) s.score += 1;
     renderLibQuiz();
   }
 
@@ -668,14 +370,272 @@
     renderLibQuiz();
   }
 
+  // ── Type-answer session ───────────────────────────────────
+
+  function startTypeSession() {
+    typeState = {
+      order:    shuffle(activeQuizData.questions.map(function (_, i) { return i; })),
+      i:        0,
+      score:    0,
+      status:   "idle",
+      showHint: false,
+      done:     false
+    };
+    $("typeTotal").textContent = typeState.order.length;
+    renderTypeSession();
+  }
+
+  function renderTypeSession() {
+    var s     = typeState;
+    var input = $("typeInput");
+    var q     = activeQuizData.questions[s.order[s.i]];
+
+    $("typeI").textContent     = pad2(s.i + 1);
+    $("typeN").textContent     = pad2(s.order.length);
+    $("typeScore").textContent = s.score;
+    $("typeWord").textContent  = q.question;
+    $("typeProgress").style.width = ((s.done ? s.order.length : s.i) / s.order.length * 100) + "%";
+
+    input.value = "";
+    input.disabled = false;
+    input.className = "answer-input";
+    $("typeReveal").innerHTML    = "";
+    $("typeCheckBtn").disabled   = true;
+    $("typeCheckBtn").style.display = "";
+    $("typeNextBtn").style.display  = "none";
+    $("typeHintBtn").style.display  = "";
+    $("typeHintBtn").textContent    = "show hint";
+
+    $("typeCard").classList.remove("flash-good", "flash-bad");
+    setTimeout(function () { input.focus(); }, 0);
+  }
+
+  function typeCheck() {
+    var s = typeState;
+    if (s.status !== "idle" || s.done) return;
+    var input = $("typeInput");
+    var guess = normalize(input.value);
+    if (!guess) return;
+
+    var q           = activeQuizData.questions[s.order[s.i]];
+    var correctText = q.options[q.answer];
+    var ok          = normalize(correctText) === guess;
+    var card        = $("typeCard");
+
+    if (ok) {
+      s.status = "correct";
+      s.score += 1;
+      $("typeScore").textContent = s.score;
+      input.classList.add("is-correct");
+      card.classList.remove("flash-bad");
+      card.classList.add("flash-good");
+    } else {
+      s.status = "wrong";
+      input.classList.add("is-wrong");
+      card.classList.remove("flash-good");
+      card.classList.add("flash-bad");
+    }
+
+    $("typeReveal").innerHTML = buildReveal(ok, correctText, q);
+
+    input.disabled = true;
+    $("typeCheckBtn").style.display = "none";
+    $("typeHintBtn").style.display  = "none";
+    $("typeNextBtn").style.display  = "";
+    $("typeNextBtn").innerHTML = (s.i + 1 >= s.order.length ? "Finish" : "Next") +
+      ' <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
+    $("typeNextBtn").focus();
+  }
+
+  function typeNext() {
+    var s = typeState;
+    if (s.i + 1 >= s.order.length) {
+      s.done = true;
+      $("typeProgress").style.width = "100%";
+      showToast(s.score, s.order.length, startTypeSession);
+      return;
+    }
+    s.i += 1;
+    s.status = "idle";
+    renderTypeSession();
+  }
+
+  function typeToggleHint() {
+    var s = typeState;
+    s.showHint = !s.showHint;
+    $("typeHintBtn").textContent = s.showHint ? "hide hint" : "show hint";
+    if (s.showHint) {
+      var q    = activeQuizData.questions[s.order[s.i]];
+      var mask = q.options[q.answer].replace(/[^ ]/g, "•");
+      $("typeReveal").innerHTML = '<span class="hint-text">' + escapeHtml(mask) + '</span>';
+    } else {
+      $("typeReveal").innerHTML = "";
+    }
+  }
+
+  // ── Anagram session ──────────────────────────────────────
+
+  function startAnagramSession() {
+    anagramState = {
+      order: shuffle(activeQuizData.questions.map(function (_, i) { return i; })),
+      i:       0,
+      score:   0,
+      done:    false,
+      tiles:   [],
+      placed:  [],
+      checked: false,
+      correctText: ""
+    };
+    $("anagramTotal").textContent = anagramState.order.length;
+    renderAnagramSession();
+  }
+
+  function makeTiles(text) {
+    var tiles = [];
+    var id = 0;
+    for (var i = 0; i < text.length; i++) {
+      if (text[i] !== " ") tiles.push({ char: text[i], id: id++ });
+    }
+    return shuffle(tiles);
+  }
+
+  function renderAnagramSession() {
+    var s = anagramState;
+    var q = activeQuizData.questions[s.order[s.i]];
+    s.correctText = q.options[q.answer];
+    s.tiles   = makeTiles(s.correctText);
+    s.placed  = [];
+    s.checked = false;
+
+    $("anagramI").textContent     = pad2(s.i + 1);
+    $("anagramN").textContent     = pad2(s.order.length);
+    $("anagramScore").textContent = s.score;
+    $("anagramWord").textContent  = q.question;
+    $("anagramProgress").style.width = ((s.done ? s.order.length : s.i) / s.order.length * 100) + "%";
+    $("anagramReveal").innerHTML  = "";
+    $("anagramCheckBtn").disabled = true;
+    $("anagramCheckBtn").style.display = "";
+    $("anagramNextBtn").style.display  = "none";
+    $("anagramClearBtn").disabled = false;
+    $("anagramCard").classList.remove("flash-good", "flash-bad");
+    renderTiles();
+  }
+
+  function renderTiles() {
+    var s       = anagramState;
+    var usedSet = {};
+    s.placed.forEach(function (id) { usedSet[id] = true; });
+
+    // Pool
+    var pool = $("anagramTiles");
+    pool.innerHTML = "";
+    s.tiles.forEach(function (tile) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tile" + (usedSet[tile.id] ? " used" : "");
+      btn.textContent = tile.char;
+      btn.disabled = !!usedSet[tile.id] || s.checked;
+      if (!usedSet[tile.id] && !s.checked) {
+        btn.addEventListener("click", function () { anagramPlace(tile.id); });
+      }
+      pool.appendChild(btn);
+    });
+
+    // Answer area
+    var answer = $("anagramAnswer");
+    answer.innerHTML = "";
+    s.placed.forEach(function (tid) {
+      var tile = s.tiles.find(function (t) { return t.id === tid; });
+      var btn  = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = tile.char;
+      if (s.checked) {
+        var ok = s.placed.length === s.tiles.length &&
+                 normalize(s.placed.map(function (id) {
+                   return s.tiles.find(function (t) { return t.id === id; }).char;
+                 }).join("")) === normalize(s.correctText.replace(/ /g, ""));
+        btn.className = "tile " + (ok ? "correct" : "wrong");
+        btn.disabled  = true;
+      } else {
+        btn.className = "tile";
+        btn.addEventListener("click", function () { anagramRemove(tid); });
+      }
+      answer.appendChild(btn);
+    });
+
+    $("anagramCheckBtn").disabled = s.placed.length !== s.tiles.length;
+  }
+
+  function anagramPlace(id) {
+    var s = anagramState;
+    if (s.checked) return;
+    s.placed.push(id);
+    renderTiles();
+  }
+
+  function anagramRemove(id) {
+    var s = anagramState;
+    if (s.checked) return;
+    s.placed = s.placed.filter(function (i) { return i !== id; });
+    renderTiles();
+  }
+
+  function anagramClear() {
+    var s = anagramState;
+    if (s.checked) return;
+    s.placed = [];
+    renderTiles();
+  }
+
+  function anagramCheck() {
+    var s = anagramState;
+    if (s.placed.length !== s.tiles.length) return;
+    s.checked = true;
+
+    var built = s.placed.map(function (id) {
+      return s.tiles.find(function (t) { return t.id === id; }).char;
+    }).join("");
+    var ok = normalize(built) === normalize(s.correctText.replace(/ /g, ""));
+
+    var card = $("anagramCard");
+    if (ok) {
+      s.score += 1;
+      $("anagramScore").textContent = s.score;
+      card.classList.add("flash-good");
+    } else {
+      card.classList.add("flash-bad");
+    }
+
+    var q = activeQuizData.questions[s.order[s.i]];
+    $("anagramReveal").innerHTML = buildReveal(ok, s.correctText, q);
+
+    $("anagramClearBtn").disabled  = true;
+    $("anagramCheckBtn").style.display = "none";
+    $("anagramNextBtn").style.display  = "";
+    $("anagramNextBtn").innerHTML =
+      (s.i + 1 >= s.order.length ? "Finish" : "Next") + " " + SVG_ARROW;
+    $("anagramNextBtn").focus();
+    renderTiles();
+  }
+
+  function anagramNext() {
+    var s = anagramState;
+    if (s.i + 1 >= s.order.length) {
+      s.done = true;
+      $("anagramProgress").style.width = "100%";
+      showToast(s.score, s.order.length, startAnagramSession);
+      return;
+    }
+    s.i += 1;
+    renderAnagramSession();
+  }
+
   // ============================================================
-  // Boot — detect which page we're on
+  // Boot
   // ============================================================
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
-    if ($("goType"))                       initHome();
-    else if ($("screen-type-categories")) initType();
-    else if ($("screen-categories"))       initQuiz();
+    if ($("screen-categories")) initQuiz();
   });
 
 })();

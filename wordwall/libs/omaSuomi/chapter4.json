@@ -1,0 +1,343 @@
+{
+  "id": "chapter4",
+  "title": "chapter4",
+  "category": "omaSuomi",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "To open / To be opened (by itself)",
+      "options": ["aueta", "laittaa", "käyttää", "saada"],
+      "answer": 0,
+      "explanation": "'Aueta' means to open or untie (intransitive, e.g., Ovi aukeaa = The door opens)."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Chicken meat / Broiler",
+      "options": ["broileri", "lohi", "nauta", "sika"],
+      "answer": 0,
+      "explanation": "'Broileri' refers specifically to chicken meat."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Quite / Completely",
+      "options": ["ihan", "lopuksi", "tumma", "vaalea"],
+      "answer": 0,
+      "explanation": "'Ihan' means quite, totally, or completely (e.g., ihan hyvä = quite good)."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Queue / Line",
+      "options": ["jono", "kassa", "ostos", "rulla"],
+      "answer": 0,
+      "explanation": "'Jono' means a queue or a line of people."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Something",
+      "options": ["jotain", "pussi", "rasia", "jono"],
+      "answer": 0,
+      "explanation": "'Jotain' is the partitive form of 'jotakin', meaning something."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Ice cream",
+      "options": ["jäätelö", "kerma", "makea", "kakku"],
+      "answer": 0,
+      "explanation": "'Jäätelö' means ice cream."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Cabbage",
+      "options": ["kaali", "peruna", "valkosipuli", "vihannes"],
+      "answer": 0,
+      "explanation": "'Kaali' means cabbage."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Fish",
+      "options": ["kala", "lohi", "tonnikala", "liha"],
+      "answer": 0,
+      "explanation": "'Kala' means fish."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Candy / Sweets",
+      "options": ["karkki", "makea", "jäätelö", "suklaa"],
+      "answer": 0,
+      "explanation": "'Karkki' is a common word for candy or sweets."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Checkout / Cashier",
+      "options": ["kassa", "jono", "ostos", "muovi"],
+      "answer": 0,
+      "explanation": "'Kassa' means the checkout counter or the cashier."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Vegetable / Vegetarian",
+      "options": ["kasvis", "vihannes", "kaali", "peruna"],
+      "answer": 0,
+      "explanation": "'Kasvis' refers to vegetable or vegetarian-related items (e.g., kasvisruoka)."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Cream",
+      "options": ["kerma", "jäätelö", "makea", "suola"],
+      "answer": 0,
+      "explanation": "Corrected from 'crema' to 'cream'. 'Kerma' means cream in Finnish."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Whole / Complete",
+      "options": ["kokonainen", "tuore", "tumma", "vaalea"],
+      "answer": 0,
+      "explanation": "'Kokonainen' means whole, entire, or complete."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Salmon",
+      "options": ["lohi", "tonnikala", "kala", "broileri"],
+      "answer": 0,
+      "explanation": "'LohI' means salmon."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Meat",
+      "options": ["liha", "nauta", "sika", "kala"],
+      "answer": 0,
+      "explanation": "'Liha' means meat."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "To use",
+      "options": ["käyttää", "laittaa", "saada", "muuttua"],
+      "answer": 0,
+      "explanation": "'Käyttää' means to use or utilize."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "To put / set / prepare food",
+      "options": ["laittaa", "käyttää", "aueta", "muuttua"],
+      "answer": 0,
+      "explanation": "'Laittaa' means to put, place, or prepare/cook food (laittaa ruokaa)."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Finally / In the end",
+      "options": ["lopuksi", "ihan", "tuore", "kokonainen"],
+      "answer": 0,
+      "explanation": "'Lopuksi' means finally, lastly, or in conclusion."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Sweet",
+      "options": ["makea", "karkki", "tuore", "tumma"],
+      "answer": 0,
+      "explanation": "'Makea' means sweet (taste)."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Sausage",
+      "options": ["makkara", "liha", "paisti", "broileri"],
+      "answer": 0,
+      "explanation": "Corrected spelling from 'saussage' to 'sausage'. 'Makkara' means sausage."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What price / How much does it cost",
+      "options": ["minkä hintainen", "jono", "kassa", "ostos"],
+      "answer": 0,
+      "explanation": "'Minkä hintainen' means 'what price' or 'how expensive'."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Plastic",
+      "options": ["muovi", "muovikassi", "pussi", "rasia"],
+      "answer": 0,
+      "explanation": "'Muovi' means plastic material."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Plastic bag",
+      "options": ["muovikassi", "pussi", "muovi", "rasia"],
+      "answer": 0,
+      "explanation": "'Muovikassi' specifically means a plastic shopping bag."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "To change / turn into",
+      "options": ["muuttua", "aueta", "käyttää", "laittaa"],
+      "answer": 0,
+      "explanation": "'Muuttua' means to change, transform, or become something else."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Beef / Bovine",
+      "options": ["nauta", "sika", "liha", "paisti"],
+      "answer": 0,
+      "explanation": "Corrected from 'cow' to 'beef'. 'Nauta' refers to beef or cattle in a culinary context."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Shopping / Purchase",
+      "options": ["ostos", "kassa", "jono", "rulla"],
+      "answer": 0,
+      "explanation": "'Ostos' means a purchase or shopping item (often plural: ostokset)."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Roast / Steak",
+      "options": ["paisti", "makkara", "nauta", "sika"],
+      "answer": 0,
+      "explanation": "'Paisti' means roast meat or steak."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Potato",
+      "options": ["peruna", "kaali", "valkosipuli", "kasvis"],
+      "answer": 0,
+      "explanation": "'Peruna' means potato."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Pepper",
+      "options": ["pippuri", "suola", "valkosipuli", "kerma"],
+      "answer": 0,
+      "explanation": "'Pippuri' means pepper (spice)."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Long / Tall",
+      "options": ["pitkä", "kokonainen", "tuore", "tumma"],
+      "answer": 0,
+      "explanation": "'Pitkä' means long or tall."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Bag / Sack",
+      "options": ["pussi", "muovikassi", "rasia", "rulla"],
+      "answer": 0,
+      "explanation": "'Pussi' means a bag or small sack (e.g., karkkipussi = candy bag)."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Box / Carton / Punnet",
+      "options": ["rasia", "pussi", "rulla", "muovi"],
+      "answer": 0,
+      "explanation": "'Rasia' means a small box, container, or carton (e.g., voirasia = butter tub)."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Roll / Wrap",
+      "options": ["rulla", "rasia", "pussi", "jono"],
+      "answer": 0,
+      "explanation": "'Rulla' means a roll (e.g., kääretorttu, paperirulla)."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "To get / receive / be allowed to",
+      "options": ["saada", "käyttää", "laittaa", "aueta"],
+      "answer": 0,
+      "explanation": "'Saada' means to get, receive, or obtain permission."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Pig / Pork",
+      "options": ["sika", "nauta", "broileri", "paisti"],
+      "answer": 0,
+      "explanation": "'Sika' means pig as an animal, and pork as meat culinary-wise."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Salt",
+      "options": ["suola", "pippuri", "valkosipuli", "kerma"],
+      "answer": 0,
+      "explanation": "'Suola' means salt."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Tuna",
+      "options": ["tonnikala", "lohi", "kala", "broileri"],
+      "answer": 0,
+      "explanation": "Corrected from 'ton fish' to 'tuna'. 'Tonnikala' means tuna fish."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Dark",
+      "options": ["tumma", "vaalea", "makea", "pitkä"],
+      "answer": 0,
+      "explanation": "'Tumma' means dark (color, e.g., tumma suklaa = dark chocolate)."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Fresh",
+      "options": ["tuore", "kokonainen", "makea", "pitkä"],
+      "answer": 0,
+      "explanation": "'Tuore' means fresh (e.g., tuoretta leipää = fresh bread)."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Light / Fair",
+      "options": ["vaalea", "tumma", "kokonainen", "pitkä"],
+      "answer": 0,
+      "explanation": "'Vaalea' means light-colored or fair (e.g., vaalea leipä = white/light bread)."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Garlic",
+      "options": ["valkosipuli", "kaali", "peruna", "pippuri"],
+      "answer": 0,
+      "explanation": "'Valkosipuli' literally means white-onion, which translates to garlic."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Vegetable",
+      "options": ["vihannes", "kasvis", "kaali", "peruna"],
+      "answer": 0,
+      "explanation": "'Vihannes' means vegetable (botanical vegetable like cucumber or tomato)."
+    }
+  ]
+}

@@ -485,9 +485,11 @@ a      { color: inherit; text-decoration: none; }
   min-height: 20px;
 }
 
-.reveal b      { color: var(--ink); font-weight: 500; }
-.reveal .x     { color: var(--bad); }
-.reveal .ok    { color: var(--good); }
+.reveal b           { color: var(--ink); font-weight: 500; }
+.reveal .x          { color: var(--bad); }
+.reveal .ok         { color: var(--good); }
+.reveal-note        { margin-top: 8px; color: var(--ink-2); font-size: 13px; }
+.reveal-example     { margin-top: 5px; color: var(--ink-3); font-style: italic; font-size: 13px; }
 
 .row-actions {
   display: flex;
@@ -682,3 +684,88 @@ a      { color: inherit; text-decoration: none; }
 /* ---------- pages ---------- */
 .page { display: none; }
 .page.active { display: block; }
+
+/* ---------- anagram mode card thumb ---------- */
+.thumb-anagram {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.thumb-anagram span {
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid var(--line);
+  border-radius: 5px;
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+/* ---------- anagram session ---------- */
+.anagram-zone-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+.anagram-answer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 56px;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--line);
+  margin-bottom: 18px;
+  align-items: center;
+}
+.anagram-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 56px;
+  margin-bottom: 4px;
+  align-items: center;
+}
+.tile {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 100ms ease, background 100ms, opacity 150ms, border-color 120ms;
+  user-select: none;
+}
+.tile:hover:not(:disabled) {
+  background: var(--line-2);
+  transform: translateY(-2px);
+}
+.tile.used {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+.tile.correct {
+  border-color: var(--good);
+  color: var(--good);
+  background: var(--good-soft);
+}
+.tile.wrong {
+  border-color: var(--bad);
+  color: var(--bad);
+  background: var(--bad-soft);
+}
