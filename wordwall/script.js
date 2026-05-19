@@ -150,6 +150,7 @@
 
     // Anagram session buttons
     $("anagramClearBtn").addEventListener("click",  anagramClear);
+    $("anagramHintBtn").addEventListener("click",   anagramHint);
     $("anagramCheckBtn").addEventListener("click",  anagramCheck);
     $("anagramNextBtn").addEventListener("click",   anagramNext);
 
@@ -517,6 +518,8 @@
     $("anagramCheckBtn").style.display = "";
     $("anagramNextBtn").style.display  = "none";
     $("anagramClearBtn").disabled = false;
+    $("anagramHintBtn").disabled      = false;
+    $("anagramHintBtn").style.display = "";
     $("anagramCard").classList.remove("flash-good", "flash-bad");
     renderTiles();
   }
@@ -610,6 +613,7 @@
     $("anagramReveal").innerHTML = buildReveal(ok, s.correctText, q);
 
     $("anagramClearBtn").disabled  = true;
+    $("anagramHintBtn").style.display = "none";
     $("anagramCheckBtn").style.display = "none";
     $("anagramNextBtn").style.display  = "";
     $("anagramNextBtn").innerHTML =
@@ -628,6 +632,55 @@
     }
     s.i += 1;
     renderAnagramSession();
+  }
+
+  function findTileInPool(char) {
+    var s = anagramState;
+    var usedSet = {};
+    s.placed.forEach(function (id) { usedSet[id] = true; });
+    var tile = s.tiles.find(function (t) { return t.char === char && !usedSet[t.id]; });
+    return tile ? tile.id : null;
+  }
+
+  function anagramHint() {
+    var s = anagramState;
+    if (s.checked) return;
+    var correct = s.correctText.replace(/ /g, "").split("");
+    for (var i = 0; i < correct.length; i++) {
+      var neededChar = correct[i];
+      var currentTileId = i < s.placed.length ? s.placed[i] : null;
+      var currentChar   = currentTileId !== null
+        ? s.tiles.find(function (t) { return t.id === currentTileId; }).char
+        : null;
+      if (currentChar === neededChar) continue;
+      if (currentTileId === null) {
+        // Position i not filled yet — append from pool
+        var tid = findTileInPool(neededChar);
+        if (tid !== null) s.placed.push(tid);
+      } else {
+        // Wrong tile at position i — swap with a later correct tile or pull from pool
+        var swapIdx = -1;
+        for (var j = i + 1; j < s.placed.length; j++) {
+          if (s.tiles.find(function (t) { return t.id === s.placed[j]; }).char === neededChar) {
+            swapIdx = j;
+            break;
+          }
+        }
+        if (swapIdx !== -1) {
+          var tmp = s.placed[i];
+          s.placed[i] = s.placed[swapIdx];
+          s.placed[swapIdx] = tmp;
+        } else {
+          var tid2 = findTileInPool(neededChar);
+          if (tid2 !== null) {
+            s.placed.splice(i, 1);
+            s.placed.splice(i, 0, tid2);
+          }
+        }
+      }
+      break;
+    }
+    renderTiles();
   }
 
   // ============================================================
