@@ -1,160 +1,1100 @@
 {
   "id": "chapter1",
   "title": "Chapter1",
-  "description": "",
+  "description": "chapter1",
   "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
       "question": "Signature",
-      "options": ["allekirjoitus", "henkilötiedot", "kansalaisuus", "todistus"],
-      "answer": 0,
-      "explanation": "'Allekirjoitus' means signature in Finnish."
+      "options": [
+        "minä",
+        "ei se mitään",
+        "allekirjoitus",
+        "häiritä"
+      ],
+      "answer": 2,
+      "explanation": "'Allekirjoitus' means signature, derived from 'alle' (under) and 'kirjoitus' (writing).",
+      "example": "Tarvitsen sinun allekirjoituksesi tähän sopimukseen."
     },
     {
       "id": 2,
       "type": "multiple-choice",
       "question": "Excuse me / Sorry",
-      "options": ["anteeksi", "kiitos", "terve", "näkemiin"],
-      "answer": 0,
-      "explanation": "'Anteeksi' is used to say excuse me or sorry."
+      "options": [
+        "henkilötunnus",
+        "tutustua",
+        "anteeksi",
+        "hei"
+      ],
+      "answer": 2,
+      "explanation": "'Anteeksi' is used to say sorry or to get someone's attention.",
+      "example": "Anteeksi, missä on rautatieasema?"
     },
     {
       "id": 3,
       "type": "multiple-choice",
       "question": "To live / reside",
-      "options": ["asua", "elää", "maata", "seisoa"],
-      "answer": 0,
-      "explanation": "'Asua' means to live or dwell in a specific place (e.g., Asun Suomessa)."
+      "options": [
+        "hei",
+        "maa",
+        "kuka",
+        "asua"
+      ],
+      "answer": 3,
+      "explanation": "'Asua' requires the missä (inessive/adessive) case for the location.",
+      "example": "Minä asun Helsingissä kauniissa asunnossa."
     },
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "What about...?",
-      "options": ["entä", "vai", "tai", "koska"],
+      "question": "No / Not",
+      "options": [
+        "ei",
+        "tutustua",
+        "puhua",
+        "kysymys"
+      ],
       "answer": 0,
-      "explanation": "'Entä' is used to ask 'what about...?' or 'how about...?' (e.g., Entä sinä?)."
+      "explanation": "'Ei' is the negative verb in Finnish and conjugates according to the person.",
+      "example": "Hän ei puhu suomea vielä kovin hyvin."
     },
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "Fun / Nice",
-      "options": ["hauska", "surullinen", "vihainen", "komea"],
-      "answer": 0,
-      "explanation": "'Hauska' means fun or nice, commonly used in 'Hauska tutustua' (Nice to meet you)."
+      "question": "No problem / It doesn't matter",
+      "options": [
+        "raha",
+        "ei se mitään",
+        "allekirjoitus",
+        "kansalaisuus"
+      ],
+      "answer": 1,
+      "explanation": "A common phrase used to respond to an apology or thank you.",
+      "example": "Kiitos avusta! - Ei se mitään!"
     },
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Personal information",
-      "options": ["henkilötiedot", "allekirjoitus", "kansalaisuus", "lempinimi"],
-      "answer": 0,
-      "explanation": "'Henkilötiedot' refers to personal details or information."
+      "question": "English language",
+      "options": [
+        "nähdä",
+        "henkilötunnus",
+        "kuka",
+        "englanti"
+      ],
+      "answer": 3,
+      "explanation": "Written with a lowercase 'e' when referring to the language.",
+      "example": "Puhutko sinä englantia vai suomea?"
     },
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "To disturb / bother",
-      "options": ["häiritä", "auttaa", "toimia", "koskea"],
-      "answer": 0,
-      "explanation": "'Häiritä' means to disturb, interrupt, or bother someone."
+      "question": "England",
+      "options": [
+        "minkä ikäinen",
+        "olla",
+        "ole hyvä",
+        "Englanti"
+      ],
+      "answer": 3,
+      "explanation": "Written with a capital 'E' when referring to the country.",
+      "example": "Lontoo on Englannin pääkaupunki."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Age",
-      "options": ["ikä", "koko", "määrä", "aste"],
-      "answer": 0,
-      "explanation": "'Ikä' translates directly to age."
+      "question": "What about / How about",
+      "options": [
+        "opiskella",
+        "tervetuloa",
+        "hän",
+        "entä"
+      ],
+      "answer": 3,
+      "explanation": "Used to throw a question back to someone else.",
+      "example": "Minä olen kotoisin Turkista, entä sinä?"
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Someone / Somebody",
-      "options": ["joku", "kaikki", "muutama", "toinen"],
-      "answer": 0,
-      "explanation": "'Joku' is an indefinite pronoun meaning someone or any."
+      "question": "That (conjunction)",
+      "options": [
+        "ongelma",
+        "vain",
+        "kirjoittaa",
+        "että"
+      ],
+      "answer": 3,
+      "explanation": "Used to connect clauses, similar to 'that' in English.",
+      "example": "Hän sanoi, että kurssi alkaa huomenna."
     },
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Nationality",
-      "options": ["kansalaisuus", "henkilötiedot", "tieto", "selvitys"],
-      "answer": 0,
-      "explanation": "'Kansalaisuus' means nationality or citizenship."
+      "question": "First name",
+      "options": [
+        "maa",
+        "he",
+        "miten",
+        "etunimi"
+      ],
+      "answer": 3,
+      "explanation": "Derived from 'etu' (front) and 'nimi' (name).",
+      "example": "Kirjoita tähän lomakkeeseen sinun etunimesi."
     },
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "To write",
-      "options": ["kirjoittaa", "tekstata", "sanoa", "kuulla"],
-      "answer": 0,
-      "explanation": "'Kirjoittaa' means to write."
+      "question": "Fun / Nice",
+      "options": [
+        "kansalaisuus",
+        "hauska",
+        "se",
+        "ongelma"
+      ],
+      "answer": 1,
+      "explanation": "Often used in phrases like 'Hauska tutustua' (Nice to meet you).",
+      "example": "Oli todella hauska tavata sinut pitkästä aikaa."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "How",
-      "options": ["kuinka / miten", "miksi", "minkä vuoksi", "missä"],
-      "answer": 0,
-      "explanation": "Both 'kuinka' and 'miten' are used to ask 'how' in Finnish."
+      "question": "They",
+      "options": [
+        "etunimi",
+        "kaupunki",
+        "he",
+        "minkä maalainen"
+      ],
+      "answer": 2,
+      "explanation": "The third-person plural pronoun for people.",
+      "example": "He asuvat samassa naapurustossa kuin me."
     },
     {
       "id": 13,
       "type": "multiple-choice",
-      "question": "Unmarried / Single",
-      "options": ["naimaton", "naimisissa", "erossa", "vapaa"],
+      "question": "Hi / Hello",
+      "options": [
+        "hei",
+        "uusi",
+        "minkä maalainen",
+        "opiskella"
+      ],
       "answer": 0,
-      "explanation": "'Naimaton' describes someone who is unmarried."
+      "explanation": "A standard, casual greeting in Finland.",
+      "example": "Hei! Mitä sinulle kuuluu tänään?"
     },
     {
       "id": 14,
       "type": "multiple-choice",
-      "question": "To see",
-      "options": ["nähdä", "katsoa", "näyttää", "tutkia"],
+      "question": "Personal information / data",
+      "options": [
+        "henkilötiedot",
+        "ei se mitään",
+        "entä",
+        "maa"
+      ],
       "answer": 0,
-      "explanation": "'Nähdä' is the infinitive form meaning to see."
+      "explanation": "A plural noun meaning personal details.",
+      "example": "Pidä huoli, että henkilötiedot ovat oikein lomakkeessa."
     },
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "To say",
-      "options": ["sanoa", "puhua", "kuulla", "kirjoittaa"],
-      "answer": 0,
-      "explanation": "'Sanoa' translates to to say or to state."
+      "question": "Personal identity code / SSN",
+      "options": [
+        "vaimo",
+        "että",
+        "henkilötunnus",
+        "kuka"
+      ],
+      "answer": 2,
+      "explanation": "The unique Finnish personal identification number.",
+      "example": "Suomessa tarvitset henkilötunnuksen pankkitilin avaamiseen."
     },
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "To supplement / complete / fill in",
-      "options": ["täydentää", "Järjestää", "toimia", "säästää"],
-      "answer": 0,
-      "explanation": "'Täydentää' means to supplement, complete, or fill out a form."
+      "question": "To disturb / bother",
+      "options": [
+        "postinumero",
+        "joku",
+        "häiritä",
+        "se"
+      ],
+      "answer": 2,
+      "explanation": "Type 5 verb, partitive object usually follows.",
+      "example": "Anteeksi, jos häiritsen teitä kesken työn."
     },
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "Only",
-      "options": ["vain", "liian", "vaikka", "enää"],
+      "question": "He / She",
+      "options": [
+        "hän",
+        "uusi",
+        "tervetuloa",
+        "minkä ikäinen"
+      ],
       "answer": 0,
-      "explanation": "'Vain' is an adverb meaning only or just."
+      "explanation": "Gender-neutral third person singular pronoun.",
+      "example": "Hän on uusi opettajamme tällä kurssilla."
     },
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Old",
-      "options": ["vanha", "uusi", "nykyinen", "tuleva"],
-      "answer": 0,
-      "explanation": "'Vanha' means old."
+      "question": "Age",
+      "options": [
+        "ongelma",
+        "kysymys",
+        "ikä",
+        "ja"
+      ],
+      "answer": 2,
+      "explanation": "Genitive form is 'iän' due to consonant gradation.",
+      "example": "Mikä on sinun ikäsi? Olen 25-vuotias."
     },
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "To understand",
-      "options": ["ymmärtää", "luulla", "tietää", "muistaa"],
+      "question": "And",
+      "options": [
+        "henkilötunnus",
+        "ja",
+        "Kanada",
+        "kansalaisuus"
+      ],
+      "answer": 1,
+      "explanation": "Basic coordinating conjunction.",
+      "example": "Minä opiskelen suomea ja englantia."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Someone / Somebody",
+      "options": [
+        "joku",
+        "osoite",
+        "opiskella",
+        "äidinkieli"
+      ],
       "answer": 0,
-      "explanation": "'Ymmärtää' means to understand or comprehend."
+      "explanation": "Pronoun referring to an indefinite person.",
+      "example": "Ovelta kuuluu ääni, siellä on joku."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Canada",
+      "options": [
+        "Kanada",
+        "täydentää",
+        "henkilötunnus",
+        "anteeksi"
+      ],
+      "answer": 0,
+      "explanation": "Country name, capitalized.",
+      "example": "Kanada on suuri maa Pohjois-Amerikassa."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Nationality",
+      "options": [
+        "miten",
+        "kansalaisuus",
+        "Ranska",
+        "henkilötunnus"
+      ],
+      "answer": 1,
+      "explanation": "Derived from 'kansa' (people/nation).",
+      "example": "Minulla on Turkin kansalaisuus."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "City / Town",
+      "options": [
+        "kieli",
+        "minkä ikäinen",
+        "sähköposti",
+        "kaupunki"
+      ],
+      "answer": 3,
+      "explanation": "Genitive is 'kaupungin' (nk -> ng gradation).",
+      "example": "Helsinki on Suomen suurin kaupunki."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Language / Tongue",
+      "options": [
+        "sähköposti",
+        "joku",
+        "kieli",
+        "koti"
+      ],
+      "answer": 2,
+      "explanation": "Can mean both spoken language and the physical tongue.",
+      "example": "Suomen kieli on erittäin kaunista ja mielenkiintoista."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Thank you",
+      "options": [
+        "nimi",
+        "äidinkieli",
+        "suomi",
+        "kiitos"
+      ],
+      "answer": 3,
+      "explanation": "Standard way to express gratitude.",
+      "example": "Kiitos paljon avusta ja ystävällisyydestä."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "To write",
+      "options": [
+        "entä",
+        "kirjoittaa",
+        "me",
+        "naimaton"
+      ],
+      "answer": 1,
+      "explanation": "Type 1 verb with tt -> t gradation.",
+      "example": "Minun täytyy kirjoittaa sähköposti opettajalle."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Home",
+      "options": [
+        "suomi",
+        "että",
+        "koti",
+        "hauska"
+      ],
+      "answer": 2,
+      "explanation": "Genitive form is 'kodin' (t -> d).",
+      "example": "Olen jo kotona, tervetuloa kylään!"
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "How",
+      "options": [
+        "täydentää",
+        "kansalaisuus",
+        "kuinka",
+        "minkä ikäinen"
+      ],
+      "answer": 2,
+      "explanation": "Interrogative adverb, often interchangeable with 'miten'.",
+      "example": "Kuinka vanha sinun lapsesi on?"
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Who",
+      "options": [
+        "kuka",
+        "naimaton",
+        "puhelin",
+        "opettaja"
+      ],
+      "answer": 0,
+      "explanation": "Interrogative pronoun used for people. Genitive is 'kenen'.",
+      "example": "Kuka tuo mies tuolla ikkunan vieressä on?"
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Question",
+      "options": [
+        "mies",
+        "kuka",
+        "häiritä",
+        "kysymys"
+      ],
+      "answer": 3,
+      "explanation": "Noun meaning a query or question.",
+      "example": "Minulla on yksi pieni kysymys tästä asiasta."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Country / Land",
+      "options": [
+        "kysymys",
+        "täydentää",
+        "maa",
+        "ymmärtää"
+      ],
+      "answer": 2,
+      "explanation": "Can refer to a country, ground, or earth.",
+      "example": "Suomi on hieno maa asua ja elää."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "We",
+      "options": [
+        "kysymys",
+        "että",
+        "entä",
+        "me"
+      ],
+      "answer": 3,
+      "explanation": "First-person plural pronoun.",
+      "example": "Me opiskelemme samassa ryhmässä."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Man",
+      "options": [
+        "talo",
+        "maa",
+        "mies",
+        "minä"
+      ],
+      "answer": 2,
+      "explanation": "Stem changes to 'miehe-' in cases (e.g., miehen).",
+      "example": "Tuossa istuu ystävällinen mies."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "What",
+      "options": [
+        "sukunimi",
+        "mikä",
+        "vain",
+        "me"
+      ],
+      "answer": 1,
+      "explanation": "Interrogative pronoun for objects/things. Genitive is 'minkä'.",
+      "example": "Mikä tämä esine on suomeksi?"
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "How old",
+      "options": [
+        "minkä ikäinen",
+        "Ranska",
+        "hei",
+        "olla"
+      ],
+      "answer": 0,
+      "explanation": "Phrase to ask about someone's age.",
+      "example": "Minkä ikäinen sinun veljesi on?"
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "What nationality / From where",
+      "options": [
+        "minkä maalainen",
+        "Englanti",
+        "hei",
+        "entä"
+      ],
+      "answer": 0,
+      "explanation": "Used to ask about someone's country of origin.",
+      "example": "Minkä maalainen sinä olet? - Olen ranskalainen."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "I / Me",
+      "options": [
+        "minä",
+        "kiitos",
+        "me",
+        "henkilötiedot"
+      ],
+      "answer": 0,
+      "explanation": "First-person singular pronoun. Genitive is 'minun'.",
+      "example": "Minä asun tässä talossa ystävän kanssa."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Where",
+      "options": [
+        "kieli",
+        "missä",
+        "ikä",
+        "raha"
+      ],
+      "answer": 1,
+      "explanation": "Interrogative word asking for a static location.",
+      "example": "Missä sinun puhelimesi on? Se on pöydällä."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "How",
+      "options": [
+        "etunimi",
+        "samoin",
+        "täydentää",
+        "miten"
+      ],
+      "answer": 3,
+      "explanation": "Interrogative adverb, used to ask about the manner of action.",
+      "example": "Miten tämä sana sanotaan englanniksi?"
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Neighbor",
+      "options": [
+        "naapuri",
+        "maa",
+        "he",
+        "kansalaisuus"
+      ],
+      "answer": 0,
+      "explanation": "A person living near you.",
+      "example": "Uusi naapuri on erittäin mukava ja avuliain."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Unmarried / Single",
+      "options": [
+        "puhelin",
+        "naimaton",
+        "entä",
+        "kuinka"
+      ],
+      "answer": 1,
+      "explanation": "Derived from 'naida' (to marry) + negative suffix '-ton'.",
+      "example": "Hän on vielä naimaton mies."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Woman",
+      "options": [
+        "nainen",
+        "se",
+        "osoite",
+        "mikä"
+      ],
+      "answer": 0,
+      "explanation": "Words ending in -nen change to -se- in stems (naisen).",
+      "example": "Tuo nainen on minun kurssikaverini."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Name",
+      "options": [
+        "missä",
+        "kiitos",
+        "nimi",
+        "joku"
+      ],
+      "answer": 2,
+      "explanation": "Basic noun for name, genitive is 'nimen'.",
+      "example": "Mikä sinun nimesi on? Minun nimeni on Ville."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Number",
+      "options": [
+        "naimaton",
+        "numero",
+        "entä",
+        "Englanti"
+      ],
+      "answer": 1,
+      "explanation": "Can mean a digit, telephone number, or size.",
+      "example": "Mikä on sinun osoitteesi talon numero?"
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To see",
+      "options": [
+        "hauska",
+        "talo",
+        "nähdä",
+        "entä"
+      ],
+      "answer": 2,
+      "explanation": "Type 2 verb with irregular stem conjugation (näen, näet, näkee).",
+      "example": "Mukava nähdä sinua taas pitkän ajan jälkeen!"
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Please / You're welcome",
+      "options": [
+        "häiritä",
+        "ole hyvä",
+        "puhelin",
+        "maa"
+      ],
+      "answer": 1,
+      "explanation": "Literal meaning: 'be good'. Used when giving something or responding to thanks.",
+      "example": "Ole hyvä ja istu alas tähän tuolille."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To be",
+      "options": [
+        "vanha",
+        "olla",
+        "hauska",
+        "puhua"
+      ],
+      "answer": 1,
+      "explanation": "The most fundamental Finnish verb, highly irregular.",
+      "example": "Minä olen opiskelija ja hän on opettaja."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Problem",
+      "options": [
+        "maa",
+        "naimaton",
+        "ongelma",
+        "mikä"
+      ],
+      "answer": 2,
+      "explanation": "Noun representing a difficulty or issue.",
+      "example": "Ei hätää, tämä ei ole suuri ongelma."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Teacher",
+      "options": [
+        "naimaton",
+        "etunimi",
+        "se",
+        "opettaja"
+      ],
+      "answer": 3,
+      "explanation": "Derived from the verb 'opettaa' (to teach).",
+      "example": "Meidän opettajamme selittää asiat hyvin selkeästi."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "To study",
+      "options": [
+        "kuinka",
+        "etunimi",
+        "opiskella",
+        "tervetuloa"
+      ],
+      "answer": 2,
+      "explanation": "Type 3 verb representing purposeful academic learning.",
+      "example": "Aion opiskella suomea yliopistossa ensi vuonna."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Address",
+      "options": [
+        "ongelma",
+        "että",
+        "osoite",
+        "me"
+      ],
+      "answer": 2,
+      "explanation": "Ends in -e, stem changes to osoittee-.",
+      "example": "Mikä on sinun uusi kotiosoitteesi?"
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Postal code / Zip code",
+      "options": [
+        "te",
+        "tutustua",
+        "miten",
+        "postinumero"
+      ],
+      "answer": 3,
+      "explanation": "Compound word: 'posti' (post) + 'numero' (number).",
+      "example": "Kirjoita postinumero ennen kaupungin nimeä."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Phone",
+      "options": [
+        "henkilötiedot",
+        "ikä",
+        "mikä",
+        "puhelin"
+      ],
+      "answer": 3,
+      "explanation": "Derived from 'puhua' (to talk). Stem is puhelime-.",
+      "example": "Minun puhelimeni akku on melkein tyhjä."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "Phone number",
+      "options": [
+        "koti",
+        "minkä ikäinen",
+        "puhelinnumero",
+        "minä"
+      ],
+      "answer": 2,
+      "explanation": "Compound word: 'puhelin' + 'numero'.",
+      "example": "Voitko antaa sinun puhelinnumerosi?"
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "To speak / talk",
+      "options": [
+        "suomi",
+        "sähköposti",
+        "mies",
+        "puhua"
+      ],
+      "answer": 3,
+      "explanation": "Type 1 verb, takes partitive case for languages.",
+      "example": "Puhun mielelläni suomea ystävieni kanssa."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Money",
+      "options": [
+        "allekirjoitus",
+        "minkä maalainen",
+        "raha",
+        "englanti"
+      ],
+      "answer": 2,
+      "explanation": "Basic noun for currency/cash.",
+      "example": "Minulla ei ole paljon rahaa mukanani tänään."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "France",
+      "options": [
+        "Kanada",
+        "Ranska",
+        "samoin",
+        "täydentää"
+      ],
+      "answer": 1,
+      "explanation": "Country name, capitalized.",
+      "example": "Ranska on tunnettu kauniista kulttuuristaan."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Likewise / Same to you",
+      "options": [
+        "etunimi",
+        "joku",
+        "henkilötunnus",
+        "samoin"
+      ],
+      "answer": 3,
+      "explanation": "Commonly used response to wishes like 'Hyvää päivää!'.",
+      "example": "Mukavaa viikonloppua! - Kiitos, samoin!"
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "To say",
+      "options": [
+        "englanti",
+        "sanoa",
+        "raha",
+        "hän"
+      ],
+      "answer": 1,
+      "explanation": "Type 1 verb used to report speech.",
+      "example": "Mitä sinä sanoit? Voitko toistaa?"
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "It",
+      "options": [
+        "me",
+        "koti",
+        "ole hyvä",
+        "se"
+      ],
+      "answer": 3,
+      "explanation": "Pronoun for inanimate objects, animals, and informally people.",
+      "example": "Katso tuota koiraa, se on todella söpö."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "You (singular)",
+      "options": [
+        "maa",
+        "sinä",
+        "Kanada",
+        "joku"
+      ],
+      "answer": 1,
+      "explanation": "Second-person singular pronoun. Genitive is 'sinun'.",
+      "example": "Sinä olet erittäin hyvä ystävä."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "Surname / Last name",
+      "options": [
+        "nimi",
+        "sukunimi",
+        "puhelin",
+        "kaupunki"
+      ],
+      "answer": 1,
+      "explanation": "Derived from 'suku' (family/lineage) + 'nimi'.",
+      "example": "Mikä on sinun sukunimesi?"
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "Finnish person / Finnish adjective",
+      "options": [
+        "henkilötiedot",
+        "opettaja",
+        "suomalainen",
+        "ei se mitään"
+      ],
+      "answer": 2,
+      "explanation": "Ends in -nen, lowercase unless starting a sentence.",
+      "example": "Hän on suomalainen arkkitehti."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Finnish language",
+      "options": [
+        "naapuri",
+        "nähdä",
+        "suomi",
+        "sanoa"
+      ],
+      "answer": 2,
+      "explanation": "Lowercase when referring to the language.",
+      "example": "Opiskelen suomea joka päivä kaksi tuntia."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "Finland",
+      "options": [
+        "nimi",
+        "kiitos",
+        "Suomi",
+        "postinumero"
+      ],
+      "answer": 2,
+      "explanation": "Capitalized when referring to the country.",
+      "example": "Suomi on tuhansien järvien maa."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Email",
+      "options": [
+        "nähdä",
+        "postinumero",
+        "sähköposti",
+        "talo"
+      ],
+      "answer": 2,
+      "explanation": "Derived from 'sähkö' (electricity) and 'posti' (mail).",
+      "example": "Sain tänään tärkeän sähköpostin."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "House / Building",
+      "options": [
+        "mikä",
+        "vanha",
+        "talo",
+        "kaupunki"
+      ],
+      "answer": 2,
+      "explanation": "Standard noun for a physical house.",
+      "example": "He asuvat isossa keltaisessa talossa."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "To meet",
+      "options": [
+        "nähdä",
+        "tavata",
+        "äidinkieli",
+        "raha"
+      ],
+      "answer": 1,
+      "explanation": "Type 4 verb with t -> tapaan conjugation.",
+      "example": "Haluatko tavata huomenna kahvilassa?"
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "You (plural / formal)",
+      "options": [
+        "kiitos",
+        "opiskella",
+        "te",
+        "vain"
+      ],
+      "answer": 2,
+      "explanation": "Second-person plural pronoun.",
+      "example": "Mistä maasta te olette kotoisin?"
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "Welcome",
+      "options": [
+        "tervetuloa",
+        "talo",
+        "te",
+        "allekirjoitus"
+      ],
+      "answer": 0,
+      "explanation": "Standard greeting to welcome someone to a place.",
+      "example": "Tervetuloa meidän uuteen kotiimme!"
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "To get to know / familiarize",
+      "options": [
+        "naimaton",
+        "että",
+        "nimi",
+        "tutustua"
+      ],
+      "answer": 3,
+      "explanation": "Takes the illative case (-an/-en/mihin).",
+      "example": "On mukava tutustua uusiin ihmisiin kurssilla."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "To supplement / fill in",
+      "options": [
+        "täydentää",
+        "puhelin",
+        "Suomi",
+        "naapuri"
+      ],
+      "answer": 0,
+      "explanation": "Commonly seen in exercise instructions to fill in blanks.",
+      "example": "Täydennä lauseet sopivilla sanoilla."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "New",
+      "options": [
+        "uusi",
+        "tutustua",
+        "hän",
+        "kiitos"
+      ],
+      "answer": 0,
+      "explanation": "Stem changes to uude- in genitive (uuden).",
+      "example": "Tämä on minun uusi autoni."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Wife",
+      "options": [
+        "kaupunki",
+        "vaimo",
+        "uusi",
+        "miten"
+      ],
+      "answer": 1,
+      "explanation": "Noun for married woman partner.",
+      "example": "Minun vaimoni on töissä sairaalassa."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "Only",
+      "options": [
+        "vain",
+        "miten",
+        "minä",
+        "koti"
+      ],
+      "answer": 0,
+      "explanation": "Adverb restricting quantity or scope.",
+      "example": "Minulla on vain viisi euroa jäljellä."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Old",
+      "options": [
+        "se",
+        "vanha",
+        "Ranska",
+        "kuinka"
+      ],
+      "answer": 1,
+      "explanation": "Opposite of 'uusi' or 'nuori'.",
+      "example": "Tämä kaupunki on erittäin vanha ja kaunis."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "To understand",
+      "options": [
+        "hauska",
+        "sähköposti",
+        "ymmärtää",
+        "minä"
+      ],
+      "answer": 2,
+      "explanation": "Type 1 verb with rt -> rr gradation (ymmärrän).",
+      "example": "Anteeksi, en ymmärrä tätä sanaa."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Mother tongue / Native language",
+      "options": [
+        "kirjoittaa",
+        "kuka",
+        "äidinkieli",
+        "naapuri"
+      ],
+      "answer": 2,
+      "explanation": "Compound: 'äiti' (mother) + 'kieli' (language).",
+      "example": "Minun äidinkieleni on turkki."
     }
   ]
 }
