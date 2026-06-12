@@ -1,663 +1,1080 @@
 {
   "id": "chapter5",
-  "title": "chapter5",
+  "title": "Chapter 5",
+  "description": "chapter5",
   "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Subject / Topic",
-      "options": ["aihe", "matka", "mainos", "loma"],
-      "answer": 0,
-      "explanation": "'Aihe' means subject, topic, or theme."
+      "question": "Topic / Subject",
+      "options": ["asunto", "aihe", "avain", "ikkuna"],
+      "answer": 1,
+      "explanation": "'Aihe' means topic, theme, or subject.",
+      "example": "Mikä on tämän päivän aihe?"
     },
     {
       "id": 2,
       "type": "multiple-choice",
       "question": "Downstairs",
-      "options": ["alakerta", "eteinen", "kerros", "parveke"],
-      "answer": 0,
-      "explanation": "Corrected from 'downstair' to 'downstairs'. 'Alakerta' refers to the lower floor."
+      "options": ["yläkerta", "eteinen", "olohuone", "alakerta"],
+      "answer": 3,
+      "explanation": "'Alakerta' means downstairs or the lower floor.",
+      "example": "Keittiö on alakerrassa."
     },
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "To give",
-      "options": ["antaa", "auttaa", "korjata", "kutsua"],
-      "answer": 0,
-      "explanation": "'Antaa' means to give or to allow."
+      "question": "Alko (State liquor store)",
+      "options": ["Apteekki", "Alko", "Baari", "Tori"],
+      "answer": 1,
+      "explanation": "'Alko' is the national alcoholic beverage retailing monopoly in Finland.",
+      "example": "Mihin aikaan Alko menee kiinni?"
     },
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Apartment / Flat",
-      "options": ["asunto", "huone", "piha", "keskusta"],
-      "answer": 0,
-      "explanation": "'Asunto' means an apartment, flat, or dwelling."
+      "question": "To give",
+      "options": ["ottaa", "auttaa", "antaa", "myydä"],
+      "answer": 2,
+      "explanation": "Type 1 verb. 'Antaa' means to give.",
+      "example": "Voitko antaa minulle tuon kirjan?"
     },
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "To help",
-      "options": ["auttaa", "antaa", "kuunnella", "vaihtaa"],
+      "question": "Pharmacy",
+      "options": ["apteekki", "sairaala", "kauppa", "kellari"],
       "answer": 0,
-      "explanation": "'Auttaa' means to help or assist."
+      "explanation": "'Apteekki' means pharmacy or drugstore.",
+      "example": "Minun täytyy käydä apteekissa ostamassa lääkettä."
     },
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Key",
-      "options": ["avain", "pullo", "purkki", "veitsi"],
-      "answer": 0,
-      "explanation": "'Avain' means key."
+      "question": "Dish / Vessel",
+      "options": ["pöytä", "veitsi", "lusikka", "astia"],
+      "answer": 3,
+      "explanation": "'Astia' means dish, container, or vessel.",
+      "example": "Laitatko astiat tiskikoneeseen?"
     },
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Bar / Pub",
-      "options": ["baari", "keskusta", "pysäkki", "piha"],
-      "answer": 0,
-      "explanation": "'Baari' means bar or pub."
+      "question": "Apartment / Flat",
+      "options": ["talo", "asunto", "piha", "huone"],
+      "answer": 1,
+      "explanation": "'Asunto' means apartment, flat, or residence.",
+      "example": "Meidän uusi asunto on keskustassa."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Different / Diverse",
-      "options": ["erilainen", "yksinkertainen", "värikäs", "väärä"],
+      "question": "To help / assist",
+      "options": ["auttaa", "antaa", "katsoa", "kestää"],
       "answer": 0,
-      "explanation": "'Erilainen' means different or unusual."
+      "explanation": "Type 1 verb. 'Auttaa' takes the partitive case.",
+      "example": "Voitko auttaa minua muutossa?"
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Hallway / Entrance hall",
-      "options": ["eteinen", "alakerta", "kylpyhuone", "olohuone"],
-      "answer": 0,
-      "explanation": "'Eteinen' means the hallway, foyer, or entrance hall of a house."
+      "question": "Key",
+      "options": ["lukko", "ovi", "avain", "laukku"],
+      "answer": 2,
+      "explanation": "'Avain' (plural: avaimet) means key.",
+      "example": "Hukkasin asunnon avaimet."
     },
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Jeans",
-      "options": ["farkut", "vaate", "kengät", "verho"],
-      "answer": 0,
-      "explanation": "'Farkut' means jeans (always plural in Finnish)."
+      "question": "Bar",
+      "options": ["ravintola", "kahvila", "tori", "baari"],
+      "answer": 3,
+      "explanation": "'Baari' means bar or pub.",
+      "example": "Tapaamme ystävät baarissa illalla."
     },
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Fork",
-      "options": ["haarukka", "lusikka", "veitsi", "tyyny"],
-      "answer": 0,
-      "explanation": "'Haarukka' means fork."
+      "question": "Organic waste / Biowaste",
+      "options": ["sekajäte", "biojäte", "paperi", "pahvi"],
+      "answer": 1,
+      "explanation": "'Biojäte' means organic or biological waste.",
+      "example": "Banaaninkuoret kuuluvat biojätteeseen."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "Hair",
-      "options": ["hiukset", "kukka", "kuori", "puoli"],
-      "answer": 0,
-      "explanation": "'Hiukset' means hair (plural form used for a person's head of hair)."
+      "question": "Different",
+      "options": ["samanlainen", "erilainen", "uusi", "vanha"],
+      "answer": 1,
+      "explanation": "'Erilainen' means different, diverse, or distinct.",
+      "example": "Suomessa on erilainen sää kuin Italiassa."
     },
     {
       "id": 13,
       "type": "multiple-choice",
-      "question": "Room",
-      "options": ["huone", "asunto", "makuuhuone", "olohuone"],
+      "question": "Hallway / Foyer",
+      "options": ["eteinen", "keittiö", "makuuhuone", "parveke"],
       "answer": 0,
-      "explanation": "'Huone' means room."
+      "explanation": "'Eteinen' means hallway, entrance hall, or foyer.",
+      "example": "Jätä kengät eteiseen, kiitos."
     },
     {
       "id": 14,
       "type": "multiple-choice",
-      "question": "Furniture",
-      "options": ["huonekalu", "taulu", "verho", "tyyny"],
-      "answer": 0,
-      "explanation": "'Huonekalu' means a piece of furniture."
+      "question": "Jeans",
+      "options": ["housut", "vaatteet", "farkut", "sukat"],
+      "answer": 2,
+      "explanation": "'Farkut' is a plural noun meaning jeans.",
+      "example": "Ostin uudet siniset farkut."
     },
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "Unpleasant / Dull / Sad",
-      "options": ["ikävä", "ruma", "kuiva", "tyhjä"],
-      "answer": 0,
-      "explanation": "'Ikävä' means unpleasant, boring, or sad; it can also mean longing/missing someone."
+      "question": "Fork",
+      "options": ["veitsi", "lusikka", "haarukka", "kuppi"],
+      "answer": 2,
+      "explanation": "'Haarukka' means fork.",
+      "example": "Syön salaattia haarukalla."
     },
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "Sometimes",
-      "options": ["joskus", "liian", "viikko", "puoli"],
-      "answer": 0,
-      "explanation": "'Joskus' means sometimes or occasionally."
+      "question": "Hair",
+      "options": ["silmät", "hiukset", "korvat", "kasvot"],
+      "answer": 1,
+      "explanation": "'Hiukset' is a plural-only noun meaning human hair.",
+      "example": "Hänellä on vaaleat hiukset."
     },
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "Lake",
-      "options": ["järvi", "piha", "tie", "pysäkki"],
-      "answer": 0,
-      "explanation": "'Järvi' means lake."
+      "question": "Room",
+      "options": ["talo", "asunto", "seinä", "huone"],
+      "answer": 3,
+      "explanation": "'Huone' means room.",
+      "example": "Tässä asunnossa on kolme huonetta."
     },
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Waste / Refuse",
-      "options": ["jäte", "roska", "paperi", "purkki"],
+      "question": "Piece of furniture",
+      "options": ["huonekalu", "taulu", "verho", "matto"],
       "answer": 0,
-      "explanation": "'Jäte' means waste or refuse material."
+      "explanation": "'Huonekalu' means a piece of furniture.",
+      "example": "Sohva on olohuoneen suurin huonekalu."
     },
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "Beautiful",
-      "options": ["kaunis", "ruma", "värikäs", "suuri"],
-      "answer": 0,
-      "explanation": "Corrected spelling from 'beatiful' to 'beautiful'. 'Kaunis' means beautiful."
+      "question": "Unpleasant / Boring / Sad",
+      "options": ["kaunis", "siisti", "ikävä", "mukava"],
+      "answer": 2,
+      "explanation": "'Ikävä' means tedious, unpleasant, or standardly missed/sad.",
+      "example": "Onpa ikävä uutinen."
     },
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Shoe",
-      "options": ["kenkä", "vaate", "farkut", "laukku"],
-      "answer": 0,
-      "explanation": "'Kenkä' means shoe."
+      "question": "Sometimes",
+      "options": ["aina", "usein", "ei koskaan", "joskus"],
+      "answer": 3,
+      "explanation": "'Joskus' means sometimes or occasionally.",
+      "example": "Käyn joskus elokuvissa."
     },
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "Floor / Layer (of a building)",
-      "options": ["kerros", "lattia", "seinä", "parveke"],
-      "answer": 0,
-      "explanation": "'Kerros' refers to the floor, story, or level of a building."
+      "question": "Train",
+      "options": ["bussi", "juna", "auto", "pyörä"],
+      "answer": 1,
+      "explanation": "'Juna' means train.",
+      "example": "Matkustan Tampereelle junalla."
     },
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Center / City center",
-      "options": ["keskusta", "piha", "pysäkki", "tie"],
-      "answer": 0,
-      "explanation": "'Keskusta' means town center or city center."
+      "question": "Train station",
+      "options": ["bussipysäkki", "tori", "satama", "juna-asema"],
+      "answer": 3,
+      "explanation": "'Juna-asema' means train/railway station.",
+      "example": "Tapaamme Helsingin juna-asemalla."
     },
     {
       "id": 23,
       "type": "multiple-choice",
-      "question": "To take time / last",
-      "options": ["kestää", "uida", "vaihtaa", "tykätä"],
-      "answer": 0,
-      "explanation": "'Kestää' means to last, endure, or take a certain amount of time."
+      "question": "Lake",
+      "options": ["meri", "joki", "järvi", "lampi"],
+      "answer": 2,
+      "explanation": "'Järvi' means lake.",
+      "explanation": "Suomessa on monta tuhatta järveä.",
+      "example": "Suomessa on monta tuhatta järveä."
     },
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "To fix / repair",
-      "options": ["korjata", "vaihtaa", "auttaa", "lähettää"],
+      "question": "Waste / Rubbish",
+      "options": ["jäte", "roska", "paperi", "pahvi"],
       "answer": 0,
-      "explanation": "'Korjata' means to fix, repair, or correct."
+      "explanation": "'Jäte' means waste, refuse, or garbage.",
+      "example": "Ongelmajäte täytyy kerätä erikseen."
     },
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "Dry",
-      "options": ["kuiva", "kuuma", "tyhjä", "rikki"],
-      "answer": 0,
-      "explanation": "'Kuiva' means dry."
+      "question": "Two-room apartment",
+      "options": ["yksiö", "kaksio", "kolmio", "omakotitalo"],
+      "answer": 1,
+      "explanation": "'Kaksio' means a two-room apartment (bedroom + living room).",
+      "example": "Hän asuu pienessä kaksiossa."
     },
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "Flower",
-      "options": ["kukka", "hiukset", "kuori", "puoli"],
+      "question": "Saucepan / Pot",
+      "options": ["kattila", "pannu", "kuppi", "lasi"],
       "answer": 0,
-      "explanation": "'Kukka' means flower."
+      "explanation": "'Kattila' means saucepan, pot, or cauldron.",
+      "example": "Keitän perunoita isossa kattilassa."
     },
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Shell / Peel / Crust",
-      "options": ["kuori", "purkki", "pullo", "paperi"],
-      "answer": 0,
-      "explanation": "'Kuori' means shell, peel, bark, or crust."
+      "question": "Far away",
+      "options": ["lähellä", "tässä", "kaukana", "vieressä"],
+      "answer": 2,
+      "explanation": "'Kaukana' means far away. Often used with 'mistä' (elative).",
+      "example": "Koulu on kaukana kotoa."
     },
     {
       "id": 28,
       "type": "multiple-choice",
-      "question": "To invite / call",
-      "options": ["kutsua", "lähettää", "kuunnella", "tykätä"],
-      "answer": 0,
-      "explanation": "'Kutsua' means to invite or to call someone a name."
+      "question": "Beautiful",
+      "options": ["ruma", "vanha", "kaunis", "siisti"],
+      "answer": 2,
+      "explanation": "'Kaunis' means beautiful, pretty, or handsome.",
+      "example": "Tänään on kaunis ilma."
     },
     {
       "id": 29,
       "type": "multiple-choice",
-      "question": "Hot",
-      "options": ["kuuma", "kuiva", "lyhyt", "suuri"],
-      "answer": 0,
-      "explanation": "Corrected from 'warm' to 'hot'. 'Kuuma' means hot, while 'lämmin' means warm."
+      "question": "District / Neighborhood",
+      "options": ["keskusta", "kaupunki", "kylä", "kaupunginosa"],
+      "answer": 3,
+      "explanation": "'Kaupunginosa' means a city district, borough, or neighborhood.",
+      "example": "Hervanta on tunnettu kaupunginosa Tampereella."
     },
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "To listen",
-      "options": ["kuunnella", "lähettää", "korjata", "uida"],
-      "answer": 0,
-      "explanation": "'Kuunnella' means to listen to something."
+      "question": "Kitchenette / Small kitchen",
+      "options": ["keittiö", "keittokomero", "olohuone", "kellari"],
+      "answer": 1,
+      "explanation": "'Keittokomero' means kitchenette or tiny cooking space.",
+      "example": "Yksiössä on yleensä keittokomero."
     },
     {
       "id": 31,
       "type": "multiple-choice",
-      "question": "Bathroom",
-      "options": ["kylpyhuone", "makuuhuone", "olohuone", "eteinen"],
-      "answer": 0,
-      "explanation": "'Kylpyhuone' means bathroom."
+      "question": "Cellar / Basement",
+      "options": ["ullakko", "parveke", "piha", "kellari"],
+      "answer": 3,
+      "explanation": "'Kellari' means cellar, basement, or vault.",
+      "example": "Viymme vanhat tavarat kellariin."
     },
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "Floor / Ground floor surface",
-      "options": ["lattia", "kerros", "seinä", "piha"],
-      "answer": 0,
-      "explanation": "'Lattia' means the floor surface you walk on inside a room."
+      "question": "Shoe",
+      "options": ["sukka", "kenkä", "vaate", "saapas"],
+      "answer": 1,
+      "explanation": "'Kenkä' means shoe.",
+      "example": "Nämä kengät ovat liian pienet."
     },
     {
       "id": 33,
       "type": "multiple-choice",
-      "question": "Bag / Suitcase",
-      "options": ["laukku", "purkki", "pullo", "paperi"],
-      "answer": 0,
-      "explanation": "'Laukku' means a bag, handbag, or suitcase."
+      "question": "Egg carton / Box cell",
+      "options": ["rasia", "paketti", "kenno", "pussi"],
+      "answer": 2,
+      "explanation": "'Kenno' can refer to an egg box carton or honeycomb cell structure.",
+      "example": "Ostan kymmenen kananmunan kennon."
     },
     {
       "id": 34,
       "type": "multiple-choice",
-      "question": "Too (much)",
-      "options": ["liian", "joskus", "vieressä", "puoli"],
-      "answer": 0,
-      "explanation": "'Liian' means too (e.g., liian suuri = too large)."
+      "question": "Floor / Story / Layer",
+      "options": ["lattia", "katto", "kerros", "seinä"],
+      "answer": 2,
+      "explanation": "'Kerros' means floor, level, or layer in a building.",
+      "example": "Asun kolmannessa kerroksessa."
     },
     {
       "id": 35,
       "type": "multiple-choice",
-      "question": "Holiday / Vacation",
-      "options": ["loma", "matka", "aihe", "viikko"],
-      "answer": 0,
-      "explanation": "'Loma' means holiday or vacation."
+      "question": "City center / Downtown",
+      "options": ["tori", "keskusta", "kaupunki", "lähiö"],
+      "answer": 1,
+      "explanation": "'Keskusta' means town/city center or downtown.",
+      "example": "Kaupat ovat auki keskustassa."
     },
     {
       "id": 36,
       "type": "multiple-choice",
-      "question": "Spoon",
-      "options": ["lusikka", "haarukka", "veitsi", "avain"],
+      "question": "To last / take time",
+      "options": ["kestää", "alkaa", "loppua", "auttaa"],
       "answer": 0,
-      "explanation": "'Lusikka' means spoon."
+      "explanation": "Type 1 verb. 'Kestää' means to last, take time, or endure.",
+      "example": "Matka kestää kaksi tuntia."
     },
     {
       "id": 37,
       "type": "multiple-choice",
-      "question": "Short",
-      "options": ["lyhyt", "pitkä", "suuri", "tyhjä"],
-      "answer": 0,
-      "explanation": "'Lyhyt' means short."
+      "question": "To recycle",
+      "options": ["korjata", "kierrättää", "heittää", "kerätä"],
+      "answer": 1,
+      "explanation": "Type 1 verb. 'Kierrättää' means to recycle.",
+      "example": "Me kierrätämme lasipullot ja metallin."
     },
     {
       "id": 38,
       "type": "multiple-choice",
-      "question": "To send",
-      "options": ["lähettää", "kutsua", "kuunnella", "myydä"],
-      "answer": 0,
-      "explanation": "'Lähettää' means to send (e.g., lähettää viesti)."
+      "question": "Recycling",
+      "options": ["roska", "jäte", "kierrätys", "siivous"],
+      "answer": 2,
+      "explanation": "'Kierrätys' means the process of recycling.",
+      "example": "Kierrätys on tärkeää ympäristölle."
     },
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "Medicine",
-      "options": ["lääke", "mainos", "aihe", "paperi"],
-      "answer": 0,
-      "explanation": "'Lääke' means medicine or drug."
+      "question": "Envelope",
+      "options": ["kirje", "kirjekuori", "paperi", "kortti"],
+      "answer": 1,
+      "explanation": "'Kirjekuori' means envelope (literally letter-shell).",
+      "example": "Laita kirje kirjekuoreen."
     },
     {
       "id": 40,
       "type": "multiple-choice",
-      "question": "Advertisement / Ad",
-      "options": ["mainos", "lääke", "taulu", "terveiset"],
-      "answer": 0,
-      "explanation": "'Mainos' means advertisement."
+      "question": "Three-room apartment",
+      "options": ["kaksio", "yksiö", "kolmio", "rivitalo"],
+      "answer": 2,
+      "explanation": "'Kolmio' means a three-room apartment (usually 2 bedrooms + living room).",
+      "example": "Lapsiperhe osti uuden kolmion."
     },
     {
       "id": 41,
       "type": "multiple-choice",
-      "question": "Bedroom",
-      "options": ["makuuhuone", "olohuone", "kylpyhuone", "alakerta"],
-      "answer": 0,
-      "explanation": "'Makuuhuone' means bedroom."
+      "question": "To repair / fix",
+      "options": ["rikkoa", "korjata", "rakentaa", "muuttaa"],
+      "answer": 1,
+      "explanation": "Type 4 verb. 'Korjata' means to repair, fix, or correct.",
+      "example": "Isä korjaa vanhaa polkupyörää."
     },
     {
       "id": 42,
       "type": "multiple-choice",
-      "question": "Trip / Journey / Distance",
-      "options": ["matka", "loma", "tie", "keskusta"],
-      "answer": 0,
-      "explanation": "'Matka' means a trip, journey, or distance."
+      "question": "Dry",
+      "options": ["märkä", "kuuma", "kylmä", "kuiva"],
+      "answer": 3,
+      "explanation": "'Kuiva' means dry.",
+      "example": "Nämä vaatteet ovat jo kuivia."
     },
     {
       "id": 43,
       "type": "multiple-choice",
-      "question": "To sell",
-      "options": ["myydä", "vuokrata", "vaihtaa", "antaa"],
-      "answer": 0,
-      "explanation": "'Myydä' means to sell."
+      "question": "Flower",
+      "options": ["puu", "kasvi", "kukka", "metsä"],
+      "answer": 2,
+      "explanation": "'Kukka' means flower.",
+      "example": "Ruusu on kaunis kukka."
     },
     {
       "id": 44,
       "type": "multiple-choice",
-      "question": "Late (behind schedule)",
-      "options": ["myöhässä", "liian", "joskus", "vieressä"],
+      "question": "Shell / Peel / Crust",
+      "options": ["kuori", "sisus", "pohja", "pinta"],
       "answer": 0,
-      "explanation": "'Myöhässä' means running late or being late for an event."
+      "explanation": "'Kuori' means peel, bark, shell, or crust.",
+      "example": "Appelsiinin kuori on paksu."
     },
     {
       "id": 45,
       "type": "multiple-choice",
-      "question": "Square meter",
-      "options": ["neliömetri", "puoli", "viikko", "kerros"],
-      "answer": 0,
-      "explanation": "'Neliömetri' means square meter (often abbreviated as m²)."
+      "question": "Cup",
+      "options": ["lasi", "kuppi", "lautanen", "kulho"],
+      "answer": 1,
+      "explanation": "'Kuppi' means cup.",
+      "example": "Juon kupin kuumaa kahvia."
     },
     {
       "id": 46,
       "type": "multiple-choice",
-      "question": "To be visible / show",
-      "options": ["näkyä", "kuunnella", "auttaa", "uida"],
-      "answer": 0,
-      "explanation": "'Näkyä' means to be visible or to be seen."
+      "question": "To invite / call",
+      "options": ["pyytää", "kysyä", "tulla", "kutsua"],
+      "answer": 3,
+      "explanation": "Type 1 verb. 'Kutsua' means to invite or call.",
+      "example": "Kutsun sinut syntymäpäiväjuhliini."
     },
     {
       "id": 47,
       "type": "multiple-choice",
-      "question": "Living room",
-      "options": ["olohuone", "makuuhuone", "kylpyhuone", "eteinen"],
-      "answer": 0,
-      "explanation": "'Olohuone' means living room."
+      "question": "Hot / Warm",
+      "options": ["kylmä", "viileä", "kuuma", "lämmin"],
+      "answer": 2,
+      "explanation": "'Kuuma' means hot.",
+      "example": "Kesällä on usein hyvin kuuma."
     },
     {
       "id": 48,
       "type": "multiple-choice",
-      "question": "Place / Spot",
-      "options": ["paikka", "pysäkki", "piha", "tie"],
-      "answer": 0,
-      "explanation": "'Paikka' means place or location."
+      "question": "To listen",
+      "options": ["kuulla", "katsoa", "kuunnella", "puhua"],
+      "answer": 2,
+      "explanation": "Type 3 verb. 'Kuunnella' takes the partitive case (+ P).",
+      "example": "Kuuntelen radiota aamulla."
     },
     {
       "id": 49,
       "type": "multiple-choice",
-      "question": "Services",
-      "options": ["palvelut", "vuokra", "terveiset", "mainos"],
-      "answer": 0,
-      "explanation": "'Palvelut' means services (plural of palvelu)."
+      "question": "Bathroom",
+      "options": ["keittiö", "wc", "olohuone", "kylpyhuone"],
+      "answer": 3,
+      "explanation": "'Kylpyhuone' means bathroom.",
+      "example": "Kylpyhuoneessa on suihku ja pesukone."
     },
     {
       "id": 50,
       "type": "multiple-choice",
-      "question": "Paper",
-      "options": ["paperi", "purkki", "kuori", "taulu"],
-      "answer": 0,
-      "explanation": "'Paperi' means paper."
+      "question": "Floor (surface)",
+      "options": ["seinä", "katto", "lattia", "matto"],
+      "answer": 2,
+      "explanation": "'Lattia' means floor surface.",
+      "example": "Lattialla on pehmeä matto."
     },
     {
       "id": 51,
       "type": "multiple-choice",
-      "question": "Balcony",
-      "options": ["parveke", "piha", "eteinen", "alakerta"],
+      "question": "Bag / Suitcase",
+      "options": ["laukku", "pussi", "reppu", "lompakko"],
       "answer": 0,
-      "explanation": "'Parveke' means balcony."
+      "explanation": "'Laukku' means bag, purse, or suitcase.",
+      "example": "Pakkaan matkalaukun huomenna."
     },
     {
       "id": 52,
       "type": "multiple-choice",
-      "question": "Washing machine",
-      "options": ["pesukone", "huonekalu", "verho", "avain"],
-      "answer": 0,
-      "explanation": "'Pesukone' means washing machine."
+      "question": "Too (excessively)",
+      "options": ["melko", "erittäin", "liian", "paljon"],
+      "answer": 2,
+      "explanation": "'Liian' means too or excessively.",
+      "example": "Tämä tee on liian kuumaa."
     },
     {
       "id": 53,
       "type": "multiple-choice",
-      "question": "Yard / Courtyard",
-      "options": ["piha", "parveke", "pysäkki", "järvi"],
-      "answer": 0,
-      "explanation": "'Piha' means yard or courtyard."
+      "question": "Holiday / Vacation",
+      "options": ["viikonloppu", "juhla", "työ", "loma"],
+      "answer": 3,
+      "explanation": "'Loma' means holiday, vacation, or break.",
+      "example": "Minulla alkaa kesäloma heinäkuussa."
     },
     {
       "id": 54,
       "type": "multiple-choice",
-      "question": "Bottle",
-      "options": ["pullo", "purkki", "laukku", "kuori"],
-      "answer": 0,
-      "explanation": "'Pullo' means bottle."
+      "question": "Spoon",
+      "options": ["haarukka", "veitsi", "lusikka", "kuppi"],
+      "answer": 2,
+      "explanation": "'Lusikka' means spoon.",
+      "example": "Syön keittoa lusikalla."
     },
     {
       "id": 55,
       "type": "multiple-choice",
-      "question": "Half",
-      "options": ["puoli", "neliömetri", "viikko", "liian"],
-      "answer": 0,
-      "explanation": "'Puoli' means half."
+      "question": "Short",
+      "options": ["pitkä", "lyhyt", "pieni", "suuri"],
+      "answer": 1,
+      "explanation": "'Lyhyt' means short.",
+      "example": "Talvella päivä on hyvin lyhyt."
     },
     {
       "id": 56,
       "type": "multiple-choice",
-      "question": "Jar / Can / Pot",
-      "options": ["purkki", "pullo", "laukku", "paperi"],
-      "answer": 0,
-      "explanation": "'Purkki' means a jar, can, or small container."
+      "question": "To send",
+      "options": ["saada", "ottaa", "tuoda", "lähettää"],
+      "answer": 3,
+      "explanation": "Type 1 verb. 'Lähettää' means to send.",
+      "example": "Lähetän sinulle sähköpostia."
     },
     {
       "id": 57,
       "type": "multiple-choice",
-      "question": "Stop (e.g., bus stop)",
-      "options": ["pysäkki", "paikka", "tie", "keskusta"],
+      "question": "Medicine",
+      "options": ["lääke", "vitamiini", "ruoka", "vesi"],
       "answer": 0,
-      "explanation": "'Pysäkki' means a transit stop (e.g., bussipysäkki)."
+      "explanation": "'Lääke' means medicine, medication, or drug.",
+      "example": "Otin lääkettä päänsärkyyn."
     },
     {
       "id": 58,
       "type": "multiple-choice",
-      "question": "Bicycle / Wheel",
-      "options": ["pyörä", "pesukone", "avain", "huonekalu"],
-      "answer": 0,
-      "explanation": "'Pyörä' means a bicycle or a wheel."
+      "question": "Advertisement / Commercial",
+      "options": ["lehti", "uutiset", "mainos", "ohjelma"],
+      "answer": 2,
+      "explanation": "'Mainos' means advertisement or ad.",
+      "example": "Katson televisiosta mainoksia."
     },
     {
       "id": 59,
       "type": "multiple-choice",
-      "question": "Broken",
-      "options": ["rikki", "kuiva", "tyhjä", "ruma"],
-      "answer": 0,
-      "explanation": "'Rikki' means broken or out of order."
+      "question": "Bedroom",
+      "options": ["olohuone", "keittiö", "eteinen", "makuuhuone"],
+      "answer": 3,
+      "explanation": "'Makuuhuone' means bedroom.",
+      "example": "Makuuhuoneessa on iso sänky."
     },
     {
       "id": 60,
       "type": "multiple-choice",
-      "question": "Trash / Rubbish",
-      "options": ["roska", "jäte", "paperi", "purkki"],
+      "question": "Trip / Journey / Distance",
+      "options": ["matka", "loma", "auto", "juna"],
       "answer": 0,
-      "explanation": "'Roska' means trash, garbage, or piece of rubbish."
+      "explanation": "'Matka' means trip, journey, or distance.",
+      "example": "Hyvää matkaa kaikille!"
     },
     {
       "id": 61,
       "type": "multiple-choice",
-      "question": "Ugly",
-      "options": ["ruma", "kaunis", "ikävä", "tyhjä"],
-      "answer": 0,
-      "explanation": "'Ruma' means ugly."
+      "question": "Forest",
+      "options": ["puisto", "metsä", "järvi", "vuori"],
+      "answer": 1,
+      "explanation": "'Metsä' means forest or woods.",
+      "example": "Suomessa on paljon metsää."
     },
     {
       "id": 62,
       "type": "multiple-choice",
-      "question": "Wall",
-      "options": ["seinä", "lattia", "kerros", "parveke"],
-      "answer": 0,
-      "explanation": "'Seinä' means wall."
+      "question": "To sell",
+      "options": ["ostaa", "vaihtaa", "vuokrata", "myydä"],
+      "answer": 3,
+      "explanation": "Type 2 verb. 'Myydä' means to sell.",
+      "example": "Mies myy autoaan torilla."
     },
     {
       "id": 63,
       "type": "multiple-choice",
-      "question": "Large / Big",
-      "options": ["suuri", "lyhyt", "kuuma", "värikäs"],
-      "answer": 0,
-      "explanation": "'Suuri' means large or big."
+      "question": "Late",
+      "options": ["ajoissa", "myöhässä", "nopeasti", "hitaasti"],
+      "answer": 1,
+      "explanation": "'Myöhässä' means late or running late.",
+      "example": "Juna on viisi minuuttia myöhässä."
     },
     {
       "id": 64,
       "type": "multiple-choice",
-      "question": "Painting / Board / Picture",
-      "options": ["taulu", "mainos", "verho", "huonekalu"],
-      "answer": 0,
-      "explanation": "'Taulu' means painting, picture, or board."
+      "question": "Square meter",
+      "options": ["metri", "senttimetri", "neliömetri", "kilo"],
+      "answer": 2,
+      "explanation": "'Neliömetri' means square meter (often written as m²).",
+      "example": "Asunnon pinta-ala on 50 neliömetriä."
     },
     {
       "id": 65,
       "type": "multiple-choice",
-      "question": "Greetings",
-      "options": ["terveiset", "palvelut", "mainos", "loma"],
-      "answer": 0,
-      "explanation": "'Terveiset' means greetings or regards."
+      "question": "To be visible / show",
+      "options": ["katsoa", "näkyä", "näyttää", "löytyä"],
+      "answer": 1,
+      "explanation": "Type 1 verb. 'Näkyä' means to be visible or to appear.",
+      "example": "Järvi näkyy ikkunasta."
     },
     {
       "id": 66,
       "type": "multiple-choice",
-      "question": "Road / Path",
-      "options": ["tie", "pysäkki", "piha", "järvi"],
-      "answer": 0,
-      "explanation": "'Tie' means road, way, or path."
+      "question": "Living room",
+      "options": ["makuuhuone", "keittiö", "olohuone", "kylpyhuone"],
+      "answer": 2,
+      "explanation": "'Olohuone' means living room.",
+      "example": "Koko perhe katsoo televisiota olohuoneessa."
     },
     {
       "id": 67,
       "type": "multiple-choice",
-      "question": "Empty",
-      "options": ["tyhjä", "kuiva", "rikki", "ikävä"],
-      "answer": 0,
-      "explanation": "'Tyhjä' means empty."
+      "question": "Detached house / Single-family home",
+      "options": ["rivitalo", "kerrostalo", "mökki", "omakotitalo"],
+      "answer": 3,
+      "explanation": "'Omakotitalo' means a detached standalone house.",
+      "example": "He asuvat isossa omakotitalossa."
     },
     {
       "id": 68,
       "type": "multiple-choice",
-      "question": "To like",
-      "options": ["tykätä", "kuunnella", "uida", "korjata"],
-      "answer": 0,
-      "explanation": "'Tykätä' is a colloquial verb meaning to like (takes the elative case, -sta/-stä)."
+      "question": "Cardboard",
+      "options": ["paperi", "muovi", "pahvi", "lasi"],
+      "answer": 2,
+      "explanation": "'Pahvi' means cardboard or paperboard.",
+      "example": "Laita pahvilaatikko kierrätykseen."
     },
     {
       "id": 69,
       "type": "multiple-choice",
-      "question": "Pillow",
-      "options": ["tyyny", "verho", "huonekalu", "taulu"],
+      "question": "Place / Location",
+      "options": ["paikka", "talo", "osoite", "kaupunki"],
       "answer": 0,
-      "explanation": "'Tyyny' means pillow."
+      "explanation": "'Paikka' means place, spot, or location.",
+      "example": "Tämä on hieno paikka."
     },
     {
       "id": 70,
       "type": "multiple-choice",
-      "question": "Coworker / Colleague",
-      "options": ["työkaveri", "tyyny", "lääke", "palvelut"],
-      "answer": 0,
-      "explanation": "'Työkaveri' means a coworker or colleague."
+      "question": "Services",
+      "options": ["kaupat", "palvelut", "työt", "tavarat"],
+      "answer": 1,
+      "explanation": "'Palvelut' is the plural of 'palvelu', meaning services.",
+      "example": "Keskustassa on hyvät palvelut."
     },
     {
       "id": 71,
       "type": "multiple-choice",
-      "question": "To swim",
-      "options": ["uida", "tykätä", "kestää", "antaa"],
-      "answer": 0,
-      "explanation": "'Uida' means to swim."
+      "question": "Paper",
+      "options": ["pahvi", "muovi", "kirja", "paperi"],
+      "answer": 3,
+      "explanation": "'Paperi' means paper.",
+      "example": "Tarvitsetko kynää ja paperia?"
     },
     {
       "id": 72,
       "type": "multiple-choice",
-      "question": "Clothing / Garment",
-      "options": ["vaate", "farkut", "kenkä", "verho"],
-      "answer": 0,
-      "explanation": "'Vaate' means an item of clothing."
+      "question": "Balcony",
+      "options": ["piha", "parveke", "ikkuna", "terassi"],
+      "answer": 1,
+      "explanation": "'Parveke' means balcony.",
+      "example": "Asunnossa on iso, lasitettu parveke."
     },
     {
       "id": 73,
       "type": "multiple-choice",
-      "question": "To change / exchange",
-      "options": ["vaihtaa", "korjata", "myydä", "auttaa"],
-      "answer": 0,
-      "explanation": "'Vaihtaa' means to change, switch, or exchange."
+      "question": "Washing machine",
+      "options": ["tiskikone", "pesukone", "jääkaappi", "uuni"],
+      "answer": 1,
+      "explanation": "'Pesukone' refers to a washing machine (for clothes).",
+      "example": "Laita vaatteet pesukoneeseen."
     },
     {
       "id": 74,
       "type": "multiple-choice",
-      "question": "Knife",
-      "options": ["veitsi", "haarukka", "lusikka", "avain"],
+      "question": "Yard / Courtyard",
+      "options": ["piha", "puisto", "katu", "metsä"],
       "answer": 0,
-      "explanation": "'Veitsi' means knife."
+      "explanation": "'Piha' means yard, courtyard, or garden area.",
+      "example": "Lapset leikkivät pihalla."
     },
     {
       "id": 75,
       "type": "multiple-choice",
-      "question": "Curtain",
-      "options": ["verho", "tyyny", "taulu", "huonekalu"],
-      "answer": 0,
-      "explanation": "'Verho' means curtain."
+      "question": "Bottle",
+      "options": ["purkki", "lasi", "kuppi", "pullo"],
+      "answer": 3,
+      "explanation": "'Pullo' means bottle.",
+      "example": "Pöydällä on vesipullo."
     },
     {
       "id": 76,
       "type": "multiple-choice",
-      "question": "Next to / Beside",
-      "options": ["vieressä", "liian", "joskus", "myöhässä"],
-      "answer": 0,
-      "explanation": "'Vieressä' means right next to or beside."
+      "question": "Half / Side",
+      "options": ["osa", "puoli", "koko", "neljännes"],
+      "answer": 1,
+      "explanation": "'Puoli' means half or side.",
+      "example": "Kello on puoli viisi."
     },
     {
       "id": 77,
       "type": "multiple-choice",
-      "question": "Week",
-      "options": ["viikko", "loma", "matka", "puoli"],
-      "answer": 0,
-      "explanation": "'Viikko' means week."
+      "question": "Jar / Can / Tin",
+      "options": ["pullo", "lasi", "purkki", "rasia"],
+      "answer": 2,
+      "explanation": "'Purkki' means jar, tin, or pot container.",
+      "example": "Ostan purkin hilloa."
     },
     {
       "id": 78,
       "type": "multiple-choice",
-      "question": "Rent (payment)",
-      "options": ["vuokra", "palvelut", "vaate", "aihe"],
-      "answer": 0,
-      "explanation": "'Vuokra' means rent."
+      "question": "Stop / Station",
+      "options": ["asema", "pysäkki", "tie", "risteys"],
+      "answer": 1,
+      "explanation": "'Pysäkki' means a transit stop (e.g., bus stop).",
+      "example": "Bussipysäkki on talon edessä."
     },
     {
       "id": 79,
       "type": "multiple-choice",
-      "question": "To rent / hire",
-      "options": ["vuokrata", "myydä", "vaihtaa", "antaa"],
-      "answer": 0,
-      "explanation": "'Vuokrata' means to rent out or to lease."
+      "question": "Wheel / Bicycle",
+      "options": ["auto", "pyörä", "juna", "mopo"],
+      "answer": 1,
+      "explanation": "'Pyörä' short for polkupyörä means bicycle or wheel.",
+      "example": "Ajan töihin pyörällä."
     },
     {
       "id": 80,
       "type": "multiple-choice",
-      "question": "Colorful",
-      "options": ["värikäs", "erilainen", "kaunis", "suuri"],
-      "answer": 0,
-      "explanation": "'Värikäs' means colorful."
+      "question": "Radio",
+      "options": ["televisio", "tietokone", "puhelin", "radio"],
+      "answer": 3,
+      "explanation": "'Radio' means radio.",
+      "example": "Kuuntelen radiota autossa."
     },
     {
       "id": 81,
       "type": "multiple-choice",
-      "question": "Wrong / Incorrect",
-      "options": ["väärä", "yksinkertainen", "erilainen", "ikävä"],
-      "answer": 0,
-      "explanation": "'Väärä' means wrong, false, or incorrect."
+      "question": "Broken",
+      "options": ["ehjä", "uusi", "rikki", "vanha"],
+      "answer": 2,
+      "explanation": "'Rikki' means broken, torn, or out of order.",
+      "example": "Minun puhelin on rikki."
     },
     {
       "id": 82,
       "type": "multiple-choice",
-      "question": "Simple",
-      "options": ["yksinkertainen", "erilainen", "värikäs", "väärä"],
+      "question": "Townhouse / Terraced house",
+      "options": ["omakotitalo", "kerrostalo", "rivitalo", "mökki"],
+      "answer": 2,
+      "explanation": "'Rivitalo' means a terraced house or townhouse.",
+      "example": "Me asumme mukavassa rivitalossa."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Trash / Garbage / Rubbish",
+      "options": ["roska", "jäte", "paperi", "pöly"],
       "answer": 0,
-      "explanation": "Corrected from 'sämple' to 'simple'. 'Yksinkertainen' means simple or uncomplicated."
+      "explanation": "'Roska' means trash, litter, or a single piece of garbage.",
+      "example": "Heitä roska roskakoriin."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Ugly",
+      "options": ["kaunis", "kiva", "ruma", "vanha"],
+      "answer": 2,
+      "explanation": "'Ruma' means ugly or unsightly.",
+      "example": "Tuo on ruma väri."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Leftovers (food)",
+      "options": ["ruoka", "iltapala", "ruoantähde", "biojäte"],
+      "answer": 2,
+      "explanation": "'Ruoantähde' means food scraps or leftovers.",
+      "example": "Ruoantähteet kuuluvat biojätteeseen."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Wall",
+      "options": ["lattia", "katto", "ovi", "seinä"],
+      "answer": 3,
+      "explanation": "'Seinä' means wall.",
+      "example": "Seinällä riippuu kaunis taulu."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "Mixed waste",
+      "options": ["biojäte", "sekajäte", "paperi", "kartonki"],
+      "answer": 1,
+      "explanation": "'Sekajäte' means mixed or unsorted residual waste.",
+      "example": "Jos et tiedä mihin jäte kuuluu, se on usein sekajätettä."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "Tidy / Clean / Neat",
+      "options": ["likainen", "sekainen", "siisti", "ruma"],
+      "answer": 2,
+      "explanation": "'Siisti' means tidy, clean, orderly, or 'cool'.",
+      "example": "Sinun huone on todella siisti."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Glasses / Eyeglasses",
+      "options": ["silmät", "aurinkolasit", "lasi", "silmälasit"],
+      "answer": 3,
+      "explanation": "'Silmälasit' is a plural noun meaning eyeglasses.",
+      "example": "Tarvitsetko silmälaseja, kun luet?"
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Big / Large",
+      "options": ["pieni", "suuri", "lyhyt", "kaunis"],
+      "answer": 1,
+      "explanation": "'Suuri' means big, large, or great.",
+      "example": "Helsinki on Suomen suurin kaupunki."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Electricity",
+      "options": ["vesi", "lähde", "sähkö", "valo"],
+      "answer": 2,
+      "explanation": "'Sähkö' means electricity or electric power.",
+      "example": "Sähkö on kallista talvella."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "Canned food / Conserve",
+      "options": ["säilyke", "tuore", "ruoka", "purkki"],
+      "answer": 0,
+      "explanation": "'Säilyke' means canned/preserved food or preserve.",
+      "example": "Ostan hernekeittoa säilykkeenä."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Sky",
+      "options": ["maa", "pilvi", "aurinko", "taivas"],
+      "answer": 3,
+      "explanation": "'Taivas' means sky or heaven.",
+      "example": "Taivas on tänään pilvetön."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Painting / Picture / Board",
+      "options": ["taulu", "seinä", "valokuva", "kirja"],
+      "answer": 0,
+      "explanation": "'Taulu' means painting, picture, or board/chalkboard.",
+      "example": "Opettaja kirjoittaa taululle."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "Greetings / Regards",
+      "options": ["kiitos", "hei", "terveiset", "onnea"],
+      "answer": 2,
+      "explanation": "'Terveiset' is used to send greetings or regards to someone.",
+      "example": "Paljon terveisiä äidille!"
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "Road / Path / Way",
+      "options": ["katu", "tie", "silta", "tori"],
+      "answer": 1,
+      "explanation": "'Tie' means road, path, or way.",
+      "example": "Tämä tie vie keskustaan."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Spacious",
+      "options": ["ahdas", "pieni", "pimeä", "tilava"],
+      "answer": 3,
+      "explanation": "'Tilava' means spacious or roomy.",
+      "example": "Tämä olohuone on todella tilava."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Market square",
+      "options": ["keskusta", "kauppa", "tori", "puisto"],
+      "answer": 2,
+      "explanation": "'Tori' means market square or open-air marketplace.",
+      "example": "Ostan mansikoita torilta."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Empty",
+      "options": ["täysi", "tyhjä", "rikki", "uusi"],
+      "answer": 1,
+      "explanation": "'Tyhjä' means empty or blank.",
+      "example": "Maitopullo on tyhjä."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "To like",
+      "options": ["rakastaa", "haluta", "tykätä", "vihata"],
+      "answer": 2,
+      "explanation": "Type 4 verb. 'Tykätä' takes the elative case (+ mistä).",
+      "example": "Tykkään suomalaisesta ruoasta."
+    },
+    {
+      "id": 101,
+      "type": "multiple-choice",
+      "question": "Pillow / Cushion",
+      "options": ["peitto", "lakana", "sänky", "tyyny"],
+      "answer": 3,
+      "explanation": "'Tyyny' means pillow or cushion.",
+      "example": "Nukun kahdella tyynyllä."
+    },
+    {
+      "id": 102,
+      "type": "multiple-choice",
+      "question": "Coworker / Colleague",
+      "options": ["ystävä", "työkaveri", "pomo", "asiakas"],
+      "answer": 1,
+      "explanation": "'Työkaveri' means colleague or workmate.",
+      "example": "Syön lounasta työkaverin kanssa."
+    },
+    {
+      "id": 103,
+      "type": "multiple-choice",
+      "question": "To swim",
+      "options": ["uida", "juosta", "kävellä", "lentää"],
+      "answer": 0,
+      "explanation": "Type 2 verb. 'Uida' means to swim.",
+      "example": "Kesällä on kiva uida järvessä."
+    },
+    {
+      "id": 104,
+      "type": "multiple-choice",
+      "question": "Often",
+      "options": ["harvoin", "aina", "joskus", "usein"],
+      "answer": 3,
+      "explanation": "'Usein' means often or frequently.",
+      "example": "Käyn usein kirjastossa."
+    },
+    {
+      "id": 105,
+      "type": "multiple-choice",
+      "question": "Garment / Piece of clothing",
+      "options": ["vaate", "kenkä", "farkut", "paita"],
+      "answer": 0,
+      "explanation": "'Vaate' (plural: vaatteet) means clothing or garment.",
+      "example": "Laita lämmin vaate päälle."
+    },
+    {
+      "id": 106,
+      "type": "multiple-choice",
+      "question": "To change / switch / exchange",
+      "options": ["ostaa", "korjata", "vaihtaa", "muuttua"],
+      "answer": 2,
+      "explanation": "Type 1 verb. 'Vaihtaa' means to change, replace, or exchange.",
+      "example": "Haluan vaihtaa tämän paidan."
+    },
+    {
+      "id": 107,
+      "type": "multiple-choice",
+      "question": "Diaper",
+      "options": ["vaate", "lakana", "vaippa", "pyyhe"],
+      "answer": 2,
+      "explanation": "'Vaippa' means diaper or nappy.",
+      "example": "Vauva tarvitsee puhtaan vaipan."
+    },
+    {
+      "id": 108,
+      "type": "multiple-choice",
+      "question": "To receive / accept / welcome",
+      "options": ["vastaanottaa", "lähettää", "antaa", "saada"],
+      "answer": 0,
+      "explanation": "Type 1 compound verb. 'Vastaanottaa' means to receive or accept.",
+      "example": "Lääkäri ottaa vastaan potilaita."
+    },
+    {
+      "id": 109,
+      "type": "multiple-choice",
+      "question": "Knife",
+      "options": ["haarukka", "lusikka", "veitsi", "kuppi"],
+      "answer": 2,
+      "explanation": "'Veitsi' means knife.",
+      "example": "Leikkaan leipää veitsellä."
+    },
+    {
+      "id": 110,
+      "type": "multiple-choice",
+      "question": "Curtain",
+      "options": ["taulu", "matto", "ikkuna", "verho"],
+      "answer": 3,
+      "explanation": "'Verho' means curtain or blind.",
+      "example": "Vedä verhot ikkunan eteen."
+    },
+    {
+      "id": 111,
+      "type": "multiple-choice",
+      "question": "Next to / Beside",
+      "options": ["kaukana", "vieressä", "takana", "edessä"],
+      "answer": 1,
+      "explanation": "Postposition/adverb. 'Vieressä' means next to or beside.",
+      "example": "Apteekki on kaupan vieressä."
+    },
+    {
+      "id": 112,
+      "type": "multiple-choice",
+      "question": "Week",
+      "options": ["päivä", "kuukausi", "vuosi", "viikko"],
+      "answer": 3,
+      "explanation": "'Viikko' means week.",
+      "example": "Viikossa on seitsemän päivää."
+    },
+    {
+      "id": 113,
+      "type": "multiple-choice",
+      "question": "Rent",
+      "options": ["hinta", "lasku", "vuokra", "palkka"],
+      "answer": 2,
+      "explanation": "'Vuokra' means rent payment.",
+      "example": "Maksan asunnon vuokran joka kuukausi."
+    },
+    {
+      "id": 114,
+      "type": "multiple-choice",
+      "question": "To rent / hire",
+      "options": ["ostaa", "myydä", "vuokrata", "lainata"],
+      "answer": 2,
+      "explanation": "Type 4 verb. 'Vuokrata' means to rent out or to take on rent.",
+      "example": "Haluamme vuokrata mökin kesäksi."
+    },
+    {
+      "id": 115,
+      "type": "multiple-choice",
+      "question": "Color",
+      "options": ["koko", "muoto", "ääni", "väri"],
+      "answer": 3,
+      "explanation": "'Väri' means color.",
+      "example": "Mikä on sinun lempivärisi?"
+    },
+    {
+      "id": 116,
+      "type": "multiple-choice",
+      "question": "Colorful",
+      "options": ["värikäs", "tumma", "vaalea", "siisti"],
+      "answer": 0,
+      "explanation": "'Värikäs' means colorful or vibrant.",
+      "example": "Hänellä on hyvin värikäs paita."
+    },
+    {
+      "id": 117,
+      "type": "multiple-choice",
+      "question": "Wrong / Incorrect",
+      "options": ["oikea", "väärä", "hyvä", "huono"],
+      "answer": 1,
+      "explanation": "'Väärä' means wrong, incorrect, or false.",
+      "example": "Tämä on väärä puhelinnumero."
+    },
+    {
+      "id": 118,
+      "type": "multiple-choice",
+      "question": "Simple",
+      "options": ["vaikea", "monimutkainen", "yksinkertainen", "helppo"],
+      "answer": 2,
+      "explanation": "'Yksinkertainen' means simple or straightforward.",
+      "example": "Tämä on yksinkertainen tehtävä."
+    },
+    {
+      "id": 119,
+      "type": "multiple-choice",
+      "question": "Studio apartment / One-room flat",
+      "options": ["kaksio", "kolmio", "rivitalo", "yksiö"],
+      "answer": 3,
+      "explanation": "'Yksiö' means a studio apartment with one room and a kitchen/kitchenette.",
+      "example": "Opiskelija etsii halpaa yksiötä."
     }
   ]
 }
