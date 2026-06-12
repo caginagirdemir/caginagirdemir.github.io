@@ -1,343 +1,904 @@
 {
   "id": "chapter4",
-  "title": "chapter4",
-  "category": "omaSuomi",
+  "title": "Chapter 4",
+  "description": "chapter4",
+  "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "To open / To be opened (by itself)",
-      "options": ["aueta", "laittaa", "käyttää", "saada"],
-      "answer": 0,
-      "explanation": "'Aueta' means to open or untie (intransitive, e.g., Ovi aukeaa = The door opens)."
+      "question": "Time",
+      "options": ["ananas", "aika", "jono", "kilo"],
+      "answer": 1,
+      "explanation": "'Aika' means time.",
+      "example": "Minulla ei ole aikaa."
     },
     {
       "id": 2,
       "type": "multiple-choice",
-      "question": "Chicken meat / Broiler",
-      "options": ["broileri", "lohi", "nauta", "sika"],
+      "question": "Pineapple",
+      "options": ["ananas", "appelsiini", "omena", "kurkku"],
       "answer": 0,
-      "explanation": "'Broileri' refers specifically to chicken meat."
+      "explanation": "'Ananas' means pineapple.",
+      "example": "Pidätkö ananaksesta pizzassa?"
     },
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "Quite / Completely",
-      "options": ["ihan", "lopuksi", "tumma", "vaalea"],
-      "answer": 0,
-      "explanation": "'Ihan' means quite, totally, or completely (e.g., ihan hyvä = quite good)."
+      "question": "Orange (fruit)",
+      "options": ["porkkana", "tomaatti", "appelsiini", "omena"],
+      "answer": 2,
+      "explanation": "'Appelsiini' means orange.",
+      "example": "Juon appelsiinimehua aamupalalla."
     },
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Queue / Line",
-      "options": ["jono", "kassa", "ostos", "rulla"],
-      "answer": 0,
-      "explanation": "'Jono' means a queue or a line of people."
+      "question": "To open / be opened",
+      "options": ["laittaa", "aueta", "pakata", "saada"],
+      "answer": 1,
+      "explanation": "Type 6 verb. 'Aueta' means to open or unlock.",
+      "example": "Kaupan ovi aukeaa kello kahdeksan."
     },
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "Something",
-      "options": ["jotain", "pussi", "rasia", "jono"],
+      "question": "Chicken / Broiler",
+      "options": ["broileri", "sika", "nauta", "kala"],
       "answer": 0,
-      "explanation": "'Jotain' is the partitive form of 'jotakin', meaning something."
+      "explanation": "'Broileri' means chicken meat or broiler.",
+      "example": "Paistamme broileria päivälliseksi."
     },
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Ice cream",
-      "options": ["jäätelö", "kerma", "makea", "kakku"],
-      "answer": 0,
-      "explanation": "'Jäätelö' means ice cream."
+      "question": "Gram",
+      "options": ["litra", "kilo", "gramma", "paino"],
+      "answer": 2,
+      "explanation": "'Gramma' means gram.",
+      "example": "Tarvitsen sata grammaa voita."
     },
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Cabbage",
-      "options": ["kaali", "peruna", "valkosipuli", "vihannes"],
-      "answer": 0,
-      "explanation": "'Kaali' means cabbage."
+      "question": "Cheap",
+      "options": ["kallis", "halpa", "lämmin", "makea"],
+      "answer": 1,
+      "explanation": "'Halpa' means cheap.",
+      "example": "Tämä maito on erittäin halpaa."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Fish",
-      "options": ["kala", "lohi", "tonnikala", "liha"],
-      "answer": 0,
-      "explanation": "'Kala' means fish."
+      "question": "ID / Identity card",
+      "options": ["kuitti", "kortti", "henkilöllisyystodistus", "pakkaus"],
+      "answer": 2,
+      "explanation": "'Henkilöllisyystodistus' means identity card or proof of identity.",
+      "example": "Ole hyvä ja näytä henkilöllisyystodistus."
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Candy / Sweets",
-      "options": ["karkki", "makea", "jäätelö", "suklaa"],
+      "question": "Blue cheese",
+      "options": ["homejuusto", "mauste", "kerma", "voi"],
       "answer": 0,
-      "explanation": "'Karkki' is a common word for candy or sweets."
+      "explanation": "'Homejuusto' means blue cheese (literally mold cheese).",
+      "example": "Homejuusto sopii hyvin pizzaan."
     },
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Checkout / Cashier",
-      "options": ["kassa", "jono", "ostos", "muovi"],
-      "answer": 0,
-      "explanation": "'Kassa' means the checkout counter or the cashier."
+      "question": "Shelf",
+      "options": ["kassa", "hylly", "rasia", "tiski"],
+      "answer": 1,
+      "explanation": "'Hylly' means shelf.",
+      "example": "Missä hyllyssä sokeri on?"
     },
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Vegetable / Vegetarian",
-      "options": ["kasvis", "vihannes", "kaali", "peruna"],
-      "answer": 0,
-      "explanation": "'Kasvis' refers to vegetable or vegetarian-related items (e.g., kasvisruoka)."
+      "question": "Quite / Entirely",
+      "options": ["vielä", "ihan", "lopuksi", "lähellä"],
+      "answer": 1,
+      "explanation": "'Ihan' means quite, completely, or right.",
+      "example": "Tämä on ihan hyvää."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "Cream",
-      "options": ["kerma", "jäätelö", "makea", "suola"],
+      "question": "Minced meat",
+      "options": ["jauheliha", "liha", "paisti", "makkara"],
       "answer": 0,
-      "explanation": "Corrected from 'crema' to 'cream'. 'Kerma' means cream in Finnish."
+      "explanation": "'Jauheliha' means minced meat or ground meat.",
+      "example": "Teemme jauhelihakastiketta tänään."
     },
     {
       "id": 13,
       "type": "multiple-choice",
-      "question": "Whole / Complete",
-      "options": ["kokonainen", "tuore", "tumma", "vaalea"],
-      "answer": 0,
-      "explanation": "'Kokonainen' means whole, entire, or complete."
+      "question": "Queue / Line",
+      "options": ["kassa", "tiski", "jono", "rulla"],
+      "answer": 2,
+      "explanation": "'Jono' means queue or line.",
+      "example": "Kassalla on pitkä jono."
     },
     {
       "id": 14,
       "type": "multiple-choice",
-      "question": "Salmon",
-      "options": ["lohi", "tonnikala", "kala", "broileri"],
-      "answer": 0,
-      "explanation": "'LohI' means salmon."
+      "question": "Something",
+      "options": ["tuo", "vielä", "koko", "jotain"],
+      "answer": 3,
+      "explanation": "'Jotain' means something.",
+      "example": "Haluatko jotain juotavaa?"
     },
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "Meat",
-      "options": ["liha", "nauta", "sika", "kala"],
+      "question": "Party / Festival",
+      "options": ["juhlat", "aika", "ostos", "sauna"],
       "answer": 0,
-      "explanation": "'Liha' means meat."
+      "explanation": "'Juhlat' means party, celebration, or festival.",
+      "example": "Viikonloppuna on suuret juhlat."
     },
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "To use",
-      "options": ["käyttää", "laittaa", "saada", "muuttua"],
-      "answer": 0,
-      "explanation": "'Käyttää' means to use or utilize."
+      "question": "Cheese",
+      "options": ["voi", "kerma", "juusto", "homejuusto"],
+      "answer": 2,
+      "explanation": "'Juusto' means cheese.",
+      "example": "Laitatko juustoa leivän päälle?"
     },
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "To put / set / prepare food",
-      "options": ["laittaa", "käyttää", "aueta", "muuttua"],
-      "answer": 0,
-      "explanation": "'Laittaa' means to put, place, or prepare/cook food (laittaa ruokaa)."
+      "question": "Ice cream",
+      "options": ["karkki", "mehu", "jäätelö", "makea"],
+      "answer": 2,
+      "explanation": "'Jäätelö' means ice cream.",
+      "example": "Ostan mansikkajäätelöä."
     },
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Finally / In the end",
-      "options": ["lopuksi", "ihan", "tuore", "kokonainen"],
-      "answer": 0,
-      "explanation": "'Lopuksi' means finally, lastly, or in conclusion."
+      "question": "Cabbage",
+      "options": ["porkkana", "kaali", "sipuli", "peruna"],
+      "answer": 1,
+      "explanation": "'Kaali' means cabbage.",
+      "example": "Kaalikeitto on hyvää ruokaa."
     },
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "Sweet",
-      "options": ["makea", "karkki", "tuore", "tumma"],
+      "question": "Cabinet / Cupboard",
+      "options": ["kaappi", "hylly", "rasia", "kassa"],
       "answer": 0,
-      "explanation": "'Makea' means sweet (taste)."
+      "explanation": "'Kaappi' means cabinet or cupboard.",
+      "example": "Maito on kaapissa."
     },
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Sausage",
-      "options": ["makkara", "liha", "paisti", "broileri"],
-      "answer": 0,
-      "explanation": "Corrected spelling from 'saussage' to 'sausage'. 'Makkara' means sausage."
+      "question": "Fish",
+      "options": ["lohi", "broileri", "tonnikala", "kala"],
+      "answer": 3,
+      "explanation": "'Kala' means fish.",
+      "example": "Syömme kalaa kaksi kertaa viikossa."
     },
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "What price / How much does it cost",
-      "options": ["minkä hintainen", "jono", "kassa", "ostos"],
-      "answer": 0,
-      "explanation": "'Minkä hintainen' means 'what price' or 'how expensive'."
+      "question": "Expensive",
+      "options": ["halpa", "kallis", "lämmin", "tumma"],
+      "answer": 1,
+      "explanation": "'Kallis' means expensive.",
+      "example": "Tämä ravintola on liian kallis."
     },
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Plastic",
-      "options": ["muovi", "muovikassi", "pussi", "rasia"],
-      "answer": 0,
-      "explanation": "'Muovi' means plastic material."
+      "question": "Hen / Chicken",
+      "options": ["sika", "nauta", "kana", "broileri"],
+      "answer": 2,
+      "explanation": "'Kana' means chicken or hen.",
+      "example": "Kana munii pesään."
     },
     {
       "id": 23,
       "type": "multiple-choice",
-      "question": "Plastic bag",
-      "options": ["muovikassi", "pussi", "muovi", "rasia"],
+      "question": "Egg",
+      "options": ["kananmuna", "maito", "juusto", "voi"],
       "answer": 0,
-      "explanation": "'Muovikassi' specifically means a plastic shopping bag."
+      "explanation": "'Kananmuna' means egg (literally chicken-egg).",
+      "example": "Keitän kananmunan aamupalaksi."
     },
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "To change / turn into",
-      "options": ["muuttua", "aueta", "käyttää", "laittaa"],
-      "answer": 0,
-      "explanation": "'Muuttua' means to change, transform, or become something else."
+      "question": "Regular customer",
+      "options": ["myyjä", "kanta-asiakas", "henkilö", "vieras"],
+      "answer": 1,
+      "explanation": "'Kanta-asiakas' means loyal/regular customer.",
+      "example": "Onko sinulla kanta-asiakaskortti?"
     },
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "Beef / Bovine",
-      "options": ["nauta", "sika", "liha", "paisti"],
+      "question": "Candy / Sweets",
+      "options": ["karkki", "sokeri", "jäätelö", "patukka"],
       "answer": 0,
-      "explanation": "Corrected from 'cow' to 'beef'. 'Nauta' refers to beef or cattle in a culinary context."
+      "explanation": "'Karkki' means candy or sweets.",
+      "example": "Lapset ostavat karkkia lauantaina."
     },
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "Shopping / Purchase",
-      "options": ["ostos", "kassa", "jono", "rulla"],
-      "answer": 0,
-      "explanation": "'Ostos' means a purchase or shopping item (often plural: ostokset)."
+      "question": "Cashier / Cash desk",
+      "options": ["tiski", "jono", "kassa", "hylly"],
+      "answer": 2,
+      "explanation": "'Kassa' means checkout counter or cashier.",
+      "example": "Maksan ostokset kassalla."
     },
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Roast / Steak",
-      "options": ["paisti", "makkara", "nauta", "sika"],
-      "answer": 0,
-      "explanation": "'Paisti' means roast meat or steak."
+      "question": "Bag",
+      "options": ["pussi", "kassi", "rasia", "paketti"],
+      "answer": 1,
+      "explanation": "'Kassi' means bag or shopping bag.",
+      "example": "Laita hedelmät kassiin."
     },
     {
       "id": 28,
       "type": "multiple-choice",
-      "question": "Potato",
-      "options": ["peruna", "kaali", "valkosipuli", "kasvis"],
+      "question": "Vegetable",
+      "options": ["kasvis", "hedelmä", "marja", "salaatti"],
       "answer": 0,
-      "explanation": "'Peruna' means potato."
+      "explanation": "'Kasvis' means vegetable.",
+      "example": "Syön paljon kasviksia."
     },
     {
       "id": 29,
       "type": "multiple-choice",
-      "question": "Pepper",
-      "options": ["pippuri", "suola", "valkosipuli", "kerma"],
+      "question": "Vegetarian",
+      "options": ["kasvissyöjä", "myyjä", "asiakas", "lääkäri"],
       "answer": 0,
-      "explanation": "'Pippuri' means pepper (spice)."
+      "explanation": "'Kasvissyöjä' means vegetarian.",
+      "example": "Olen ollut kasvissyöjä viisi vuotta."
     },
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "Long / Tall",
-      "options": ["pitkä", "kokonainen", "tuore", "tumma"],
-      "answer": 0,
-      "explanation": "'Pitkä' means long or tall."
+      "question": "Shopping list",
+      "options": ["kuitti", "resepti", "kauppalista", "kortti"],
+      "answer": 2,
+      "explanation": "'Kauppalista' means shopping list.",
+      "example": "Kirjoitan kauppalistan valmiiksi."
     },
     {
       "id": 31,
       "type": "multiple-choice",
-      "question": "Bag / Sack",
-      "options": ["pussi", "muovikassi", "rasia", "rulla"],
+      "question": "Soup",
+      "options": ["keitto", "paisti", "salaatti", "mehu"],
       "answer": 0,
-      "explanation": "'Pussi' means a bag or small sack (e.g., karkkipussi = candy bag)."
+      "explanation": "'Keitto' means soup.",
+      "example": "Tomaattikeitto on valmista."
     },
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "Box / Carton / Punnet",
-      "options": ["rasia", "pussi", "rulla", "muovi"],
-      "answer": 0,
-      "explanation": "'Rasia' means a small box, container, or carton (e.g., voirasia = butter tub)."
+      "question": "Cream",
+      "options": ["maito", "voi", "kerma", "juusto"],
+      "answer": 2,
+      "explanation": "'Kerma' means cream.",
+      "example": "Laitatko kahviin kermaa?"
     },
     {
       "id": 33,
       "type": "multiple-choice",
-      "question": "Roll / Wrap",
-      "options": ["rulla", "rasia", "pussi", "jono"],
-      "answer": 0,
-      "explanation": "'Rulla' means a roll (e.g., kääretorttu, paperirulla)."
+      "question": "Hurry / Rush",
+      "options": ["aika", "kiire", "jono", "ostos"],
+      "answer": 1,
+      "explanation": "'Kiire' means hurry or rush.",
+      "example": "Minulla on kiire bussiin."
     },
     {
       "id": 34,
       "type": "multiple-choice",
-      "question": "To get / receive / be allowed to",
-      "options": ["saada", "käyttää", "laittaa", "aueta"],
-      "answer": 0,
-      "explanation": "'Saada' means to get, receive, or obtain permission."
+      "question": "Kilogram",
+      "options": ["gramma", "litra", "kilo", "paino"],
+      "answer": 2,
+      "explanation": "'Kilo' means kilogram.",
+      "example": "Ostan yhden kilon perunoita."
     },
     {
       "id": 35,
       "type": "multiple-choice",
-      "question": "Pig / Pork",
-      "options": ["sika", "nauta", "broileri", "paisti"],
-      "answer": 0,
-      "explanation": "'Sika' means pig as an animal, and pork as meat culinary-wise."
+      "question": "Ham",
+      "options": ["makkara", "liha", "paisti", "kinkku"],
+      "answer": 3,
+      "explanation": "'Kinkku' means ham.",
+      "example": "Joulukinkku on perinteinen ruoka Suomessa."
     },
     {
       "id": 36,
       "type": "multiple-choice",
-      "question": "Salt",
-      "options": ["suola", "pippuri", "valkosipuli", "kerma"],
+      "question": "Cat food",
+      "options": ["kissanruoka", "ruoka", "kasvis", "kala"],
       "answer": 0,
-      "explanation": "'Suola' means salt."
+      "explanation": "'Kissanruoka' means cat food.",
+      "example": "Muista ostaa kissanruokaa kaupasta."
     },
     {
       "id": 37,
       "type": "multiple-choice",
-      "question": "Tuna",
-      "options": ["tonnikala", "lohi", "kala", "broileri"],
-      "answer": 0,
-      "explanation": "Corrected from 'ton fish' to 'tuna'. 'Tonnikala' means tuna fish."
+      "question": "Whole / Entire",
+      "options": ["ihanalainen", "kokonainen", "tavallinen", "perinteinen"],
+      "answer": 1,
+      "explanation": "'Kokonainen' means whole, entire or complete.",
+      "example": "Ostan kokonaisen kanan."
     },
     {
       "id": 38,
       "type": "multiple-choice",
-      "question": "Dark",
-      "options": ["tumma", "vaalea", "makea", "pitkä"],
-      "answer": 0,
-      "explanation": "'Tumma' means dark (color, e.g., tumma suklaa = dark chocolate)."
+      "question": "Card",
+      "options": ["kuitti", "kortti", "raha", "paketti"],
+      "answer": 1,
+      "explanation": "'Kortti' means card (e.g., bank card).",
+      "example": "Voinko maksaa kortilla?"
     },
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "Fresh",
-      "options": ["tuore", "kokonainen", "makea", "pitkä"],
-      "answer": 0,
-      "explanation": "'Tuore' means fresh (e.g., tuoretta leipää = fresh bread)."
+      "question": "Receipt",
+      "options": ["kortti", "resepti", "kuitti", "raha"],
+      "answer": 2,
+      "explanation": "'Kuitti' means receipt.",
+      "example": "Haluatko kuitin?"
     },
     {
       "id": 40,
       "type": "multiple-choice",
-      "question": "Light / Fair",
-      "options": ["vaalea", "tumma", "kokonainen", "pitkä"],
+      "question": "Cucumber",
+      "options": ["kurkku", "porkkana", "tomaatti", "kaali"],
       "answer": 0,
-      "explanation": "'Vaalea' means light-colored or fair (e.g., vaalea leipä = white/light bread)."
+      "explanation": "'Kurkku' means cucumber.",
+      "example": "Salaatissa on kurkkua ja tomaattia."
     },
     {
       "id": 41,
       "type": "multiple-choice",
-      "question": "Garlic",
-      "options": ["valkosipuli", "kaali", "peruna", "pippuri"],
-      "answer": 0,
-      "explanation": "'Valkosipuli' literally means white-onion, which translates to garlic."
+      "question": "Cold",
+      "options": ["lämmin", "vaalea", "tumma", "kylmä"],
+      "answer": 3,
+      "explanation": "'Kylmä' means cold.",
+      "example": "Tämä vesi on hyvin kylmää."
     },
     {
       "id": 42,
       "type": "multiple-choice",
-      "question": "Vegetable",
-      "options": ["vihannes", "kasvis", "kaali", "peruna"],
+      "question": "Whole / Size",
+      "options": ["koko", "ihani", "pitkä", "paino"],
       "answer": 0,
-      "explanation": "'Vihannes' means vegetable (botanical vegetable like cucumber or tomato)."
-    }
-  ]
-}
+      "explanation": "'Koko' means size or whole.",
+      "example": "Mikä sinun vaatekoko on?"
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "To ask",
+      "options": ["laittaa", "käyttää", "kävellä", "kysyä"],
+      "answer": 3,
+      "explanation": "Type 1 verb. 'Kysyä' means to ask.",
+      "example": "Voinko kysyä jotain?"
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "To walk",
+      "options": ["kävellä", "juosta", "tulla", "mennä"],
+      "answer": 0,
+      "explanation": "Type 3 verb. 'Kävellä' means to walk.",
+      "example": "Kävelen kouluun joka päivä."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To use",
+      "options": ["laittaa", "pakata", "käyttää", "painaa"],
+      "answer": 2,
+      "explanation": "Type 1 verb. 'Käyttää' means to use.",
+      "example": "Käytän usein tätä reseptiä."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "To put / prepare",
+      "options": ["pakata", "laittaa", "saada", "muuttua"],
+      "answer": 1,
+      "explanation": "Type 1 verb. 'Laittaa' means to put, place, or prepare food.",
+      "example": "Laitan ruokaa keittiössä."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "Lactose",
+      "options": ["sokeri", "suola", "laktoosi", "rasva"],
+      "answer": 2,
+      "explanation": "'Laktoosi' means lactose.",
+      "example": "Onko tässä tuotteessa laktoosia?"
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Bread",
+      "options": ["riisi", "leipä", "sämpylä", "patukka"],
+      "answer": 1,
+      "explanation": "'Leipä' means bread.",
+      "example": "Ostan tuoretta leipää."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Meat",
+      "options": ["kala", "broileri", "kinkku", "liha"],
+      "answer": 3,
+      "explanation": "'Liha' means meat.",
+      "example": "En syö lihaa, olen kasvissyöjä."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Liter",
+      "options": ["gramma", "kilo", "litra", "paino"],
+      "answer": 2,
+      "explanation": "'Litra' means liter.",
+      "example": "Ostan kaksi litraa maitoa."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Salmon",
+      "options": ["tonnikala", "kala", "lohi", "broileri"],
+      "answer": 2,
+      "explanation": "'Lohi' means salmon.",
+      "example": "Lohta on mukava grillata."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Finally / In conclusion",
+      "options": ["ihan", "vielä", "lopuksi", "samoin"],
+      "answer": 2,
+      "explanation": "'Lopuksi' means finally or at last.",
+      "example": "Lopuksi maksamme ostokset."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Abbreviation",
+      "options": ["lyhenne", "nimi", "numero", "vuoronumero"],
+      "answer": 0,
+      "explanation": "'Lyhenne' means abbreviation.",
+      "example": "Mitä tämä lyhenne tarkoittaa?"
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "Near / Close by",
+      "options": ["kaukana", "tässä", "lähellä", "ulos"],
+      "answer": 2,
+      "explanation": "Takes genitive case. 'Lähellä' means near.",
+      "example": "Asun kaupan lähellä."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "Warm",
+      "options": ["kylmä", "vaalea", "lämmin", "tumma"],
+      "answer": 2,
+      "explanation": "'Lämmin' means warm.",
+      "example": "Keitto on vielä lämmintä."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Sweet",
+      "options": ["suolainen", "hapan", "makea", "karvas"],
+      "answer": 2,
+      "explanation": "'Makea' means sweet.",
+      "example": "Tämä omena on hyvin makea."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "Sausage",
+      "options": ["kinkku", "paisti", "liha", "makkara"],
+      "answer": 3,
+      "explanation": "'Makkara' means sausage.",
+      "example": "Grillaamme makkaraa kesällä."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Spice / Condiment",
+      "options": ["suola", "sokeri", "mauste", "pippuri"],
+      "answer": 2,
+      "explanation": "'Mauste' means spice or condiment.",
+      "example": "Tässä ruoassa on paljon mausteita."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Juice",
+      "options": ["maito", "mehu", "vesi", "viini"],
+      "answer": 1,
+      "explanation": "'Mehu' means juice.",
+      "example": "Omenamehu on hyvää."
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "How much does it cost?",
+      "options": ["Minkä hintainen?", "Mitä kuuluu?", "Kuinka paljon?", "Mikä se on?"],
+      "answer": 0,
+      "explanation": "'Minkä hintainen?' means how much is it or what price.",
+      "example": "Minkä hintainen tämä juusto on?"
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "Plastic",
+      "options": ["paperi", "muovi", "lasi", "metalli"],
+      "answer": 1,
+      "explanation": "'Muovi' means plastic.",
+      "example": "Tämä pakkaus on muovia."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "Plastic bag",
+      "options": ["muovikassi", "paperipussi", "reppu", "rasia"],
+      "answer": 0,
+      "explanation": "'Muovikassi' means plastic shopping bag.",
+      "example": "Tarvitsetko muovikassin?"
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "To change / turn into",
+      "options": ["laittaa", "pakata", "muuttua", "painaa"],
+      "answer": 2,
+      "explanation": "Type 1 verb. 'Muuttua' means to change or transform.",
+      "example": "Sää muuttuu kylmäksi."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Seller / Clerk",
+      "options": ["asiakas", "myyjä", "opettaja", "lääkäri"],
+      "answer": 1,
+      "explanation": "'Myyjä' means seller, clerk, or salesperson.",
+      "example": "Myyjä auttaa minua kaupassa."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "Beef / Beef cattle",
+      "options": ["sika", "nauta", "kana", "kala"],
+      "answer": 1,
+      "explanation": "'Nauta' means beef or cattle.",
+      "example": "Ostan naudan jauhelihaa."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Apple",
+      "options": ["ananas", "appelsiini", "omena", "banaani"],
+      "answer": 2,
+      "explanation": "'Omena' means apple.",
+      "example": "Otan punaisen omenan."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "Purchase / Item bought",
+      "options": ["ostos", "hinta", "tarjous", "kuitti"],
+      "answer": 0,
+      "explanation": "'Ostos' means purchase.",
+      "example": "Laitan ostokset hihnalle."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "Shopping cart",
+      "options": ["ostoskärryt", "kassi", "kori", "auto"],
+      "answer": 0,
+      "explanation": "'Ostoskärryt' means shopping cart.",
+      "example": "Otan ostoskärryt kaupan edestä."
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "To weigh / press",
+      "options": ["pakata", "painaa", "laittaa", "saada"],
+      "answer": 1,
+      "explanation": "Type 1 verb. 'Painaa' means to weigh or press.",
+      "example": "Kuinka paljon tämä leipä painaa?"
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "Roast meat / Steak",
+      "options": ["makkara", "paisti", "jauheliha", "keitto"],
+      "answer": 1,
+      "explanation": "'Paisti' means roast meat or steak.",
+      "example": "Naudanpaisti on uunissa."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "Frozen food",
+      "options": ["tuore", "lämmin", "pakaste", "kylmä"],
+      "answer": 2,
+      "explanation": "'Pakaste' means frozen food product.",
+      "example": "Pakasteet ovat tuossa kaapissa."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "To pack",
+      "options": ["pakata", "laittaa", "ostaa", "kantaa"],
+      "answer": 0,
+      "explanation": "Type 4 verb. 'Pakata' means to pack.",
+      "example": "Pakkaan ostokset pussiin."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "Package / Packet",
+      "options": ["rasia", "pussi", "paketti", "kassi"],
+      "answer": 2,
+      "explanation": "'Paketti' means packet or package.",
+      "example": "Ostan paketin kahvia."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Packaging / Pack",
+      "options": ["pakkaus", "rasia", "muovi", "pussi"],
+      "answer": 0,
+      "explanation": "'Pakkaus' means packaging or wrap.",
+      "example": "Tämä pakkaus on helppo avata."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "Deposit (for bottles/cans)",
+      "options": ["hinta", "kuitti", "pantti", "raha"],
+      "answer": 2,
+      "explanation": "'Pantti' means deposit.",
+      "example": "Pullosta saa 15 senttiä panttia."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Bell pepper / Paprika",
+      "options": ["porkkana", "tomaatti", "paprika", "peruna"],
+      "answer": 2,
+      "explanation": "'Paprika' means bell pepper.",
+      "example": "Punainen paprika on makeaa."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Bar / Stick",
+      "options": ["patukka", "sämpylä", "leipä", "rulla"],
+      "answer": 0,
+      "explanation": "'Patukka' means a bar (e.g., chocolate bar, protein bar).",
+      "example": "Ostan suklaapatukan."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Traditional",
+      "options": ["tavallinen", "perinteinen", "uusi", "vanha"],
+      "answer": 1,
+      "explanation": "'Perinteinen' means traditional.",
+      "example": "Ruisleipä on perinteinen suomalainen ruoka."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Potato",
+      "options": ["porkkana", "kaali", "peruna", "sipuli"],
+      "answer": 2,
+      "explanation": "'Peruna' means potato.",
+      "example": "Syötkö perunaa vai riisiä?"
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "Pepper",
+      "options": ["suola", "sokeri", "pippuri", "mauste"],
+      "answer": 2,
+      "explanation": "'Pippuri' means pepper.",
+      "example": "Laitan ruokaan suolaa ja mustapippuria."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Long / Tall",
+      "options": ["lyhyt", "pieni", "iso", "pitkä"],
+      "answer": 3,
+      "explanation": "'Pitkä' means long or tall.",
+      "example": "Kassalla on pitkä jono."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "Carrot",
+      "options": ["peruna", "kaali", "porkkana", "tomaatti"],
+      "answer": 2,
+      "explanation": "'Porkkana' means carrot.",
+      "example": "Porkkana on hyvää raasteena."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Bag / Pouch",
+      "options": ["kassi", "paketti", "rasia", "pussi"],
+      "answer": 3,
+      "explanation": "'Pussi' means bag or pouch.",
+      "example": "Ostan pussin perunalastuja."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Box / Carton",
+      "options": ["paketti", "pussi", "rasia", "kassi"],
+      "answer": 2,
+      "explanation": "'Rasia' means small box, tub, or carton.",
+      "example": "Ostan rasian voita."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Fat-free / Non-fat",
+      "options": ["rasvaton", "kevyt", "makea", "suolainen"],
+      "answer": 0,
+      "explanation": "'Rasvaton' means fat-free or non-fat.",
+      "example": "Juon rasvatonta maitoa."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Rice",
+      "options": ["leipä", "peruna", "riisi", "kaali"],
+      "answer": 2,
+      "explanation": "'Riisi' means rice.",
+      "example": "Syömme kanaa ja riisiä."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "Roll / Wrap",
+      "options": ["sämpylä", "rulla", "patukka", "paketti"],
+      "answer": 1,
+      "explanation": "'Rulla' means roll or wrap.",
+      "example": "Ostan rullan paperia."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "To get / receive / may",
+      "options": ["laittaa", "pakata", "saada", "painaa"],
+      "answer": 2,
+      "explanation": "Type 2 verb. 'Saada' means to get, receive, or be allowed to.",
+      "example": "Saanko kuitin, kiitos?"
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Lettuce / Salad",
+      "options": ["kaali", "kurkku", "salaatti", "paprika"],
+      "answer": 2,
+      "explanation": "'Salaatti' means salad or lettuce.",
+      "example": "Teen vihreää salaattia."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Sauna",
+      "options": ["talo", "koti", "sauna", "juhlat"],
+      "answer": 2,
+      "explanation": "'Sauna' means sauna.",
+      "example": "Lauantaina menemme saunaan."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Pig / Pork",
+      "options": ["nauta", "sika", "kana", "broileri"],
+      "answer": 1,
+      "explanation": "'Sika' means pig or pork.",
+      "example": "Sianliha on halvempaa kuin naudanliha."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "Onion",
+      "options": ["valkosipuli", "porkkana", "sipuli", "peruna"],
+      "answer": 2,
+      "explanation": "'Sipuli' means onion.",
+      "example": "Laitan sipulia kastikkeeseen."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Sugar",
+      "options": ["suola", "sokeri", "mauste", "pippuri"],
+      "answer": 1,
+      "explanation": "'Sokeri' means sugar.",
+      "example": "Juon kahvia ilman sokeria."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Salt",
+      "options": ["sokeri", "mauste", "suola", "pippuri"],
+      "answer": 2,
+      "explanation": "'Suola' means salt.",
+      "example": "Ruoassa on liian vähän suolaa."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "Salty",
+      "options": ["makea", "suolainen", "hapan", "rasvaton"],
+      "answer": 1,
+      "explanation": "'Suolainen' means salty.",
+      "example": "Tämä makkara on hyvin suolaista."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "Roll / Bun",
+      "options": ["leipä", "patukka", "sämpylä", "rulla"],
+      "answer": 2,
+      "explanation": "'Sämpylä' means a bread roll or bun.",
+      "example": "Leivon tuoreita sämpylöitä."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Dill",
+      "options": ["pippuri", "tilli", "sipuli", "mauste"],
+      "answer": 1,
+      "explanation": "'Tilli' means dill.",
+      "example": "Tilli sopii lohen kanssa."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Counter / Desk",
+      "options": ["kassa", "hylly", "tiski", "kaappi"],
+      "answer": 2,
+      "explanation": "'Tiski' means counter or service desk (also dishes).",
+      "example": "Hae liha palvelutiskiltä."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Tomato",
+      "options": ["paprika", "porkkana", "tomaatti", "kaali"],
+      "answer": 2,
+      "explanation": "'Tomaatti' means tomato.",
+      "example": "Ostan punaisia tomaatteja."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "Tuna",
+      "options": ["lohi", "tonnikala", "kala", "broileri"],
+      "answer": 1,
+      "explanation": "'
