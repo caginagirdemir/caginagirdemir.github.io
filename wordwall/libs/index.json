@@ -37,6 +37,12 @@
       "category": "omaSuomi"
     },
     {
+      "id": "chapter7",
+      "file": "omaSuomi/chapter7.json",
+      "title": "chapter7",
+      "category": "omaSuomi"
+    },
+    {
       "id": "chapter1-2verb",
       "file": "verbs/chapter1-2verb.json",
       "title": "chapter1-2verb",
