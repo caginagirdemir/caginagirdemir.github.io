@@ -7,42 +7,6 @@
       "category": "omaSuomi"
     },
     {
-      "id": "chapter2",
-      "file": "omaSuomi/chapter2.json",
-      "title": "chapter2",
-      "category": "omaSuomi"
-    },
-    {
-      "id": "chapter3",
-      "file": "omaSuomi/chapter3.json",
-      "title": "chapter3",
-      "category": "omaSuomi"
-    },
-    {
-      "id": "chapter4",
-      "file": "omaSuomi/chapter4.json",
-      "title": "chapter4",
-      "category": "omaSuomi"
-    },
-    {
-      "id": "chapter5",
-      "file": "omaSuomi/chapter5.json",
-      "title": "chapter5",
-      "category": "omaSuomi"
-    },
-    {
-      "id": "chapter6",
-      "file": "omaSuomi/chapter6.json",
-      "title": "chapter6",
-      "category": "omaSuomi"
-    },
-    {
-      "id": "chapter7",
-      "file": "omaSuomi/chapter7.json",
-      "title": "chapter7",
-      "category": "omaSuomi"
-    },
-    {
       "id": "chapter1-2verb",
       "file": "verbs/chapter1-2verb.json",
       "title": "chapter1-2verb",
