@@ -480,7 +480,7 @@ a      { color: inherit; text-decoration: none; }
 .reveal {
   margin-top: 14px;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 18px;
   color: var(--ink-3);
   min-height: 20px;
 }
@@ -488,8 +488,8 @@ a      { color: inherit; text-decoration: none; }
 .reveal b           { color: var(--ink); font-weight: 500; }
 .reveal .x          { color: var(--bad); }
 .reveal .ok         { color: var(--good); }
-.reveal-note        { margin-top: 8px; color: var(--ink-2); font-size: 13px; }
-.reveal-example     { margin-top: 5px; color: var(--ink-3); font-style: italic; font-size: 13px; }
+.reveal-note        { margin-top: 8px; color: var(--ink-2); font-size: 18px; }
+.reveal-example     { margin-top: 5px; color: var(--ink-3); font-style: italic; font-size: 18px; }
 
 .row-actions {
   display: flex;
