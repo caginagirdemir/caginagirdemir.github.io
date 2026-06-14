@@ -1,1660 +1,1188 @@
 {
   "id": "chapter2",
   "title": "Chapter2",
-  "description": "chapter2",
+  "description": "Finnish vocabulary: family, professions, food and everyday verbs",
   "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
       "question": "To think",
-      "options": [
-        "isoisä",
-        "vuoro",
-        "hinnasto",
-        "ajatella"
-      ],
-      "answer": 3,
-      "explanation": "Type 3 verb. 'Ajatella' means to think or ponder.",
-      "example": "Mitä sinä ajattelet tästä asiasta?"
+      "options": ["ajatella", "alkaa", "haluta", "muistaa"],
+      "answer": 0,
+      "explanation": "'Ajatella' (type 3 verb) means to think; 'ajattelen' is 'I think'.",
+      "example": "Minä ajattelen sinua.",
+      "exampletranslate": "I am thinking of you."
     },
     {
       "id": 2,
       "type": "multiple-choice",
-      "question": "To start",
-      "options": [
-        "suklaa",
-        "alkaa",
-        "kakku",
-        "iso"
-      ],
+      "question": "To begin / start",
+      "options": ["mennä", "alkaa", "ostaa", "odottaa"],
       "answer": 1,
-      "explanation": "Type 1 verb. 'Alkaa' means to begin or start.",
-      "example": "Kurssi alkaa kello kahdeksan."
+      "explanation": "'Alkaa' (type 1 verb) means to begin or start; 'alan' is 'I begin'.",
+      "example": "Koulu alkaa kahdeksalta.",
+      "exampletranslate": "School begins at eight."
     },
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "Profession",
-      "options": [
-        "koira",
-        "hinnasto",
-        "ammatti",
-        "yksinhuoltaja"
-      ],
-      "answer": 2,
-      "explanation": "Means a profession or occupation.",
-      "example": "Mikä on sinun ammattisi?"
+      "question": "Profession / Occupation",
+      "options": ["ammatti", "perhe", "vuoro", "työ"],
+      "answer": 0,
+      "explanation": "'Ammatti' means profession or occupation; its genitive is 'ammatin'.",
+      "example": "Mikä on sinun ammattisi?",
+      "exampletranslate": "What is your profession?"
     },
     {
       "id": 4,
       "type": "multiple-choice",
       "question": "Mother-in-law",
-      "options": [
-        "toimittaja",
-        "anoppi",
-        "vasen",
-        "työ"
-      ],
-      "answer": 1,
-      "explanation": "Spouse's mother.",
-      "example": "Minun anoppini asuu maaseudulla."
+      "options": ["anoppi", "appi", "mummo", "äiti"],
+      "answer": 0,
+      "explanation": "'Anoppi' means mother-in-law; its genitive is 'anopin'.",
+      "example": "Minun anoppini asuu lähellä.",
+      "exampletranslate": "My mother-in-law lives nearby."
     },
     {
       "id": 5,
       "type": "multiple-choice",
       "question": "Father-in-law",
-      "options": [
-        "vesi",
-        "appi",
-        "poika",
-        "auto"
-      ],
+      "options": ["anoppi", "appi", "isä", "ukki"],
       "answer": 1,
-      "explanation": "Spouse's father.",
-      "example": "Appi on tulossa meille viikonloppuna."
+      "explanation": "'Appi' means father-in-law; its genitive is 'apen'.",
+      "example": "Appi ja anoppi tulevat kylään.",
+      "exampletranslate": "My father-in-law and mother-in-law are coming to visit."
     },
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Customer",
-      "options": [
-        "talo",
-        "asiakas",
-        "kenen",
-        "tyttöystävä"
-      ],
+      "question": "Customer / Client",
+      "options": ["yrittäjä", "asiakas", "toimittaja", "kumppani"],
       "answer": 1,
-      "explanation": "A person who buys goods or services.",
-      "example": "Asiakas on aina oikeassa."
+      "explanation": "'Asiakas' means customer or client; its genitive is 'asiakkaan'.",
+      "example": "Asiakas odottaa kahvilassa.",
+      "exampletranslate": "The customer is waiting in the café."
     },
     {
       "id": 7,
       "type": "multiple-choice",
       "question": "Car",
-      "options": [
-        "auto",
-        "avoliitto",
-        "miksi",
-        "vuoro"
-      ],
+      "options": ["auto", "talo", "koulu", "kahvi"],
       "answer": 0,
-      "explanation": "A motor vehicle.",
-      "example": "Ostan uuden auton ensi viikolla."
+      "explanation": "'Auto' means car.",
+      "example": "Minulla on uusi auto.",
+      "exampletranslate": "I have a new car."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Cohabitation",
-      "options": [
-        "kello",
-        "yhdessä",
-        "keksiä",
-        "avoliitto"
-      ],
-      "answer": 3,
-      "explanation": "Living together in a relationship without being married.",
-      "example": "He asuvat avoliitossa Helsingissä."
+      "question": "Cohabitation / Common-law relationship",
+      "options": ["avovaimo", "avoliitto", "perhe", "sukulainen"],
+      "answer": 1,
+      "explanation": "'Avoliitto' means cohabitation or a common-law relationship; its genitive is 'avoliiton'.",
+      "example": "He elävät avoliitossa.",
+      "exampletranslate": "They live in a common-law relationship."
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Common-law wife",
-      "options": [
-        "euro",
-        "asiakas",
-        "avovaimo",
-        "kumppani"
-      ],
-      "answer": 2,
-      "explanation": "Female partner in a cohabitation relationship.",
-      "example": "Tämä on minun avovaimoni, Anna."
+      "question": "Common-law wife / Cohabiting partner (female)",
+      "options": ["avovaimo", "avoliitto", "anoppi", "sisko"],
+      "answer": 0,
+      "explanation": "'Avovaimo' means a common-law wife or cohabiting female partner.",
+      "example": "Hänen avovaimonsa on lääkäri.",
+      "exampletranslate": "His common-law wife is a doctor."
     },
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Nothing / Not a problem",
-      "options": [
-        "kahvi",
-        "kuva",
-        "ei mitään",
-        "kuukausi"
-      ],
-      "answer": 2,
-      "explanation": "Can mean 'nothing' or be used to say 'no problem'.",
-      "example": "Mitä sinä teet? En mitään."
+      "question": "Nothing",
+      "options": ["ei mitään", "paljon", "noin", "myös"],
+      "answer": 0,
+      "explanation": "'Ei mitään' means nothing or not anything.",
+      "example": "Mitä sinä teet? – Ei mitään.",
+      "exampletranslate": "What are you doing? – Nothing."
     },
     {
       "id": 11,
       "type": "multiple-choice",
       "question": "Divorced",
-      "options": [
-        "äiti",
-        "eronnut",
-        "pala",
-        "millainen"
-      ],
+      "options": ["naimisissa", "eronnut", "sinkku", "oma"],
       "answer": 1,
-      "explanation": "Marital status indicating a previous marriage has ended.",
-      "example": "Hän on eronnut kahden lapsen isä."
+      "explanation": "'Eronnut' means divorced; its genitive is 'eronneen'.",
+      "example": "Hän on eronnut.",
+      "exampletranslate": "He is divorced."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "Euro / Money",
-      "options": [
-        "tyttöystävä",
-        "ukki",
-        "euro",
-        "kahvila"
-      ],
-      "answer": 2,
-      "explanation": "The currency used in Finland.",
-      "example": "Tämä kahvi maksaa kaksi euroa."
+      "question": "Euro",
+      "options": ["sentti", "euro", "hinta", "raha"],
+      "answer": 1,
+      "explanation": "'Euro' is the currency unit euro.",
+      "example": "Kahvi maksaa kaksi euroa.",
+      "exampletranslate": "The coffee costs two euros."
     },
     {
       "id": 13,
       "type": "multiple-choice",
       "question": "To want",
-      "options": [
-        "isä",
-        "kello",
-        "myös",
-        "haluta"
-      ],
-      "answer": 3,
-      "explanation": "Type 4 verb expressing desire.",
-      "example": "Haluan juoda kupin kuumaa teetä."
+      "options": ["haluta", "ajatella", "tietää", "vastata"],
+      "answer": 0,
+      "explanation": "'Haluta' (type 4 verb) means to want; 'haluan' is 'I want'.",
+      "example": "Minä haluan kahvia.",
+      "exampletranslate": "I want coffee."
     },
     {
       "id": 14,
       "type": "multiple-choice",
       "question": "Hamburger",
-      "options": [
-        "suklaa",
-        "ukki",
-        "isä",
-        "hampurilainen"
-      ],
-      "answer": 3,
-      "explanation": "A popular fast food item.",
-      "example": "Söin ison hampurilaisen lounaaksi."
+      "options": ["korvapuusti", "hampurilainen", "kakku", "suklaa"],
+      "answer": 1,
+      "explanation": "'Hampurilainen' means hamburger; its genitive is 'hampurilaisen'.",
+      "example": "Syön hampurilaisen.",
+      "exampletranslate": "I'll eat a hamburger."
     },
     {
       "id": 15,
       "type": "multiple-choice",
       "question": "Price list",
-      "options": [
-        "hinnasto",
-        "olla kotoisin",
-        "tyttö",
-        "isoisä"
-      ],
+      "options": ["hinnasto", "hinta", "vuoro", "kello"],
       "answer": 0,
-      "explanation": "A list of prices for goods or services.",
-      "example": "Voitko näyttää minulle teidän hinnaston?"
+      "explanation": "'Hinnasto' means price list.",
+      "example": "Katso hinnasto seinältä.",
+      "exampletranslate": "Look at the price list on the wall."
     },
     {
       "id": 16,
       "type": "multiple-choice",
       "question": "Price",
-      "options": [
-        "kenen",
-        "lapsi",
-        "paljon",
-        "hinta"
-      ],
-      "answer": 3,
-      "explanation": "The amount of money expected or required for something.",
-      "example": "Mikä on tämän paidan hinta?"
+      "options": ["hinnasto", "hinta", "euro", "sentti"],
+      "answer": 1,
+      "explanation": "'Hinta' means price; its genitive is 'hinnan'.",
+      "example": "Mikä on tämän hinta?",
+      "exampletranslate": "What is the price of this?"
     },
     {
       "id": 17,
       "type": "multiple-choice",
       "question": "Good morning",
-      "options": [
-        "avovaimo",
-        "minkälainen",
-        "huomenta",
-        "avoliitto"
-      ],
-      "answer": 2,
-      "explanation": "A common morning greeting.",
-      "example": "Huomenta! Nukuitko hyvin?"
+      "options": ["huomenta", "tänään", "nyt", "taas"],
+      "answer": 0,
+      "explanation": "'Huomenta' means good morning (short for 'hyvää huomenta').",
+      "example": "Huomenta! Kahvia?",
+      "exampletranslate": "Good morning! Coffee?"
     },
     {
       "id": 18,
       "type": "multiple-choice",
       "question": "Good",
-      "options": [
-        "kampaaja",
-        "mennä",
-        "hampurilainen",
-        "hyvä"
-      ],
-      "answer": 3,
-      "explanation": "A very common adjective.",
-      "example": "Tämä on todella hyvä kirja."
+      "options": ["iso", "hyvä", "kiva", "paras"],
+      "answer": 1,
+      "explanation": "'Hyvä' means good; its genitive is 'hyvän'.",
+      "example": "Tämä on hyvä kirja.",
+      "exampletranslate": "This is a good book."
     },
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "Cheerful / Happy",
-      "options": [
-        "kello",
-        "iloinen",
-        "kampaaja",
-        "vuoro"
-      ],
-      "answer": 1,
-      "explanation": "Adjective describing a positive mood.",
-      "example": "Olen aina iloinen, kun näen sinut."
+      "question": "Happy / Cheerful",
+      "options": ["iloinen", "mielenkiintoinen", "mukava", "pieni"],
+      "answer": 0,
+      "explanation": "'Iloinen' means happy or cheerful; its genitive is 'iloisen'.",
+      "example": "Hän on iloinen ihminen.",
+      "exampletranslate": "She is a happy person."
     },
     {
       "id": 20,
       "type": "multiple-choice",
       "question": "Engineer",
-      "options": [
-        "yhdessä",
-        "kissa",
-        "oikealla",
-        "insinööri"
-      ],
-      "answer": 3,
-      "explanation": "A profession involving design, building, and use of engines/machines.",
-      "example": "Veljeni opiskelee insinööriksi."
+      "options": ["lääkäri", "insinööri", "kampaaja", "kokki"],
+      "answer": 1,
+      "explanation": "'Insinööri' means engineer.",
+      "example": "Minun isäni on insinööri.",
+      "exampletranslate": "My father is an engineer."
     },
     {
       "id": 21,
       "type": "multiple-choice",
       "question": "Big",
-      "options": [
-        "sentti",
-        "kiva",
-        "kenen",
-        "iso"
-      ],
-      "answer": 3,
-      "explanation": "Adjective meaning large in size.",
-      "example": "Meillä on iso koira."
+      "options": ["pieni", "iso", "hyvä", "oma"],
+      "answer": 1,
+      "explanation": "'Iso' means big or large.",
+      "example": "Meillä on iso koira.",
+      "exampletranslate": "We have a big dog."
     },
     {
       "id": 22,
       "type": "multiple-choice",
       "question": "Grandfather",
-      "options": [
-        "isoisä",
-        "kuukausi",
-        "äiti",
-        "sinkku"
-      ],
+      "options": ["isoisä", "isoäiti", "isä", "appi"],
       "answer": 0,
-      "explanation": "Formal word for grandfather.",
-      "example": "Isoisä lukee lehteä olohuoneessa."
+      "explanation": "'Isoisä' means grandfather, literally 'big father'.",
+      "example": "Minun isoisäni on 80-vuotias.",
+      "exampletranslate": "My grandfather is 80 years old."
     },
     {
       "id": 23,
       "type": "multiple-choice",
       "question": "Grandmother",
-      "options": [
-        "pieni",
-        "isoäiti",
-        "miksi",
-        "tänään"
-      ],
+      "options": ["isoisä", "isoäiti", "äiti", "anoppi"],
       "answer": 1,
-      "explanation": "Formal word for grandmother.",
-      "example": "Isoäiti leipoo herkullista kakkua."
+      "explanation": "'Isoäiti' means grandmother, literally 'big mother'; its genitive is 'isoäidin'.",
+      "example": "Isoäiti tekee hyvää kakkua.",
+      "exampletranslate": "Grandmother makes good cake."
     },
     {
       "id": 24,
       "type": "multiple-choice",
       "question": "Father",
-      "options": [
-        "pieni",
-        "isä",
-        "vesi",
-        "tyttöystävä"
-      ],
+      "options": ["äiti", "isä", "veli", "poika"],
       "answer": 1,
-      "explanation": "Male parent.",
-      "example": "Minun isäni on opettaja."
+      "explanation": "'Isä' means father.",
+      "example": "Minun isäni on yrittäjä.",
+      "exampletranslate": "My father is an entrepreneur."
     },
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "Self",
-      "options": [
-        "itse",
-        "tyttö",
-        "iloinen",
-        "tehdä"
-      ],
+      "question": "Self / Oneself",
+      "options": ["itse", "oma", "sama", "muu"],
       "answer": 0,
-      "explanation": "Reflexive pronoun.",
-      "example": "Tein tämän aivan itse."
+      "explanation": "'Itse' means self or oneself.",
+      "example": "Teen sen itse.",
+      "exampletranslate": "I'll do it myself."
     },
     {
       "id": 26,
       "type": "multiple-choice",
       "question": "Coffee",
-      "options": [
-        "oikea",
-        "vesi",
-        "kahvi",
-        "isoisä"
-      ],
-      "answer": 2,
-      "explanation": "A very popular hot drink in Finland.",
-      "example": "Juon kahvia joka aamu."
+      "options": ["tee", "kahvi", "vesi", "olut"],
+      "answer": 1,
+      "explanation": "'Kahvi' means coffee.",
+      "example": "Juon kahvia joka aamu.",
+      "exampletranslate": "I drink coffee every morning."
     },
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Coffee shop",
-      "options": [
-        "valokuva",
-        "kahvila",
-        "tehdä",
-        "kiva"
-      ],
+      "question": "Café",
+      "options": ["koulu", "kahvila", "kahvi", "talo"],
       "answer": 1,
-      "explanation": "A place that sells coffee.",
-      "example": "Tavataanko huomenna siinä uudessa kahvilassa?"
+      "explanation": "'Kahvila' means café or coffee shop.",
+      "example": "Tapaamme kahvilassa.",
+      "exampletranslate": "We'll meet at the café."
     },
     {
       "id": 28,
       "type": "multiple-choice",
       "question": "Cake",
-      "options": [
-        "keksiä",
-        "töissä",
-        "suklaa",
-        "kakku"
-      ],
-      "answer": 3,
-      "explanation": "A sweet baked dessert.",
-      "example": "Leivon kakun syntymäpäiväjuhliin."
+      "options": ["kakku", "korvapuusti", "suklaa", "pala"],
+      "answer": 0,
+      "explanation": "'Kakku' means cake; its genitive is 'kakun'.",
+      "example": "Haluatko palan kakkua?",
+      "exampletranslate": "Do you want a piece of cake?"
     },
     {
       "id": 29,
       "type": "multiple-choice",
       "question": "Hairdresser",
-      "options": [
-        "mitä",
-        "kampaaja",
-        "yrittäjä",
-        "isoisä"
-      ],
-      "answer": 1,
-      "explanation": "A professional who cuts and styles hair.",
-      "example": "Minulla on aika kampaajalle huomenna."
+      "options": ["kampaaja", "kokki", "lääkäri", "toimittaja"],
+      "answer": 0,
+      "explanation": "'Kampaaja' means hairdresser.",
+      "example": "Minun siskoni on kampaaja.",
+      "exampletranslate": "My sister is a hairdresser."
     },
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "To look / To watch",
-      "options": [
-        "ammatti",
-        "itse",
-        "katsoa",
-        "yksinhuoltaja"
-      ],
-      "answer": 2,
-      "explanation": "Type 1 verb. Used for watching TV or looking at something.",
-      "example": "Haluan katsoa hyvän elokuvan tänä iltana."
+      "question": "To look / watch",
+      "options": ["katsoa", "muistaa", "odottaa", "ostaa"],
+      "answer": 0,
+      "explanation": "'Katsoa' (type 1 verb) means to look or watch; 'katson' is 'I watch'.",
+      "example": "Katson televisiota.",
+      "exampletranslate": "I watch television."
     },
     {
       "id": 31,
       "type": "multiple-choice",
-      "question": "To invent / Figure out",
-      "options": [
-        "keksiä",
-        "kahvila",
-        "vauva",
-        "hinnasto"
-      ],
+      "question": "To invent / come up with",
+      "options": ["keksiä", "tehdä", "tietää", "ajatella"],
       "answer": 0,
-      "explanation": "Type 1 verb meaning to come up with an idea.",
-      "example": "Meidän täytyy keksiä jokin ratkaisu tähän."
+      "explanation": "'Keksiä' means to invent or come up with; 'keksin' is 'I invent'.",
+      "example": "Keksin hyvän idean.",
+      "exampletranslate": "I came up with a good idea."
     },
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "Clock / Watch",
-      "options": [
-        "hinta",
-        "oikealla",
-        "kello",
-        "yksinhuoltaja"
-      ],
-      "answer": 2,
-      "explanation": "Means both a clock and the time (o'clock).",
-      "example": "Kello on nyt tasan kaksitoista."
+      "question": "Clock / O'clock",
+      "options": ["kuva", "kello", "vuoro", "kuukausi"],
+      "answer": 1,
+      "explanation": "'Kello' means clock or watch, and is used to tell time (o'clock).",
+      "example": "Kello on kolme.",
+      "exampletranslate": "It is three o'clock."
     },
     {
       "id": 33,
       "type": "multiple-choice",
       "question": "Whose",
-      "options": [
-        "poika",
-        "mielenkiintoinen",
-        "oikea",
-        "kenen"
-      ],
-      "answer": 3,
-      "explanation": "Genitive form of 'kuka' (who).",
-      "example": "Kenen kirja tämä on?"
+      "options": ["kenen", "kuinka monta", "miksi", "milloin"],
+      "answer": 0,
+      "explanation": "'Kenen' means whose, the genitive of 'kuka' (who).",
+      "example": "Kenen kirja tämä on?",
+      "exampletranslate": "Whose book is this?"
     },
     {
       "id": 34,
       "type": "multiple-choice",
       "question": "Book",
-      "options": [
-        "lapsi",
-        "yhdessä",
-        "iloinen",
-        "kirja"
-      ],
-      "answer": 3,
-      "explanation": "A written or printed work.",
-      "example": "Luen mielenkiintoista kirjaa parhaillaan."
+      "options": ["kuva", "kirja", "koulu", "kakku"],
+      "answer": 1,
+      "explanation": "'Kirja' means book.",
+      "example": "Luen mielenkiintoista kirjaa.",
+      "exampletranslate": "I am reading an interesting book."
     },
     {
       "id": 35,
       "type": "multiple-choice",
       "question": "Cat",
-      "options": [
-        "yksinhuoltaja",
-        "ammatti",
-        "kuukausi",
-        "kissa"
-      ],
-      "answer": 3,
-      "explanation": "A common furry pet.",
-      "example": "Naapurin kissa nukkuu meidän sohvalla."
+      "options": ["koira", "kissa", "vauva", "lemmikki"],
+      "answer": 1,
+      "explanation": "'Kissa' means cat.",
+      "example": "Minun kissani on musta.",
+      "exampletranslate": "My cat is black."
     },
     {
       "id": 36,
       "type": "multiple-choice",
       "question": "Nice",
-      "options": [
-        "kiva",
-        "ukki",
-        "hampurilainen",
-        "valokuva"
-      ],
-      "answer": 0,
-      "explanation": "A very common informal word for nice or pleasant.",
-      "example": "Kiva nähdä sinua!"
+      "options": ["iso", "kiva", "pieni", "paras"],
+      "answer": 1,
+      "explanation": "'Kiva' means nice or pleasant (informal).",
+      "example": "Oli kiva nähdä sinua.",
+      "exampletranslate": "It was nice to see you."
     },
     {
       "id": 37,
       "type": "multiple-choice",
       "question": "Dog",
-      "options": [
-        "vastata",
-        "ukki",
-        "suklaa",
-        "koira"
-      ],
-      "answer": 3,
-      "explanation": "A common pet animal.",
-      "example": "Minun koirani tykkää juosta metsässä."
+      "options": ["kissa", "koira", "vauva", "lemmikki"],
+      "answer": 1,
+      "explanation": "'Koira' means dog.",
+      "example": "Koira on iso ja ruskea.",
+      "exampletranslate": "The dog is big and brown."
     },
     {
       "id": 38,
       "type": "multiple-choice",
       "question": "Cook / Chef",
-      "options": [
-        "lääkäri",
-        "työ",
-        "tehdä",
-        "kokki"
-      ],
-      "answer": 3,
-      "explanation": "A person who prepares food professionally.",
-      "example": "Hän työskentelee kokkina ravintolassa."
+      "options": ["kokki", "kampaaja", "insinööri", "yrittäjä"],
+      "answer": 0,
+      "explanation": "'Kokki' means cook or chef; its genitive is 'kokin'.",
+      "example": "Hän on hyvä kokki.",
+      "exampletranslate": "He is a good cook."
     },
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "Cinnamon bun",
-      "options": [
-        "isoisä",
-        "korvapuusti",
-        "suklaa",
-        "kuva"
-      ],
-      "answer": 1,
-      "explanation": "A traditional Finnish sweet pastry.",
-      "example": "Kahvi ja tuore korvapuusti maistuvat aina."
+      "question": "Cinnamon roll",
+      "options": ["korvapuusti", "hampurilainen", "kakku", "suklaa"],
+      "answer": 0,
+      "explanation": "'Korvapuusti' is a Finnish cinnamon roll (literally 'slap on the ear').",
+      "example": "Otan kahvin ja korvapuustin.",
+      "exampletranslate": "I'll have a coffee and a cinnamon roll."
     },
     {
       "id": 40,
       "type": "multiple-choice",
       "question": "At home",
-      "options": [
-        "kotona",
-        "sinkku",
-        "oma",
-        "hampurilainen"
-      ],
+      "options": ["kotona", "töissä", "täällä", "yhdessä"],
       "answer": 0,
-      "explanation": "Essive form used to indicate being in one's house.",
-      "example": "Tänään aion olla vain kotona ja levätä."
+      "explanation": "'Kotona' means at home (the location form of 'koti').",
+      "example": "Minä olen tänään kotona.",
+      "exampletranslate": "I am at home today."
     },
     {
       "id": 41,
       "type": "multiple-choice",
       "question": "School",
-      "options": [
-        "koulu",
-        "vauva",
-        "tyttö",
-        "valokuva"
-      ],
-      "answer": 0,
-      "explanation": "Educational institution.",
-      "example": "Lapset menevät aamulla kouluun."
+      "options": ["kahvila", "koulu", "talo", "työ"],
+      "answer": 1,
+      "explanation": "'Koulu' means school.",
+      "example": "Lapset menevät kouluun.",
+      "exampletranslate": "The children go to school."
     },
     {
       "id": 42,
       "type": "multiple-choice",
       "question": "How many",
-      "options": [
-        "pala",
-        "vanhemmat",
-        "vuoro",
-        "kuinka monta"
-      ],
-      "answer": 3,
-      "explanation": "Interrogative phrase asking for a quantity.",
-      "example": "Kuinka monta opiskelijaa ryhmässä on?"
+      "options": ["kuinka monta", "kenen", "miksi", "milloin"],
+      "answer": 0,
+      "explanation": "'Kuinka monta' means how many (asking about countable things).",
+      "example": "Kuinka monta lasta sinulla on?",
+      "exampletranslate": "How many children do you have?"
     },
     {
       "id": 43,
       "type": "multiple-choice",
       "question": "Partner",
-      "options": [
-        "kuukausi",
-        "yhdessä",
-        "ammatti",
-        "kumppani"
-      ],
-      "answer": 3,
-      "explanation": "Can mean a romantic partner or a business partner.",
-      "example": "Etsin tenniskumppania kesäksi."
+      "options": ["kumppani", "asiakas", "ystävä", "sukulainen"],
+      "answer": 0,
+      "explanation": "'Kumppani' means partner (in a relationship or business).",
+      "example": "Hän on minun kumppanini.",
+      "exampletranslate": "He is my partner."
     },
     {
       "id": 44,
       "type": "multiple-choice",
       "question": "Month",
-      "options": [
-        "kello",
-        "toimittaja",
-        "euro",
-        "kuukausi"
-      ],
-      "answer": 3,
-      "explanation": "A period of time.",
-      "example": "Tammikuu on vuoden ensimmäinen kuukausi."
+      "options": ["vuosi", "kuukausi", "vuoro", "kello"],
+      "answer": 1,
+      "explanation": "'Kuukausi' means month; its genitive is 'kuukauden'.",
+      "example": "Yksi kuukausi on noin neljä viikkoa.",
+      "exampletranslate": "One month is about four weeks."
     },
     {
       "id": 45,
       "type": "multiple-choice",
-      "question": "Picture / Photo",
-      "options": [
-        "kuva",
-        "työ",
-        "vastata",
-        "iso"
-      ],
+      "question": "Picture / Image",
+      "options": ["kuva", "valokuva", "kirja", "kello"],
       "answer": 0,
-      "explanation": "An image or photograph.",
-      "example": "Tämä on todella kaunis kuva sinusta."
+      "explanation": "'Kuva' means picture or image.",
+      "example": "Tässä on kuva perheestäni.",
+      "exampletranslate": "Here is a picture of my family."
     },
     {
       "id": 46,
       "type": "multiple-choice",
-      "question": "Lab technician",
-      "options": [
-        "hinta",
-        "laborantti",
-        "keksiä",
-        "kello"
-      ],
-      "answer": 1,
-      "explanation": "Someone working in a laboratory.",
-      "example": "Hän valmistui äskettäin laborantiksi."
+      "question": "Laboratory technician",
+      "options": ["laborantti", "lääkäri", "sairaanhoitaja", "insinööri"],
+      "answer": 0,
+      "explanation": "'Laborantti' means laboratory technician or lab assistant; its genitive is 'laborantin'.",
+      "example": "Hän työskentelee laboranttina.",
+      "exampletranslate": "She works as a laboratory technician."
     },
     {
       "id": 47,
       "type": "multiple-choice",
       "question": "Child",
-      "options": [
-        "lapsi",
-        "kissa",
-        "kampaaja",
-        "vasen"
-      ],
-      "answer": 0,
-      "explanation": "A young human being.",
-      "example": "Perheessä on yksi lapsi ja koira."
+      "options": ["poika", "lapsi", "tyttö", "vauva"],
+      "answer": 1,
+      "explanation": "'Lapsi' means child; its genitive is 'lapsen'.",
+      "example": "Meillä on kolme lasta.",
+      "exampletranslate": "We have three children."
     },
     {
       "id": 48,
       "type": "multiple-choice",
       "question": "Pet",
-      "options": [
-        "talo",
-        "lemmikki",
-        "tyttöystävä",
-        "pieni"
-      ],
-      "answer": 1,
-      "explanation": "An animal kept for companionship.",
-      "example": "Onko sinulla mitään lemmikkiä?"
+      "options": ["lemmikki", "kissa", "koira", "vauva"],
+      "answer": 0,
+      "explanation": "'Lemmikki' means pet; its genitive is 'lemmikin'.",
+      "example": "Onko sinulla lemmikkiä?",
+      "exampletranslate": "Do you have a pet?"
     },
     {
       "id": 49,
       "type": "multiple-choice",
       "question": "Doctor",
-      "options": [
-        "isoisä",
-        "lääkäri",
-        "työ",
-        "ystävä"
-      ],
-      "answer": 1,
-      "explanation": "Medical professional.",
-      "example": "Minun täytyy varata aika lääkärille."
+      "options": ["lääkäri", "sairaanhoitaja", "kampaaja", "kokki"],
+      "answer": 0,
+      "explanation": "'Lääkäri' means doctor or physician.",
+      "example": "Minun täytyy mennä lääkäriin.",
+      "exampletranslate": "I have to go to the doctor."
     },
     {
       "id": 50,
       "type": "multiple-choice",
-      "question": "To pay / To cost",
-      "options": [
-        "sinkku",
-        "maksaa",
-        "poika",
-        "iso"
-      ],
-      "answer": 1,
-      "explanation": "Type 1 verb. Can mean to pay for something or how much something costs.",
-      "example": "Maksan ostokset pankkikortilla."
+      "question": "To pay / cost",
+      "options": ["maksaa", "ostaa", "haluta", "odottaa"],
+      "answer": 0,
+      "explanation": "'Maksaa' (type 1 verb) means to pay or to cost; 'maksan' is 'I pay'.",
+      "example": "Paljonko tämä maksaa?",
+      "exampletranslate": "How much does this cost?"
     },
     {
       "id": 51,
       "type": "multiple-choice",
       "question": "To go",
-      "options": [
-        "talo",
-        "asiakas",
-        "oikea",
-        "mennä"
-      ],
-      "answer": 3,
-      "explanation": "Type 3 verb.",
-      "example": "Haluan mennä kotiin ajoissa tänään."
+      "options": ["mennä", "alkaa", "tehdä", "tietää"],
+      "answer": 0,
+      "explanation": "'Mennä' (type 3 verb) means to go; 'menen' is 'I go'.",
+      "example": "Menen töihin.",
+      "exampletranslate": "I am going to work."
     },
     {
       "id": 52,
       "type": "multiple-choice",
       "question": "Interesting",
-      "options": [
-        "isä",
-        "mielenkiintoinen",
-        "vanhemmat",
-        "iloinen"
-      ],
-      "answer": 1,
-      "explanation": "Adjective for something that holds attention.",
-      "example": "Tämä on erittäin mielenkiintoinen artikkeli."
+      "options": ["mielenkiintoinen", "iloinen", "mukava", "hyvä"],
+      "answer": 0,
+      "explanation": "'Mielenkiintoinen' means interesting; its genitive is 'mielenkiintoisen'.",
+      "example": "Tämä on mielenkiintoinen aihe.",
+      "exampletranslate": "This is an interesting topic."
     },
     {
       "id": 53,
       "type": "multiple-choice",
       "question": "Why",
-      "options": [
-        "isoäiti",
-        "lapsi",
-        "suklaa",
-        "miksi"
-      ],
-      "answer": 3,
-      "explanation": "Interrogative word asking for a reason.",
-      "example": "Miksi sinä olet tänään niin hiljainen?"
+      "options": ["miksi", "milloin", "millainen", "mitä"],
+      "answer": 0,
+      "explanation": "'Miksi' means why.",
+      "example": "Miksi sinä opiskelet suomea?",
+      "exampletranslate": "Why do you study Finnish?"
     },
     {
       "id": 54,
       "type": "multiple-choice",
-      "question": "What kind of / Which",
-      "options": [
-        "keksiä",
-        "millainen",
-        "sentti",
-        "tietää"
-      ],
-      "answer": 1,
-      "explanation": "Asks for a description.",
-      "example": "Millainen sää ulkona on?"
+      "question": "What kind of",
+      "options": ["millainen", "milloin", "miksi", "mitä"],
+      "answer": 0,
+      "explanation": "'Millainen' means what kind of (a synonym of 'minkälainen').",
+      "example": "Millainen sää tänään on?",
+      "exampletranslate": "What kind of weather is it today?"
     },
     {
       "id": 55,
       "type": "multiple-choice",
       "question": "When",
-      "options": [
-        "valokuva",
-        "milloin",
-        "kello",
-        "asiakas"
-      ],
+      "options": ["miksi", "milloin", "missä", "mitä"],
       "answer": 1,
-      "explanation": "Asks for a specific time or occasion.",
-      "example": "Milloin sinun syntymäpäiväsi on?"
+      "explanation": "'Milloin' means when.",
+      "example": "Milloin sinä tulet?",
+      "exampletranslate": "When are you coming?"
     },
     {
       "id": 56,
       "type": "multiple-choice",
       "question": "What kind of",
-      "options": [
-        "isoisä",
-        "ukki",
-        "myös",
-        "minkälainen"
-      ],
-      "answer": 3,
-      "explanation": "Alternative to 'millainen'.",
-      "example": "Minkälainen uusi asuntosi on?"
+      "options": ["minkälainen", "millainen", "milloin", "miksi"],
+      "answer": 0,
+      "explanation": "'Minkälainen' means what kind of; its genitive is 'minkälaisen' (same meaning as 'millainen').",
+      "example": "Minkälainen ihminen hän on?",
+      "exampletranslate": "What kind of person is he?"
     },
     {
       "id": 57,
       "type": "multiple-choice",
       "question": "What",
-      "options": [
-        "oikealla",
-        "ukki",
-        "kiva",
-        "mitä"
-      ],
-      "answer": 3,
-      "explanation": "Partitive of 'mikä'.",
-      "example": "Mitä sinä haluat syödä lounaaksi?"
+      "options": ["mitä", "miksi", "milloin", "missä"],
+      "answer": 0,
+      "explanation": "'Mitä' means what, the partitive form of 'mikä'.",
+      "example": "Mitä sinä teet?",
+      "exampletranslate": "What are you doing?"
     },
     {
       "id": 58,
       "type": "multiple-choice",
       "question": "To remember",
-      "options": [
-        "muistaa",
-        "kiva",
-        "pappa",
-        "iloinen"
-      ],
+      "options": ["muistaa", "tietää", "ajatella", "katsoa"],
       "answer": 0,
-      "explanation": "Type 1 verb.",
-      "example": "Muistatko vielä minun nimeni?"
+      "explanation": "'Muistaa' (type 1 verb) means to remember; 'muistan' is 'I remember'.",
+      "example": "Muistan sinun nimesi.",
+      "exampletranslate": "I remember your name."
     },
     {
       "id": 59,
       "type": "multiple-choice",
-      "question": "Comfortable / Nice",
-      "options": [
-        "mukava",
-        "ammatti",
-        "mennä",
-        "avoliitto"
-      ],
+      "question": "Nice / Pleasant / Comfortable",
+      "options": ["mukava", "iloinen", "mielenkiintoinen", "paras"],
       "answer": 0,
-      "explanation": "Adjective for something pleasant.",
-      "example": "Tämä uusi sohva on tosi mukava."
+      "explanation": "'Mukava' means nice, pleasant or comfortable.",
+      "example": "Hän on mukava ihminen.",
+      "exampletranslate": "He is a nice person."
     },
     {
       "id": 60,
       "type": "multiple-choice",
       "question": "Grandma",
-      "options": [
-        "mummo",
-        "milloin",
-        "yläkerta",
-        "vesi"
-      ],
+      "options": ["mummo", "pappa", "ukki", "äiti"],
       "answer": 0,
-      "explanation": "Informal and common word for grandmother.",
-      "example": "Mummo asuu nykyään palvelutalossa."
+      "explanation": "'Mummo' is an affectionate word for grandma.",
+      "example": "Mummo asuu maalla.",
+      "exampletranslate": "Grandma lives in the countryside."
     },
     {
       "id": 61,
       "type": "multiple-choice",
       "question": "Music teacher",
-      "options": [
-        "yhdessä",
-        "oma",
-        "musiikinopettaja",
-        "ukki"
-      ],
-      "answer": 2,
-      "explanation": "Compound word: musiikin (of music) + opettaja (teacher).",
-      "example": "Musiikinopettaja soittaa pianoa erinomaisesti."
+      "options": ["musiikinopettaja", "kampaaja", "toimittaja", "yrittäjä"],
+      "answer": 0,
+      "explanation": "'Musiikinopettaja' means music teacher, from 'musiikki' and 'opettaja'.",
+      "example": "Minun musiikinopettajani on kiva.",
+      "exampletranslate": "My music teacher is nice."
     },
     {
       "id": 62,
       "type": "multiple-choice",
       "question": "Other / Else",
-      "options": [
-        "tyttö",
-        "kiva",
-        "kello",
-        "muu"
-      ],
-      "answer": 3,
-      "explanation": "Adjective/pronoun indicating something different.",
-      "example": "Onko teillä jotain muuta väriä tästä paidasta?"
+      "options": ["muu", "sama", "oma", "itse"],
+      "answer": 0,
+      "explanation": "'Muu' means other or else.",
+      "example": "Haluatko jotain muuta?",
+      "exampletranslate": "Do you want something else?"
     },
     {
       "id": 63,
       "type": "multiple-choice",
       "question": "Also / Too",
-      "options": [
-        "iso",
-        "hinnasto",
-        "myös",
-        "ammatti"
-      ],
-      "answer": 2,
-      "explanation": "Adverb indicating addition.",
-      "example": "Minäkin pidän suklaasta, ja hän myös."
+      "options": ["myös", "taas", "noin", "vain"],
+      "answer": 0,
+      "explanation": "'Myös' means also or too.",
+      "example": "Minä myös puhun suomea.",
+      "exampletranslate": "I also speak Finnish."
     },
     {
       "id": 64,
       "type": "multiple-choice",
       "question": "Married",
-      "options": [
-        "naimisissa",
-        "hinnasto",
-        "mukava",
-        "auto"
-      ],
+      "options": ["naimisissa", "eronnut", "sinkku", "yksin"],
       "answer": 0,
-      "explanation": "Inessive plural form used as an adjective/state.",
-      "example": "He ovat olleet naimisissa kymmenen vuotta."
+      "explanation": "'Naimisissa' means married.",
+      "example": "He ovat naimisissa.",
+      "exampletranslate": "They are married."
     },
     {
       "id": 65,
       "type": "multiple-choice",
       "question": "About / Approximately",
-      "options": [
-        "noin",
-        "sinkku",
-        "vasen",
-        "kissa"
-      ],
+      "options": ["noin", "paljon", "myös", "vähän"],
       "answer": 0,
-      "explanation": "Used with numbers or amounts.",
-      "example": "Matka kestää noin kaksi tuntia."
+      "explanation": "'Noin' means about or approximately.",
+      "example": "Se maksaa noin viisi euroa.",
+      "exampletranslate": "It costs about five euros."
     },
     {
       "id": 66,
       "type": "multiple-choice",
       "question": "Now",
-      "options": [
-        "korvapuusti",
-        "nyt",
-        "minkälainen",
-        "isoäiti"
-      ],
-      "answer": 1,
-      "explanation": "Adverb of time.",
-      "example": "Minun täytyy lähteä nyt heti."
+      "options": ["nyt", "tänään", "taas", "täällä"],
+      "answer": 0,
+      "explanation": "'Nyt' means now.",
+      "example": "Mitä teet nyt?",
+      "exampletranslate": "What are you doing now?"
     },
     {
       "id": 67,
       "type": "multiple-choice",
-      "question": "To wait",
-      "options": [
-        "ystävä",
-        "pieni",
-        "vauva",
-        "odottaa"
-      ],
-      "answer": 3,
-      "explanation": "Type 1 verb, often takes a partitive object.",
-      "example": "Odotan bussia pysäkillä."
+      "question": "To wait / expect",
+      "options": ["odottaa", "katsoa", "mennä", "vastata"],
+      "answer": 0,
+      "explanation": "'Odottaa' (type 1 verb) means to wait or expect; 'odotan' is 'I wait'.",
+      "example": "Odotan bussia.",
+      "exampletranslate": "I am waiting for the bus."
     },
     {
       "id": 68,
       "type": "multiple-choice",
       "question": "Right / Correct",
-      "options": [
-        "katsoa",
-        "minkälainen",
-        "myös",
-        "oikea"
-      ],
-      "answer": 3,
-      "explanation": "Can mean the right side or factually correct.",
-      "example": "Tämä on täysin oikea vastaus kysymykseen."
+      "options": ["oikea", "vasen", "paras", "sama"],
+      "answer": 0,
+      "explanation": "'Oikea' means right (direction) or correct.",
+      "example": "Tämä on oikea vastaus.",
+      "exampletranslate": "This is the correct answer."
     },
     {
       "id": 69,
       "type": "multiple-choice",
       "question": "On the right",
-      "options": [
-        "miksi",
-        "yhdessä",
-        "oikealla",
-        "sinkku"
-      ],
-      "answer": 2,
-      "explanation": "Adessive form of 'oikea' indicating location.",
-      "example": "Kauppa on kadun oikealla puolella."
+      "options": ["vasemmalla", "oikealla", "täällä", "yläkerta"],
+      "answer": 1,
+      "explanation": "'Oikealla' means on the right side.",
+      "example": "Kauppa on oikealla.",
+      "exampletranslate": "The shop is on the right."
     },
     {
       "id": 70,
       "type": "multiple-choice",
       "question": "To be from",
-      "options": [
-        "yrittäjä",
-        "koira",
-        "isoisä",
-        "olla kotoisin"
-      ],
-      "answer": 3,
-      "explanation": "Phrase indicating origin.",
-      "example": "Olen kotoisin Turkista."
+      "options": ["olla kotoisin", "olla töissä", "olla naimisissa", "mennä"],
+      "answer": 0,
+      "explanation": "'Olla kotoisin' means to be from (a place); 'olen kotoisin' is 'I am from'.",
+      "example": "Minä olen kotoisin Turkista.",
+      "exampletranslate": "I am from Turkey."
     },
     {
       "id": 71,
       "type": "multiple-choice",
       "question": "Beer",
-      "options": [
-        "olut",
-        "mielenkiintoinen",
-        "sinkku",
-        "tyttöystävä"
-      ],
-      "answer": 0,
-      "explanation": "An alcoholic beverage.",
-      "example": "Otan yhden kylmän oluen, kiitos."
+      "options": ["kahvi", "olut", "tee", "vesi"],
+      "answer": 1,
+      "explanation": "'Olut' means beer; its genitive is 'oluen'.",
+      "example": "Otan yhden oluen.",
+      "exampletranslate": "I'll have one beer."
     },
     {
       "id": 72,
       "type": "multiple-choice",
       "question": "Own",
-      "options": [
-        "paljon",
-        "kumppani",
-        "hyvä",
-        "oma"
-      ],
-      "answer": 3,
-      "explanation": "Possessive adjective.",
-      "example": "On mukavaa nukkua omassa sängyssä."
+      "options": ["oma", "sama", "muu", "itse"],
+      "answer": 0,
+      "explanation": "'Oma' means own (one's own).",
+      "example": "Minulla on oma auto.",
+      "exampletranslate": "I have my own car."
     },
     {
       "id": 73,
       "type": "multiple-choice",
       "question": "To buy",
-      "options": [
-        "kiva",
-        "kahvi",
-        "vuoro",
-        "ostaa"
-      ],
-      "answer": 3,
-      "explanation": "Type 1 verb.",
-      "example": "Haluan ostaa uudet kengät."
+      "options": ["ostaa", "maksaa", "haluta", "odottaa"],
+      "answer": 0,
+      "explanation": "'Ostaa' (type 1 verb) means to buy; 'ostan' is 'I buy'.",
+      "example": "Ostan uuden kirjan.",
+      "exampletranslate": "I am buying a new book."
     },
     {
       "id": 74,
       "type": "multiple-choice",
       "question": "Piece",
-      "options": [
-        "oma",
-        "pala",
-        "perhe",
-        "vasemmalla"
-      ],
-      "answer": 1,
-      "explanation": "A portion of something.",
-      "example": "Haluatko vielä yhden palan kakkua?"
+      "options": ["pala", "kakku", "hinta", "vuoro"],
+      "answer": 0,
+      "explanation": "'Pala' means piece or slice.",
+      "example": "Otan palan suklaata.",
+      "exampletranslate": "I'll take a piece of chocolate."
     },
     {
       "id": 75,
       "type": "multiple-choice",
-      "question": "A lot / Very much",
-      "options": [
-        "asiakas",
-        "paljon",
-        "korvapuusti",
-        "talo"
-      ],
-      "answer": 1,
-      "explanation": "Adverb of quantity.",
-      "example": "Täällä on tänään paljon ihmisiä."
+      "question": "A lot / Much",
+      "options": ["paljon", "vähän", "noin", "myös"],
+      "answer": 0,
+      "explanation": "'Paljon' means a lot or much.",
+      "example": "Minulla on paljon työtä.",
+      "exampletranslate": "I have a lot of work."
     },
     {
       "id": 76,
       "type": "multiple-choice",
       "question": "Grandpa",
-      "options": [
-        "koira",
-        "vuoro",
-        "kuukausi",
-        "pappa"
-      ],
-      "answer": 3,
-      "explanation": "Informal word for grandfather.",
-      "example": "Pappa käy usein kalassa."
+      "options": ["pappa", "mummo", "isä", "veli"],
+      "answer": 0,
+      "explanation": "'Pappa' is an affectionate word for grandpa; its genitive is 'papan'.",
+      "example": "Pappa kertoo tarinoita.",
+      "exampletranslate": "Grandpa tells stories."
     },
     {
       "id": 77,
       "type": "multiple-choice",
       "question": "Best",
-      "options": [
-        "paras",
-        "ammatti",
-        "toimittaja",
-        "miksi"
-      ],
-      "answer": 0,
-      "explanation": "Superlative of 'hyvä'.",
-      "example": "Hän on minun paras ystäväni."
+      "options": ["hyvä", "paras", "iso", "uusi"],
+      "answer": 1,
+      "explanation": "'Paras' means best; its genitive is 'parhaan'.",
+      "example": "Hän on minun paras ystäväni.",
+      "exampletranslate": "He is my best friend."
     },
     {
       "id": 78,
       "type": "multiple-choice",
       "question": "Family",
-      "options": [
-        "isoisä",
-        "minkälainen",
-        "perhe",
-        "hampurilainen"
-      ],
-      "answer": 2,
-      "explanation": "Group of related individuals.",
-      "example": "Meidän perheeseen kuuluu viisi ihmistä."
+      "options": ["perhe", "perheenjäsen", "sukulainen", "koti"],
+      "answer": 0,
+      "explanation": "'Perhe' means family; its genitive is 'perheen'.",
+      "example": "Minun perheeni on iso.",
+      "exampletranslate": "My family is big."
     },
     {
       "id": 79,
       "type": "multiple-choice",
       "question": "Family member",
-      "options": [
-        "perheenjäsen",
-        "minkälainen",
-        "toimittaja",
-        "asiakas"
-      ],
-      "answer": 0,
-      "explanation": "Compound word: perheen + jäsen.",
-      "example": "Koira on tärkeä perheenjäsen meille."
+      "options": ["perhe", "perheenjäsen", "sukulainen", "kumppani"],
+      "answer": 1,
+      "explanation": "'Perheenjäsen' means family member; its genitive is 'perheenjäsenen'.",
+      "example": "Kuinka monta perheenjäsentä teillä on?",
+      "exampletranslate": "How many family members do you have?"
     },
     {
       "id": 80,
       "type": "multiple-choice",
       "question": "Small",
-      "options": [
-        "vasen",
-        "ystävä",
-        "hyvä",
-        "pieni"
-      ],
-      "answer": 3,
-      "explanation": "Adjective opposite of 'iso'.",
-      "example": "Tuo on todella söpö pieni kissa."
+      "options": ["iso", "pieni", "hyvä", "oma"],
+      "answer": 1,
+      "explanation": "'Pieni' means small; its genitive is 'pienen'.",
+      "example": "Meillä on pieni asunto.",
+      "exampletranslate": "We have a small apartment."
     },
     {
       "id": 81,
       "type": "multiple-choice",
-      "question": "Son / Boy",
-      "options": [
-        "yhdessä",
-        "poika",
-        "paljon",
-        "oikealla"
-      ],
+      "question": "Boy / Son",
+      "options": ["tyttö", "poika", "lapsi", "veli"],
       "answer": 1,
-      "explanation": "Male child.",
-      "example": "Minulla on kaksi poikaa ja yksi tytär."
+      "explanation": "'Poika' means boy or son; its genitive is 'pojan'.",
+      "example": "Heillä on yksi poika.",
+      "exampletranslate": "They have one son."
     },
     {
       "id": 82,
       "type": "multiple-choice",
       "question": "Nurse",
-      "options": [
-        "sairaanhoitaja",
-        "kahvi",
-        "työ",
-        "vuoro"
-      ],
+      "options": ["sairaanhoitaja", "lääkäri", "kampaaja", "laborantti"],
       "answer": 0,
-      "explanation": "Medical professional.",
-      "example": "Sairaanhoitaja auttaa lääkäriä sairaalassa."
+      "explanation": "'Sairaanhoitaja' means nurse.",
+      "example": "Minun äitini on sairaanhoitaja.",
+      "exampletranslate": "My mother is a nurse."
     },
     {
       "id": 83,
       "type": "multiple-choice",
       "question": "Same",
-      "options": [
-        "pala",
-        "hyvä",
-        "tänään",
-        "sama"
-      ],
-      "answer": 3,
-      "explanation": "Identical.",
-      "example": "Meillä on aivan sama ongelma."
+      "options": ["sama", "muu", "oma", "paras"],
+      "answer": 0,
+      "explanation": "'Sama' means same.",
+      "example": "Me olemme samasta maasta.",
+      "exampletranslate": "We are from the same country."
     },
     {
       "id": 84,
       "type": "multiple-choice",
-      "question": "Cent / Centimeter",
-      "options": [
-        "tänään",
-        "sentti",
-        "appi",
-        "avoliitto"
-      ],
+      "question": "Cent",
+      "options": ["euro", "sentti", "hinta", "raha"],
       "answer": 1,
-      "explanation": "Currency subunit or unit of length.",
-      "example": "Kahvi maksaa kaksi euroa ja viisikymmentä senttiä."
+      "explanation": "'Sentti' means cent; its genitive is 'sentin'.",
+      "example": "Se maksaa viisikymmentä senttiä.",
+      "exampletranslate": "It costs fifty cents."
     },
     {
       "id": 85,
       "type": "multiple-choice",
-      "question": "Single",
-      "options": [
-        "minkälainen",
-        "poika",
-        "työ",
-        "sinkku"
-      ],
-      "answer": 3,
-      "explanation": "Slang/informal for an unmarried person.",
-      "example": "Olen nykyään sinkku."
+      "question": "Single (person)",
+      "options": ["sinkku", "naimisissa", "eronnut", "yksin"],
+      "answer": 0,
+      "explanation": "'Sinkku' means a single person (informal); its genitive is 'sinkun'.",
+      "example": "Hän on sinkku.",
+      "exampletranslate": "He is single."
     },
     {
       "id": 86,
       "type": "multiple-choice",
       "question": "Sister",
-      "options": [
-        "sisko",
-        "hyvä",
-        "appi",
-        "katsoa"
-      ],
-      "answer": 0,
-      "explanation": "Female sibling.",
-      "example": "Minun siskoni opiskelee lääkäriksi."
+      "options": ["veli", "sisko", "äiti", "tyttö"],
+      "answer": 1,
+      "explanation": "'Sisko' means sister.",
+      "example": "Minun siskoni asuu Ruotsissa.",
+      "exampletranslate": "My sister lives in Sweden."
     },
     {
       "id": 87,
       "type": "multiple-choice",
       "question": "Chocolate",
-      "options": [
-        "kakku",
-        "itse",
-        "suklaa",
-        "tänään"
-      ],
-      "answer": 2,
-      "explanation": "A sweet food.",
-      "example": "Pidän erityisesti tummasta suklaasta."
+      "options": ["kakku", "suklaa", "korvapuusti", "kahvi"],
+      "answer": 1,
+      "explanation": "'Suklaa' means chocolate.",
+      "example": "Rakastan tummaa suklaata.",
+      "exampletranslate": "I love dark chocolate."
     },
     {
       "id": 88,
       "type": "multiple-choice",
       "question": "Relative",
-      "options": [
-        "yksinhuoltaja",
-        "mitä",
-        "isoisä",
-        "sukulainen"
-      ],
-      "answer": 3,
-      "explanation": "A person connected by blood or marriage.",
-      "example": "Sukulaismme asuvat eri kaupungeissa."
+      "options": ["sukulainen", "perheenjäsen", "kumppani", "ystävä"],
+      "answer": 0,
+      "explanation": "'Sukulainen' means relative; its genitive is 'sukulaisen'.",
+      "example": "Hän on minun sukulaiseni.",
+      "exampletranslate": "He is my relative."
     },
     {
       "id": 89,
       "type": "multiple-choice",
       "question": "Again",
-      "options": [
-        "kello",
-        "vesi",
-        "taas",
-        "keksiä"
-      ],
-      "answer": 2,
-      "explanation": "Adverb indicating repetition.",
-      "example": "Sataa taas vettä koko päivän."
+      "options": ["taas", "nyt", "myös", "takaisin"],
+      "answer": 0,
+      "explanation": "'Taas' means again.",
+      "example": "Nähdään taas huomenna.",
+      "exampletranslate": "See you again tomorrow."
     },
     {
       "id": 90,
       "type": "multiple-choice",
       "question": "Back",
-      "options": [
-        "asiakas",
-        "talo",
-        "takaisin",
-        "yksinhuoltaja"
-      ],
-      "answer": 2,
-      "explanation": "Adverb indicating a return to a place.",
-      "example": "Milloin tulet takaisin Suomeen?"
+      "options": ["taas", "takaisin", "nyt", "yhdessä"],
+      "answer": 1,
+      "explanation": "'Takaisin' means back (returning).",
+      "example": "Tulen pian takaisin.",
+      "exampletranslate": "I'll come back soon."
     },
     {
       "id": 91,
       "type": "multiple-choice",
-      "question": "Home / House",
-      "options": [
-        "isä",
-        "talo",
-        "sinkku",
-        "hyvä"
-      ],
-      "answer": 1,
-      "explanation": "A building for human habitation.",
-      "example": "Ostin vihdoin oman talon."
+      "question": "House",
+      "options": ["talo", "koti", "koulu", "kahvila"],
+      "answer": 0,
+      "explanation": "'Talo' means house or building.",
+      "example": "Heidän talonsa on iso.",
+      "exampletranslate": "Their house is big."
     },
     {
       "id": 92,
       "type": "multiple-choice",
       "question": "Tea",
-      "options": [
-        "koira",
-        "vasen",
-        "tee",
-        "sentti"
-      ],
-      "answer": 2,
-      "explanation": "A hot drink.",
-      "example": "Juon vihreää teetä aamuisin."
+      "options": ["kahvi", "tee", "vesi", "olut"],
+      "answer": 1,
+      "explanation": "'Tee' means tea.",
+      "example": "Juotko teetä vai kahvia?",
+      "exampletranslate": "Do you drink tea or coffee?"
     },
     {
       "id": 93,
       "type": "multiple-choice",
-      "question": "To make / To do",
-      "options": [
-        "hinta",
-        "muu",
-        "tehdä",
-        "kiva"
-      ],
-      "answer": 2,
-      "explanation": "Type 2 verb, highly versatile.",
-      "example": "Mitä sinä tykkäät tehdä vapaa-ajalla?"
+      "question": "To do / make",
+      "options": ["tehdä", "tietää", "mennä", "ajatella"],
+      "answer": 0,
+      "explanation": "'Tehdä' (type 2 verb) means to do or make; 'teen' is 'I do/make'.",
+      "example": "Mitä sinä teet tänään?",
+      "exampletranslate": "What are you doing today?"
     },
     {
       "id": 94,
       "type": "multiple-choice",
       "question": "To know",
-      "options": [
-        "tietää",
-        "hinnasto",
-        "vasen",
-        "kahvila"
-      ],
+      "options": ["tietää", "muistaa", "ajatella", "keksiä"],
       "answer": 0,
-      "explanation": "Type 1 verb, refers to knowing a fact.",
-      "example": "Tiedätkö, missä juna-asema on?"
+      "explanation": "'Tietää' (type 1 verb) means to know (a fact); 'tiedän' is 'I know'.",
+      "example": "Tiedän vastauksen.",
+      "exampletranslate": "I know the answer."
     },
     {
       "id": 95,
       "type": "multiple-choice",
-      "question": "Journalist / Supplier",
-      "options": [
-        "pala",
-        "vesi",
-        "toimittaja",
-        "muistaa"
-      ],
-      "answer": 2,
-      "explanation": "Can mean someone who delivers news or goods.",
-      "example": "Toimittaja kirjoittaa artikkelia lehteen."
+      "question": "Journalist / Reporter",
+      "options": ["toimittaja", "yrittäjä", "insinööri", "opettaja"],
+      "answer": 0,
+      "explanation": "'Toimittaja' means journalist or reporter.",
+      "example": "Hän työskentelee toimittajana.",
+      "exampletranslate": "She works as a journalist."
     },
     {
       "id": 96,
       "type": "multiple-choice",
-      "question": "Girl / Daughter",
-      "options": [
-        "hinta",
-        "hyvä",
-        "mitä",
-        "tyttö"
-      ],
-      "answer": 3,
-      "explanation": "Female child.",
-      "example": "Tuo tyttö tuolla on minun tyttäreni."
+      "question": "Girl",
+      "options": ["poika", "tyttö", "lapsi", "vauva"],
+      "answer": 1,
+      "explanation": "'Tyttö' means girl; its genitive is 'tytön'.",
+      "example": "Tyttö lukee kirjaa.",
+      "exampletranslate": "The girl is reading a book."
     },
     {
       "id": 97,
       "type": "multiple-choice",
       "question": "Girlfriend",
-      "options": [
-        "sukulainen",
-        "vesi",
-        "täällä",
-        "tyttöystävä"
-      ],
-      "answer": 3,
-      "explanation": "Female romantic partner.",
-      "example": "Hänen tyttöystävänsä on kotoisin Espanjasta."
+      "options": ["tyttöystävä", "tyttö", "vaimo", "sisko"],
+      "answer": 0,
+      "explanation": "'Tyttöystävä' means girlfriend, from 'tyttö' (girl) and 'ystävä' (friend).",
+      "example": "Hänellä on tyttöystävä.",
+      "exampletranslate": "He has a girlfriend."
     },
     {
       "id": 98,
       "type": "multiple-choice",
       "question": "Work / Job",
-      "options": [
-        "kissa",
-        "äiti",
-        "työ",
-        "tehdä"
-      ],
-      "answer": 2,
-      "explanation": "Employment or task.",
-      "example": "Minulla on paljon töitä tänään."
+      "options": ["työ", "vuoro", "koulu", "ammatti"],
+      "answer": 0,
+      "explanation": "'Työ' means work or job.",
+      "example": "Minulla on uusi työ.",
+      "exampletranslate": "I have a new job."
     },
     {
       "id": 99,
       "type": "multiple-choice",
       "question": "Today",
-      "options": [
-        "minkälainen",
-        "pieni",
-        "vasen",
-        "tänään"
-      ],
-      "answer": 3,
-      "explanation": "This present day.",
-      "example": "Tänään on kaunis ja aurinkoinen sää."
+      "options": ["tänään", "nyt", "taas", "huomenta"],
+      "answer": 0,
+      "explanation": "'Tänään' means today.",
+      "example": "Tänään on kaunis päivä.",
+      "exampletranslate": "Today is a beautiful day."
     },
     {
       "id": 100,
       "type": "multiple-choice",
       "question": "Here",
-      "options": [
-        "työ",
-        "isoäiti",
-        "täällä",
-        "tietää"
-      ],
-      "answer": 2,
-      "explanation": "Adverb of place.",
-      "example": "Onko täällä ketään kotona?"
+      "options": ["täällä", "kotona", "töissä", "oikealla"],
+      "answer": 0,
+      "explanation": "'Täällä' means here (in this place).",
+      "example": "Minä olen täällä.",
+      "exampletranslate": "I am here."
     },
     {
       "id": 101,
       "type": "multiple-choice",
       "question": "At work",
-      "options": [
-        "miksi",
-        "oikealla",
-        "pala",
-        "töissä"
-      ],
-      "answer": 3,
-      "explanation": "Inessive plural of 'työ'.",
-      "example": "Olen töissä iltaan asti."
+      "options": ["töissä", "kotona", "täällä", "koulu"],
+      "answer": 0,
+      "explanation": "'Töissä' means at work.",
+      "example": "Isä on nyt töissä.",
+      "exampletranslate": "Dad is at work now."
     },
     {
       "id": 102,
       "type": "multiple-choice",
       "question": "Grandpa",
-      "options": [
-        "ukki",
-        "hinta",
-        "työ",
-        "hampurilainen"
-      ],
+      "options": ["ukki", "mummo", "pappa", "appi"],
       "answer": 0,
-      "explanation": "Another informal word for grandfather.",
-      "example": "Ukki kertoo usein mielenkiintoisia tarinoita."
+      "explanation": "'Ukki' is an affectionate word for grandpa; its genitive is 'ukin'.",
+      "example": "Ukki on jo vanha.",
+      "exampletranslate": "Grandpa is already old."
     },
     {
       "id": 103,
       "type": "multiple-choice",
-      "question": "Photo / Photograph",
-      "options": [
-        "yrittäjä",
-        "valokuva",
-        "tyttöystävä",
-        "isä"
-      ],
+      "question": "Photograph",
+      "options": ["kuva", "valokuva", "kirja", "kakku"],
       "answer": 1,
-      "explanation": "An image taken with a camera.",
-      "example": "Voisitko ottaa meistä valokuvan?"
+      "explanation": "'Valokuva' means photograph, from 'valo' (light) and 'kuva' (image).",
+      "example": "Otan valokuvan sinusta.",
+      "exampletranslate": "I'll take a photograph of you."
     },
     {
       "id": 104,
       "type": "multiple-choice",
       "question": "Parents",
-      "options": [
-        "appi",
-        "vanhemmat",
-        "ammatti",
-        "muu"
-      ],
-      "answer": 1,
-      "explanation": "Plural of 'vanhempi'.",
-      "example": "Minun vanhempani asuvat Italiassa."
+      "options": ["vanhemmat", "sukulainen", "perheenjäsen", "lapset"],
+      "answer": 0,
+      "explanation": "'Vanhemmat' means parents (plural of 'vanhempi').",
+      "example": "Minun vanhempani asuvat maalla.",
+      "exampletranslate": "My parents live in the countryside."
     },
     {
       "id": 105,
       "type": "multiple-choice",
       "question": "On the left",
-      "options": [
-        "avoliitto",
-        "isoäiti",
-        "vuoro",
-        "vasemmalla"
-      ],
-      "answer": 3,
-      "explanation": "Adessive form of 'vasen'.",
-      "example": "Kirjasto on tuolla vasemmalla."
+      "options": ["oikealla", "vasemmalla", "täällä", "yläkerta"],
+      "answer": 1,
+      "explanation": "'Vasemmalla' means on the left side.",
+      "example": "Kahvila on vasemmalla.",
+      "exampletranslate": "The café is on the left."
     },
     {
       "id": 106,
       "type": "multiple-choice",
       "question": "Left",
-      "options": [
-        "töissä",
-        "mennä",
-        "miksi",
-        "vasen"
-      ],
-      "answer": 3,
-      "explanation": "Direction opposite of right.",
-      "example": "Nosta vasen käsi ylös."
+      "options": ["oikea", "vasen", "sama", "muu"],
+      "answer": 1,
+      "explanation": "'Vasen' means left; its genitive is 'vasemman'.",
+      "example": "Vasen käsi on kipeä.",
+      "exampletranslate": "My left hand is sore."
     },
     {
       "id": 107,
       "type": "multiple-choice",
-      "question": "To answer",
-      "options": [
-        "sukulainen",
-        "kahvila",
-        "myös",
-        "vastata"
-      ],
-      "answer": 3,
-      "explanation": "Type 4 verb. Means to reply to a question.",
-      "example": "Voitko vastata tähän sähköpostiin nopeasti?"
+      "question": "To answer / reply",
+      "options": ["vastata", "kysyä", "odottaa", "katsoa"],
+      "answer": 0,
+      "explanation": "'Vastata' (type 4 verb) means to answer or reply; 'vastaan' is 'I answer'.",
+      "example": "Vastaa kysymykseen.",
+      "exampletranslate": "Answer the question."
     },
     {
       "id": 108,
       "type": "multiple-choice",
       "question": "Baby",
-      "options": [
-        "ukki",
-        "oikealla",
-        "vauva",
-        "asiakas"
-      ],
-      "answer": 2,
-      "explanation": "An infant.",
-      "example": "Pieni vauva nukkuu vaunuissa."
+      "options": ["lapsi", "vauva", "poika", "tyttö"],
+      "answer": 1,
+      "explanation": "'Vauva' means baby.",
+      "example": "Heillä on uusi vauva.",
+      "exampletranslate": "They have a new baby."
     },
     {
       "id": 109,
       "type": "multiple-choice",
       "question": "Brother",
-      "options": [
-        "veli",
-        "kello",
-        "yhdessä",
-        "oikea"
-      ],
-      "answer": 0,
-      "explanation": "Male sibling.",
-      "example": "Minulla on kaksi vanhempaa veljeä."
+      "options": ["sisko", "veli", "poika", "isä"],
+      "answer": 1,
+      "explanation": "'Veli' means brother; its genitive is 'veljen'.",
+      "example": "Minun veljeni on insinööri.",
+      "exampletranslate": "My brother is an engineer."
     },
     {
       "id": 110,
       "type": "multiple-choice",
       "question": "Water",
-      "options": [
-        "iloinen",
-        "vesi",
-        "muu",
-        "täällä"
-      ],
-      "answer": 1,
-      "explanation": "A transparent fluid.",
-      "example": "Muista juoda tarpeeksi vettä päivän aikana."
+      "options": ["kahvi", "tee", "vesi", "olut"],
+      "answer": 2,
+      "explanation": "'Vesi' means water; its genitive is 'veden'.",
+      "example": "Saanko lasin vettä?",
+      "exampletranslate": "May I have a glass of water?"
     },
     {
       "id": 111,
       "type": "multiple-choice",
       "question": "Turn / Shift",
-      "options": [
-        "vuoro",
-        "täällä",
-        "lääkäri",
-        "hyvä"
-      ],
+      "options": ["vuoro", "kello", "kuukausi", "työ"],
       "answer": 0,
-      "explanation": "Can mean a turn in a game or a work shift.",
-      "example": "Nyt on sinun vuorosi pelata."
+      "explanation": "'Vuoro' means turn or shift.",
+      "example": "Nyt on sinun vuorosi.",
+      "exampletranslate": "Now it is your turn."
     },
     {
       "id": 112,
       "type": "multiple-choice",
       "question": "Together",
-      "options": [
-        "isä",
-        "isoisä",
-        "yhdessä",
-        "ammatti"
-      ],
-      "answer": 2,
-      "explanation": "With another person.",
-      "example": "Tehdään tämä tehtävä yhdessä."
+      "options": ["yksin", "yhdessä", "itse", "taas"],
+      "answer": 1,
+      "explanation": "'Yhdessä' means together.",
+      "example": "Me teemme sen yhdessä.",
+      "exampletranslate": "We do it together."
     },
     {
       "id": 113,
       "type": "multiple-choice",
       "question": "Alone",
-      "options": [
-        "isoisä",
-        "yksin",
-        "vuoro",
-        "tyttö"
-      ],
+      "options": ["yhdessä", "yksin", "itse", "oma"],
       "answer": 1,
-      "explanation": "Without other people.",
-      "example": "Minä matkustan mieluiten yksin."
+      "explanation": "'Yksin' means alone.",
+      "example": "Hän asuu yksin.",
+      "exampletranslate": "He lives alone."
     },
     {
       "id": 114,
       "type": "multiple-choice",
       "question": "Single parent",
-      "options": [
-        "itse",
-        "avoliitto",
-        "sukulainen",
-        "yksinhuoltaja"
-      ],
-      "answer": 3,
-      "explanation": "A person bringing up a child or children without a partner.",
-      "example": "Hän on kolmen lapsen yksinhuoltaja."
+      "options": ["yksinhuoltaja", "yrittäjä", "kumppani", "sukulainen"],
+      "answer": 0,
+      "explanation": "'Yksinhuoltaja' means single parent.",
+      "example": "Hän on yksinhuoltaja.",
+      "exampletranslate": "She is a single parent."
     },
     {
       "id": 115,
       "type": "multiple-choice",
-      "question": "Upstairs",
-      "options": [
-        "yläkerta",
-        "koira",
-        "kiva",
-        "yhdessä"
-      ],
+      "question": "Upstairs / Upper floor",
+      "options": ["yläkerta", "vasemmalla", "oikealla", "täällä"],
       "answer": 0,
-      "explanation": "The upper floor of a building.",
-      "example": "Makuuhuoneet sijaitsevat yläkerrassa."
+      "explanation": "'Yläkerta' means upstairs or the upper floor; its genitive is 'yläkerran'.",
+      "example": "Makuuhuone on yläkerrassa.",
+      "exampletranslate": "The bedroom is upstairs."
     },
     {
       "id": 116,
       "type": "multiple-choice",
       "question": "Entrepreneur",
-      "options": [
-        "työ",
-        "kissa",
-        "isä",
-        "yrittäjä"
-      ],
-      "answer": 3,
-      "explanation": "A person who runs a business.",
-      "example": "Olen toiminut yrittäjänä jo viisi vuotta."
+      "options": ["yrittäjä", "toimittaja", "insinööri", "asiakas"],
+      "answer": 0,
+      "explanation": "'Yrittäjä' means entrepreneur or self-employed person.",
+      "example": "Minun isäni on yrittäjä.",
+      "exampletranslate": "My father is an entrepreneur."
     },
     {
       "id": 117,
       "type": "multiple-choice",
       "question": "Friend",
-      "options": [
-        "iloinen",
-        "sinkku",
-        "myös",
-        "ystävä"
-      ],
-      "answer": 3,
-      "explanation": "A person with whom one has a bond of mutual affection.",
-      "example": "Hyvä ystävä auttaa aina vaikeina hetkinä."
+      "options": ["ystävä", "kumppani", "naapuri", "sukulainen"],
+      "answer": 0,
+      "explanation": "'Ystävä' means friend.",
+      "example": "Hän on minun hyvä ystäväni.",
+      "exampletranslate": "He is my good friend."
     },
     {
       "id": 118,
       "type": "multiple-choice",
       "question": "Mother",
-      "options": [
-        "vanhemmat",
-        "tänään",
-        "pappa",
-        "äiti"
-      ],
-      "answer": 3,
-      "explanation": "Female parent.",
-      "example": "Minun äitini soittaa minulle joka ilta."
+      "options": ["isä", "äiti", "sisko", "mummo"],
+      "answer": 1,
+      "explanation": "'Äiti' means mother; its genitive is 'äidin'.",
+      "example": "Minun äitini on opettaja.",
+      "exampletranslate": "My mother is a teacher."
     }
   ]
 }
