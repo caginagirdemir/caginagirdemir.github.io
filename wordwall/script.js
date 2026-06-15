@@ -37,6 +37,7 @@
     if (!ok) html += " &nbsp;Answer: <b>" + escapeHtml(correctText) + "</b>";
     if (q.explanation) html += '<p class="reveal-note">'    + escapeHtml(q.explanation) + "</p>";
     if (q.example)     html += '<p class="reveal-example">' + escapeHtml(q.example)     + "</p>";
+    if (q.exampletranslate)     html += '<p class="reveal-example-translate">' + escapeHtml(q.exampletranslate)     + "</p>";
     return html;
   }
 
