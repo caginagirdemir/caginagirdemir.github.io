@@ -1,0 +1,618 @@
+{
+  "id": "chapter13",
+  "title": "Chapter13",
+  "description": "Finnish vocabulary: accidents, emergencies, news, safety and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "During",
+      "options": ["aikana", "sinne", "kovin", "lopulta"],
+      "answer": 0,
+      "explanation": "'Aikana' means during (used with the genitive).",
+      "example": "Onnettomuus tapahtui yön aikana.",
+      "exampletranslate": "The accident happened during the night."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Breathalyzer",
+      "options": ["alkometri", "vesihana", "kahvinkeitin", "alue"],
+      "answer": 0,
+      "explanation": "'Alkometri' means breathalyzer.",
+      "example": "Poliisi käyttää alkometriä.",
+      "exampletranslate": "The police use a breathalyzer."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Area",
+      "options": ["alue", "osa", "tilanne", "savu"],
+      "answer": 0,
+      "explanation": "'Alue' means area; its genitive is 'alueen'.",
+      "example": "Tämä on rauhallinen alue.",
+      "exampletranslate": "This is a peaceful area."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Ambulance",
+      "options": ["ambulanssi", "henkilöauto", "moottoritie", "alkometri"],
+      "answer": 0,
+      "explanation": "'Ambulanssi' means ambulance.",
+      "example": "Ambulanssi tuli paikalle nopeasti.",
+      "exampletranslate": "The ambulance came to the scene quickly."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "No one",
+      "options": ["ei kukaan", "kukaan", "joku", "kaikki"],
+      "answer": 0,
+      "explanation": "'Ei kukaan' means no one; its genitive is 'ei kenenkään'.",
+      "example": "Ei kukaan loukkaantunut.",
+      "exampletranslate": "No one got injured."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Excellent",
+      "options": ["erinomainen", "onnellinen", "turvallinen", "voimakas"],
+      "answer": 0,
+      "explanation": "'Erinomainen' means excellent; its genitive is 'erinomaisen'.",
+      "example": "Tämä on erinomainen uutinen.",
+      "exampletranslate": "This is excellent news."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "To smell",
+      "options": ["haistaa", "selittää", "sammuttaa", "ohjata"],
+      "answer": 0,
+      "explanation": "'Haistaa' (type 1 verb) means to smell; 'haistan' is 'I smell'.",
+      "example": "Haistan savun.",
+      "exampletranslate": "I smell smoke."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Car (passenger car)",
+      "options": ["henkilöauto", "ambulanssi", "moottoritie", "oja"],
+      "answer": 0,
+      "explanation": "'Henkilöauto' means a passenger car.",
+      "example": "Henkilöauto suistui ojaan.",
+      "exampletranslate": "The car ran off into the ditch."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "To alert / sound an alarm",
+      "options": ["hälyttää", "sammuttaa", "syttyä", "varastaa"],
+      "answer": 0,
+      "explanation": "'Hälyttää' (type 1 verb) means to alert or sound an alarm; 'hälytän' is 'I alert'.",
+      "example": "Hälytän ambulanssin paikalle.",
+      "exampletranslate": "I call (alert) the ambulance to the scene."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "To continue",
+      "options": ["jatkaa", "sulkea", "selittää", "ohjata"],
+      "answer": 0,
+      "explanation": "'Jatkaa' (type 1 verb) means to continue; 'jatkan' is 'I continue'.",
+      "example": "Jatkan matkaa myöhemmin.",
+      "exampletranslate": "I continue the journey later."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "If",
+      "options": ["jos", "kun", "kovin", "sinne"],
+      "answer": 0,
+      "explanation": "'Jos' means if.",
+      "example": "Soita 112, jos tapahtuu onnettomuus.",
+      "exampletranslate": "Call 112 if an accident happens."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Coffee maker",
+      "options": ["kahvinkeitin", "vesihana", "alkometri", "henkilöauto"],
+      "answer": 0,
+      "explanation": "'Kahvinkeitin' means coffee maker; its genitive is 'kahvinkeittimen'.",
+      "example": "Kahvinkeitin aiheutti tulipalon.",
+      "exampletranslate": "The coffee maker caused a fire."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Central hospital",
+      "options": ["keskussairaala", "ambulanssi", "moottoritie", "keskusta"],
+      "answer": 0,
+      "explanation": "'Keskussairaala' means central hospital.",
+      "example": "Potilas vietiin keskussairaalaan.",
+      "exampletranslate": "The patient was taken to the central hospital."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Compensation",
+      "options": ["korvaus", "vaatimus", "valitus", "vastaus"],
+      "answer": 0,
+      "explanation": "'Korvaus' means compensation; its genitive is 'korvauksen'.",
+      "example": "Vakuutus maksaa korvauksen.",
+      "exampletranslate": "The insurance pays compensation."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Homework",
+      "options": ["kotitehtävä", "vaatimus", "uutinen", "tilanne"],
+      "answer": 0,
+      "explanation": "'Kotitehtävä' means homework.",
+      "example": "Teen kotitehtävät illalla.",
+      "exampletranslate": "I do the homework in the evening."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Very",
+      "options": ["kovin", "lievä", "lopulta", "sinne"],
+      "answer": 0,
+      "explanation": "'Kovin' means very.",
+      "example": "Tilanne ei ollut kovin vakava.",
+      "exampletranslate": "The situation was not very serious."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "When / As",
+      "options": ["kun", "jos", "kovin", "sinne"],
+      "answer": 0,
+      "explanation": "'Kun' means when or as.",
+      "example": "Soitin, kun näin onnettomuuden.",
+      "exampletranslate": "I called when I saw the accident."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "To call to the scene",
+      "options": ["kutsua paikalle", "hälyttää", "selittää", "ohjata"],
+      "answer": 0,
+      "explanation": "'Kutsua paikalle' means to call (someone) to the scene; 'kutsun paikalle' is 'I call to the scene'.",
+      "example": "Kutsun poliisin paikalle.",
+      "exampletranslate": "I call the police to the scene."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "To order / command",
+      "options": ["käskeä", "selittää", "syyttää", "varastaa"],
+      "answer": 0,
+      "explanation": "'Käskeä' (type 1 verb) means to order or command; 'käsken' is 'I order'.",
+      "example": "Poliisi käskee pysähtyä.",
+      "exampletranslate": "The police order to stop."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "To borrow / lend",
+      "options": ["lainata", "varastaa", "ohjata", "voittaa"],
+      "answer": 0,
+      "explanation": "'Lainata' (type 4 verb) means to borrow or lend; 'lainaan' is 'I borrow/lend'.",
+      "example": "Lainaan ystävältä auton.",
+      "exampletranslate": "I borrow a car from a friend."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Mild / Slight",
+      "options": ["lievä", "voimakas", "vakava", "turvallinen"],
+      "answer": 0,
+      "explanation": "'Lievä' means mild or slight.",
+      "example": "Vamma oli lievä.",
+      "exampletranslate": "The injury was mild."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Traffic",
+      "options": ["liikenne", "moottoritie", "alue", "tilanne"],
+      "answer": 0,
+      "explanation": "'Liikenne' means traffic; its genitive is 'liikenteen'.",
+      "example": "Liikenne on vilkasta aamulla.",
+      "exampletranslate": "Traffic is busy in the morning."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Wallet",
+      "options": ["lompakko", "vesihana", "kahvinkeitin", "alkometri"],
+      "answer": 0,
+      "explanation": "'Lompakko' means wallet; its genitive is 'lompakon'.",
+      "example": "Lompakkoni varastettiin.",
+      "exampletranslate": "My wallet was stolen."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Finally / In the end",
+      "options": ["lopulta", "kovin", "sinne", "aikana"],
+      "answer": 0,
+      "explanation": "'Lopulta' means finally or in the end.",
+      "example": "Lopulta kaikki päättyi hyvin.",
+      "exampletranslate": "In the end everything turned out well."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "To get injured",
+      "options": ["loukkaantua", "murtua", "syttyä", "vaihtua"],
+      "answer": 0,
+      "explanation": "'Loukkaantua' (type 1 verb) means to get injured; 'loukkaannun' is 'I get injured'.",
+      "example": "Kuljettaja loukkaantui kolarissa.",
+      "exampletranslate": "The driver got injured in the collision."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Highway / Motorway",
+      "options": ["moottoritie", "liikenne", "oja", "alue"],
+      "answer": 0,
+      "explanation": "'Moottoritie' means highway or motorway; its genitive is 'moottoritien'.",
+      "example": "Onnettomuus tapahtui moottoritiellä.",
+      "exampletranslate": "The accident happened on the motorway."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "To break / fracture",
+      "options": ["murtua", "loukkaantua", "syttyä", "vaihtua"],
+      "answer": 0,
+      "explanation": "'Murtua' (type 1 verb) means to break or fracture (intransitive); 'murrun' is 'I break'.",
+      "example": "Jalka murtui onnettomuudessa.",
+      "exampletranslate": "The leg broke in the accident."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "To steer / guide / direct",
+      "options": ["ohjata", "jatkaa", "sulkea", "käskeä"],
+      "answer": 0,
+      "explanation": "'Ohjata' (type 4 verb) means to steer, guide or direct; 'ohjaan' is 'I steer'.",
+      "example": "Poliisi ohjaa liikennettä.",
+      "exampletranslate": "The police direct the traffic."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Ditch",
+      "options": ["oja", "alue", "moottoritie", "savu"],
+      "answer": 0,
+      "explanation": "'Oja' means ditch.",
+      "example": "Auto ajoi ojaan.",
+      "exampletranslate": "The car drove into the ditch."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Happy",
+      "options": ["onnellinen", "erinomainen", "tyytyväinen", "terve"],
+      "answer": 0,
+      "explanation": "'Onnellinen' means happy; its genitive is 'onnellisen'.",
+      "example": "Olen onnellinen, että kaikki ovat terveitä.",
+      "exampletranslate": "I am happy that everyone is healthy."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Accident",
+      "options": ["onnettomuus", "vahinko", "vamma", "tilanne"],
+      "answer": 0,
+      "explanation": "'Onnettomuus' means accident; its genitive is 'onnettomuuden'.",
+      "example": "Tiellä tapahtui onnettomuus.",
+      "exampletranslate": "An accident happened on the road."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Part",
+      "options": ["osa", "alue", "tilanne", "vamma"],
+      "answer": 0,
+      "explanation": "'Osa' means part.",
+      "example": "Osa tiestä oli suljettu.",
+      "exampletranslate": "Part of the road was closed."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Lightning",
+      "options": ["salama", "savu", "tuli", "tulipalo"],
+      "answer": 0,
+      "explanation": "'Salama' means lightning.",
+      "example": "Salama iski puuhun.",
+      "exampletranslate": "Lightning struck the tree."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "To extinguish / turn off",
+      "options": ["sammuttaa", "syttyä", "sulkea", "selittää"],
+      "answer": 0,
+      "explanation": "'Sammuttaa' (type 1 verb) means to extinguish or turn off; 'sammutan' is 'I extinguish'.",
+      "example": "Sammutan tulen vedellä.",
+      "exampletranslate": "I extinguish the fire with water."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Smoke",
+      "options": ["savu", "salama", "tuho", "vamma"],
+      "answer": 0,
+      "explanation": "'Savu' means smoke.",
+      "example": "Huoneessa on savua.",
+      "exampletranslate": "There is smoke in the room."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "To explain",
+      "options": ["selittää", "syyttää", "käskeä", "jatkaa"],
+      "answer": 0,
+      "explanation": "'Selittää' (type 1 verb) means to explain; 'selitän' is 'I explain'.",
+      "example": "Selitän, mitä tapahtui.",
+      "exampletranslate": "I explain what happened."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "(To) there",
+      "options": ["sinne", "aikana", "kovin", "lopulta"],
+      "answer": 0,
+      "explanation": "'Sinne' means (to) there.",
+      "example": "Ambulanssi ajoi sinne.",
+      "exampletranslate": "The ambulance drove there."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "To close",
+      "options": ["sulkea", "jatkaa", "ohjata", "sammuttaa"],
+      "answer": 0,
+      "explanation": "'Sulkea' (type 1 verb) means to close; 'suljen' is 'I close'.",
+      "example": "Poliisi sulkee tien.",
+      "exampletranslate": "The police close the road."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "To catch fire / ignite",
+      "options": ["syttyä", "sammuttaa", "murtua", "vaihtua"],
+      "answer": 0,
+      "explanation": "'Syttyä' (type 1 verb) means to catch fire or ignite; 'se syttyy' means 'it catches fire'.",
+      "example": "Talo syttyi tuleen.",
+      "exampletranslate": "The house caught fire."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "To accuse / blame",
+      "options": ["syyttää", "selittää", "käskeä", "varastaa"],
+      "answer": 0,
+      "explanation": "'Syyttää' (type 1 verb) means to accuse or blame; 'syytän' is 'I accuse'.",
+      "example": "Häntä syytetään varkaudesta.",
+      "exampletranslate": "He is accused of theft."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Unconscious",
+      "options": ["tajuton", "terve", "lievä", "turvallinen"],
+      "answer": 0,
+      "explanation": "'Tajuton' means unconscious; its genitive is 'tajuttoman'.",
+      "example": "Kuljettaja oli tajuton.",
+      "exampletranslate": "The driver was unconscious."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Healthy",
+      "options": ["terve", "tajuton", "onnellinen", "voimakas"],
+      "answer": 0,
+      "explanation": "'Terve' means healthy; its genitive is 'terveen'.",
+      "example": "Onneksi olen terve.",
+      "exampletranslate": "Luckily I am healthy."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Situation",
+      "options": ["tilanne", "tuho", "vamma", "osa"],
+      "answer": 0,
+      "explanation": "'Tilanne' means situation; its genitive is 'tilanteen'.",
+      "example": "Tilanne on vakava.",
+      "exampletranslate": "The situation is serious."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Destruction",
+      "options": ["tuho", "vahinko", "vamma", "tulipalo"],
+      "answer": 0,
+      "explanation": "'Tuho' means destruction.",
+      "example": "Myrsky aiheutti suuren tuhon.",
+      "exampletranslate": "The storm caused great destruction."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To destroy",
+      "options": ["tuhota", "sammuttaa", "vahingoittaa", "murtaa"],
+      "answer": 0,
+      "explanation": "'Tuhota' (type 4 verb) means to destroy; 'tuhoan' is 'I destroy'.",
+      "example": "Tulipalo tuhosi talon.",
+      "exampletranslate": "The fire destroyed the house."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Fire (blaze)",
+      "options": ["tulipalo", "savu", "salama", "tuho"],
+      "answer": 0,
+      "explanation": "'Tulipalo' means fire (a blaze).",
+      "example": "Talossa syttyi tulipalo.",
+      "exampletranslate": "A fire broke out in the house."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "Safe",
+      "options": ["turvallinen", "erinomainen", "voimakas", "lievä"],
+      "answer": 0,
+      "explanation": "'Turvallinen' means safe; its genitive is 'turvallisen'.",
+      "example": "Tämä alue on turvallinen.",
+      "exampletranslate": "This area is safe."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Satisfied",
+      "options": ["tyytyväinen", "onnellinen", "terve", "tajuton"],
+      "answer": 0,
+      "explanation": "'Tyytyväinen' means satisfied; its genitive is 'tyytyväisen'.",
+      "example": "Olen tyytyväinen tulokseen.",
+      "exampletranslate": "I am satisfied with the result."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Sport",
+      "options": ["urheilu", "uutinen", "tilanne", "vamma"],
+      "answer": 0,
+      "explanation": "'Urheilu' means sport.",
+      "example": "Katson urheilua televisiosta.",
+      "exampletranslate": "I watch sport on television."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "News (item)",
+      "options": ["uutinen", "tilanne", "vastaus", "valitus"],
+      "answer": 0,
+      "explanation": "'Uutinen' means a news item; its genitive is 'uutisen'.",
+      "example": "Luin uutisen onnettomuudesta.",
+      "exampletranslate": "I read the news about the accident."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Demand / Requirement",
+      "options": ["vaatimus", "korvaus", "valitus", "vastaus"],
+      "answer": 0,
+      "explanation": "'Vaatimus' means demand or requirement; its genitive is 'vaatimuksen'.",
+      "example": "Tämä on tärkeä vaatimus.",
+      "exampletranslate": "This is an important requirement."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Damage / Mishap",
+      "options": ["vahinko", "tuho", "onnettomuus", "vamma"],
+      "answer": 0,
+      "explanation": "'Vahinko' means damage or mishap; its genitive is 'vahingon'.",
+      "example": "Vakuutus korvaa vahingon.",
+      "exampletranslate": "The insurance covers the damage."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "To change (intransitive)",
+      "options": ["vaihtua", "vaihtaa", "vaikeuttaa", "voittaa"],
+      "answer": 0,
+      "explanation": "'Vaihtua' (type 1 verb) means to change by itself; 'se vaihtuu' means 'it changes'.",
+      "example": "Liikennevalot vaihtuvat vihreäksi.",
+      "exampletranslate": "The traffic lights change to green."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "To make difficult",
+      "options": ["vaikeuttaa", "helpottaa", "vaihtua", "selittää"],
+      "answer": 0,
+      "explanation": "'Vaikeuttaa' (type 1 verb) means to make difficult; 'vaikeutan' is 'I make difficult'.",
+      "example": "Lumi vaikeuttaa liikennettä.",
+      "exampletranslate": "Snow makes traffic difficult."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "Complaint",
+      "options": ["valitus", "vaatimus", "korvaus", "vastaus"],
+      "answer": 0,
+      "explanation": "'Valitus' means complaint; its genitive is 'valituksen'.",
+      "example": "Teen valituksen päätöksestä.",
+      "exampletranslate": "I make a complaint about the decision."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Injury",
+      "options": ["vamma", "vahinko", "tuho", "tilanne"],
+      "answer": 0,
+      "explanation": "'Vamma' means injury.",
+      "example": "Hänellä on vakava vamma.",
+      "exampletranslate": "He has a serious injury."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "To steal",
+      "options": ["varastaa", "lainata", "syyttää", "voittaa"],
+      "answer": 0,
+      "explanation": "'Varastaa' (type 1 verb) means to steal; 'varastan' is 'I steal'.",
+      "example": "Joku varasti pyöräni.",
+      "exampletranslate": "Someone stole my bike."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Answer / Reply",
+      "options": ["vastaus", "valitus", "vaatimus", "korvaus"],
+      "answer": 0,
+      "explanation": "'Vastaus' means answer or reply; its genitive is 'vastauksen'.",
+      "example": "Sain vastauksen kysymykseen.",
+      "exampletranslate": "I got an answer to the question."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Water tap / Faucet",
+      "options": ["vesihana", "kahvinkeitin", "alkometri", "lompakko"],
+      "answer": 0,
+      "explanation": "'Vesihana' means water tap or faucet.",
+      "example": "Vesihana vuotaa.",
+      "exampletranslate": "The water tap is leaking."
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "Strong / Powerful",
+      "options": ["voimakas", "lievä", "turvallinen", "terve"],
+      "answer": 0,
+      "explanation": "'Voimakas' means strong or powerful; its genitive is 'voimakkaan'.",
+      "example": "Tuuli oli voimakas.",
+      "exampletranslate": "The wind was strong."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "To win",
+      "options": ["voittaa", "varastaa", "vaikeuttaa", "jatkaa"],
+      "answer": 0,
+      "explanation": "'Voittaa' (type 1 verb) means to win; 'voitan' is 'I win'.",
+      "example": "Joukkue voitti ottelun.",
+      "exampletranslate": "The team won the match."
+    }
+  ]
+}

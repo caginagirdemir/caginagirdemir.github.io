@@ -1,0 +1,1648 @@
+{
+  "id": "chapter8",
+  "title": "Chapter8",
+  "description": "Finnish vocabulary: health, the body, illness, the doctor and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "To cause",
+      "options": ["aiheuttaa", "helpottaa", "torjua", "puhdistaa"],
+      "answer": 0,
+      "explanation": "'Aiheuttaa' (type 1 verb) means to cause; 'aiheutan' is 'I cause'.",
+      "example": "Tämä lääke aiheuttaa väsymystä.",
+      "exampletranslate": "This medicine causes tiredness."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Substance / Material",
+      "options": ["aine", "voide", "oire", "ohje"],
+      "answer": 0,
+      "explanation": "'Aine' means substance or material; its genitive is 'aineen'.",
+      "example": "Lääkkeessä on monta ainetta.",
+      "exampletranslate": "The medicine has many substances."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "To sneeze",
+      "options": ["aivastaa", "niistää", "yskiä", "oksettaa"],
+      "answer": 0,
+      "explanation": "'Aivastaa' (type 1 verb) means to sneeze; 'aivastan' is 'I sneeze'.",
+      "example": "Aivastan, kun minulla on flunssa.",
+      "exampletranslate": "I sneeze when I have the flu."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Point in time / Moment",
+      "options": ["ajankohta", "ajanvaraus", "lounasaika", "kohta"],
+      "answer": 0,
+      "explanation": "'Ajankohta' means point in time or moment; its genitive is 'ajankohdan'.",
+      "example": "Mikä on sinulle sopiva ajankohta?",
+      "exampletranslate": "What is a suitable time for you?"
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Appointment (reservation)",
+      "options": ["ajanvaraus", "ajankohta", "lisätieto", "todistus"],
+      "answer": 0,
+      "explanation": "'Ajanvaraus' means an appointment or time reservation; its genitive is 'ajanvarauksen'.",
+      "example": "Teen ajanvarauksen lääkärille.",
+      "exampletranslate": "I make an appointment with the doctor."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Pack (e.g. cigarette pack)",
+      "options": ["aski", "pakastepussi", "tabletti", "laastari"],
+      "answer": 0,
+      "explanation": "'Aski' means a small box or pack (e.g. a cigarette pack).",
+      "example": "Hän osti tupakka-askin.",
+      "exampletranslate": "He bought a pack of cigarettes."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Assistant",
+      "options": ["assistentti", "huoltaja", "potilas", "lääkäri"],
+      "answer": 0,
+      "explanation": "'Assistentti' means assistant; its genitive is 'assistentin'.",
+      "example": "Lääkärin assistentti auttaa potilaita.",
+      "exampletranslate": "The doctor's assistant helps the patients."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "To have time / make it",
+      "options": ["ehtiä", "jaksaa", "jatkua", "kestää"],
+      "answer": 0,
+      "explanation": "'Ehtiä' (type 1 verb) means to have time or make it in time; 'ehdin' is 'I have time'.",
+      "example": "Ehdin lääkäriin ajoissa.",
+      "exampletranslate": "I make it to the doctor in time."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Separately",
+      "options": ["erikseen", "eteenpäin", "lyhyesti", "nopeasti"],
+      "answer": 0,
+      "explanation": "'Erikseen' means separately.",
+      "example": "Maksan lääkkeet erikseen.",
+      "exampletranslate": "I pay for the medicines separately."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Forward",
+      "options": ["eteenpäin", "erikseen", "ohi", "sisään"],
+      "answer": 0,
+      "explanation": "'Eteenpäin' means forward.",
+      "example": "Mene eteenpäin käytävää pitkin.",
+      "exampletranslate": "Go forward along the corridor."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Flu",
+      "options": ["flunssa", "närästys", "ripuli", "nuha"],
+      "answer": 0,
+      "explanation": "'Flunssa' means flu.",
+      "example": "Minulla on flunssa.",
+      "exampletranslate": "I have the flu."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Wound",
+      "options": ["haava", "oire", "kipu", "särky"],
+      "answer": 0,
+      "explanation": "'Haava' means wound.",
+      "example": "Puhdistan haavan.",
+      "exampletranslate": "I clean the wound."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To ease / relieve",
+      "options": ["helpottaa", "aiheuttaa", "puhdistaa", "tutkia"],
+      "answer": 0,
+      "explanation": "'Helpottaa' (type 1 verb) means to ease or relieve; 'helpotan' is 'I ease'.",
+      "example": "Lääke helpottaa kipua.",
+      "exampletranslate": "The medicine eases the pain."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Breath / Life",
+      "options": ["henki", "olo", "oire", "veri"],
+      "answer": 0,
+      "explanation": "'Henki' means breath, life or spirit; its genitive is 'hengen'.",
+      "example": "Vedän henkeä syvään.",
+      "exampletranslate": "I take a deep breath."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Pea soup",
+      "options": ["hernekeitto", "lounasaika", "juotava", "jääpala"],
+      "answer": 0,
+      "explanation": "'Hernekeitto' means pea soup; its genitive is 'hernekeiton'.",
+      "example": "Torstaina syömme hernekeittoa.",
+      "exampletranslate": "On Thursday we eat pea soup."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Immediately",
+      "options": ["heti", "myöhemmin", "nopeasti", "seuraavaksi"],
+      "answer": 0,
+      "explanation": "'Heti' means immediately.",
+      "example": "Soita heti hätänumeroon.",
+      "exampletranslate": "Call the emergency number immediately."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Sweat",
+      "options": ["hiki", "veri", "kuume", "olo"],
+      "answer": 0,
+      "explanation": "'Hiki' means sweat; its genitive is 'hien'.",
+      "example": "Kuumeessa tulee hiki.",
+      "exampletranslate": "With a fever you sweat."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Guardian",
+      "options": ["huoltaja", "assistentti", "potilas", "terveydenhoitaja"],
+      "answer": 0,
+      "explanation": "'Huoltaja' means guardian.",
+      "example": "Lapsen huoltaja allekirjoittaa luvan.",
+      "exampletranslate": "The child's guardian signs the permission."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Feeling unwell / Malaise",
+      "options": ["huono olo", "hyvä olo", "närästys", "ripuli"],
+      "answer": 0,
+      "explanation": "'Huono olo' means feeling unwell or malaise.",
+      "example": "Minulla on huono olo.",
+      "exampletranslate": "I feel unwell."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Hygiene",
+      "options": ["hygienia", "terveys", "saippua", "todistus"],
+      "answer": 0,
+      "explanation": "'Hygienia' means hygiene.",
+      "example": "Käsihygienia on tärkeää.",
+      "exampletranslate": "Hand hygiene is important."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Insect",
+      "options": ["hyönteinen", "haava", "oire", "tulehdus"],
+      "answer": 0,
+      "explanation": "'Hyönteinen' means insect; its genitive is 'hyönteisen'.",
+      "example": "Hyönteinen puri minua.",
+      "exampletranslate": "An insect bit me."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Emergency / Distress",
+      "options": ["hätä", "vaara", "vaiva", "kipu"],
+      "answer": 0,
+      "explanation": "'Hätä' means emergency or distress; its genitive is 'hädän'.",
+      "example": "Hädässä soita 112.",
+      "exampletranslate": "In an emergency call 112."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Emergency number",
+      "options": ["hätänumero", "hätätapaus", "puhelinnumero", "info"],
+      "answer": 0,
+      "explanation": "'Hätänumero' means emergency number.",
+      "example": "Suomen hätänumero on 112.",
+      "exampletranslate": "Finland's emergency number is 112."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Emergency (case)",
+      "options": ["hätätapaus", "hätänumero", "vaara", "tulehdus"],
+      "answer": 0,
+      "explanation": "'Hätätapaus' means an emergency (case); its genitive is 'hätätapauksen'.",
+      "example": "Tämä on hätätapaus.",
+      "exampletranslate": "This is an emergency."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Information / Info desk",
+      "options": ["info", "lisätieto", "ohje", "neuvo"],
+      "answer": 0,
+      "explanation": "'Info' means information or the information desk.",
+      "example": "Kysy infosta lisää.",
+      "exampletranslate": "Ask the info desk for more."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "To register / check in",
+      "options": ["ilmoittautua", "tutkia", "tarkistaa", "jonottaa"],
+      "answer": 0,
+      "explanation": "'Ilmoittautua' (type 1 verb) means to register or check in; 'ilmoittaudun' is 'I register'.",
+      "example": "Ilmoittaudun vastaanotolla.",
+      "exampletranslate": "I check in at the reception."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "IT support",
+      "options": ["IT-tuki", "info", "palvelu", "terveysasema"],
+      "answer": 0,
+      "explanation": "'IT-tuki' means IT support; its genitive is 'IT-tuen'.",
+      "example": "Soitan IT-tukeen.",
+      "exampletranslate": "I call IT support."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "To have the strength / manage",
+      "options": ["jaksaa", "ehtiä", "jatkua", "levätä"],
+      "answer": 0,
+      "explanation": "'Jaksaa' (type 1 verb) means to have the strength or energy to manage; 'jaksan' is 'I manage'.",
+      "example": "En jaksa nousta sängystä.",
+      "exampletranslate": "I don't have the strength to get out of bed."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Leg / Foot",
+      "options": ["jalka", "käsi", "nilkka", "polvi"],
+      "answer": 0,
+      "explanation": "'Jalka' means leg or foot; its genitive is 'jalan'.",
+      "example": "Jalka on kipeä.",
+      "exampletranslate": "My leg hurts."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Thirst",
+      "options": ["jano", "nälkä", "kuume", "kipu"],
+      "answer": 0,
+      "explanation": "'Jano' means thirst.",
+      "example": "Minulla on jano.",
+      "exampletranslate": "I am thirsty."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "To continue",
+      "options": ["jatkua", "ehtiä", "jaksaa", "alkaa"],
+      "answer": 0,
+      "explanation": "'Jatkua' (type 1 verb) means to continue or go on; 'se jatkuu' means 'it continues'.",
+      "example": "Kipu jatkuu yhä.",
+      "exampletranslate": "The pain still continues."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Every",
+      "options": ["joka", "kaikki", "muu", "sama"],
+      "answer": 0,
+      "explanation": "'Joka' means every (e.g. 'joka päivä' = every day).",
+      "example": "Otan lääkettä joka päivä.",
+      "exampletranslate": "I take medicine every day."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "To queue",
+      "options": ["jonottaa", "ilmoittautua", "odottaa", "jatkua"],
+      "answer": 0,
+      "explanation": "'Jonottaa' (type 1 verb) means to queue; 'jonotan' is 'I queue'.",
+      "example": "Jonotan vastaanotolle.",
+      "exampletranslate": "I queue for the reception."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Drink (something to drink)",
+      "options": ["juotava", "juoma", "voide", "lääke"],
+      "answer": 0,
+      "explanation": "'Juotava' means a drink (something to drink).",
+      "example": "Otatko jotain juotavaa?",
+      "exampletranslate": "Would you like something to drink?"
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Ice",
+      "options": ["jää", "jääpala", "hiki", "vesi"],
+      "answer": 0,
+      "explanation": "'Jää' means ice; its genitive is 'jään'.",
+      "example": "Laitan jäätä haavalle.",
+      "exampletranslate": "I put ice on the wound."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Ice cube",
+      "options": ["jääpala", "jää", "pakastepussi", "laastari"],
+      "answer": 0,
+      "explanation": "'Jääpala' means ice cube.",
+      "example": "Laitan jääpalan veteen.",
+      "exampletranslate": "I put an ice cube in the water."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "To fall (down)",
+      "options": ["kaatua", "nostaa", "maata", "levätä"],
+      "answer": 0,
+      "explanation": "'Kaatua' (type 1 verb) means to fall down or tip over; 'kaadun' is 'I fall'.",
+      "example": "Kaaduin jäisellä tiellä.",
+      "exampletranslate": "I fell on the icy road."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Pale",
+      "options": ["kalpea", "kipeä", "sairas", "väsynyt"],
+      "answer": 0,
+      "explanation": "'Kalpea' means pale.",
+      "example": "Olet kalpea, oletko sairas?",
+      "exampletranslate": "You are pale, are you sick?"
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Urgent",
+      "options": ["kiireellinen", "tärkeä", "vaikea", "yleinen"],
+      "answer": 0,
+      "explanation": "'Kiireellinen' means urgent; its genitive is 'kiireellisen'.",
+      "example": "Tämä on kiireellinen asia.",
+      "exampletranslate": "This is an urgent matter."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Sore / Ill",
+      "options": ["kipeä", "kalpea", "tärkeä", "tulinen"],
+      "answer": 0,
+      "explanation": "'Kipeä' means sore or ill.",
+      "example": "Kurkkuni on kipeä.",
+      "exampletranslate": "My throat is sore."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Pain",
+      "options": ["kipu", "särky", "haava", "oire"],
+      "answer": 0,
+      "explanation": "'Kipu' means pain; its genitive is 'kivun'.",
+      "example": "Minulla on kova kipu.",
+      "exampletranslate": "I have severe pain."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Soon",
+      "options": ["kohta", "myöhemmin", "seuraavaksi", "heti"],
+      "answer": 0,
+      "explanation": "'Kohta' as an adverb means soon.",
+      "example": "Lääkäri tulee kohta.",
+      "exampletranslate": "The doctor comes soon."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Point / Spot (noun)",
+      "options": ["kohta", "kipu", "haava", "oire"],
+      "answer": 0,
+      "explanation": "'Kohta' as a noun means a point or spot; its genitive is 'kohdan'.",
+      "example": "Mihin kohtaan sattuu?",
+      "exampletranslate": "Which spot hurts?"
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "High / Tall",
+      "options": ["korkea", "kova", "matala", "tärkeä"],
+      "answer": 0,
+      "explanation": "'Korkea' means high or tall.",
+      "example": "Hänellä on korkea kuume.",
+      "exampletranslate": "He has a high fever."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To touch / concern",
+      "options": ["koskea", "kuulla", "kuljettaa", "tuntua"],
+      "answer": 0,
+      "explanation": "'Koskea' (type 1 verb) means to touch or concern; 'se koskee' means 'it touches/concerns'.",
+      "example": "Asia koskee minua.",
+      "exampletranslate": "The matter concerns me."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Hard",
+      "options": ["kova", "korkea", "pehmeä", "tärkeä"],
+      "answer": 0,
+      "explanation": "'Kova' means hard.",
+      "example": "Minulla on kova päänsärky.",
+      "exampletranslate": "I have a bad (hard) headache."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To transport / drive",
+      "options": ["kuljettaa", "kaatua", "nostaa", "saapua"],
+      "answer": 0,
+      "explanation": "'Kuljettaa' (type 1 verb) means to transport or drive; 'kuljetan' is 'I transport'.",
+      "example": "Ambulanssi kuljettaa potilaan sairaalaan.",
+      "exampletranslate": "The ambulance transports the patient to the hospital."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Throat",
+      "options": ["kurkku", "kylki", "niska", "maha"],
+      "answer": 0,
+      "explanation": "'Kurkku' means throat; its genitive is 'kurkun'.",
+      "example": "Kurkku on kipeä.",
+      "exampletranslate": "My throat is sore."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Sore throat",
+      "options": ["kurkkukipu", "päänsärky", "vatsatauti", "närästys"],
+      "answer": 0,
+      "explanation": "'Kurkkukipu' means sore throat; its genitive is 'kurkkukivun'.",
+      "example": "Minulla on kurkkukipu.",
+      "exampletranslate": "I have a sore throat."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "To hear",
+      "options": ["kuulla", "koskea", "tuntua", "tutkia"],
+      "answer": 0,
+      "explanation": "'Kuulla' (type 1 verb) means to hear; 'kuulen' is 'I hear'.",
+      "example": "Kuulen huonosti.",
+      "exampletranslate": "I hear poorly."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Fever",
+      "options": ["kuume", "kipu", "flunssa", "ripuli"],
+      "answer": 0,
+      "explanation": "'Kuume' means fever; its genitive is 'kuumeen'.",
+      "example": "Minulla on kuumetta.",
+      "exampletranslate": "I have a fever."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Side (of the body)",
+      "options": ["kylki", "selkä", "polvi", "niska"],
+      "answer": 0,
+      "explanation": "'Kylki' means side (of the body); its genitive is 'kyljen'.",
+      "example": "Nukun kyljellä.",
+      "exampletranslate": "I sleep on my side."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Patient (adjective)",
+      "options": ["kärsivällinen", "kiireellinen", "surullinen", "vihainen"],
+      "answer": 0,
+      "explanation": "'Kärsivällinen' means patient (as in calm, enduring); its genitive is 'kärsivällisen'.",
+      "example": "Hoitaja on kärsivällinen.",
+      "exampletranslate": "The nurse is patient."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "Hand",
+      "options": ["käsi", "jalka", "sormi", "polvi"],
+      "answer": 0,
+      "explanation": "'Käsi' means hand; its genitive is 'käden'.",
+      "example": "Pesen kädet saippualla.",
+      "exampletranslate": "I wash my hands with soap."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "Corridor / Aisle",
+      "options": ["käytävä", "toimisto", "portaat", "rakennus"],
+      "answer": 0,
+      "explanation": "'Käytävä' means corridor or aisle.",
+      "example": "Odotushuone on käytävän päässä.",
+      "exampletranslate": "The waiting room is at the end of the corridor."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Band-aid / Plaster",
+      "options": ["laastari", "voide", "tabletti", "side"],
+      "answer": 0,
+      "explanation": "'Laastari' means band-aid or plaster.",
+      "example": "Laitan laastarin haavalle.",
+      "exampletranslate": "I put a band-aid on the wound."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "Rest (noun)",
+      "options": ["lepo", "olo", "neuvo", "kipu"],
+      "answer": 0,
+      "explanation": "'Lepo' means rest; its genitive is 'levon'.",
+      "example": "Sairaana tarvitsen lepoa.",
+      "exampletranslate": "When sick I need rest."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "To rest",
+      "options": ["levätä", "maata", "nukkua", "jaksaa"],
+      "answer": 0,
+      "explanation": "'Levätä' (type 4 verb) means to rest; 'lepään' is 'I rest'.",
+      "example": "Lepään sohvalla.",
+      "exampletranslate": "I rest on the sofa."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Muscle",
+      "options": ["lihas", "luu", "selkä", "polvi"],
+      "answer": 0,
+      "explanation": "'Lihas' means muscle; its genitive is 'lihaksen'.",
+      "example": "Lihas on kipeä urheilun jälkeen.",
+      "exampletranslate": "The muscle is sore after exercise."
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "To be related to / join",
+      "options": ["liittyä", "koskea", "tuntua", "kuulla"],
+      "answer": 0,
+      "explanation": "'Liittyä' (type 1 verb) means to be related to or join; 'liityn' is 'I join' (used with 'mihin').",
+      "example": "Tämä oire liittyy flunssaan.",
+      "exampletranslate": "This symptom is related to the flu."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "Additional information",
+      "options": ["lisätieto", "info", "ohje", "todistus"],
+      "answer": 0,
+      "explanation": "'Lisätieto' means additional information; its genitive is 'lisätiedon'.",
+      "example": "Tarvitsen lisätietoa lääkkeestä.",
+      "exampletranslate": "I need additional information about the medicine."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "Lunch time",
+      "options": ["lounasaika", "ajankohta", "ajanvaraus", "kohta"],
+      "answer": 0,
+      "explanation": "'Lounasaika' means lunch time; its genitive is 'lounasajan'.",
+      "example": "Vastaanotto on kiinni lounasaikaan.",
+      "exampletranslate": "The reception is closed at lunch time."
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "Unauthorized / Forbidden",
+      "options": ["luvaton", "vapaa", "yleinen", "valmis"],
+      "answer": 0,
+      "explanation": "'Luvaton' means unauthorized or forbidden; its genitive is 'luvattoman'.",
+      "example": "Luvaton pysäköinti on kielletty.",
+      "exampletranslate": "Unauthorized parking is forbidden."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Briefly",
+      "options": ["lyhyesti", "erikseen", "nopeasti", "myöhemmin"],
+      "answer": 0,
+      "explanation": "'Lyhyesti' means briefly.",
+      "example": "Kerro lyhyesti oireista.",
+      "exampletranslate": "Describe the symptoms briefly."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "Medicine",
+      "options": ["lääke", "lääkitys", "voide", "resepti"],
+      "answer": 0,
+      "explanation": "'Lääke' means medicine; its genitive is 'lääkkeen'.",
+      "example": "Otan lääkettä kipuun.",
+      "exampletranslate": "I take medicine for the pain."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Medication (treatment)",
+      "options": ["lääkitys", "lääke", "lääkäri", "hoito"],
+      "answer": 0,
+      "explanation": "'Lääkitys' means medication or medical treatment; its genitive is 'lääkityksen'.",
+      "example": "Lääkäri aloittaa uuden lääkityksen.",
+      "exampletranslate": "The doctor starts a new medication."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "Doctor",
+      "options": ["lääkäri", "terveydenhoitaja", "huoltaja", "potilas"],
+      "answer": 0,
+      "explanation": "'Lääkäri' means doctor.",
+      "example": "Menen lääkäriin huomenna.",
+      "exampletranslate": "I go to the doctor tomorrow."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "To lie down",
+      "options": ["maata", "levätä", "nukkua", "istua"],
+      "answer": 0,
+      "explanation": "'Maata' (type 4 verb) means to lie down; 'makaan' is 'I lie down'.",
+      "example": "Makaan sängyssä koko päivän.",
+      "exampletranslate": "I lie in bed all day."
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "Belly / Stomach",
+      "options": ["maha", "vatsa", "selkä", "kylki"],
+      "answer": 0,
+      "explanation": "'Maha' means belly or stomach.",
+      "example": "Mahaan sattuu.",
+      "exampletranslate": "My stomach hurts."
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "According to",
+      "options": ["mukaan", "vastaan", "ulkopuolella", "erikseen"],
+      "answer": 0,
+      "explanation": "'Mukaan' means according to (e.g. 'jonkin mukaan' = according to something).",
+      "example": "Lääkärin mukaan se on flunssa.",
+      "exampletranslate": "According to the doctor it is the flu."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "Later",
+      "options": ["myöhemmin", "heti", "kohta", "seuraavaksi"],
+      "answer": 0,
+      "explanation": "'Myöhemmin' means later.",
+      "example": "Tulen myöhemmin uudestaan.",
+      "exampletranslate": "I'll come again later."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "Nose",
+      "options": ["nenä", "korva", "suu", "sierain"],
+      "answer": 0,
+      "explanation": "'Nenä' means nose.",
+      "example": "Nenä on tukossa.",
+      "exampletranslate": "My nose is blocked."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "To advise",
+      "options": ["neuvoa", "tutkia", "tarkistaa", "pyytää"],
+      "answer": 0,
+      "explanation": "'Neuvoa' (type 1 verb) means to advise; 'neuvon' is 'I advise'.",
+      "example": "Lääkäri neuvoo potilasta.",
+      "exampletranslate": "The doctor advises the patient."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Advice",
+      "options": ["neuvo", "ohje", "tieto", "info"],
+      "answer": 0,
+      "explanation": "'Neuvo' means advice.",
+      "example": "Annan sinulle hyvän neuvon.",
+      "exampletranslate": "I give you good advice."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "To blow one's nose",
+      "options": ["niistää", "aivastaa", "yskiä", "oksettaa"],
+      "answer": 0,
+      "explanation": "'Niistää' (type 1 verb) means to blow one's nose; 'niistän' is 'I blow my nose'.",
+      "example": "Niistän nenää nenäliinaan.",
+      "exampletranslate": "I blow my nose into a tissue."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Ankle",
+      "options": ["nilkka", "polvi", "jalka", "niska"],
+      "answer": 0,
+      "explanation": "'Nilkka' means ankle; its genitive is 'nilkan'.",
+      "example": "Nyrjäytin nilkan.",
+      "exampletranslate": "I sprained my ankle."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Neck / Nape",
+      "options": ["niska", "kurkku", "selkä", "kylki"],
+      "answer": 0,
+      "explanation": "'Niska' means neck or nape (the back of the neck).",
+      "example": "Niska on jäykkä.",
+      "exampletranslate": "My neck is stiff."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Quickly",
+      "options": ["nopeasti", "heti", "lyhyesti", "myöhemmin"],
+      "answer": 0,
+      "explanation": "'Nopeasti' means quickly.",
+      "example": "Oire meni ohi nopeasti.",
+      "exampletranslate": "The symptom passed quickly."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Normal",
+      "options": ["normaali", "yleinen", "selvä", "valmis"],
+      "answer": 0,
+      "explanation": "'Normaali' means normal.",
+      "example": "Lämpö on normaali.",
+      "exampletranslate": "The temperature is normal."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "To lift / raise",
+      "options": ["nostaa", "kaatua", "kuljettaa", "puhdistaa"],
+      "answer": 0,
+      "explanation": "'Nostaa' (type 1 verb) means to lift or raise; 'nostan' is 'I lift'.",
+      "example": "Älä nosta painavia tavaroita.",
+      "exampletranslate": "Don't lift heavy things."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Runny nose / Nasal cold",
+      "options": ["nuha", "flunssa", "yskä", "närästys"],
+      "answer": 0,
+      "explanation": "'Nuha' means a runny nose or nasal cold.",
+      "example": "Minulla on nuha.",
+      "exampletranslate": "I have a runny nose."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "Young",
+      "options": ["nuori", "vanha", "sairas", "kalpea"],
+      "answer": 0,
+      "explanation": "'Nuori' means young; its genitive is 'nuoren'.",
+      "example": "Potilas on nuori.",
+      "exampletranslate": "The patient is young."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Hunger",
+      "options": ["nälkä", "jano", "kuume", "kipu"],
+      "answer": 0,
+      "explanation": "'Nälkä' means hunger; its genitive is 'nälän'.",
+      "example": "Minulla on nälkä.",
+      "exampletranslate": "I am hungry."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Heartburn",
+      "options": ["närästys", "ripuli", "nuha", "kuume"],
+      "answer": 0,
+      "explanation": "'Närästys' means heartburn; its genitive is 'närästyksen'.",
+      "example": "Rasvainen ruoka aiheuttaa närästystä.",
+      "exampletranslate": "Greasy food causes heartburn."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Past / Over",
+      "options": ["ohi", "eteenpäin", "sisään", "vastaan"],
+      "answer": 0,
+      "explanation": "'Ohi' means past or over.",
+      "example": "Kipu meni ohi.",
+      "exampletranslate": "The pain went away (passed)."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Instruction",
+      "options": ["ohje", "neuvo", "tieto", "selvitys"],
+      "answer": 0,
+      "explanation": "'Ohje' means instruction; its genitive is 'ohjeen'.",
+      "example": "Lue lääkkeen ohje.",
+      "exampletranslate": "Read the medicine's instructions."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "Symptom",
+      "options": ["oire", "haava", "kipu", "tulehdus"],
+      "answer": 0,
+      "explanation": "'Oire' means symptom; its genitive is 'oireen'.",
+      "example": "Mitä oireita sinulla on?",
+      "exampletranslate": "What symptoms do you have?"
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "Vomit",
+      "options": ["oksennus", "ripuli", "närästys", "veri"],
+      "answer": 0,
+      "explanation": "'Oksennus' means vomit; its genitive is 'oksennuksen'.",
+      "example": "Lapsella oli oksennusta.",
+      "exampletranslate": "The child had vomiting."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "To feel nauseous",
+      "options": ["oksettaa", "väsyttää", "aivastaa", "koskea"],
+      "answer": 0,
+      "explanation": "'Oksettaa' (type 1 verb) means to feel nauseous; 'minua oksettaa' means 'I feel nauseous'.",
+      "example": "Minua oksettaa.",
+      "exampletranslate": "I feel nauseous."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Feeling / State (of being)",
+      "options": ["olo", "oire", "henki", "lepo"],
+      "answer": 0,
+      "explanation": "'Olo' means feeling or state of being; its genitive is 'olon'.",
+      "example": "Minulla on huono olo.",
+      "exampletranslate": "I feel unwell."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "To receive / admit (a patient)",
+      "options": ["ottaa vastaan", "tulla vastaan", "pyytää", "peruuttaa"],
+      "answer": 0,
+      "explanation": "'Ottaa vastaan' means to receive or admit; the doctor 'ottaa potilaan vastaan' (sees the patient).",
+      "example": "Lääkäri ottaa potilaita vastaan aamulla.",
+      "exampletranslate": "The doctor sees patients in the morning."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "Freezer bag",
+      "options": ["pakastepussi", "jääpala", "saippua", "laastari"],
+      "answer": 0,
+      "explanation": "'Pakastepussi' means freezer bag.",
+      "example": "Laitan jään pakastepussiin.",
+      "exampletranslate": "I put the ice in a freezer bag."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Service",
+      "options": ["palvelu", "info", "toimisto", "neuvo"],
+      "answer": 0,
+      "explanation": "'Palvelu' means service.",
+      "example": "Terveysaseman palvelu on hyvää.",
+      "exampletranslate": "The health station's service is good."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "To cancel",
+      "options": ["peruuttaa", "varata", "ilmoittautua", "jonottaa"],
+      "answer": 0,
+      "explanation": "'Peruuttaa' (type 1 verb) means to cancel; 'peruutan' is 'I cancel'.",
+      "example": "Peruutan ajanvarauksen.",
+      "exampletranslate": "I cancel the appointment."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "To inject / sting / put",
+      "options": ["pistää", "nostaa", "puhdistaa", "tutkia"],
+      "answer": 0,
+      "explanation": "'Pistää' (type 1 verb) means to inject, sting or put; 'pistän' is 'I inject/put'.",
+      "example": "Hoitaja pistää rokotteen.",
+      "exampletranslate": "The nurse gives (injects) the vaccine."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "Away / Absent",
+      "options": ["poissa", "ohi", "sisään", "vapaa"],
+      "answer": 0,
+      "explanation": "'Poissa' means away or absent.",
+      "example": "Lääkäri on tänään poissa.",
+      "exampletranslate": "The doctor is away today."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Absence",
+      "options": ["poissaolo", "sairausloma", "lepo", "vaiva"],
+      "answer": 0,
+      "explanation": "'Poissaolo' means absence.",
+      "example": "Ilmoita poissaolosta työpaikalle.",
+      "exampletranslate": "Report your absence to the workplace."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Knee",
+      "options": ["polvi", "nilkka", "kyynärpää", "jalka"],
+      "answer": 0,
+      "explanation": "'Polvi' means knee; its genitive is 'polven'.",
+      "example": "Polvi on turvoksissa.",
+      "exampletranslate": "The knee is swollen."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Stairs",
+      "options": ["portaat", "käytävä", "hissi", "rakennus"],
+      "answer": 0,
+      "explanation": "'Portaat' means stairs (a plural word); its genitive is 'portaiden'.",
+      "example": "Nousen portaita ylös.",
+      "exampletranslate": "I go up the stairs."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "Patient (noun)",
+      "options": ["potilas", "huoltaja", "assistentti", "lääkäri"],
+      "answer": 0,
+      "explanation": "'Potilas' means patient (a sick person); its genitive is 'potilaan'.",
+      "example": "Potilas odottaa käytävällä.",
+      "exampletranslate": "The patient waits in the corridor."
+    },
+    {
+      "id": 101,
+      "type": "multiple-choice",
+      "question": "To clean",
+      "options": ["puhdistaa", "helpottaa", "tarkistaa", "torjua"],
+      "answer": 0,
+      "explanation": "'Puhdistaa' (type 1 verb) means to clean; 'puhdistan' is 'I clean'.",
+      "example": "Puhdistan haavan vedellä.",
+      "exampletranslate": "I clean the wound with water."
+    },
+    {
+      "id": 102,
+      "type": "multiple-choice",
+      "question": "Head",
+      "options": ["pää", "kurkku", "niska", "selkä"],
+      "answer": 0,
+      "explanation": "'Pää' means head; its genitive is 'pään'.",
+      "example": "Päähän sattuu.",
+      "exampletranslate": "My head hurts."
+    },
+    {
+      "id": 103,
+      "type": "multiple-choice",
+      "question": "After / in (a period of time)",
+      "options": ["päästä", "mukaan", "ohi", "kohta"],
+      "answer": 0,
+      "explanation": "'Päästä' is used in time expressions like 'tunnin päästä' meaning 'in an hour'.",
+      "example": "Tulen tunnin päästä.",
+      "exampletranslate": "I'll come in an hour."
+    },
+    {
+      "id": 104,
+      "type": "multiple-choice",
+      "question": "Building",
+      "options": ["rakennus", "toimisto", "terveysasema", "portaat"],
+      "answer": 0,
+      "explanation": "'Rakennus' means building; its genitive is 'rakennuksen'.",
+      "example": "Terveyskeskus on iso rakennus.",
+      "exampletranslate": "The health centre is a big building."
+    },
+    {
+      "id": 105,
+      "type": "multiple-choice",
+      "question": "Greasy / Fatty",
+      "options": ["rasvainen", "tulinen", "kova", "kuiva"],
+      "answer": 0,
+      "explanation": "'Rasvainen' means greasy or fatty; its genitive is 'rasvaisen'.",
+      "example": "Rasvainen ruoka ei ole terveellistä.",
+      "exampletranslate": "Greasy food is not healthy."
+    },
+    {
+      "id": 106,
+      "type": "multiple-choice",
+      "question": "Prescription",
+      "options": ["resepti", "lääkitys", "todistus", "ohje"],
+      "answer": 0,
+      "explanation": "'Resepti' means prescription (also recipe).",
+      "example": "Lääkäri kirjoittaa reseptin.",
+      "exampletranslate": "The doctor writes a prescription."
+    },
+    {
+      "id": 107,
+      "type": "multiple-choice",
+      "question": "Sufficiently / Enough",
+      "options": ["riittävästi", "lyhyesti", "nopeasti", "erikseen"],
+      "answer": 0,
+      "explanation": "'Riittävästi' means sufficiently or enough.",
+      "example": "Juo riittävästi vettä.",
+      "exampletranslate": "Drink enough water."
+    },
+    {
+      "id": 108,
+      "type": "multiple-choice",
+      "question": "Diarrhea",
+      "options": ["ripuli", "närästys", "oksennus", "kuume"],
+      "answer": 0,
+      "explanation": "'Ripuli' means diarrhea.",
+      "example": "Vatsataudissa on usein ripulia.",
+      "exampletranslate": "With a stomach bug there is often diarrhea."
+    },
+    {
+      "id": 109,
+      "type": "multiple-choice",
+      "question": "Body part",
+      "options": ["ruumiinosa", "lihas", "oire", "haava"],
+      "answer": 0,
+      "explanation": "'Ruumiinosa' means body part.",
+      "example": "Käsi on ruumiinosa.",
+      "exampletranslate": "The hand is a body part."
+    },
+    {
+      "id": 110,
+      "type": "multiple-choice",
+      "question": "Soap",
+      "options": ["saippua", "voide", "laastari", "tabletti"],
+      "answer": 0,
+      "explanation": "'Saippua' means soap.",
+      "example": "Pesen kädet saippualla.",
+      "exampletranslate": "I wash my hands with soap."
+    },
+    {
+      "id": 111,
+      "type": "multiple-choice",
+      "question": "Sick",
+      "options": ["sairas", "terve", "nuori", "kärsivällinen"],
+      "answer": 0,
+      "explanation": "'Sairas' means sick; its genitive is 'sairaan'.",
+      "example": "Olen tänään sairas.",
+      "exampletranslate": "I am sick today."
+    },
+    {
+      "id": 112,
+      "type": "multiple-choice",
+      "question": "To be ill (with a disease)",
+      "options": ["sairastaa", "väsyttää", "oksettaa", "aiheuttaa"],
+      "answer": 0,
+      "explanation": "'Sairastaa' (type 1 verb) means to be ill with a disease; 'sairastan' is 'I am ill (with)'.",
+      "example": "Sairastan flunssaa.",
+      "exampletranslate": "I have (am ill with) the flu."
+    },
+    {
+      "id": 113,
+      "type": "multiple-choice",
+      "question": "Sick leave",
+      "options": ["sairausloma", "poissaolo", "vapaapäivä", "lepo"],
+      "answer": 0,
+      "explanation": "'Sairausloma' means sick leave.",
+      "example": "Olen sairauslomalla viikon.",
+      "exampletranslate": "I am on sick leave for a week."
+    },
+    {
+      "id": 114,
+      "type": "multiple-choice",
+      "question": "To hurt",
+      "options": ["sattua", "koskea", "tuntua", "kaatua"],
+      "answer": 0,
+      "explanation": "'Sattua' (type 1 verb) means to hurt; 'mihin sattuu' means 'where does it hurt'.",
+      "example": "Mihin sattuu?",
+      "exampletranslate": "Where does it hurt?"
+    },
+    {
+      "id": 115,
+      "type": "multiple-choice",
+      "question": "Back (of the body)",
+      "options": ["selkä", "kylki", "niska", "maha"],
+      "answer": 0,
+      "explanation": "'Selkä' means back; its genitive is 'selän'.",
+      "example": "Selkä on kipeä.",
+      "exampletranslate": "My back is sore."
+    },
+    {
+      "id": 116,
+      "type": "multiple-choice",
+      "question": "Explanation / Report",
+      "options": ["selvitys", "todistus", "ohje", "lisätieto"],
+      "answer": 0,
+      "explanation": "'Selvitys' means an explanation or report; its genitive is 'selvityksen'.",
+      "example": "Tarvitsen selvityksen sairaudesta.",
+      "exampletranslate": "I need a report about the illness."
+    },
+    {
+      "id": 117,
+      "type": "multiple-choice",
+      "question": "Clear",
+      "options": ["selvä", "normaali", "valmis", "vapaa"],
+      "answer": 0,
+      "explanation": "'Selvä' means clear.",
+      "example": "Ohje on selvä.",
+      "exampletranslate": "The instruction is clear."
+    },
+    {
+      "id": 118,
+      "type": "multiple-choice",
+      "question": "Next",
+      "options": ["seuraavaksi", "myöhemmin", "kohta", "heti"],
+      "answer": 0,
+      "explanation": "'Seuraavaksi' means next (after this).",
+      "example": "Seuraavaksi mittaan kuumeen.",
+      "exampletranslate": "Next I'll measure the fever."
+    },
+    {
+      "id": 119,
+      "type": "multiple-choice",
+      "question": "Nostril",
+      "options": ["sierain", "nenä", "korva", "suu"],
+      "answer": 0,
+      "explanation": "'Sierain' means nostril; its genitive is 'sieraimen'.",
+      "example": "Toinen sierain on tukossa.",
+      "exampletranslate": "One nostril is blocked."
+    },
+    {
+      "id": 120,
+      "type": "multiple-choice",
+      "question": "In / Inside (into)",
+      "options": ["sisään", "ulos", "ohi", "eteenpäin"],
+      "answer": 0,
+      "explanation": "'Sisään' means in or inside (movement into).",
+      "example": "Tule sisään, ole hyvä.",
+      "exampletranslate": "Come in, please."
+    },
+    {
+      "id": 121,
+      "type": "multiple-choice",
+      "question": "Finger",
+      "options": ["sormi", "käsi", "varvas", "jalka"],
+      "answer": 0,
+      "explanation": "'Sormi' means finger; its genitive is 'sormen'.",
+      "example": "Satutin sormeni.",
+      "exampletranslate": "I hurt my finger."
+    },
+    {
+      "id": 122,
+      "type": "multiple-choice",
+      "question": "Sad",
+      "options": ["surullinen", "vihainen", "kärsivällinen", "iloinen"],
+      "answer": 0,
+      "explanation": "'Surullinen' means sad; its genitive is 'surullisen'.",
+      "example": "Olen surullinen tänään.",
+      "exampletranslate": "I am sad today."
+    },
+    {
+      "id": 123,
+      "type": "multiple-choice",
+      "question": "Mouth",
+      "options": ["suu", "nenä", "kurkku", "korva"],
+      "answer": 0,
+      "explanation": "'Suu' means mouth.",
+      "example": "Avaa suu, ole hyvä.",
+      "exampletranslate": "Open your mouth, please."
+    },
+    {
+      "id": 124,
+      "type": "multiple-choice",
+      "question": "To store / keep",
+      "options": ["säilyttää", "puhdistaa", "tarkistaa", "torjua"],
+      "answer": 0,
+      "explanation": "'Säilyttää' (type 1 verb) means to store or keep; 'säilytän' is 'I store'.",
+      "example": "Säilytän lääkkeet kaapissa.",
+      "exampletranslate": "I keep the medicines in the cupboard."
+    },
+    {
+      "id": 125,
+      "type": "multiple-choice",
+      "question": "Ache / Pain",
+      "options": ["särky", "kipu", "haava", "oire"],
+      "answer": 0,
+      "explanation": "'Särky' means ache or pain; its genitive is 'säryn'.",
+      "example": "Minulla on päänsärky.",
+      "exampletranslate": "I have a headache."
+    },
+    {
+      "id": 126,
+      "type": "multiple-choice",
+      "question": "Painkiller",
+      "options": ["särkylääke", "voide", "laastari", "tabletti"],
+      "answer": 0,
+      "explanation": "'Särkylääke' means painkiller; its genitive is 'särkylääkkeen'.",
+      "example": "Otan särkylääkettä päänsärkyyn.",
+      "exampletranslate": "I take a painkiller for the headache."
+    },
+    {
+      "id": 127,
+      "type": "multiple-choice",
+      "question": "Tablet / Pill",
+      "options": ["tabletti", "voide", "laastari", "resepti"],
+      "answer": 0,
+      "explanation": "'Tabletti' means tablet or pill; its genitive is 'tabletin'.",
+      "example": "Otan yhden tabletin päivässä.",
+      "exampletranslate": "I take one tablet a day."
+    },
+    {
+      "id": 128,
+      "type": "multiple-choice",
+      "question": "Taxi",
+      "options": ["taksi", "bussi", "ambulanssi", "juna"],
+      "answer": 0,
+      "explanation": "'Taksi' means taxi.",
+      "example": "Otan taksin sairaalaan.",
+      "exampletranslate": "I take a taxi to the hospital."
+    },
+    {
+      "id": 129,
+      "type": "multiple-choice",
+      "question": "To inspect / examine",
+      "options": ["tarkastaa", "tarkistaa", "tutkia", "neuvoa"],
+      "answer": 0,
+      "explanation": "'Tarkastaa' (type 1 verb) means to inspect; 'tarkastan' is 'I inspect'.",
+      "example": "Lääkäri tarkastaa potilaan.",
+      "exampletranslate": "The doctor examines the patient."
+    },
+    {
+      "id": 130,
+      "type": "multiple-choice",
+      "question": "To verify / check",
+      "options": ["tarkistaa", "tarkastaa", "tutkia", "torjua"],
+      "answer": 0,
+      "explanation": "'Tarkistaa' (type 1 verb) means to verify or check; 'tarkistan' is 'I check'.",
+      "example": "Tarkistan ajanvarauksen ajan.",
+      "exampletranslate": "I check the appointment time."
+    },
+    {
+      "id": 131,
+      "type": "multiple-choice",
+      "question": "To catch (illness) / grab",
+      "options": ["tarttua", "torjua", "koskea", "liittyä"],
+      "answer": 0,
+      "explanation": "'Tarttua' (type 1 verb) means to catch (e.g. an illness), grab or stick; 'tartun' is 'I grab' (used with 'mihin').",
+      "example": "Flunssa tarttuu helposti.",
+      "exampletranslate": "The flu spreads easily."
+    },
+    {
+      "id": 132,
+      "type": "multiple-choice",
+      "question": "Public health nurse",
+      "options": ["terveydenhoitaja", "lääkäri", "huoltaja", "assistentti"],
+      "answer": 0,
+      "explanation": "'Terveydenhoitaja' means a public health nurse.",
+      "example": "Terveydenhoitaja mittaa verenpaineen.",
+      "exampletranslate": "The public health nurse measures the blood pressure."
+    },
+    {
+      "id": 133,
+      "type": "multiple-choice",
+      "question": "Health",
+      "options": ["terveys", "hygienia", "olo", "henki"],
+      "answer": 0,
+      "explanation": "'Terveys' means health; its genitive is 'terveyden'.",
+      "example": "Terveys on tärkeää.",
+      "exampletranslate": "Health is important."
+    },
+    {
+      "id": 134,
+      "type": "multiple-choice",
+      "question": "Health station",
+      "options": ["terveysasema", "terveyskeskus", "toimisto", "rakennus"],
+      "answer": 0,
+      "explanation": "'Terveysasema' means health station (a local clinic).",
+      "example": "Menen terveysasemalle.",
+      "exampletranslate": "I go to the health station."
+    },
+    {
+      "id": 135,
+      "type": "multiple-choice",
+      "question": "Health centre",
+      "options": ["terveyskeskus", "terveysasema", "toimisto", "palvelu"],
+      "answer": 0,
+      "explanation": "'Terveyskeskus' means health centre; its genitive is 'terveyskeskuksen'.",
+      "example": "Terveyskeskus on auki arkisin.",
+      "exampletranslate": "The health centre is open on weekdays."
+    },
+    {
+      "id": 136,
+      "type": "multiple-choice",
+      "question": "Certificate",
+      "options": ["todistus", "selvitys", "resepti", "ohje"],
+      "answer": 0,
+      "explanation": "'Todistus' means certificate; its genitive is 'todistuksen'.",
+      "example": "Tarvitsen lääkärintodistuksen.",
+      "exampletranslate": "I need a doctor's certificate."
+    },
+    {
+      "id": 137,
+      "type": "multiple-choice",
+      "question": "Office",
+      "options": ["toimisto", "terveysasema", "käytävä", "rakennus"],
+      "answer": 0,
+      "explanation": "'Toimisto' means office.",
+      "example": "Toimisto on toisessa kerroksessa.",
+      "exampletranslate": "The office is on the second floor."
+    },
+    {
+      "id": 138,
+      "type": "multiple-choice",
+      "question": "To prevent / ward off",
+      "options": ["torjua", "helpottaa", "aiheuttaa", "tarttua"],
+      "answer": 0,
+      "explanation": "'Torjua' (type 1 verb) means to prevent or ward off; 'torjun' is 'I prevent'.",
+      "example": "Rokote torjuu taudin.",
+      "exampletranslate": "The vaccine prevents the disease."
+    },
+    {
+      "id": 139,
+      "type": "multiple-choice",
+      "question": "Infection / Inflammation",
+      "options": ["tulehdus", "oire", "haava", "närästys"],
+      "answer": 0,
+      "explanation": "'Tulehdus' means infection or inflammation; its genitive is 'tulehduksen'.",
+      "example": "Haavassa on tulehdus.",
+      "exampletranslate": "The wound has an infection."
+    },
+    {
+      "id": 140,
+      "type": "multiple-choice",
+      "question": "Spicy / Fiery",
+      "options": ["tulinen", "rasvainen", "kova", "kuiva"],
+      "answer": 0,
+      "explanation": "'Tulinen' means spicy or fiery; its genitive is 'tulisen'.",
+      "example": "Tulinen ruoka aiheuttaa närästystä.",
+      "exampletranslate": "Spicy food causes heartburn."
+    },
+    {
+      "id": 141,
+      "type": "multiple-choice",
+      "question": "To feel / palpate",
+      "options": ["tunnustella", "tuntua", "koskea", "tutkia"],
+      "answer": 0,
+      "explanation": "'Tunnustella' (type 3 verb) means to feel or palpate; 'tunnustelen' is 'I feel' (takes a partitive object).",
+      "example": "Lääkäri tunnustelee vatsaa.",
+      "exampletranslate": "The doctor palpates the stomach."
+    },
+    {
+      "id": 142,
+      "type": "multiple-choice",
+      "question": "To feel (like)",
+      "options": ["tuntua", "tunnustella", "koskea", "kuulla"],
+      "answer": 0,
+      "explanation": "'Tuntua' (type 1 verb) means to feel (like); 'se tuntuu' means 'it feels' (used with 'miltä').",
+      "example": "Miltä se tuntuu?",
+      "exampletranslate": "How does it feel?"
+    },
+    {
+      "id": 143,
+      "type": "multiple-choice",
+      "question": "Swollen",
+      "options": ["turvoksissa", "kipeä", "kalpea", "rikki"],
+      "answer": 0,
+      "explanation": "'Turvoksissa' means swollen.",
+      "example": "Nilkka on turvoksissa.",
+      "exampletranslate": "The ankle is swollen."
+    },
+    {
+      "id": 144,
+      "type": "multiple-choice",
+      "question": "To examine / research",
+      "options": ["tutkia", "tarkastaa", "tarkistaa", "tunnustella"],
+      "answer": 0,
+      "explanation": "'Tutkia' (type 1 verb) means to examine or research; 'tutkin' is 'I examine'.",
+      "example": "Lääkäri tutkii potilaan.",
+      "exampletranslate": "The doctor examines the patient."
+    },
+    {
+      "id": 145,
+      "type": "multiple-choice",
+      "question": "Workplace",
+      "options": ["työpaikka", "toimisto", "terveysasema", "rakennus"],
+      "answer": 0,
+      "explanation": "'Työpaikka' means workplace; its genitive is 'työpaikan'.",
+      "example": "Ilmoitan sairaudesta työpaikalle.",
+      "exampletranslate": "I report the illness to the workplace."
+    },
+    {
+      "id": 146,
+      "type": "multiple-choice",
+      "question": "Important",
+      "options": ["tärkeä", "kiireellinen", "yleinen", "valmis"],
+      "answer": 0,
+      "explanation": "'Tärkeä' means important.",
+      "example": "Lepo on tärkeää.",
+      "exampletranslate": "Rest is important."
+    },
+    {
+      "id": 147,
+      "type": "multiple-choice",
+      "question": "Outside (of)",
+      "options": ["ulkopuolella", "sisään", "ohi", "vieressä"],
+      "answer": 0,
+      "explanation": "'Ulkopuolella' means outside (of) (used with the genitive).",
+      "example": "Odotan rakennuksen ulkopuolella.",
+      "exampletranslate": "I wait outside the building."
+    },
+    {
+      "id": 148,
+      "type": "multiple-choice",
+      "question": "Appendix",
+      "options": ["umpisuoli", "maha", "vatsa", "lihas"],
+      "answer": 0,
+      "explanation": "'Umpisuoli' means appendix; its genitive is 'umpisuolen'.",
+      "example": "Umpisuoli tulehtui.",
+      "exampletranslate": "The appendix became inflamed."
+    },
+    {
+      "id": 149,
+      "type": "multiple-choice",
+      "question": "Danger",
+      "options": ["vaara", "hätä", "vaiva", "kipu"],
+      "answer": 0,
+      "explanation": "'Vaara' means danger.",
+      "example": "Ei ole hengenvaaraa.",
+      "exampletranslate": "There is no danger to life."
+    },
+    {
+      "id": 150,
+      "type": "multiple-choice",
+      "question": "Difficult",
+      "options": ["vaikea", "helppo", "tärkeä", "selvä"],
+      "answer": 0,
+      "explanation": "'Vaikea' means difficult.",
+      "example": "Hengittäminen on vaikeaa.",
+      "exampletranslate": "Breathing is difficult."
+    },
+    {
+      "id": 151,
+      "type": "multiple-choice",
+      "question": "Trouble / Ailment / Complaint",
+      "options": ["vaiva", "vaara", "oire", "olo"],
+      "answer": 0,
+      "explanation": "'Vaiva' means trouble, ailment or complaint.",
+      "example": "Mikä sinua vaivaa?",
+      "exampletranslate": "What is troubling you?"
+    },
+    {
+      "id": 152,
+      "type": "multiple-choice",
+      "question": "Unfortunately",
+      "options": ["valitettavasti", "varmaan", "riittävästi", "seuraavaksi"],
+      "answer": 0,
+      "explanation": "'Valitettavasti' means unfortunately.",
+      "example": "Valitettavasti aika on jo varattu.",
+      "exampletranslate": "Unfortunately the time is already booked."
+    },
+    {
+      "id": 153,
+      "type": "multiple-choice",
+      "question": "Free / Available",
+      "options": ["vapaa", "varattu", "poissa", "valmis"],
+      "answer": 0,
+      "explanation": "'Vapaa' means free or available; its genitive is 'vapaan'.",
+      "example": "Onko lääkärillä vapaa aika?",
+      "exampletranslate": "Does the doctor have a free time slot?"
+    },
+    {
+      "id": 154,
+      "type": "multiple-choice",
+      "question": "Probably / Surely",
+      "options": ["varmaan", "valitettavasti", "ehkä", "nopeasti"],
+      "answer": 0,
+      "explanation": "'Varmaan' means probably or surely.",
+      "example": "Se on varmaan vain flunssa.",
+      "exampletranslate": "It is probably just the flu."
+    },
+    {
+      "id": 155,
+      "type": "multiple-choice",
+      "question": "Stomach",
+      "options": ["vatsa", "maha", "selkä", "kylki"],
+      "answer": 0,
+      "explanation": "'Vatsa' means stomach.",
+      "example": "Vatsaan sattuu.",
+      "exampletranslate": "My stomach hurts."
+    },
+    {
+      "id": 156,
+      "type": "multiple-choice",
+      "question": "Stomach bug / illness",
+      "options": ["vatsatauti", "närästys", "flunssa", "ripuli"],
+      "answer": 0,
+      "explanation": "'Vatsatauti' means a stomach bug or illness; its genitive is 'vatsataudin'.",
+      "example": "Minulla on vatsatauti.",
+      "exampletranslate": "I have a stomach bug."
+    },
+    {
+      "id": 157,
+      "type": "multiple-choice",
+      "question": "Blood",
+      "options": ["veri", "hiki", "vesi", "olo"],
+      "answer": 0,
+      "explanation": "'Veri' means blood; its genitive is 'veren'.",
+      "example": "Haavasta tulee verta.",
+      "exampletranslate": "Blood comes from the wound."
+    },
+    {
+      "id": 158,
+      "type": "multiple-choice",
+      "question": "Blood test",
+      "options": ["verikoe", "verenpaine", "tarkastus", "tutkimus"],
+      "answer": 0,
+      "explanation": "'Verikoe' means blood test; its genitive is 'verikokeen'.",
+      "example": "Otan verikokeen huomenna.",
+      "exampletranslate": "I have a blood test tomorrow."
+    },
+    {
+      "id": 159,
+      "type": "multiple-choice",
+      "question": "Angry",
+      "options": ["vihainen", "surullinen", "iloinen", "kärsivällinen"],
+      "answer": 0,
+      "explanation": "'Vihainen' means angry; its genitive is 'vihaisen'.",
+      "example": "Älä ole vihainen.",
+      "exampletranslate": "Don't be angry."
+    },
+    {
+      "id": 160,
+      "type": "multiple-choice",
+      "question": "Cream / Ointment",
+      "options": ["voide", "saippua", "laastari", "lääke"],
+      "answer": 0,
+      "explanation": "'Voide' means cream or ointment; its genitive is 'voiteen'.",
+      "example": "Levitän voidetta haavalle.",
+      "exampletranslate": "I apply ointment to the wound."
+    },
+    {
+      "id": 161,
+      "type": "multiple-choice",
+      "question": "To bleed / leak / flow",
+      "options": ["vuotaa", "puhdistaa", "nostaa", "kaatua"],
+      "answer": 0,
+      "explanation": "'Vuotaa' (type 1 verb) means to bleed, leak or flow; 'vuodan' is 'I bleed/leak'.",
+      "example": "Haava vuotaa verta.",
+      "exampletranslate": "The wound is bleeding."
+    },
+    {
+      "id": 162,
+      "type": "multiple-choice",
+      "question": "To make tired",
+      "options": ["väsyttää", "oksettaa", "helpottaa", "aiheuttaa"],
+      "answer": 0,
+      "explanation": "'Väsyttää' (type 1 verb) means to make tired; 'minua väsyttää' means 'I feel tired'.",
+      "example": "Lääke väsyttää minua.",
+      "exampletranslate": "The medicine makes me tired."
+    },
+    {
+      "id": 163,
+      "type": "multiple-choice",
+      "question": "General / Common",
+      "options": ["yleinen", "normaali", "tärkeä", "selvä"],
+      "answer": 0,
+      "explanation": "'Yleinen' means general or common; its genitive is 'yleisen'.",
+      "example": "Flunssa on yleinen tauti.",
+      "exampletranslate": "The flu is a common illness."
+    },
+    {
+      "id": 164,
+      "type": "multiple-choice",
+      "question": "Cough",
+      "options": ["yskä", "nuha", "kuume", "ripuli"],
+      "answer": 0,
+      "explanation": "'Yskä' means cough.",
+      "example": "Minulla on paha yskä.",
+      "exampletranslate": "I have a bad cough."
+    }
+  ]
+}

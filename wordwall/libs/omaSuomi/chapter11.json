@@ -1,0 +1,1408 @@
+{
+  "id": "chapter11",
+  "title": "Chapter11",
+  "description": "Finnish vocabulary: education, work, professions, careers and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Adult education",
+      "options": ["aikuiskoulutus", "korkeakoulu", "koulutus", "ammattikoulu"],
+      "answer": 0,
+      "explanation": "'Aikuiskoulutus' means adult education; its genitive is 'aikuiskoulutuksen'.",
+      "example": "Osallistun aikuiskoulutukseen.",
+      "exampletranslate": "I take part in adult education."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Driver's license",
+      "options": ["ajokortti", "tutkinto", "sopimus", "ratti"],
+      "answer": 0,
+      "explanation": "'Ajokortti' means driver's license; its genitive is 'ajokortin'.",
+      "example": "Suoritan ajokortin tänä vuonna.",
+      "exampletranslate": "I get my driver's license this year."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Field / Sector",
+      "options": ["ala", "ura", "tutkinto", "merkki"],
+      "answer": 0,
+      "explanation": "'Ala' means field or sector.",
+      "example": "Työskentelen IT-alalla.",
+      "exampletranslate": "I work in the IT field."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Primary school (lower)",
+      "options": ["alakoulu", "yläkoulu", "esikoulu", "lukio"],
+      "answer": 0,
+      "explanation": "'Alakoulu' means the lower grades of comprehensive school (primary school).",
+      "example": "Lapsi käy alakoulua.",
+      "exampletranslate": "The child attends primary school."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Lower",
+      "options": ["alempi", "ylempi", "tarkka", "hankala"],
+      "answer": 0,
+      "explanation": "'Alempi' means lower; its genitive is 'alemman'.",
+      "example": "Tämä on alempi tutkinto.",
+      "exampletranslate": "This is a lower degree."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Beginning",
+      "options": ["alku", "kesken", "harmi", "ura"],
+      "answer": 0,
+      "explanation": "'Alku' means beginning; its genitive is 'alun'.",
+      "example": "Kurssin alku on syyskuussa.",
+      "exampletranslate": "The course's beginning is in September."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Profession",
+      "options": ["ammatti", "ala", "ura", "tutkinto"],
+      "answer": 0,
+      "explanation": "'Ammatti' means profession; its genitive is 'ammatin'.",
+      "example": "Mikä on sinun ammattisi?",
+      "exampletranslate": "What is your profession?"
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "University of applied sciences",
+      "options": ["ammattikorkeakoulu", "ammattikoulu", "yliopisto", "korkeakoulu"],
+      "answer": 0,
+      "explanation": "'Ammattikorkeakoulu' means university of applied sciences.",
+      "example": "Opiskelen ammattikorkeakoulussa.",
+      "exampletranslate": "I study at a university of applied sciences."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Vocational school",
+      "options": ["ammattikoulu", "ammattikorkeakoulu", "peruskoulu", "lukio"],
+      "answer": 0,
+      "explanation": "'Ammattikoulu' means vocational school.",
+      "example": "Hän opiskelee kokiksi ammattikoulussa.",
+      "exampletranslate": "He studies to be a cook at a vocational school."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Grant / Scholarship",
+      "options": ["apuraha", "toimeentulo", "tutkinto", "sopimus"],
+      "answer": 0,
+      "explanation": "'Apuraha' means grant or scholarship.",
+      "example": "Sain apurahan opintoihin.",
+      "exampletranslate": "I got a grant for my studies."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Everyday life / Weekday",
+      "options": ["arki", "kausi", "vapaa-aika", "alku"],
+      "answer": 0,
+      "explanation": "'Arki' means everyday life or weekday; its genitive is 'arjen'.",
+      "example": "Arki on kiireistä.",
+      "exampletranslate": "Everyday life is busy."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Customer service",
+      "options": ["asiakaspalvelu", "toiminta", "tilitoimisto", "sopimus"],
+      "answer": 0,
+      "explanation": "'Asiakaspalvelu' means customer service.",
+      "example": "Työskentelen asiakaspalvelussa.",
+      "exampletranslate": "I work in customer service."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Pension",
+      "options": ["eläke", "apuraha", "toimeentulo", "vastuu"],
+      "answer": 0,
+      "explanation": "'Eläke' means pension; its genitive is 'eläkkeen'.",
+      "example": "Hän jää pian eläkkeelle.",
+      "exampletranslate": "He will soon retire (go on pension)."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Life partner",
+      "options": ["elämänkumppani", "esihenkilö", "kuljettaja", "tarjoilija"],
+      "answer": 0,
+      "explanation": "'Elämänkumppani' means life partner.",
+      "example": "Hän on minun elämänkumppanini.",
+      "exampletranslate": "He is my life partner."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "To separate / divorce",
+      "options": ["erota", "syntyä", "rakastua", "viihtyä"],
+      "answer": 0,
+      "explanation": "'Erota' (type 4 verb) means to separate, resign or divorce; 'eroan' is 'I separate' (used with 'mistä').",
+      "example": "He erosivat viime vuonna.",
+      "exampletranslate": "They divorced last year."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Preschool",
+      "options": ["esikoulu", "alakoulu", "yläkoulu", "lukio"],
+      "answer": 0,
+      "explanation": "'Esikoulu' means preschool.",
+      "example": "Lapsi aloittaa esikoulun.",
+      "exampletranslate": "The child starts preschool."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Supervisor / Manager",
+      "options": ["esihenkilö", "päällikkö", "kuljettaja", "siistijä"],
+      "answer": 0,
+      "explanation": "'Esihenkilö' means supervisor or manager (a person's superior).",
+      "example": "Keskustelen esihenkilön kanssa.",
+      "exampletranslate": "I talk with my supervisor."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Firm / Company",
+      "options": ["firma", "yritys", "tehdas", "telakka"],
+      "answer": 0,
+      "explanation": "'Firma' means firm or company (informal).",
+      "example": "Hän perusti oman firman.",
+      "exampletranslate": "He founded his own firm."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "To dream (of)",
+      "options": ["haaveilla", "ihailla", "rakastua", "viihtyä"],
+      "answer": 0,
+      "explanation": "'Haaveilla' (type 3 verb) means to dream of; 'haaveilen' is 'I dream' (used with 'mistä').",
+      "example": "Haaveilen omasta yrityksestä.",
+      "exampletranslate": "I dream of my own company."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Application round / Search",
+      "options": ["haku", "merkki", "harmi", "ura"],
+      "answer": 0,
+      "explanation": "'Haku' means a search or an application round; its genitive is 'haun'.",
+      "example": "Yliopiston haku alkaa keväällä.",
+      "exampletranslate": "The university application round begins in spring."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Difficult / Awkward",
+      "options": ["hankala", "hieno", "huono", "tarkka"],
+      "answer": 0,
+      "explanation": "'Hankala' means difficult or awkward.",
+      "example": "Tämä on hankala tilanne.",
+      "exampletranslate": "This is a difficult situation."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Pity / Annoyance",
+      "options": ["harmi", "haku", "virhe", "turva"],
+      "answer": 0,
+      "explanation": "'Harmi' means a pity or annoyance.",
+      "example": "Voi harmi, en päässyt kouluun.",
+      "exampletranslate": "What a pity, I didn't get into the school."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "To bury",
+      "options": ["haudata", "syntyä", "erota", "viettää"],
+      "answer": 0,
+      "explanation": "'Haudata' (type 4 verb) means to bury; 'hautaan' is 'I bury'.",
+      "example": "Hänet haudattiin hautausmaalle.",
+      "exampletranslate": "He was buried at the cemetery."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Cemetery",
+      "options": ["hautausmaa", "sairaala", "työmaa", "telakka"],
+      "answer": 0,
+      "explanation": "'Hautausmaa' means cemetery.",
+      "example": "Kävin hautausmaalla.",
+      "exampletranslate": "I visited the cemetery."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Fine / Great",
+      "options": ["hieno", "huono", "hankala", "tarkka"],
+      "answer": 0,
+      "explanation": "'Hieno' means fine or great.",
+      "example": "Sinulla on hieno ura.",
+      "exampletranslate": "You have a great career."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Hotel",
+      "options": ["hotelli", "sairaala", "tehdas", "firma"],
+      "answer": 0,
+      "explanation": "'Hotelli' means hotel.",
+      "example": "Hän työskentelee hotellissa.",
+      "exampletranslate": "He works at a hotel."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Bad",
+      "options": ["huono", "hieno", "hankala", "suosittu"],
+      "answer": 0,
+      "explanation": "'Huono' means bad.",
+      "example": "Tämä on huono tulos.",
+      "exampletranslate": "This is a bad result."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "To admire",
+      "options": ["ihailla", "haaveilla", "rakastua", "ilmestyä"],
+      "answer": 0,
+      "explanation": "'Ihailla' (type 3 verb) means to admire; 'ihailen' is 'I admire'.",
+      "example": "Ihailen hänen uraansa.",
+      "exampletranslate": "I admire his career."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "To appear",
+      "options": ["ilmestyä", "pysähtyä", "myöhästyä", "valmistua"],
+      "answer": 0,
+      "explanation": "'Ilmestyä' (type 1 verb) means to appear; 'ilmestyn' is 'I appear'.",
+      "example": "Uusi kirja ilmestyy keväällä.",
+      "exampletranslate": "The new book appears in spring."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "To vacuum",
+      "options": ["imuroida", "maalata", "värjätä", "pyyhkiä"],
+      "answer": 0,
+      "explanation": "'Imuroida' (type 2 verb) means to vacuum; 'imuroin' is 'I vacuum'.",
+      "example": "Imuroin lattian.",
+      "exampletranslate": "I vacuum the floor."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "To stay / remain (into a place)",
+      "options": ["jäädä", "pysyä", "pysähtyä", "viihtyä"],
+      "answer": 0,
+      "explanation": "'Jäädä' (type 2 verb) means to stay or remain; 'jään' is 'I stay' (used with 'mihin').",
+      "example": "Jään tänään kotiin.",
+      "exampletranslate": "I stay at home today."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Roof / Ceiling",
+      "options": ["katto", "suoja", "telakka", "tehdas"],
+      "answer": 0,
+      "explanation": "'Katto' means roof or ceiling; its genitive is 'katon'.",
+      "example": "Katto vuotaa.",
+      "exampletranslate": "The roof is leaking."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Season / Period",
+      "options": ["kausi", "arki", "alku", "vaihde"],
+      "answer": 0,
+      "explanation": "'Kausi' means season or period; its genitive is 'kauden'.",
+      "example": "Kesäkausi on kiireinen.",
+      "exampletranslate": "The summer season is busy."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Seasonal work",
+      "options": ["kausityö", "kesätyö", "vuorotyö", "työvuoro"],
+      "answer": 0,
+      "explanation": "'Kausityö' means seasonal work.",
+      "example": "Teen kausityötä kesällä.",
+      "exampletranslate": "I do seasonal work in summer."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Story / Account",
+      "options": ["kertomus", "tarina", "kuvitus", "muistiinpano"],
+      "answer": 0,
+      "explanation": "'Kertomus' means story or account; its genitive is 'kertomuksen'.",
+      "example": "Luin lyhyen kertomuksen.",
+      "exampletranslate": "I read a short story."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Unfinished / In the middle",
+      "options": ["kesken", "alku", "valmis", "yllättäen"],
+      "answer": 0,
+      "explanation": "'Kesken' means in the middle or unfinished.",
+      "example": "Työ jäi kesken.",
+      "exampletranslate": "The work was left unfinished."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Middle-aged",
+      "options": ["keski-ikäinen", "nykyinen", "vakituinen", "yksinäinen"],
+      "answer": 0,
+      "explanation": "'Keski-ikäinen' means middle-aged; its genitive is 'keski-ikäisen'.",
+      "example": "Hän on keski-ikäinen mies.",
+      "exampletranslate": "He is a middle-aged man."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Summer job",
+      "options": ["kesätyö", "kausityö", "vuorotyö", "työmaa"],
+      "answer": 0,
+      "explanation": "'Kesätyö' means summer job.",
+      "example": "Etsin kesätyötä.",
+      "exampletranslate": "I am looking for a summer job."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Language skill",
+      "options": ["kielitaito", "tutkinto", "tekniikka", "kielikurssi"],
+      "answer": 0,
+      "explanation": "'Kielitaito' means language skill; its genitive is 'kielitaidon'.",
+      "example": "Hyvä kielitaito auttaa työssä.",
+      "exampletranslate": "Good language skills help at work."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Interested (in)",
+      "options": ["kiinnostunut", "suosittu", "huolestunut", "yksinäinen"],
+      "answer": 0,
+      "explanation": "'Kiinnostunut' means interested; its genitive is 'kiinnostuneen' (used with 'mistä').",
+      "example": "Olen kiinnostunut tekniikasta.",
+      "exampletranslate": "I am interested in technology."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Higher education institution",
+      "options": ["korkeakoulu", "peruskoulu", "ammattikoulu", "yläkoulu"],
+      "answer": 0,
+      "explanation": "'Korkeakoulu' means a higher education institution.",
+      "example": "Hän opiskelee korkeakoulussa.",
+      "exampletranslate": "He studies at a higher education institution."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Education / Training",
+      "options": ["koulutus", "aikuiskoulutus", "tutkinto", "kielitaito"],
+      "answer": 0,
+      "explanation": "'Koulutus' means education or training; its genitive is 'koulutuksen'.",
+      "example": "Minulla on hyvä koulutus.",
+      "exampletranslate": "I have a good education."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Driver",
+      "options": ["kuljettaja", "tarjoilija", "siistijä", "taiteilija"],
+      "answer": 0,
+      "explanation": "'Kuljettaja' means driver.",
+      "example": "Bussin kuljettaja on ystävällinen.",
+      "exampletranslate": "The bus driver is friendly."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Illustration",
+      "options": ["kuvitus", "piirustus", "malli", "merkki"],
+      "answer": 0,
+      "explanation": "'Kuvitus' means illustration; its genitive is 'kuvituksen'.",
+      "example": "Kirjan kuvitus on kaunis.",
+      "exampletranslate": "The book's illustration is beautiful."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "Village",
+      "options": ["kylä", "sairaala", "hotelli", "tehdas"],
+      "answer": 0,
+      "explanation": "'Kylä' means village.",
+      "example": "Asun pienessä kylässä.",
+      "exampletranslate": "I live in a small village."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Helmet",
+      "options": ["kypärä", "ratti", "vaihde", "mittari"],
+      "answer": 0,
+      "explanation": "'Kypärä' means helmet.",
+      "example": "Käytä kypärää pyörällä.",
+      "exampletranslate": "Wear a helmet on the bike."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To translate / turn",
+      "options": ["kääntää", "maalata", "leikata", "värjätä"],
+      "answer": 0,
+      "explanation": "'Kääntää' (type 1 verb) means to translate or turn; 'käännän' is 'I translate/turn'.",
+      "example": "Käännän tekstin suomeksi.",
+      "exampletranslate": "I translate the text into Finnish."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Law book",
+      "options": ["lakikirja", "muistiinpano", "tietokoneohjelma", "piirustus"],
+      "answer": 0,
+      "explanation": "'Lakikirja' means law book.",
+      "example": "Juristi lukee lakikirjaa.",
+      "exampletranslate": "The lawyer reads the law book."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "To cut",
+      "options": ["leikata", "kääntää", "maalata", "pyyhkiä"],
+      "answer": 0,
+      "explanation": "'Leikata' (type 4 verb) means to cut; 'leikkaan' is 'I cut'.",
+      "example": "Leikkaan paperin saksilla.",
+      "exampletranslate": "I cut the paper with scissors."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Business economics",
+      "options": ["liiketalous", "lääketiede", "tekniikka", "tilitoimisto"],
+      "answer": 0,
+      "explanation": "'Liiketalous' means business economics; its genitive is 'liiketalouden'.",
+      "example": "Opiskelen liiketaloutta.",
+      "exampletranslate": "I study business economics."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Bus (coach)",
+      "options": ["linja-auto", "mopo", "ratti", "moottori"],
+      "answer": 0,
+      "explanation": "'Linja-auto' means bus or coach.",
+      "example": "Menen töihin linja-autolla.",
+      "exampletranslate": "I go to work by bus."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Slippery",
+      "options": ["liukas", "tarkka", "hankala", "äänetön"],
+      "answer": 0,
+      "explanation": "'Liukas' means slippery; its genitive is 'liukkaan'.",
+      "example": "Tie on liukas talvella.",
+      "exampletranslate": "The road is slippery in winter."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Upper secondary / High school",
+      "options": ["lukio", "yläkoulu", "alakoulu", "ammattikoulu"],
+      "answer": 0,
+      "explanation": "'Lukio' means upper secondary school (high school).",
+      "example": "Hän käy lukiota.",
+      "exampletranslate": "He attends upper secondary school."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "Practical nurse",
+      "options": ["lähihoitaja", "tarjoilija", "siistijä", "kuljettaja"],
+      "answer": 0,
+      "explanation": "'Lähihoitaja' means practical nurse (a care worker).",
+      "example": "Hän työskentelee lähihoitajana.",
+      "exampletranslate": "She works as a practical nurse."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "Medicine (the science)",
+      "options": ["lääketiede", "liiketalous", "tekniikka", "kielitaito"],
+      "answer": 0,
+      "explanation": "'Lääketiede' means medicine (the academic field); its genitive is 'lääketieteen'.",
+      "example": "Hän opiskelee lääketiedettä.",
+      "exampletranslate": "She studies medicine."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "World war",
+      "options": ["maailmansota", "sota", "myrsky", "onnettomuus"],
+      "answer": 0,
+      "explanation": "'Maailmansota' means world war; its genitive is 'maailmansodan'.",
+      "example": "Toinen maailmansota päättyi 1945.",
+      "exampletranslate": "The Second World War ended in 1945."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "To paint",
+      "options": ["maalata", "värjätä", "leikata", "kääntää"],
+      "answer": 0,
+      "explanation": "'Maalata' (type 4 verb) means to paint; 'maalaan' is 'I paint'.",
+      "example": "Maalaan seinän valkoiseksi.",
+      "exampletranslate": "I paint the wall white."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "In the countryside",
+      "options": ["maalla", "kylä", "ulkomailla", "kesken"],
+      "answer": 0,
+      "explanation": "'Maalla' means in the countryside.",
+      "example": "Vanhempani asuvat maalla.",
+      "exampletranslate": "My parents live in the countryside."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Possibility / Opportunity",
+      "options": ["mahdollisuus", "vastuu", "toiminta", "ura"],
+      "answer": 0,
+      "explanation": "'Mahdollisuus' means possibility or opportunity; its genitive is 'mahdollisuuden'.",
+      "example": "Tämä on hyvä mahdollisuus.",
+      "exampletranslate": "This is a good opportunity."
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "Model / Pattern",
+      "options": ["malli", "merkki", "kuvitus", "mittari"],
+      "answer": 0,
+      "explanation": "'Malli' means model or pattern.",
+      "example": "Tämä on uusi malli.",
+      "exampletranslate": "This is a new model."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "Mark / Brand / Sign",
+      "options": ["merkki", "malli", "mittari", "moottori"],
+      "answer": 0,
+      "explanation": "'Merkki' means mark, brand or sign; its genitive is 'merkin'.",
+      "example": "Mikä auton merkki tämä on?",
+      "exampletranslate": "What car brand is this?"
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "Metal",
+      "options": ["metalli", "telakka", "tehdas", "moottori"],
+      "answer": 0,
+      "explanation": "'Metalli' means metal.",
+      "example": "Hän työskentelee metallialalla.",
+      "exampletranslate": "He works in the metal industry."
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "Meter / Gauge",
+      "options": ["mittari", "merkki", "malli", "moottori"],
+      "answer": 0,
+      "explanation": "'Mittari' means meter or gauge.",
+      "example": "Taksin mittari näyttää hinnan.",
+      "exampletranslate": "The taxi's meter shows the price."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Many",
+      "options": ["monta", "kesken", "onneksi", "yllättäen"],
+      "answer": 0,
+      "explanation": "'Monta' means many (the partitive form used in counting).",
+      "example": "Minulla on monta projektia.",
+      "exampletranslate": "I have many projects."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "Motor / Engine",
+      "options": ["moottori", "mittari", "ratti", "vaihde"],
+      "answer": 0,
+      "explanation": "'Moottori' means motor or engine.",
+      "example": "Auton moottori on rikki.",
+      "exampletranslate": "The car's engine is broken."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Moped",
+      "options": ["mopo", "linja-auto", "ratti", "kypärä"],
+      "answer": 0,
+      "explanation": "'Mopo' means moped.",
+      "example": "Nuori ajaa mopolla.",
+      "exampletranslate": "The young person rides a moped."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "Note (written)",
+      "options": ["muistiinpano", "kertomus", "kuvitus", "piirustus"],
+      "answer": 0,
+      "explanation": "'Muistiinpano' means a note (something written down).",
+      "example": "Teen muistiinpanoja luennolla.",
+      "exampletranslate": "I take notes in the lecture."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "Storm",
+      "options": ["myrsky", "tulipalo", "onnettomuus", "sota"],
+      "answer": 0,
+      "explanation": "'Myrsky' means storm.",
+      "example": "Myrsky kaatoi puita.",
+      "exampletranslate": "The storm knocked down trees."
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "To be late",
+      "options": ["myöhästyä", "pysähtyä", "ilmestyä", "valmistua"],
+      "answer": 0,
+      "explanation": "'Myöhästyä' (type 1 verb) means to be late; 'myöhästyn' is 'I am late'.",
+      "example": "Myöhästyin bussista.",
+      "exampletranslate": "I was late for (missed) the bus."
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "Fixed-term",
+      "options": ["määräaikainen", "vakituinen", "osa-aikainen", "nykyinen"],
+      "answer": 0,
+      "explanation": "'Määräaikainen' means fixed-term; its genitive is 'määräaikaisen'.",
+      "example": "Minulla on määräaikainen työsopimus.",
+      "exampletranslate": "I have a fixed-term work contract."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "Current / Present",
+      "options": ["nykyinen", "vakituinen", "samanlainen", "suosittu"],
+      "answer": 0,
+      "explanation": "'Nykyinen' means current or present; its genitive is 'nykyisen'.",
+      "example": "Nykyinen työni on mukava.",
+      "exampletranslate": "My current job is nice."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "Luckily",
+      "options": ["onneksi", "yllättäen", "kesken", "ulkomailla"],
+      "answer": 0,
+      "explanation": "'Onneksi' means luckily.",
+      "example": "Onneksi sain työpaikan.",
+      "exampletranslate": "Luckily I got the job."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "Accident",
+      "options": ["onnettomuus", "tulipalo", "myrsky", "virhe"],
+      "answer": 0,
+      "explanation": "'Onnettomuus' means accident; its genitive is 'onnettomuuden'.",
+      "example": "Tiellä tapahtui onnettomuus.",
+      "exampletranslate": "An accident happened on the road."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Study place (admission)",
+      "options": ["opiskelupaikka", "työmaa", "tutkinto", "ura"],
+      "answer": 0,
+      "explanation": "'Opiskelupaikka' means a study place (admission to study); its genitive is 'opiskelupaikan'.",
+      "example": "Sain opiskelupaikan yliopistosta.",
+      "exampletranslate": "I got a study place at the university."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "Orchestra",
+      "options": ["orkesteri", "projekti", "taiteilija", "merkki"],
+      "answer": 0,
+      "explanation": "'Orkesteri' means orchestra.",
+      "example": "Hän soittaa orkesterissa.",
+      "exampletranslate": "He plays in the orchestra."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Part-time",
+      "options": ["osa-aikainen", "määräaikainen", "vakituinen", "nykyinen"],
+      "answer": 0,
+      "explanation": "'Osa-aikainen' means part-time; its genitive is 'osa-aikaisen'.",
+      "example": "Teen osa-aikaista työtä.",
+      "exampletranslate": "I do part-time work."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Comprehensive school",
+      "options": ["peruskoulu", "korkeakoulu", "ammattikoulu", "esikoulu"],
+      "answer": 0,
+      "explanation": "'Peruskoulu' means comprehensive school (basic education).",
+      "example": "Lapset käyvät peruskoulua.",
+      "exampletranslate": "The children attend comprehensive school."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Drawing",
+      "options": ["piirustus", "kuvitus", "malli", "muistiinpano"],
+      "answer": 0,
+      "explanation": "'Piirustus' means drawing; its genitive is 'piirustuksen'.",
+      "example": "Lapsen piirustus on seinällä.",
+      "exampletranslate": "The child's drawing is on the wall."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Police",
+      "options": ["poliisi", "siistijä", "kuljettaja", "tarjoilija"],
+      "answer": 0,
+      "explanation": "'Poliisi' means police (or a police officer).",
+      "example": "Soitan poliisille.",
+      "exampletranslate": "I call the police."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "Project",
+      "options": ["projekti", "orkesteri", "toiminta", "sopimus"],
+      "answer": 0,
+      "explanation": "'Projekti' means project.",
+      "example": "Työskentelen uudessa projektissa.",
+      "exampletranslate": "I work on a new project."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "To stay / remain (the same)",
+      "options": ["pysyä", "jäädä", "pysähtyä", "viihtyä"],
+      "answer": 0,
+      "explanation": "'Pysyä' (type 1 verb) means to stay or remain; 'pysyn' is 'I stay'.",
+      "example": "Pysyn terveenä.",
+      "exampletranslate": "I stay healthy."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "To stop (come to a halt)",
+      "options": ["pysähtyä", "pysyä", "myöhästyä", "valmistua"],
+      "answer": 0,
+      "explanation": "'Pysähtyä' (type 1 verb) means to stop or come to a halt; 'pysähdyn' is 'I stop'.",
+      "example": "Bussi pysähtyy pysäkille.",
+      "exampletranslate": "The bus stops at the stop."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "To wipe",
+      "options": ["pyyhkiä", "imuroida", "maalata", "leikata"],
+      "answer": 0,
+      "explanation": "'Pyyhkiä' (type 1 verb) means to wipe; 'pyyhin' is 'I wipe'.",
+      "example": "Pyyhin pöydän puhtaaksi.",
+      "exampletranslate": "I wipe the table clean."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Chief / Manager",
+      "options": ["päällikkö", "esihenkilö", "kuljettaja", "tradenomi"],
+      "answer": 0,
+      "explanation": "'Päällikkö' means chief or manager; its genitive is 'päällikön'.",
+      "example": "Hän on osaston päällikkö.",
+      "exampletranslate": "He is the head of the department."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "To fall in love",
+      "options": ["rakastua", "erota", "haaveilla", "ihailla"],
+      "answer": 0,
+      "explanation": "'Rakastua' (type 1 verb) means to fall in love; 'rakastun' is 'I fall in love' (used with 'mihin').",
+      "example": "Rakastuin häneen heti.",
+      "exampletranslate": "I fell in love with her immediately."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Steering wheel",
+      "options": ["ratti", "vaihde", "moottori", "mittari"],
+      "answer": 0,
+      "explanation": "'Ratti' means steering wheel; its genitive is 'ratin'.",
+      "example": "Pidä molemmat kädet ratissa.",
+      "exampletranslate": "Keep both hands on the steering wheel."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "To be enough / suffice",
+      "options": ["riittää", "pysyä", "valmistua", "viihtyä"],
+      "answer": 0,
+      "explanation": "'Riittää' (type 1 verb) means to be enough or suffice; 'se riittää' means 'it is enough'.",
+      "example": "Tämä raha riittää.",
+      "exampletranslate": "This money is enough."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "Hospital",
+      "options": ["sairaala", "hotelli", "tehdas", "telakka"],
+      "answer": 0,
+      "explanation": "'Sairaala' means hospital.",
+      "example": "Hän on töissä sairaalassa.",
+      "exampletranslate": "She works at the hospital."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Similar / Identical",
+      "options": ["samanlainen", "nykyinen", "suosittu", "vakituinen"],
+      "answer": 0,
+      "explanation": "'Samanlainen' means similar or identical; its genitive is 'samanlaisen'.",
+      "example": "Meillä on samanlainen auto.",
+      "exampletranslate": "We have a similar car."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Cleaner",
+      "options": ["siistijä", "kuljettaja", "tarjoilija", "taiteilija"],
+      "answer": 0,
+      "explanation": "'Siistijä' means cleaner.",
+      "example": "Siistijä siivoaa toimiston.",
+      "exampletranslate": "The cleaner cleans the office."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Contract / Agreement",
+      "options": ["sopimus", "tutkinto", "toimeentulo", "vastuu"],
+      "answer": 0,
+      "explanation": "'Sopimus' means contract or agreement; its genitive is 'sopimuksen'.",
+      "example": "Allekirjoitan työsopimuksen.",
+      "exampletranslate": "I sign the work contract."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "War",
+      "options": ["sota", "maailmansota", "myrsky", "tulipalo"],
+      "answer": 0,
+      "explanation": "'Sota' means war; its genitive is 'sodan'.",
+      "example": "Sota kesti monta vuotta.",
+      "exampletranslate": "The war lasted many years."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Shelter / Protection",
+      "options": ["suoja", "turva", "katto", "vastuu"],
+      "answer": 0,
+      "explanation": "'Suoja' means shelter or protection.",
+      "example": "Etsin suojaa sateelta.",
+      "exampletranslate": "I look for shelter from the rain."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Popular",
+      "options": ["suosittu", "samanlainen", "nykyinen", "hieno"],
+      "answer": 0,
+      "explanation": "'Suosittu' means popular; its genitive is 'suositun'.",
+      "example": "Tämä ala on suosittu.",
+      "exampletranslate": "This field is popular."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "To be born",
+      "options": ["syntyä", "valmistua", "erota", "rakastua"],
+      "answer": 0,
+      "explanation": "'Syntyä' (type 1 verb) means to be born; 'synnyn' is 'I am born'.",
+      "example": "Synnyin Helsingissä.",
+      "exampletranslate": "I was born in Helsinki."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "Artist",
+      "options": ["taiteilija", "tarjoilija", "siistijä", "kuljettaja"],
+      "answer": 0,
+      "explanation": "'Taiteilija' means artist.",
+      "example": "Hän on tunnettu taiteilija.",
+      "exampletranslate": "She is a famous artist."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Story / Tale",
+      "options": ["tarina", "kertomus", "kuvitus", "muistiinpano"],
+      "answer": 0,
+      "explanation": "'Tarina' means story or tale.",
+      "example": "Kerron sinulle tarinan.",
+      "exampletranslate": "I'll tell you a story."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Waiter / Server",
+      "options": ["tarjoilija", "kuljettaja", "siistijä", "kokki"],
+      "answer": 0,
+      "explanation": "'Tarjoilija' means waiter or server.",
+      "example": "Tarjoilija tuo ruoan.",
+      "exampletranslate": "The waiter brings the food."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Exact / Precise",
+      "options": ["tarkka", "liukas", "hankala", "suosittu"],
+      "answer": 0,
+      "explanation": "'Tarkka' means exact or precise; its genitive is 'tarkan'.",
+      "example": "Hän on tarkka työssään.",
+      "exampletranslate": "He is precise in his work."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "To mean",
+      "options": ["tarkoittaa", "kääntää", "valmistua", "riittää"],
+      "answer": 0,
+      "explanation": "'Tarkoittaa' (type 1 verb) means to mean; 'tarkoitan' is 'I mean' (takes a partitive object).",
+      "example": "Mitä tämä sana tarkoittaa?",
+      "exampletranslate": "What does this word mean?"
+    },
+    {
+      "id": 101,
+      "type": "multiple-choice",
+      "question": "Factory",
+      "options": ["tehdas", "telakka", "sairaala", "tilitoimisto"],
+      "answer": 0,
+      "explanation": "'Tehdas' means factory; its genitive is 'tehtaan'.",
+      "example": "Hän työskentelee tehtaassa.",
+      "exampletranslate": "He works at the factory."
+    },
+    {
+      "id": 102,
+      "type": "multiple-choice",
+      "question": "Technology / Technique",
+      "options": ["tekniikka", "tekniikan", "liiketalous", "lääketiede"],
+      "answer": 0,
+      "explanation": "'Tekniikka' means technology or technique; its genitive is 'tekniikan'.",
+      "example": "Opiskelen tekniikkaa.",
+      "exampletranslate": "I study technology."
+    },
+    {
+      "id": 103,
+      "type": "multiple-choice",
+      "question": "Shipyard / Dock",
+      "options": ["telakka", "tehdas", "työmaa", "sairaala"],
+      "answer": 0,
+      "explanation": "'Telakka' means shipyard or dock; its genitive is 'telakan'.",
+      "example": "Laiva rakennetaan telakalla.",
+      "exampletranslate": "The ship is built at the shipyard."
+    },
+    {
+      "id": 104,
+      "type": "multiple-choice",
+      "question": "Computer program",
+      "options": ["tietokoneohjelma", "lakikirja", "verkkokurssi", "muistiinpano"],
+      "answer": 0,
+      "explanation": "'Tietokoneohjelma' means computer program.",
+      "example": "Käytän uutta tietokoneohjelmaa.",
+      "exampletranslate": "I use a new computer program."
+    },
+    {
+      "id": 105,
+      "type": "multiple-choice",
+      "question": "Accounting firm",
+      "options": ["tilitoimisto", "liiketalous", "firma", "telakka"],
+      "answer": 0,
+      "explanation": "'Tilitoimisto' means accounting firm.",
+      "example": "Hän työskentelee tilitoimistossa.",
+      "exampletranslate": "She works at an accounting firm."
+    },
+    {
+      "id": 106,
+      "type": "multiple-choice",
+      "question": "Livelihood / Income",
+      "options": ["toimeentulo", "vastuu", "eläke", "apuraha"],
+      "answer": 0,
+      "explanation": "'Toimeentulo' means livelihood or income.",
+      "example": "Työ antaa toimeentulon.",
+      "exampletranslate": "Work provides a livelihood."
+    },
+    {
+      "id": 107,
+      "type": "multiple-choice",
+      "question": "Activity / Operation",
+      "options": ["toiminta", "toimeentulo", "projekti", "vastuu"],
+      "answer": 0,
+      "explanation": "'Toiminta' means activity or operation; its genitive is 'toiminnan'.",
+      "example": "Yrityksen toiminta kasvaa.",
+      "exampletranslate": "The company's operation is growing."
+    },
+    {
+      "id": 108,
+      "type": "multiple-choice",
+      "question": "The day before yesterday",
+      "options": ["toissapäivänä", "toissapäivä", "ulkomailla", "yllättäen"],
+      "answer": 0,
+      "explanation": "'Toissapäivänä' means the day before yesterday.",
+      "example": "Aloitin työn toissapäivänä.",
+      "exampletranslate": "I started the job the day before yesterday."
+    },
+    {
+      "id": 109,
+      "type": "multiple-choice",
+      "question": "Bachelor of business administration",
+      "options": ["tradenomi", "lähihoitaja", "esihenkilö", "taiteilija"],
+      "answer": 0,
+      "explanation": "'Tradenomi' is a bachelor of business administration (a Finnish degree title).",
+      "example": "Hän valmistui tradenomiksi.",
+      "exampletranslate": "He graduated as a tradenomi."
+    },
+    {
+      "id": 110,
+      "type": "multiple-choice",
+      "question": "Fire (blaze)",
+      "options": ["tulipalo", "myrsky", "onnettomuus", "sota"],
+      "answer": 0,
+      "explanation": "'Tulipalo' means fire (a blaze).",
+      "example": "Talossa syttyi tulipalo.",
+      "exampletranslate": "A fire broke out in the house."
+    },
+    {
+      "id": 111,
+      "type": "multiple-choice",
+      "question": "Security / Safety",
+      "options": ["turva", "suoja", "vastuu", "vakituinen"],
+      "answer": 0,
+      "explanation": "'Turva' means security or safety.",
+      "example": "Vakituinen työ antaa turvaa.",
+      "exampletranslate": "A permanent job provides security."
+    },
+    {
+      "id": 112,
+      "type": "multiple-choice",
+      "question": "Degree (qualification)",
+      "options": ["tutkinto", "sopimus", "koulutus", "ura"],
+      "answer": 0,
+      "explanation": "'Tutkinto' means degree or qualification; its genitive is 'tutkinnon'.",
+      "example": "Suoritin korkeakoulututkinnon.",
+      "exampletranslate": "I completed a higher education degree."
+    },
+    {
+      "id": 113,
+      "type": "multiple-choice",
+      "question": "Construction site / Workplace site",
+      "options": ["työmaa", "telakka", "tehdas", "hautausmaa"],
+      "answer": 0,
+      "explanation": "'Työmaa' means construction site or work site.",
+      "example": "Hän on töissä työmaalla.",
+      "exampletranslate": "He works at the construction site."
+    },
+    {
+      "id": 114,
+      "type": "multiple-choice",
+      "question": "To work",
+      "options": ["työskennellä", "valmistua", "viihtyä", "pysyä"],
+      "answer": 0,
+      "explanation": "'Työskennellä' (type 3 verb) means to work; 'työskentelen' is 'I work'.",
+      "example": "Työskentelen sairaalassa.",
+      "exampletranslate": "I work at the hospital."
+    },
+    {
+      "id": 115,
+      "type": "multiple-choice",
+      "question": "Unemployed",
+      "options": ["työtön", "vakituinen", "osa-aikainen", "nykyinen"],
+      "answer": 0,
+      "explanation": "'Työtön' means unemployed; its genitive is 'työttömän'.",
+      "example": "Hän on tällä hetkellä työtön.",
+      "exampletranslate": "He is currently unemployed."
+    },
+    {
+      "id": 116,
+      "type": "multiple-choice",
+      "question": "Work shift",
+      "options": ["työvuoro", "vuorotyö", "kausityö", "kesätyö"],
+      "answer": 0,
+      "explanation": "'Työvuoro' means work shift.",
+      "example": "Minulla on aamuvuoro työvuorona.",
+      "exampletranslate": "I have a morning shift as my work shift."
+    },
+    {
+      "id": 117,
+      "type": "multiple-choice",
+      "question": "Abroad",
+      "options": ["ulkomailla", "maalla", "kotona", "kesken"],
+      "answer": 0,
+      "explanation": "'Ulkomailla' means abroad.",
+      "example": "Olin töissä ulkomailla.",
+      "exampletranslate": "I worked abroad."
+    },
+    {
+      "id": 118,
+      "type": "multiple-choice",
+      "question": "Career",
+      "options": ["ura", "ala", "tutkinto", "toiminta"],
+      "answer": 0,
+      "explanation": "'Ura' means career.",
+      "example": "Haluan luoda hyvän uran.",
+      "exampletranslate": "I want to build a good career."
+    },
+    {
+      "id": 119,
+      "type": "multiple-choice",
+      "question": "Gear",
+      "options": ["vaihde", "ratti", "moottori", "mittari"],
+      "answer": 0,
+      "explanation": "'Vaihde' means gear; its genitive is 'vaihteen'.",
+      "example": "Vaihdan vaihdetta autossa.",
+      "exampletranslate": "I change gear in the car."
+    },
+    {
+      "id": 120,
+      "type": "multiple-choice",
+      "question": "Permanent",
+      "options": ["vakituinen", "määräaikainen", "osa-aikainen", "nykyinen"],
+      "answer": 0,
+      "explanation": "'Vakituinen' means permanent; its genitive is 'vakituisen'.",
+      "example": "Sain vakituisen työpaikan.",
+      "exampletranslate": "I got a permanent job."
+    },
+    {
+      "id": 121,
+      "type": "multiple-choice",
+      "question": "To graduate",
+      "options": ["valmistua", "syntyä", "erota", "työskennellä"],
+      "answer": 0,
+      "explanation": "'Valmistua' (type 1 verb) means to graduate; 'valmistun' is 'I graduate' (used with 'miksi' = as what).",
+      "example": "Valmistun lääkäriksi ensi vuonna.",
+      "exampletranslate": "I graduate as a doctor next year."
+    },
+    {
+      "id": 122,
+      "type": "multiple-choice",
+      "question": "Elderly person",
+      "options": ["vanhus", "nuori", "aikuinen", "lapsi"],
+      "answer": 0,
+      "explanation": "'Vanhus' means elderly person; its genitive is 'vanhuksen'.",
+      "example": "Vanhus tarvitsee apua.",
+      "exampletranslate": "The elderly person needs help."
+    },
+    {
+      "id": 123,
+      "type": "multiple-choice",
+      "question": "Free time",
+      "options": ["vapaa-aika", "arki", "kausi", "työvuoro"],
+      "answer": 0,
+      "explanation": "'Vapaa-aika' means free time; its genitive is 'vapaa-ajan'.",
+      "example": "Vapaa-ajalla harrastan musiikkia.",
+      "exampletranslate": "In my free time I do music."
+    },
+    {
+      "id": 124,
+      "type": "multiple-choice",
+      "question": "Responsibility",
+      "options": ["vastuu", "turva", "suoja", "toimeentulo"],
+      "answer": 0,
+      "explanation": "'Vastuu' means responsibility.",
+      "example": "Minulla on suuri vastuu työssä.",
+      "exampletranslate": "I have a big responsibility at work."
+    },
+    {
+      "id": 125,
+      "type": "multiple-choice",
+      "question": "Online course",
+      "options": ["verkkokurssi", "verkkosivut", "tietokoneohjelma", "lakikirja"],
+      "answer": 0,
+      "explanation": "'Verkkokurssi' means online course.",
+      "example": "Suoritan verkkokurssin.",
+      "exampletranslate": "I complete an online course."
+    },
+    {
+      "id": 126,
+      "type": "multiple-choice",
+      "question": "Website",
+      "options": ["verkkosivut", "verkkokurssi", "tietokoneohjelma", "muistiinpano"],
+      "answer": 0,
+      "explanation": "'Verkkosivut' means website (a plural word).",
+      "example": "Katson tiedot verkkosivuilta.",
+      "exampletranslate": "I check the information on the website."
+    },
+    {
+      "id": 127,
+      "type": "multiple-choice",
+      "question": "To spend (time) / celebrate",
+      "options": ["viettää", "viihtyä", "valmistua", "pysyä"],
+      "answer": 0,
+      "explanation": "'Viettää' (type 1 verb) means to spend time or to celebrate; 'vietän' is 'I spend/celebrate'.",
+      "example": "Vietän vapaa-aikaa luonnossa.",
+      "exampletranslate": "I spend my free time in nature."
+    },
+    {
+      "id": 128,
+      "type": "multiple-choice",
+      "question": "To enjoy / feel comfortable",
+      "options": ["viihtyä", "viettää", "pysyä", "valmistua"],
+      "answer": 0,
+      "explanation": "'Viihtyä' (type 1 verb) means to enjoy oneself or feel comfortable; 'viihdyn' is 'I feel comfortable'.",
+      "example": "Viihdyn työssäni.",
+      "exampletranslate": "I enjoy my job."
+    },
+    {
+      "id": 129,
+      "type": "multiple-choice",
+      "question": "Mistake / Error",
+      "options": ["virhe", "harmi", "onnettomuus", "vastuu"],
+      "answer": 0,
+      "explanation": "'Virhe' means mistake or error; its genitive is 'virheen'.",
+      "example": "Tein pienen virheen.",
+      "exampletranslate": "I made a small mistake."
+    },
+    {
+      "id": 130,
+      "type": "multiple-choice",
+      "question": "Shift work",
+      "options": ["vuorotyö", "työvuoro", "kausityö", "osa-aikainen"],
+      "answer": 0,
+      "explanation": "'Vuorotyö' means shift work.",
+      "example": "Teen vuorotyötä sairaalassa.",
+      "exampletranslate": "I do shift work at the hospital."
+    },
+    {
+      "id": 131,
+      "type": "multiple-choice",
+      "question": "To dye / color",
+      "options": ["värjätä", "maalata", "leikata", "imuroida"],
+      "answer": 0,
+      "explanation": "'Värjätä' (type 4 verb) means to dye or color; 'värjään' is 'I dye'.",
+      "example": "Värjään hiukset tummiksi.",
+      "exampletranslate": "I dye my hair dark."
+    },
+    {
+      "id": 132,
+      "type": "multiple-choice",
+      "question": "Lonely",
+      "options": ["yksinäinen", "suosittu", "vakituinen", "samanlainen"],
+      "answer": 0,
+      "explanation": "'Yksinäinen' means lonely; its genitive is 'yksinäisen'.",
+      "example": "Hän tuntee olonsa yksinäiseksi.",
+      "exampletranslate": "He feels lonely."
+    },
+    {
+      "id": 133,
+      "type": "multiple-choice",
+      "question": "Higher / Upper",
+      "options": ["ylempi", "alempi", "tarkka", "suosittu"],
+      "answer": 0,
+      "explanation": "'Ylempi' means higher or upper; its genitive is 'ylemmän'.",
+      "example": "Tämä on ylempi tutkinto.",
+      "exampletranslate": "This is a higher degree."
+    },
+    {
+      "id": 134,
+      "type": "multiple-choice",
+      "question": "University",
+      "options": ["yliopisto", "ammattikorkeakoulu", "lukio", "peruskoulu"],
+      "answer": 0,
+      "explanation": "'Yliopisto' means university; its genitive is 'yliopiston'.",
+      "example": "Opiskelen yliopistossa.",
+      "exampletranslate": "I study at the university."
+    },
+    {
+      "id": 135,
+      "type": "multiple-choice",
+      "question": "Graduate (matriculation)",
+      "options": ["ylioppilas", "tradenomi", "vanhus", "taiteilija"],
+      "answer": 0,
+      "explanation": "'Ylioppilas' means a matriculated graduate (one who passed the upper secondary exam); its genitive is 'ylioppilaan'.",
+      "example": "Hänestä tuli ylioppilas keväällä.",
+      "exampletranslate": "He became a graduate in the spring."
+    },
+    {
+      "id": 136,
+      "type": "multiple-choice",
+      "question": "Surprisingly",
+      "options": ["yllättäen", "onneksi", "kesken", "ulkomailla"],
+      "answer": 0,
+      "explanation": "'Yllättäen' means surprisingly or unexpectedly.",
+      "example": "Hän sai työpaikan yllättäen.",
+      "exampletranslate": "He got the job unexpectedly."
+    },
+    {
+      "id": 137,
+      "type": "multiple-choice",
+      "question": "Upper comprehensive school",
+      "options": ["yläkoulu", "alakoulu", "lukio", "ammattikoulu"],
+      "answer": 0,
+      "explanation": "'Yläkoulu' means the upper grades of comprehensive school.",
+      "example": "Nuori käy yläkoulua.",
+      "exampletranslate": "The teenager attends upper comprehensive school."
+    },
+    {
+      "id": 138,
+      "type": "multiple-choice",
+      "question": "Company / Attempt",
+      "options": ["yritys", "firma", "yhtiö", "toiminta"],
+      "answer": 0,
+      "explanation": "'Yritys' means company or business (and also an attempt); its genitive is 'yrityksen'.",
+      "example": "Perustin oman yrityksen.",
+      "exampletranslate": "I founded my own company."
+    },
+    {
+      "id": 139,
+      "type": "multiple-choice",
+      "question": "Silent / Mute",
+      "options": ["äänetön", "äänekäs", "hiljainen", "tarkka"],
+      "answer": 0,
+      "explanation": "'Äänetön' means silent or mute; its genitive is 'äänettömän'.",
+      "example": "Puhelin on äänetön kokouksessa.",
+      "exampletranslate": "The phone is on silent in the meeting."
+    },
+    {
+      "id": 140,
+      "type": "multiple-choice",
+      "question": "Voice / Sound",
+      "options": ["ääni", "äänetön", "merkki", "malli"],
+      "answer": 0,
+      "explanation": "'Ääni' means voice or sound; its genitive is 'äänen'.",
+      "example": "Kuulen kovan äänen.",
+      "exampletranslate": "I hear a loud sound."
+    }
+  ]
+}

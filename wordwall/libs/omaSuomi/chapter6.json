@@ -1,638 +1,1078 @@
 {
   "id": "chapter6",
-  "title": "Chapter 6 Vocabulary",
-  "description": "chapter6",
+  "title": "Chapter6",
+  "description": "Finnish vocabulary: weather, seasons, clothing, nature and verbs",
   "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
       "question": "To drive",
-      "options": ["hakea", "ajaa", "kutoa", "sataa"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Ajaa' means to drive a vehicle.",
-      "example": "Mies ajaa autoa varovasti."
+      "options": ["ajaa", "hakea", "kutoa", "valita"],
+      "answer": 0,
+      "explanation": "'Ajaa' (type 1 verb) means to drive; 'ajan' is 'I drive'.",
+      "example": "Ajan autolla töihin.",
+      "exampletranslate": "I drive to work by car."
     },
     {
       "id": 2,
       "type": "multiple-choice",
       "question": "Down / Downstairs",
-      "options": ["alhaalla", "ylhäällä", "vieressä", "takana"],
+      "options": ["alhaalla", "ylhäällä", "takana", "edessä"],
       "answer": 0,
-      "explanation": "'Alhaalla' indicates being down or downstairs.",
-      "example": "Kissa on alhaalla kellarissa."
+      "explanation": "'Alhaalla' means down or downstairs; 'alhaalta' is 'from below'.",
+      "example": "Olen alhaalla keittiössä.",
+      "exampletranslate": "I am downstairs in the kitchen."
     },
     {
       "id": 3,
       "type": "multiple-choice",
-      "question": "To start / begin",
-      "options": ["loppua", "luulla", "aloittaa", "valita"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Aloittaa' means to start or initiate something.",
-      "example": "Aloitan uuden työn huomenna."
+      "question": "Under",
+      "options": ["alla", "päällä", "takana", "edessä"],
+      "answer": 0,
+      "explanation": "'Alla' means under (used with the genitive).",
+      "example": "Kissa on pöydän alla.",
+      "exampletranslate": "The cat is under the table."
     },
     {
       "id": 4,
       "type": "multiple-choice",
-      "question": "Degree (temperature/angle)",
-      "options": ["lumi", "sää", "tuuli", "aste"],
-      "answer": 3,
-      "explanation": "'Aste' means a degree, commonly used for temperature.",
-      "example": "Ulkona on tänään kaksikymmentä astetta pakkasta."
+      "question": "To start",
+      "options": ["aloittaa", "loppua", "lopettaa", "säästää"],
+      "answer": 0,
+      "explanation": "'Aloittaa' (type 1 verb) means to start; 'aloitan' is 'I start'.",
+      "example": "Aloitan uuden harrastuksen.",
+      "exampletranslate": "I start a new hobby."
     },
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "Sun",
-      "options": ["aurinko", "ukkonen", "taivas", "pimeä"],
+      "question": "Degree",
+      "options": ["aste", "määrä", "ennätys", "koko"],
       "answer": 0,
-      "explanation": "'Aurinko' means the sun.",
-      "example": "Aurinko paistaa kirkkaasti pilvettömältä taivaalta."
+      "explanation": "'Aste' means degree (e.g. temperature); its genitive is 'asteen'.",
+      "example": "Ulkona on kymmenen astetta.",
+      "exampletranslate": "It is ten degrees outside."
     },
     {
       "id": 6,
       "type": "multiple-choice",
-      "question": "Yesterday",
-      "options": ["huomenna", "tänään", "eilen", "illalla"],
-      "answer": 2,
-      "explanation": "'Eilen' means yesterday.",
-      "example": "Eilen satoi paljon lunta."
+      "question": "Sun",
+      "options": ["aurinko", "tuli", "sää", "taivas"],
+      "answer": 0,
+      "explanation": "'Aurinko' means sun; its genitive is 'auringon'.",
+      "example": "Aurinko paistaa tänään.",
+      "exampletranslate": "The sun is shining today."
     },
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "First snow",
-      "options": ["pakkanen", "ensilumi", "syksy", "talvi"],
-      "answer": 1,
-      "explanation": "'Ensilumi' combines 'ensi' (first) and 'lumi' (snow).",
-      "example": "Lapset ovat iloisia, kun ensilumi sataa maahan."
+      "question": "In front of",
+      "options": ["edessä", "takana", "alla", "vieressä"],
+      "answer": 0,
+      "explanation": "'Edessä' means in front of (used with the genitive).",
+      "example": "Auto on talon edessä.",
+      "exampletranslate": "The car is in front of the house."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "To search / look for",
-      "options": ["löytää", "etsiä", "hakea", "ajaa"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Etsiä' means to search or look for something (+ Partitive).",
-      "example": "Etsin kadonneita avaimiani."
+      "question": "Yesterday",
+      "options": ["eilen", "huomenna", "illalla", "kevät"],
+      "answer": 0,
+      "explanation": "'Eilen' means yesterday.",
+      "example": "Eilen satoi lunta.",
+      "exampletranslate": "Yesterday it snowed."
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "To apply for / fetch",
-      "options": ["hakea", "tuoda", "sovittaa", "säästää"],
+      "question": "Record (best result)",
+      "options": ["ennätys", "tilaus", "tuote", "määrä"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Hakea' means to fetch, collect, or apply for.",
-      "example": "Aion hakea uutta työpaikkaa."
+      "explanation": "'Ennätys' means record (e.g. a best result); its genitive is 'ennätyksen'.",
+      "example": "Hän teki uuden ennätyksen.",
+      "exampletranslate": "He set a new record."
     },
     {
       "id": 10,
       "type": "multiple-choice",
-      "question": "Skirt",
-      "options": ["housut", "takki", "paita", "hame"],
-      "answer": 3,
-      "explanation": "'Hame' means skirt.",
-      "example": "Hänellä on päällään kaunis punainen hame."
+      "question": "First snow",
+      "options": ["ensilumi", "lumi", "pakkanen", "ukkonen"],
+      "answer": 0,
+      "explanation": "'Ensilumi' means the first snow of the season; its genitive is 'ensilumen'.",
+      "example": "Ensilumi tuli lokakuussa.",
+      "exampletranslate": "The first snow came in October."
     },
     {
       "id": 11,
       "type": "multiple-choice",
-      "question": "Hobby",
-      "options": ["matka", "harrastus", "ohjelma", "juttu"],
-      "answer": 1,
-      "explanation": "'Harrastus' means a hobby or pastime.",
-      "example": "Minun harrastukseni on valokuvaus."
+      "question": "To search",
+      "options": ["etsiä", "löytää", "hakea", "valita"],
+      "answer": 0,
+      "explanation": "'Etsiä' (type 1 verb) means to search; 'etsin' is 'I search' (takes a partitive object).",
+      "example": "Etsin uutta takkia.",
+      "exampletranslate": "I am looking for a new jacket."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "To ski",
-      "options": ["uida", "luistella", "hiihtää", "ajaa"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Hiihtää' specifically means cross-country skiing.",
-      "example": "Talvella me tykkäämme hiihtää metsässä."
+      "question": "Overalls / Coveralls",
+      "options": ["haalarit", "housut", "lapaset", "saappaat"],
+      "answer": 0,
+      "explanation": "'Haalarit' means overalls or coveralls (a plural word); its genitive is 'haalarien'.",
+      "example": "Lapsi pukee haalarit ulos.",
+      "exampletranslate": "The child puts on overalls to go out."
     },
     {
       "id": 13,
       "type": "multiple-choice",
-      "question": "Lift / Elevator",
-      "options": ["portaat", "hissi", "katutaso", "varasto"],
-      "answer": 1,
-      "explanation": "'Hissi' means an elevator or lift.",
-      "example": "Otetaan hissi viideteen kerrokseen."
+      "question": "To fetch / apply for",
+      "options": ["hakea", "etsiä", "ottaa", "valita"],
+      "answer": 0,
+      "explanation": "'Hakea' (type 1 verb) means to fetch, get or apply for; 'haen' is 'I fetch'.",
+      "example": "Haen lapsen päiväkodista.",
+      "exampletranslate": "I pick up the child from daycare."
     },
     {
       "id": 14,
       "type": "multiple-choice",
-      "question": "Pants / Trousers",
-      "options": ["housut", "sukat", "kengät", "haalarit"],
+      "question": "Skirt",
+      "options": ["hame", "paita", "takki", "pusero"],
       "answer": 0,
-      "explanation": "'Housut' is a plural noun meaning pants or trousers.",
-      "example": "Nämä housut ovat liian pitkät."
+      "explanation": "'Hame' means skirt; its genitive is 'hameen'.",
+      "example": "Hän pukee kauniin hameen.",
+      "exampletranslate": "She puts on a beautiful skirt."
     },
     {
       "id": 15,
       "type": "multiple-choice",
-      "question": "Tomorrow",
-      "options": ["eilen", "huomenna", "tänään", "illalla"],
-      "answer": 1,
-      "explanation": "'Huomenna' means tomorrow.",
-      "example": "Huomenna sää on paljon lämpimämpi."
+      "question": "Hobby",
+      "options": ["harrastus", "ohjelma", "juttu", "tilaus"],
+      "answer": 0,
+      "explanation": "'Harrastus' means hobby; its genitive is 'harrastuksen'.",
+      "example": "Uinti on minun harrastukseni.",
+      "exampletranslate": "Swimming is my hobby."
     },
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "In a good mood",
-      "options": ["pahoilla mielin", "väsynyt", "kiireinen", "hyvällä tuulella"],
-      "answer": 3,
-      "explanation": "'Hyvällä tuulella' is an idiom meaning in a good mood or good spirits.",
-      "example": "Olen hyvällä tuulella, koska aurinko paistaa."
+      "question": "Pea",
+      "options": ["herne", "mansikka", "ketsuppi", "tuote"],
+      "answer": 0,
+      "explanation": "'Herne' means pea; its genitive is 'herneen'.",
+      "example": "Keitän hernekeittoa.",
+      "exampletranslate": "I make pea soup."
     },
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "In the evening",
-      "options": ["aamulla", "päivällä", "illalla", "yöllä"],
-      "answer": 2,
-      "explanation": "'Illalla' means during the evening time.",
-      "example": "Käymme usein kävelyllä illalla."
+      "question": "To ski",
+      "options": ["hiihtää", "kalastaa", "joogata", "lumilautailla"],
+      "answer": 0,
+      "explanation": "'Hiihtää' (type 1 verb) means to ski (cross-country); 'hiihdän' is 'I ski'.",
+      "example": "Talvella hiihdän metsässä.",
+      "exampletranslate": "In winter I ski in the forest."
     },
     {
       "id": 18,
       "type": "multiple-choice",
-      "question": "Without",
-      "options": ["kanssa", "ilman", "lähellä", "takana"],
-      "answer": 1,
-      "explanation": "'Ilman' means without and requires the partitive case (+ Partitive).",
-      "example": "En halua lähteä ulos ilman takkia."
+      "question": "Lift / Elevator",
+      "options": ["hissi", "katutaso", "varasto", "sovituskoppi"],
+      "answer": 0,
+      "explanation": "'Hissi' means lift or elevator.",
+      "example": "Menen hissillä viidenteen kerrokseen.",
+      "exampletranslate": "I take the lift to the fifth floor."
     },
     {
       "id": 19,
       "type": "multiple-choice",
-      "question": "To celebrate",
-      "options": ["juhlia", "joogata", "kalastaa", "kutoa"],
+      "question": "Trousers / Pants",
+      "options": ["housut", "haalarit", "kurahousut", "lapaset"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Juhlia' means to celebrate or party.",
-      "example": "Me aiomme juhlia hänen syntymäpäiväänsä viikonloppuna."
+      "explanation": "'Housut' means trousers or pants (a plural word); its genitive is 'housujen'.",
+      "example": "Ostan uudet housut.",
+      "exampletranslate": "I buy new trousers."
     },
     {
       "id": 20,
       "type": "multiple-choice",
-      "question": "Summer",
-      "options": ["talvi", "kevät", "syksy", "kesä"],
-      "answer": 3,
-      "explanation": "'Kesä' means summer.",
-      "example": "Kesällä me matkustamme mökille."
+      "question": "Tomorrow",
+      "options": ["huomenna", "eilen", "illalla", "syksy"],
+      "answer": 0,
+      "explanation": "'Huomenna' means tomorrow.",
+      "example": "Huomenna sataa lunta.",
+      "exampletranslate": "Tomorrow it will snow."
     },
     {
       "id": 21,
       "type": "multiple-choice",
-      "question": "Spring",
-      "options": ["kevät", "kesä", "syksy", "talvi"],
+      "question": "In a good mood",
+      "options": ["hyvällä tuulella", "illalla", "huomenna", "vaikka"],
       "answer": 0,
-      "explanation": "'Kevät' means spring.",
-      "example": "Keväällä luonto herää ja herää eloon."
+      "explanation": "'Hyvällä tuulella' means in a good mood.",
+      "example": "Olen tänään hyvällä tuulella.",
+      "exampletranslate": "I am in a good mood today."
     },
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Size",
-      "options": ["määrä", "lista", "koko", "muoti"],
-      "answer": 2,
-      "explanation": "'Koko' can mean size (genitive: koon) or whole/entire.",
-      "example": "Mikä on tämän paidan koko?"
+      "question": "In the evening",
+      "options": ["illalla", "huomenna", "eilen", "takana"],
+      "answer": 0,
+      "explanation": "'Illalla' means in the evening.",
+      "example": "Illalla katson ohjelman.",
+      "exampletranslate": "In the evening I watch the program."
     },
     {
       "id": 23,
       "type": "multiple-choice",
-      "question": "Rubber boots",
-      "options": ["kumisaappaat", "kurahousut", "lapaset", "sormikkaat"],
+      "question": "Without",
+      "options": ["ilman", "alla", "päällä", "vaikka"],
       "answer": 0,
-      "explanation": "'Kumisaappaat' means rubber boots/wellies used for rainy weather.",
-      "example": "Tarvitset kumisaappaat, koska ulkona on märkää."
+      "explanation": "'Ilman' means without (used with the partitive).",
+      "example": "Menen ulos ilman takkia.",
+      "exampletranslate": "I go out without a jacket."
     },
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "To knit",
-      "options": ["ommella", "kutoa", "korjata", "pukea"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Kutoa' means to knit or weave.",
-      "example": "Isoäiti tykkää kutoa villasukkia."
+      "question": "To do yoga",
+      "options": ["joogata", "hiihtää", "kalastaa", "kutoa"],
+      "answer": 0,
+      "explanation": "'Joogata' (type 4 verb) means to do yoga; 'joogaan' is 'I do yoga'.",
+      "example": "Joogaan joka aamu.",
+      "exampletranslate": "I do yoga every morning."
     },
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "Gift / Present",
-      "options": ["tilaus", "tuote", "lista", "lahja"],
-      "answer": 3,
-      "explanation": "'Lahja' means a gift or present.",
-      "example": "Ostin hänelle kauniin lahjan."
+      "question": "To celebrate",
+      "options": ["juhlia", "joogata", "matkustaa", "säästää"],
+      "answer": 0,
+      "explanation": "'Juhlia' (type 1 verb) means to celebrate; 'juhlin' is 'I celebrate'.",
+      "example": "Juhlimme syntymäpäivää.",
+      "exampletranslate": "We celebrate a birthday."
     },
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "Mittens",
-      "options": ["sormikkaat", "lapaset", "haalarit", "saappaat"],
-      "answer": 1,
-      "explanation": "'Lapaset' are mittens (where fingers are together except the thumb).",
-      "example": "Lapsella on kädessään lämpimät lapaset."
+      "question": "Story / Thing / Matter",
+      "options": ["juttu", "tilaus", "ohjelma", "lista"],
+      "answer": 0,
+      "explanation": "'Juttu' means story, thing or matter (informal); its genitive is 'jutun'.",
+      "example": "Kerron sinulle hauskan jutun.",
+      "exampletranslate": "I'll tell you a funny story."
     },
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Too / Too much / Excessively",
-      "options": ["melko", "liikaa / liian", "paljon", "vähän"],
-      "answer": 1,
-      "explanation": "'Liian' means too (adverb) and 'liikaa' means too much.",
-      "example": "Tämä takki on liian kallis."
+      "question": "To fish",
+      "options": ["kalastaa", "hiihtää", "joogata", "matkustaa"],
+      "answer": 0,
+      "explanation": "'Kalastaa' (type 1 verb) means to fish; 'kalastan' is 'I fish'.",
+      "example": "Kalastan järvellä kesällä.",
+      "exampletranslate": "I fish on the lake in summer."
     },
     {
       "id": 28,
       "type": "multiple-choice",
-      "question": "Dirty",
-      "options": ["siisti", "puhdas", "likainen", "valoisa"],
-      "answer": 2,
-      "explanation": "'Likainen' means dirty or soiled.",
-      "example": "Kengät ovat likaiset ulkoilun jälkeen."
+      "question": "Street level",
+      "options": ["katutaso", "varasto", "kerros", "vastakohta"],
+      "answer": 0,
+      "explanation": "'Katutaso' means street level.",
+      "example": "Liike on katutasossa.",
+      "exampletranslate": "The shop is at street level."
     },
     {
       "id": 29,
       "type": "multiple-choice",
-      "question": "To end / finish",
-      "options": ["aloittaa", "loppua", "laskea", "seisoa"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Loppua' means to end, run out, or conclude.",
-      "example": "Kurssi loppuu ensi viikolla."
+      "question": "Summer",
+      "options": ["kesä", "kevät", "syksy", "talvi"],
+      "answer": 0,
+      "explanation": "'Kesä' means summer.",
+      "example": "Kesällä on lämmin.",
+      "exampletranslate": "In summer it is warm."
     },
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "Snow",
-      "options": ["vesi", "lumi", "pakkanen", "tuuli"],
-      "answer": 1,
-      "explanation": "'Lumi' means snow.",
-      "example": "Maassa on jo paljon valkoista lunta."
+      "question": "Ketchup",
+      "options": ["ketsuppi", "herne", "mansikka", "tuote"],
+      "answer": 0,
+      "explanation": "'Ketsuppi' means ketchup; its genitive is 'ketsupin'.",
+      "example": "Laitan ketsuppia ranskalaisiin.",
+      "exampletranslate": "I put ketchup on the fries."
     },
     {
       "id": 31,
       "type": "multiple-choice",
-      "question": "To think / suppose",
-      "options": ["tietää", "osata", "luulla", "aloittaa"],
-      "answer": 2,
-      "explanation": "Type 3 verb. 'Luulla' means to assume, suppose, or think incorrectly.",
-      "example": "Luulen, että huomenna sataa vettä."
+      "question": "Spring",
+      "options": ["kevät", "kesä", "syksy", "talvi"],
+      "answer": 0,
+      "explanation": "'Kevät' means spring; its genitive is 'kevään'.",
+      "example": "Keväällä lumi sulaa.",
+      "exampletranslate": "In spring the snow melts."
     },
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "Contactless payment",
-      "options": ["käteismaksu", "lähimaksu", "luotto", "pankki"],
-      "answer": 1,
-      "explanation": "'Lähimaksu' means contactless payment using a card or phone device.",
-      "example": "Voinko maksaa lähimaksulla?"
+      "question": "Size",
+      "options": ["koko", "aste", "määrä", "tuote"],
+      "answer": 0,
+      "explanation": "'Koko' means size (it can also mean whole or all); its genitive is 'koon'.",
+      "example": "Mikä on sinun kokosi?",
+      "exampletranslate": "What is your size?"
     },
     {
       "id": 33,
       "type": "multiple-choice",
-      "question": "Thermometer",
-      "options": ["lämpömittari", "kello", "peili", "hissi"],
+      "question": "Homeland / Home country",
+      "options": ["kotimaa", "Lappi", "luonto", "kotiseutu"],
       "answer": 0,
-      "explanation": "'Lämpömittari' means thermometer (literally heat-meter).",
-      "example": "Katso lämpömittarista, kuinka kylmä ulkona on."
+      "explanation": "'Kotimaa' means homeland or home country.",
+      "example": "Minun kotimaani on Turkki.",
+      "exampletranslate": "My home country is Turkey."
     },
     {
       "id": 34,
       "type": "multiple-choice",
-      "question": "To find",
-      "options": ["etsiä", "hakea", "löytää", "kadottaa"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Löytää' means to find or discover.",
-      "example": "Löysin eilen vanhan valokuvan."
+      "question": "Rubber boots",
+      "options": ["kumisaappaat", "saappaat", "lapaset", "sormikkaat"],
+      "answer": 0,
+      "explanation": "'Kumisaappaat' means rubber boots (a plural word); its genitive is 'kumisaappaiden'.",
+      "example": "Sateella käytän kumisaappaita.",
+      "exampletranslate": "In the rain I wear rubber boots."
     },
     {
       "id": 35,
       "type": "multiple-choice",
-      "question": "Strawberry",
-      "options": ["mustikka", "puolukka", "omena", "mansikka"],
-      "answer": 3,
-      "explanation": "'Mansikka' means strawberry.",
-      "example": "Suomalaiset mansikat ovat kesällä erittäin makeita."
+      "question": "Rain / mud pants",
+      "options": ["kurahousut", "housut", "haalarit", "kumisaappaat"],
+      "answer": 0,
+      "explanation": "'Kurahousut' means rain or mud trousers (a plural word); its genitive is 'kurahousujen'.",
+      "example": "Lapsella on kurahousut päällä.",
+      "exampletranslate": "The child has rain pants on."
     },
     {
       "id": 36,
       "type": "multiple-choice",
-      "question": "To travel",
-      "options": ["matkustaa", "ajaa", "hiihtää", "laskea"],
+      "question": "To knit",
+      "options": ["kutoa", "ommella", "valita", "säästää"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Matkustaa' means to travel or journey.",
-      "example": "Me tykkäämme matkustaa ulkomaille."
+      "explanation": "'Kutoa' (type 1 verb) means to knit; 'kudon' is 'I knit'.",
+      "example": "Kudon villapaidan talveksi.",
+      "exampletranslate": "I knit a wool sweater for winter."
     },
     {
       "id": 37,
       "type": "multiple-choice",
-      "question": "Cottage / Cabin",
-      "options": ["talo", "mökki", "varasto", "puutarha"],
-      "answer": 1,
-      "explanation": "'Mökki' means a summer cottage or log cabin.",
-      "example": "Meillä on pieni hirsimökki järven rannalla."
+      "question": "Gift",
+      "options": ["lahja", "tuote", "tilaus", "juttu"],
+      "answer": 0,
+      "explanation": "'Lahja' means gift.",
+      "example": "Ostan lahjan ystävälle.",
+      "exampletranslate": "I buy a gift for a friend."
     },
     {
       "id": 38,
       "type": "multiple-choice",
-      "question": "To look like / show",
-      "options": ["katsoa", "näkyä", "näyttää", "loppua"],
-      "answer": 2,
-      "explanation": "Type 1 verb. Used with 'miltä' (Ablative) to mean 'look like'.",
-      "example": "Tuo takki näyttää hyvältä sinun päälläsi."
+      "question": "Mittens",
+      "options": ["lapaset", "sormikkaat", "saappaat", "haalarit"],
+      "answer": 0,
+      "explanation": "'Lapaset' means mittens (a plural word); its genitive is 'lapasten'.",
+      "example": "Talvella käytän lapasia.",
+      "exampletranslate": "In winter I wear mittens."
     },
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "To sunbathe / take sun",
-      "options": ["ottaa aurinkoa", "paistaa", "uida", "juhlia"],
+      "question": "Lapland",
+      "options": ["Lappi", "kotimaa", "luonto", "metsä"],
       "answer": 0,
-      "explanation": "'Ottaa aurinkoa' means to sunbathe or catch sun rays.",
-      "example": "Ihmiset tykkäävät ottaa aurinkoa rannalla."
+      "explanation": "'Lappi' means Lapland; its genitive is 'Lapin'.",
+      "example": "Matkustan Lappiin talvella.",
+      "exampletranslate": "I travel to Lapland in winter."
     },
     {
       "id": 40,
       "type": "multiple-choice",
-      "question": "To shine (sun) / bake / fry",
-      "options": ["sataa", "tuulla", "paistaa", "pimeä"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Paistaa' is used for the sun shining or for frying/baking food.",
-      "example": "Tänään aurinko paistaa koko päivän."
+      "question": "To go down / set (the sun)",
+      "options": ["laskea", "nousta", "paistaa", "pudota"],
+      "answer": 0,
+      "explanation": "'Laskea' (type 1 verb) means to go down, count or set; 'aurinko laskee' means 'the sun sets'.",
+      "example": "Aurinko laskee illalla.",
+      "exampletranslate": "The sun sets in the evening."
     },
     {
       "id": 41,
       "type": "multiple-choice",
-      "question": "Shirt",
-      "options": ["housut", "paita", "hame", "takki"],
-      "answer": 1,
-      "explanation": "'Paita' means a shirt or top garment.",
-      "example": "Ostan puhtaan valkoisen paidan."
+      "question": "Nickname",
+      "options": ["lempinimi", "etunimi", "sukunimi", "juttu"],
+      "answer": 0,
+      "explanation": "'Lempinimi' means nickname; its genitive is 'lempinimen'.",
+      "example": "Hänen lempinimensä on Make.",
+      "exampletranslate": "His nickname is Make."
     },
     {
       "id": 42,
       "type": "multiple-choice",
-      "question": "Freezing weather / Frost",
-      "options": ["pakkanen", "suojasää", "lumi", "tuuli"],
+      "question": "Too much",
+      "options": ["liika", "vähän", "sopiva", "määrä"],
       "answer": 0,
-      "explanation": "'Pakkanen' means sub-zero freezing weather or frost.",
-      "example": "Ulkona on kova pakkanen, laita pipo päähän."
+      "explanation": "'Liika' means too much or excess; 'liian' is the adverb 'too'.",
+      "example": "Tämä on liikaa.",
+      "exampletranslate": "This is too much."
     },
     {
       "id": 43,
       "type": "multiple-choice",
-      "question": "Mirror",
-      "options": ["ikkuna", "taulu", "peili", "valo"],
-      "answer": 2,
-      "explanation": "'Peili' means mirror.",
-      "example": "Katson peiliin ennen kuin lähden ulos."
+      "question": "Dirty",
+      "options": ["likainen", "siisti", "kuiva", "valoisa"],
+      "answer": 0,
+      "explanation": "'Likainen' means dirty; its genitive is 'likaisen'.",
+      "example": "Vaatteet ovat likaiset.",
+      "exampletranslate": "The clothes are dirty."
     },
     {
       "id": 44,
       "type": "multiple-choice",
-      "question": "Dark",
-      "options": ["valoisa", "pimeä", "kylmä", "kuuma"],
-      "answer": 1,
-      "explanation": "'Pimeä' means dark or dim.",
-      "example": "Talvella tulee pimeää jo iltapäivällä."
+      "question": "List",
+      "options": ["lista", "ohjelma", "tilaus", "juttu"],
+      "answer": 0,
+      "explanation": "'Lista' means list.",
+      "example": "Teen ostoslistan.",
+      "exampletranslate": "I make a shopping list."
     },
     {
       "id": 45,
       "type": "multiple-choice",
-      "question": "Beanie / Winter knit cap",
-      "options": ["hattu", "pipo", "huivi", "kauluri"],
-      "answer": 1,
-      "explanation": "'Pipo' means a knit winter cap or beanie.",
-      "example": "Älä unohda laittaa pipoa, ulkona tuulee."
+      "question": "To end / run out",
+      "options": ["loppua", "aloittaa", "alkaa", "kestää"],
+      "answer": 0,
+      "explanation": "'Loppua' (type 1 verb) means to end or run out; 'se loppuu' means 'it ends'.",
+      "example": "Kesäloma loppuu pian.",
+      "exampletranslate": "The summer holiday ends soon."
     },
     {
       "id": 46,
       "type": "multiple-choice",
-      "question": "To fall",
-      "options": ["pudota", "pukea", "seisoa", "laskea"],
+      "question": "Snow",
+      "options": ["lumi", "ensilumi", "pakkanen", "sää"],
       "answer": 0,
-      "explanation": "Type 4 verb. 'Pudota' means to fall down or drop.",
-      "example": "Lehdet putoavat puista syksyllä."
+      "explanation": "'Lumi' means snow; its genitive is 'lumen'.",
+      "example": "Pihalla on paljon lunta.",
+      "exampletranslate": "There is a lot of snow in the yard."
     },
     {
       "id": 47,
       "type": "multiple-choice",
-      "question": "To put on clothes / dress",
-      "options": ["riisua", "sovittaa", "pukea", "ommella"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Pukea' or 'pukea päälle' means to dress or put on.",
-      "example": "Äiti pukee lapselle lämpimät vaatteet."
+      "question": "To snowboard",
+      "options": ["lumilautailla", "hiihtää", "joogata", "kalastaa"],
+      "answer": 0,
+      "explanation": "'Lumilautailla' (type 3 verb) means to snowboard; 'lumilautailen' is 'I snowboard'.",
+      "example": "Lumilautailen Lapissa.",
+      "exampletranslate": "I snowboard in Lapland."
     },
     {
       "id": 48,
       "type": "multiple-choice",
-      "question": "Sweater / Pullover / Blouse",
-      "options": ["takki", "hame", "pusero", "housut"],
-      "answer": 2,
-      "explanation": "'Pusero' refers to a sweater, jersey, or blouse.",
-      "example": "Tämä villapusero on erittäin lämmin."
+      "question": "Nature",
+      "options": ["luonto", "metsä", "puutarha", "kotimaa"],
+      "answer": 0,
+      "explanation": "'Luonto' means nature; its genitive is 'luonnon'.",
+      "example": "Rakastan Suomen luontoa.",
+      "exampletranslate": "I love Finnish nature."
     },
     {
       "id": 49,
       "type": "multiple-choice",
-      "question": "Tree / Wood",
-      "options": ["puutarha", "puu", "kukka", "metsä"],
-      "answer": 1,
-      "explanation": "'Puu' means tree or the material wood.",
-      "example": "Pihalla kasvaa vanha omenapuu."
+      "question": "To trust",
+      "options": ["luottaa", "luulla", "löytää", "matkustaa"],
+      "answer": 0,
+      "explanation": "'Luottaa' (type 1 verb) means to trust; 'luotan' is 'I trust' (takes a partitive object).",
+      "example": "Luotan sinuun.",
+      "exampletranslate": "I trust you."
     },
     {
       "id": 50,
       "type": "multiple-choice",
-      "question": "Garden",
-      "options": ["puisto", "piha", "puutarha", "metsä"],
-      "answer": 2,
-      "explanation": "'Puutarha' means garden or orchard.",
-      "example": "Hän hoitaa mielellään kaunista puutarhaansa."
+      "question": "To think / suppose",
+      "options": ["luulla", "luottaa", "löytää", "muistaa"],
+      "answer": 0,
+      "explanation": "'Luulla' (type 1 verb) means to think or suppose; 'luulen' is 'I think/suppose'.",
+      "example": "Luulen, että huomenna sataa.",
+      "exampletranslate": "I think it will rain tomorrow."
     },
     {
       "id": 51,
       "type": "multiple-choice",
-      "question": "To rain / snow",
-      "options": ["tuulla", "paistaa", "sataa", "ajaa"],
-      "answer": 2,
-      "explanation": "Type 1 impersonal verb. Used for precipitation (sataa vettä = it rains; sataa lunta = it snows).",
-      "example": "Ulkona sataa kaatamalla vettä."
+      "question": "Near",
+      "options": ["lähellä", "kaukana", "vieressä", "takana"],
+      "answer": 0,
+      "explanation": "'Lähellä' means near or nearby.",
+      "example": "Kauppa on lähellä.",
+      "exampletranslate": "The shop is near."
     },
     {
       "id": 52,
       "type": "multiple-choice",
-      "question": "To fit / suit / agree",
-      "options": ["sopia", "sovittaa", "valita", "säästää"],
+      "question": "Thermometer",
+      "options": ["lämpömittari", "aste", "sää", "peili"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Sopia' means to fit, be suitable for, or agree on something.",
-      "example": "Tämä aika sopii minulle hyvin."
+      "explanation": "'Lämpömittari' means thermometer, from 'lämpö' (heat) and 'mittari' (gauge).",
+      "example": "Lämpömittari näyttää viisi astetta.",
+      "exampletranslate": "The thermometer shows five degrees."
     },
     {
       "id": 53,
       "type": "multiple-choice",
-      "question": "Suitable / Fitting",
-      "options": ["likainen", "sopiva", "liika", "valoisa"],
-      "answer": 1,
-      "explanation": "'Sopiva' is an adjective meaning suitable, convenient, or appropriate.",
-      "example": "Etsin sopivaa lahjaa ystävälleni."
+      "question": "To find",
+      "options": ["löytää", "etsiä", "hakea", "valita"],
+      "answer": 0,
+      "explanation": "'Löytää' (type 1 verb) means to find; 'löydän' is 'I find'.",
+      "example": "Löydän avaimet laukusta.",
+      "exampletranslate": "I find the keys in the bag."
     },
     {
       "id": 54,
       "type": "multiple-choice",
-      "question": "Gloves (with separate fingers)",
-      "options": ["lapaset", "sormikkaat", "sukat", "kengät"],
-      "answer": 1,
-      "explanation": "'Sormikkaat' refers to gloves with five separate finger slots.",
-      "example": "Nahkasormikkaat pitävät kädet lämpiminä syksyllä."
+      "question": "Strawberry",
+      "options": ["mansikka", "herne", "puu", "ketsuppi"],
+      "answer": 0,
+      "explanation": "'Mansikka' means strawberry; its genitive is 'mansikan'.",
+      "example": "Syön mansikoita kesällä.",
+      "exampletranslate": "I eat strawberries in summer."
     },
     {
       "id": 55,
       "type": "multiple-choice",
-      "question": "To try on (clothes)",
-      "options": ["pukea", "riisua", "sovittaa", "kutoa"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Sovittaa' means to test or try on garments.",
-      "example": "Haluan sovittaa näitä housuja."
+      "question": "To travel",
+      "options": ["matkustaa", "kalastaa", "joogata", "seisoa"],
+      "answer": 0,
+      "explanation": "'Matkustaa' (type 1 verb) means to travel; 'matkustan' is 'I travel'.",
+      "example": "Matkustan junalla Lappiin.",
+      "exampletranslate": "I travel to Lapland by train."
     },
     {
       "id": 56,
       "type": "multiple-choice",
-      "question": "Autumn / Fall",
-      "options": ["kevät", "kesä", "talvi", "syksy"],
-      "answer": 3,
-      "explanation": "'Syksy' means autumn or fall.",
-      "example": "Syksyllä puista putoaa keltaisia lehtiä."
+      "question": "Fashion",
+      "options": ["muoti", "tuote", "lista", "ohjelma"],
+      "answer": 0,
+      "explanation": "'Muoti' means fashion; its genitive is 'muodin'.",
+      "example": "Seuraan muotia.",
+      "exampletranslate": "I follow fashion."
     },
     {
       "id": 57,
       "type": "multiple-choice",
-      "question": "Weather",
-      "options": ["sää", "aste", "ilma", "tuuli"],
+      "question": "Amount / Quantity",
+      "options": ["määrä", "koko", "aste", "ennätys"],
       "answer": 0,
-      "explanation": "'Sää' means weather status (synonym: ilma).",
-      "example": "Millainen sää Suomessa on lokakuussa?"
+      "explanation": "'Määrä' means amount or quantity.",
+      "example": "Lumen määrä on suuri.",
+      "exampletranslate": "The amount of snow is large."
     },
     {
       "id": 58,
       "type": "multiple-choice",
-      "question": "To save",
-      "options": ["tuhlata", "säästää", "maksaa", "hakea"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Säästää' means to economize or save money/resources.",
-      "example": "Säästän rahaa uutta matkaa varten."
+      "question": "Cottage",
+      "options": ["mökki", "puutarha", "varasto", "luonto"],
+      "answer": 0,
+      "explanation": "'Mökki' means cottage; its genitive is 'mökin'.",
+      "example": "Kesällä menemme mökille.",
+      "exampletranslate": "In summer we go to the cottage."
     },
     {
       "id": 59,
       "type": "multiple-choice",
-      "question": "Jacket / Coat",
-      "options": ["paita", "pusero", "takki", "hame"],
-      "answer": 2,
-      "explanation": "'Takki' means a coat, blazer, or jacket.",
-      "example": "Ota paksu takki mukaan, ulkona on kylmä."
+      "question": "To look (like)",
+      "options": ["näyttää", "paistaa", "valita", "sovittaa"],
+      "answer": 0,
+      "explanation": "'Näyttää' (type 1 verb) means to look (like) or show; 'näytän' is 'I look/show' (used with 'miltä').",
+      "example": "Tämä takki näyttää hyvältä.",
+      "exampletranslate": "This jacket looks good."
     },
     {
       "id": 60,
       "type": "multiple-choice",
-      "question": "Winter",
-      "options": ["kesä", "talvi", "kevät", "syksy"],
-      "answer": 1,
-      "explanation": "'Talvi' means winter.",
-      "example": "Talvella Suomessa on paljon lunta ja pakkasta."
+      "question": "Program",
+      "options": ["ohjelma", "lista", "juttu", "tilaus"],
+      "answer": 0,
+      "explanation": "'Ohjelma' means program.",
+      "example": "Katson hyvän ohjelman.",
+      "exampletranslate": "I watch a good program."
     },
     {
       "id": 61,
       "type": "multiple-choice",
-      "question": "To text / send SMS",
-      "options": ["soittaa", "tekstata", "puhua", "kirjoittaa"],
-      "answer": 1,
-      "explanation": "Type 4 verb. 'Tekstata' means to type and send text messages.",
-      "example": "Voitko tekstata minulle hänen osoitteensa?"
+      "question": "To sew",
+      "options": ["ommella", "kutoa", "valita", "sovittaa"],
+      "answer": 0,
+      "explanation": "'Ommella' means to sew; 'ompelen' is 'I sew'.",
+      "example": "Ompelen napin paitaan.",
+      "exampletranslate": "I sew a button onto the shirt."
     },
     {
       "id": 62,
       "type": "multiple-choice",
-      "question": "Order / Subscription",
-      "options": ["tilaus", "tuote", "lahja", "lista"],
+      "question": "To sunbathe (take in the sun)",
+      "options": ["ottaa aurinkoa", "paistaa", "uida", "seisoa"],
       "answer": 0,
-      "explanation": "'Tilaus' means a product order or commercial subscription.",
-      "example": "Lehden tilaus maksaa viisikymmentä euroa vuodessa."
+      "explanation": "'Ottaa aurinkoa' means to sunbathe; 'otan aurinkoa' is 'I sunbathe'.",
+      "example": "Otan aurinkoa rannalla.",
+      "exampletranslate": "I sunbathe on the beach."
     },
     {
       "id": 63,
       "type": "multiple-choice",
-      "question": "Product",
-      "options": ["tilaus", "hinta", "kauppa", "tuote"],
-      "answer": 3,
-      "explanation": "'Tuote' (genitive: tuotteen) means a manufactured product or item.",
-      "example": "Tämä tuote on valmistettu Suomessa."
+      "question": "To shine / fry",
+      "options": ["paistaa", "näyttää", "tuulla", "sataa"],
+      "answer": 0,
+      "explanation": "'Paistaa' (type 1 verb) means to shine (sun) or to fry; 'paistan' is 'I shine/fry'.",
+      "example": "Aurinko paistaa kirkkaasti.",
+      "exampletranslate": "The sun shines brightly."
     },
     {
       "id": 64,
       "type": "multiple-choice",
-      "question": "Wind",
-      "options": ["tuuli", "ukkonen", "sade", "aurinko"],
+      "question": "Shirt",
+      "options": ["paita", "hame", "takki", "pusero"],
       "answer": 0,
-      "explanation": "'Tuuli' means wind.",
-      "example": "Kova tuuli repi lehtiä puista."
+      "explanation": "'Paita' means shirt; its genitive is 'paidan'.",
+      "example": "Pukeudun valkoiseen paitaan.",
+      "exampletranslate": "I dress in a white shirt."
     },
     {
       "id": 65,
       "type": "multiple-choice",
-      "question": "To blow / be windy",
-      "options": ["sataa", "paistaa", "tuulla", "pudota"],
-      "answer": 2,
-      "explanation": "Type 3 verb. Used impersonally: 'Ulkona tuulee' = It is windy outside.",
-      "example": "Tänään tuulee erittäin kovaa mereltä."
+      "question": "Frost / Freezing cold",
+      "options": ["pakkanen", "lumi", "ensilumi", "sää"],
+      "answer": 0,
+      "explanation": "'Pakkanen' means frost or freezing weather; its genitive is 'pakkasen'.",
+      "example": "Ulkona on kova pakkanen.",
+      "exampletranslate": "It is freezing cold outside."
     },
     {
       "id": 66,
       "type": "multiple-choice",
-      "question": "Thunderstorm",
-      "options": ["salama", "sade", "tuuli", "ukkonen"],
-      "answer": 3,
-      "explanation": "'Ukkonen' means thunderstorm or thunder.",
-      "example": "Kesällä ukkonen nousee usein kuuman päivän jälkeen."
+      "question": "Bank",
+      "options": ["pankki", "varasto", "tilaus", "katutaso"],
+      "answer": 0,
+      "explanation": "'Pankki' means bank; its genitive is 'pankin'.",
+      "example": "Menen pankkiin.",
+      "exampletranslate": "I am going to the bank."
     },
     {
       "id": 67,
       "type": "multiple-choice",
-      "question": "To choose / select",
-      "options": ["valita", "etsiä", "hakea", "sopia"],
+      "question": "Mirror",
+      "options": ["peili", "taulu", "lämpömittari", "seinä"],
       "answer": 0,
-      "explanation": "Type 5 verb. 'Valita' means to choose, elect, or select.",
-      "example": "Sinun täytyy valita joko punainen tai sininen paita."
+      "explanation": "'Peili' means mirror.",
+      "example": "Katson itseäni peilistä.",
+      "exampletranslate": "I look at myself in the mirror."
     },
     {
       "id": 68,
       "type": "multiple-choice",
-      "question": "Bright / Light / Well-lit",
-      "options": ["pimeä", "hämärä", "valoisa", "likainen"],
-      "answer": 2,
-      "explanation": "'Valoisa' means bright, light, or filled with light.",
-      "example": "Tässä asunnossa on isot ikkunat ja se on erittäin valoisa."
+      "question": "Dark",
+      "options": ["pimeä", "valoisa", "likainen", "tyhjä"],
+      "answer": 0,
+      "explanation": "'Pimeä' means dark.",
+      "example": "Talvella on pimeää.",
+      "exampletranslate": "In winter it is dark."
     },
     {
       "id": 69,
       "type": "multiple-choice",
-      "question": "Warehouse / Storage room",
-      "options": ["kellari", "varasto", "hissi", "mökki"],
-      "answer": 1,
-      "explanation": "'Varasto' means a warehouse, storeroom, or supply stock.",
-      "example": "Viemme vanhat huonekalut varastoon."
+      "question": "Beanie / Woolly hat",
+      "options": ["pipo", "lapaset", "saappaat", "paita"],
+      "answer": 0,
+      "explanation": "'Pipo' means beanie or woolly hat.",
+      "example": "Pakkasella käytän pipoa.",
+      "exampletranslate": "In the cold I wear a beanie."
     },
     {
       "id": 70,
       "type": "multiple-choice",
+      "question": "To fall",
+      "options": ["pudota", "nousta", "laskea", "seisoa"],
+      "answer": 0,
+      "explanation": "'Pudota' (type 4 verb) means to fall; 'putoan' is 'I fall'.",
+      "example": "Lehdet putoavat syksyllä.",
+      "exampletranslate": "The leaves fall in autumn."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "To put on / dress",
+      "options": ["pukea", "sovittaa", "ommella", "valita"],
+      "answer": 0,
+      "explanation": "'Pukea' (type 1 verb) means to put on or dress; 'puen päälle' means 'I put on'.",
+      "example": "Puen takin päälle.",
+      "exampletranslate": "I put the jacket on."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "Sweater / Blouse",
+      "options": ["pusero", "paita", "hame", "villapaita"],
+      "answer": 0,
+      "explanation": "'Pusero' means a sweater or blouse.",
+      "example": "Ostan lämpimän puseron.",
+      "exampletranslate": "I buy a warm sweater."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "Tree",
+      "options": ["puu", "mökki", "puutarha", "luonto"],
+      "answer": 0,
+      "explanation": "'Puu' means tree (also wood); its genitive is 'puun'.",
+      "example": "Puutarhassa on iso puu.",
+      "exampletranslate": "There is a big tree in the garden."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Garden",
+      "options": ["puutarha", "puu", "mökki", "piha"],
+      "answer": 0,
+      "explanation": "'Puutarha' means garden.",
+      "example": "Kasvatan kukkia puutarhassa.",
+      "exampletranslate": "I grow flowers in the garden."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "On top of",
+      "options": ["päällä", "alla", "takana", "edessä"],
+      "answer": 0,
+      "explanation": "'Päällä' means on top of (used with the genitive).",
+      "example": "Kirja on pöydän päällä.",
+      "exampletranslate": "The book is on top of the table."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Tires",
+      "options": ["renkaat", "saappaat", "lapaset", "sormikkaat"],
+      "answer": 0,
+      "explanation": "'Renkaat' means tires (a plural word); its genitive is 'renkaiden'.",
+      "example": "Vaihdan talvirenkaat autoon.",
+      "exampletranslate": "I change the winter tires on the car."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Boots",
+      "options": ["saappaat", "kumisaappaat", "lapaset", "renkaat"],
+      "answer": 0,
+      "explanation": "'Saappaat' means boots (a plural word); its genitive is 'saappaiden'.",
+      "example": "Pukeudun lämpimiin saappaisiin.",
+      "exampletranslate": "I put on warm boots."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "To rain / snow (precipitate)",
+      "options": ["sataa", "paistaa", "tuulla", "laskea"],
+      "answer": 0,
+      "explanation": "'Sataa' (type 1 verb) means to rain or snow (to precipitate); 'sataa' is 'it rains/snows'.",
+      "example": "Ulkona sataa lunta.",
+      "exampletranslate": "It is snowing outside."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "To stand",
+      "options": ["seisoa", "istua", "pudota", "matkustaa"],
+      "answer": 0,
+      "explanation": "'Seisoa' (type 1 verb) means to stand; 'seison' is 'I stand'.",
+      "example": "Seison jonossa.",
+      "exampletranslate": "I stand in the queue."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "To fit / agree",
+      "options": ["sopia", "sovittaa", "pukea", "valita"],
+      "answer": 0,
+      "explanation": "'Sopia' (type 1 verb) means to fit, suit or agree; 'sovin' is 'I agree/it fits'.",
+      "example": "Tämä takki sopii minulle.",
+      "exampletranslate": "This jacket fits me."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Suitable",
+      "options": ["sopiva", "likainen", "valoisa", "pimeä"],
+      "answer": 0,
+      "explanation": "'Sopiva' means suitable.",
+      "example": "Tämä on sopiva koko.",
+      "exampletranslate": "This is a suitable size."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "Gloves (fingered)",
+      "options": ["sormikkaat", "lapaset", "saappaat", "renkaat"],
+      "answer": 0,
+      "explanation": "'Sormikkaat' means gloves with fingers (a plural word); its genitive is 'sormikkaiden'.",
+      "example": "Talvella käytän sormikkaita.",
+      "exampletranslate": "In winter I wear gloves."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "To try on (clothes)",
+      "options": ["sovittaa", "pukea", "valita", "sopia"],
+      "answer": 0,
+      "explanation": "'Sovittaa' (type 1 verb) means to try on; 'sovitan' is 'I try on' (takes a partitive object).",
+      "example": "Sovitan takkia kaupassa.",
+      "exampletranslate": "I try on the jacket at the shop."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Fitting room",
+      "options": ["sovituskoppi", "varasto", "katutaso", "hissi"],
+      "answer": 0,
+      "explanation": "'Sovituskoppi' means fitting room; its genitive is 'sovituskopin'.",
+      "example": "Vaatteet sovitetaan sovituskopissa.",
+      "exampletranslate": "Clothes are tried on in the fitting room."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Autumn",
+      "options": ["syksy", "kevät", "kesä", "talvi"],
+      "answer": 0,
+      "explanation": "'Syksy' means autumn.",
+      "example": "Syksyllä sataa usein.",
+      "exampletranslate": "In autumn it often rains."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Weather",
+      "options": ["sää", "aste", "lumi", "luonto"],
+      "answer": 0,
+      "explanation": "'Sää' means weather; its genitive is 'sään'.",
+      "example": "Millainen sää tänään on?",
+      "exampletranslate": "What kind of weather is it today?"
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "To save",
+      "options": ["säästää", "tilata", "valita", "matkustaa"],
+      "answer": 0,
+      "explanation": "'Säästää' (type 1 verb) means to save (money or resources); 'säästän' is 'I save'.",
+      "example": "Säästän rahaa lomaa varten.",
+      "exampletranslate": "I save money for a holiday."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "Behind",
+      "options": ["takana", "edessä", "alla", "vieressä"],
+      "answer": 0,
+      "explanation": "'Takana' means behind (used with the genitive).",
+      "example": "Puutarha on talon takana.",
+      "exampletranslate": "The garden is behind the house."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Jacket / Coat",
+      "options": ["takki", "talvitakki", "paita", "hame"],
+      "answer": 0,
+      "explanation": "'Takki' means jacket or coat; its genitive is 'takin'.",
+      "example": "Puen takin päälle.",
+      "exampletranslate": "I put on the jacket."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Winter",
+      "options": ["talvi", "kevät", "kesä", "syksy"],
+      "answer": 0,
+      "explanation": "'Talvi' means winter; its genitive is 'talven'.",
+      "example": "Talvella on kylmä.",
+      "exampletranslate": "In winter it is cold."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Winter jacket",
+      "options": ["talvitakki", "takki", "villapaita", "pusero"],
+      "answer": 0,
+      "explanation": "'Talvitakki' means winter jacket; its genitive is 'talvitakin'.",
+      "example": "Ostan lämpimän talvitakin.",
+      "exampletranslate": "I buy a warm winter jacket."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "To text",
+      "options": ["tekstata", "soittaa", "lähettää", "valita"],
+      "answer": 0,
+      "explanation": "'Tekstata' (type 4 verb) means to text (send a text message); 'tekstaan' is 'I text'.",
+      "example": "Tekstaan kaverille.",
+      "exampletranslate": "I text a friend."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Order (purchase order)",
+      "options": ["tilaus", "tuote", "lista", "ennätys"],
+      "answer": 0,
+      "explanation": "'Tilaus' means order (e.g. a purchase order); its genitive is 'tilauksen'.",
+      "example": "Tilaus saapuu ensi viikolla.",
+      "exampletranslate": "The order arrives next week."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Product",
+      "options": ["tuote", "tilaus", "lahja", "muoti"],
+      "answer": 0,
+      "explanation": "'Tuote' means product; its genitive is 'tuotteen'.",
+      "example": "Tämä tuote on halpa.",
+      "exampletranslate": "This product is cheap."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "T-shirt",
+      "options": ["t-paita", "villapaita", "talvitakki", "pusero"],
+      "answer": 0,
+      "explanation": "'T-paita' means t-shirt.",
+      "example": "Kesällä käytän t-paitaa.",
+      "exampletranslate": "In summer I wear a t-shirt."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "Fire",
+      "options": ["tuli", "aurinko", "sää", "pakkanen"],
+      "answer": 0,
+      "explanation": "'Tuli' means fire; its genitive is 'tulen'.",
+      "example": "Takassa palaa tuli.",
+      "exampletranslate": "A fire burns in the fireplace."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "To be windy",
+      "options": ["tuulla", "sataa", "paistaa", "laskea"],
+      "answer": 0,
+      "explanation": "'Tuulla' (type 1 verb) means to be windy; 'tuulee' means 'it is windy'.",
+      "example": "Ulkona tuulee kovaa.",
+      "exampletranslate": "It is very windy outside."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Thunderstorm",
+      "options": ["ukkonen", "pakkanen", "sää", "tuuli"],
+      "answer": 0,
+      "explanation": "'Ukkonen' means thunderstorm; its genitive is 'ukkosen'.",
+      "example": "Kesällä on usein ukkosta.",
+      "exampletranslate": "In summer there are often thunderstorms."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Although / Even if",
+      "options": ["vaikka", "ilman", "koska", "mutta"],
+      "answer": 0,
+      "explanation": "'Vaikka' means although or even if.",
+      "example": "Menen ulos, vaikka sataa.",
+      "exampletranslate": "I go out, even though it rains."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "To choose",
+      "options": ["valita", "etsiä", "löytää", "sovittaa"],
+      "answer": 0,
+      "explanation": "'Valita' (type 4 verb) means to choose; 'valitsen' is 'I choose'.",
+      "example": "Valitsen sinisen takin.",
+      "exampletranslate": "I choose the blue jacket."
+    },
+    {
+      "id": 101,
+      "type": "multiple-choice",
+      "question": "Bright / Light",
+      "options": ["valoisa", "pimeä", "likainen", "kuiva"],
+      "answer": 0,
+      "explanation": "'Valoisa' means bright or full of light.",
+      "example": "Asunto on valoisa.",
+      "exampletranslate": "The apartment is bright."
+    },
+    {
+      "id": 102,
+      "type": "multiple-choice",
+      "question": "Storage / Warehouse",
+      "options": ["varasto", "katutaso", "sovituskoppi", "pankki"],
+      "answer": 0,
+      "explanation": "'Varasto' means storage or warehouse.",
+      "example": "Tuote on loppu varastosta.",
+      "exampletranslate": "The product is out of stock in the warehouse."
+    },
+    {
+      "id": 103,
+      "type": "multiple-choice",
+      "question": "Opposite",
+      "options": ["vastakohta", "vieressä", "edessä", "takana"],
+      "answer": 0,
+      "explanation": "'Vastakohta' means opposite; its genitive is 'vastakohdan'.",
+      "example": "Kuuma on kylmän vastakohta.",
+      "exampletranslate": "Hot is the opposite of cold."
+    },
+    {
+      "id": 104,
+      "type": "multiple-choice",
+      "question": "Next to",
+      "options": ["vieressä", "takana", "edessä", "alla"],
+      "answer": 0,
+      "explanation": "'Vieressä' means next to or beside (used with the genitive).",
+      "example": "Pankki on kaupan vieressä.",
+      "exampletranslate": "The bank is next to the shop."
+    },
+    {
+      "id": 105,
+      "type": "multiple-choice",
+      "question": "Wool sweater",
+      "options": ["villapaita", "t-paita", "talvitakki", "pusero"],
+      "answer": 0,
+      "explanation": "'Villapaita' means wool sweater, from 'villa' (wool) and 'paita' (shirt); its genitive is 'villapaidan'.",
+      "example": "Talvella käytän villapaitaa.",
+      "exampletranslate": "In winter I wear a wool sweater."
+    },
+    {
+      "id": 106,
+      "type": "multiple-choice",
       "question": "Seasons",
-      "options": ["kuukaudet", "vuodenajat", "viikot", "päivät"],
-      "answer": 1,
-      "explanation": "'Vuodenajat' means the seasons of the year (literally year-times).",
-      "example": "Suomessa on neljä hyvin erilaista vuodenaikaa."
+      "options": ["vuodenajat", "kuukaudet", "viikot", "asteet"],
+      "answer": 0,
+      "explanation": "'Vuodenajat' means the seasons of the year (a plural word).",
+      "example": "Suomessa on neljä vuodenaikaa.",
+      "exampletranslate": "In Finland there are four seasons."
+    },
+    {
+      "id": 107,
+      "type": "multiple-choice",
+      "question": "Up / Upstairs",
+      "options": ["ylhäällä", "alhaalla", "takana", "vieressä"],
+      "answer": 0,
+      "explanation": "'Ylhäällä' means up or upstairs; 'ylhäältä' is 'from above'.",
+      "example": "Makuuhuone on ylhäällä.",
+      "exampletranslate": "The bedroom is upstairs."
     }
   ]
 }

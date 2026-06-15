@@ -1,683 +1,968 @@
 {
   "id": "chapter7",
-  "title": "Chapter 7 Vocabulary",
-  "description": "Finnish core vocabulary and expressions from the travel, transport, and directions list with context and examples.",
+  "title": "Chapter7",
+  "description": "Finnish vocabulary: travel, transport, tickets, directions and verbs",
   "category": "Language",
   "questions": [
     {
       "id": 1,
       "type": "multiple-choice",
-      "question": "Timetable",
-      "options": ["kalenteri", "kartta", "aikataulu", "asema"],
-      "answer": 2,
-      "explanation": "'Aikataulu' means a schedule or timetable.",
-      "example": "Katso bussi-aikataulu netistä."
+      "question": "Timetable / Schedule",
+      "options": ["aikataulu", "kalenteri", "kartta", "kurssi"],
+      "answer": 0,
+      "explanation": "'Aikataulu' means timetable or schedule.",
+      "example": "Katson junan aikataulua.",
+      "exampletranslate": "I check the train timetable."
     },
     {
       "id": 2,
       "type": "multiple-choice",
       "question": "Discount",
-      "options": ["alennus", "arvo", "tilaus", "lahja"],
+      "options": ["alennus", "arvo", "tarkastus", "kausi"],
       "answer": 0,
-      "explanation": "'Alennus' means a price reduction or discount.",
-      "example": "Opiskelijat saavat junalipusta alennusta."
+      "explanation": "'Alennus' means discount; its genitive is 'alennuksen'.",
+      "example": "Lipusta saa alennuksen.",
+      "exampletranslate": "You get a discount on the ticket."
     },
     {
       "id": 3,
       "type": "multiple-choice",
       "question": "Value",
-      "options": ["hinta", "kuitti", "arvo", "raha"],
-      "answer": 2,
-      "explanation": "'Arvo' means value or worth.",
-      "example": "Tämän kolikon arvo on suuri."
+      "options": ["arvo", "alennus", "tieto", "kausi"],
+      "answer": 0,
+      "explanation": "'Arvo' means value.",
+      "example": "Matkakortin arvo on kymmenen euroa.",
+      "exampletranslate": "The travel card's value is ten euros."
     },
     {
       "id": 4,
       "type": "multiple-choice",
       "question": "Station",
-      "options": ["satama", "asema", "tori", "puisto"],
-      "answer": 1,
-      "explanation": "'Asema' means station (e.g., bus or train station).",
-      "example": "Juna saapuu pian asemalle."
+      "options": ["asema", "rautatieasema", "lentokenttä", "torni"],
+      "answer": 0,
+      "explanation": "'Asema' means station.",
+      "example": "Juna lähtee asemalta.",
+      "exampletranslate": "The train leaves from the station."
     },
     {
       "id": 5,
       "type": "multiple-choice",
-      "question": "Automaton / Machine / Dispenser",
-      "options": ["automaatti", "tietokone", "hissi", "pesukone"],
+      "question": "Machine / Vending machine",
+      "options": ["automaatti", "kulkuneuvo", "kalenteri", "passi"],
       "answer": 0,
-      "explanation": "'Automaatti' refers to an automated machine, such as a ticket machine or ATM.",
-      "example": "Ostan lipun automaatista."
+      "explanation": "'Automaatti' means an automatic machine or vending machine; its genitive is 'automaatin'.",
+      "example": "Ostan lipun automaatista.",
+      "exampletranslate": "I buy the ticket from the machine."
     },
     {
       "id": 6,
       "type": "multiple-choice",
       "question": "Gasoline / Petrol",
-      "options": ["öljy", "sähkö", "vesi", "bensa"],
-      "answer": 3,
-      "explanation": "'Bensa' is the colloquial/common word for bensiini (gasoline).",
-      "example": "Autossa on vähän bensaa jäljellä."
+      "options": ["bensa", "arvo", "raide", "raja"],
+      "answer": 0,
+      "explanation": "'Bensa' means gasoline or petrol (informal).",
+      "example": "Auto tarvitsee bensaa.",
+      "exampletranslate": "The car needs petrol."
     },
     {
       "id": 7,
       "type": "multiple-choice",
-      "question": "Band (musical)",
-      "options": ["seura", "bändi", "konsertti", "laulu"],
-      "answer": 1,
-      "explanation": "'Bändi' means a musical band.",
-      "example": "Tämä suomalainen bändi on todella hyvä."
+      "question": "Band (music group)",
+      "options": ["bändi", "seura", "kurssi", "torni"],
+      "answer": 0,
+      "explanation": "'Bändi' means a band (music group).",
+      "example": "Bändi soittaa festareilla.",
+      "exampletranslate": "The band plays at the festival."
     },
     {
       "id": 8,
       "type": "multiple-choice",
-      "question": "Affordable / Inexpensive",
-      "options": ["kallis", "edullinen", "ilmainen", "sopiva"],
-      "answer": 1,
-      "explanation": "'Edullinen' means affordable, reasonably priced, or inexpensive.",
-      "example": "Tämä hotelli on siisti ja edullinen."
+      "question": "Affordable",
+      "options": ["edullinen", "hidas", "helppo", "valmis"],
+      "answer": 0,
+      "explanation": "'Edullinen' means affordable or reasonably priced; its genitive is 'edullisen'.",
+      "example": "Tämä lippu on edullinen.",
+      "exampletranslate": "This ticket is affordable."
     },
     {
       "id": 9,
       "type": "multiple-choice",
-      "question": "Pensioner / Senior citizen",
-      "options": ["opiskelija", "lapsi", "matkustaja", "eläkeläinen"],
-      "answer": 3,
-      "explanation": "'Eläkeläinen' means a retired person or pensioner.",
-      "example": "Isoisäni on jo eläkeläinen."
+      "question": "Pensioner",
+      "options": ["eläkeläinen", "matkustaja", "konduktööri", "seura"],
+      "answer": 0,
+      "explanation": "'Eläkeläinen' means pensioner or retiree; its genitive is 'eläkeläisen'.",
+      "example": "Eläkeläinen saa alennuksen.",
+      "exampletranslate": "A pensioner gets a discount."
     },
     {
       "id": 10,
       "type": "multiple-choice",
       "question": "South",
-      "options": ["pohjoinen", "itä", "länsi", "etelä"],
-      "answer": 3,
-      "explanation": "'Etelä' means the cardinal direction south.",
-      "example": "Linnut lentävät syksyllä etelään."
+      "options": ["etelä", "pohjoinen", "länsi", "itä"],
+      "answer": 0,
+      "explanation": "'Etelä' means south; its genitive is 'etelän'.",
+      "example": "Matkustan etelään lomalle.",
+      "exampletranslate": "I travel south for the holiday."
     },
     {
       "id": 11,
       "type": "multiple-choice",
       "question": "To scrub / rub",
-      "options": ["hangata", "kutoa", "panna", "ladata"],
+      "options": ["hangata", "rakentaa", "verrata", "panna"],
       "answer": 0,
-      "explanation": "Type 4 verb. 'Hangata' means to rub, scrub, or grate.",
-      "example": "Täytyy hangata lattia puhtaaksi."
+      "explanation": "'Hangata' (type 4 verb) means to scrub or rub; 'hankaan' is 'I scrub'.",
+      "example": "Hankaan lattiaa harjalla.",
+      "exampletranslate": "I scrub the floor with a brush."
     },
     {
       "id": 12,
       "type": "multiple-choice",
-      "question": "To practice / train",
-      "options": ["oppia", "toimia", "harjoitella", "tarkastaa"],
-      "answer": 2,
-      "explanation": "Type 3 verb. 'Harjoitella' means to practice, drill, or exercise (+ Partitive).",
-      "example": "Minun täytyy harjoitella suomea joka päivä."
+      "question": "To practice",
+      "options": ["harjoitella", "järjestää", "toimia", "tanssia"],
+      "answer": 0,
+      "explanation": "'Harjoitella' (type 3 verb) means to practice; 'harjoittelen' is 'I practice' (takes a partitive object).",
+      "example": "Harjoittelen suomen kieltä.",
+      "exampletranslate": "I practice the Finnish language."
     },
     {
       "id": 13,
       "type": "multiple-choice",
       "question": "Rarely",
-      "options": ["usein", "joskus", "aina", "harvoin"],
-      "answer": 3,
-      "explanation": "'Harvoin' means rarely or seldom.",
-      "example": "Käyn harvoin ulkona ravintolassa."
+      "options": ["harvoin", "usein", "valmis", "täysi"],
+      "answer": 0,
+      "explanation": "'Harvoin' means rarely.",
+      "example": "Matkustan harvoin laivalla.",
+      "exampletranslate": "I rarely travel by ship."
     },
     {
       "id": 14,
       "type": "multiple-choice",
       "question": "Easy",
-      "options": ["helppo", "vaikea", "hidas", "hurja"],
+      "options": ["helppo", "hidas", "valmis", "täysi"],
       "answer": 0,
-      "explanation": "'Helppo' means easy or simple.",
-      "example": "Tämä suomen kielen tentti oli helppo."
+      "explanation": "'Helppo' means easy; its genitive is 'helpon'.",
+      "example": "Tämä kurssi on helppo.",
+      "exampletranslate": "This course is easy."
     },
     {
       "id": 15,
       "type": "multiple-choice",
       "question": "Slow",
-      "options": ["nopea", "hidas", "lyhyt", "pitkä"],
-      "answer": 1,
-      "explanation": "'Hidas' means slow.",
-      "example": "Bussi on tänään hyvin hidas."
+      "options": ["hidas", "helppo", "valmis", "hurja"],
+      "answer": 0,
+      "explanation": "'Hidas' means slow; its genitive is 'hitaan'.",
+      "example": "Tämä juna on hidas.",
+      "exampletranslate": "This train is slow."
     },
     {
       "id": 16,
       "type": "multiple-choice",
-      "question": "Wild / Fierce / Tremendous",
-      "options": ["siisti", "rauhallinen", "hurja", "valmis"],
-      "answer": 2,
-      "explanation": "'Hurja' means wild, fierce, furious, or massive.",
-      "example": "Ulkona on hurja myrsky."
+      "question": "Wild / Fierce",
+      "options": ["hurja", "hidas", "valmis", "edullinen"],
+      "answer": 0,
+      "explanation": "'Hurja' means wild or fierce.",
+      "example": "Se oli hurja matka.",
+      "exampletranslate": "It was a wild trip."
     },
     {
       "id": 17,
       "type": "multiple-choice",
-      "question": "To announce / inform / report",
-      "options": ["ilmoittaa", "pyytää", "toimia", "verrata"],
+      "question": "To announce / inform",
+      "options": ["ilmoittaa", "pyytää", "järjestää", "toimia"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Ilmoittaa' means to declare, notify, or advertise.",
-      "example": "Voitko ilmoittaa minulle, kun juna saapuu?"
+      "explanation": "'Ilmoittaa' (type 1 verb) means to announce or inform; 'ilmoitan' is 'I announce'.",
+      "example": "Ilmoitan lähtöajan.",
+      "exampletranslate": "I announce the departure time."
     },
     {
       "id": 18,
       "type": "multiple-choice",
       "question": "Afternoon",
-      "options": ["aamupäivä", "iltapäivä", "keskiyö", "ilta"],
-      "answer": 1,
-      "explanation": "'Iltapäivä' refers to the afternoon hours.",
-      "example": "Tapaaminen on iltapäivällä kello kaksi."
+      "options": ["iltapäivä", "aikataulu", "kausi", "kalenteri"],
+      "answer": 0,
+      "explanation": "'Iltapäivä' means afternoon.",
+      "example": "Juna lähtee iltapäivällä.",
+      "exampletranslate": "The train leaves in the afternoon."
     },
     {
       "id": 19,
       "type": "multiple-choice",
       "question": "East",
-      "options": ["länsi", "etelä", "itä", "pohjoinen"],
-      "answer": 2,
-      "explanation": "'Itä' means the cardinal direction east.",
-      "example": "Aurinko nousee idästä."
+      "options": ["itä", "länsi", "etelä", "pohjoinen"],
+      "answer": 0,
+      "explanation": "'Itä' means east; its genitive is 'idän'.",
+      "example": "Aurinko nousee idästä.",
+      "exampletranslate": "The sun rises from the east."
     },
     {
       "id": 20,
       "type": "multiple-choice",
       "question": "River",
-      "options": ["meri", "järvi", "lampi", "joki"],
-      "answer": 3,
-      "explanation": "'Joki' (genitive: joen) means river.",
-      "example": "Kaupunki sijaitsee suuren joen varrella."
+      "options": ["joki", "meri", "ranta", "koski"],
+      "answer": 0,
+      "explanation": "'Joki' means river; its genitive is 'joen'.",
+      "example": "Joki virtaa kaupungin läpi.",
+      "exampletranslate": "The river flows through the city."
     },
     {
       "id": 21,
       "type": "multiple-choice",
       "question": "Santa Claus",
-      "options": ["joulupukki", "pääsiäispupu", "tonttu", "lahja"],
+      "options": ["joulupukki", "konduktööri", "matkustaja", "eläkeläinen"],
       "answer": 0,
-      "explanation": "'Joulupukki' is Santa Claus, famously residing in Finnish Lapland.",
-      "example": "Joulupukki tuo lapsille lahjoja jouluna."
+      "explanation": "'Joulupukki' means Santa Claus; its genitive is 'joulupukin'.",
+      "example": "Joulupukki asuu Lapissa.",
+      "exampletranslate": "Santa Claus lives in Lapland."
     },
     {
       "id": 22,
       "type": "multiple-choice",
-      "question": "Gymnastics / Workout session",
-      "options": ["juoksu", "uinti", "tanssi", "jumppa"],
-      "answer": 3,
-      "explanation": "'Jumppa' means a light fitness exercise class or workout session.",
-      "example": "Aamulla minulla on jumppa uimahallilla."
+      "question": "Exercise / Gym workout",
+      "options": ["jumppa", "kurssi", "seura", "tarkastus"],
+      "answer": 0,
+      "explanation": "'Jumppa' means exercise or a workout class; its genitive is 'jumpan'.",
+      "example": "Käyn jumpassa kerran viikossa.",
+      "exampletranslate": "I go to exercise class once a week."
     },
     {
       "id": 23,
       "type": "multiple-choice",
-      "question": "Train ticket",
-      "options": ["matkakortti", "lentolippu", "junalippu", "kertalippu"],
-      "answer": 2,
-      "explanation": "'Junalippu' is a compound word: juna (train) + lippu (ticket).",
-      "example": "Näyttäkää junalippu, kiitos!"
+      "question": "Train",
+      "options": ["juna", "laiva", "lentokone", "kulkuneuvo"],
+      "answer": 0,
+      "explanation": "'Juna' means train.",
+      "example": "Matkustan junalla pohjoiseen.",
+      "exampletranslate": "I travel north by train."
     },
     {
       "id": 24,
       "type": "multiple-choice",
-      "question": "To organize / arrange",
-      "options": ["järjestää", "toimia", "tarkastaa", "rakentaa"],
+      "question": "Train ticket",
+      "options": ["junalippu", "kertalippu", "matkakortti", "lippu"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Järjestää' means to set up, organize, or structure.",
-      "example": "Kuka järjestää tämän matkan?"
+      "explanation": "'Junalippu' means train ticket; its genitive is 'junalipun'.",
+      "example": "Ostan junalipun Helsinkiin.",
+      "exampletranslate": "I buy a train ticket to Helsinki."
     },
     {
       "id": 25,
       "type": "multiple-choice",
-      "question": "To get off (a vehicle) / step out",
-      "options": ["saapua", "päästä", "jäädä pois", "kulkea"],
-      "answer": 2,
-      "explanation": "'Jäädä pois' means to alight, disembark, or get off a bus/train.",
-      "example": "Jään pois seuraavalla pysäkillä."
+      "question": "To organize",
+      "options": ["järjestää", "ilmoittaa", "harjoitella", "verrata"],
+      "answer": 0,
+      "explanation": "'Järjestää' (type 1 verb) means to organize or arrange; 'järjestän' is 'I organize'.",
+      "example": "Järjestän juhlat lauantaina.",
+      "exampletranslate": "I organize a party on Saturday."
     },
     {
       "id": 26,
       "type": "multiple-choice",
-      "question": "Calendar",
-      "options": ["aikataulu", "kalenteri", "kirja", "kartta"],
-      "answer": 1,
-      "explanation": "'Kalenteri' means calendar.",
-      "example": "Katson vapaat päivät kalenterista."
+      "question": "To get off / stay",
+      "options": ["jäädä", "saapua", "palata", "päästä"],
+      "answer": 0,
+      "explanation": "'Jäädä' (type 2 verb) means to stay or remain; 'jään pois' means 'I get off' (used with 'mistä').",
+      "example": "Jään pois bussista keskustassa.",
+      "exampletranslate": "I get off the bus in the centre."
     },
     {
       "id": 27,
       "type": "multiple-choice",
-      "question": "Map",
-      "options": ["kartta", "opas", "kuva", "linja"],
+      "question": "Calendar",
+      "options": ["kalenteri", "aikataulu", "kartta", "kausi"],
       "answer": 0,
-      "explanation": "'Kartta' means map.",
-      "example": "Me tarvitsemme kaupungin kartan."
+      "explanation": "'Kalenteri' means calendar.",
+      "example": "Merkitsen matkan kalenteriin.",
+      "exampletranslate": "I mark the trip in the calendar."
     },
     {
       "id": 28,
       "type": "multiple-choice",
-      "question": "Far away (adverb)",
-      "options": ["lähellä", "perillä", "vieressä", "kauas"],
-      "answer": 3,
-      "explanation": "'Kauas' is the directional form of far, meaning to a far distance.",
-      "example": "Älä mene liian kauas rannasta."
+      "question": "Map",
+      "options": ["kartta", "kalenteri", "aikataulu", "sanakirja"],
+      "answer": 0,
+      "explanation": "'Kartta' means map; its genitive is 'kartan'.",
+      "example": "Katson reittiä kartasta.",
+      "exampletranslate": "I check the route on the map."
     },
     {
       "id": 29,
       "type": "multiple-choice",
-      "question": "Season / Period",
-      "options": ["vuosi", "kuukausi", "kausi", "viikko"],
-      "answer": 2,
-      "explanation": "'Kausi' (genitive: kauden) means a season, period, or era.",
-      "example": "Talvikausi alkaa marraskuussa."
+      "question": "Far away (direction)",
+      "options": ["kauas", "perillä", "keskellä", "harvoin"],
+      "answer": 0,
+      "explanation": "'Kauas' means (to) far away, used for direction (compare 'kaukana' for location).",
+      "example": "Matkustan kauas etelään.",
+      "exampletranslate": "I travel far away to the south."
     },
     {
       "id": 30,
       "type": "multiple-choice",
-      "question": "Single ticket / One-way ticket",
-      "options": ["kertalippu", "menopaluu", "matkakortti", "kausilippu"],
+      "question": "Season / Period",
+      "options": ["kausi", "kurssi", "kalenteri", "iltapäivä"],
       "answer": 0,
-      "explanation": "'Kertalippu' means a single-use ticket valid for one journey.",
-      "example": "Kertalippu bussiin maksaa kolme euroa."
+      "explanation": "'Kausi' means season or period; its genitive is 'kauden'.",
+      "example": "Kesäkausi on kiireinen.",
+      "exampletranslate": "The summer season is busy."
     },
     {
       "id": 31,
       "type": "multiple-choice",
-      "question": "In the middle of",
-      "options": ["takana", "edessä", "keskellä", "vieressä"],
-      "answer": 2,
-      "explanation": "'Keskellä' is a preposition/postposition meaning in the center or middle of.",
-      "example": "Suihkulähde on keskellä toria."
+      "question": "Single ticket",
+      "options": ["kertalippu", "junalippu", "matkakortti", "menopaluu"],
+      "answer": 0,
+      "explanation": "'Kertalippu' means a single (one-time) ticket; its genitive is 'kertalipun'.",
+      "example": "Ostan kertalipun bussiin.",
+      "exampletranslate": "I buy a single ticket for the bus."
     },
     {
       "id": 32,
       "type": "multiple-choice",
-      "question": "To interest",
-      "options": ["pelätä", "kiinnostaa", "toimia", "tahtoa"],
-      "answer": 1,
-      "explanation": "Type 1 verb. Used with partitive object: 'minua kiinnostaa' (it interests me).",
-      "example": "Minua kiinnostaa suomalainen kulttuuri."
+      "question": "In the middle of",
+      "options": ["keskellä", "perillä", "kauas", "vieressä"],
+      "answer": 0,
+      "explanation": "'Keskellä' means in the middle of (used with the genitive).",
+      "example": "Torni on keskellä kaupunkia.",
+      "exampletranslate": "The tower is in the middle of the city."
     },
     {
       "id": 33,
       "type": "multiple-choice",
-      "question": "Conductor (train/bus)",
-      "options": ["kuljettaja", "rakennusmies", "opettaja", "konduktööri"],
-      "answer": 3,
-      "explanation": "'Konduktööri' is the train conductor who checks tickets.",
-      "example": "Konduktööri tarkastaa matkustajien liput."
+      "question": "To interest",
+      "options": ["kiinnostaa", "toimia", "puuttua", "tanssia"],
+      "answer": 0,
+      "explanation": "'Kiinnostaa' (type 1 verb) means to interest; 'minua kiinnostaa' means 'it interests me'.",
+      "example": "Matkailu kiinnostaa minua.",
+      "exampletranslate": "Travel interests me."
     },
     {
       "id": 34,
       "type": "multiple-choice",
-      "question": "Rapids / Torrent",
-      "options": ["joki", "koski", "järvi", "meri"],
-      "answer": 1,
-      "explanation": "'Koski' (genitive: kosken) means rapids or fast-flowing river currents.",
-      "example": "Tammerkoski on tunnettu koski Tampereella."
+      "question": "Sized (a certain size)",
+      "options": ["kokoinen", "valmis", "täysi", "edullinen"],
+      "answer": 0,
+      "explanation": "'Kokoinen' means '-sized' (of a certain size); its genitive is 'kokoisen'.",
+      "example": "Tarvitsen tämän kokoisen laukun.",
+      "exampletranslate": "I need a bag of this size."
     },
     {
       "id": 35,
       "type": "multiple-choice",
-      "question": "To travel / go / move along",
-      "options": ["lentää", "pysähtyä", "kulkea", "palata"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Kulkea' means to travel, move, pass, or walk along.",
-      "example": "Bussi kulkee tämän kadun kautta."
+      "question": "Conductor (on a train)",
+      "options": ["konduktööri", "matkustaja", "eläkeläinen", "joulupukki"],
+      "answer": 0,
+      "explanation": "'Konduktööri' means a train conductor.",
+      "example": "Konduktööri tarkastaa liput.",
+      "exampletranslate": "The conductor checks the tickets."
     },
     {
       "id": 36,
       "type": "multiple-choice",
-      "question": "Vehicle / Means of transport",
-      "options": ["kulkuneuvo", "auto", "juna", "polkupyörä"],
+      "question": "Rapids (in a river)",
+      "options": ["koski", "joki", "meri", "mäki"],
       "answer": 0,
-      "explanation": "'Kulkuneuvo' is a generic term for any vehicle or means of transportation.",
-      "example": "Mitä kulkuneuvoa käytät työmatkalla?"
+      "explanation": "'Koski' means rapids in a river; its genitive is 'kosken'.",
+      "example": "Vene laskee koskea.",
+      "exampletranslate": "The boat goes down the rapids."
     },
     {
       "id": 37,
       "type": "multiple-choice",
-      "question": "Ride / Lift",
-      "options": ["matka", "kyyti", "lähtö", "meno"],
-      "answer": 1,
-      "explanation": "'Kyyti' means a ride or lift given in a vehicle.",
-      "example": "Kiitos kyydistä rautatieasemalle!"
+      "question": "To go / move / travel",
+      "options": ["kulkea", "saapua", "palata", "lentää"],
+      "answer": 0,
+      "explanation": "'Kulkea' (type 1 verb) means to go, move or travel; 'kuljen' is 'I go/move'.",
+      "example": "Kuljen töihin bussilla.",
+      "exampletranslate": "I travel to work by bus."
     },
     {
       "id": 38,
       "type": "multiple-choice",
-      "question": "Used / Second-hand",
-      "options": ["uusi", "rikki", "vanha", "käytetty"],
-      "answer": 3,
-      "explanation": "'Käytetty' means used or pre-owned.",
-      "example": "Ostan mieluummin käytetyn polkupyörän."
+      "question": "Vehicle / Means of transport",
+      "options": ["kulkuneuvo", "automaatti", "aikataulu", "raide"],
+      "answer": 0,
+      "explanation": "'Kulkuneuvo' means a vehicle or means of transport.",
+      "example": "Juna on nopea kulkuneuvo.",
+      "exampletranslate": "The train is a fast means of transport."
     },
     {
       "id": 39,
       "type": "multiple-choice",
-      "question": "To load / download / charge (battery)",
-      "options": ["ladata", "vaihtaa", "panna", "ostaa"],
+      "question": "Course",
+      "options": ["kurssi", "kausi", "kalenteri", "jumppa"],
       "answer": 0,
-      "explanation": "Type 4 verb. 'Ladata' means to charge a battery, top-up a card, or download/load data.",
-      "example": "Minun täytyy ladata matkakortti."
+      "explanation": "'Kurssi' means course.",
+      "example": "Käyn suomen kurssilla.",
+      "exampletranslate": "I attend a Finnish course."
     },
     {
       "id": 40,
       "type": "multiple-choice",
-      "question": "Ship / Large boat",
-      "options": ["vene", "laiva", "lentokone", "juna"],
-      "answer": 1,
-      "explanation": "'Laiva' means a ship or large seafaring vessel.",
-      "example": "Laiva matkustaa Helsingistä Tallinnaan."
+      "question": "Village",
+      "options": ["kylä", "kaupunki", "puisto", "torni"],
+      "answer": 0,
+      "explanation": "'Kylä' means village.",
+      "example": "Asun pienessä kylässä.",
+      "exampletranslate": "I live in a small village."
     },
     {
       "id": 41,
       "type": "multiple-choice",
-      "question": "Airport",
-      "options": ["rautatieasema", "satama", "lentokenttä", "pysäkki"],
-      "answer": 2,
-      "explanation": "'Lentokenttä' means airport (literally flight-field).",
-      "example": "Taksi vie meidät lentokentälle."
+      "question": "Ride / Lift",
+      "options": ["kyyti", "kulkuneuvo", "paluu", "lähtö"],
+      "answer": 0,
+      "explanation": "'Kyyti' means a ride or lift; its genitive is 'kyydin'.",
+      "example": "Saanko kyydin keskustaan?",
+      "exampletranslate": "Can I get a ride to the centre?"
     },
     {
       "id": 42,
       "type": "multiple-choice",
-      "question": "Airplane",
-      "options": ["lentokone", "helikopteri", "laiva", "auto"],
+      "question": "Used (second-hand)",
+      "options": ["käytetty", "valmis", "täysi", "edullinen"],
       "answer": 0,
-      "explanation": "'Lentokone' means airplane.",
-      "example": "Lentokone nousee ilmaan."
+      "explanation": "'Käytetty' means used or second-hand; its genitive is 'käytetyn'.",
+      "example": "Ostan käytetyn auton.",
+      "exampletranslate": "I buy a used car."
     },
     {
       "id": 43,
       "type": "multiple-choice",
-      "question": "To fly",
-      "options": ["kulkea", "ajaa", "uida", "lentää"],
-      "answer": 3,
-      "explanation": "Type 1 verb. 'Lentää' means to fly.",
-      "example": "Me lennämme huomenna Lontooseen."
+      "question": "To load / download / charge",
+      "options": ["ladata", "panna", "rakentaa", "verrata"],
+      "answer": 0,
+      "explanation": "'Ladata' (type 4 verb) means to load, download or charge; 'lataan' is 'I load/charge'.",
+      "example": "Lataan matkakortin.",
+      "exampletranslate": "I load (top up) the travel card."
     },
     {
       "id": 44,
       "type": "multiple-choice",
-      "question": "Castle",
-      "options": ["talo", "linna", "torni", "mökki"],
-      "answer": 1,
-      "explanation": "'Linna' means a castle or palace.",
-      "example": "Turun linna on erittäin vanha rakennus."
+      "question": "Ship",
+      "options": ["laiva", "juna", "lentokone", "auto"],
+      "answer": 0,
+      "explanation": "'Laiva' means ship.",
+      "example": "Menen Tukholmaan laivalla.",
+      "exampletranslate": "I go to Stockholm by ship."
     },
     {
       "id": 45,
       "type": "multiple-choice",
-      "question": "Ticket sales / Ticket office",
-      "options": ["lipunmyynti", "neuvonta", "automaatti", "kauppa"],
+      "question": "Airport",
+      "options": ["lentokenttä", "rautatieasema", "asema", "satama"],
       "answer": 0,
-      "explanation": "'Lipunmyynti' means the ticket office or ticket sales point.",
-      "example": "Lipunmyynti on suljettu tähän aikaan illasta."
+      "explanation": "'Lentokenttä' means airport; its genitive is 'lentokentän'.",
+      "example": "Lentokone lähtee lentokentältä.",
+      "exampletranslate": "The plane leaves from the airport."
     },
     {
       "id": 46,
       "type": "multiple-choice",
-      "question": "Departure",
-      "options": ["saapuminen", "paluu", "lähtö", "matka"],
-      "answer": 2,
-      "explanation": "'Lähtö' (genitive: lähdön) means departure.",
-      "example": "Junan lähtö on raiteelta neljä."
+      "question": "Airplane",
+      "options": ["lentokone", "laiva", "juna", "kulkuneuvo"],
+      "answer": 0,
+      "explanation": "'Lentokone' means airplane; its genitive is 'lentokoneen'.",
+      "example": "Lentokone laskeutuu pian.",
+      "exampletranslate": "The airplane lands soon."
     },
     {
       "id": 47,
       "type": "multiple-choice",
-      "question": "West",
-      "options": ["itä", "länsi", "pohjoinen", "etelä"],
-      "answer": 1,
-      "explanation": "'Länsi' (genitive: lännen) means the cardinal direction west.",
-      "example": "Vaasa sijaitsee Länsi-Suomessa."
+      "question": "To fly",
+      "options": ["lentää", "kulkea", "palata", "saapua"],
+      "answer": 0,
+      "explanation": "'Lentää' (type 1 verb) means to fly; 'lennän' is 'I fly'.",
+      "example": "Lennän Lappiin huomenna.",
+      "exampletranslate": "I fly to Lapland tomorrow."
     },
     {
       "id": 48,
       "type": "multiple-choice",
-      "question": "Travel card / Transit pass",
-      "options": ["matkakortti", "pankkikortti", "ajokortti", "passi"],
+      "question": "Castle",
+      "options": ["linna", "torni", "rakennus", "kylä"],
       "answer": 0,
-      "explanation": "'Matkakortti' is a public transport smartcard/travel card.",
-      "example": "Näytä matkakortti lukijalle."
+      "explanation": "'Linna' means castle.",
+      "example": "Käymme vanhassa linnassa.",
+      "exampletranslate": "We visit the old castle."
     },
     {
       "id": 49,
       "type": "multiple-choice",
-      "question": "Suitcase / Travel bag",
-      "options": ["reppu", "pussi", "matkalaukku", "lompakko"],
-      "answer": 2,
-      "explanation": "'Matkalaukku' means suitcase or heavy travel luggage.",
-      "example": "Pakkaan matkalaukun illalla valmiiksi."
+      "question": "Ticket",
+      "options": ["lippu", "passi", "matkakortti", "kartta"],
+      "answer": 0,
+      "explanation": "'Lippu' means ticket; its genitive is 'lipun'.",
+      "example": "Näytän lipun konduktöörille.",
+      "exampletranslate": "I show the ticket to the conductor."
     },
     {
       "id": 50,
       "type": "multiple-choice",
-      "question": "Passenger",
-      "options": ["kuljettaja", "matkustaja", "kävelijä", "asiakas"],
-      "answer": 1,
-      "explanation": "'Matkustaja' means passenger or traveler.",
-      "example": "Bussissa on paljon matkustajia."
+      "question": "Ticket sales",
+      "options": ["lipunmyynti", "junalippu", "kertalippu", "tarkastus"],
+      "answer": 0,
+      "explanation": "'Lipunmyynti' means ticket sales; its genitive is 'lipunmyynnin'.",
+      "example": "Lipunmyynti on asemalla.",
+      "exampletranslate": "The ticket sales are at the station."
     },
     {
       "id": 51,
       "type": "multiple-choice",
-      "question": "Round-trip ticket / Return ticket",
-      "options": ["kertalippu", "menopaluu", "kausilippu", "sarjalippu"],
-      "answer": 1,
-      "explanation": "'Menopaluu' means a two-way round-trip ticket (literally out-return).",
-      "example": "Ostan menopaluun Tampereelle."
+      "question": "Departure",
+      "options": ["lähtö", "paluu", "saapuminen", "meno"],
+      "answer": 0,
+      "explanation": "'Lähtö' means departure; its genitive is 'lähdön'.",
+      "example": "Junan lähtö on kello kymmenen.",
+      "exampletranslate": "The train's departure is at ten o'clock."
     },
     {
       "id": 52,
       "type": "multiple-choice",
-      "question": "Sea / Ocean",
-      "options": ["järvi", "joki", "meri", "lampi"],
-      "answer": 2,
-      "explanation": "'Meri' (genitive: meren) means sea or ocean.",
-      "example": "Helsinki sijaitsee meren rannalla."
+      "question": "West",
+      "options": ["länsi", "itä", "etelä", "pohjoinen"],
+      "answer": 0,
+      "explanation": "'Länsi' means west; its genitive is 'lännen'.",
+      "example": "Aurinko laskee länteen.",
+      "exampletranslate": "The sun sets in the west."
     },
     {
       "id": 53,
       "type": "multiple-choice",
-      "question": "Hill",
-      "options": ["vuori", "mäki", "tunturi", "laakso"],
-      "answer": 1,
-      "explanation": "'Mäki' (genitive: mäen) means a hill.",
-      "example": "Lapset laskevat mäkeä talvella."
+      "question": "Travel card",
+      "options": ["matkakortti", "junalippu", "passi", "kertalippu"],
+      "answer": 0,
+      "explanation": "'Matkakortti' means travel card; its genitive is 'matkakortin'.",
+      "example": "Lataan matkakortille rahaa.",
+      "exampletranslate": "I load money onto the travel card."
     },
     {
       "id": 54,
       "type": "multiple-choice",
-      "question": "To return",
-      "options": ["saapua", "lähteä", "palata", "tulla"],
-      "answer": 2,
-      "explanation": "Type 4 verb. 'Palata' means to return or come back.",
-      "example": "Palaan kotiin ensi viikolla."
+      "question": "Suitcase",
+      "options": ["matkalaukku", "reppu", "matkakortti", "passi"],
+      "answer": 0,
+      "explanation": "'Matkalaukku' means suitcase; its genitive is 'matkalaukun'.",
+      "example": "Pakkaan matkalaukun.",
+      "exampletranslate": "I pack the suitcase."
     },
     {
       "id": 55,
       "type": "multiple-choice",
-      "question": "Return",
-      "options": ["lähtö", "paluu", "matka", "pysäkki"],
-      "answer": 1,
-      "explanation": "'Paluu' means the noun return.",
-      "example": "Paluu-matka kesti pitkään."
+      "question": "Passenger",
+      "options": ["matkustaja", "konduktööri", "eläkeläinen", "seura"],
+      "answer": 0,
+      "explanation": "'Matkustaja' means passenger.",
+      "example": "Matkustaja istuu junassa.",
+      "exampletranslate": "The passenger sits on the train."
     },
     {
       "id": 56,
       "type": "multiple-choice",
-      "question": "To put / place / set",
-      "options": ["ottaa", "panna", "ladata", "hakea"],
-      "answer": 1,
-      "explanation": "Type 3 verb. 'Panna' means to put, place, or insert (synonym: laittaa).",
-      "example": "Voitko panna avaimet pöydälle?"
+      "question": "Outbound / One-way trip",
+      "options": ["meno", "menopaluu", "paluu", "lähtö"],
+      "answer": 0,
+      "explanation": "'Meno' means the outbound or one-way trip; its genitive is 'menon'.",
+      "example": "Ostan vain menolipun.",
+      "exampletranslate": "I buy only a one-way ticket."
     },
     {
       "id": 57,
       "type": "multiple-choice",
-      "question": "Passport",
-      "options": ["passi", "henkilökortti", "ajokortti", "lippu"],
+      "question": "Return ticket (round trip)",
+      "options": ["menopaluu", "meno", "kertalippu", "junalippu"],
       "answer": 0,
-      "explanation": "'Passi' means passport.",
-      "example": "Tarvitset passin, kun matkustat Euroopan ulkopuolelle."
+      "explanation": "'Menopaluu' means a return (round-trip) ticket, from 'meno' and 'paluu'.",
+      "example": "Ostan menopaluun Tampereelle.",
+      "exampletranslate": "I buy a return ticket to Tampere."
     },
     {
       "id": 58,
       "type": "multiple-choice",
-      "question": "To fear / be afraid of",
-      "options": ["rakastaa", "vihata", "pelätä", "kiinnostaa"],
-      "answer": 2,
-      "explanation": "Type 4 verb. 'Pelätä' takes the partitive case (+ Partitive).",
-      "example": "Pelkäätkö sinä lentämistä?"
+      "question": "Sea",
+      "options": ["meri", "joki", "koski", "ranta"],
+      "answer": 0,
+      "explanation": "'Meri' means sea; its genitive is 'meren'.",
+      "example": "Laiva kulkee merellä.",
+      "exampletranslate": "The ship travels on the sea."
     },
     {
       "id": 59,
       "type": "multiple-choice",
-      "question": "Arrived / At destination",
-      "options": ["lähellä", "kaukana", "perillä", "myöhässä"],
-      "answer": 2,
-      "explanation": "'Perillä' means arrived, at one's destination, or there.",
-      "example": "Olemme vihdoin perillä hotellilla."
+      "question": "Hill",
+      "options": ["mäki", "koski", "ranta", "torni"],
+      "answer": 0,
+      "explanation": "'Mäki' means hill; its genitive is 'mäen'.",
+      "example": "Talo on mäen päällä.",
+      "exampletranslate": "The house is on top of the hill."
     },
     {
       "id": 60,
       "type": "multiple-choice",
-      "question": "North",
-      "options": ["pohjoinen", "etelä", "itä", "länsi"],
+      "question": "To return",
+      "options": ["palata", "saapua", "lähteä", "jäädä"],
       "answer": 0,
-      "explanation": "'Pohjoinen' means the cardinal direction north.",
-      "example": "Lappi on Pohjois-Suomessa."
+      "explanation": "'Palata' (type 4 verb) means to return; 'palaan' is 'I return'.",
+      "example": "Palaan kotiin illalla.",
+      "exampletranslate": "I return home in the evening."
     },
     {
       "id": 61,
       "type": "multiple-choice",
-      "question": "Park",
-      "options": ["tori", "piha", "puutarha", "puisto"],
-      "answer": 3,
-      "explanation": "'Puisto' means a public park.",
-      "example": "Kävelemme mielellämme puistossa."
+      "question": "Return (the act)",
+      "options": ["paluu", "lähtö", "meno", "saapuminen"],
+      "answer": 0,
+      "explanation": "'Paluu' means the return or the journey back.",
+      "example": "Paluu kestää kaksi tuntia.",
+      "exampletranslate": "The return takes two hours."
     },
     {
       "id": 62,
       "type": "multiple-choice",
-      "question": "To be missing / lack",
-      "options": ["puuttua", "löytyä", "tarvita", "jäädä"],
+      "question": "Service house / Assisted living",
+      "options": ["palvelutalo", "rakennus", "pukuhuone", "uimahalli"],
       "answer": 0,
-      "explanation": "Type 1 verb. 'Puuttua' means to be missing or absent.",
-      "example": "Keitosta puuttuu suola."
+      "explanation": "'Palvelutalo' means a service house or assisted-living home.",
+      "example": "Vanhus asuu palvelutalossa.",
+      "exampletranslate": "The elderly person lives in a service house."
     },
     {
       "id": 63,
       "type": "multiple-choice",
-      "question": "To ask / request",
-      "options": ["vastata", "kysyä", "pyytää", "ilmoittaa"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Pyytää' means to request, ask for, or invite.",
-      "example": "Pyydän apua opettajalta."
+      "question": "To put / place",
+      "options": ["panna", "ladata", "rakentaa", "verrata"],
+      "answer": 0,
+      "explanation": "'Panna' (type 3 verb) means to put or place; 'panen' is 'I put'.",
+      "example": "Panen laukun penkille.",
+      "exampletranslate": "I put the bag on the bench."
     },
     {
       "id": 64,
       "type": "multiple-choice",
-      "question": "Capital city",
-      "options": ["kylä", "kaupunki", "kunta", "pääkaupunki"],
-      "answer": 3,
-      "explanation": "'Pääkaupunki' translates to capital city (pää = head/main + kaupunki = city).",
-      "example": "Helsinki on Suomen pääkaupunki."
+      "question": "Passport",
+      "options": ["passi", "lippu", "matkakortti", "kartta"],
+      "answer": 0,
+      "explanation": "'Passi' means passport.",
+      "example": "Tarvitsen passin matkalla.",
+      "exampletranslate": "I need a passport on the trip."
     },
     {
       "id": 65,
       "type": "multiple-choice",
-      "question": "To get to / reach / be allowed to",
-      "options": ["päästä", "palata", "saapua", "kulkea"],
+      "question": "To fear / be afraid",
+      "options": ["pelätä", "puuttua", "toimia", "pyytää"],
       "answer": 0,
-      "explanation": "Type 3 verb. 'Päästä' means to get somewhere, escape, or be permitted access.",
-      "example": "Miten pääsen rautatieasemalle?"
+      "explanation": "'Pelätä' (type 4 verb) means to fear; 'pelkään' is 'I fear' (takes a partitive object).",
+      "example": "Pelkään lentämistä.",
+      "exampletranslate": "I am afraid of flying."
     },
     {
       "id": 66,
       "type": "multiple-choice",
-      "question": "Track / Railway platform",
-      "options": ["tie", "katu", "raide", "asema"],
-      "answer": 2,
-      "explanation": "'Raide' (genitive: raiteen) means rail track or train platform.",
-      "example": "Juna Tampereelle lähtee raiteelta kolme."
+      "question": "At the destination",
+      "options": ["perillä", "keskellä", "kauas", "valmis"],
+      "answer": 0,
+      "explanation": "'Perillä' means at the destination (having arrived).",
+      "example": "Olemme pian perillä.",
+      "exampletranslate": "We will soon be at the destination."
     },
     {
       "id": 67,
       "type": "multiple-choice",
-      "question": "Border",
-      "options": ["raja", "ranta", "tie", "silta"],
+      "question": "North",
+      "options": ["pohjoinen", "etelä", "itä", "länsi"],
       "answer": 0,
-      "explanation": "'Raja' means a border, limit, or frontier.",
-      "example": "Suomen ja Ruotsin raja on tuolla."
+      "explanation": "'Pohjoinen' means north; its genitive is 'pohjoisen'.",
+      "example": "Lappi on pohjoisessa.",
+      "exampletranslate": "Lapland is in the north."
     },
     {
       "id": 68,
       "type": "multiple-choice",
-      "question": "To build",
-      "options": ["korjata", "purkaa", "rakentaa", "järjestää"],
-      "answer": 2,
-      "explanation": "Type 1 verb. 'Rakentaa' means to construct or build.",
-      "example": "Kaupunki rakentaa uutta koulua."
+      "question": "Park",
+      "options": ["puisto", "ranta", "kylä", "torni"],
+      "answer": 0,
+      "explanation": "'Puisto' means park.",
+      "example": "Kävelen puistossa.",
+      "exampletranslate": "I walk in the park."
     },
     {
       "id": 69,
       "type": "multiple-choice",
-      "question": "Beach / Shore",
-      "options": ["meri", "järvi", "ranta", "koski"],
-      "answer": 2,
-      "explanation": "'Ranta' (genitive: rannan) means shore, beach, or coast.",
-      "example": "Kesällä menemme hiekkarannalle uimaan."
+      "question": "Changing room / Dressing room",
+      "options": ["pukuhuone", "palvelutalo", "uimahalli", "varasto"],
+      "answer": 0,
+      "explanation": "'Pukuhuone' means changing room or dressing room; its genitive is 'pukuhuoneen'.",
+      "example": "Vaihdan vaatteet pukuhuoneessa.",
+      "exampletranslate": "I change clothes in the changing room."
     },
     {
       "id": 70,
       "type": "multiple-choice",
-      "question": "Dining car (train)",
-      "options": ["makuuvaunu", "ravintolavaunu", "keittiö", "kahvila"],
-      "answer": 1,
-      "explanation": "'Ravintolavaunu' is the restaurant/dining carriage inside a train.",
-      "example": "Käyn ostamassa kahvia ravintolavaunusta."
+      "question": "To be missing / lacking",
+      "options": ["puuttua", "kiinnostaa", "toimia", "saapua"],
+      "answer": 0,
+      "explanation": "'Puuttua' (type 1 verb) means to be missing or lacking; 'se puuttuu' means 'it is missing'.",
+      "example": "Yksi lippu puuttuu.",
+      "exampletranslate": "One ticket is missing."
     },
     {
       "id": 71,
       "type": "multiple-choice",
-      "question": "Backpack",
-      "options": ["matkalaukku", "pussi", "salkku", "reppu"],
-      "answer": 3,
-      "explanation": "'Reppu' (genitive: repun) means backpack or rucksack.",
-      "example": "Koululaisella on iso reppu selässä."
+      "question": "To request / ask for",
+      "options": ["pyytää", "ilmoittaa", "kysyä", "panna"],
+      "answer": 0,
+      "explanation": "'Pyytää' (type 1 verb) means to request or ask for; 'pyydän' is 'I request'.",
+      "example": "Pyydän apua matkalla.",
+      "exampletranslate": "I ask for help on the trip."
     },
     {
       "id": 72,
       "type": "multiple-choice",
-      "question": "To arrive",
-      "options": ["lähteä", "saapua", "palata", "kulkea"],
-      "answer": 1,
-      "explanation": "Type 1 verb. 'Saapua' means to arrive or reach.",
-      "example": "Lento saapuu ajallaan."
+      "question": "Capital city",
+      "options": ["pääkaupunki", "kaupunki", "kylä", "puisto"],
+      "answer": 0,
+      "explanation": "'Pääkaupunki' means capital city; its genitive is 'pääkaupungin'.",
+      "example": "Helsinki on Suomen pääkaupunki.",
+      "exampletranslate": "Helsinki is the capital of Finland."
     },
     {
       "id": 73,
       "type": "multiple-choice",
-      "question": "Dictionary",
-      "options": ["oppikirja", "sanakirja", "lehti", "romaani"],
-      "answer": 1,
-      "explanation": "'Sanakirja' means dictionary (literally word-book).",
-      "example": "Katson uuden sanan sanakirjasta."
+      "question": "To get to / be able to go",
+      "options": ["päästä", "palata", "saapua", "jäädä"],
+      "answer": 0,
+      "explanation": "'Päästä' (type 2 verb) means to get to or be able to go; 'pääsen' is 'I get to'.",
+      "example": "Pääsen perille kello viisi.",
+      "exampletranslate": "I get to the destination at five o'clock."
     },
     {
       "id": 74,
       "type": "multiple-choice",
-      "question": "Usually / Normally",
-      "options": ["harvoin", "joskus", "aina", "tavallisesti"],
-      "answer": 3,
-      "explanation": "'Tavallisesti' means usually, typically, or normally.",
-      "example": "Tavallisesti juon aamulla teetä."
+      "question": "Rail / Track",
+      "options": ["raide", "raja", "asema", "torni"],
+      "answer": 0,
+      "explanation": "'Raide' means rail or track (e.g. a platform track); its genitive is 'raiteen'.",
+      "example": "Juna saapuu raiteelle kaksi.",
+      "exampletranslate": "The train arrives at track two."
     },
     {
       "id": 75,
       "type": "multiple-choice",
-      "question": "Must / Have to",
-      "options": ["voida", "täytyä", "osata", "haluta"],
-      "answer": 1,
-      "explanation": "An impersonal verb indicating necessity. Needs genitive subject: 'minun täytyy' (I must).",
-      "example": "Minun täytyy ostaa matkalippu nyt."
+      "question": "Border",
+      "options": ["raja", "raide", "ranta", "meri"],
+      "answer": 0,
+      "explanation": "'Raja' means border.",
+      "example": "Ylitämme rajan junalla.",
+      "exampletranslate": "We cross the border by train."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Building",
+      "options": ["rakennus", "linna", "torni", "puisto"],
+      "answer": 0,
+      "explanation": "'Rakennus' means building; its genitive is 'rakennuksen'.",
+      "example": "Tämä on vanha rakennus.",
+      "exampletranslate": "This is an old building."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "To build",
+      "options": ["rakentaa", "panna", "järjestää", "verrata"],
+      "answer": 0,
+      "explanation": "'Rakentaa' (type 1 verb) means to build; 'rakennan' is 'I build'.",
+      "example": "Rakennan uuden talon.",
+      "exampletranslate": "I build a new house."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Beach / Shore",
+      "options": ["ranta", "meri", "joki", "puisto"],
+      "answer": 0,
+      "explanation": "'Ranta' means beach or shore; its genitive is 'rannan'.",
+      "example": "Kävelen rannalla.",
+      "exampletranslate": "I walk on the beach."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Railway station",
+      "options": ["rautatieasema", "lentokenttä", "asema", "satama"],
+      "answer": 0,
+      "explanation": "'Rautatieasema' means railway station.",
+      "example": "Juna lähtee rautatieasemalta.",
+      "exampletranslate": "The train leaves from the railway station."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "Dining car",
+      "options": ["ravintolavaunu", "kulkuneuvo", "matkalaukku", "raide"],
+      "answer": 0,
+      "explanation": "'Ravintolavaunu' means dining car (on a train).",
+      "example": "Syön lounaan ravintolavaunussa.",
+      "exampletranslate": "I eat lunch in the dining car."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Backpack",
+      "options": ["reppu", "matkalaukku", "passi", "kartta"],
+      "answer": 0,
+      "explanation": "'Reppu' means backpack; its genitive is 'repun'.",
+      "example": "Kannan reppua selässä.",
+      "exampletranslate": "I carry the backpack on my back."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "To arrive",
+      "options": ["saapua", "lähteä", "palata", "kulkea"],
+      "answer": 0,
+      "explanation": "'Saapua' (type 1 verb) means to arrive; 'saavun' is 'I arrive'.",
+      "example": "Juna saapuu ajoissa.",
+      "exampletranslate": "The train arrives on time."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Raincoat",
+      "options": ["sadetakki", "talvitakki", "reppu", "passi"],
+      "answer": 0,
+      "explanation": "'Sadetakki' means raincoat; its genitive is 'sadetakin'.",
+      "example": "Sateella käytän sadetakkia.",
+      "exampletranslate": "In the rain I wear a raincoat."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Dictionary",
+      "options": ["sanakirja", "kartta", "kalenteri", "aikataulu"],
+      "answer": 0,
+      "explanation": "'Sanakirja' means dictionary, from 'sana' (word) and 'kirja' (book).",
+      "example": "Etsin sanan sanakirjasta.",
+      "exampletranslate": "I look up the word in the dictionary."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Company / Club / Society",
+      "options": ["seura", "bändi", "kurssi", "tarkastus"],
+      "answer": 0,
+      "explanation": "'Seura' means company, club or society.",
+      "example": "Pidän hyvästä seurasta.",
+      "exampletranslate": "I like good company."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Inspection / Check",
+      "options": ["tarkastus", "alennus", "tieto", "seura"],
+      "answer": 0,
+      "explanation": "'Tarkastus' means inspection or check; its genitive is 'tarkastuksen'.",
+      "example": "Junassa on lipuntarkastus.",
+      "exampletranslate": "There is a ticket inspection on the train."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "To dance",
+      "options": ["tanssia", "toimia", "harjoitella", "verrata"],
+      "answer": 0,
+      "explanation": "'Tanssia' (type 1 verb) means to dance; 'tanssin' is 'I dance'.",
+      "example": "Tanssin festareilla.",
+      "exampletranslate": "I dance at the festival."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "Information / Knowledge",
+      "options": ["tieto", "tarkastus", "arvo", "seura"],
+      "answer": 0,
+      "explanation": "'Tieto' means information or knowledge; its genitive is 'tiedon'.",
+      "example": "Haluan lisää tietoa matkasta.",
+      "exampletranslate": "I want more information about the trip."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "To function / work / act",
+      "options": ["toimia", "puuttua", "kiinnostaa", "tanssia"],
+      "answer": 0,
+      "explanation": "'Toimia' (type 1 verb) means to function, work or act; 'toimin' is 'I function/act'.",
+      "example": "Automaatti ei toimi.",
+      "exampletranslate": "The machine does not work."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Tower",
+      "options": ["torni", "linna", "rakennus", "mäki"],
+      "answer": 0,
+      "explanation": "'Torni' means tower.",
+      "example": "Kiipeämme tornin huipulle.",
+      "exampletranslate": "We climb to the top of the tower."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "To come across / meet",
+      "options": ["tulla vastaan", "saapua", "palata", "kulkea"],
+      "answer": 0,
+      "explanation": "'Tulla vastaan' means to come towards or come across (e.g. meet someone on the way).",
+      "example": "Ystävä tulee minua vastaan asemalle.",
+      "exampletranslate": "A friend comes to meet me at the station."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "Full",
+      "options": ["täysi", "valmis", "tyhjä", "edullinen"],
+      "answer": 0,
+      "explanation": "'Täysi' means full; its genitive is 'täyden'.",
+      "example": "Bussi on täysi.",
+      "exampletranslate": "The bus is full."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Swimming pool (indoor)",
+      "options": ["uimahalli", "palvelutalo", "pukuhuone", "ranta"],
+      "answer": 0,
+      "explanation": "'Uimahalli' means an indoor swimming pool.",
+      "example": "Käyn uimahallissa uimassa.",
+      "exampletranslate": "I go swimming at the swimming pool."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Ready / Finished",
+      "options": ["valmis", "täysi", "käytetty", "hidas"],
+      "answer": 0,
+      "explanation": "'Valmis' means ready or finished; its genitive is 'valmiin'.",
+      "example": "Olen valmis matkalle.",
+      "exampletranslate": "I am ready for the trip."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "To compare",
+      "options": ["verrata", "järjestää", "rakentaa", "toimia"],
+      "answer": 0,
+      "explanation": "'Verrata' (type 4 verb) means to compare; 'vertaan' is 'I compare'.",
+      "example": "Vertaan lippujen hintoja.",
+      "exampletranslate": "I compare the ticket prices."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "24-hour period (day and night)",
+      "options": ["vuorokausi", "kausi", "iltapäivä", "viikko"],
+      "answer": 0,
+      "explanation": "'Vuorokausi' means a 24-hour period (a full day and night); its genitive is 'vuorokauden'.",
+      "example": "Matka kestää yhden vuorokauden.",
+      "exampletranslate": "The trip lasts one full day."
     }
   ]
 }

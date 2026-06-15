@@ -1,0 +1,818 @@
+{
+  "id": "chapter9",
+  "title": "Chapter9",
+  "description": "Finnish vocabulary: celebrations, baking, invitations and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Ingredient",
+      "options": ["aines", "kastike", "hillo", "öljy"],
+      "answer": 0,
+      "explanation": "'Aines' means ingredient; its genitive is 'aineksen'.",
+      "example": "Tarvitsen kaikki ainekset kakkuun.",
+      "exampletranslate": "I need all the ingredients for the cake."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "To suggest",
+      "options": ["ehdottaa", "luvata", "kertoa", "miettiä"],
+      "answer": 0,
+      "explanation": "'Ehdottaa' (type 1 verb) means to suggest; 'ehdotan' is 'I suggest'.",
+      "example": "Ehdotan, että juhlimme lauantaina.",
+      "exampletranslate": "I suggest that we celebrate on Saturday."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Absolutely",
+      "options": ["ehdottomasti", "mielellään", "kuitenkin", "siis"],
+      "answer": 0,
+      "explanation": "'Ehdottomasti' means absolutely.",
+      "example": "Tulen juhliin ehdottomasti.",
+      "exampletranslate": "I will absolutely come to the party."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Life",
+      "options": ["elämä", "hetki", "kutsu", "yllätys"],
+      "answer": 0,
+      "explanation": "'Elämä' means life.",
+      "example": "Elämä on kaunista.",
+      "exampletranslate": "Life is beautiful."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Before",
+      "options": ["ennen", "jälkeen", "mennessä", "kuitenkin"],
+      "answer": 0,
+      "explanation": "'Ennen' means before.",
+      "example": "Tulen ennen juhlia.",
+      "exampletranslate": "I'll come before the party."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Special / Peculiar",
+      "options": ["erikoinen", "ihana", "vieras", "kaikki"],
+      "answer": 0,
+      "explanation": "'Erikoinen' means special or peculiar; its genitive is 'erikoisen'.",
+      "example": "Tämä on erikoinen päivä.",
+      "exampletranslate": "This is a special day."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Funeral",
+      "options": ["hautajaiset", "häät", "ristiäiset", "nimiäiset"],
+      "answer": 0,
+      "explanation": "'Hautajaiset' means funeral (a plural word); its genitive is 'hautajaisten'.",
+      "example": "Osallistun hautajaisiin.",
+      "exampletranslate": "I attend the funeral."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Moment",
+      "options": ["hetki", "elämä", "tilaisuus", "kutsu"],
+      "answer": 0,
+      "explanation": "'Hetki' means moment; its genitive is 'hetken'.",
+      "example": "Odota hetki, ole hyvä.",
+      "exampletranslate": "Wait a moment, please."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Yeast",
+      "options": ["hiiva", "hillo", "kastike", "öljy"],
+      "answer": 0,
+      "explanation": "'Hiiva' means yeast.",
+      "example": "Pullaan tarvitaan hiivaa.",
+      "exampletranslate": "Yeast is needed for the sweet bun."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Jam",
+      "options": ["hillo", "kastike", "öljy", "pähkinä"],
+      "answer": 0,
+      "explanation": "'Hillo' means jam.",
+      "example": "Laitan hilloa pannukakun päälle.",
+      "exampletranslate": "I put jam on the pancake."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "To notice",
+      "options": ["huomata", "huutaa", "ihmetellä", "muistella"],
+      "answer": 0,
+      "explanation": "'Huomata' (type 4 verb) means to notice; 'huomaan' is 'I notice'.",
+      "example": "Huomaan, että olet iloinen.",
+      "exampletranslate": "I notice that you are happy."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "To shout",
+      "options": ["huutaa", "huomata", "kertoa", "valehdella"],
+      "answer": 0,
+      "explanation": "'Huutaa' (type 1 verb) means to shout; 'huudan' is 'I shout'.",
+      "example": "Älä huuda niin kovaa.",
+      "exampletranslate": "Don't shout so loudly."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Wedding",
+      "options": ["häät", "hautajaiset", "ristiäiset", "syntymäpäivät"],
+      "answer": 0,
+      "explanation": "'Häät' means wedding (a plural word); its genitive is 'häiden'.",
+      "example": "Menemme häihin lauantaina.",
+      "exampletranslate": "We go to the wedding on Saturday."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Lovely",
+      "options": ["ihana", "erikoinen", "vieras", "sovittu"],
+      "answer": 0,
+      "explanation": "'Ihana' means lovely or wonderful.",
+      "example": "Tämä on ihana yllätys.",
+      "exampletranslate": "This is a lovely surprise."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "To wonder / marvel",
+      "options": ["ihmetellä", "huomata", "muistella", "miettiä"],
+      "answer": 0,
+      "explanation": "'Ihmetellä' (type 3 verb) means to wonder or marvel; 'ihmettelen' is 'I wonder'.",
+      "example": "Ihmettelen, miksi hän ei tullut.",
+      "exampletranslate": "I wonder why he didn't come."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Registration / Enrolment",
+      "options": ["ilmoittautuminen", "kutsu", "tilaisuus", "yhteystiedot"],
+      "answer": 0,
+      "explanation": "'Ilmoittautuminen' means registration or enrolment; its genitive is 'ilmoittautumisen'.",
+      "example": "Ilmoittautuminen tapahtumaan on auki.",
+      "exampletranslate": "Registration for the event is open."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "To hate / detest",
+      "options": ["inhota", "luvata", "huutaa", "riidellä"],
+      "answer": 0,
+      "explanation": "'Inhota' (type 4 verb) means to hate or detest; 'inhoan' is 'I hate' (takes a partitive object).",
+      "example": "Inhoan myöhästymistä.",
+      "exampletranslate": "I hate being late."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Somewhere",
+      "options": ["jossain", "kaikki", "kukaan", "siis"],
+      "answer": 0,
+      "explanation": "'Jossain' means somewhere.",
+      "example": "Juhlat ovat jossain keskustassa.",
+      "exampletranslate": "The party is somewhere in the centre."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Drink / Beverage",
+      "options": ["juoma", "kastike", "hillo", "öljy"],
+      "answer": 0,
+      "explanation": "'Juoma' means drink or beverage.",
+      "example": "Tarjoan juomaa vieraille.",
+      "exampletranslate": "I offer a drink to the guests."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "To run",
+      "options": ["juosta", "kuolla", "muuttaa", "tuoda"],
+      "answer": 0,
+      "explanation": "'Juosta' (type 2 verb) means to run; 'juoksen' is 'I run'.",
+      "example": "Juoksen joka aamu.",
+      "exampletranslate": "I run every morning."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "After",
+      "options": ["jälkeen", "ennen", "mennessä", "kuitenkin"],
+      "answer": 0,
+      "explanation": "'Jälkeen' means after (used with the genitive).",
+      "example": "Juhlien jälkeen siivoamme.",
+      "exampletranslate": "After the party we clean up."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Dessert",
+      "options": ["jälkiruoka", "pannukakku", "kastike", "piirakka"],
+      "answer": 0,
+      "explanation": "'Jälkiruoka' means dessert; its genitive is 'jälkiruoan'.",
+      "example": "Jälkiruoaksi on kakkua.",
+      "exampletranslate": "For dessert there is cake."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "All / Everything",
+      "options": ["kaikki", "kukaan", "jossain", "kuitenkin"],
+      "answer": 0,
+      "explanation": "'Kaikki' means all or everything.",
+      "example": "Kaikki vieraat ovat täällä.",
+      "exampletranslate": "All the guests are here."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Sauce",
+      "options": ["kastike", "hillo", "juoma", "öljy"],
+      "answer": 0,
+      "explanation": "'Kastike' means sauce; its genitive is 'kastikkeen'.",
+      "example": "Teen lihapullille kastikkeen.",
+      "exampletranslate": "I make a sauce for the meatballs."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "To tell",
+      "options": ["kertoa", "huutaa", "muistella", "luvata"],
+      "answer": 0,
+      "explanation": "'Kertoa' (type 1 verb) means to tell; 'kerron' is 'I tell'.",
+      "example": "Kerron hauskan tarinan.",
+      "exampletranslate": "I tell a funny story."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Letter",
+      "options": ["kirje", "kutsu", "lahja", "kortti"],
+      "answer": 0,
+      "explanation": "'Kirje' means letter; its genitive is 'kirjeen'.",
+      "example": "Lähetän kutsun kirjeessä.",
+      "exampletranslate": "I send the invitation in a letter."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "However / Still",
+      "options": ["kuitenkin", "ehdottomasti", "siis", "mielellään"],
+      "answer": 0,
+      "explanation": "'Kuitenkin' means however or still.",
+      "example": "Olin väsynyt, mutta tulin kuitenkin.",
+      "exampletranslate": "I was tired, but I came anyway."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Anyone / No one",
+      "options": ["kukaan", "kaikki", "jossain", "joku"],
+      "answer": 0,
+      "explanation": "'Kukaan' means anyone (in negative sentences, no one).",
+      "example": "Kukaan ei tiennyt yllätyksestä.",
+      "exampletranslate": "No one knew about the surprise."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "To die",
+      "options": ["kuolla", "juosta", "muuttaa", "tuntea"],
+      "answer": 0,
+      "explanation": "'Kuolla' (type 3 verb) means to die; 'kuolen' is 'I die'.",
+      "example": "Kasvi kuoli talvella.",
+      "exampletranslate": "The plant died in winter."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Invitation",
+      "options": ["kutsu", "kirje", "lahja", "yllätys"],
+      "answer": 0,
+      "explanation": "'Kutsu' means invitation.",
+      "example": "Sain kutsun syntymäpäiville.",
+      "exampletranslate": "I got an invitation to the birthday party."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "To download / load",
+      "options": ["ladata", "tilata", "omistaa", "tuoda"],
+      "answer": 0,
+      "explanation": "'Ladata' (type 4 verb) means to download, load or charge; 'lataan' is 'I download/load'.",
+      "example": "Lataan kutsun puhelimeen.",
+      "exampletranslate": "I download the invitation to my phone."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Gift",
+      "options": ["lahja", "lahjakortti", "kutsu", "yllätys"],
+      "answer": 0,
+      "explanation": "'Lahja' means gift.",
+      "example": "Ostan lahjan ystävälle.",
+      "exampletranslate": "I buy a gift for a friend."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Gift card",
+      "options": ["lahjakortti", "matkalahjakortti", "lahja", "kirje"],
+      "answer": 0,
+      "explanation": "'Lahjakortti' means gift card; its genitive is 'lahjakortin'.",
+      "example": "Annan lahjakortin lahjaksi.",
+      "exampletranslate": "I give a gift card as a present."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Meatballs",
+      "options": ["lihapullat", "pannukakku", "piirakka", "pulla"],
+      "answer": 0,
+      "explanation": "'Lihapullat' means meatballs (a plural word); its genitive is 'lihapullien'.",
+      "example": "Teen lihapullia juhliin.",
+      "exampletranslate": "I make meatballs for the party."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "To promise",
+      "options": ["luvata", "ehdottaa", "kertoa", "suunnitella"],
+      "answer": 0,
+      "explanation": "'Luvata' (type 4 verb) means to promise; 'lupaan' is 'I promise'.",
+      "example": "Lupaan tulla ajoissa.",
+      "exampletranslate": "I promise to come on time."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Travel gift card",
+      "options": ["matkalahjakortti", "lahjakortti", "matkakortti", "lahja"],
+      "answer": 0,
+      "explanation": "'Matkalahjakortti' means a travel gift card; its genitive is 'matkalahjakortin'.",
+      "example": "Saimme häälahjaksi matkalahjakortin.",
+      "exampletranslate": "We got a travel gift card as a wedding present."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "By (a deadline)",
+      "options": ["mennessä", "ennen", "jälkeen", "saakka"],
+      "answer": 0,
+      "explanation": "'Mennessä' means by (a certain deadline), used with the genitive.",
+      "example": "Ilmoittaudu perjantaihin mennessä.",
+      "exampletranslate": "Register by Friday."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Gladly",
+      "options": ["mielellään", "ehdottomasti", "kuitenkin", "siis"],
+      "answer": 0,
+      "explanation": "'Mielellään' means gladly.",
+      "example": "Tulen mielelläni juhliin.",
+      "exampletranslate": "I gladly come to the party."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "To think / ponder",
+      "options": ["miettiä", "muistella", "ihmetellä", "huomata"],
+      "answer": 0,
+      "explanation": "'Miettiä' (type 1 verb) means to think or ponder; 'mietin' is 'I think' (takes a partitive object).",
+      "example": "Mietin, mitä ostan lahjaksi.",
+      "exampletranslate": "I think about what to buy as a gift."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Until / Up to",
+      "options": ["saakka", "mennessä", "jälkeen", "ennen"],
+      "answer": 0,
+      "explanation": "'Saakka' means until or up to, as in 'mihin saakka' (up to what point).",
+      "example": "Juhlat kestävät aamuun saakka.",
+      "exampletranslate": "The party lasts until morning."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "To reminisce",
+      "options": ["muistella", "miettiä", "ihmetellä", "kertoa"],
+      "answer": 0,
+      "explanation": "'Muistella' (type 3 verb) means to reminisce; 'muistelen' is 'I reminisce' (takes a partitive object).",
+      "example": "Muistelemme vanhoja aikoja.",
+      "exampletranslate": "We reminisce about old times."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "To move (change residence)",
+      "options": ["muuttaa", "tuoda", "juosta", "kuolla"],
+      "answer": 0,
+      "explanation": "'Muuttaa' (type 1 verb) means to move (e.g. change residence) or to change; 'muutan' is 'I move'.",
+      "example": "Muutan uuteen asuntoon.",
+      "exampletranslate": "I move to a new apartment."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Naming ceremony / party",
+      "options": ["nimiäiset", "ristiäiset", "hautajaiset", "tupaantuliaiset"],
+      "answer": 0,
+      "explanation": "'Nimiäiset' means a naming ceremony or party (a plural word); its genitive is 'nimiäisten'.",
+      "example": "Vauvalle pidetään nimiäiset.",
+      "exampletranslate": "A naming party is held for the baby."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "To own",
+      "options": ["omistaa", "tilata", "ladata", "tuoda"],
+      "answer": 0,
+      "explanation": "'Omistaa' (type 1 verb) means to own; 'omistan' is 'I own'.",
+      "example": "Omistan oman talon.",
+      "exampletranslate": "I own my own house."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To succeed",
+      "options": ["onnistua", "onnitella", "osallistua", "osata"],
+      "answer": 0,
+      "explanation": "'Onnistua' (type 1 verb) means to succeed; 'onnistun' is 'I succeed'.",
+      "example": "Yllätys onnistui hyvin.",
+      "exampletranslate": "The surprise succeeded well."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "To congratulate",
+      "options": ["onnitella", "onnistua", "osallistua", "suudella"],
+      "answer": 0,
+      "explanation": "'Onnitella' (type 3 verb) means to congratulate; 'onnittelen' is 'I congratulate' (takes a partitive object).",
+      "example": "Onnittelen sinua syntymäpäivänä.",
+      "exampletranslate": "I congratulate you on your birthday."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To participate",
+      "options": ["osallistua", "onnistua", "onnitella", "ilmoittautua"],
+      "answer": 0,
+      "explanation": "'Osallistua' (type 1 verb) means to participate; 'osallistun' is 'I participate' (used with 'mihin').",
+      "example": "Osallistun juhliin.",
+      "exampletranslate": "I participate in the party."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "To know how to / be able to",
+      "options": ["osata", "onnistua", "tuntea", "luvata"],
+      "answer": 0,
+      "explanation": "'Osata' (type 4 verb) means to know how to or be able to; 'osaan' is 'I know how to'.",
+      "example": "Osaan tehdä pullaa.",
+      "exampletranslate": "I know how to make sweet buns."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Pancake (oven pancake)",
+      "options": ["pannukakku", "piirakka", "pulla", "jälkiruoka"],
+      "answer": 0,
+      "explanation": "'Pannukakku' means pancake (often a Finnish oven pancake); its genitive is 'pannukakun'.",
+      "example": "Paistan pannukakkua uunissa.",
+      "exampletranslate": "I bake a pancake in the oven."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Bean",
+      "options": ["papu", "pähkinä", "sieni", "öljy"],
+      "answer": 0,
+      "explanation": "'Papu' means bean; its genitive is 'pavun'.",
+      "example": "Lisään papuja keittoon.",
+      "exampletranslate": "I add beans to the soup."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Pie / Pastry",
+      "options": ["piirakka", "pannukakku", "pulla", "kastike"],
+      "answer": 0,
+      "explanation": "'Piirakka' means pie or pastry; its genitive is 'piirakan'.",
+      "example": "Leivon marjapiirakan.",
+      "exampletranslate": "I bake a berry pie."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "To give a speech",
+      "options": ["pitää puheen", "tehdä mieli", "tulla mukaan", "osallistua"],
+      "answer": 0,
+      "explanation": "'Pitää puheen' means to give a speech; 'pidän puheen' is 'I give a speech'.",
+      "example": "Isä pitää puheen häissä.",
+      "exampletranslate": "The father gives a speech at the wedding."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Sweet bun (pulla)",
+      "options": ["pulla", "piirakka", "pannukakku", "lihapullat"],
+      "answer": 0,
+      "explanation": "'Pulla' means a sweet bun (a Finnish cardamom bun).",
+      "example": "Tarjoan kahvia ja pullaa.",
+      "exampletranslate": "I serve coffee and sweet buns."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "Nut",
+      "options": ["pähkinä", "papu", "sieni", "hillo"],
+      "answer": 0,
+      "explanation": "'Pähkinä' means nut.",
+      "example": "Kakussa on pähkinöitä.",
+      "exampletranslate": "There are nuts in the cake."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "To argue / quarrel",
+      "options": ["riidellä", "suudella", "valehdella", "huutaa"],
+      "answer": 0,
+      "explanation": "'Riidellä' (type 3 verb) means to argue or quarrel; 'riitelen' is 'I argue'.",
+      "example": "He riitelevät usein.",
+      "exampletranslate": "They argue often."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Christening / Baptism party",
+      "options": ["ristiäiset", "nimiäiset", "hautajaiset", "häät"],
+      "answer": 0,
+      "explanation": "'Ristiäiset' means a christening or baptism party (a plural word); its genitive is 'ristiäisten'.",
+      "example": "Vauva kastetaan ristiäisissä.",
+      "exampletranslate": "The baby is baptized at the christening."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "Trash / Litter",
+      "options": ["roska", "kastike", "papu", "pähkinä"],
+      "answer": 0,
+      "explanation": "'Roska' means trash or litter.",
+      "example": "Vien roskat ulos juhlien jälkeen.",
+      "exampletranslate": "I take the trash out after the party."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Mushroom",
+      "options": ["sieni", "papu", "pähkinä", "kastike"],
+      "answer": 0,
+      "explanation": "'Sieni' means mushroom; its genitive is 'sienen'.",
+      "example": "Keräämme sieniä metsästä.",
+      "exampletranslate": "We gather mushrooms from the forest."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "So / Therefore",
+      "options": ["siis", "kuitenkin", "ehdottomasti", "mielellään"],
+      "answer": 0,
+      "explanation": "'Siis' means so, therefore or thus.",
+      "example": "Olet siis tulossa juhliin?",
+      "exampletranslate": "So you are coming to the party?"
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "To ring / sound",
+      "options": ["soida", "huutaa", "tulla", "tuoda"],
+      "answer": 0,
+      "explanation": "'Soida' (type 2 verb) means to ring or sound; 'se soi' means 'it rings'.",
+      "example": "Puhelin soi juhlissa.",
+      "exampletranslate": "The phone rings at the party."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "Agreed / Arranged",
+      "options": ["sovittu", "valmis", "vieras", "erikoinen"],
+      "answer": 0,
+      "explanation": "'Sovittu' means agreed or arranged; its genitive is 'sovitun'.",
+      "example": "Aika on jo sovittu.",
+      "exampletranslate": "The time is already agreed."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "To kiss",
+      "options": ["suudella", "riidellä", "onnitella", "muistella"],
+      "answer": 0,
+      "explanation": "'Suudella' (type 3 verb) means to kiss; 'suutelen' is 'I kiss' (takes a partitive object).",
+      "example": "Hän suutelee morsianta.",
+      "exampletranslate": "He kisses the bride."
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "To plan",
+      "options": ["suunnitella", "miettiä", "ehdottaa", "osallistua"],
+      "answer": 0,
+      "explanation": "'Suunnitella' (type 3 verb) means to plan; 'suunnittelen' is 'I plan' (takes a partitive object).",
+      "example": "Suunnittelen juhlia.",
+      "exampletranslate": "I plan the party."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Birthday (party)",
+      "options": ["syntymäpäivät", "nimiäiset", "ristiäiset", "häät"],
+      "answer": 0,
+      "explanation": "'Syntymäpäivät' means a birthday party (a plural word); its genitive is 'syntymäpäivien'.",
+      "example": "Vietämme syntymäpäiviä lauantaina.",
+      "exampletranslate": "We celebrate the birthday on Saturday."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "To feel like (doing)",
+      "options": ["tehdä mieli", "pitää puheen", "tulla mukaan", "osata"],
+      "answer": 0,
+      "explanation": "'Tehdä mieli' means to feel like; 'minun tekee mieli' means 'I feel like'.",
+      "example": "Minun tekee mieli kakkua.",
+      "exampletranslate": "I feel like having cake."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Event / Occasion",
+      "options": ["tilaisuus", "kutsu", "elämä", "hetki"],
+      "answer": 0,
+      "explanation": "'Tilaisuus' means event or occasion; its genitive is 'tilaisuuden'.",
+      "example": "Tämä on juhlava tilaisuus.",
+      "exampletranslate": "This is a festive occasion."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "To order",
+      "options": ["tilata", "omistaa", "ladata", "tuoda"],
+      "answer": 0,
+      "explanation": "'Tilata' (type 4 verb) means to order; 'tilaan' is 'I order'.",
+      "example": "Tilaan kakun juhliin.",
+      "exampletranslate": "I order a cake for the party."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "To come along",
+      "options": ["tulla mukaan", "tehdä mieli", "pitää puheen", "osallistua"],
+      "answer": 0,
+      "explanation": "'Tulla mukaan' means to come along; 'tulen mukaan' is 'I come along'.",
+      "example": "Tuletko mukaan juhliin?",
+      "exampletranslate": "Will you come along to the party?"
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "To know (a person) / feel",
+      "options": ["tuntea", "tuoda", "osata", "muistella"],
+      "answer": 0,
+      "explanation": "'Tuntea' (type 1 verb) means to know (a person) or to feel; 'tunnen' is 'I know/feel'.",
+      "example": "Tunnen kaikki vieraat.",
+      "exampletranslate": "I know all the guests."
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "To bring",
+      "options": ["tuoda", "tilata", "muuttaa", "juosta"],
+      "answer": 0,
+      "explanation": "'Tuoda' (type 2 verb) means to bring; 'tuon' is 'I bring'.",
+      "example": "Tuon lahjan juhliin.",
+      "exampletranslate": "I bring a gift to the party."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "Housewarming party",
+      "options": ["tupaantuliaiset", "nimiäiset", "ristiäiset", "syntymäpäivät"],
+      "answer": 0,
+      "explanation": "'Tupaantuliaiset' means a housewarming party (a plural word); its genitive is 'tupaantuliaisten'.",
+      "example": "Pidämme tupaantuliaiset uudessa kodissa.",
+      "exampletranslate": "We hold a housewarming party in the new home."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "To fill / turn (a certain age)",
+      "options": ["täyttää", "tilata", "tuoda", "omistaa"],
+      "answer": 0,
+      "explanation": "'Täyttää' (type 1 verb) means to fill or to turn a certain age; 'täytän' is 'I fill / I turn'.",
+      "example": "Täytän huomenna 30 vuotta.",
+      "exampletranslate": "I turn 30 tomorrow."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "By accident / accidentally",
+      "options": ["vahingossa", "ehdottomasti", "mielellään", "kuitenkin"],
+      "answer": 0,
+      "explanation": "'Vahingossa' means by accident or accidentally.",
+      "example": "Rikoin lasin vahingossa.",
+      "exampletranslate": "I broke the glass by accident."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "To lie",
+      "options": ["valehdella", "riidellä", "suudella", "kertoa"],
+      "answer": 0,
+      "explanation": "'Valehdella' (type 3 verb) means to lie; 'valehtelen' is 'I lie'.",
+      "example": "Älä valehtele minulle.",
+      "exampletranslate": "Don't lie to me."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "Wheat flour",
+      "options": ["vehnäjauhot", "hiiva", "öljy", "kastike"],
+      "answer": 0,
+      "explanation": "'Vehnäjauhot' means wheat flour (a plural word); its genitive is 'vehnäjauhojen'.",
+      "example": "Pullaan tarvitaan vehnäjauhoja.",
+      "exampletranslate": "Wheat flour is needed for the sweet bun."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "Guest",
+      "options": ["vieras", "kutsu", "kukaan", "kaikki"],
+      "answer": 0,
+      "explanation": "'Vieras' means guest (also stranger or foreign); its genitive is 'vieraan'.",
+      "example": "Vieraat saapuvat kello kuusi.",
+      "exampletranslate": "The guests arrive at six o'clock."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Grape",
+      "options": ["viinirypäle", "papu", "pähkinä", "sieni"],
+      "answer": 0,
+      "explanation": "'Viinirypäle' means grape; its genitive is 'viinirypäleen'.",
+      "example": "Tarjoan viinirypäleitä.",
+      "exampletranslate": "I serve grapes."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Contact information",
+      "options": ["yhteystiedot", "ilmoittautuminen", "yllätys", "kutsu"],
+      "answer": 0,
+      "explanation": "'Yhteystiedot' means contact information (a plural word); its genitive is 'yhteystietojen'.",
+      "example": "Anna minulle yhteystietosi.",
+      "exampletranslate": "Give me your contact information."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Private event",
+      "options": ["yksityistilaisuus", "tilaisuus", "tupaantuliaiset", "syntymäpäivät"],
+      "answer": 0,
+      "explanation": "'Yksityistilaisuus' means a private event; its genitive is 'yksityistilaisuuden'.",
+      "example": "Ravintola on tänään yksityistilaisuus.",
+      "exampletranslate": "The restaurant has a private event today."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "Surprise",
+      "options": ["yllätys", "kutsu", "lahja", "tilaisuus"],
+      "answer": 0,
+      "explanation": "'Yllätys' means surprise; its genitive is 'yllätyksen'.",
+      "example": "Tämä on hauska yllätys!",
+      "exampletranslate": "This is a fun surprise!"
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Oil",
+      "options": ["öljy", "kastike", "hillo", "hiiva"],
+      "answer": 0,
+      "explanation": "'Öljy' means oil.",
+      "example": "Paistan öljyssä.",
+      "exampletranslate": "I fry in oil."
+    }
+  ]
+}

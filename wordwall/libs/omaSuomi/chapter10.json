@@ -1,0 +1,1118 @@
+{
+  "id": "chapter10",
+  "title": "Chapter10",
+  "description": "Finnish vocabulary: housing, neighbours, personality, services and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Always",
+      "options": ["aina", "melkein", "kauan", "vasta"],
+      "answer": 0,
+      "explanation": "'Aina' means always.",
+      "example": "Olen aina ajoissa.",
+      "exampletranslate": "I am always on time."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "On weekdays",
+      "options": ["arkisin", "aina", "melkein", "pian"],
+      "answer": 0,
+      "explanation": "'Arkisin' means on weekdays.",
+      "example": "Arkisin käyn töissä.",
+      "exampletranslate": "On weekdays I go to work."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "To guess",
+      "options": ["arvata", "oppia", "unohtaa", "kantaa"],
+      "answer": 0,
+      "explanation": "'Arvata' (type 4 verb) means to guess; 'arvaan' is 'I guess'.",
+      "example": "Arvaa, mitä ostin!",
+      "exampletranslate": "Guess what I bought!"
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Resident / Inhabitant",
+      "options": ["asukas", "vuokralainen", "näyttelijä", "huoltomies"],
+      "answer": 0,
+      "explanation": "'Asukas' means resident or inhabitant; its genitive is 'asukkaan'.",
+      "example": "Talossa on monta asukasta.",
+      "exampletranslate": "There are many residents in the house."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "To live in a rental",
+      "options": ["asua vuokralla", "luovuttaa", "kuluttaa", "lopettaa"],
+      "answer": 0,
+      "explanation": "'Asua vuokralla' means to live in a rented place; 'asun vuokralla' is 'I live in a rental'.",
+      "example": "Asun vuokralla keskustassa.",
+      "exampletranslate": "I live in a rental in the centre."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Opening (the act)",
+      "options": ["avaus", "lupa", "hakemus", "kokous"],
+      "answer": 0,
+      "explanation": "'Avaus' means opening; its genitive is 'avauksen'.",
+      "example": "Kaupan avaus on huomenna.",
+      "exampletranslate": "The shop's opening is tomorrow."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Even (not even)",
+      "options": ["edes", "vasta", "melkein", "aina"],
+      "answer": 0,
+      "explanation": "'Edes' means even, often in negative sentences ('ei edes' = not even).",
+      "example": "Hän ei edes soittanut.",
+      "exampletranslate": "He didn't even call."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Animal",
+      "options": ["eläin", "asukas", "näyttelijä", "vuokralainen"],
+      "answer": 0,
+      "explanation": "'Eläin' means animal; its genitive is 'eläimen'.",
+      "example": "Taloyhtiössä saa pitää eläimiä.",
+      "exampletranslate": "In the housing company you may keep animals."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "To live (be alive)",
+      "options": ["elää", "asua", "hengittää", "kantaa"],
+      "answer": 0,
+      "explanation": "'Elää' (type 1 verb) means to live or be alive; 'elän' is 'I live'.",
+      "example": "Haluan elää terveellisesti.",
+      "exampletranslate": "I want to live healthily."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Dishonest",
+      "options": ["epärehellinen", "rehellinen", "kohtelias", "ystävällinen"],
+      "answer": 0,
+      "explanation": "'Epärehellinen' means dishonest; its genitive is 'epärehellisen'.",
+      "example": "Hän on epärehellinen ihminen.",
+      "exampletranslate": "He is a dishonest person."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Application",
+      "options": ["hakemus", "ilmoitus", "lomake", "kokous"],
+      "answer": 0,
+      "explanation": "'Hakemus' means application; its genitive is 'hakemuksen'.",
+      "example": "Lähetän hakemuksen asunnosta.",
+      "exampletranslate": "I send an application for the apartment."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "To breathe",
+      "options": ["hengittää", "elää", "itkeä", "hymyillä"],
+      "answer": 0,
+      "explanation": "'Hengittää' (type 1 verb) means to breathe; 'hengitän' is 'I breathe'.",
+      "example": "Hengitän syvään ja rauhoitun.",
+      "exampletranslate": "I breathe deeply and calm down."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To get nervous / irritated",
+      "options": ["hermostua", "hymyillä", "itkeä", "oppia"],
+      "answer": 0,
+      "explanation": "'Hermostua' (type 1 verb) means to get nervous or irritated; 'hermostun' is 'I get nervous'.",
+      "example": "Hermostun, kun naapuri pitää melua.",
+      "exampletranslate": "I get irritated when the neighbour makes noise."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Quiet",
+      "options": ["hiljainen", "rauhallinen", "raskas", "tylsä"],
+      "answer": 0,
+      "explanation": "'Hiljainen' means quiet; its genitive is 'hiljaisen'.",
+      "example": "Naapurusto on hiljainen.",
+      "exampletranslate": "The neighbourhood is quiet."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Worried",
+      "options": ["huolestunut", "vakava", "puhelias", "ujo"],
+      "answer": 0,
+      "explanation": "'Huolestunut' means worried; its genitive is 'huolestuneen'.",
+      "example": "Olen huolestunut naapurista.",
+      "exampletranslate": "I am worried about the neighbour."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "To maintain / service",
+      "options": ["huoltaa", "kuluttaa", "luovuttaa", "kantaa"],
+      "answer": 0,
+      "explanation": "'Huoltaa' (type 1 verb) means to maintain or service; 'huollan' is 'I maintain'.",
+      "example": "Huoltoyhtiö huoltaa hissin.",
+      "exampletranslate": "The maintenance company services the lift."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Maintenance man / Janitor",
+      "options": ["huoltomies", "huoltoyhtiö", "vuokralainen", "asukas"],
+      "answer": 0,
+      "explanation": "'Huoltomies' means maintenance man or janitor; its genitive is 'huoltomiehen'.",
+      "example": "Soitan huoltomiehelle.",
+      "exampletranslate": "I call the maintenance man."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Maintenance company",
+      "options": ["huoltoyhtiö", "huoltomies", "taloyhtiö", "yritys"],
+      "answer": 0,
+      "explanation": "'Huoltoyhtiö' means maintenance company.",
+      "example": "Huoltoyhtiö hoitaa pihatyöt.",
+      "exampletranslate": "The maintenance company takes care of the yard work."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "To point out / remark",
+      "options": ["huomauttaa", "huomata", "ilmoittaa", "kertoa"],
+      "answer": 0,
+      "explanation": "'Huomauttaa' (type 1 verb) means to point out or remark; 'huomautan' is 'I point out'.",
+      "example": "Huomautan naapurille melusta.",
+      "exampletranslate": "I remark to the neighbour about the noise."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Remark / Notice",
+      "options": ["huomautus", "ilmoitus", "hakemus", "lomake"],
+      "answer": 0,
+      "explanation": "'Huomautus' means remark or notice; its genitive is 'huomautuksen'.",
+      "example": "Sain huomautuksen taloyhtiöltä.",
+      "exampletranslate": "I got a notice from the housing company."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Having a sense of humor",
+      "options": ["huumorintajuinen", "rauhallinen", "ystävällinen", "vakava"],
+      "answer": 0,
+      "explanation": "'Huumorintajuinen' means having a sense of humor; its genitive is 'huumorintajuisen'.",
+      "example": "Naapurini on huumorintajuinen.",
+      "exampletranslate": "My neighbour has a sense of humor."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "To smile",
+      "options": ["hymyillä", "itkeä", "hermostua", "hengittää"],
+      "answer": 0,
+      "explanation": "'Hymyillä' (type 3 verb) means to smile; 'hymyilen' is 'I smile'.",
+      "example": "Hymyilen, kun olen iloinen.",
+      "exampletranslate": "I smile when I am happy."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Good-looking",
+      "options": ["hyvännäköinen", "komea", "tylsä", "raskas"],
+      "answer": 0,
+      "explanation": "'Hyvännäköinen' means good-looking; its genitive is 'hyvännäköisen'.",
+      "example": "Hän on hyvännäköinen mies.",
+      "exampletranslate": "He is a good-looking man."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Emergency / Distress",
+      "options": ["hätä", "vika", "lasku", "remontti"],
+      "answer": 0,
+      "explanation": "'Hätä' means emergency or distress; its genitive is 'hädän'.",
+      "example": "Hädässä soita 112.",
+      "exampletranslate": "In an emergency call 112."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Emergency report",
+      "options": ["hätäilmoitus", "vikailmoitus", "ilmoitus", "hakemus"],
+      "answer": 0,
+      "explanation": "'Hätäilmoitus' means an emergency report or call; its genitive is 'hätäilmoituksen'.",
+      "example": "Teen hätäilmoituksen palosta.",
+      "exampletranslate": "I make an emergency report about the fire."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Notice / Advertisement",
+      "options": ["ilmoitus", "huomautus", "hakemus", "lomake"],
+      "answer": 0,
+      "explanation": "'Ilmoitus' means notice or advertisement; its genitive is 'ilmoituksen'.",
+      "example": "Luin ilmoituksen lehdestä.",
+      "exampletranslate": "I read the advertisement in the paper."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "To cry",
+      "options": ["itkeä", "hymyillä", "hermostua", "huutaa"],
+      "answer": 0,
+      "explanation": "'Itkeä' (type 1 verb) means to cry; 'itken' is 'I cry'.",
+      "example": "Lapsi itkee yöllä.",
+      "exampletranslate": "The child cries at night."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Football / Soccer",
+      "options": ["jalkapallo", "työkalu", "ovikello", "pakastin"],
+      "answer": 0,
+      "explanation": "'Jalkapallo' means football or soccer; its genitive is 'jalkapallon'.",
+      "example": "Pelaan jalkapalloa kavereiden kanssa.",
+      "exampletranslate": "I play football with friends."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Lost / Missing",
+      "options": ["kadonnut", "kipsi", "tylsä", "raskas"],
+      "answer": 0,
+      "explanation": "'Kadonnut' means lost or missing; its genitive is 'kadonneen'.",
+      "example": "Avain on kadonnut.",
+      "exampletranslate": "The key is lost."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "To carry",
+      "options": ["kantaa", "kuluttaa", "luovuttaa", "huoltaa"],
+      "answer": 0,
+      "explanation": "'Kantaa' (type 1 verb) means to carry; 'kannan' is 'I carry'.",
+      "example": "Kannan ostokset ylös.",
+      "exampletranslate": "I carry the shopping upstairs."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "(For a) long time",
+      "options": ["kauan", "pian", "aina", "vasta"],
+      "answer": 0,
+      "explanation": "'Kauan' means (for) a long time.",
+      "example": "Odotin huoltomiestä kauan.",
+      "exampletranslate": "I waited for the maintenance man for a long time."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Summer cottage",
+      "options": ["kesämökki", "kesä", "taloyhtiö", "piharakennus"],
+      "answer": 0,
+      "explanation": "'Kesämökki' means summer cottage; its genitive is 'kesämökin'.",
+      "example": "Vietämme kesän kesämökillä.",
+      "exampletranslate": "We spend the summer at the summer cottage."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Plaster cast",
+      "options": ["kipsi", "laasti", "remontti", "kipu"],
+      "answer": 0,
+      "explanation": "'Kipsi' means plaster cast (or plaster).",
+      "example": "Jalka on kipsissä.",
+      "exampletranslate": "The leg is in a cast."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Written",
+      "options": ["kirjallinen", "rauhallinen", "rehellinen", "puhelias"],
+      "answer": 0,
+      "explanation": "'Kirjallinen' means written; its genitive is 'kirjallisen'.",
+      "example": "Tarvitsen kirjallisen luvan.",
+      "exampletranslate": "I need written permission."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Polite",
+      "options": ["kohtelias", "ystävällinen", "rehellinen", "rauhallinen"],
+      "answer": 0,
+      "explanation": "'Kohtelias' means polite; its genitive is 'kohteliaan'.",
+      "example": "Naapuri on kohtelias.",
+      "exampletranslate": "The neighbour is polite."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Meeting",
+      "options": ["kokous", "ilmoitus", "hakemus", "avaus"],
+      "answer": 0,
+      "explanation": "'Kokous' means meeting; its genitive is 'kokouksen'.",
+      "example": "Taloyhtiöllä on kokous.",
+      "exampletranslate": "The housing company has a meeting."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Handsome",
+      "options": ["komea", "hyvännäköinen", "kohtelias", "viisas"],
+      "answer": 0,
+      "explanation": "'Komea' means handsome.",
+      "example": "Hän on komea mies.",
+      "exampletranslate": "He is a handsome man."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "To consume / spend",
+      "options": ["kuluttaa", "kantaa", "huoltaa", "luovuttaa"],
+      "answer": 0,
+      "explanation": "'Kuluttaa' (type 1 verb) means to consume or spend; 'kulutan' is 'I consume'.",
+      "example": "Vanha jääkaappi kuluttaa paljon sähköä.",
+      "exampletranslate": "The old fridge consumes a lot of electricity."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Cash",
+      "options": ["käteinen", "lasku", "maksu", "lisämaksu"],
+      "answer": 0,
+      "explanation": "'Käteinen' means cash; its genitive is 'käteisen'.",
+      "example": "Maksan käteisellä.",
+      "exampletranslate": "I pay with cash."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Thin / Lean",
+      "options": ["laiha", "ohut", "paksu", "raskas"],
+      "answer": 0,
+      "explanation": "'Laiha' means thin or lean (of a person).",
+      "example": "Koira on liian laiha.",
+      "exampletranslate": "The dog is too thin."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Bill",
+      "options": ["lasku", "maksu", "lisämaksu", "laskutus"],
+      "answer": 0,
+      "explanation": "'Lasku' means bill (also descent).",
+      "example": "Maksan sähkölaskun.",
+      "exampletranslate": "I pay the electricity bill."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Invoicing / Billing",
+      "options": ["laskutus", "lasku", "maksu", "lisämaksu"],
+      "answer": 0,
+      "explanation": "'Laskutus' means invoicing or billing; its genitive is 'laskutuksen'.",
+      "example": "Laskutus tapahtuu kerran kuussa.",
+      "exampletranslate": "Billing happens once a month."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Fat",
+      "options": ["lihava", "laiha", "paksu", "ohut"],
+      "answer": 0,
+      "explanation": "'Lihava' means fat.",
+      "example": "Kissa on hieman lihava.",
+      "exampletranslate": "The cat is a little fat."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Extra charge",
+      "options": ["lisämaksu", "maksu", "lasku", "laskutus"],
+      "answer": 0,
+      "explanation": "'Lisämaksu' means extra charge; its genitive is 'lisämaksun'.",
+      "example": "Lemmikistä tulee lisämaksu.",
+      "exampletranslate": "There is an extra charge for a pet."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "Form (document)",
+      "options": ["lomake", "hakemus", "ilmoitus", "huomautus"],
+      "answer": 0,
+      "explanation": "'Lomake' means form (a document to fill in); its genitive is 'lomakkeen'.",
+      "example": "Täytän lomakkeen.",
+      "exampletranslate": "I fill in the form."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "To stop / quit",
+      "options": ["lopettaa", "oppia", "kuluttaa", "luovuttaa"],
+      "answer": 0,
+      "explanation": "'Lopettaa' (type 1 verb) means to stop or quit; 'lopetan' is 'I stop'.",
+      "example": "Lopetan tupakoinnin.",
+      "exampletranslate": "I quit smoking."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To / towards (someone)",
+      "options": ["luokse", "mihin", "sisällä", "ylös"],
+      "answer": 0,
+      "explanation": "'Luokse' means to or towards (someone), e.g. 'tulen sinun luoksesi'.",
+      "example": "Tulen sinun luoksesi illalla.",
+      "exampletranslate": "I'll come to your place in the evening."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Character / Personality",
+      "options": ["luonne", "luonto", "vika", "unelma"],
+      "answer": 0,
+      "explanation": "'Luonne' means character or personality; its genitive is 'luonteen'.",
+      "example": "Hänellä on hyvä luonne.",
+      "exampletranslate": "He has a good character."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "To trust",
+      "options": ["luottaa", "luovuttaa", "lopettaa", "oppia"],
+      "answer": 0,
+      "explanation": "'Luottaa' (type 1 verb) means to trust; 'luotan' is 'I trust' (used with 'mihin').",
+      "example": "Luotan naapuriini.",
+      "exampletranslate": "I trust my neighbour."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "To hand over / give up",
+      "options": ["luovuttaa", "luottaa", "lopettaa", "kantaa"],
+      "answer": 0,
+      "explanation": "'Luovuttaa' (type 1 verb) means to hand over or to give up; 'luovutan' is 'I hand over'.",
+      "example": "Luovutan avaimet isännöitsijälle.",
+      "exampletranslate": "I hand over the keys to the building manager."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Permission",
+      "options": ["lupa", "hakemus", "ilmoitus", "todistus"],
+      "answer": 0,
+      "explanation": "'Lupa' means permission; its genitive is 'luvan'.",
+      "example": "Tarvitsen luvan remonttiin.",
+      "exampletranslate": "I need permission for the renovation."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Payment",
+      "options": ["maksu", "lasku", "lisämaksu", "laskutus"],
+      "answer": 0,
+      "explanation": "'Maksu' means payment.",
+      "example": "Vuokran maksu on kuukauden alussa.",
+      "exampletranslate": "The rent payment is at the start of the month."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Almost",
+      "options": ["melkein", "aina", "vasta", "pian"],
+      "answer": 0,
+      "explanation": "'Melkein' means almost.",
+      "example": "Remontti on melkein valmis.",
+      "exampletranslate": "The renovation is almost ready."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "To go",
+      "options": ["mennä", "tulla", "kantaa", "oppia"],
+      "answer": 0,
+      "explanation": "'Mennä' (type 3 verb) means to go; 'menen' is 'I go'.",
+      "example": "Menen kokoukseen.",
+      "exampletranslate": "I go to the meeting."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "To where / into what",
+      "options": ["mihin", "luokse", "ylös", "sisällä"],
+      "answer": 0,
+      "explanation": "'Mihin' means to where or into what (the illative question word).",
+      "example": "Mihin laitan avaimet?",
+      "exampletranslate": "Where do I put the keys?"
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "Minute",
+      "options": ["minuutti", "tunti", "kauan", "pian"],
+      "answer": 0,
+      "explanation": "'Minuutti' means minute; its genitive is 'minuutin'.",
+      "example": "Odota viisi minuuttia.",
+      "exampletranslate": "Wait five minutes."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "Actor",
+      "options": ["näyttelijä", "vuokralainen", "huoltomies", "asukas"],
+      "answer": 0,
+      "explanation": "'Näyttelijä' means actor.",
+      "example": "Hän on tunnettu näyttelijä.",
+      "exampletranslate": "He is a famous actor."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Thin (e.g. material)",
+      "options": ["ohut", "paksu", "laiha", "raskas"],
+      "answer": 0,
+      "explanation": "'Ohut' means thin (e.g. a thin layer or material); its genitive is 'ohuen'.",
+      "example": "Seinä on ohut.",
+      "exampletranslate": "The wall is thin."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Correct / Right",
+      "options": ["oikein", "väärin", "melkein", "vasta"],
+      "answer": 0,
+      "explanation": "'Oikein' means correct or rightly.",
+      "example": "Vastasit oikein.",
+      "exampletranslate": "You answered correctly."
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "To be sorry",
+      "options": ["olla pahoillaan", "olla rikki", "pyytää anteeksi", "hermostua"],
+      "answer": 0,
+      "explanation": "'Olla pahoillaan' means to be sorry; 'olen pahoillani' is 'I am sorry'.",
+      "example": "Olen pahoillani melusta.",
+      "exampletranslate": "I am sorry about the noise."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "To be broken",
+      "options": ["olla rikki", "olla pahoillaan", "kadonnut", "lopettaa"],
+      "answer": 0,
+      "explanation": "'Olla rikki' means to be broken; 'se on rikki' means 'it is broken'.",
+      "example": "Ovikello on rikki.",
+      "exampletranslate": "The doorbell is broken."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "To learn",
+      "options": ["oppia", "unohtaa", "arvata", "lopettaa"],
+      "answer": 0,
+      "explanation": "'Oppia' (type 1 verb) means to learn; 'opin' is 'I learn'.",
+      "example": "Opin suomea joka päivä.",
+      "exampletranslate": "I learn Finnish every day."
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "Doorbell",
+      "options": ["ovikello", "pakastin", "takka", "työkalu"],
+      "answer": 0,
+      "explanation": "'Ovikello' means doorbell.",
+      "example": "Ovikello soi.",
+      "exampletranslate": "The doorbell rings."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "Freezer",
+      "options": ["pakastin", "ovikello", "takka", "työkalu"],
+      "answer": 0,
+      "explanation": "'Pakastin' means freezer; its genitive is 'pakastimen'.",
+      "example": "Laitan ruoan pakastimeen.",
+      "exampletranslate": "I put the food in the freezer."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "Thick",
+      "options": ["paksu", "ohut", "laiha", "kapea"],
+      "answer": 0,
+      "explanation": "'Paksu' means thick.",
+      "example": "Seinä on paksu.",
+      "exampletranslate": "The wall is thick."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Better",
+      "options": ["parempi", "huonompi", "raskas", "tylsä"],
+      "answer": 0,
+      "explanation": "'Parempi' means better (the comparative of 'hyvä').",
+      "example": "Tämä asunto on parempi.",
+      "exampletranslate": "This apartment is better."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "Laundry room",
+      "options": ["pesutupa", "piharakennus", "rappukäytävä", "takka"],
+      "answer": 0,
+      "explanation": "'Pesutupa' means laundry room; its genitive is 'pesutuvan'.",
+      "example": "Pesen pyykit pesutuvassa.",
+      "exampletranslate": "I wash the laundry in the laundry room."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "Soon",
+      "options": ["pian", "kauan", "aina", "vasta"],
+      "answer": 0,
+      "explanation": "'Pian' means soon.",
+      "example": "Huoltomies tulee pian.",
+      "exampletranslate": "The maintenance man comes soon."
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "Courtyard building / Outbuilding",
+      "options": ["piharakennus", "pesutupa", "rappukäytävä", "kesämökki"],
+      "answer": 0,
+      "explanation": "'Piharakennus' means a courtyard building or outbuilding; its genitive is 'piharakennuksen'.",
+      "example": "Pihalla on pieni piharakennus.",
+      "exampletranslate": "There is a small outbuilding in the yard."
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "Yard work",
+      "options": ["pihatyöt", "remontti", "kokous", "laskutus"],
+      "answer": 0,
+      "explanation": "'Pihatyöt' means yard work (a plural word); its genitive is 'pihatöiden'.",
+      "example": "Teen pihatöitä keväällä.",
+      "exampletranslate": "I do yard work in spring."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "To like",
+      "options": ["pitää", "luottaa", "oppia", "toivoa"],
+      "answer": 0,
+      "explanation": "'Pitää' (type 1 verb) means to like; 'pidän' is 'I like' (used with 'mistä').",
+      "example": "Pidän tästä asunnosta.",
+      "exampletranslate": "I like this apartment."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "Police station",
+      "options": ["poliisiasema", "huoltoyhtiö", "taloyhtiö", "rappukäytävä"],
+      "answer": 0,
+      "explanation": "'Poliisiasema' means police station; its genitive is 'poliisiaseman'.",
+      "example": "Teen ilmoituksen poliisiasemalla.",
+      "exampletranslate": "I file a report at the police station."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "Talkative",
+      "options": ["puhelias", "hiljainen", "ujo", "vakava"],
+      "answer": 0,
+      "explanation": "'Puhelias' means talkative; its genitive is 'puheliaan'.",
+      "example": "Naapuri on hyvin puhelias.",
+      "exampletranslate": "The neighbour is very talkative."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "Red-haired",
+      "options": ["punatukkainen", "hyvännäköinen", "komea", "laiha"],
+      "answer": 0,
+      "explanation": "'Punatukkainen' means red-haired; its genitive is 'punatukkaisen'.",
+      "example": "Hän on punatukkainen.",
+      "exampletranslate": "She is red-haired."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "To apologize",
+      "options": ["pyytää anteeksi", "olla pahoillaan", "huomauttaa", "luovuttaa"],
+      "answer": 0,
+      "explanation": "'Pyytää anteeksi' means to apologize; 'pyydän anteeksi' is 'I apologize'.",
+      "example": "Pyydän anteeksi myöhästymistä.",
+      "exampletranslate": "I apologize for being late."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "On-call / Emergency duty",
+      "options": ["päivystys", "kokous", "ilmoitus", "laskutus"],
+      "answer": 0,
+      "explanation": "'Päivystys' means on-call or emergency duty; its genitive is 'päivystyksen'.",
+      "example": "Terveyskeskuksessa on päivystys.",
+      "exampletranslate": "The health centre has an emergency duty service."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Stairwell",
+      "options": ["rappukäytävä", "piharakennus", "pesutupa", "ovikello"],
+      "answer": 0,
+      "explanation": "'Rappukäytävä' means stairwell.",
+      "example": "Rappukäytävässä on hiljaista.",
+      "exampletranslate": "It is quiet in the stairwell."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Heavy",
+      "options": ["raskas", "ohut", "laiha", "hiljainen"],
+      "answer": 0,
+      "explanation": "'Raskas' means heavy; its genitive is 'raskaan'.",
+      "example": "Laukku on liian raskas.",
+      "exampletranslate": "The bag is too heavy."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Calm / Peaceful",
+      "options": ["rauhallinen", "hiljainen", "kohtelias", "puhelias"],
+      "answer": 0,
+      "explanation": "'Rauhallinen' means calm or peaceful; its genitive is 'rauhallisen'.",
+      "example": "Alue on rauhallinen.",
+      "exampletranslate": "The area is peaceful."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "Honest",
+      "options": ["rehellinen", "epärehellinen", "kohtelias", "ystävällinen"],
+      "answer": 0,
+      "explanation": "'Rehellinen' means honest; its genitive is 'rehellisen'.",
+      "example": "Ole rehellinen minulle.",
+      "exampletranslate": "Be honest with me."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Renovation",
+      "options": ["remontti", "kokous", "lupa", "avaus"],
+      "answer": 0,
+      "explanation": "'Remontti' means renovation; its genitive is 'remontin'.",
+      "example": "Keittiössä on remontti.",
+      "exampletranslate": "There is a renovation in the kitchen."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "Inside",
+      "options": ["sisällä", "ulkona", "ylös", "luokse"],
+      "answer": 0,
+      "explanation": "'Sisällä' means inside (used with the genitive).",
+      "example": "Lemmikki on sisällä.",
+      "exampletranslate": "The pet is inside."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Fireplace",
+      "options": ["takka", "pakastin", "ovikello", "valo"],
+      "answer": 0,
+      "explanation": "'Takka' means fireplace; its genitive is 'takan'.",
+      "example": "Takassa palaa tuli.",
+      "exampletranslate": "A fire burns in the fireplace."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Housing company",
+      "options": ["taloyhtiö", "huoltoyhtiö", "yhtiö", "yritys"],
+      "answer": 0,
+      "explanation": "'Taloyhtiö' means housing company (the company that owns the building).",
+      "example": "Taloyhtiö päättää remontista.",
+      "exampletranslate": "The housing company decides on the renovation."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "To offer",
+      "options": ["tarjota", "toivoa", "luovuttaa", "kantaa"],
+      "answer": 0,
+      "explanation": "'Tarjota' (type 4 verb) means to offer; 'tarjoan' is 'I offer'.",
+      "example": "Tarjoan vieraille kahvia.",
+      "exampletranslate": "I offer the guests coffee."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "Text message",
+      "options": ["tekstiviesti", "ilmoitus", "puhelin", "lomake"],
+      "answer": 0,
+      "explanation": "'Tekstiviesti' means text message.",
+      "example": "Lähetän sinulle tekstiviestin.",
+      "exampletranslate": "I send you a text message."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "Television",
+      "options": ["televisio", "radio", "puhelin", "tietokone"],
+      "answer": 0,
+      "explanation": "'Televisio' means television.",
+      "example": "Katson televisiota illalla.",
+      "exampletranslate": "I watch television in the evening."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "To wish / hope",
+      "options": ["toivoa", "tarjota", "oppia", "luottaa"],
+      "answer": 0,
+      "explanation": "'Toivoa' (type 1 verb) means to wish or hope; 'toivon' is 'I wish/hope'.",
+      "example": "Toivon, että remontti loppuu pian.",
+      "exampletranslate": "I hope the renovation ends soon."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Hopefully",
+      "options": ["toivottavasti", "melkein", "varma", "vasta"],
+      "answer": 0,
+      "explanation": "'Toivottavasti' means hopefully.",
+      "example": "Toivottavasti sää on kaunis huomenna.",
+      "exampletranslate": "Hopefully the weather is nice tomorrow."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Hour",
+      "options": ["tunti", "minuutti", "kauan", "pian"],
+      "answer": 0,
+      "explanation": "'Tunti' means hour (also a lesson); its genitive is 'tunnin'.",
+      "example": "Odotin tunnin verran.",
+      "exampletranslate": "I waited about an hour."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Boring / Dull",
+      "options": ["tylsä", "tärkeä", "vakava", "raskas"],
+      "answer": 0,
+      "explanation": "'Tylsä' means boring or dull (also blunt).",
+      "example": "Kokous oli tylsä.",
+      "exampletranslate": "The meeting was boring."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "Tool",
+      "options": ["työkalu", "pakastin", "ovikello", "takka"],
+      "answer": 0,
+      "explanation": "'Työkalu' means tool; its genitive is 'työkalun'.",
+      "example": "Tarvitsen työkalun remonttiin.",
+      "exampletranslate": "I need a tool for the renovation."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "Work practice / Internship",
+      "options": ["työharjoittelu", "työpaikka", "kokous", "harjoittelu"],
+      "answer": 0,
+      "explanation": "'Työharjoittelu' means work practice or internship.",
+      "example": "Olen työharjoittelussa kaupassa.",
+      "exampletranslate": "I am in an internship at the shop."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Shy",
+      "options": ["ujo", "puhelias", "rohkea", "vakava"],
+      "answer": 0,
+      "explanation": "'Ujo' means shy.",
+      "example": "Uusi naapuri on ujo.",
+      "exampletranslate": "The new neighbour is shy."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "Dream (aspiration)",
+      "options": ["unelma", "luonne", "vika", "valo"],
+      "answer": 0,
+      "explanation": "'Unelma' means dream or aspiration.",
+      "example": "Oma talo on minun unelmani.",
+      "exampletranslate": "An own house is my dream."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "To forget",
+      "options": ["unohtaa", "oppia", "muistaa", "arvata"],
+      "answer": 0,
+      "explanation": "'Unohtaa' (type 1 verb) means to forget; 'unohdan' is 'I forget'.",
+      "example": "Unohdin avaimet kotiin.",
+      "exampletranslate": "I forgot the keys at home."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Serious",
+      "options": ["vakava", "tylsä", "iloinen", "rauhallinen"],
+      "answer": 0,
+      "explanation": "'Vakava' means serious.",
+      "example": "Tämä on vakava ongelma.",
+      "exampletranslate": "This is a serious problem."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Light",
+      "options": ["valo", "takka", "väri", "vika"],
+      "answer": 0,
+      "explanation": "'Valo' means light.",
+      "example": "Sammutan valon.",
+      "exampletranslate": "I turn off the light."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Sure / Certain",
+      "options": ["varma", "vakava", "selvä", "valmis"],
+      "answer": 0,
+      "explanation": "'Varma' means sure or certain.",
+      "example": "Olen varma asiasta.",
+      "exampletranslate": "I am sure about the matter."
+    },
+    {
+      "id": 100,
+      "type": "multiple-choice",
+      "question": "Only / Just / Not until",
+      "options": ["vasta", "melkein", "aina", "kauan"],
+      "answer": 0,
+      "explanation": "'Vasta' means only, just or not until (in time).",
+      "example": "Huoltomies tulee vasta huomenna.",
+      "exampletranslate": "The maintenance man comes only tomorrow."
+    },
+    {
+      "id": 101,
+      "type": "multiple-choice",
+      "question": "Side by side",
+      "options": ["vierekkäin", "sisällä", "ylös", "luokse"],
+      "answer": 0,
+      "explanation": "'Vierekkäin' means side by side.",
+      "example": "Asunnot ovat vierekkäin.",
+      "exampletranslate": "The apartments are side by side."
+    },
+    {
+      "id": 102,
+      "type": "multiple-choice",
+      "question": "Wise",
+      "options": ["viisas", "vakava", "ujo", "tylsä"],
+      "answer": 0,
+      "explanation": "'Viisas' means wise; its genitive is 'viisaan'.",
+      "example": "Hän on viisas ihminen.",
+      "exampletranslate": "He is a wise person."
+    },
+    {
+      "id": 103,
+      "type": "multiple-choice",
+      "question": "Fault / Defect",
+      "options": ["vika", "vikailmoitus", "lasku", "remontti"],
+      "answer": 0,
+      "explanation": "'Vika' means fault or defect; its genitive is 'vian'.",
+      "example": "Hississä on vika.",
+      "exampletranslate": "There is a fault in the lift."
+    },
+    {
+      "id": 104,
+      "type": "multiple-choice",
+      "question": "Fault report",
+      "options": ["vikailmoitus", "hätäilmoitus", "ilmoitus", "vika"],
+      "answer": 0,
+      "explanation": "'Vikailmoitus' means a fault report; its genitive is 'vikailmoituksen'.",
+      "example": "Teen vikailmoituksen hissistä.",
+      "exampletranslate": "I make a fault report about the lift."
+    },
+    {
+      "id": 105,
+      "type": "multiple-choice",
+      "question": "Tenant",
+      "options": ["vuokralainen", "asukas", "huoltomies", "näyttelijä"],
+      "answer": 0,
+      "explanation": "'Vuokralainen' means tenant; its genitive is 'vuokralaisen'.",
+      "example": "Vuokralainen maksaa vuokran.",
+      "exampletranslate": "The tenant pays the rent."
+    },
+    {
+      "id": 106,
+      "type": "multiple-choice",
+      "question": "Company (corporation)",
+      "options": ["yhtiö", "yritys", "taloyhtiö", "kokous"],
+      "answer": 0,
+      "explanation": "'Yhtiö' means company or corporation.",
+      "example": "Yhtiö omistaa rakennuksen.",
+      "exampletranslate": "The company owns the building."
+    },
+    {
+      "id": 107,
+      "type": "multiple-choice",
+      "question": "Company / Attempt",
+      "options": ["yritys", "yhtiö", "kokous", "hakemus"],
+      "answer": 0,
+      "explanation": "'Yritys' means company or business (and also an attempt); its genitive is 'yrityksen'.",
+      "example": "Hän perusti oman yrityksen.",
+      "exampletranslate": "He founded his own company."
+    },
+    {
+      "id": 108,
+      "type": "multiple-choice",
+      "question": "Up",
+      "options": ["ylös", "alas", "sisällä", "luokse"],
+      "answer": 0,
+      "explanation": "'Ylös' means up.",
+      "example": "Kannan laukun ylös.",
+      "exampletranslate": "I carry the bag up."
+    },
+    {
+      "id": 109,
+      "type": "multiple-choice",
+      "question": "Friendly",
+      "options": ["ystävällinen", "kohtelias", "rehellinen", "rauhallinen"],
+      "answer": 0,
+      "explanation": "'Ystävällinen' means friendly; its genitive is 'ystävällisen'.",
+      "example": "Naapuri on ystävällinen.",
+      "exampletranslate": "The neighbour is friendly."
+    },
+    {
+      "id": 110,
+      "type": "multiple-choice",
+      "question": "To feel anxious / distressed",
+      "options": ["ahdistaa", "hermostua", "väsyttää", "oksettaa"],
+      "answer": 0,
+      "explanation": "'Ahdistaa' means to feel anxious or distressed; 'minua ahdistaa' means 'I feel anxious'.",
+      "example": "Minua ahdistaa melu.",
+      "exampletranslate": "The noise makes me anxious."
+    },
+    {
+      "id": 111,
+      "type": "multiple-choice",
+      "question": "Don't",
+      "options": ["älä", "ei", "vasta", "edes"],
+      "answer": 0,
+      "explanation": "'Älä' means don't (the negative imperative for 'you').",
+      "example": "Älä pidä melua.",
+      "exampletranslate": "Don't make noise."
+    }
+  ]
+}

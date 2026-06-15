@@ -1,0 +1,998 @@
+{
+  "id": "chapter12",
+  "title": "Chapter12",
+  "description": "Finnish vocabulary: nature, environment, the outdoors, hobbies and verbs",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "At first",
+      "options": ["aluksi", "uudestaan", "nykyään", "oikeastaan"],
+      "answer": 0,
+      "explanation": "'Aluksi' means at first.",
+      "example": "Aluksi opettelen perussanat.",
+      "exampletranslate": "At first I learn the basic words."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Made of aluminium",
+      "options": ["alumiininen", "valkoinen", "märkä", "rento"],
+      "answer": 0,
+      "explanation": "'Alumiininen' means made of aluminium; its genitive is 'alumiinisen'.",
+      "example": "Tölkki on alumiininen.",
+      "exampletranslate": "The can is made of aluminium."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Dish / Container",
+      "options": ["astia", "naula", "romu", "kone"],
+      "answer": 0,
+      "explanation": "'Astia' means a dish or container.",
+      "example": "Kierrätän muoviastiat.",
+      "exampletranslate": "I recycle the plastic containers."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "To spot",
+      "options": ["bongata", "metsästää", "onkia", "poimia"],
+      "answer": 0,
+      "explanation": "'Bongata' (type 4 verb) means to spot; 'bongaan' is 'I spot'.",
+      "example": "Bongaan harvinaisen linnun.",
+      "exampletranslate": "I spot a rare bird."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "To introduce / present",
+      "options": ["esitellä", "kertoa", "kieltää", "myöntää"],
+      "answer": 0,
+      "explanation": "'Esitellä' (type 3 verb) means to introduce or present; 'esittelen' is 'I introduce'.",
+      "example": "Esittelen sinut ystävälleni.",
+      "exampletranslate": "I introduce you to my friend."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "To grill",
+      "options": ["grillata", "sahata", "kaataa", "poimia"],
+      "answer": 0,
+      "explanation": "'Grillata' (type 4 verb) means to grill; 'grillaan' is 'I grill'.",
+      "example": "Grillaan makkaraa mökillä.",
+      "exampletranslate": "I grill sausage at the cottage."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "To chop / beat",
+      "options": ["hakata", "kaataa", "rikkoa", "sahata"],
+      "answer": 0,
+      "explanation": "'Hakata' (type 4 verb) means to chop, beat or hack; 'hakkaan' is 'I chop'.",
+      "example": "Hakkaan puita talveksi.",
+      "exampletranslate": "I chop wood for winter."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Mouse",
+      "options": ["hiiri", "orava", "susi", "karhu"],
+      "answer": 0,
+      "explanation": "'Hiiri' means mouse; its genitive is 'hiiren'.",
+      "example": "Kissa jahtaa hiirtä.",
+      "exampletranslate": "The cat chases the mouse."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Tag (the game)",
+      "options": ["hippa", "leikki", "tapahtuma", "ruuhka"],
+      "answer": 0,
+      "explanation": "'Hippa' means the game of tag; its genitive is 'hipan'.",
+      "example": "Lapset leikkivät hippaa.",
+      "exampletranslate": "The children play tag."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Slow",
+      "options": ["hidas", "rento", "märkä", "tilapäinen"],
+      "answer": 0,
+      "explanation": "'Hidas' means slow; its genitive is 'hitaan'.",
+      "example": "Internet on tänään hidas.",
+      "exampletranslate": "The internet is slow today."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Mosquito",
+      "options": ["hyttynen", "orava", "hiiri", "susi"],
+      "answer": 0,
+      "explanation": "'Hyttynen' means mosquito; its genitive is 'hyttysen'.",
+      "example": "Kesällä on paljon hyttysiä.",
+      "exampletranslate": "In summer there are many mosquitoes."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Running / Flowing",
+      "options": ["juokseva", "märkä", "stressaava", "rento"],
+      "answer": 0,
+      "explanation": "'Juokseva' means running or flowing (e.g. running water).",
+      "example": "Mökillä on juokseva vesi.",
+      "exampletranslate": "The cottage has running water."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "To feel nervous / excited",
+      "options": ["jännittää", "pelottaa", "kestää", "rikkoa"],
+      "answer": 0,
+      "explanation": "'Jännittää' (type 1 verb) means to feel nervous or excited; 'minua jännittää' means 'I feel nervous'.",
+      "example": "Minua jännittää koe.",
+      "exampletranslate": "The exam makes me nervous."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "To leave (something)",
+      "options": ["jättää", "siirtää", "kaataa", "kerätä"],
+      "answer": 0,
+      "explanation": "'Jättää' (type 1 verb) means to leave (something somewhere); 'jätän' is 'I leave'.",
+      "example": "Jätän roskat keräyspisteeseen.",
+      "exampletranslate": "I leave the trash at the collection point."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "To pour / knock over",
+      "options": ["kaataa", "jättää", "siirtää", "rikkoa"],
+      "answer": 0,
+      "explanation": "'Kaataa' (type 1 verb) means to pour or knock over; 'kaadan' is 'I pour'.",
+      "example": "Kaadan vettä lasiin.",
+      "exampletranslate": "I pour water into the glass."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Fabric",
+      "options": ["kangas", "naula", "rauta", "kivi"],
+      "answer": 0,
+      "explanation": "'Kangas' means fabric; its genitive is 'kankaan'.",
+      "example": "Ostan kangasta verhoihin.",
+      "exampletranslate": "I buy fabric for curtains."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Bear",
+      "options": ["karhu", "susi", "orava", "hiiri"],
+      "answer": 0,
+      "explanation": "'Karhu' means bear.",
+      "example": "Metsässä asuu karhu.",
+      "exampletranslate": "A bear lives in the forest."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "To grow",
+      "options": ["kasvaa", "kestää", "liikkua", "rikkoa"],
+      "answer": 0,
+      "explanation": "'Kasvaa' (type 1 verb) means to grow; 'kasvan' is 'I grow'.",
+      "example": "Puu kasvaa hitaasti.",
+      "exampletranslate": "The tree grows slowly."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Vegetarian (person)",
+      "options": ["kasvissyöjä", "kasvisruoka", "metsästäjä", "taiteilija"],
+      "answer": 0,
+      "explanation": "'Kasvissyöjä' means a vegetarian (a person who eats vegetables).",
+      "example": "Olen kasvissyöjä.",
+      "exampletranslate": "I am a vegetarian."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Vegetarian food",
+      "options": ["kasvisruoka", "kasvissyöjä", "mustikka", "marja"],
+      "answer": 0,
+      "explanation": "'Kasvisruoka' means vegetarian food; its genitive is 'kasvisruoan'.",
+      "example": "Tilaan kasvisruokaa.",
+      "exampletranslate": "I order vegetarian food."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "To collect / gather",
+      "options": ["kerätä", "poimia", "jättää", "siirtää"],
+      "answer": 0,
+      "explanation": "'Kerätä' (type 4 verb) means to collect or gather; 'kerään' is 'I collect'.",
+      "example": "Kerään marjoja metsästä.",
+      "exampletranslate": "I gather berries from the forest."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "To tell",
+      "options": ["kertoa", "esitellä", "kieltää", "säveltää"],
+      "answer": 0,
+      "explanation": "'Kertoa' (type 1 verb) means to tell; 'kerron' is 'I tell'.",
+      "example": "Kerron sinulle jutun.",
+      "exampletranslate": "I'll tell you a story."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "To last",
+      "options": ["kestää", "kasvaa", "liikkua", "tulla"],
+      "answer": 0,
+      "explanation": "'Kestää' (type 1 verb) means to last; 'se kestää' means 'it lasts'.",
+      "example": "Matka kestää tunnin.",
+      "exampletranslate": "The trip lasts an hour."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Summer cottage",
+      "options": ["kesämökki", "mökki", "maja", "terassi"],
+      "answer": 0,
+      "explanation": "'Kesämökki' means summer cottage; its genitive is 'kesämökin'.",
+      "example": "Vietämme kesän kesämökillä.",
+      "exampletranslate": "We spend the summer at the summer cottage."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "To forbid / deny",
+      "options": ["kieltää", "myöntää", "esitellä", "kertoa"],
+      "answer": 0,
+      "explanation": "'Kieltää' (type 1 verb) means to forbid or deny; 'kiellän' is 'I forbid'.",
+      "example": "Laki kieltää roskaamisen.",
+      "exampletranslate": "The law forbids littering."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Kind / Nice",
+      "options": ["kiltti", "rento", "hidas", "märkä"],
+      "answer": 0,
+      "explanation": "'Kiltti' means kind or nice; its genitive is 'kiltin'.",
+      "example": "Hän on kiltti ihminen.",
+      "exampletranslate": "He is a kind person."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Stone",
+      "options": ["kivi", "rauta", "kangas", "naula"],
+      "answer": 0,
+      "explanation": "'Kivi' means stone; its genitive is 'kiven'.",
+      "example": "Rannalla on paljon kiviä.",
+      "exampletranslate": "There are many stones on the beach."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Machine",
+      "options": ["kone", "astia", "sähkölaite", "romu"],
+      "answer": 0,
+      "explanation": "'Kone' means machine; its genitive is 'koneen'.",
+      "example": "Kone toimii hyvin.",
+      "exampletranslate": "The machine works well."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Ever",
+      "options": ["koskaan", "nykyään", "uudestaan", "aluksi"],
+      "answer": 0,
+      "explanation": "'Koskaan' means ever (in negative sentences, never).",
+      "example": "En ole koskaan käynyt Lapissa.",
+      "exampletranslate": "I have never been to Lapland."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Greece",
+      "options": ["Kreikka", "Ranska", "Venäjä", "Kanada"],
+      "answer": 0,
+      "explanation": "'Kreikka' means Greece; its genitive is 'Kreikan'.",
+      "example": "Matkustan Kreikkaan kesällä.",
+      "exampletranslate": "I travel to Greece in summer."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Condition / Fitness",
+      "options": ["kunto", "kone", "kunta", "kivi"],
+      "answer": 0,
+      "explanation": "'Kunto' means condition or fitness; its genitive is 'kunnon'.",
+      "example": "Pidän huolta kunnostani.",
+      "exampletranslate": "I take care of my fitness."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "To count / lower",
+      "options": ["laskea", "kasvaa", "kestää", "poimia"],
+      "answer": 0,
+      "explanation": "'Laskea' (type 1 verb) means to count, lower or descend; 'lasken' is 'I count'.",
+      "example": "Lasken rahat.",
+      "exampletranslate": "I count the money."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "To play (children)",
+      "options": ["leikkiä", "pelata", "liikkua", "kasvaa"],
+      "answer": 0,
+      "explanation": "'Leikkiä' (type 1 verb) means to play (children's play); 'leikin' is 'I play'.",
+      "example": "Lapset leikkivät pihalla.",
+      "exampletranslate": "The children play in the yard."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "To move (be in motion)",
+      "options": ["liikkua", "siirtää", "kasvaa", "kestää"],
+      "answer": 0,
+      "explanation": "'Liikkua' (type 1 verb) means to move or be in motion; 'liikun' is 'I move'.",
+      "example": "Liikun joka päivä.",
+      "exampletranslate": "I exercise (move) every day."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Soda / Soft drink",
+      "options": ["limu", "marja", "mustikka", "rauha"],
+      "answer": 0,
+      "explanation": "'Limu' means soda or soft drink (informal); its genitive is 'limun'.",
+      "example": "Juon limua mökillä.",
+      "exampletranslate": "I drink soda at the cottage."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Bird",
+      "options": ["lintu", "orava", "hiiri", "susi"],
+      "answer": 0,
+      "explanation": "'Lintu' means bird; its genitive is 'linnun'.",
+      "example": "Lintu laulaa puussa.",
+      "exampletranslate": "The bird sings in the tree."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Addition / Extra",
+      "options": ["lisä", "luku", "peruste", "tarkistus"],
+      "answer": 0,
+      "explanation": "'Lisä' means addition or extra.",
+      "example": "Haluan lisää tietoa.",
+      "exampletranslate": "I want more (additional) information."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Number / Chapter",
+      "options": ["luku", "lisä", "peruste", "merkki"],
+      "answer": 0,
+      "explanation": "'Luku' means number or chapter; its genitive is 'luvun'.",
+      "example": "Luen kirjan ensimmäisen luvun.",
+      "exampletranslate": "I read the first chapter of the book."
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Nature",
+      "options": ["luonto", "maisema", "metsä", "ympäristö"],
+      "answer": 0,
+      "explanation": "'Luonto' means nature; its genitive is 'luonnon'.",
+      "example": "Rakastan Suomen luontoa.",
+      "exampletranslate": "I love Finnish nature."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Landscape / Scenery",
+      "options": ["maisema", "luonto", "metsä", "pelto"],
+      "answer": 0,
+      "explanation": "'Maisema' means landscape or scenery.",
+      "example": "Maisema on kaunis.",
+      "exampletranslate": "The landscape is beautiful."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Hut / Cabin",
+      "options": ["maja", "mökki", "kesämökki", "terassi"],
+      "answer": 0,
+      "explanation": "'Maja' means hut or cabin.",
+      "example": "Rakennamme majan metsään.",
+      "exampletranslate": "We build a hut in the forest."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Berry",
+      "options": ["marja", "mustikka", "limu", "pelto"],
+      "answer": 0,
+      "explanation": "'Marja' means berry.",
+      "example": "Poimin marjoja metsästä.",
+      "exampletranslate": "I pick berries from the forest."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Sea",
+      "options": ["meri", "metsä", "pelto", "vesistö"],
+      "answer": 0,
+      "explanation": "'Meri' means sea; its genitive is 'meren'.",
+      "example": "Vene kulkee merellä.",
+      "exampletranslate": "The boat travels on the sea."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Forest",
+      "options": ["metsä", "meri", "pelto", "maisema"],
+      "answer": 0,
+      "explanation": "'Metsä' means forest.",
+      "example": "Kävelen metsässä.",
+      "exampletranslate": "I walk in the forest."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "To hunt",
+      "options": ["metsästää", "onkia", "bongata", "poimia"],
+      "answer": 0,
+      "explanation": "'Metsästää' (type 1 verb) means to hunt; 'metsästän' is 'I hunt'.",
+      "example": "Hän metsästää syksyllä.",
+      "exampletranslate": "He hunts in autumn."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Blueberry",
+      "options": ["mustikka", "marja", "limu", "naula"],
+      "answer": 0,
+      "explanation": "'Mustikka' means blueberry; its genitive is 'mustikan'.",
+      "example": "Poimin mustikoita.",
+      "exampletranslate": "I pick blueberries."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "To admit",
+      "options": ["myöntää", "kieltää", "kertoa", "esitellä"],
+      "answer": 0,
+      "explanation": "'Myöntää' (type 1 verb) means to admit or grant; 'myönnän' is 'I admit'.",
+      "example": "Myönnän, että olin väärässä.",
+      "exampletranslate": "I admit that I was wrong."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Cottage",
+      "options": ["mökki", "maja", "terassi", "rautakauppa"],
+      "answer": 0,
+      "explanation": "'Mökki' means cottage; its genitive is 'mökin'.",
+      "example": "Menemme mökille viikonloppuna.",
+      "exampletranslate": "We go to the cottage at the weekend."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Wet",
+      "options": ["märkä", "kuiva", "hidas", "rento"],
+      "answer": 0,
+      "explanation": "'Märkä' means wet; its genitive is 'märän'.",
+      "example": "Vaatteet ovat märät.",
+      "exampletranslate": "The clothes are wet."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Nail",
+      "options": ["naula", "rauta", "kivi", "kangas"],
+      "answer": 0,
+      "explanation": "'Naula' means nail.",
+      "example": "Lyön naulan seinään.",
+      "exampletranslate": "I hammer a nail into the wall."
+    },
+    {
+      "id": 51,
+      "type": "multiple-choice",
+      "question": "Nowadays",
+      "options": ["nykyään", "aluksi", "uudestaan", "koskaan"],
+      "answer": 0,
+      "explanation": "'Nykyään' means nowadays.",
+      "example": "Nykyään kierrätän kaiken.",
+      "exampletranslate": "Nowadays I recycle everything."
+    },
+    {
+      "id": 52,
+      "type": "multiple-choice",
+      "question": "Actually",
+      "options": ["oikeastaan", "nykyään", "aluksi", "uudestaan"],
+      "answer": 0,
+      "explanation": "'Oikeastaan' means actually.",
+      "example": "Oikeastaan pidän sateesta.",
+      "exampletranslate": "Actually I like the rain."
+    },
+    {
+      "id": 53,
+      "type": "multiple-choice",
+      "question": "Right / Justice",
+      "options": ["oikeus", "peruste", "rauha", "tarkistus"],
+      "answer": 0,
+      "explanation": "'Oikeus' means right or justice; its genitive is 'oikeuden'.",
+      "example": "Jokaisella on oikeus puhtaaseen luontoon.",
+      "exampletranslate": "Everyone has the right to clean nature."
+    },
+    {
+      "id": 54,
+      "type": "multiple-choice",
+      "question": "To fish (with a rod)",
+      "options": ["onkia", "metsästää", "poimia", "bongata"],
+      "answer": 0,
+      "explanation": "'Onkia' (type 1 verb) means to fish with a rod; 'ongin' is 'I fish'.",
+      "example": "Ongin järvellä.",
+      "exampletranslate": "I fish on the lake."
+    },
+    {
+      "id": 55,
+      "type": "multiple-choice",
+      "question": "Squirrel",
+      "options": ["orava", "hiiri", "karhu", "susi"],
+      "answer": 0,
+      "explanation": "'Orava' means squirrel.",
+      "example": "Orava kiipeää puuhun.",
+      "exampletranslate": "The squirrel climbs the tree."
+    },
+    {
+      "id": 56,
+      "type": "multiple-choice",
+      "question": "To catch",
+      "options": ["ottaa kiinni", "poimia", "kerätä", "onkia"],
+      "answer": 0,
+      "explanation": "'Ottaa kiinni' means to catch; 'otan kiinni' is 'I catch'.",
+      "example": "Otan kalan kiinni.",
+      "exampletranslate": "I catch the fish."
+    },
+    {
+      "id": 57,
+      "type": "multiple-choice",
+      "question": "To scare / frighten",
+      "options": ["pelottaa", "jännittää", "rikkoa", "vahingoittaa"],
+      "answer": 0,
+      "explanation": "'Pelottaa' (type 1 verb) means to scare or frighten; 'minua pelottaa' means 'I am afraid'.",
+      "example": "Minua pelottaa pimeä.",
+      "exampletranslate": "I am afraid of the dark."
+    },
+    {
+      "id": 58,
+      "type": "multiple-choice",
+      "question": "Field (agricultural)",
+      "options": ["pelto", "metsä", "maisema", "ranta"],
+      "answer": 0,
+      "explanation": "'Pelto' means field (agricultural); its genitive is 'pellon'.",
+      "example": "Pellolla kasvaa vehnää.",
+      "exampletranslate": "Wheat grows in the field."
+    },
+    {
+      "id": 59,
+      "type": "multiple-choice",
+      "question": "Basis / Grounds",
+      "options": ["peruste", "oikeus", "tarkistus", "lisä"],
+      "answer": 0,
+      "explanation": "'Peruste' means basis or grounds; its genitive is 'perusteen'.",
+      "example": "Mikä on päätöksen peruste?",
+      "exampletranslate": "What is the basis for the decision?"
+    },
+    {
+      "id": 60,
+      "type": "multiple-choice",
+      "question": "To wash oneself",
+      "options": ["peseytyä", "pestä", "siirtää", "poimia"],
+      "answer": 0,
+      "explanation": "'Peseytyä' (type 1 verb) means to wash oneself; 'peseydyn' is 'I wash myself'.",
+      "example": "Peseydyn aamulla.",
+      "exampletranslate": "I wash myself in the morning."
+    },
+    {
+      "id": 61,
+      "type": "multiple-choice",
+      "question": "Hiding place",
+      "options": ["piilo", "maja", "peruste", "pelto"],
+      "answer": 0,
+      "explanation": "'Piilo' means hiding place.",
+      "example": "Lapsi on piilossa.",
+      "exampletranslate": "The child is in a hiding place."
+    },
+    {
+      "id": 62,
+      "type": "multiple-choice",
+      "question": "To draw",
+      "options": ["piirtää", "säveltää", "sahata", "siirtää"],
+      "answer": 0,
+      "explanation": "'Piirtää' (type 1 verb) means to draw; 'piirrän' is 'I draw'.",
+      "example": "Piirrän kuvan luonnosta.",
+      "exampletranslate": "I draw a picture of nature."
+    },
+    {
+      "id": 63,
+      "type": "multiple-choice",
+      "question": "Little boy",
+      "options": ["pikkupoika", "pikkutyttö", "vauva", "lapsi"],
+      "answer": 0,
+      "explanation": "'Pikkupoika' means little boy; its genitive is 'pikkupojan'.",
+      "example": "Pikkupoika leikkii pihalla.",
+      "exampletranslate": "The little boy plays in the yard."
+    },
+    {
+      "id": 64,
+      "type": "multiple-choice",
+      "question": "To pick",
+      "options": ["poimia", "kerätä", "onkia", "metsästää"],
+      "answer": 0,
+      "explanation": "'Poimia' (type 1 verb) means to pick; 'poimin' is 'I pick'.",
+      "example": "Poimin sieniä metsästä.",
+      "exampletranslate": "I pick mushrooms from the forest."
+    },
+    {
+      "id": 65,
+      "type": "multiple-choice",
+      "question": "To get to / reach",
+      "options": ["päästä", "tulla", "siirtää", "liikkua"],
+      "answer": 0,
+      "explanation": "'Päästä' (type 2 verb) means to get to or reach; 'pääsen' is 'I get to'.",
+      "example": "Pääsen mökille illalla.",
+      "exampletranslate": "I get to the cottage in the evening."
+    },
+    {
+      "id": 66,
+      "type": "multiple-choice",
+      "question": "Peace",
+      "options": ["rauha", "rento", "oikeus", "turva"],
+      "answer": 0,
+      "explanation": "'Rauha' means peace.",
+      "example": "Metsässä on rauha.",
+      "exampletranslate": "There is peace in the forest."
+    },
+    {
+      "id": 67,
+      "type": "multiple-choice",
+      "question": "Iron (the metal)",
+      "options": ["rauta", "kivi", "naula", "kangas"],
+      "answer": 0,
+      "explanation": "'Rauta' means iron; its genitive is 'raudan'.",
+      "example": "Portti on rautaa.",
+      "exampletranslate": "The gate is made of iron."
+    },
+    {
+      "id": 68,
+      "type": "multiple-choice",
+      "question": "Hardware store",
+      "options": ["rautakauppa", "rauta", "rautatieasema", "kauppa"],
+      "answer": 0,
+      "explanation": "'Rautakauppa' means hardware store; its genitive is 'rautakaupan'.",
+      "example": "Ostan nauloja rautakaupasta.",
+      "exampletranslate": "I buy nails from the hardware store."
+    },
+    {
+      "id": 69,
+      "type": "multiple-choice",
+      "question": "Relaxed",
+      "options": ["rento", "stressaava", "hidas", "märkä"],
+      "answer": 0,
+      "explanation": "'Rento' means relaxed; its genitive is 'rennon'.",
+      "example": "Loma oli rento.",
+      "exampletranslate": "The holiday was relaxed."
+    },
+    {
+      "id": 70,
+      "type": "multiple-choice",
+      "question": "To break",
+      "options": ["rikkoa", "kaataa", "vahingoittaa", "sahata"],
+      "answer": 0,
+      "explanation": "'Rikkoa' (type 1 verb) means to break; 'rikon' is 'I break'.",
+      "example": "Rikoin lasin vahingossa.",
+      "exampletranslate": "I broke the glass by accident."
+    },
+    {
+      "id": 71,
+      "type": "multiple-choice",
+      "question": "Junk / Scrap",
+      "options": ["romu", "roska", "kone", "kivi"],
+      "answer": 0,
+      "explanation": "'Romu' means junk or scrap.",
+      "example": "Vien vanhan romun kierrätykseen.",
+      "exampletranslate": "I take the old scrap to recycling."
+    },
+    {
+      "id": 72,
+      "type": "multiple-choice",
+      "question": "To litter",
+      "options": ["roskata", "rikkoa", "kerätä", "vahingoittaa"],
+      "answer": 0,
+      "explanation": "'Roskata' (type 4 verb) means to litter; 'roskaan' is 'I litter'.",
+      "example": "Älä roskaa luontoa.",
+      "exampletranslate": "Don't litter the nature."
+    },
+    {
+      "id": 73,
+      "type": "multiple-choice",
+      "question": "Traffic jam",
+      "options": ["ruuhka", "tapahtuma", "ruuhka-aika", "myrsky"],
+      "answer": 0,
+      "explanation": "'Ruuhka' means traffic jam.",
+      "example": "Aamulla on paha ruuhka.",
+      "exampletranslate": "In the morning there is a bad traffic jam."
+    },
+    {
+      "id": 74,
+      "type": "multiple-choice",
+      "question": "To saw",
+      "options": ["sahata", "hakata", "rikkoa", "piirtää"],
+      "answer": 0,
+      "explanation": "'Sahata' (type 4 verb) means to saw; 'sahaan' is 'I saw'.",
+      "example": "Sahaan laudan kahtia.",
+      "exampletranslate": "I saw the board in two."
+    },
+    {
+      "id": 75,
+      "type": "multiple-choice",
+      "question": "Newspaper",
+      "options": ["sanomalehti", "kirja", "lehti", "luku"],
+      "answer": 0,
+      "explanation": "'Sanomalehti' means newspaper; its genitive is 'sanomalehden'.",
+      "example": "Luen sanomalehteä aamulla.",
+      "exampletranslate": "I read the newspaper in the morning."
+    },
+    {
+      "id": 76,
+      "type": "multiple-choice",
+      "question": "To move / transfer (something)",
+      "options": ["siirtää", "liikkua", "kaataa", "kerätä"],
+      "answer": 0,
+      "explanation": "'Siirtää' (type 1 verb) means to move or transfer something; 'siirrän' is 'I move'.",
+      "example": "Siirrän pöydän nurkkaan.",
+      "exampletranslate": "I move the table to the corner."
+    },
+    {
+      "id": 77,
+      "type": "multiple-choice",
+      "question": "Stressful",
+      "options": ["stressaava", "rento", "rauhallinen", "hidas"],
+      "answer": 0,
+      "explanation": "'Stressaava' means stressful.",
+      "example": "Työ on stressaavaa.",
+      "exampletranslate": "The work is stressful."
+    },
+    {
+      "id": 78,
+      "type": "multiple-choice",
+      "question": "Wolf",
+      "options": ["susi", "karhu", "orava", "hiiri"],
+      "answer": 0,
+      "explanation": "'Susi' means wolf; its genitive is 'suden'.",
+      "example": "Metsässä on susia.",
+      "exampletranslate": "There are wolves in the forest."
+    },
+    {
+      "id": 79,
+      "type": "multiple-choice",
+      "question": "Electrical device",
+      "options": ["sähkölaite", "kone", "romu", "astia"],
+      "answer": 0,
+      "explanation": "'Sähkölaite' means electrical device; its genitive is 'sähkölaitteen'.",
+      "example": "Kierrätän vanhat sähkölaitteet.",
+      "exampletranslate": "I recycle the old electrical devices."
+    },
+    {
+      "id": 80,
+      "type": "multiple-choice",
+      "question": "To compose (music)",
+      "options": ["säveltää", "piirtää", "esitellä", "kertoa"],
+      "answer": 0,
+      "explanation": "'Säveltää' (type 1 verb) means to compose music; 'sävellän' is 'I compose'.",
+      "example": "Hän säveltää kappaleen.",
+      "exampletranslate": "She composes a song."
+    },
+    {
+      "id": 81,
+      "type": "multiple-choice",
+      "question": "Event",
+      "options": ["tapahtuma", "tarkistus", "ruuhka", "peruste"],
+      "answer": 0,
+      "explanation": "'Tapahtuma' means event.",
+      "example": "Tapahtuma on lauantaina.",
+      "exampletranslate": "The event is on Saturday."
+    },
+    {
+      "id": 82,
+      "type": "multiple-choice",
+      "question": "Inspection / Check",
+      "options": ["tarkistus", "peruste", "oikeus", "tapahtuma"],
+      "answer": 0,
+      "explanation": "'Tarkistus' means inspection or check; its genitive is 'tarkistuksen'.",
+      "example": "Auton tarkistus on huomenna.",
+      "exampletranslate": "The car's inspection is tomorrow."
+    },
+    {
+      "id": 83,
+      "type": "multiple-choice",
+      "question": "Terrace",
+      "options": ["terassi", "piilo", "maja", "mökki"],
+      "answer": 0,
+      "explanation": "'Terassi' means terrace.",
+      "example": "Juon kahvia terassilla.",
+      "exampletranslate": "I drink coffee on the terrace."
+    },
+    {
+      "id": 84,
+      "type": "multiple-choice",
+      "question": "Ladder",
+      "options": ["tikkaat", "portaat", "kone", "naula"],
+      "answer": 0,
+      "explanation": "'Tikkaat' means ladder (a plural word); its genitive is 'tikkaiden'.",
+      "example": "Kiipeän tikkaita pitkin.",
+      "exampletranslate": "I climb up the ladder."
+    },
+    {
+      "id": 85,
+      "type": "multiple-choice",
+      "question": "Temporary",
+      "options": ["tilapäinen", "vakituinen", "rento", "hidas"],
+      "answer": 0,
+      "explanation": "'Tilapäinen' means temporary; its genitive is 'tilapäisen'.",
+      "example": "Tämä on tilapäinen ratkaisu.",
+      "exampletranslate": "This is a temporary solution."
+    },
+    {
+      "id": 86,
+      "type": "multiple-choice",
+      "question": "To wash dishes",
+      "options": ["tiskata", "peseytyä", "pestä", "siivota"],
+      "answer": 0,
+      "explanation": "'Tiskata' (type 4 verb) means to wash dishes; 'tiskaan' is 'I wash dishes'.",
+      "example": "Tiskaan astiat illalla.",
+      "exampletranslate": "I wash the dishes in the evening."
+    },
+    {
+      "id": 87,
+      "type": "multiple-choice",
+      "question": "Fire",
+      "options": ["tuli", "vesi", "kivi", "rauta"],
+      "answer": 0,
+      "explanation": "'Tuli' means fire; its genitive is 'tulen'.",
+      "example": "Teen tulen takkaan.",
+      "exampletranslate": "I make a fire in the fireplace."
+    },
+    {
+      "id": 88,
+      "type": "multiple-choice",
+      "question": "To come",
+      "options": ["tulla", "päästä", "liikkua", "siirtää"],
+      "answer": 0,
+      "explanation": "'Tulla' (type 3 verb) means to come; 'tulen' is 'I come'.",
+      "example": "Tulen mökille huomenna.",
+      "exampletranslate": "I come to the cottage tomorrow."
+    },
+    {
+      "id": 89,
+      "type": "multiple-choice",
+      "question": "Commute / Work trip",
+      "options": ["työmatka", "matka", "ruuhka", "kyyti"],
+      "answer": 0,
+      "explanation": "'Työmatka' means a commute or work trip.",
+      "example": "Työmatka kestää puoli tuntia.",
+      "exampletranslate": "The commute takes half an hour."
+    },
+    {
+      "id": 90,
+      "type": "multiple-choice",
+      "question": "Full",
+      "options": ["täynnä", "tyhjä", "märkä", "rento"],
+      "answer": 0,
+      "explanation": "'Täynnä' means full.",
+      "example": "Astia on täynnä vettä.",
+      "exampletranslate": "The container is full of water."
+    },
+    {
+      "id": 91,
+      "type": "multiple-choice",
+      "question": "Again",
+      "options": ["uudestaan", "aluksi", "nykyään", "koskaan"],
+      "answer": 0,
+      "explanation": "'Uudestaan' means again.",
+      "example": "Yritän uudestaan.",
+      "exampletranslate": "I try again."
+    },
+    {
+      "id": 92,
+      "type": "multiple-choice",
+      "question": "To damage",
+      "options": ["vahingoittaa", "rikkoa", "roskata", "kaataa"],
+      "answer": 0,
+      "explanation": "'Vahingoittaa' (type 1 verb) means to damage; 'vahingoitan' is 'I damage'.",
+      "example": "Roskaaminen vahingoittaa luontoa.",
+      "exampletranslate": "Littering damages nature."
+    },
+    {
+      "id": 93,
+      "type": "multiple-choice",
+      "question": "White wine",
+      "options": ["valkoviini", "punaviini", "olut", "limu"],
+      "answer": 0,
+      "explanation": "'Valkoviini' means white wine.",
+      "example": "Juon lasin valkoviiniä.",
+      "exampletranslate": "I drink a glass of white wine."
+    },
+    {
+      "id": 94,
+      "type": "multiple-choice",
+      "question": "Equipped",
+      "options": ["varustettu", "täynnä", "valmis", "tilapäinen"],
+      "answer": 0,
+      "explanation": "'Varustettu' means equipped; its genitive is 'varustetun'.",
+      "example": "Mökki on hyvin varustettu.",
+      "exampletranslate": "The cottage is well equipped."
+    },
+    {
+      "id": 95,
+      "type": "multiple-choice",
+      "question": "Boat",
+      "options": ["vene", "laiva", "mökki", "tikkaat"],
+      "answer": 0,
+      "explanation": "'Vene' means boat; its genitive is 'veneen'.",
+      "example": "Soudan venettä järvellä.",
+      "exampletranslate": "I row the boat on the lake."
+    },
+    {
+      "id": 96,
+      "type": "multiple-choice",
+      "question": "To go boating",
+      "options": ["veneillä", "uida", "onkia", "metsästää"],
+      "answer": 0,
+      "explanation": "'Veneillä' (type 3 verb) means to go boating; 'veneilen' is 'I go boating'.",
+      "example": "Veneilen kesällä järvellä.",
+      "exampletranslate": "I go boating on the lake in summer."
+    },
+    {
+      "id": 97,
+      "type": "multiple-choice",
+      "question": "Water system / Body of water",
+      "options": ["vesistö", "meri", "järvi", "ranta"],
+      "answer": 0,
+      "explanation": "'Vesistö' means a water system or body of water (lakes and rivers).",
+      "example": "Saastunut vesistö on ongelma.",
+      "exampletranslate": "A polluted water system is a problem."
+    },
+    {
+      "id": 98,
+      "type": "multiple-choice",
+      "question": "Environment",
+      "options": ["ympäristö", "luonto", "maisema", "vesistö"],
+      "answer": 0,
+      "explanation": "'Ympäristö' means environment.",
+      "example": "Suojelen ympäristöä.",
+      "exampletranslate": "I protect the environment."
+    },
+    {
+      "id": 99,
+      "type": "multiple-choice",
+      "question": "Ministry of the Environment",
+      "options": ["ympäristöministeriö", "ympäristö", "ministeriö", "luonto"],
+      "answer": 0,
+      "explanation": "'Ympäristöministeriö' means the Ministry of the Environment.",
+      "example": "Ympäristöministeriö tekee uuden lain.",
+      "exampletranslate": "The Ministry of the Environment makes a new law."
+    }
+  ]
+}
