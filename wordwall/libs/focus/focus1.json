@@ -1,0 +1,508 @@
+{
+  "id": "focus1",
+  "title": "focus1",
+  "description": "Fince kelimeler ve Türkçe anlamları (seçili kelimeler)",
+  "category": "Language",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Cinsiyet",
+      "options": ["sukupuoli", "kumppani", "aikuinen", "tavara"],
+      "answer": 0,
+      "explanation": "'Sukupuoli' cinsiyet anlamına gelir.",
+      "example": "Mikä on sinun sukupuolesi?",
+      "exampletranslate": "Cinsiyetin nedir?"
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Tanışmak (fiil)",
+      "options": ["tavata", "keksiä", "viedä", "meikata"],
+      "answer": 0,
+      "explanation": "'Tavata' (tip 4) tanışmak/buluşmak demektir; 'tapaan' = tanışırım/buluşurum.",
+      "example": "Hauska tavata!",
+      "exampletranslate": "Tanıştığımıza memnun oldum!"
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Bekâr",
+      "options": ["sinkku", "tuttu", "aikuinen", "kuollut"],
+      "answer": 0,
+      "explanation": "'Sinkku' bekâr (kişi) demektir.",
+      "example": "Hän on sinkku.",
+      "exampletranslate": "O bekâr."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "İlginç",
+      "options": ["mielenkiintoinen", "perinteinen", "väsynyt", "tumma"],
+      "answer": 0,
+      "explanation": "'Mielenkiintoinen' ilginç demektir.",
+      "example": "Tämä on mielenkiintoinen kirja.",
+      "exampletranslate": "Bu ilginç bir kitap."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Kız arkadaş",
+      "options": ["tyttöystävä", "kumppani", "lemmikki", "toimittaja"],
+      "answer": 0,
+      "explanation": "'Tyttöystävä' kız arkadaş demektir ('tyttö' + 'ystävä').",
+      "example": "Hänellä on tyttöystävä.",
+      "exampletranslate": "Onun bir kız arkadaşı var."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Evcil hayvan",
+      "options": ["lemmikki", "sika", "tavara", "karkki"],
+      "answer": 0,
+      "explanation": "'Lemmikki' evcil hayvan demektir.",
+      "example": "Onko sinulla lemmikkiä?",
+      "exampletranslate": "Evcil hayvanın var mı?"
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Parça, dilim",
+      "options": ["pala", "rasia", "kassi", "mauste"],
+      "answer": 0,
+      "explanation": "'Pala' parça veya dilim demektir.",
+      "example": "Otan palan kakkua.",
+      "exampletranslate": "Bir dilim pasta alıyorum."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Sağ tarafta",
+      "options": ["oikealla", "vasemmalla", "oikea", "vasen"],
+      "answer": 0,
+      "explanation": "'Oikealla' sağ tarafta demektir.",
+      "example": "Kauppa on oikealla.",
+      "exampletranslate": "Mağaza sağ tarafta."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Akıl etmek / bir fikirle gelmek",
+      "options": ["keksiä", "tavata", "viedä", "painaa"],
+      "answer": 0,
+      "explanation": "'Keksiä' bir şey bulmak/akıl etmek demektir; 'keksin' = buluyorum.",
+      "example": "Keksin hyvän idean.",
+      "exampletranslate": "İyi bir fikir buldum."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Partner",
+      "options": ["kumppani", "tyttöystävä", "toimittaja", "yrittäjä"],
+      "answer": 0,
+      "explanation": "'Kumppani' partner (ilişkide veya işte) demektir.",
+      "example": "Hän on minun kumppanini.",
+      "exampletranslate": "O benim partnerim."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Sol",
+      "options": ["vasen", "oikea", "vasemmalla", "oikealla"],
+      "answer": 0,
+      "explanation": "'Vasen' sol demektir; tamlayanı 'vasemman'.",
+      "example": "Vasen käsi on kipeä.",
+      "exampletranslate": "Sol elim ağrıyor."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Gazeteci",
+      "options": ["toimittaja", "yrittäjä", "kumppani", "aikuinen"],
+      "answer": 0,
+      "explanation": "'Toimittaja' gazeteci/muhabir demektir.",
+      "example": "Hän työskentelee toimittajana.",
+      "exampletranslate": "O gazeteci olarak çalışıyor."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Girişimci",
+      "options": ["yrittäjä", "toimittaja", "kumppani", "aikuinen"],
+      "answer": 0,
+      "explanation": "'Yrittäjä' girişimci/serbest çalışan demektir.",
+      "example": "Minun isäni on yrittäjä.",
+      "exampletranslate": "Babam girişimci."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Sağ",
+      "options": ["oikea", "vasen", "oikealla", "vasemmalla"],
+      "answer": 0,
+      "explanation": "'Oikea' sağ (yön) veya doğru demektir.",
+      "example": "Tämä on oikea vastaus.",
+      "exampletranslate": "Bu doğru cevap."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Sol tarafta",
+      "options": ["vasemmalla", "oikealla", "vasen", "oikea"],
+      "answer": 0,
+      "explanation": "'Vasemmalla' sol tarafta demektir.",
+      "example": "Kahvila on vasemmalla.",
+      "exampletranslate": "Kafe sol tarafta."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Atıştırmalık",
+      "options": ["välipala", "pala", "karkki", "mauste"],
+      "answer": 0,
+      "explanation": "'Välipala' atıştırmalık (öğün arası) demektir.",
+      "example": "Syön välipalan iltapäivällä.",
+      "exampletranslate": "Öğleden sonra bir atıştırmalık yerim."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Götürmek, taşımak / zaman almak",
+      "options": ["viedä", "keksiä", "tavata", "painaa"],
+      "answer": 0,
+      "explanation": "'Viedä' (tip 2) götürmek/taşımak; ayrıca zaman almak demektir; 'vien' = götürürüm.",
+      "example": "Vien roskat ulos.",
+      "exampletranslate": "Çöpleri dışarı götürürüm."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Yetişkin",
+      "options": ["aikuinen", "sinkku", "kuollut", "tuttu"],
+      "answer": 0,
+      "explanation": "'Aikuinen' yetişkin demektir.",
+      "example": "Hän on jo aikuinen.",
+      "exampletranslate": "O artık yetişkin."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Kapalı, kapatılmış (örn. işyeri kapalı)",
+      "options": ["suljettu", "varattu", "polttaa", "hoitaa"],
+      "answer": 0,
+      "explanation": "'Suljettu' kapalı/kapatılmış demektir ('sulkea' = kapatmak fiilinden).",
+      "example": "Kauppa on suljettu sunnuntaina.",
+      "exampletranslate": "Mağaza pazar günü kapalı."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Rezerve, dolu (ayrılmış)",
+      "options": ["varattu", "suljettu", "viedä", "keksiä"],
+      "answer": 0,
+      "explanation": "'Varattu' rezerve/dolu demektir ('varata' = rezerve etmek fiilinden).",
+      "example": "Tämä pöytä on varattu.",
+      "exampletranslate": "Bu masa rezerve."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Makyaj yapmak",
+      "options": ["meikata", "polttaa", "keittää", "hoitaa"],
+      "answer": 0,
+      "explanation": "'Meikata' (tip 4) makyaj yapmak demektir; 'meikkaan' = makyaj yaparım.",
+      "example": "Meikkaan ennen juhlia.",
+      "exampletranslate": "Partiden önce makyaj yaparım."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Tabela, levha, işaret",
+      "options": ["kyltti", "lehti", "rasia", "tavara"],
+      "answer": 0,
+      "explanation": "'Kyltti' tabela, levha veya işaret demektir.",
+      "example": "Kyltissä lukee 'kiinni'.",
+      "exampletranslate": "Tabelada 'kapalı' yazıyor."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Ayağa kalkmak, yataktan kalkmak",
+      "options": ["nousta", "polttaa", "leikkiä", "nauraa"],
+      "answer": 0,
+      "explanation": "'Nousta' (tip 1) kalkmak/yükselmek demektir; 'nousen' = kalkarım.",
+      "example": "Nousen sängystä aamulla.",
+      "exampletranslate": "Sabah yataktan kalkarım."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Yakmak",
+      "options": ["polttaa", "keittää", "nousta", "meikata"],
+      "answer": 0,
+      "explanation": "'Polttaa' (tip 1) yakmak (ayrıca sigara içmek) demektir; 'poltan' = yakarım.",
+      "example": "Aurinko polttaa ihoa.",
+      "exampletranslate": "Güneş cildi yakar."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Gülmek",
+      "options": ["nauraa", "leikkiä", "nousta", "hoitaa"],
+      "answer": 0,
+      "explanation": "'Nauraa' (tip 1) gülmek demektir; 'nauran' = gülerim.",
+      "example": "Nauran paljon.",
+      "exampletranslate": "Çok gülerim."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Açılış saatleri",
+      "options": ["aukioloajat", "kyltti", "tavara", "pakkaus"],
+      "answer": 0,
+      "explanation": "'Aukioloajat' açılış/çalışma saatleri demektir.",
+      "example": "Mitkä ovat kaupan aukioloajat?",
+      "exampletranslate": "Mağazanın açılış saatleri nedir?"
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Oynamak (çocuk, eğlence)",
+      "options": ["leikkiä", "nauraa", "nousta", "meikata"],
+      "answer": 0,
+      "explanation": "'Leikkiä' (tip 1) oynamak (serbest/çocuk oyunu) demektir; 'leikin' = oynarım.",
+      "example": "Lapset leikkivät pihalla.",
+      "exampletranslate": "Çocuklar bahçede oynuyor."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Bilinen, tanıdık",
+      "options": ["tuttu", "kuollut", "väsynyt", "perinteinen"],
+      "answer": 0,
+      "explanation": "'Tuttu' bilinen/tanıdık demektir; tamlayanı 'tutun'.",
+      "example": "Tämä paikka on minulle tuttu.",
+      "exampletranslate": "Bu yer bana tanıdık."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Yorgun",
+      "options": ["väsynyt", "tuttu", "kuollut", "tumma"],
+      "answer": 0,
+      "explanation": "'Väsynyt' yorgun demektir; tamlayanı 'väsyneen'.",
+      "example": "Olen tänään hyvin väsynyt.",
+      "exampletranslate": "Bugün çok yorgunum."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Haşlamak, pişirmek",
+      "options": ["keittää", "polttaa", "meikata", "painaa"],
+      "answer": 0,
+      "explanation": "'Keittää' (tip 1) haşlamak/kaynatmak/pişirmek demektir; 'keitän' = pişiririm.",
+      "example": "Keitän kahvia.",
+      "exampletranslate": "Kahve yapıyorum (pişiriyorum)."
+    },
+    {
+      "id": 31,
+      "type": "multiple-choice",
+      "question": "Yaprak, dergi",
+      "options": ["lehti", "kyltti", "rasia", "pala"],
+      "answer": 0,
+      "explanation": "'Lehti' yaprak ya da dergi/gazete demektir; tamlayanı 'lehden'.",
+      "example": "Luen lehteä aamulla.",
+      "exampletranslate": "Sabah dergiyi okurum."
+    },
+    {
+      "id": 32,
+      "type": "multiple-choice",
+      "question": "Bakmak, ilgilenmek, halletmek",
+      "options": ["hoitaa", "keksiä", "viedä", "painaa"],
+      "answer": 0,
+      "explanation": "'Hoitaa' (tip 1) halletmek/bakmak/üstesinden gelmek demektir; 'hoidan' = hallederim.",
+      "example": "Hoidan asian itse.",
+      "exampletranslate": "İşi kendim hallederim."
+    },
+    {
+      "id": 33,
+      "type": "multiple-choice",
+      "question": "Ölü, ölmüş",
+      "options": ["kuollut", "väsynyt", "tuttu", "tumma"],
+      "answer": 0,
+      "explanation": "'Kuollut' ölü/ölmüş demektir; tamlayanı 'kuolleen'.",
+      "example": "Kasvi on kuollut.",
+      "exampletranslate": "Bitki ölmüş."
+    },
+    {
+      "id": 34,
+      "type": "multiple-choice",
+      "question": "Mal, eşya",
+      "options": ["tavara", "rasia", "pakkaus", "kassi"],
+      "answer": 0,
+      "explanation": "'Tavara' mal, eşya demektir.",
+      "example": "Kaupassa on paljon tavaraa.",
+      "exampletranslate": "Mağazada çok eşya var."
+    },
+    {
+      "id": 35,
+      "type": "multiple-choice",
+      "question": "Şekerleme",
+      "options": ["karkki", "makea", "mauste", "tuoremehu"],
+      "answer": 0,
+      "explanation": "'Karkki' şekerleme/şeker demektir; tamlayanı 'karkin'.",
+      "example": "Lapset syövät karkkia lauantaina.",
+      "exampletranslate": "Çocuklar cumartesi şeker yer."
+    },
+    {
+      "id": 36,
+      "type": "multiple-choice",
+      "question": "Taze meyve suyu",
+      "options": ["tuoremehu", "mauste", "makea", "karkki"],
+      "answer": 0,
+      "explanation": "'Tuoremehu' taze meyve suyu demektir ('tuore' + 'mehu').",
+      "example": "Juon tuoremehua aamulla.",
+      "exampletranslate": "Sabah taze meyve suyu içerim."
+    },
+    {
+      "id": 37,
+      "type": "multiple-choice",
+      "question": "Şişe / kutu depozitosu",
+      "options": ["pantti", "pakkaus", "rasia", "kassi"],
+      "answer": 0,
+      "explanation": "'Pantti' (şişe) depozito veya rehin demektir; tamlayanı 'pantin'.",
+      "example": "Pullosta saa pantin takaisin.",
+      "exampletranslate": "Şişeden depozitoyu geri alırsın."
+    },
+    {
+      "id": 38,
+      "type": "multiple-choice",
+      "question": "Düğmeye basmak / ağırlığında olmak",
+      "options": ["painaa", "viedä", "keksiä", "meikata"],
+      "answer": 0,
+      "explanation": "'Painaa' (tip 1) basmak veya ağırlığında olmak/tartmak demektir; 'painan' = basarım/tartarım.",
+      "example": "Kuinka paljon tämä painaa?",
+      "exampletranslate": "Bu ne kadar ağırlıkta (kaç kilo)?"
+    },
+    {
+      "id": 39,
+      "type": "multiple-choice",
+      "question": "Şu (işaret zamiri)",
+      "options": ["tuo", "tumma", "tavara", "tuttu"],
+      "answer": 0,
+      "explanation": "'Tuo' şu (oradaki) demektir; tamlayanı 'tuon'.",
+      "example": "Otan tuon omenan.",
+      "exampletranslate": "Şu elmayı alıyorum."
+    },
+    {
+      "id": 40,
+      "type": "multiple-choice",
+      "question": "Domuz (hayvan)",
+      "options": ["sika", "mauste", "paisti", "karkki"],
+      "answer": 0,
+      "explanation": "'Sika' domuz demektir; 'sianliha' domuz etidir; tamlayanı 'sian'.",
+      "example": "En syö sianlihaa.",
+      "exampletranslate": "Domuz eti yemem."
+    },
+    {
+      "id": 41,
+      "type": "multiple-choice",
+      "question": "Baharat, çeşni",
+      "options": ["mauste", "karkki", "makea", "tuoremehu"],
+      "answer": 0,
+      "explanation": "'Mauste' baharat/çeşni demektir; tamlayanı 'mausteen'.",
+      "example": "Lisään ruokaan mausteita.",
+      "exampletranslate": "Yemeğe baharat eklerim."
+    },
+    {
+      "id": 42,
+      "type": "multiple-choice",
+      "question": "Paketleme / ambalaj",
+      "options": ["pakkaus", "rasia", "kassi", "pantti"],
+      "answer": 0,
+      "explanation": "'Pakkaus' paket/ambalaj demektir; tamlayanı 'pakkauksen'.",
+      "example": "Lue pakkauksen ohjeet.",
+      "exampletranslate": "Ambalajın talimatlarını oku."
+    },
+    {
+      "id": 43,
+      "type": "multiple-choice",
+      "question": "Alışveriş torbası (büyük)",
+      "options": ["kassi", "rasia", "pakkaus", "pantti"],
+      "answer": 0,
+      "explanation": "'Kassi' (büyük) çanta/alışveriş torbası demektir; tamlayanı 'kassin'.",
+      "example": "Laitan ruoan kassiin.",
+      "exampletranslate": "Yiyecekleri torbaya koyarım."
+    },
+    {
+      "id": 44,
+      "type": "multiple-choice",
+      "question": "Açık ton (renklerde) / hafif (yemeklerde)",
+      "options": ["vaalea", "tumma", "makea", "perinteinen"],
+      "answer": 0,
+      "explanation": "'Vaalea' açık (renk) veya hafif/açık tonlu demektir.",
+      "example": "Ostan vaaleaa leipää.",
+      "exampletranslate": "Açık (beyaz) ekmek alırım."
+    },
+    {
+      "id": 45,
+      "type": "multiple-choice",
+      "question": "Kutu, karton",
+      "options": ["rasia", "kassi", "pakkaus", "pantti"],
+      "answer": 0,
+      "explanation": "'Rasia' küçük kutu/karton demektir.",
+      "example": "Ostan rasian mansikoita.",
+      "exampletranslate": "Bir kutu çilek alırım."
+    },
+    {
+      "id": 46,
+      "type": "multiple-choice",
+      "question": "Tatlı (lezzet)",
+      "options": ["makea", "tumma", "vaalea", "mauste"],
+      "answer": 0,
+      "explanation": "'Makea' tatlı (lezzet) demektir.",
+      "example": "Tämä mehu on liian makeaa.",
+      "exampletranslate": "Bu meyve suyu çok tatlı."
+    },
+    {
+      "id": 47,
+      "type": "multiple-choice",
+      "question": "Kısaltmak",
+      "options": ["lyhentää", "painaa", "viedä", "keittää"],
+      "answer": 0,
+      "explanation": "'Lyhentää' (tip 1) kısaltmak demektir; 'lyhennän' = kısaltırım.",
+      "example": "Lyhennän tekstiä.",
+      "exampletranslate": "Metni kısaltırım."
+    },
+    {
+      "id": 48,
+      "type": "multiple-choice",
+      "question": "Geleneksel",
+      "options": ["perinteinen", "mielenkiintoinen", "tumma", "tuttu"],
+      "answer": 0,
+      "explanation": "'Perinteinen' geleneksel demektir; tamlayanı 'perinteisen'.",
+      "example": "Tämä on perinteinen suomalainen ruoka.",
+      "exampletranslate": "Bu geleneksel bir Fin yemeği."
+    },
+    {
+      "id": 49,
+      "type": "multiple-choice",
+      "question": "Rosto, fırınlanmış büyük parça et",
+      "options": ["paisti", "sika", "mauste", "karkki"],
+      "answer": 0,
+      "explanation": "'Paisti' rosto/fırınlanmış büyük et parçası demektir.",
+      "example": "Sunnuntaina syömme paistia.",
+      "exampletranslate": "Pazar günü rosto yeriz."
+    },
+    {
+      "id": 50,
+      "type": "multiple-choice",
+      "question": "Koyu, bitter, esmer",
+      "options": ["tumma", "vaalea", "makea", "perinteinen"],
+      "answer": 0,
+      "explanation": "'Tumma' koyu (renk), bitter veya esmer demektir.",
+      "example": "Pidän tummasta suklaasta.",
+      "exampletranslate": "Bitter çikolatayı severim."
+    }
+  ]
+}
