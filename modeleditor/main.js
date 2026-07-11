@@ -370,10 +370,8 @@ const RULER_W = 40;
     kl.add(wg);
     layerDef.konvaLayer = kl;
     layerDef.worldGroup = wg;
-    // Insert before overlayLayer so overlay + rulers stay on top
-    kl.moveToIndex(stage.getLayers().indexOf(overlayLayer));
-    stage.add(kl); // Konva appends, then we reorder below
-    kl.moveToIndex(stage.getLayers().indexOf(overlayLayer));
+    stage.add(kl);
+    // Caller is responsible for calling reorderKonvaLayers() after all layers are created
   }
 
   // Build the initial stage order: contentLayer → user layers → previewLayer → overlayLayer → rulerLayer
@@ -390,14 +388,13 @@ const RULER_W = 40;
     kl.add(wg);
     l.konvaLayer = kl;
     l.worldGroup = wg;
-    // Insert before overlayLayer
     stage.add(kl);
-    kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
   });
 
-  // previewLayer sits above all user layers but below overlay/rulers
+  // previewLayer, overlayLayer, rulerLayer always stay on top — initial order is set by reorderKonvaLayers below
   stage.add(previewLayer);
-  previewLayer.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
+  // Establish correct initial layer order
+  reorderKonvaLayers();
 
   // ── Layer UI ─────────────────────────────────────────────────
   const layersList = document.getElementById('layers-list');
@@ -408,10 +405,17 @@ const RULER_W = 40;
     return getLayer(activeLayerId)?.worldGroup ?? null;
   }
 
-  // Sync Konva z-indices to match the current layers[] order.
-  // Stage order: contentLayer(0) → user layers(1…N) → overlayLayer → rulerLayer
+  // Sync Konva layer stack to match layers[] order.
+  // layers[0] = top of UI list = rendered on top (front).
+  // layers[N-1] = bottom of UI list = rendered at back.
+  // Fixed layers: contentLayer at absolute bottom, then user layers, then previewLayer/overlayLayer/rulerLayer.
   function reorderKonvaLayers() {
-    layers.forEach((l, i) => l.konvaLayer.zIndex(i + 1));
+    contentLayer.moveToBottom();
+    // Move user layers in reverse so layers[0] ends up on top
+    [...layers].reverse().forEach(l => { if (l.konvaLayer) l.konvaLayer.moveToTop(); });
+    previewLayer.moveToTop();
+    overlayLayer.moveToTop();
+    rulerLayer.moveToTop();
   }
 
   // ── Drag-to-reorder ──────────────────────────────────────────
@@ -689,7 +693,7 @@ const RULER_W = 40;
     def.konvaLayer = kl;
     def.worldGroup = wg;
     stage.add(kl);
-    kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
+    reorderKonvaLayers();
 
     activeLayerId = id;
     renderLayersUI();
@@ -1664,9 +1668,21 @@ const RULER_W = 40;
         return;
       }
       if (e.evt.shiftKey) {
-        if (selectedPointId) { setPointStyle(getPoint(selectedPointId), false); selectedPointId = null; }
-        if (selectedPathId) { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (prev?.connectionType === 'BEZIER') drawPath(prev); selectedPathId = null; }
-        if (selectedLocationId) { setLocationStyle(getLocation(selectedLocationId), false); selectedLocationId = null; }
+        // Promote any prior single selection into multiSelection
+        if (selectedPointId) {
+          multiSelection.push({ id: selectedPointId, kind: 'point' });
+          setPointMultiStyle(getPoint(selectedPointId));
+          selectedPointId = null;
+        }
+        if (selectedLocationId && selectedLocationId !== loc.id) {
+          multiSelection.push({ id: selectedLocationId, kind: 'location' });
+          setLocationMultiStyle(getLocation(selectedLocationId));
+          selectedLocationId = null;
+        } else if (selectedLocationId) {
+          setLocationStyle(getLocation(selectedLocationId), false);
+          selectedLocationId = null;
+        }
+        if (selectedPathId) { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (needsHandleRedraw(prev)) drawPath(prev, false); selectedPathId = null; }
         if (selectedLinkId) { setLinkStyle(getLink(selectedLinkId), false); selectedLinkId = null; }
         if (selectedLtId) { selectedLtId = null; }
         if (selectedBlockId) { selectedBlockId = null; }
@@ -1889,28 +1905,19 @@ const RULER_W = 40;
     return [pt.x, -pt.y, loc.x, -loc.y];
   }
 
-  function linkArrPts(lk) {
+  function linkEndPos(lk) {
     const pt  = getPoint(lk.pointId);
     const loc = getLocation(lk.locationId);
-    if (!pt || !loc) return [0, 0, 0, 0, 0, 0];
-    const dx = loc.x - pt.x, dy = pt.y - loc.y; // screen-space dy (Y-down)
-    const len = Math.sqrt(dx*dx + dy*dy) || 1;
-    const ux = dx/len, uy = dy/len;
-    const px = -uy, py = ux;
-    const ex = loc.x - ux * LOC_HALF;
-    const ey = -loc.y - uy * LOC_HALF;
-    return [
-      ex, ey,
-      ex - ux*ARROW_LEN + px*(ARROW_W/2), ey - uy*ARROW_LEN + py*(ARROW_W/2),
-      ex - ux*ARROW_LEN - px*(ARROW_W/2), ey - uy*ARROW_LEN - py*(ARROW_W/2),
-    ];
+    if (!pt || !loc) return { ptX: 0, ptY: 0, locX: 0, locY: 0 };
+    return { ptX: pt.x, ptY: -pt.y, locX: loc.x, locY: -loc.y };
   }
 
   function setLinkStyle(lk, selected) {
     if (!lk?.konvaGroup) return;
     const col = selected ? LINK_STROKE_SEL : LINK_STROKE;
     lk.konvaGroup.findOne('.link-line')?.stroke(col);
-    lk.konvaGroup.findOne('.link-arr')?.fill(col).stroke(col);
+    lk.konvaGroup.findOne('.link-dot-pt')?.fill(col);
+    lk.konvaGroup.findOne('.link-dot-loc')?.fill(col);
     getLayer(lk.layerId)?.konvaLayer.batchDraw();
   }
 
@@ -1940,15 +1947,18 @@ const RULER_W = 40;
       listening: false,
     }));
 
-    g.add(new Konva.Line({
-      name: 'link-arr',
-      points: linkArrPts(lk),
-      closed: true,
-      fill: LINK_STROKE,
-      stroke: LINK_STROKE,
-      strokeWidth: 0,
-      strokeScaleEnabled: false,
-      listening: false,
+    const { ptX, ptY, locX, locY } = linkEndPos(lk);
+    g.add(new Konva.Circle({
+      name: 'link-dot-pt',
+      x: ptX, y: ptY, radius: 3,
+      fill: LINK_STROKE, strokeWidth: 0,
+      strokeScaleEnabled: false, listening: false,
+    }));
+    g.add(new Konva.Circle({
+      name: 'link-dot-loc',
+      x: locX, y: locY, radius: 3,
+      fill: LINK_STROKE, strokeWidth: 0,
+      strokeScaleEnabled: false, listening: false,
     }));
 
     g.on('click', e => { e.cancelBubble = true; selectLink(lk.id); });
@@ -1965,9 +1975,12 @@ const RULER_W = 40;
 
   function updateLinkGeometry(lk) {
     if (!lk.konvaGroup) return;
-    lk.konvaGroup.findOne('.link-hit')?.points(linkPts(lk));
-    lk.konvaGroup.findOne('.link-line')?.points(linkPts(lk));
-    lk.konvaGroup.findOne('.link-arr')?.points(linkArrPts(lk));
+    const pts = linkPts(lk);
+    lk.konvaGroup.findOne('.link-hit')?.points(pts);
+    lk.konvaGroup.findOne('.link-line')?.points(pts);
+    const { ptX, ptY, locX, locY } = linkEndPos(lk);
+    lk.konvaGroup.findOne('.link-dot-pt')?.position({ x: ptX, y: ptY });
+    lk.konvaGroup.findOne('.link-dot-loc')?.position({ x: locX, y: locY });
     getLayer(lk.layerId)?.konvaLayer.batchDraw();
   }
 
@@ -2932,6 +2945,12 @@ const RULER_W = 40;
     if (selectedLtId) selectedLtId = null;
     if (selectedBlockId) selectedBlockId = null;
     if (selectedVehicleId) selectedVehicleId = null;
+    if (selectedPathId) {
+      const prev = getPath(selectedPathId);
+      setPathStyle(prev, false);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
+      selectedPathId = null;
+    }
     if (selectedLocationId) { setLocationStyle(getLocation(selectedLocationId), false); selectedLocationId = null; }
     if (selectedLinkId) { setLinkStyle(getLink(selectedLinkId), false); selectedLinkId = null; }
     // Deselect previous (only if switching to a different point)
@@ -3106,10 +3125,21 @@ const RULER_W = 40;
         return;
       }
       if (e.evt.shiftKey) {
-        // Deselect any single-selection first
-        if (selectedPointId) { setPointStyle(getPoint(selectedPointId), false); selectedPointId = null; }
-        if (selectedPathId) { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (prev?.connectionType === 'BEZIER') drawPath(prev); selectedPathId = null; }
-        if (selectedLocationId) { setLocationStyle(getLocation(selectedLocationId), false); selectedLocationId = null; }
+        // Promote any prior single selection into multiSelection
+        if (selectedPointId && selectedPointId !== p.id) {
+          multiSelection.push({ id: selectedPointId, kind: 'point' });
+          setPointMultiStyle(getPoint(selectedPointId));
+          selectedPointId = null;
+        } else if (selectedPointId) {
+          setPointStyle(getPoint(selectedPointId), false);
+          selectedPointId = null;
+        }
+        if (selectedLocationId) {
+          multiSelection.push({ id: selectedLocationId, kind: 'location' });
+          setLocationMultiStyle(getLocation(selectedLocationId));
+          selectedLocationId = null;
+        }
+        if (selectedPathId) { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (needsHandleRedraw(prev)) drawPath(prev, false); selectedPathId = null; }
         if (selectedLinkId) { setLinkStyle(getLink(selectedLinkId), false); selectedLinkId = null; }
         if (selectedLtId) { selectedLtId = null; }
         if (selectedBlockId) { selectedBlockId = null; }
@@ -3156,6 +3186,10 @@ const RULER_W = 40;
       const [c1, c2] = pa.controlPoints;
       return `M ${sp.x} ${-sp.y} C ${c1.x} ${-c1.y} ${c2.x} ${-c2.y} ${ep.x} ${-ep.y}`;
     }
+    if (pa.connectionType === 'BEZIER_Q' && pa.controlPoints.length === 1) {
+      const [c] = pa.controlPoints;
+      return `M ${sp.x} ${-sp.y} Q ${c.x} ${-c.y} ${ep.x} ${-ep.y}`;
+    }
     if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
       const mid = pa.controlPoints.map(cp => `L ${cp.x} ${-cp.y}`).join(' ');
       return `M ${sp.x} ${-sp.y} ${mid} L ${ep.x} ${-ep.y}`;
@@ -3171,6 +3205,9 @@ const RULER_W = 40;
     if (pa.connectionType === 'BEZIER' && pa.controlPoints.length === 2) {
       const c2 = pa.controlPoints[1];
       tx2 = ep.x - c2.x; ty2 = c2.y - ep.y; // screen-space (Y-down)
+    } else if (pa.connectionType === 'BEZIER_Q' && pa.controlPoints.length === 1) {
+      const c = pa.controlPoints[0];
+      tx2 = ep.x - c.x; ty2 = c.y - ep.y; // tangent at end: Q→P1
     } else if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
       const prev = pa.controlPoints[pa.controlPoints.length - 1];
       tx2 = ep.x - prev.x; ty2 = prev.y - ep.y; // screen-space (Y-down)
@@ -3195,6 +3232,10 @@ const RULER_W = 40;
         { x: sp.x + (ep.x - sp.x) / 3, y: sp.y + (ep.y - sp.y) / 3 },
         { x: sp.x + (ep.x - sp.x) * 2 / 3, y: sp.y + (ep.y - sp.y) * 2 / 3 },
       ];
+    } else if (pa.connectionType === 'BEZIER_Q') {
+      pa.controlPoints = [
+        { x: (sp.x + ep.x) / 2, y: (sp.y + ep.y) / 2 },
+      ];
     } else if (pa.connectionType === 'POLYLINE') {
       pa.controlPoints = [
         { x: (sp.x + ep.x) / 2, y: (sp.y + ep.y) / 2 },
@@ -3202,38 +3243,13 @@ const RULER_W = 40;
     }
   }
 
-  // Compute Bezier control points that approximate a circular arc of given radius.
-  // side: +1 = arc bulges left of P1→P2, -1 = bulges right.
-  function computeArcControlPoints(pa, radius, side) {
-    const sp = getPoint(pa.startPointId);
-    const ep = getPoint(pa.endPointId);
-    if (!sp || !ep) return;
-    const dx = ep.x - sp.x, dy = ep.y - sp.y;
-    const d  = Math.sqrt(dx*dx + dy*dy);
-    if (d < 1) return;
-    const R = Math.max(Math.abs(radius), d / 2 + 1);
-    const ux = dx/d, uy = dy/d;
-    // perpendicular pointing left of travel direction
-    const lx = -uy, ly = ux;
-    // arc center is on the opposite side of the bulge
-    const sagitta = R - Math.sqrt(R*R - (d/2)*(d/2));
-    const cx = (sp.x+ep.x)/2 - side * lx * (R - sagitta);
-    const cy = (sp.y+ep.y)/2 - side * ly * (R - sagitta);
-    // arc angle and Bezier factor
-    const theta = 2 * Math.asin(Math.min(d/(2*R), 1));
-    const k     = (4/3) * Math.tan(theta/4) * R;
-    // tangent at each endpoint (CW for left-bulge, CCW for right-bulge)
-    const v1x = sp.x-cx, v1y = sp.y-cy;
-    const v2x = ep.x-cx, v2y = ep.y-cy;
-    const t1x = side * v1y/R, t1y = -side * v1x/R;
-    const t2x = side * v2y/R, t2y = -side * v2x/R;
-    pa.controlPoints = [
-      { x: sp.x + k*t1x, y: sp.y + k*t1y },
-      { x: ep.x - k*t2x, y: ep.y - k*t2y },
-    ];
+  // Returns true when a path needs drawPath() called on select/deselect to show or hide handles.
+  function needsHandleRedraw(pa) {
+    if (!pa || !pa.controlPoints?.length) return false;
+    return pa.connectionType === 'BEZIER' || pa.connectionType === 'BEZIER_Q' || pa.connectionType === 'POLYLINE';
   }
 
-  function drawPath(pa) {
+  function drawPath(pa, withHandles = (selectedPathId === pa.id)) {
     const layer = getLayer(pa.layerId);
     if (!layer?.worldGroup) return;
     if (pa.konvaGroup) pa.konvaGroup.destroy();
@@ -3276,29 +3292,61 @@ const RULER_W = 40;
     g.add(arrow);
 
     // Control point handles (only when selected)
-    if (selectedPathId === pa.id && pa.controlPoints.length > 0) {
-      const isBezier = pa.connectionType === 'BEZIER';
+    if (withHandles && pa.controlPoints.length > 0) {
+      const isBezier  = pa.connectionType === 'BEZIER';
+      const isBezierQ = pa.connectionType === 'BEZIER_Q';
+      const spPt = getPoint(pa.startPointId);
+      const epPt = getPoint(pa.endPointId);
       pa.controlPoints.forEach((cp, i) => {
         if (isBezier) {
-          const spPt = getPoint(pa.startPointId);
-          const epPt = getPoint(pa.endPointId);
           const anchor = i === 0 ? spPt : epPt;
           g.add(new Konva.Line({
+            name: 'cp-line-' + i,
             points: [anchor.x, -anchor.y, cp.x, -cp.y],
+            stroke: '#aaa', strokeWidth: 1, dash: [4, 3],
+            strokeScaleEnabled: false, listening: false,
+          }));
+        } else if (isBezierQ) {
+          g.add(new Konva.Line({
+            name: 'cp-line-sp',
+            points: [spPt.x, -spPt.y, cp.x, -cp.y],
+            stroke: '#aaa', strokeWidth: 1, dash: [4, 3],
+            strokeScaleEnabled: false, listening: false,
+          }));
+          g.add(new Konva.Line({
+            name: 'cp-line-ep',
+            points: [epPt.x, -epPt.y, cp.x, -cp.y],
             stroke: '#aaa', strokeWidth: 1, dash: [4, 3],
             strokeScaleEnabled: false, listening: false,
           }));
         }
         const handle = new Konva.Circle({
-          x: cp.x, y: -cp.y, radius: isBezier ? 5 : 6,
+          name: 'wp-handle-' + i,
+          x: cp.x, y: -cp.y, radius: (isBezier || isBezierQ) ? 5 : 6,
           fill: '#fff',
-          stroke: isBezier ? PATH_STROKE_SEL : '#7c3aed',
+          stroke: (isBezier || isBezierQ) ? PATH_STROKE_SEL : '#7c3aed',
           strokeWidth: 1.5,
           strokeScaleEnabled: false, draggable: true,
         });
         handle.on('dragmove', () => {
           pa.controlPoints[i] = { x: Math.round(handle.x()), y: -Math.round(handle.y()) };
           updatePathGeometry(pa);
+          // Update dashed reference lines
+          if (isBezier) {
+            const anchor = i === 0 ? spPt : epPt;
+            g.findOne('.cp-line-' + i)?.points([anchor.x, -anchor.y, handle.x(), handle.y()]);
+          } else if (isBezierQ) {
+            g.findOne('.cp-line-sp')?.points([spPt.x, -spPt.y, handle.x(), handle.y()]);
+            g.findOne('.cp-line-ep')?.points([epPt.x, -epPt.y, handle.x(), handle.y()]);
+          }
+          // Live-update coordinates in the properties panel
+          if (pa.connectionType === 'POLYLINE') {
+            const propPanel = document.getElementById('properties-panel');
+            const xInp = propPanel?.querySelector(`.pp-wp-x[data-idx="${i}"]`);
+            const yInp = propPanel?.querySelector(`.pp-wp-y[data-idx="${i}"]`);
+            if (xInp) xInp.value = pa.controlPoints[i].x;
+            if (yInp) yInp.value = pa.controlPoints[i].y;
+          }
         });
         handle.on('click', e => e.cancelBubble = true);
         g.add(handle);
@@ -3345,14 +3393,14 @@ const RULER_W = 40;
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
       // Redraw prev to hide control handles
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
     }
     if (selectedPointId) { setPointStyle(getPoint(selectedPointId), false); selectedPointId = null; }
     selectedPathId = id;
     const pa = getPath(id);
     if (!pa) return;
     setPathStyle(pa, true);
-    if (pa.connectionType === 'BEZIER') drawPath(pa); // redraw to show handles
+    if (needsHandleRedraw(pa)) drawPath(pa); // redraw to show handles
     renderPathProperties(pa);
     renderComponentsTree();
   }
@@ -3361,7 +3409,7 @@ const RULER_W = 40;
     if (selectedPathId) {
       const pa = getPath(selectedPathId);
       setPathStyle(pa, false);
-      if (pa?.connectionType === 'BEZIER') drawPath(pa);
+      if (needsHandleRedraw(pa)) drawPath(pa, false);
       selectedPathId = null;
     }
   }
@@ -3383,7 +3431,7 @@ const RULER_W = 40;
     if (selectedPathId)  {
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
       selectedPathId = null;
     }
     if (selectedLtId) selectedLtId = null;
@@ -3423,7 +3471,7 @@ const RULER_W = 40;
     if (selectedPathId) {
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
       selectedPathId = null;
     }
     if (selectedLtId) selectedLtId = null;
@@ -3460,7 +3508,7 @@ const RULER_W = 40;
     if (selectedPathId) {
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
       selectedPathId = null;
     }
     if (selectedBlockId) selectedBlockId = null;
@@ -3501,7 +3549,7 @@ const RULER_W = 40;
     if (selectedPathId) {
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
       selectedPathId = null;
     }
     if (selectedLtId) selectedLtId = null;
@@ -3540,7 +3588,7 @@ const RULER_W = 40;
     if (selectedPathId) {
       const prev = getPath(selectedPathId);
       setPathStyle(prev, false);
-      if (prev?.connectionType === 'BEZIER') drawPath(prev);
+      if (needsHandleRedraw(prev)) drawPath(prev, false);
       selectedPathId = null;
     }
     if (selectedLtId) selectedLtId = null;
@@ -3652,6 +3700,7 @@ const RULER_W = 40;
     if (undoStack.length > MAX_UNDO) undoStack.shift();
     redoStack.length = 0;
     updateUndoRedoButtons();
+    markDirty();
   }
 
   function updateUndoRedoButtons() {
@@ -3808,33 +3857,12 @@ const RULER_W = 40;
           <tr>
             <td>Path connection type</td>
             <td><select class="pp-pa-type">
-              <option value="DIRECT"   ${pa.connectionType === 'DIRECT'   ? 'selected' : ''}>Direct</option>
-              <option value="BEZIER"   ${pa.connectionType === 'BEZIER'   ? 'selected' : ''}>Bezier curve</option>
-              <option value="POLYLINE" ${pa.connectionType === 'POLYLINE' ? 'selected' : ''}>Polyline</option>
+              <option value="DIRECT"    ${pa.connectionType === 'DIRECT'    ? 'selected' : ''}>Direct</option>
+              <option value="BEZIER"    ${pa.connectionType === 'BEZIER'    ? 'selected' : ''}>Bezier curve (cubic)</option>
+              <option value="BEZIER_Q"  ${pa.connectionType === 'BEZIER_Q'  ? 'selected' : ''}>Bezier curve (quadratic)</option>
+              <option value="POLYLINE"  ${pa.connectionType === 'POLYLINE'  ? 'selected' : ''}>Polyline</option>
             </select></td>
           </tr>
-          ${pa.connectionType === 'BEZIER' ? `
-          <tr>
-            <td colspan="2">
-              <details style="margin:2px 0;">
-                <summary style="cursor:pointer;font-size:11px;color:var(--muted);user-select:none;">
-                  Set from radius…
-                </summary>
-                <div style="display:flex;gap:6px;align-items:center;padding:6px 0 2px;">
-                  <input id="pp-arc-radius" type="number" min="1" step="any" placeholder="Radius (mm)"
-                    style="flex:1;font-family:var(--font-mono);font-size:11px;border:1px solid var(--border);padding:2px 4px;">
-                  <label style="font-size:11px;white-space:nowrap;display:flex;align-items:center;gap:3px;">
-                    <input type="radio" name="pp-arc-side" id="pp-arc-left" value="1" checked> Left
-                  </label>
-                  <label style="font-size:11px;white-space:nowrap;display:flex;align-items:center;gap:3px;">
-                    <input type="radio" name="pp-arc-side" id="pp-arc-right" value="-1"> Right
-                  </label>
-                  <button id="pp-arc-apply" style="font-size:11px;padding:2px 8px;border:1px solid var(--border);
-                    background:#f3f1ec;border-radius:2px;cursor:pointer;">Apply</button>
-                </div>
-              </details>
-            </td>
-          </tr>` : ''}
           ${pa.connectionType === 'POLYLINE' ? `
           <tr>
             <td colspan="2" style="padding:4px 0 2px;">
@@ -3843,7 +3871,7 @@ const RULER_W = 40;
                   background:#f3f1ec;border-radius:2px;cursor:pointer;flex:1;">+ Add waypoint</button>
               </div>
               ${pa.controlPoints.length > 0 ? `
-              <table style="width:100%;font-family:var(--font-mono);font-size:11px;margin-top:4px;border-collapse:collapse;">
+              <table style="width:100%;font-family:var(--font-mono);font-size:11px;margin-top:2px;border-collapse:collapse;">
                 <thead><tr style="background:#e8e5de;">
                   <th style="padding:2px 6px;text-align:left;">#</th>
                   <th style="padding:2px 6px;text-align:left;">X</th>
@@ -3852,15 +3880,15 @@ const RULER_W = 40;
                 </tr></thead>
                 <tbody>
                   ${pa.controlPoints.map((cp, i) => `
-                  <tr style="border-bottom:1px solid #eee;">
+                  <tr class="pp-wp-row" data-idx="${i}" style="border-bottom:1px solid #eee;cursor:pointer;">
                     <td style="padding:2px 6px;">${i + 1}</td>
                     <td style="padding:2px 6px;">
                       <input class="pp-wp-x" data-idx="${i}" type="number" step="1" value="${Math.round(cp.x)}"
-                        style="width:70px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
+                        style="width:60px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
                     </td>
                     <td style="padding:2px 6px;">
                       <input class="pp-wp-y" data-idx="${i}" type="number" step="1" value="${Math.round(cp.y)}"
-                        style="width:70px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
+                        style="width:60px;font-family:inherit;font-size:inherit;border:1px solid var(--border);padding:1px 3px;">
                     </td>
                     <td style="padding:2px 4px;">
                       <button class="pp-wp-del" data-idx="${i}"
@@ -3958,24 +3986,11 @@ const RULER_W = 40;
       if (newType === pa.connectionType) return;
       pa.connectionType = newType;
       pa.controlPoints = [];
-      if (newType === 'BEZIER' || newType === 'POLYLINE') seedControlPoints(pa);
+      if (newType === 'BEZIER' || newType === 'BEZIER_Q' || newType === 'POLYLINE') seedControlPoints(pa);
       drawPath(pa);
       setPathStyle(pa, true);
       renderPathProperties(pa); // re-render to show/hide radius helper / waypoints
     });
-
-    // Bezier radius helper
-    const arcApplyBtn = q('#pp-arc-apply');
-    if (arcApplyBtn) {
-      arcApplyBtn.addEventListener('click', () => {
-        const r = parseFloat(q('#pp-arc-radius').value);
-        if (isNaN(r) || r <= 0) return;
-        const side = parseInt(document.querySelector('input[name="pp-arc-side"]:checked').value);
-        computeArcControlPoints(pa, r, side);
-        drawPath(pa);
-        setPathStyle(pa, true);
-      });
-    }
 
     // Polyline waypoint controls
     const wpAdd = q('#pp-wp-add');
@@ -4014,6 +4029,30 @@ const RULER_W = 40;
         renderPathProperties(pa);
       });
     });
+
+    // Waypoint row selection — highlights the matching canvas handle
+    let wpSel = -1;
+    function applyWpHandleColors() {
+      if (!pa.konvaGroup) return;
+      pa.controlPoints.forEach((_, j) => {
+        const h = pa.konvaGroup.findOne('.wp-handle-' + j);
+        if (!h) return;
+        if (j === wpSel) { h.fill('#fef08a'); h.stroke('#d97706'); }
+        else             { h.fill('#fff');    h.stroke('#7c3aed'); }
+      });
+      getLayer(pa.layerId)?.konvaLayer.batchDraw();
+    }
+    panel.querySelectorAll('.pp-wp-row').forEach(row => {
+      row.addEventListener('click', e => {
+        if (e.target.closest('input, button')) return;
+        const i = parseInt(row.dataset.idx);
+        wpSel = (wpSel === i) ? -1 : i;
+        panel.querySelectorAll('.pp-wp-row').forEach(r =>
+          r.style.background = parseInt(r.dataset.idx) === wpSel ? '#fef9c3' : '');
+        applyWpHandleColors();
+      });
+    });
+
     // Inline waypoint coordinate edits
     panel.querySelectorAll('.pp-wp-x').forEach(inp => {
       inp.addEventListener('change', () => {
@@ -4164,6 +4203,8 @@ const RULER_W = 40;
   // ── Grid (redrawn to show only visible tiles) ─────────────────
   let gridVisible = true;
 
+  const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
   function drawGrid() {
     gridGroup.destroyChildren();
     if (!gridVisible) return;
@@ -4179,20 +4220,22 @@ const RULER_W = 40;
     const wy1 = (H - oy) / s;
 
     const snap = (v, step) => Math.floor(v / step) * step;
+    const fineCol   = cssVar('--border-faint');
+    const coarseCol = cssVar('--border');
 
     // Fine grid (20 units) — skip if too dense on screen
     if (20 * s >= 4) {
       for (let x = snap(wx0, 20); x <= wx1; x += 20)
-        gridGroup.add(new Konva.Line({ points: [x, wy0, x, wy1], stroke: '#eceae5', strokeWidth: 0.5 / s }));
+        gridGroup.add(new Konva.Line({ points: [x, wy0, x, wy1], stroke: fineCol, strokeWidth: 0.5 / s }));
       for (let y = snap(wy0, 20); y <= wy1; y += 20)
-        gridGroup.add(new Konva.Line({ points: [wx0, y, wx1, y], stroke: '#eceae5', strokeWidth: 0.5 / s }));
+        gridGroup.add(new Konva.Line({ points: [wx0, y, wx1, y], stroke: fineCol, strokeWidth: 0.5 / s }));
     }
 
     // Coarse grid (100 units)
     for (let x = snap(wx0, 100); x <= wx1; x += 100)
-      gridGroup.add(new Konva.Line({ points: [x, wy0, x, wy1], stroke: '#dcdad4', strokeWidth: 0.6 / s }));
+      gridGroup.add(new Konva.Line({ points: [x, wy0, x, wy1], stroke: coarseCol, strokeWidth: 0.6 / s }));
     for (let y = snap(wy0, 100); y <= wy1; y += 100)
-      gridGroup.add(new Konva.Line({ points: [wx0, y, wx1, y], stroke: '#dcdad4', strokeWidth: 0.6 / s }));
+      gridGroup.add(new Konva.Line({ points: [wx0, y, wx1, y], stroke: coarseCol, strokeWidth: 0.6 / s }));
   }
 
   // ── Rulers (fixed, redrawn on every pan/zoom) ─────────────────
@@ -4204,10 +4247,13 @@ const RULER_W = 40;
     const oy = ty;
 
     // Backgrounds
-    rulerLayer.add(new Konva.Rect({ x: 0, y: 0, width: W, height: RULER_H, fill: '#fff' }));
-    rulerLayer.add(new Konva.Rect({ x: 0, y: 0, width: RULER_W, height: H,  fill: '#fff' }));
-    rulerLayer.add(new Konva.Line({ points: [RULER_W, RULER_H, W, RULER_H], stroke: '#d4d1cb', strokeWidth: 1 }));
-    rulerLayer.add(new Konva.Line({ points: [RULER_W, RULER_H, RULER_W, H], stroke: '#d4d1cb', strokeWidth: 1 }));
+    const rulerBg  = cssVar('--panel');
+    const rulerBdr = cssVar('--border');
+    const rulerTick = cssVar('--muted');
+    rulerLayer.add(new Konva.Rect({ x: 0, y: 0, width: W, height: RULER_H, fill: rulerBg }));
+    rulerLayer.add(new Konva.Rect({ x: 0, y: 0, width: RULER_W, height: H,  fill: rulerBg }));
+    rulerLayer.add(new Konva.Line({ points: [RULER_W, RULER_H, W, RULER_H], stroke: rulerBdr, strokeWidth: 1 }));
+    rulerLayer.add(new Konva.Line({ points: [RULER_W, RULER_H, RULER_W, H], stroke: rulerBdr, strokeWidth: 1 }));
 
     // Pick a step that keeps screen gaps between 50–120px
     const minGap = 50;
@@ -4220,8 +4266,8 @@ const RULER_W = 40;
     for (let wx = wxStart; ox + wx * s <= W; wx += step) {
       const sx = ox + wx * s;
       if (sx < RULER_W) continue;
-      rulerLayer.add(new Konva.Line({ points: [sx, RULER_H - 5, sx, RULER_H], stroke: '#9a958c', strokeWidth: 1 }));
-      rulerLayer.add(new Konva.Text({ x: sx + 2, y: 7, text: String(Math.round(wx)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: '#888' }));
+      rulerLayer.add(new Konva.Line({ points: [sx, RULER_H - 5, sx, RULER_H], stroke: rulerTick, strokeWidth: 1 }));
+      rulerLayer.add(new Konva.Text({ x: sx + 2, y: 7, text: String(Math.round(wx)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: rulerTick }));
     }
 
     // Vertical ticks
@@ -4229,8 +4275,8 @@ const RULER_W = 40;
     for (let wy = wyStart; oy + wy * s <= H; wy += step) {
       const sy = oy + wy * s;
       if (sy < RULER_H) continue;
-      rulerLayer.add(new Konva.Line({ points: [RULER_W - 5, sy, RULER_W, sy], stroke: '#9a958c', strokeWidth: 1 }));
-      rulerLayer.add(new Konva.Text({ x: 2, y: sy + 1, text: String(Math.round(-wy)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: '#888' }));
+      rulerLayer.add(new Konva.Line({ points: [RULER_W - 5, sy, RULER_W, sy], stroke: rulerTick, strokeWidth: 1 }));
+      rulerLayer.add(new Konva.Text({ x: 2, y: sy + 1, text: String(Math.round(-wy)), fontSize: 8, fontFamily: 'IBM Plex Mono, monospace', fill: rulerTick }));
     }
 
     rulerLayer.batchDraw();
@@ -4458,16 +4504,36 @@ const RULER_W = 40;
   const midX = () => W / 2;
   const midY = () => H / 2;
 
+  function fitToContent() {
+    const allItems = [
+      ...points.map(p => ({ x: p.x, y: -p.y })),
+      ...locations.map(l => ({ x: l.x, y: -l.y })),
+    ];
+    if (allItems.length === 0) { tx = RULER_W; ty = RULER_H; ts = 1; redraw(); return; }
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    allItems.forEach(({ x, y }) => {
+      if (x < minX) minX = x; if (x > maxX) maxX = x;
+      if (y < minY) minY = y; if (y > maxY) maxY = y;
+    });
+    const PAD = 60;
+    const vw = W - RULER_W - PAD * 2;
+    const vh = H - RULER_H - PAD * 2;
+    const cw = maxX - minX || 1;
+    const ch = maxY - minY || 1;
+    const newTs = Math.min(8, Math.max(0.05, Math.min(vw / cw, vh / ch)));
+    tx = RULER_W + PAD + (vw - cw * newTs) / 2 - minX * newTs;
+    ty = RULER_H + PAD + (vh - ch * newTs) / 2 - minY * newTs;
+    ts = newTs;
+    redraw();
+  }
+
   document.querySelector('[title="Zoom in"]')?.addEventListener('click', () =>
     applyZoom(Math.min(8, ts * 1.25), midX(), midY()));
 
   document.querySelector('[title="Zoom out"]')?.addEventListener('click', () =>
     applyZoom(Math.max(0.05, ts / 1.25), midX(), midY()));
 
-  document.querySelector('[title="Fit to window"]')?.addEventListener('click', () => {
-    tx = RULER_W; ty = RULER_H; ts = 1;
-    redraw();
-  });
+  document.querySelector('[title="Fit to window"]')?.addEventListener('click', fitToContent);
 
   // Grid toggle
   const gridBtn = document.querySelector('[title="Grid"]');
@@ -4507,8 +4573,8 @@ const RULER_W = 40;
           bgDef.konvaLayer = kl;
           bgDef.worldGroup = wg;
           stage.add(kl);
-          // Insert at front of layers[] so it always sits behind everything
-          layers.unshift(bgDef);
+          // Insert at end of layers[] so it sits at the bottom of the UI list (= behind everything)
+          layers.push(bgDef);
           reorderKonvaLayers();
         }
 
@@ -4579,22 +4645,29 @@ const RULER_W = 40;
         lines.push(`        <peripheralOperation completionRequired="${op.completionRequired}" executionTrigger="${op.trigger}" locationName="${esc(op.location)}" name="${esc(op.operation)}"/>`);
       if (pa.connectionType === 'BEZIER' && pa.controlPoints.length === 2 && sp && ep) {
         lines.push(`        <pathLayout connectionType="BEZIER" layerId="${layOrd(pa.layerId)}">`);
-        // Absolute canvas pixel coords: canvas_x = model_x/50, canvas_y = -model_y/50 (Y-down)
-        // Our canvas unit = COORD_SCALE mm; openTCS pixel = 50mm → factor = COORD_SCALE/50
         const cpF = coordScale / 50.0;
         lines.push(`            <controlPoint x="${Math.round(pa.controlPoints[0].x * cpF)}" y="${-Math.round(pa.controlPoints[0].y * cpF)}"/>`);
         lines.push(`            <controlPoint x="${Math.round(pa.controlPoints[1].x * cpF)}" y="${-Math.round(pa.controlPoints[1].y * cpF)}"/>`);
         lines.push(`        </pathLayout>`);
+      } else if (pa.connectionType === 'BEZIER_Q' && pa.controlPoints.length === 1 && sp && ep) {
+        // Convert quadratic to cubic: C1 = P0 + 2/3*(Q-P0), C2 = P1 + 2/3*(Q-P1)
+        const q = pa.controlPoints[0];
+        const c1 = { x: sp.x + 2/3*(q.x - sp.x), y: sp.y + 2/3*(q.y - sp.y) };
+        const c2 = { x: ep.x + 2/3*(q.x - ep.x), y: ep.y + 2/3*(q.y - ep.y) };
+        lines.push(`        <pathLayout connectionType="BEZIER" layerId="${layOrd(pa.layerId)}">`);
+        const cpF = coordScale / 50.0;
+        lines.push(`            <controlPoint x="${Math.round(c1.x * cpF)}" y="${-Math.round(c1.y * cpF)}"/>`);
+        lines.push(`            <controlPoint x="${Math.round(c2.x * cpF)}" y="${-Math.round(c2.y * cpF)}"/>`);
+        lines.push(`        </pathLayout>`);
       } else if (pa.connectionType === 'POLYLINE' && pa.controlPoints.length > 0) {
         lines.push(`        <pathLayout connectionType="POLYPATH" layerId="${layOrd(pa.layerId)}">`);
-        // Absolute canvas pixel coords: x = model_x/50, y = -model_y/50 (Y-down)
         const cpF = coordScale / 50.0;
         for (const cp of pa.controlPoints)
           lines.push(`            <controlPoint x="${Math.round(cp.x * cpF)}" y="${-Math.round(cp.y * cpF)}"/>`);
         lines.push(`        </pathLayout>`);
       } else {
-        // DIRECT, or POLYLINE/BEZIER with no control points → treat as DIRECT
-        const ct = (pa.connectionType === 'POLYLINE' || pa.connectionType === 'BEZIER') ? 'DIRECT' : pa.connectionType;
+        // DIRECT, or curve types with no control points → treat as DIRECT
+        const ct = ['POLYLINE', 'BEZIER', 'BEZIER_Q'].includes(pa.connectionType) ? 'DIRECT' : pa.connectionType;
         lines.push(`        <pathLayout connectionType="${ct}" layerId="${layOrd(pa.layerId)}"/>`);
       }
       lines.push(`    </path>`);
@@ -4676,6 +4749,46 @@ const RULER_W = 40;
 
   const COORD_SCALE = 100; // 1 canvas unit = 100 mm
 
+  // ── Model meta state ─────────────────────────────────────────
+  let currentModelName = 'New Model';
+  let currentFileName  = null;
+  let modelDirty       = false;
+  let lastSavedTime    = null;
+
+  function updateMetaBar() {
+    const el = document.getElementById('menubar-meta');
+    if (!el) return;
+    const parts = [currentModelName];
+    if (currentFileName) parts.push(currentFileName);
+    if (modelDirty)          parts.push('modified');
+    else if (lastSavedTime)  parts.push('saved ' + lastSavedTime);
+    else                     parts.push('unsaved');
+    el.textContent = parts.join(' · ');
+  }
+
+  function markDirty() {
+    if (modelDirty) return;
+    modelDirty = true;
+    updateMetaBar();
+  }
+
+  function markSaved(name, filename) {
+    currentModelName = name;
+    currentFileName  = filename;
+    modelDirty       = false;
+    const now = new Date();
+    lastSavedTime = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+    updateMetaBar();
+  }
+
+  function markLoaded(name, filename) {
+    currentModelName = name;
+    currentFileName  = filename;
+    modelDirty       = false;
+    lastSavedTime    = null;
+    updateMetaBar();
+  }
+
   function promptSaveModel(defaultName) {
     const { body, foot, close } = createModal('Save Model', 340);
     body.innerHTML = `
@@ -4696,7 +4809,9 @@ const RULER_W = 40;
     foot.querySelector('#save-ok').addEventListener('click', () => {
       const name = nameInput.value.trim() || defaultName;
       close();
-      downloadXml(buildModelXml(name, COORD_SCALE), name + '.xml');
+      const filename = name + '.xml';
+      downloadXml(buildModelXml(name, COORD_SCALE), filename);
+      markSaved(name, filename);
     });
     foot.querySelector('#save-cancel').addEventListener('click', close);
     nameInput.addEventListener('keydown', e => {
@@ -4705,8 +4820,14 @@ const RULER_W = 40;
     });
   }
 
+  function saveModelDirect() {
+    const filename = currentModelName + '.xml';
+    downloadXml(buildModelXml(currentModelName, COORD_SCALE), filename);
+    markSaved(currentModelName, filename);
+  }
+
   // ── Load Model ───────────────────────────────────────────────
-  function loadModelXml(xmlText) {
+  function loadModelXml(xmlText, filename) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(xmlText, 'text/xml');
     if (doc.querySelector('parsererror')) throw new Error('Invalid XML file.');
@@ -4758,7 +4879,6 @@ const RULER_W = 40;
       kl.add(wg);
       def.konvaLayer = kl; def.worldGroup = wg;
       stage.add(kl);
-      kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
     };
 
     if (xmlLayerEls.length === 0) {
@@ -4778,6 +4898,7 @@ const RULER_W = 40;
     }
     activeLayerId = layers.find(l => l.id !== '__bg__')?.id ?? layers[0].id;
     newLayerIndex = layers.filter(l => l.id !== '__bg__').length + 1;
+    reorderKonvaLayers();
 
     const defaultLayerId = () => layerIdMap[0] ?? activeLayerId;
 
@@ -4964,7 +5085,10 @@ const RULER_W = 40;
     renderLayersUI();
     renderComponentsTree();
     updateCounts(points.length, pathList.length, locations.length);
-    redraw();
+    fitToContent();
+
+    const modelName = ga(model, 'name') || 'Plant-Model';
+    markLoaded(modelName, filename || null);
   }
 
   function promptLoadModel() {
@@ -4976,7 +5100,7 @@ const RULER_W = 40;
       const reader = new FileReader();
       reader.onload = ev => {
         try {
-          loadModelXml(ev.target.result);
+          loadModelXml(ev.target.result, file.name);
         } catch (err) {
           alert('Failed to load model: ' + err.message);
         }
@@ -5013,7 +5137,7 @@ const RULER_W = 40;
     const wg = new Konva.Group({ x: tx, y: ty, scaleX: ts, scaleY: ts });
     kl.add(wg); def.konvaLayer = kl; def.worldGroup = wg;
     stage.add(kl);
-    kl.zIndex(stage.getLayers().indexOf(overlayLayer) - 1);
+    reorderKonvaLayers();
     activeLayerId = id;
     newLayerIndex = 2;
 
@@ -5021,6 +5145,7 @@ const RULER_W = 40;
     renderComponentsTree();
     updateCounts(0, 0, 0);
     redraw();
+    markLoaded('New Model', null);
   }
 
   // ── File menu dropdown ────────────────────────────────────────
@@ -5041,10 +5166,11 @@ const RULER_W = 40;
     closeFileMenu(); promptLoadModel();
   });
   document.getElementById('file-save')?.addEventListener('click', () => {
-    closeFileMenu(); promptSaveModel('Plant-Model');
+    closeFileMenu();
+    if (currentFileName) saveModelDirect(); else promptSaveModel(currentModelName);
   });
   document.getElementById('file-save-as')?.addEventListener('click', () => {
-    closeFileMenu(); promptSaveModel('Plant-Model');
+    closeFileMenu(); promptSaveModel(currentModelName);
   });
 
   window.addEventListener('keydown', e => {
@@ -5054,8 +5180,11 @@ const RULER_W = 40;
     if ((e.ctrlKey || e.metaKey) && e.key === 'o') {
       e.preventDefault(); promptLoadModel();
     }
-    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-      e.preventDefault(); promptSaveModel('Plant-Model');
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 's') {
+      e.preventDefault(); promptSaveModel(currentModelName);
+    } else if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+      if (currentFileName) saveModelDirect(); else promptSaveModel(currentModelName);
     }
   }, true);
 
@@ -5084,16 +5213,22 @@ const RULER_W = 40;
 
   function closeEditMenu() { editDropdownEl?.classList.remove('is-open'); }
 
-  // Select All — multi-select every point and location on the canvas
+  // Select All — multi-select every point and location on unlocked layers
   function selectAll() {
     if (selectedPointId)    { setPointStyle(getPoint(selectedPointId), false); selectedPointId = null; }
-    if (selectedPathId)     { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (prev?.connectionType === 'BEZIER') drawPath(prev); selectedPathId = null; }
+    if (selectedPathId)     { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (needsHandleRedraw(prev)) drawPath(prev, false); selectedPathId = null; }
     if (selectedLocationId) { setLocationStyle(getLocation(selectedLocationId), false); selectedLocationId = null; }
     if (selectedLinkId)     { setLinkStyle(getLink(selectedLinkId), false); selectedLinkId = null; }
     selectedLtId = null; selectedBlockId = null; selectedVehicleId = null;
     clearMultiSelection();
-    points.forEach(p => { multiSelection.push({ id: p.id, kind: 'point' }); setPointMultiStyle(p); });
-    locations.forEach(loc => { multiSelection.push({ id: loc.id, kind: 'location' }); setLocationMultiStyle(loc); });
+    points.forEach(p => {
+      if (getLayer(p.layerId)?.locked) return;
+      multiSelection.push({ id: p.id, kind: 'point' }); setPointMultiStyle(p);
+    });
+    locations.forEach(loc => {
+      if (getLayer(loc.layerId)?.locked || loc.locked) return;
+      multiSelection.push({ id: loc.id, kind: 'location' }); setLocationMultiStyle(loc);
+    });
     renderPropertiesPanel(null);
   }
 
@@ -5101,7 +5236,7 @@ const RULER_W = 40;
   function deselectAll() {
     clearMultiSelection();
     if (selectedPointId)    { setPointStyle(getPoint(selectedPointId), false); selectedPointId = null; }
-    if (selectedPathId)     { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (prev?.connectionType === 'BEZIER') drawPath(prev); selectedPathId = null; }
+    if (selectedPathId)     { const prev = getPath(selectedPathId); setPathStyle(prev, false); if (needsHandleRedraw(prev)) drawPath(prev, false); selectedPathId = null; }
     if (selectedLocationId) { setLocationStyle(getLocation(selectedLocationId), false); selectedLocationId = null; }
     if (selectedLinkId)     { setLinkStyle(getLink(selectedLinkId), false); selectedLinkId = null; }
     selectedLtId = null; selectedBlockId = null; selectedVehicleId = null;
@@ -5142,7 +5277,7 @@ const RULER_W = 40;
     else if (selectedVehicleId)  removeVehicle(selectedVehicleId);
   }
 
-  // Copy — snapshot selected point(s)/location(s) into clipboard
+  // Copy — snapshot selected points/locations + paths between them into clipboard
   function copySelection() {
     const drop = (k, v) => (k === 'konvaGroup' ? undefined : v);
     clipboard = [];
@@ -5150,45 +5285,78 @@ const RULER_W = 40;
               : selectedPointId    ? [{ id: selectedPointId,    kind: 'point'    }]
               : selectedLocationId ? [{ id: selectedLocationId, kind: 'location' }]
               : [];
+    if (!src.length) return false;
+    const srcIds = new Set(src.map(s => s.id));
     src.forEach(({ id, kind }) => {
       const el = kind === 'point' ? getPoint(id) : getLocation(id);
       if (el) clipboard.push({ kind, data: JSON.parse(JSON.stringify(el, drop)) });
     });
+    // Also copy paths whose both endpoints are in the selection
+    pathList.forEach(pa => {
+      if (srcIds.has(pa.startPointId) && srcIds.has(pa.endPointId))
+        clipboard.push({ kind: 'path', data: JSON.parse(JSON.stringify(pa, drop)) });
+    });
     return clipboard.length > 0;
   }
 
-  // Paste — create new elements from clipboard offset by 50 world units
+  // Paste — recreate clipboard items offset down-right
   function pasteClipboard() {
     if (!clipboard.length) return;
     pushUndoState();
-    const OFFSET = 50;
+    const OX =  10; // canvas units right
+    const OY = -10; // canvas units down (Y-up: negative = downward on screen)
     const placed = [];
+    const idMap  = {}; // old point id → new point id (for path reconnection)
+
     clipboard.forEach(({ kind, data }) => {
       if (kind === 'point') {
-        const p = createPoint(data.x + OFFSET, data.y + OFFSET, activeLayerId);
+        const p = createPoint(data.x + OX, data.y + OY, activeLayerId);
         p.angle = data.angle; p.type = data.type;
-        p.vehicleBoundingBox = { ...data.vehicleBoundingBox };
-        p.miscProperties = (data.miscProperties || []).map(m => ({ ...m }));
-        p.labelXOffset = data.labelXOffset; p.labelYOffset = data.labelYOffset;
+        p.vehicleBoundingBox    = { ...data.vehicleBoundingBox };
+        p.miscProperties        = (data.miscProperties    || []).map(m => ({ ...m }));
+        p.labelXOffset          = data.labelXOffset;
+        p.labelYOffset          = data.labelYOffset;
         p.labelOrientationAngle = data.labelOrientationAngle;
         drawPoint(p);
+        idMap[data.id] = p.id;
         placed.push({ id: p.id, kind: 'point' });
       } else if (kind === 'location') {
-        const loc = createLocation(data.x + OFFSET, data.y + OFFSET, activeLayerId);
+        const loc = createLocation(data.x + OX, data.y + OY, activeLayerId);
         loc.type = data.type; loc.symbol = data.symbol;
-        loc.miscProperties = (data.miscProperties || []).map(m => ({ ...m }));
-        loc.labelXOffset = data.labelXOffset; loc.labelYOffset = data.labelYOffset;
+        loc.miscProperties        = (data.miscProperties || []).map(m => ({ ...m }));
+        loc.labelXOffset          = data.labelXOffset;
+        loc.labelYOffset          = data.labelYOffset;
         loc.labelOrientationAngle = data.labelOrientationAngle;
         drawLocation(loc);
         placed.push({ id: loc.id, kind: 'location' });
       }
     });
-    // Select pasted items
+
+    // Recreate paths between pasted points
+    clipboard.forEach(({ kind, data }) => {
+      if (kind !== 'path') return;
+      const newSrc = idMap[data.startPointId];
+      const newDst = idMap[data.endPointId];
+      if (!newSrc || !newDst) return;
+      const pa = createPath(newSrc, newDst, activeLayerId);
+      pa.length             = data.length;
+      pa.maxVelocity        = data.maxVelocity;
+      pa.maxReverseVelocity = data.maxReverseVelocity;
+      pa.locked             = data.locked;
+      pa.connectionType     = data.connectionType;
+      pa.controlPoints      = (data.controlPoints || []).map(cp => ({ x: cp.x + OX, y: cp.y + OY }));
+      pa.peripheralOperations = (data.peripheralOperations || []).map(o => ({ ...o }));
+      pa.envelopes            = (data.envelopes || []).map(e => ({ ...e }));
+      pa.miscProperties       = (data.miscProperties || []).map(m => ({ ...m }));
+      drawPath(pa);
+    });
+
+    // Select all pasted nodes
     clearMultiSelection();
     if (placed.length === 1) {
       if (placed[0].kind === 'point') selectPoint(placed[0].id);
       else                            selectLocation(placed[0].id);
-    } else {
+    } else if (placed.length > 1) {
       placed.forEach(({ id, kind }) => {
         multiSelection.push({ id, kind });
         if (kind === 'point') setPointMultiStyle(getPoint(id));
@@ -5214,6 +5382,18 @@ const RULER_W = 40;
   document.getElementById('edit-duplicate')?.addEventListener('click',   () => { closeEditMenu(); duplicateSelection(); });
   document.getElementById('edit-select-all')?.addEventListener('click',  () => { closeEditMenu(); selectAll(); });
   document.getElementById('edit-deselect-all')?.addEventListener('click',() => { closeEditMenu(); deselectAll(); });
+
+  // Dark / light theme toggle
+  const themeBtn = document.getElementById('btn-theme-toggle');
+  const themeIcon = themeBtn?.querySelector('use');
+  let darkMode = false;
+  themeBtn?.addEventListener('click', () => {
+    darkMode = !darkMode;
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : '');
+    themeIcon?.setAttribute('href', darkMode ? '#icon-sun' : '#icon-moon');
+    themeBtn.classList.toggle('is-active', darkMode);
+    redraw();
+  });
 
   // Snap toggle
   const snapBtn = document.querySelector('[title="Snap"]');
