@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passport</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!--
+    Import map: loads Three.js (and its addons, e.g. GLTFLoader, OrbitControls,
+    RoomEnvironment) straight from a CDN as native ES modules. No bundler, no
+    npm install needed.
+    NOTE: this project must be served over HTTP (ES modules are blocked on file://).
+    Run it with e.g. `npx serve .` or the VS Code "Live Server" extension, then
+    open the printed localhost URL.
+  -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Full-viewport canvas — the whole page. OrbitControls are active from
+       load, permanently, so it owns pointer/touch/wheel input directly;
+       there is nothing to scroll and nothing else to fight it for events. -->
+  <canvas id="scene-canvas"></canvas>
+
+  <!-- Minimal loading indicator, hidden by main.js once the GLB has loaded -->
+  <div id="loading-indicator" class="loading-indicator">Loading…</div>
+
+  <header class="site-header">
+  </header>
+
+  <!-- Controls onboarding hint — shown once on load, auto-fades after a few
+       seconds or on the first canvas interaction (see js/main.js). -->
+  <div id="onboarding-hint" class="onboarding-hint">
+    🖱 Drag to rotate · Scroll to zoom · Right-drag to pan
+  </div>
+
+  <!-- Pose control panel — always visible, drives the shared animation time
+       shared by every clip on the model (see js/main.js). -->
+  <div id="control-panel" class="control-panel">
+    <button type="button" class="control-panel__button" data-pose="cover">Open Cover</button>
+    <button type="button" class="control-panel__button" data-pose="page1">Page 1</button>
+    <button type="button" class="control-panel__button control-panel__button--close" data-pose="closed">Close</button>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
