@@ -45,9 +45,76 @@
   <!-- Pose control panel — always visible, drives the shared animation time
        shared by every clip on the model (see js/main.js). -->
   <div id="control-panel" class="control-panel">
+    <button type="button" class="control-panel__button" id="id-form-toggle" aria-expanded="false" aria-controls="id-form-panel">Create Your Passport</button>
     <button type="button" class="control-panel__button" data-pose="cover">Open Cover</button>
     <button type="button" class="control-panel__button" data-pose="page1">Page 1</button>
     <button type="button" class="control-panel__button control-panel__button--close" data-pose="closed">Close</button>
+  </div>
+
+  <!-- "Create Your Passport" panel — collapsible, toggled by #id-form-toggle.
+       Composites a client-side ID-page texture (see js/idcard.js) and
+       applies it to the model's IDPageMaterial (see main.js). -->
+  <div id="id-form-panel" class="id-form-panel">
+    <h2 class="id-form-panel__title">Create Your Passport</h2>
+
+    <form id="id-form" novalidate>
+      <div class="id-form__field">
+        <label for="id-form-username">Username</label>
+        <input id="id-form-username" type="text" maxlength="30" required autocomplete="username" />
+      </div>
+
+      <div class="id-form__field">
+        <label for="id-form-sex">Sex</label>
+        <select id="id-form-sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="id-form__field">
+        <label for="id-form-role">Role</label>
+        <select id="id-form-role" required>
+          <option value="" disabled selected>Select role</option>
+          <option value="ritty">ritty</option>
+          <option value="bitty">bitty</option>
+          <option value="ritualist">ritualist</option>
+        </select>
+      </div>
+
+      <div class="id-form__field">
+        <label for="id-form-dob">Date of birth</label>
+        <input id="id-form-dob" type="date" />
+      </div>
+
+      <div class="id-form__field">
+        <label for="id-form-photo">Photo</label>
+        <div class="id-form__photo-row">
+          <input id="id-form-photo" type="file" accept="image/*" />
+          <img id="id-form-preview" class="id-form__preview" alt="Uploaded photo preview" hidden />
+        </div>
+      </div>
+
+      <p id="id-form-error" class="id-form__error" role="alert"></p>
+
+      <div class="id-form__actions">
+        <button type="submit" id="id-form-apply" class="control-panel__button" disabled>Apply to Passport</button>
+        <button
+          type="button"
+          id="id-form-mint"
+          class="control-panel__button control-panel__button--mint"
+          disabled
+          title="Apply your passport first"
+        >✦ Mint as NFT</button>
+        <button type="button" id="id-form-reset" class="control-panel__button control-panel__button--close">Reset</button>
+      </div>
+
+      <p id="id-form-apply-status" class="id-form__apply-status" hidden></p>
+
+      <p id="id-form-mint-status" class="id-form__mint-status" hidden></p>
+
+      <p class="id-form__privacy-note">Your photo never leaves your browser</p>
+    </form>
   </div>
 
   <script type="module" src="js/main.js"></script>

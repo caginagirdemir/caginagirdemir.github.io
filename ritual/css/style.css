@@ -39,6 +39,7 @@ p, h1, h2, h3 {
   --accent: #7c8cff;
   --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color-scheme: dark; /* page is dark-only — native scrollbars/controls follow suit */
 }
 
 body {
@@ -197,4 +198,180 @@ body {
 .control-panel__button.is-active {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.control-panel__button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transform: none;
+}
+
+/* ---------- Create Your Passport panel ---------- */
+.id-form-panel {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: min(320px, calc(100vw - 3rem));
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #0d0d16;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  pointer-events: auto; /* the panel would default to auto anyway; stated
+                            explicitly since it's the thing this whole
+                            feature hinges on being clickable */
+}
+
+.id-form-panel.is-open {
+  display: block;
+}
+
+.id-form-panel__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.id-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+  text-align: left;
+}
+
+.id-form__field label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.id-form__optional {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.id-form__field input[type="text"],
+.id-form__field input[type="date"],
+.id-form__field select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.id-form__field input[type="text"]:focus-visible,
+.id-form__field input[type="date"]:focus-visible,
+.id-form__field select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+/* The closed <select> inherits dark styling fine from its transparent
+   background over the dark panel, but the opened option list is a native
+   popup that doesn't inherit page styles — it needs its own opaque
+   background or it defaults to the OS's (light) picker colors. */
+.id-form__field select {
+  color-scheme: dark;
+}
+
+.id-form__field select option {
+  background-color: #1a1a24; /* match the dark input background */
+  color: #f0f0f5;
+}
+
+.id-form__field select option:disabled {
+  color: #666; /* the "Select role" placeholder stays visibly dimmed */
+}
+
+.id-form__field input[type="file"] {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 100%;
+}
+
+.id-form__photo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.id-form__preview {
+  width: 48px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.id-form__error {
+  min-height: 1.1em;
+  font-size: 0.8rem;
+  color: #f87171;
+  margin-bottom: 0.5rem;
+}
+
+.id-form__actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.id-form__actions .control-panel__button {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+}
+
+.control-panel__button--mint {
+  background: linear-gradient(90deg, #fbbf24 0%, #f472b6 50%, #8b5cf6 100%);
+}
+
+.id-form__apply-status {
+  font-size: 0.78rem;
+  color: var(--text-color);
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.id-form__mint-status {
+  font-size: 0.78rem;
+  color: var(--text-color);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.id-form__privacy-note {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 899px) {
+  .id-form-panel {
+    top: auto;
+    left: 1rem;
+    right: 1rem;
+    bottom: 6.5rem; /* clears the fixed pose control-panel row below it */
+    transform: none;
+    width: auto;
+    max-height: 55vh;
+  }
 }

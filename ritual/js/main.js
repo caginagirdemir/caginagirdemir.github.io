@@ -1,5 +1,3 @@
-// Monad Passport — single-screen interactive 3D viewer
-//
 // Plain ES modules + Three.js from CDN, no bundler. Must be served over
 // HTTP (see index.html comment) because browsers block ES module imports
 // on the file:// protocol.
@@ -8,6 +6,7 @@ import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { buildIDTexture, loadPhotoFromFile } from "./idcard.js";
 
 // Fraction of the visible viewport height the model should occupy once framed.
 const FILL_RATIO = 0.6;
@@ -43,6 +42,10 @@ const POSE_COVER_OPEN = 30 / 110;
 const POSE_PAGE_FLIPPED = 70 / 110;
 // How long the controls-onboarding hint stays up before auto-fading.
 const ONBOARDING_HINT_DURATION_MS = 4000;
+// Name of the mesh material for the passport's personal-data page, as
+// authored in the GLB. If this doesn't match, setupIDPageMaterials() logs
+// every material name actually present so the correct one can be found.
+const ID_PAGE_MATERIAL_NAME = "firstpage";
 
 // ---------- Module-level state ----------
 let scene, camera, renderer;
@@ -52,14 +55,36 @@ let actions = []; // one clipAction per gltf.animations entry, all sharing one e
 let maxDuration = 0; // longest clip duration
 let easedActionTime = 0; // current eased value shared by every action.time
 let poseTarget = POSE_CLOSED; // action-time target driven by the control panel buttons
+let activePoseKey = "closed"; // which pose button is currently highlighted/targeted
 let controls;
 let onboardingTimeoutId = null; // pending auto-fade timer for the onboarding hint
+let idPageMaterials = []; // every unique material named ID_PAGE_MATERIAL_NAME, found once at load
+let originalIDPageMaps = new Map(); // material -> its .map at load time, for Reset
+let idTexture = null; // single reused CanvasTexture, updated in place on each Apply
+let uploadedPhotoImage = null; // drawable image/canvas from the current photo file, or null
+let previewObjectURL = null; // object URL behind the thumbnail <img>, revoked when replaced
+let hasAppliedPassport = false; // true once Apply has succeeded at least once — gates Mint
 
 const clock = new THREE.Clock();
 const canvas = document.getElementById("scene-canvas");
 const loadingIndicator = document.getElementById("loading-indicator");
 const controlPanel = document.getElementById("control-panel");
 const onboardingHint = document.getElementById("onboarding-hint");
+const idFormToggle = document.getElementById("id-form-toggle");
+const idFormPanel = document.getElementById("id-form-panel");
+const idForm = document.getElementById("id-form");
+const idFormUsernameInput = document.getElementById("id-form-username");
+const idFormSexInput = document.getElementById("id-form-sex");
+const idFormRoleInput = document.getElementById("id-form-role");
+const idFormDobInput = document.getElementById("id-form-dob");
+const idFormPhotoInput = document.getElementById("id-form-photo");
+const idFormPreview = document.getElementById("id-form-preview");
+const idFormApplyButton = document.getElementById("id-form-apply");
+const idFormApplyStatus = document.getElementById("id-form-apply-status");
+const idFormMintButton = document.getElementById("id-form-mint");
+const idFormMintStatus = document.getElementById("id-form-mint-status");
+const idFormResetButton = document.getElementById("id-form-reset");
+const idFormError = document.getElementById("id-form-error");
 
 // ---------- Scene setup ----------
 function initScene() {
@@ -155,6 +180,69 @@ function hideLoadingIndicator() {
   if (loadingIndicator) loadingIndicator.classList.add("is-hidden");
 }
 
+// ---------- ID page texture ----------
+// Finds every unique material named ID_PAGE_MATERIAL_NAME under `root`
+// (usually just one, but a mesh could reuse it more than once) and caches
+// each one's original .map so Reset can restore it later. If none are
+// found, logs every material name actually present so the correct one can
+// be identified — a name typo here would otherwise fail completely silently.
+function setupIDPageMaterials(root) {
+  idPageMaterials = [];
+  originalIDPageMaps = new Map();
+  const allMaterialNames = new Set();
+
+  root.traverse((node) => {
+    if (!node.isMesh) return;
+    const materials = Array.isArray(node.material) ? node.material : [node.material];
+    for (const material of materials) {
+      if (!material) continue;
+      allMaterialNames.add(material.name || "(unnamed)");
+      if (material.name === ID_PAGE_MATERIAL_NAME && !idPageMaterials.includes(material)) {
+        idPageMaterials.push(material);
+        originalIDPageMaps.set(material, material.map ?? null);
+      }
+    }
+  });
+
+  if (idPageMaterials.length === 0) {
+    console.error(
+      `[id-card] No material named "${ID_PAGE_MATERIAL_NAME}" found on the model. ` +
+        "Materials present:",
+      Array.from(allMaterialNames)
+    );
+  }
+}
+
+// Builds/updates the single reused CanvasTexture from `canvas` and assigns
+// it to every cached ID page material. flipY is false because canvas 2D
+// content is already top-down, matching how glTF/Three.js expect UV-mapped
+// image data to be oriented — leaving the default (true) would render the
+// composited page upside down.
+function applyIDPageTexture(canvas) {
+  if (idPageMaterials.length === 0) return; // setupIDPageMaterials already explained why
+
+  if (!idTexture) {
+    idTexture = new THREE.CanvasTexture(canvas);
+  } else {
+    idTexture.image = canvas;
+  }
+  idTexture.flipY = false;
+  idTexture.colorSpace = THREE.SRGBColorSpace;
+  idTexture.needsUpdate = true;
+
+  for (const material of idPageMaterials) {
+    material.map = idTexture;
+    material.needsUpdate = true;
+  }
+}
+
+function resetIDPageTexture() {
+  for (const material of idPageMaterials) {
+    material.map = originalIDPageMaps.get(material) ?? null;
+    material.needsUpdate = true;
+  }
+}
+
 function loadPassportModel() {
   const loader = new GLTFLoader();
 
@@ -162,6 +250,7 @@ function loadPassportModel() {
     "assets/passportanimation.glb",
     (gltf) => {
       const model = gltf.scene;
+      setupIDPageMaterials(model);
 
       // Corrective wrapper for the Blender Z-up export, kept separate from
       // gltf.scene so the embedded cover-opening animation (which targets a
@@ -242,7 +331,18 @@ function hideOnboardingHint() {
   canvas.removeEventListener("wheel", hideOnboardingHint);
 }
 
+const POSES_BY_KEY = {
+  cover: POSE_COVER_OPEN,
+  page1: POSE_PAGE_FLIPPED,
+  closed: POSE_CLOSED,
+};
+
+// Single source of truth for "what pose is targeted right now" — sets the
+// eased-time target, tracks it in activePoseKey, and highlights the
+// matching button.
 function setActivePose(key) {
+  activePoseKey = key;
+  poseTarget = POSES_BY_KEY[key] * maxDuration;
   document.querySelectorAll("[data-pose]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.pose === key);
   });
@@ -251,21 +351,147 @@ function setActivePose(key) {
 function initControlPanel() {
   if (!controlPanel) return;
 
-  const posesByKey = {
-    cover: POSE_COVER_OPEN,
-    page1: POSE_PAGE_FLIPPED,
-    closed: POSE_CLOSED,
-  };
-
   document.querySelectorAll("[data-pose]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const key = button.dataset.pose;
-      poseTarget = posesByKey[key] * maxDuration;
-      setActivePose(key);
-    });
+    button.addEventListener("click", () => setActivePose(button.dataset.pose));
   });
 
   setActivePose("closed"); // matches the model's starting pose
+}
+
+// ---------- Create Your Passport form ----------
+function setIDFormError(message) {
+  if (idFormError) idFormError.textContent = message;
+}
+
+// Shows/hides the inline "Applied ✓" note. Pass an empty string (or
+// nothing) to clear it — used on Reset and at the start of each Apply so a
+// prior message never lingers behind a new attempt.
+function setApplyStatus(message) {
+  if (!idFormApplyStatus) return;
+  idFormApplyStatus.textContent = message || "";
+  idFormApplyStatus.hidden = !message;
+}
+
+function updateApplyButtonEnabled() {
+  if (!idFormApplyButton || !idFormUsernameInput || !idFormRoleInput) return;
+  const hasUsername = idFormUsernameInput.value.trim().length > 0;
+  const hasRole = idFormRoleInput.value.length > 0;
+  idFormApplyButton.disabled = !(hasUsername && hasRole && uploadedPhotoImage);
+}
+
+// Mint button label per lifecycle state. Only "idle" is driven today — the
+// real mint implementation (wallet connect + contract call) can call this
+// with "pending"/"success"/"error" without touching markup elsewhere.
+const MINT_BUTTON_LABELS = {
+  idle: "✦ Mint as NFT",
+  pending: "✦ Minting…",
+  success: "✦ Minted",
+  error: "✦ Mint failed — retry",
+};
+
+function setMintButtonState(state) {
+  if (!idFormMintButton) return;
+  idFormMintButton.textContent = MINT_BUTTON_LABELS[state] ?? MINT_BUTTON_LABELS.idle;
+  idFormMintButton.disabled = !hasAppliedPassport || state === "pending";
+}
+
+// Placeholder — wallet connection and the actual mint transaction aren't
+// wired up yet. Structured so the real implementation slots in without
+// changing the button markup or the click wiring in initIDForm.
+async function handleMint() {
+  // TODO: wallet connection + contract call goes here
+  setMintButtonState("idle");
+  if (idFormMintStatus) {
+    idFormMintStatus.textContent =
+      "Minting coming soon — your passport will be mintable as an NFT.";
+    idFormMintStatus.hidden = false;
+  }
+}
+
+function initIDForm() {
+  if (!idFormToggle || !idFormPanel || !idForm) return;
+
+  idFormToggle.addEventListener("click", () => {
+    const isOpen = idFormPanel.classList.toggle("is-open");
+    idFormToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  if (idFormUsernameInput) {
+    idFormUsernameInput.addEventListener("input", updateApplyButtonEnabled);
+  }
+
+  if (idFormRoleInput) {
+    idFormRoleInput.addEventListener("change", updateApplyButtonEnabled);
+  }
+
+  if (idFormPhotoInput) {
+    idFormPhotoInput.addEventListener("change", async () => {
+      const file = idFormPhotoInput.files && idFormPhotoInput.files[0];
+      if (!file) return;
+
+      setIDFormError("");
+      try {
+        uploadedPhotoImage = await loadPhotoFromFile(file);
+
+        if (previewObjectURL) URL.revokeObjectURL(previewObjectURL);
+        previewObjectURL = URL.createObjectURL(file);
+        if (idFormPreview) {
+          idFormPreview.src = previewObjectURL;
+          idFormPreview.hidden = false;
+        }
+      } catch (error) {
+        console.error("Photo upload failed:", error);
+        uploadedPhotoImage = null;
+        if (idFormPreview) idFormPreview.hidden = true;
+        setIDFormError(error.message || "Couldn't read that photo — try a different file.");
+      }
+      updateApplyButtonEnabled();
+    });
+  }
+
+  idForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    setIDFormError("");
+    setApplyStatus("");
+
+    try {
+      const canvas = await buildIDTexture({
+        username: idFormUsernameInput.value.trim(),
+        sex: idFormSexInput.value,
+        role: idFormRoleInput.value.trim(),
+        dob: idFormDobInput.value,
+        photoImage: uploadedPhotoImage,
+      });
+      applyIDPageTexture(canvas);
+
+      // The ID page is only visible once the cover is open (either the
+      // "cover" or "page1" pose) — tell the user to open it if they're
+      // still looking at the closed passport.
+      const idPageVisible = activePoseKey === "cover" || activePoseKey === "page1";
+      setApplyStatus(idPageVisible ? "Applied ✓" : "Applied ✓ — open cover to see it");
+
+      hasAppliedPassport = true;
+      if (idFormMintButton) idFormMintButton.removeAttribute("title");
+      setMintButtonState("idle");
+    } catch (error) {
+      console.error("Failed to build ID texture:", error);
+      setIDFormError(error.message || "Something went wrong — try again.");
+    }
+  });
+
+  if (idFormMintButton) {
+    idFormMintButton.addEventListener("click", handleMint);
+  }
+
+  if (idFormResetButton) {
+    idFormResetButton.addEventListener("click", () => {
+      resetIDPageTexture();
+      setApplyStatus("");
+    });
+  }
+
+  updateApplyButtonEnabled();
+  setMintButtonState("idle");
 }
 
 // ---------- Render loop ----------
@@ -319,6 +545,7 @@ function init() {
   initLights();
   initControls();
   initControlPanel();
+  initIDForm();
   loadPassportModel();
   showOnboardingHint();
   window.addEventListener("resize", onResize);
